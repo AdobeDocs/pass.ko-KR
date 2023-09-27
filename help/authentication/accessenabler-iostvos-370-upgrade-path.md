@@ -2,9 +2,9 @@
 title: AccessEnabler iOS/tvOS 3.7.0 업그레이드 경로
 description: AccessEnabler iOS/tvOS 3.7.0 업그레이드 경로
 exl-id: f15c7414-ec9b-4e21-b457-1ecf59f47441
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '294'
 ht-degree: 0%
 
 ---
@@ -28,15 +28,20 @@ ht-degree: 0%
 
 1. AccessEnabler 버전 3.7.0을 사용하는 애플리케이션과 AccessEnabler 버전 3.7.0보다 낮은 버전을 사용하는 애플리케이션 간에는 동일한 공급업체에서 개발한 애플리케이션에서도 일반(Adobe) SSO가 작동하지 않습니다.
 
-   - **중요 사항:**
-      - 시스템 수준(Apple) SSO는 영향을 받지 않습니다!
-      - 일반(Adobe) SSO는 동일한 공급업체에서 두 애플리케이션을 개발하고 AccessEnabler 버전이 3.7.0보다 낮은 경우 계속 작동합니다.
-      - 일반(Adobe) SSO는 동일한 공급업체에서 두 애플리케이션을 개발하고 AccessEnabler 버전 3.7.0을 사용하는 경우에 작동합니다.
+   >[!IMPORTANT]
+   >
+   >* 시스템 수준(Apple) SSO는 영향을 받지 않습니다!
+   >
+   >* 일반(Adobe) SSO는 동일한 공급업체에서 두 애플리케이션을 개발하고 AccessEnabler 버전이 3.7.0보다 낮은 경우 계속 작동합니다.
+   >
+   >* 일반(Adobe) SSO는 동일한 공급업체에서 두 애플리케이션을 개발하고 AccessEnabler 버전 3.7.0을 사용하는 경우에 작동합니다.
+
 
 1. AccessEnabler 버전 3.7.0을 사용하는 애플리케이션 하나를 더 낮은 버전의 AccessEnabler로 다운그레이드하는 경우에는 새로 생성된 토큰이 마이그레이션되지 않습니다. 따라서 최종 사용자는 기다리지 않고 인증/인증 세션이 손실될 수 있습니다.
 
-   - **중요 사항:**
-      - 시스템 수준(Apple) SSO를 통해 인증된 최종 사용자는 영향을 받지 않습니다!
-      - AccessEnabler 버전 3.7.0을 사용하여 새 애플리케이션으로 업데이트하기 전에 이미 인증된 최종 사용자는 영향을 받지 않습니다.
+   >[!IMPORTANT]
+   >
+   >* 시스템 수준(Apple) SSO를 통해 인증된 최종 사용자는 영향을 받지 않습니다!
+   >* AccessEnabler 버전 3.7.0을 사용하여 새 애플리케이션으로 업데이트하기 전에 이미 인증된 최종 사용자는 영향을 받지 않습니다.
 
 1. AccessEnabler 버전 3.7.0을 사용하여 한 애플리케이션을 더 낮은 버전의 AccessEnabler로 다운그레이드하는 경우 삭제된 토큰은 인식되지 않습니다. 따라서 최종 사용자는 필요 없이 인증/권한 부여 세션이 있는 것을 경험할 수 있습니다.

@@ -2,9 +2,9 @@
 title: Amazon FireOS 통합 Cookbook
 description: Amazon FireOS 통합 Cookbook
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
-source-wordcount: '1432'
+source-wordcount: '1416'
 ht-degree: 0%
 
 ---
@@ -20,27 +20,27 @@ ht-degree: 0%
 
 ## 소개 {#intro}
 
-이 문서에서는 프로그래머의 상위 수준 애플리케이션이 Amazon FireOS AccessEnabler 라이브러리에서 노출된 API를 통해 구현할 수 있는 자격 부여 워크플로에 대해 설명합니다.
+이 문서에서는 프로그래머의 상위 수준 애플리케이션이 Amazon FireOS에 의해 노출된 API를 통해 구현할 수 있는 자격 워크플로에 대해 설명합니다 `AccessEnabler` 라이브러리입니다.
 
 Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 두 개의 도메인으로 나뉩니다.
 
-- UI 도메인 - UI를 구현하고 AccessEnabler 라이브러리에서 제공하는 서비스를 사용하여 제한된 콘텐츠에 액세스할 수 있는 상위 레벨 애플리케이션 계층입니다.
-- AccessEnabler 도메인 - 권한 부여 워크플로우는 다음과 같은 형태로 구현됩니다.
+- UI 도메인 - UI를 구현하고 가 제공하는 서비스를 사용하는 상위 수준 애플리케이션 계층입니다. `AccessEnabler` 제한된 콘텐츠에 대한 액세스 권한을 제공하는 라이브러리입니다.
+- 다음 `AccessEnabler` 도메인 - 여기에서 권한 부여 워크플로가 다음과 같은 형태로 구현됩니다.
    - Adobe의 백엔드 서버에 대한 네트워크 호출
    - 인증 및 권한 부여 워크플로와 관련된 비즈니스 논리 규칙
    - 다양한 리소스 관리 및 워크플로 상태 처리(예: 토큰 캐시)
 
-AccessEnabler 도메인의 목적은 권한 부여 워크플로의 모든 복잡성을 숨기고 AccessEnabler 라이브러리를 통해 권한 부여 워크플로를 구현하는 간단한 권한 부여 기본 세트를 상위 레이어 애플리케이션에 제공하는 것입니다.
+의 목표 `AccessEnabler` 도메인은 권한 부여 워크플로의 모든 복잡성을 숨기고, 상위 레이어 애플리케이션에 을 제공합니다 `AccessEnabler` library) 단순 권한 프리미티브 세트입니다. 이 프로세스를 통해 권한 부여 워크플로를 구현할 수 있습니다.
 
-1. 요청자 ID 설정
-1. 특정 ID 공급자에 대한 인증 확인 및 가져오기
-1. 특정 리소스에 대한 권한 부여 확인 및 받기
-1. 로그아웃
+1. 요청자 ID를 설정합니다.
+1. 특정 ID 공급자에 대한 인증을 확인하고 받으십시오.
+1. 특정 리소스에 대한 인증을 확인하고 받으십시오.
+1. 로그아웃.
 
-AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 UI 스레드가 차단되지 않습니다. 따라서 두 애플리케이션 도메인 간의 양방향 통신 채널은 완전히 비동기적인 패턴을 따라야 합니다.
+다음 `AccessEnabler`의 네트워크 활동은 다른 스레드에서 수행되므로 UI 스레드가 차단되지 않습니다. 따라서 두 애플리케이션 도메인 간의 양방향 통신 채널은 완전히 비동기적인 패턴을 따라야 합니다.
 
-- UI 애플리케이션 레이어는 AccessEnabler 라이브러리에 의해 노출된 API 호출을 통해 AccessEnabler 도메인에 메시지를 전송합니다.
-- AccessEnabler는 UI 레이어가 AccessEnabler 라이브러리에 등록하는 AccessEnabler 프로토콜에 포함된 콜백 메서드를 통해 UI 레이어에 응답합니다.
+- UI 애플리케이션 계층은에 메시지를 보냅니다. `AccessEnabler` 에 의해 노출된 API 호출을 통한 도메인 `AccessEnabler` 라이브러리입니다.
+- 다음 `AccessEnabler` 에 포함된 콜백 메서드를 통해 UI 레이어에 응답합니다. `AccessEnabler` UI 계층이 `AccessEnabler` 라이브러리입니다.
 
 ## 권한 흐름 {#entitlement}
 
@@ -50,8 +50,6 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 1. [인증 흐름](#authz_flow)
 1. [미디어 흐름 보기](#media_flow)
 1. [로그아웃 흐름](#logout_flow)
-
-
 
 ### A. 사전 요구 사항 {#prereqs}
 
@@ -113,9 +111,9 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 1. 상위 수준 응용 프로그램을 시작합니다.
 1. Adobe Pass 인증을 시작합니다.
 
-   1. 호출 [`getInstance`](#$getInstance) Adobe Pass Authentication AccessEnabler의 단일 인스턴스를 만듭니다.
+   1. 호출 [`getInstance`](#$getInstance) Adobe Pass 인증의 단일 인스턴스를 만들려면 `AccessEnabler`.
 
-      - **종속성:** Adobe Pass 인증 기본 Amazon FireOS 라이브러리(AccessEnabler)
+      - **종속성:** Adobe Pass 인증 기본 Amazon FireOS 라이브러리(`AccessEnabler`)
 
    1. 호출` setRequestor()` 프로그래머의 신원을 확인하다. `requestorID` 및 (선택 사항) Adobe Pass 인증 엔드포인트 배열.
 
@@ -127,8 +125,8 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 
    두 가지 구현 옵션이 있습니다. 요청자 식별 정보가 백엔드 서버로 전송되면 UI 애플리케이션 레이어가 다음 두 가지 접근 방식 중 하나를 선택할 수 있습니다.</p>
 
-   1. 의 트리거를 기다립니다. `setRequestorComplete()` callback(AccessEnabler 대리자의 일부).  이 옵션은 다음과 같은 가장 확실성을 제공합니다. `setRequestor()` 완료되었으므로 대부분의 구현에 권장됩니다.
-   1. 이 트리거될 때까지 기다리지 않고 계속합니다. `setRequestorComplete()` 콜백을 실행하고 권한 부여 요청 실행을 시작합니다. 이러한 호출(checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout)은 AccessEnabler 라이브러리에 의해 큐에 추가되며 이후에 실제 네트워크 호출을 수행합니다. `setRequestor()`. 네트워크 연결이 불안정한 경우 이 옵션이 중단되는 경우가 있습니다.
+   1. 의 트리거를 기다립니다. `setRequestorComplete()` callback (일부) `AccessEnabler` 위임).  이 옵션은 다음과 같은 가장 확실성을 제공합니다. `setRequestor()` 완료되었으므로 대부분의 구현에 권장됩니다.
+   1. 이 트리거될 때까지 기다리지 않고 계속합니다. `setRequestorComplete()` 콜백을 실행하고 권한 부여 요청 실행을 시작합니다. 이러한 호출(checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout)은 `AccessEnabler` 라이브러리: `setRequestor()`. 네트워크 연결이 불안정한 경우 이 옵션이 중단되는 경우가 있습니다.
 
 1. 호출 [checkAuthentication()](#$checkAuthN) 전체 인증 흐름을 시작하지 않고 기존 인증을 확인합니다.  이 호출이 성공하면 인증 플로우로 직접 진행할 수 있습니다.  그렇지 않으면 인증 플로우로 이동합니다.
 
@@ -150,10 +148,10 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 
    >[!NOTE]
    >
-   >이 시점에서 사용자는 인증 흐름을 취소할 수 있습니다. 이 경우 AccessEnabler가 내부 상태를 정리하고 인증 흐름을 재설정합니다.
+   >이 시점에서 사용자는 인증 흐름을 취소할 수 있습니다. 이 경우 `AccessEnabler` 은(는) 내부 상태를 정리하고 인증 흐름을 재설정합니다.
 
-1. 사용자가 로그인하면 WebView 가 닫힙니다.
-1. 호출 `getAuthenticationToken(),` 즉, AccessEnabler가 백엔드 서버에서 인증 토큰을 검색하도록 지시합니다.
+1. 사용자가 성공적으로 로그인하면 WebView 가 닫힙니다.
+1. 호출 `getAuthenticationToken(),` 다음을 지시합니다. `AccessEnabler` 백엔드 서버에서 인증 토큰을 검색합니다.
 1. [선택 사항] 호출 [`checkPreauthorizedResources(resources)`](#$checkPreauth) 을 눌러 사용자가 볼 수 있는 권한이 있는 리소스를 확인합니다. 다음 `resources` 매개 변수는 사용자의 인증 토큰과 연결된 보호된 리소스의 배열입니다.
 
    **트리거:** `preAuthorizedResources()` callback\
@@ -196,6 +194,6 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 
 ### F. 로그아웃 흐름 {#logout_flow}
 
-1. 호출 [`logout()`](#$logout) 로그아웃할 수 있습니다. AccessEnabler는 단일 사인온을 통해 로그인을 공유하는 모든 요청자에서 현재 MVPD에 대해 사용자가 얻은 모든 캐시된 값과 토큰을 지웁니다. 캐시를 지운 후 AccessEnabler가 서버 호출을 수행하여 서버측 세션을 정리합니다.  서버 호출로 인해 IdP로 SAML 리디렉션이 발생할 수 있으므로(IdP측에서 세션 정리가 허용됨) 이 호출은 모든 리디렉션을 따라야 합니다. 따라서 이 호출은 WebView 컨트롤 내에서 처리되며 사용자가 볼 수 없습니다.
+1. 호출 [`logout()`](#$logout) 로그아웃할 수 있습니다. 다음 `AccessEnabler` 단일 사인온을 통해 로그인을 공유하는 모든 요청자에서 현재 MVPD에 대해 사용자가 얻은 모든 캐시된 값과 토큰을 지웁니다. 캐시를 지운 후 `AccessEnabler` 서버 호출을 수행하여 서버측 세션을 정리합니다.  서버 호출로 인해 IdP로 SAML 리디렉션이 발생할 수 있으므로(IdP측에서 세션 정리가 허용됨) 이 호출은 모든 리디렉션을 따라야 합니다. 따라서 이 호출은 WebView 컨트롤 내에서 처리되며 사용자가 볼 수 없습니다.
 
    **참고:** 로그아웃 흐름은 사용자가 어떤 방식으로든 WebView와 상호 작용할 필요가 없다는 점에서 인증 흐름과 다릅니다. 따라서 로그아웃 프로세스 중에 WebView 컨트롤을 보이지 않게(즉, 숨김으로) 만들 수 있습니다(권장).

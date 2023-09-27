@@ -2,7 +2,7 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
 source-wordcount: '1685'
 ht-degree: 0%
@@ -32,10 +32,13 @@ Android용 Adobe Pass 인증 자격 솔루션은 궁극적으로 두 개의 도�
 
 AccessEnabler 도메인의 목적은 권한 부여 워크플로의 모든 복잡성을 숨기고 AccessEnabler 라이브러리를 통해 권한 부여 워크플로를 구현하는 간단한 권한 부여 기본 세트를 상위 레이어 애플리케이션에 제공하는 것입니다.
 
-1. 요청자 ID 설정
-1. 특정 ID 공급자에 대한 인증 확인 및 가져오기
-1. 특정 리소스에 대한 권한 부여 확인 및 받기
-1. 로그아웃
+1. 요청자 ID를 설정합니다.
+
+1. 특정 ID 공급자에 대한 인증을 확인하고 받으십시오.
+
+1. 특정 리소스에 대한 인증을 확인하고 받으십시오.
+
+1. 로그아웃.
 
 AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 UI 스레드가 차단되지 않습니다. 따라서 두 애플리케이션 도메인 간의 양방향 통신 채널은 완전히 비동기적인 패턴을 따라야 합니다.
 
@@ -50,8 +53,6 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 1. [인증 흐름](#authz_flow)
 1. [미디어 흐름 보기](#media_flow)
 1. [로그아웃 흐름](#logout_flow)
-
-
 
 ### A. 사전 요구 사항 {#prereqs}
 
@@ -137,8 +138,6 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 
    - **트리거:** setAuthenticationStatus() callback
 
-
-
 ### C. 인증 흐름 {#authn_flow}
 
 1. 호출 [`getAuthentication()`](#$getAuthN) 인증 흐름을 시작하거나 사용자가 이미 인증되었다는 확인을 받습니다.\
@@ -151,7 +150,6 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 1. 사용자가 공급자를 선택한 후, 사용자로부터 사용자 MVPD의 URL을 가져옵니다. `navigateToUrl()` callback.  WebView를 열고 해당 WebView 컨트롤을 URL로 보냅니다.
 
 1. 이전 단계에서 인스턴스화된 WebView를 통해 사용자는 MVPD의 로그인 페이지에 도달하고 로그인 자격 증명을 입력합니다. WebView 내에서 여러 리디렉션 작업이 수행됩니다.
-
 
    **참고:** 이 시점에서 사용자는 인증 흐름을 취소할 수 있습니다. 이 경우 UI 레이어는 를 호출하여 이 이벤트에 대해 AccessEnabler에 알립니다. `setSelectedProvider()` 포함 `null` 를 매개 변수로 사용하십시오. 이렇게 하면 AccessEnabler가 내부 상태를 정리하고 인증 흐름을 재설정할 수 있습니다.
 

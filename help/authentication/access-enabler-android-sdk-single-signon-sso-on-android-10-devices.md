@@ -2,9 +2,9 @@
 title: Android 10 앱에서 Enabler Android SDK SSO(Single Sign-On) 액세스
 description: Android 10 앱에서 Enabler Android SDK SSO(Single Sign-On) 액세스
 exl-id: dedade15-c451-4757-b684-d3728e11dd87
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
-source-wordcount: '377'
+source-wordcount: '374'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Adobe Pass 인증 기반 앱 간의 SSO(Single Sign-On)는 Access Enabler Androi
 
 ## 비헤이비어
 
-앱에 따라 **target SDK 수준** 또는 의 사용 **android:requestLegacyExternalStorage** manifest 특성 Access Enabler Android 버전 3.2.1 SDK(최신) 및 이전 버전에서 제공하는 SSO(Single Sign-On)는 현재 다음과 같이 동작합니다.
+앱에 따라 **[!UICONTROL target SDK level]** 또는 의 사용 **android:requestLegacyExternalStorage** manifest 특성 Access Enabler Android 버전 3.2.1 SDK(최신) 및 이전 버전에서 제공하는 SSO(Single Sign-On)는 현재 다음과 같이 동작합니다.
 
 - 앱 타겟 **Android 9(API 레벨 28)** 또는 더 낮음 **-\>** SSO(단일 인증) **작동 예정**
 - 앱 타겟 **안드로이드 10** **(API 레벨 29)** 및 **set** 값: **requestLegacyExternalStorage to true** 앱의 매니페스트 파일에서 **-\>** SSO(단일 인증) **작동 예정**

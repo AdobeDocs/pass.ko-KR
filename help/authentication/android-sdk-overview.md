@@ -2,7 +2,7 @@
 title: Android SDK 개요
 description: Android SDK 개요
 exl-id: a1d98325-32a1-4881-8635-9a3c38169422
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
 source-wordcount: '2720'
 ht-degree: 0%
@@ -14,9 +14,6 @@ ht-degree: 0%
 >[!NOTE]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
-
-</br>
-
 
 ## 소개 {#intro}
 
@@ -34,8 +31,6 @@ Android 플랫폼 및 Adobe Pass 인증과 관련된 현재 기술 요구 사항
 - [일반 초기 인증 워크플로](#generic)
 - [로그아웃 워크플로](#logout)
 
-
-
 ### 초기화 후 워크플로 {#post-init}
 
 AccessEnabler에서 지원하는 모든 자격 부여 워크플로우는 이전에 을 호출했다고 가정합니다. [`setRequestor()`](#setRequestor) 자신의 신분을 밝히기 위해 이 호출을 수행하면 일반적으로 애플리케이션의 초기화/설정 단계 중에 요청자 ID를 한 번만 제공합니다.
@@ -50,8 +45,6 @@ AccessEnabler에서 지원하는 모든 자격 부여 워크플로우는 이전�
 - 또는 둘 다 수행합니다.
 
 의 성공 알림을 기다릴 것인지 여부는 사용자가 결정합니다. [`setRequestor()`](#setRequestor) 또는 AccessEnabler의 콜 큐 메커니즘을 사용하는 것이 좋습니다. 모든 후속 인증 및 인증 요청에는 요청자 ID 및 관련 구성 정보가 필요하므로 [`setRequestor()`](#setRequestor) 메서드는 초기화가 완료될 때까지 모든 인증 및 권한 부여 API 호출을 효과적으로 차단합니다.
-
-
 
 ### 일반 초기 인증 워크플로 {#generic}
 

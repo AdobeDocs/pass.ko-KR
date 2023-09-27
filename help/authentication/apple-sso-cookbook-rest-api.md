@@ -2,7 +2,7 @@
 title: Apple SSO Cookbook (REST API)
 description: Apple SSO Cookbook (REST API)
 exl-id: cb27c4b7-bdb4-44a3-8f84-c522a953426f
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
 source-wordcount: '1435'
 ht-degree: 0%
@@ -21,13 +21,9 @@ Adobe Pass 인증 REST API는 Apple SSO 워크플로라고 하는 기능을 통�
 
 이 문서는 기존 REST API 설명서에 대한 확장 역할을 하며, 해당 설명서는 다음과 같습니다 [여기](/help/authentication/rest-api-reference.md).
 
-</br>
-
 ## 요리책 {#Cookbooks}
 
 Apple SSO 사용자 경험을 활용하려면 애플리케이션 하나가 [비디오 구독자 계정](https://developer.apple.com/documentation/videosubscriberaccount) Apple에서 개발한 프레임워크이며 Adobe Pass 인증 REST API 통신에 대해서는 아래에 제시된 팁 시퀀스를 따라야 할 것입니다.
-
-</br>
 
 ### 인증 {#Authentication}
 
@@ -44,10 +40,8 @@ Apple SSO 사용자 경험을 활용하려면 애플리케이션 하나가 [비�
 - [인증 흐름 진행](#Proceed_with_authorization_flows)
 
 
-
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/qu/platform-sso.jpeg)
 
-</br>
 
 #### 단계: &quot;유효한 Adobe 인증 토큰이 있습니까?&quot; {#Is_there_a_valid_Adobe_authentication_token}
 
@@ -55,7 +49,6 @@ Apple SSO 사용자 경험을 활용하려면 애플리케이션 하나가 [비�
 >
 > **<u>팁:</u>** 을(를) 통해 구현 [Adobe Pass 인증](/help/authentication/check-authentication-token.md) 서비스.
 
-</br>
 
 #### 단계: &quot;사용자가 Platform SSO를 통해 로그인했습니까?&quot; {#Is_the_user_logged_in_via_Platform_SSO}
 
@@ -127,8 +120,6 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 ...  
 ```
 
-</br>
-
 #### 단계: &quot;Adobe 구성 가져오기&quot; {#Fetch_Adobe_configuration}
 
 >[!TIP]
@@ -139,8 +130,6 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 >[!TIP]
 >
 > **<u>Pro 팁:</u>** MVPD 속성에 대해 알아보십시오. *`enablePlatformServices`*, *`boardingStatus`*, *`displayInPlatformPicker`*, *`platformMappingId`*, *`requiredMetadataFields`* 또한 다른 단계에서 코드 조각에 표시되는 주석에 각별히 주의하십시오.
-
-</br>
 
 #### &quot;Adobe 구성으로 Platform SSO 워크플로 시작&quot; 단계 {#Initiate_Platform_SSO_workflow_with_Adobe_config}
 
@@ -263,8 +252,6 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 >
 > **<u>Pro 팁:</u>** 의 코드 스니펫에 유의하십시오. [&quot;Adobe 구성으로 Platform SSO 워크플로 시작&quot;](#Initiate_Platform_SSO_workflow_with_Adobe_config) 단계. 다음의 경우 사용자 로그인이 성공했습니다. *`vsaMetadata!.accountProviderIdentifier`* 에는 유효한 값이 포함되어 있으며 현재 날짜는 을(를) 통과하지 못했습니다. *`vsaMetadata!.authenticationExpirationDate`* 값.
 
-</br>
-
 #### 단계 &quot;선택한 MVPD에 대한 Adobe에서 프로필 요청 얻기&quot; {#Obtain_a_profile_request_from_Adobe_for_the_selected_MVPD}
 
 >[!TIP]
@@ -274,8 +261,6 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 >[!TIP]
 >
 > **<u>Pro 팁:</u>** 비디오 구독자 계정 프레임워크에서 가져온 공급자 식별자는 *`platformMappingId`* Adobe Pass 인증 구성 측면입니다. 따라서 응용 프로그램은 다음을 사용하여 MVPD id 속성 값을 결정해야 합니다. *`platformMappingId`* 값, Adobe Pass 인증 매체 이용 [MVPD 목록 제공](/help/authentication/provide-mvpd-list.md) 서비스.
-
-</br>
 
 #### 단계: &quot;프로필을 가져오기 위해 Adobe 요청을 Platform SSO로 전달&quot; {#Forward_the_Adobe_request_to_Platform_SSO_to_obtain_the_profile}
 
