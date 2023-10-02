@@ -2,9 +2,9 @@
 title: iOS/tvOS API 참조
 description: iOS/tvOS API 참조
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: 2ccfa8e018b854a359881eab193c1414103eb903
+source-git-commit: 854698397d9d14c1bfddcc10eecc61c7e3c32b71
 workflow-type: tm+mt
-source-wordcount: '7010'
+source-wordcount: '7018'
 ht-degree: 0%
 
 ---
@@ -365,7 +365,8 @@ ht-degree: 0%
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
 **설명:** 현재 사용자의 인증 상태를 확인합니다.
-로컬 토큰 저장 공간에서 유효한 인증 토큰을 검색하여 이를 수행합니다. 이 메서드를 호출하면 네트워크 호출이 수행되지 않습니다. 애플리케이션에서 사용자의 인증 상태를 쿼리하고 그에 따라 UI를 업데이트(즉, 로그인/로그아웃 UI 업데이트)하는 데 사용됩니다. 인증 상태는 를 통해 애플리케이션에 전달됩니다. [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
+로컬 토큰 저장 공간에서 유효한 인증 토큰을 검색하여 이를 수행합니다. 이 메서드는 네트워크 호출을 수행하지 않으며 기본 스레드에서 호출하는 것이 좋습니다.
+애플리케이션에서 사용자의 인증 상태를 쿼리하고 그에 따라 UI를 업데이트(즉, 로그인/로그아웃 UI 업데이트)하는 데 사용됩니다. 인증 상태는 를 통해 애플리케이션에 전달됩니다. [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 
 
 <table class="pass_api_table">

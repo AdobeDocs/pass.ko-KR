@@ -2,9 +2,9 @@
 title: Android SDK API 참조
 description: Android SDK API 참조
 exl-id: f932e9a1-2dbe-4e35-bd60-a4737407942d
-source-git-commit: 2ccfa8e018b854a359881eab193c1414103eb903
+source-git-commit: 854698397d9d14c1bfddcc10eecc61c7e3c32b71
 workflow-type: tm+mt
-source-wordcount: '4518'
+source-wordcount: '4526'
 ht-degree: 0%
 
 ---
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 ### checkAuthentication {#checkAuthN}
 
-**설명:** 인증 상태를 확인합니다. 로컬 토큰 저장 공간에서 유효한 인증 토큰을 검색하여 이를 수행합니다. 이 메서드를 호출하면 네트워크 호출이 수행되지 않습니다. 애플리케이션에서 사용자의 인증 상태를 쿼리하고 그에 따라 UI를 업데이트(즉, 로그인/로그아웃 UI 업데이트)하는 데 사용됩니다. 인증 상태는 를 통해 애플리케이션에 전달됩니다. [*setAuthenticationStatus()*](#setAuthNStatus) callback.
+**설명:** 인증 상태를 확인합니다. 로컬 토큰 저장 공간에서 유효한 인증 토큰을 검색하여 이를 수행합니다. 이 메서드는 네트워크 호출을 수행하지 않으며 기본 스레드에서 호출하는 것이 좋습니다. 애플리케이션에서 사용자의 인증 상태를 쿼리하고 그에 따라 UI를 업데이트(즉, 로그인/로그아웃 UI 업데이트)하는 데 사용됩니다. 인증 상태는 를 통해 애플리케이션에 전달됩니다. [*setAuthenticationStatus()*](#setAuthNStatus) callback.
 
 MVPD가 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인증 토큰이 장치에 저장될 수 있습니다.  이 기능에 대한 자세한 내용은 [캐싱 지침](#$caching) 섹션에 자세히 설명되어 있습니다.
 
@@ -624,7 +624,7 @@ getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모�
    - *simpleResult*: 인증 TTL, 권한 부여 TTL 또는 장치 ID에 대해 요청될 때 메타데이터 값을 나타내는 문자열입니다. 사용자 메타데이터에 대한 요청인 경우 이 값은 null입니다.
 
    - *사용자 메타데이터 결과*: JSON 사용자 메타데이터 페이로드의 Java 표현을 포함하는 객체입니다.\
-     예:
+     For example:
 
 ```json
           '{
