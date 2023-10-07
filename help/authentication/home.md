@@ -2,10 +2,10 @@
 title: Adobe&reg; 인증 전달 시작!
 description: Adobe 및 reg 시작, 인증 개요 전달
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: 4eb5fc1eb1eea4c5e27bbee298db4b9b4ba2daef
+source-git-commit: 6699f37915551a19252dc84b6a37cc4565011fd5
 workflow-type: tm+mt
-source-wordcount: '343'
-ht-degree: 0%
+source-wordcount: '338'
+ht-degree: 8%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-Adobe Pass 인증은 TV Everywhere에 대한 권한 부여 솔루션으로, 리소스 액세스를 요청하는 사용자에게 권한이 있는지 여부를 결정하는 모듈식 프레임워크를 제공합니다. Adobe Pass 인증 자격 부여 솔루션에 참여하기 위해 콘텐츠 공급자(프로그래머) 및 유료 TV 공급자(MVPD)는 자격 부여 시스템을 Adobe Pass 인증 워크플로와 통합합니다. 이 설명서 사이트에서는 통합 프로세스에 대한 세부 정보와 기존 파트너를 위한 팁을 제공합니다.
+Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로, 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다. Adobe Pass 인증 자격 부여 솔루션에 참여하기 위해 콘텐츠 공급자(프로그래머) 및 유료 TV 공급자(MVPD)는 자격 부여 시스템을 Adobe Pass 인증 워크플로와 통합합니다. 이 설명서 사이트에서는 통합 프로세스에 대한 세부 정보와 기존 파트너를 위한 팁을 제공합니다.
 
 귀하의 의견은 언제나 감사합니다!
 
@@ -27,13 +27,13 @@ Adobe Pass 인증은 TV Everywhere에 대한 권한 부여 솔루션으로, 리�
 
 | **특별 포함된 항목** |
 |-|
-| <ul><li>iOS용 단일 사인온</li><li>[프로모션 임시 패스](/help/authentication/promotional-temp-pass.md)</li><li>[홈 기반 인증(HBA)](/help/authentication/home-based-authn-tve.md)</li><li>[HBA 인포그래픽](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard-user-guide.md)</li></ul> |
+| <ul><li>[iOS용 단일 사인온](/help/authentication/apple-sso-overview.md)</li><li>[프로모션 임시 패스](/help/authentication/promotional-temp-pass.md)</li><li>[홈 기반 인증(HBA)](/help/authentication/home-based-authn-tve.md)</li><li>[HBA 인포그래픽](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard-user-guide.md)</li></ul> |
 
 | **프로그래머용** | **MVPD용** |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| <ul><li>[프로그래머 킥스타트 안내서](/help/authentication/programmer-kickstart-guide.md)</li><li>**MVPD 선택기(&quot;선택기&quot;)**</li><li>[사용자 메타데이터](/help/authentication/user-metadata.md)</li></ul> | <ul><li>[MVPD 킥스타트 안내서](/help/authentication/mvpd-kickstart-guide.md)</li><li>[인증](/help/authentication/authn-usecase.md)</li><li>[인증](/help/authentication/authz-usecase.md)</li><li>[로그아웃](/help/authentication/usecase-mvpd-logout.md)</li></ul> |
+| <ul><li>[프로그래머 킥스타트 안내서](/help/authentication/programmer-kickstart-guide.md)</li><li>[사용자 메타데이터](/help/authentication/user-metadata.md)</li></ul> | <ul><li>[MVPD 킥스타트 안내서](/help/authentication/mvpd-kickstart-guide.md)</li><li>[인증](/help/authentication/authn-usecase.md)</li><li>[인증](/help/authentication/authz-usecase.md)</li><li>[로그아웃](/help/authentication/usecase-mvpd-logout.md)</li></ul> |
 | **기본 앱 클라이언트의 경우** | **모든 사용자** |
-| <ul><li>[iOS 기술 개요](/help/authentication/iostvos-sdk-overview.md)</li><li>[Android 기술 개요](/help/authentication/android-sdk-overview.md)</li></ul> | <ul><li>[기술 문서](/help/authentication/technical-paper.md)</li><li>[에스컬레이션 절차](/help/authentication/escalation-procedures.md)</li><li>**지원되는 시스템**</li><li>[용어집](/help/authentication/glossary.md)</li></ul> |
+| <ul><li>[iOS 기술 개요](/help/authentication/iostvos-sdk-overview.md)</li><li>[Android 기술 개요](/help/authentication/android-sdk-overview.md)</li></ul> | <ul><li>[기술 문서](/help/authentication/technical-paper.md)</li><li>[에스컬레이션 절차](/help/authentication/escalation-procedures.md)</li><li>[용어집](/help/authentication/glossary.md)</li></ul> |
 | **스마트 기기용** | |
 | <ul><li>[Clientless 기술 개요](/help/authentication/rest-api-overview.md)</li><li>[클라이언트 없는 API](/help/authentication/rest-api-reference.md)</li></ul> | |
 
