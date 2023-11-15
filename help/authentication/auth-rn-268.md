@@ -1,9 +1,9 @@
 ---
 title: Adobe Pass Authentication 2.68 릴리스 노트
 description: Adobe Pass Authentication 2.68 릴리스 노트
-source-git-commit: 68e572797a39327682ea7f491ef2109374fadc2e
+source-git-commit: 47e663b9bc2044a182abede390aa15c5bf7d2e87
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -30,13 +30,9 @@ Adobe Pass 인증: adobe-pass-**2.68.0.5**
 
 ### 새로운 기능 {#new-features-268}
 
-* 새 REST API에 대한 지속적인 내부 업데이트.
+* 새로운 REST API에 대한 업데이트입니다.  새 끝점을 아직 사용할 수 없지만 이러한 새 API의 사용에 대해 자세히 설명하는 설명서를 업데이트하는 중입니다.
 * 지속적인 내부 아키텍처 개선.
 * 장치 식별을 개선하기 위해 Device Atlas 라이브러리가 업데이트되었습니다.
-
-### MVPD 업데이트 {#mvpd-updates-268}
-
-* 새 MVPD가 추가되었습니다. **MAX**. 자세한 내용은 TAM에 문의하십시오.
 
 #### 버그 수정 {#bug-fixes-268}
 
