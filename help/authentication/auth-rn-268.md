@@ -1,9 +1,9 @@
 ---
 title: Adobe Pass Authentication 2.68 릴리스 노트
 description: Adobe Pass Authentication 2.68 릴리스 노트
-source-git-commit: 47e663b9bc2044a182abede390aa15c5bf7d2e87
+source-git-commit: 3271a0c31670ba086d1b0d464f4f255d1d311808
 workflow-type: tm+mt
-source-wordcount: '137'
+source-wordcount: '135'
 ht-degree: 0%
 
 ---
@@ -20,7 +20,6 @@ ht-degree: 0%
 
 * [빌드 번호](#build-number-268)
 * [새로운 기능](#new-features-268)
-* [MVPD 업데이트](#mvpd-updates-268)
 * [버그 수정](#bug-fixes-268)
 
 ### 빌드 번호 {#build-number-268}
