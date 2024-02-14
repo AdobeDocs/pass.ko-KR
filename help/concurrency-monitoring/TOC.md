@@ -3,11 +3,11 @@ product: adobe primetime
 feature: Concurrency Monitoring
 audience: end-user
 user-guide-title: Adobe Pass 동시 모니터링
-user-guide-description: 여러 애플리케이션에서 동시 사용 제한을 정의하고 적용하는 방법에 대해 알아봅니다.
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+user-guide-description: 여러 애플리케이션에서의 동시 사용에 대한 제한을 정의하고 적용하는 방법에 대해 알아봅니다.
+source-git-commit: d39836cfb81a81271f526e6aa52fcc2d6558678f
 workflow-type: tm+mt
-source-wordcount: '141'
-ht-degree: 0%
+source-wordcount: '161'
+ht-degree: 9%
 
 ---
 
@@ -21,6 +21,7 @@ ht-degree: 0%
 + [동시성 모니터링 API 개요](cm-api-overview.md)
 + [표준 메타데이터 속성](standard-metadata-attributes.md)
 + [데이터 보존 정책](data-retention-policy.md)
++ [조절 메커니즘](throttling-mechanism.md)
 + [에스컬레이션 절차](cm-escalation-procedures.md)
 + 동시성 모니터링 사용 {#cmu}
    + [동시성 모니터링 사용량 보고서](cm-usage-reports.md)
