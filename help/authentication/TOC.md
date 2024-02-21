@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로, 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 31620db6a05d4c7043e49c03099e9f84cdbad4fb
+source-git-commit: 2dbb45aebb1a00863a9344114963f6df95763dfc
 workflow-type: tm+mt
-source-wordcount: '901'
+source-wordcount: '915'
 ht-degree: 3%
 
 ---
@@ -155,6 +155,7 @@ ht-degree: 3%
    + [Adobe Pass Adobe PayTV 패스 모니터링](monitoring-adobe-pay-tv-pass.md)
    + [최소 시스템 요구 사항](minimum-system-requirements.md)
 + 릴리스 정보 {#release-notes}
+   + [Adobe Pass Authentication 2.69 릴리스 노트](auth-rn-269.md)
    + [Adobe Pass Authentication 2.68 릴리스 노트](auth-rn-268.md)
    + [Adobe Pass Authentication 2.67 릴리스 노트](auth-rn-267.md)
    + [Adobe Pass Authentication 2.66 릴리스 노트](auth-rn-266.md)
@@ -165,13 +166,14 @@ ht-degree: 3%
    + [Adobe Pass Authentication 2.63 릴리스 노트](auth-rn-263.md)
    + [Adobe Pass Authentication 2.62.1 릴리스 노트](auth-rn-2621.md)
    + JavaScript SDK 릴리스 노트  {#release-notes-javascript}
-      + [Adobe Pass 인증 JavaScript 3.5.0 릴리스 노트](authn-rn-javascript-350.md)
-      + [Adobe Pass 인증 JavaScript 4.0.0 릴리스 노트](authn-rn-javascript-400.md)
-      + [Adobe Pass 인증 JavaScript 4.1.0 릴리스 노트](authn-rn-javascript-410.md)
-      + [Adobe Pass 인증 JavaScript 4.1.1 릴리스 노트](authn-rn-javascript-411.md)
-      + [Adobe Pass 인증 JavaScript 4.2.0 릴리스 노트](authn-rn-javascript-420.md)
-      + [Adobe Pass 인증 JavaScript 4.4.0 릴리스 노트](authn-rn-javascript-440.md)
+      + [Adobe Pass 인증 JavaScript 4.7.0 릴리스 노트](authn-rn-javascript-470.md)
       + [Adobe Pass 인증 JavaScript 4.6.0 릴리스 노트](authn-rn-javascript-460.md)
+      + [Adobe Pass 인증 JavaScript 4.4.0 릴리스 노트](authn-rn-javascript-440.md)
+      + [Adobe Pass 인증 JavaScript 4.2.0 릴리스 노트](authn-rn-javascript-420.md)
+      + [Adobe Pass 인증 JavaScript 4.1.1 릴리스 노트](authn-rn-javascript-411.md)
+      + [Adobe Pass 인증 JavaScript 4.1.0 릴리스 노트](authn-rn-javascript-410.md)
+      + [Adobe Pass 인증 JavaScript 4.0.0 릴리스 노트](authn-rn-javascript-400.md)
+      + [Adobe Pass 인증 JavaScript 3.5.0 릴리스 노트](authn-rn-javascript-350.md)
    + iOS/tvOS SDK 릴리스 노트  {#release-notes-ios}
       + [Adobe Pass 인증 iOS / tvOS 3.8.4 릴리스 노트](authn-rn-ios-tvos-384.md)
       + [Adobe Pass 인증 iOS / tvOS 3.8.3 릴리스 노트](authn-rn-ios-tvos-383.md)
@@ -185,7 +187,7 @@ ht-degree: 3%
       + [인증서 Q&amp;A](certificates-qa.md)
       + JavaScript SDK {#javascript}
          + [Safari 브라우저에 대한 JS SDK 제한 사항](js-sdk-limitations-for-safari-browser.md)
-         + [쿠키 업데이트 - SameSite 및 보안 플래그](cookies-updates--samesite-and-secure-flags.md)
+         + [쿠키 업데이트 - SameSite 및 보안 플래그](cookies-updates-samesite-and-secure-flags.md)
       + Android SDK {#android}
          + [Android 10 앱에서 Enabler Android SDK SSO(Single Sign-On) 액세스](access-enabler-android-sdk-single-signon-sso-on-android-10-devices.md)
          + [Adobe Pass 인증 및 Android 6 &quot;Marshmallow&quot; 새로운 권한 모델](adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model.md)
@@ -202,7 +204,7 @@ ht-degree: 3%
       + [사전 영업 시 환경 설정 및 테스트](setting-up-your-environment-and-testing-in-prequal.md)
       + [Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](test-authn-authz-flows-using-adobes-api-test-site.md)
    + 클라이언트 없는 API {#clientless-api}
-      + [Clientless API 구현 - 가능한 이유/원인이 있는 오류 코드/메시지](clientless-api-implementation-error-codes--messages-with-probable-reason--cause.md)
+      + [Clientless API 구현 - 가능한 이유/원인이 있는 오류 코드/메시지](clientless-api-implementation-error-codes-messages-with-probable-reason-cause.md)
       + [장치 ID가 없는 클라이언트 없는 API 흐름](clientless-api-flow-in-the-absence-of-device-id.md)
       + [Clientless: /authenticate 요청에서 &#39;&amp;&#39;reg_code를 사용하지 마십시오.](clientless-avoid-using-reg-code-in-authenticate-request.md)
       + [Xbox 360 및 XboxOne Clientless에서 프로그래머를 위해 Adobe Pass 자격 부여 서비스 활성화](enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
