@@ -2,11 +2,11 @@
 product: adobe primetime
 audience: end-user
 feature: Account IQ
-user-guide-description: Adobe Pass 계정 IQ는 계정 IQ 구성 요소에 대한 정보를 제공하는 데 도움이 되며, 다양한 구성 요소를 사용할 수 있는 사용자 여정을 안내합니다.
+user-guide-description: Adobe Pass 계정 IQ 도움말은 계정 IQ 구성 요소에 대한 정보를 제공하고 다양한 구성 요소를 사용하기 위한 사용자 여정을 안내합니다.
 source-git-commit: 964ca5d24682662df2f7f766924ac062ca49b54e
 workflow-type: tm+mt
 source-wordcount: '144'
-ht-degree: 0%
+ht-degree: 16%
 
 ---
 
