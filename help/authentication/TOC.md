@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로, 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 2dbb45aebb1a00863a9344114963f6df95763dfc
+source-git-commit: 579ce868b6ee94e1854bbc51145fc7840268db26
 workflow-type: tm+mt
-source-wordcount: '915'
+source-wordcount: '919'
 ht-degree: 3%
 
 ---
@@ -186,7 +186,8 @@ ht-degree: 3%
    + Adobe Pass 인증 SDK {#primetime-authentication-sdks}
       + [인증서 Q&amp;A](certificates-qa.md)
       + JavaScript SDK {#javascript}
-         + [Safari 브라우저에 대한 JS SDK 제한 사항](js-sdk-limitations-for-safari-browser.md)
+         + [추적 방지 평가 - Apple Safari](tracking-prevention-assessment-apple-safari.md)
+         + [추적 방지 평가 - Google Chrome](tracking-prevention-assessment-google-chrome.md)
          + [쿠키 업데이트 - SameSite 및 보안 플래그](cookies-updates-samesite-and-secure-flags.md)
       + Android SDK {#android}
          + [Android 10 앱에서 Enabler Android SDK SSO(Single Sign-On) 액세스](access-enabler-android-sdk-single-signon-sso-on-android-10-devices.md)
