@@ -2,9 +2,9 @@
 title: Adobe Pass Authentication Access Enabler 사용 시 iOS에서 SSO
 description: Adobe Pass Authentication Access Enabler 사용 시 iOS에서 SSO
 exl-id: 882f0abb-2e6e-461d-a375-3ab410991935
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 929d1cc2e0466155b29d1f905f2979c942c9ab8c
 workflow-type: tm+mt
-source-wordcount: '1164'
+source-wordcount: '1121'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ SSO 동작은 다음과 같습니다.
    - **중요 사항:** iOS SDK 1.9.4 릴리스에는 [최소 iOS 배포 대상을 iOS 7로 늘렸습니다.](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)
 - **iOS 7 이상**: SSO는 다음 조건에서 작동합니다.
 
-1. 앱은 동일한 Apple 배포 프로필 또는 동일한 팀에 속한 프로필을 사용하여 게시됩니다. 이는 앱이 iOS 7 이상에서 사용자 지정 게시판을 공유하는 유일한 방법입니다. 다른 모든 시나리오에서는 페이스트보드가 애플리케이션별로 샌드박스됩니다. 출처: [*https://developer.apple.com/library/IOs/releasenotes/General/RN-iOSSDK-7.0/index.html*](https://developer.apple.com/library/ios/releasenotes/General/RN-iOSSDK-7.0/index.html): \+\[UIPasteboard pasteboardWithName:create:\] 및 +\[UIPasteboard pasteboardWithUniqueName\]이(가) 이제 같은 애플리케이션 그룹의 해당 앱만 임시 보드에 액세스할 수 있도록 고유한 이름을 지정합니다. 개발자가 이미 존재하고 동일한 앱 세트에 속해 있지 않은 이름의 임시 보드를 만들려고 하면 고유한 개인 임시 보드를 받게 됩니다. 이 기능은 시스템에서 제공한 대지보드, 일반 사항 및 찾기에 영향을 주지 않습니다.
+1. 앱은 동일한 Apple 배포 프로필 또는 동일한 팀에 속한 프로필을 사용하여 게시됩니다. 이는 앱이 iOS 7 이상에서 사용자 지정 게시판을 공유하는 유일한 방법입니다. 다른 모든 시나리오에서는 페이스트보드가 애플리케이션별로 샌드박스됩니다. 출처: [*https://developer.apple.com/library/IOs/releasenotes/General/RN-iOSSDK-7.0/index.html*](https://developer.apple.com/library/ios/releasenotes/General/RN-iOSSDK-7.0/index.html): \+\[`UIPasteboard pasteboardWithName:create:\`] 및 +\[`UIPasteboard pasteboardWithUniqueName`\] 이제 같은 애플리케이션 그룹에 있는 앱만 임시 보드에 액세스할 수 있도록 지정된 이름을 고유하게 지정합니다. 개발자가 이미 존재하고 동일한 앱 세트에 속해 있지 않은 이름의 임시 보드를 만들려고 하면 고유한 개인 임시 보드를 받게 됩니다. 이 기능은 시스템에서 제공한 대지보드, 일반 사항 및 찾기에 영향을 주지 않습니다.
 
 1. 앱에는 동일한 번들 ID 접두사가 있습니다(마지막 구성 요소를 제외한 모든 구성 요소). 동일한 번들 ID 접두사를 공유하는 응용 프로그램만 동일한 IDFV를 계산합니다. 출처: [*https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice\_Class/index.html\#//apple\_ref/occ/instp/UIDevice/identifierForVendor*](https://developer.apple.com/library/ios/documentation/UIKit/Reference/UIDevice_Class/index.html#//apple_ref/occ/instp/UIDevice/identifierForVendor): IOS 7에서는 마지막 구성 요소를 제외한 번들의 모든 구성 요소가 공급업체 ID를 생성하는 데 사용됩니다. 번들 ID에 단일 구성 요소만 있는 경우 전체 번들 ID가 사용됩니다.
 

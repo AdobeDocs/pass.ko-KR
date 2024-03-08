@@ -2,9 +2,9 @@
 title: iOS SDK 3.2+에서 SFSafariViewController 지원
 description: iOS SDK 3.2+에서 SFSafariViewController 지원
 exl-id: 6691550f-c36f-4fae-aa77-082ca7d8a60a
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+source-git-commit: 929d1cc2e0466155b29d1f905f2979c942c9ab8c
 workflow-type: tm+mt
-source-wordcount: '405'
+source-wordcount: '413'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ SVC 를 수동으로 관리하려면 구현자가 다음 단계를 수행해야 
 
 1. 호출 **setOptions([&quot;handleSVC&quot;:true])** AccessEnabler 초기화 후(인증이 시작되기 전에 이 호출이 수행되었는지 확인). 이렇게 하면 &quot;수동&quot; SVC 관리가 가능해집니다. SDK는 SVC를 자동으로 표시하지 않습니다. 대신 필요한 경우 를 호출합니다. **navigate(toUrl:*{url}* useSVC:true)**.
 
-1. 선택적 콜백 구현 **navigateToUrl:useSVC:** 구현 내에서 제공된 url을 사용하여 SFSafariViewController 인스턴스를 사용하여 svc 인스턴스를 만들고 화면에 표시해야 합니다.
+1. 선택적 콜백 구현 **`navigateToUrl:useSVC:`** 구현 내에서 제공된 url을 사용하여 SFSafariViewController 인스턴스를 사용하여 svc 인스턴스를 만들고 화면에 표시해야 합니다.
 
    ```obj-c
    func navigate(toUrl url: String!, useSVC: Bool) {

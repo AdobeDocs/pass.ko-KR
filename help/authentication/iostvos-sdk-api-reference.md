@@ -2,9 +2,9 @@
 title: iOS/tvOS API 참조
 description: iOS/tvOS API 참조
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: 854698397d9d14c1bfddcc10eecc61c7e3c32b71
+source-git-commit: 929d1cc2e0466155b29d1f905f2979c942c9ab8c
 workflow-type: tm+mt
-source-wordcount: '7018'
+source-wordcount: '6933'
 ht-degree: 0%
 
 ---
@@ -41,67 +41,67 @@ ht-degree: 0%
 
 * **[더 이상 사용되지 않음]** [init](#init) - AccessEnabler 개체를 인스턴스화합니다.
 
-* [setOptions:options:](#setOptions) - 프로필 또는 visitorID와 같은 글로벌 SDK 옵션을 구성합니다.
+* [`setOptions:options:`](#setOptions) - 프로필 또는 visitorID와 같은 글로벌 SDK 옵션을 구성합니다.
 
-* [setRequestor:](#setReqV3)[요청자 ID](#setReqV3),[setRequestor:requestorID:서비스 공급자:](#setReqV3) - 프로그래머의 ID를 설정합니다.
+* [`setRequestor:`](#setReqV3)[`requestorID`](#setReqV3),[`setRequestor:requestorID:serviceProviders:`](#setReqV3) - 프로그래머의 ID를 설정합니다.
 
-* **[더 이상 사용되지 않음]** [setRequestor:signedRequestorId:](#setReq),[setRequestor:signedRequestorId:서비스 공급자:](#setReq) - 프로그래머의 ID를 설정합니다.
+* **[더 이상 사용되지 않음]** [`setRequestor:signedRequestorId:`](#setReq),[`setRequestor:signedRequestorId:serviceProviders:`](#setReq) - 프로그래머의 ID를 설정합니다.
 
-* **[더 이상 사용되지 않음]** [setRequestor:signedRequestorId:secret:publicKey](#setReq_tvos), [setRequestor:signedRequestorId:서비스 공급자:secret:공개 키](#setReq_tvos)- 프로그래머의 정체성을 확립합니다.
+* **[더 이상 사용되지 않음]** [`setRequestor:signedRequestorId:secret:publicKey`](#setReq_tvos), [`setRequestor:signedRequestorId:serviceProviders:secret:publicKey`](#setReq_tvos)- 프로그래머의 정체성을 확립합니다.
 
-* [setRequestorComplete:](#setReqComplete) - 구성 단계가 완료되었음을 애플리케이션에 알립니다.
+* [`setRequestorComplete:`](#setReqComplete) - 구성 단계가 완료되었음을 애플리케이션에 알립니다.
 
-* [checkAuthentication](#checkAuthN) - 현재 사용자의 인증 상태를 확인합니다.
+* [`checkAuthentication`](#checkAuthN) - 현재 사용자의 인증 상태를 확인합니다.
 
-* [getAuthentication](#getAuthN), [getAuthentication:withData:](#getAuthN) - 전체 인증 워크플로를 시작합니다.
+* [`getAuthentication`](#getAuthN), [`getAuthentication:withData:`](#getAuthN) - 전체 인증 워크플로를 시작합니다.
 
-* [getAuthentication:filter](#getAuthN_filter),[getAuthentication:withData:](#getAuthN)[andFilter](#getAuthN_filter) - 전체 인증 워크플로를 시작합니다.
+* [`getAuthentication:filter`](#getAuthN_filter),[`getAuthentication:withData:`](#getAuthN)[andFilter](#getAuthN_filter) - 전체 인증 워크플로를 시작합니다.
 
-* [displayProviderDialog:](#dispProvDialog) - 사용자가 MVPD를 선택할 수 있는 적절한 UI 요소를 인스턴스화하도록 애플리케이션에 알립니다.
+* [`displayProviderDialog:`](#dispProvDialog) - 사용자가 MVPD를 선택할 수 있는 적절한 UI 요소를 인스턴스화하도록 애플리케이션에 알립니다.
 
-* [setSelectedProvider:](#setSelProv) - AccessEnabler에 사용자의 MVPD 선택을 알립니다.
+* [`setSelectedProvider:`](#setSelProv) - AccessEnabler에 사용자의 MVPD 선택을 알립니다.
 
-* [navigateToUrl:](#nav2url) - 애플리케이션에 MVPD 로그인 페이지를 표시해야 한다고 알립니다.
+* [`navigateToUrl:`](#nav2url) - 애플리케이션에 MVPD 로그인 페이지를 표시해야 한다고 알립니다.
 
-* [navigateToUrl:useSVC:](#nav2urlSVC) - SFSafariViewController를 사용하여 애플리케이션에 MVPD 로그인 페이지를 표시해야 한다고 알립니다.
+* [`navigateToUrl:useSVC:`](#nav2urlSVC) - SFSafariViewController를 사용하여 애플리케이션에 MVPD 로그인 페이지를 표시해야 한다고 알립니다.
 
-* [handleExternalURL:url](#handleExternalURL) - 인증/로그아웃 흐름을 완료합니다.
+* [`handleExternalURL:url`](#handleExternalURL) - 인증/로그아웃 흐름을 완료합니다.
 
-* **[더 이상 사용되지 않음]** [getAuthenticationToken](#getAuthNToken) - 백엔드 서버에서 인증 토큰을 요청합니다.
+* **[더 이상 사용되지 않음]** [`getAuthenticationToken`](#getAuthNToken) - 백엔드 서버에서 인증 토큰을 요청합니다.
 
-* [setAuthenticationStatus:errorCode:](#setAuthNStatus) - 응용 프로그램에 인증 흐름의 상태를 알립니다.
+* [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) - 응용 프로그램에 인증 흐름의 상태를 알립니다.
 
-* [checkPreauthorizedResources:](#checkPreauth) - 사용자에게 특정 보호된 리소스를 볼 수 있는 권한이 이미 있는지 여부를 결정합니다.
+* [`checkPreauthorizedResources:`](#checkPreauth) - 사용자에게 특정 보호된 리소스를 볼 수 있는 권한이 이미 있는지 여부를 결정합니다.
 
-* [checkPreauthorizedResources:cache:](#checkPreauthCache) - 사용자에게 특정 보호된 리소스를 볼 수 있는 권한이 이미 있는지 여부를 결정합니다.
+* [`checkPreauthorizedResources:cache:`](#checkPreauthCache) - 사용자에게 특정 보호된 리소스를 볼 수 있는 권한이 이미 있는지 여부를 결정합니다.
 
-* [preauthorizedSources:](#preauthResources) - 사용자에게 이미 보기 권한이 부여된 리소스 목록을 제공합니다.
+* [`preauthorizedResources:`](#preauthResources) - 사용자에게 이미 보기 권한이 부여된 리소스 목록을 제공합니다.
 
-* [checkAuthorization:](#checkAuthZ), [checkAuthorization:withData:](#checkAuthZ) - 현재 사용자의 인증 상태를 확인합니다.
+* [`checkAuthorization:`](#checkAuthZ), [`checkAuthorization:withData:`](#checkAuthZ) - 현재 사용자의 인증 상태를 확인합니다.
 
-* [getAuthorization:](#getAuthZ), [getAuthorization:withData:](#getAuthZ) - 인증 흐름을 시작합니다.
+* [`getAuthorization:`](#getAuthZ), [`getAuthorization:withData:`](#getAuthZ) - 인증 흐름을 시작합니다.
 
-* [setToken:forResource:](#setToken) - 권한 부여 플로우가 성공적으로 완료되었음을 애플리케이션에 알립니다.
+* [`setToken:forResource:`](#setToken) - 권한 부여 플로우가 성공적으로 완료되었음을 애플리케이션에 알립니다.
 
-* [token요청 실패:errorCode:errorDescription:](#tokenReqFailed) - 권한 부여 플로우가 실패했음을 애플리케이션에 알립니다.
+* [`tokenRequestFailed:errorCode:errorDescription:`](#tokenReqFailed) - 권한 부여 플로우가 실패했음을 애플리케이션에 알립니다.
 
-* [로그아웃](#logout) - 로그아웃 흐름을 시작합니다.
+* [`logout`](#logout) - 로그아웃 흐름을 시작합니다.
 
-* [getSelectedProvider](#getSelProv) - 현재 선택한 공급자를 결정합니다.
+* [`getSelectedProvider`](#getSelProv) - 현재 선택한 공급자를 결정합니다.
 
-* [selectedProvider:](#selProv) - 현재 선택한 MVPD에 대한 정보를 애플리케이션에 전달합니다.
+* [`selectedProvider:`](#selProv) - 현재 선택한 MVPD에 대한 정보를 애플리케이션에 전달합니다.
 
-* [getMetadata:](#getMeta) - AccessEnabler 라이브러리에서 메타데이터로 노출된 정보를 검색합니다.
+* [`getMetadata:`](#getMeta) - AccessEnabler 라이브러리에서 메타데이터로 노출된 정보를 검색합니다.
 
-* [presentTvProviderDialog:](#presentTvDialog) - 애플리케이션에 Apple SSO 대화 상자를 표시하도록 알립니다.
+* [`presentTvProviderDialog:`](#presentTvDialog) - 애플리케이션에 Apple SSO 대화 상자를 표시하도록 알립니다.
 
-* [dismissTvProviderDialog:](#dismissTvDialog) - Apple SSO 대화 상자를 숨기도록 애플리케이션에 알립니다.
+* [`dismissTvProviderDialog:`](#dismissTvDialog) - Apple SSO 대화 상자를 숨기도록 애플리케이션에 알립니다.
 
-* [setMetaStatus:encrypted:forKey:andArguments:](#setMetaStatus) - 가 요청한 메타데이터를 전달합니다. [getMetadata:](#getMeta) 호출합니다.
+* [`setMetadataStatus:encrypted:forKey:andArguments:`](#setMetaStatus) - 가 요청한 메타데이터를 전달합니다. [`getMetadata:`](#getMeta) 호출합니다.
 
-* [sendTrackingData:forEventType:](#sendTracking) - 추적 데이터 정보를 제공합니다.
+* [`sendTrackingData:forEventType:`](#sendTracking) - 추적 데이터 정보를 제공합니다.
 
-* [MVPD](#mvpd) - MVPD 클래스. [MVPD에 대한 정보를 포함합니다.]
+* [`MVPD`](#mvpd) - MVPD 클래스. [MVPD에 대한 정보를 포함합니다.]
 
 ### init:softwareStatement {#initWithSoftwareStatement}
 
@@ -170,7 +170,7 @@ ht-degree: 0%
 [맨 위로...](#apis)
 
 
-### setRequestor:requestorID, setRequestor:requestorID:서비스 공급자: {#setReqV3}
+### `setRequestor:requestorID`, `setRequestor:requestorID:serviceProviders:` {#setReqV3}
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
@@ -212,7 +212,7 @@ ht-degree: 0%
 
 </br>
 
-### setRequestor:setSignedRequestorId:, setRequestor:setSignedRequestorId:serviceProviders: - [더 이상 사용되지 않음] {#setReq}
+### `setRequestor:setSignedRequestorId:`, `setRequestor:setSignedRequestorId:serviceProviders:` - [더 이상 사용되지 않음] {#setReq}
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
@@ -249,7 +249,7 @@ ht-degree: 0%
 
 [맨 위로...](#apis)
 
-### setRequestor:setSignedRequestorId:secret:publicKey, setRequestor:setSignedRequestorId:서비스 공급자:secret:공개 키 - [더 이상 사용되지 않음] {#setReq_tvos}
+### `setRequestor:setSignedRequestorId:secret:publicKey`, `setRequestor:setSignedRequestorId:serviceProviders:secret:publicKey` - [더 이상 사용되지 않음] {#setReq_tvos}
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
@@ -354,6 +354,7 @@ ht-degree: 0%
    * `ACCESS_ENABLER_STATUS_ERROR` - 구성 단계 실패
 
 **트리거 기준:**
+
 `setRequestor:setSignedRequestorId:, `[`setRequestor:setSignedRequestorId:serviceProviders:`](#setReq)
 
 [맨 위로...](#apis)
@@ -396,7 +397,7 @@ ht-degree: 0%
 
 </br>
 
-### getAuthentication, getAuthentication:withData: {#getAuthN}
+### `getAuthentication`, `getAuthentication:withData:` {#getAuthN}
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
@@ -407,7 +408,7 @@ ht-degree: 0%
 
 사용자의 자격 증명이 MVPD 로그인 페이지에서 확인되므로 응용 프로그램은 사용자가 MVPD의 로그인 페이지에서 인증을 받는 동안 발생하는 여러 리디렉션 작업을 모니터링해야 합니다. 올바른 자격 증명을 입력하면 WebView 컨트롤은 `ADOBEPASS_REDIRECT_URL` 일정합니다. 이 URL은 WebView에서 로드하기 위한 것이 아닙니다. 애플리케이션은 이 URL을 가로채고 이 이벤트를 로그인 단계가 완료되었음을 나타내는 신호로 해석해야 합니다. 그런 다음 AccessEnabler에 제어 권한을 넘겨 인증 흐름을 완료합니다(호출). [핸들 외부 URL](#handleExternalURL) 메서드).
 
-마지막으로, 인증 상태는 를 통해 애플리케이션에 전달됩니다. [setAuthenticationStatus:errorCode:](#setAuthNStatus) callback.
+마지막으로, 인증 상태는 를 통해 애플리케이션에 전달됩니다. [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 
 <table class="pass_api_table">
 <colgroup>
@@ -456,23 +457,23 @@ ht-degree: 0%
 * *forceAuthn*: 사용자가 이미 인증되었는지 여부에 상관없이 인증 흐름을 시작할지 여부를 지정하는 플래그입니다.
 * *데이터*: Pay-TV 패스 서비스로 보낼 키-값 쌍으로 구성된 사전입니다. Adobe은 이 데이터를 사용하여 SDK를 변경하지 않고 향후 기능을 활성화할 수 있습니다.
 
-**트리거된 콜백:** ` setAuthenticationStatus:errorCode:, `[`displayProviderDialog:`](#dispProvDialog)`,`` sendTrackingData:forEventType:`
+**트리거된 콜백:** `setAuthenticationStatus:errorCode:`, [`displayProviderDialog:`](#dispProvDialog), `sendTrackingData:forEventType:`
 
 
 [맨 위로...](#apis)
 
 </br>
 
-### getAuthentication:filter, getAuthentication:withData:andFilter {#getAuthN_filter}
+### `getAuthentication:filter`, `getAuthentication:withData:andFilter` {#getAuthN_filter}
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
 **설명:** 전체 인증 워크플로를 시작합니다. 인증 상태를 확인하는 것으로 시작됩니다. 아직 인증되지 않은 경우 인증 흐름 state-machine이 시작됩니다.
 
 * [presentTvProviderDialog()](#presentTvDialog) 현재 요청자가 SSO를 지원하는 MVPD를 하나 이상 가지고 있으면 이 호출됩니다. SSO를 지원하는 MVPD가 없으면 클래식 인증 흐름이 시작되고 필터 매개 변수가 무시됩니다.
-* 사용자가 Apple SSO 플로우를 완료한 후 [dismissTvProviderDialog()](#dismissTvDialog) 이 트리거되고 인증 프로세스가 완료됩니다.
+* 사용자가 Apple SSO 플로우를 완료한 후 [`dismissTvProviderDialog()`](#dismissTvDialog) 이 트리거되고 인증 프로세스가 완료됩니다.
 
-마지막으로, 인증 상태는 를 통해 애플리케이션에 전달됩니다. [setAuthenticationStatus:errorCode:](#setAuthNStatus) callback.
+마지막으로, 인증 상태는 를 통해 애플리케이션에 전달됩니다. [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) callback.
 
 **가용성:** v2.4+
 
@@ -509,8 +510,7 @@ ht-degree: 0%
                   withData:(NSDictionary* )data
                  andFilter:(NSDictionary *)filter;</code></pre>
 <div>
-
-</div></td>
+ </div></td>
 </tr>
 </tbody>
 </table>
@@ -615,7 +615,7 @@ ht-degree: 0%
 
 * *mvpds*: 애플리케이션에서 MVPD 선택 UI 요소를 빌드하는 데 사용할 수 있는 MVPD 관련 정보를 포함하는 MVPD 개체 목록입니다.
 
-**트리거 기준:** ` getAuthentication, `[getAuthentication:withData:](#getAuthN),` getAuthorization:, `[getAuthorization:withData:](#getAuthZ)
+**트리거 기준:** `getAuthentication`, [`getAuthentication:withData:`](#getAuthN),`getAuthorization:`, [`getAuthorization:withData:`](#getAuthZ)
 
 
 [맨 위로...](#apis)
@@ -632,7 +632,7 @@ ht-degree: 0%
 
 getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모션 임시 패스에는 이 작업이 가능하지 않습니다.
 
-통과 시 *null* 매개 변수로 Access Enabler는 사용자가 인증 흐름을 취소했다고 가정하고(즉, &quot;뒤로&quot; 단추를 누른 경우) 인증 상태 시스템을 재설정하고 를 호출하여 응답합니다. [setAuthenticationStatus:errorCode:](#setAuthNStatus) 다음을 포함한 콜백 `AccessEnabler.PROVIDER_NOT_SELECTED_ERROR` 오류 코드.
+통과 시 *null* 매개 변수로 Access Enabler는 사용자가 인증 흐름을 취소했다고 가정하고(즉, &quot;뒤로&quot; 단추를 누른 경우) 인증 상태 시스템을 재설정하고 를 호출하여 응답합니다. [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) 다음을 포함한 콜백 `AccessEnabler.PROVIDER_NOT_SELECTED_ERROR` 오류 코드.
 
 <table class="pass_api_table">
 <colgroup>
@@ -654,7 +654,7 @@ getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모�
 
 **매개 변수:** 없음
 
-**트리거된 콜백:** ` setAuthenticationStatus:errorCode:,sendTrackingData:forEventType:,  `[`navigateToUrl:`](#nav2url)
+**트리거된 콜백:** `setAuthenticationStatus:errorCode:`,`sendTrackingData:forEventType:`,  [`navigateToUrl:`](#nav2url)
 
 [맨 위로...](#apis)
 
@@ -700,7 +700,7 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 
 </br>
 
-#### navigateToUrl:useSVC: {#nav2urlSVC}
+#### `navigateToUrl:useSVC:` {#nav2urlSVC}
 
 **파일:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -812,7 +812,7 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 
 &lt;/br
 
-#### setAuthenticationStatus:errorCode: {#setAuthNStatus}
+#### `setAuthenticationStatus:errorCode:` {#setAuthNStatus}
 
 **파일:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -848,7 +848,7 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
    * `PROVIDER_NOT_SELECTED_ERROR` - AccessEnabler가 상위 레이어 애플리케이션을 통과한 후 인증 상태 시스템을 재설정했습니다. *null* 끝 [`setSelectedProvider:`](#setSelProv) 을 클릭하여 인증 흐름을 중단합니다.  사용자가 인증 흐름을 취소한 것 같습니다(즉, &quot;뒤로&quot; 단추 누름).
    * `GENERIC_AUTHENTICATION_ERROR` - 네트워크를 사용할 수 없거나 사용자가 인증 흐름을 명시적으로 취소하는 등의 이유로 인증 흐름이 실패했습니다.
 
-**트리거 기준:** ` checkAuthentication, getAuthentication, `[getAuthentication:withData:](#getAuthN),` checkAuthorization:, `[checkAuthorization:withData:](#checkAuthZ)
+**트리거 기준:** `checkAuthentication`, `getAuthentication`, [`getAuthentication:withData:`](#getAuthN), `checkAuthorization:`, [`checkAuthorization:withData:`](#checkAuthZ)
 
 [맨 위로...](#apis)
 
@@ -889,7 +889,7 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 
 </br>
 
-### checkPreauthorizedResources:cache: {#checkPreauthCache}
+### `checkPreauthorizedResources:cache:` {#checkPreauthCache}
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
@@ -964,11 +964,11 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 
 </br>
 
-### checkAuthorization:, checkAuthorization:withData: {#checkAuthZ}
+### `checkAuthorization:`, `checkAuthorization:withData:` {#checkAuthZ}
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
-**설명:** 이 메서드는 애플리케이션에서 인증 상태를 확인하는 데 사용됩니다. 먼저 인증 상태를 확인하는 것으로 시작됩니다. 인증되지 않은 경우 [token요청 실패:errorCode:errorDescription:](#tokenReqFailed) callback이 트리거되고 메서드가 종료됩니다. 사용자가 인증되면 권한 부여 플로우도 트리거됩니다. 다음에서 세부 사항 보기 [`getAuthorization:`](#getAuthZ) 메서드를 사용합니다.
+**설명:** 이 메서드는 애플리케이션에서 인증 상태를 확인하는 데 사용됩니다. 먼저 인증 상태를 확인하는 것으로 시작됩니다. 인증되지 않은 경우 [`tokenRequestFailed:errorCode:errorDescription:`](#tokenReqFailed) callback이 트리거되고 메서드가 종료됩니다. 사용자가 인증되면 권한 부여 플로우도 트리거됩니다. 다음에서 세부 사항 보기 [`getAuthorization:`](#getAuthZ) 메서드를 사용합니다.
 
 
 <table class="pass_api_table">
@@ -1014,17 +1014,18 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 * *데이터*: Pay-TV 패스 서비스로 보낼 키-값 쌍으로 구성된 사전입니다. Adobe은 이 데이터를 사용하여 SDK를 변경하지 않고 향후 기능을 활성화할 수 있습니다.
 
 **트리거된 콜백:**
-[token요청 실패:errorCode:errorDescription:](#tokenReqFailed)`,setToken:forResource:, sendTrackingData:forEventType:, setAuthenticationStatus:errorCode:`
+
+[`tokenRequestFailed:errorCode:errorDescription:`](#tokenReqFailed),`setToken:forResource:`, `sendTrackingData:forEventType:`, `setAuthenticationStatus:errorCode:`
 
 [맨 위로...](#apis)
 
 </br>
 
-### getAuthorization:, getAuthorization:withData: {#getAuthZ}
+### `getAuthorization:`, `getAuthorization:withData:` {#getAuthZ}
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
-**설명:** 이 메서드는 애플리케이션에서 인증 흐름을 시작하는 데 사용됩니다. 사용자가 아직 인증되지 않은 경우 인증 플로우도 시작합니다. 사용자가 인증되면 AccessEnabler는 인증 토큰(로컬 토큰 캐시에 유효한 인증 토큰이 없는 경우) 및 단기 미디어 토큰에 대한 요청을 계속 발행합니다. 짧은 미디어 토큰을 얻으면 인증 흐름이 완료된 것으로 간주됩니다. 다음 [setToken:forResource:](#setToken) 콜백이 트리거되고 짧은 미디어 토큰이 애플리케이션에 매개 변수로 전달됩니다. 어떤 이유로든 승인이 실패하면 [token요청 실패:forEventType:](#tokenReqFailed) 콜백이 트리거되고 오류 코드/세부 정보가 제공됩니다.
+**설명:** 이 메서드는 애플리케이션에서 인증 흐름을 시작하는 데 사용됩니다. 사용자가 아직 인증되지 않은 경우 인증 플로우도 시작합니다. 사용자가 인증되면 AccessEnabler는 인증 토큰(로컬 토큰 캐시에 유효한 인증 토큰이 없는 경우) 및 단기 미디어 토큰에 대한 요청을 계속 발행합니다. 짧은 미디어 토큰을 얻으면 인증 흐름이 완료된 것으로 간주됩니다. 다음 [`setToken:forResource:`](#setToken) 콜백이 트리거되고 짧은 미디어 토큰이 애플리케이션에 매개 변수로 전달됩니다. 어떤 이유로든 승인이 실패하면 [`tokenRequestFailed:forEventType:`](#tokenReqFailed) 콜백이 트리거되고 오류 코드/세부 정보가 제공됩니다.
 
 <table class="pass_api_table">
 <colgroup>
@@ -1075,13 +1076,15 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 **추가 콜백이 트리거됨:**\
 이 메서드는 다음 콜백을 트리거할 수도 있습니다(인증 플로우도 시작된 경우). `setAuthenticationStatus:errorCode:`, `displayProviderDialog:`
 
-**참고: checkAuthorization: / checkAuthorization을 사용하십시오.:withData: getAuthorization: / getAuthorization 대신:withData: 가능한 한. getAuthorization: / getAuthorization:withData: 메서드는 전체 인증 흐름을 시작하고(사용자가 인증되지 않은 경우) 이로 인해 프로그래머측의 구현이 복잡해질 수 있습니다.**
+>[!NOTE]
+>
+>다음을 사용하십시오. `checkAuthorization:` / `checkAuthorization:withData:` 대신 `getAuthorization:` / `getAuthorization:withData:` 가능한 한. 다음 `getAuthorization:` / `getAuthorization:withData:` 메서드는 전체 인증 흐름을 시작하고(사용자가 인증되지 않은 경우) 이로 인해 프로그래머측의 구현이 복잡해질 수 있습니다.
 
 [맨 위로...](#apis)
 
 </br>
 
-### setToken:forResource: {#setToken}
+### `setToken:forResource:` {#setToken}
 
 **파일:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -1112,13 +1115,13 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 * *토큰*: 수명이 짧은 미디어 토큰
 * *리소스*: 인증을 받은 리소스
 
-**트리거 기준:** [checkAuthorization:](#checkAuthZ)` , `[checkAuthorization:withData:](#checkAuthZ),` `[getAuthorization:](#getAuthZ), [getAuthorization:withData:](#getAuthZ)
+**트리거 기준:** [`checkAuthorization:`](#checkAuthZ) , [`checkAuthorization:withData:`](#checkAuthZ), [`getAuthorization:`](#getAuthZ), [`getAuthorization:withData:`](#getAuthZ)
 
 [맨 위로...](#apis)
 
 </br>
 
-### token요청 실패:errorCode:errorDescription: {#tokenReqFailed}
+### `tokenRequestFailed:errorCode:errorDescription:` {#tokenReqFailed}
 
 **파일:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -1152,7 +1155,7 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 * *설명*: 실패 시나리오에 대한 추가 세부 정보. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증이 빈 문자열을 보냅니다 **(&quot;&quot;)**.\
   이 문자열은 MVPD에서 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달하는 데 사용할 수 있습니다. 예를 들어 구독자가 리소스에 대한 권한 부여를 거부하면 MVPD가 다음과 같은 메시지를 보낼 수 있습니다. &quot;현재 패키지의 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 **여기**.&quot; 이 콜백을 통해 Adobe Pass Authentication에서 메시지를 표시하거나 무시할 수 있는 옵션이 있는 프로그래머에게 전달합니다. Adobe Pass 인증은 이 매개 변수를 사용하여 오류가 발생했을 수 있는 조건에 대한 알림을 제공할 수도 있습니다. 예를 들어 &quot;공급자의 인증 서비스와 통신하는 동안 네트워크 오류가 발생했습니다.&quot;와 같습니다.
 
-**트리거 기준:** ` checkAuthorization:, `[checkAuthorization:withData:](#checkAuthZ), `getAuthorization:, `[getAuthorization:withData:](#getAuthZ)
+**트리거 기준:** `checkAuthorization:`, [`checkAuthorization:withData:`](#checkAuthZ), `getAuthorization:`, [`getAuthorization:withData:`](#getAuthZ)
 
 [맨 위로...](#apis)
 
@@ -1195,7 +1198,7 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 
 **매개 변수:** 없음
 
-**트리거된 콜백:** `navigateToUrl:, `[`setAuthenticationStatus:errorCode:`](#setAuthNStatus)
+**트리거된 콜백:** `navigateToUrl:`, [`setAuthenticationStatus:errorCode:`](#setAuthNStatus)
 
 
 
@@ -1396,7 +1399,7 @@ UIWebView/WKWebView로` `컨트롤러가 여러 번의 리디렉션을 거치면
 
 </br>
 
-### setMetaStatus:encrypted:forKey:andArguments: {#setMetaStatus}
+### `setMetadataStatus:encrypted:forKey:andArguments:` {#setMetaStatus}
 
 **파일:** AccessEnabler/headers/EntitlementDelegate.h
 
@@ -1525,7 +1528,7 @@ AccessEnabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거합
    * **mvpdSelection:** 사용자가 MVPD 선택 양식에서 MVPD를 선택하면(이벤트는 다음과 같음) `TRACKING_GET_SELECTED_PROVIDER`)
 * *데이터*: 보고된 이벤트와 관련된 추가 데이터입니다. 이 데이터는 값 목록 형태로 표시됩니다.
 
-**트리거 기준:** `checkAuthentication, getAuthentication, `[getAuthentication:withData:](#getAuthN), `checkAuthorization:, `[checkAuthorization:withData:](#checkAuthZ), `getAuthorization:, `[getAuthorization:withData:](#getAuthZ), `setSelectedProvider:`
+**트리거 기준:** `checkAuthentication`, `getAuthentication`, [`getAuthentication:withData:`](#getAuthN), `checkAuthorization:`, [`checkAuthorization:withData:`](#checkAuthZ), `getAuthorization:`, [`getAuthorization:withData:`](#getAuthZ), `setSelectedProvider:`
 
 의 값 해석을 위한 지침 *데이터* 배열:
 
