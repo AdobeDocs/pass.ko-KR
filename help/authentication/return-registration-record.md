@@ -2,10 +2,10 @@
 title: 등록 레코드 반환
 description: 등록 레코드 반환
 exl-id: 7b9e63a2-59b6-4123-a19b-ee1f021219ea
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '243'
-ht-degree: 0%
+source-wordcount: '252'
+ht-degree: 2%
 
 ---
 
@@ -15,6 +15,9 @@ ht-degree: 0%
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
+>[!NOTE]
+>
+> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)
 
 ## REST API 끝점 {#clientless-endpoints}
 
@@ -42,7 +45,7 @@ ht-degree: 0%
 
 | 엔드포인트 | 호출됨  </br>작성자: | 입력   </br>매개 변수 | HTTP  </br>방법 | 응답 | HTTP  </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>예:<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자  </br>    (경로 구성 요소)</br>2.  등록 코드  </br>    (경로 구성 요소) | GET | 등록 코드 및 정보가 포함된 XML 또는 JSON입니다. 아래 스키마 및 샘플을 참조하십시오. | 200 |
+| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>For example:<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestorId/regcode/TJCFK?format=xml | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자  </br>    (경로 구성 요소)</br>2.  등록 코드  </br>    (경로 구성 요소) | GET | 등록 코드 및 정보가 포함된 XML 또는 JSON입니다. 아래 스키마 및 샘플을 참조하십시오. | 200 |
 
 {style="table-layout:auto"}
 

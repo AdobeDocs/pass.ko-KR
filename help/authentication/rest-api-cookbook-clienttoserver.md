@@ -2,9 +2,9 @@
 title: REST API Cookbook(클라이언트-서버)
 description: 서버에 대한 REST API Cookbook 클라이언트입니다.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '855'
+source-wordcount: '870'
 ht-degree: 0%
 
 ---
@@ -22,6 +22,10 @@ ht-degree: 0%
 
 
 이 접근 방법에서는 필요한 흐름(스트리밍 앱의 시작, 등록, 권한 부여 및 보기 미디어 흐름 및 AuthN 앱의 인증 흐름)을 완료하려면 두 가지 구성 요소(스트리밍 앱 및 AuthN 앱)가 필요합니다.
+
+### 조절 메커니즘
+
+Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/throttling-mechanism.md).
 
 ## 구성 요소 {#components}
 

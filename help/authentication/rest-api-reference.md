@@ -2,10 +2,10 @@
 title: REST API 참조
 description: Rest api 참조
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '649'
-ht-degree: 4%
+source-wordcount: '641'
+ht-degree: 2%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 4%
 >[!NOTE]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+## 조절 메커니즘
+
+Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/throttling-mechanism.md).
 
 ## 응답 형식 {#response-formats}
 

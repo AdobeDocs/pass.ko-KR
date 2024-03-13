@@ -2,10 +2,10 @@
 title: 임시 패스 및 프로모션 임시 패스에 대한 무료 미리보기
 description: 임시 패스 및 프로모션 임시 패스에 대한 무료 미리보기
 exl-id: c584bf0c-15c4-4a4d-b6a2-8d15ee786fe3
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '406'
-ht-degree: 1%
+source-wordcount: '399'
+ht-degree: 0%
 
 ---
 
@@ -14,6 +14,10 @@ ht-degree: 1%
 >[!NOTE]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+>[!NOTE]
+>
+> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)
 
 ## REST API 끝점 {#clientless-endpoints}
 

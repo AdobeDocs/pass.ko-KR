@@ -2,9 +2,9 @@
 title: 두 번째 화면 웹 앱별 인증 흐름 확인
 description: 두 번째 화면 웹 앱별 인증 흐름 확인
 exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '206'
+source-wordcount: '211'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!NOTE]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+>[!NOTE]
+>
+> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)
 
 ## REST API 끝점 {#clientless-endpoints}
 

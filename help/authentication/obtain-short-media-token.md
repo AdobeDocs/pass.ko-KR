@@ -2,7 +2,7 @@
 title: 짧은 미디어 토큰 가져오기
 description: 짧은 미디어 토큰 받기
 exl-id: 667eaaba-423e-4d54-9dbe-084b3c049e1f
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
 source-wordcount: '370'
 ht-degree: 0%
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!NOTE]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+>[!NOTE]
+>
+> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)
 
 ## REST API 끝점 {#clientless-endpoints}
 

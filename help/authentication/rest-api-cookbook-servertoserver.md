@@ -2,9 +2,9 @@
 title: REST API Cookbook(서버 간)
 description: 서버에 대한 REST API Cookbook 서버입니다.
 exl-id: 36ad4a64-dde8-4a5f-b0fe-64b6c0ddcbee
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '1825'
+source-wordcount: '1847'
 ht-degree: 0%
 
 ---
@@ -20,6 +20,9 @@ ht-degree: 0%
 
 이 Cookbook 문서의 목적은 서버 간 아키텍처를 사용하여 Adobe Pass 인증을 구현하기 위한 모범 사례를 자세히 설명하는 것입니다.  프로덕션 환경 및 운영에 대한 기본 요구 사항, 단계별 흐름 구현 및 일반적인 고려 사항을 제공합니다.
 
+### 조절 메커니즘
+
+Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/throttling-mechanism.md).
 
 
 ## 구성 요소 {#components}

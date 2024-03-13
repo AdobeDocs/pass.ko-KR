@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로, 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 579ce868b6ee94e1854bbc51145fc7840268db26
+source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
 workflow-type: tm+mt
-source-wordcount: '919'
+source-wordcount: '921'
 ht-degree: 3%
 
 ---
@@ -27,6 +27,7 @@ ht-degree: 3%
    + [프로그래머 권한 흐름](entitlement-flow.md)
    + [프로그래머 활용 사례](programmer-use-cases.md)
    + [클라이언트 정보 전달(장치, 연결 및 애플리케이션)](passing-client-information-device-connection-and-application.md)
+   + [조절 메커니즘](throttling-mechanism.md)
    + 나머지 API {#restapi}
       + [REST API 개요](rest-api-overview.md)
       + [REST API Cookbook(서버 간)](rest-api-cookbook-servertoserver.md)
