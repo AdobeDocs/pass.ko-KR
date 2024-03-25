@@ -1,7 +1,7 @@
 ---
 title: CMU API 액세스
 description: CMU API 액세스
-source-git-commit: 30631ac006b7944cb2eb8996c2c165343b6be5fe
+source-git-commit: 598eb878168f6e352a8eae369cbc8cb833033328
 workflow-type: tm+mt
 source-wordcount: '407'
 ht-degree: 0%
@@ -16,8 +16,7 @@ ht-degree: 0%
 
 ## 액세스 절차 개요 {#api-access-procedure-overview}
 
-OAuth 2.0 Dynamic Client Registration Protocol과 호환되도록 CMU 보고서 액세스를 업데이트했습니다.
-사용자 지정 OAuth 2.0 인증 서버가 배포되어 Concurrency Monitoring 애플리케이션의 요구 사항을 해결합니다. \
+OAuth 2.0 Dynamic Client Registration Protocol과 호환되도록 CMU 보고서 액세스를 업데이트했습니다. 사용자 지정 OAuth 2.0 인증 서버가 배포되어 Concurrency Monitoring 애플리케이션의 요구 사항을 해결합니다. \
 클라이언트 애플리케이션이 OAuth 2.0 인증을 활용하려면 서버는 상호 작용할 수 있는 특정 정보(클라이언트 자격 증명)를 얻기 위해 동적으로 등록해야 합니다. 등록 프로세스의 일부로 클라이언트는 기본 제공 메타데이터 세트를 클라이언트 등록 엔드포인트에 제공해야 합니다.
 이 메타데이터는 소프트웨어 문으로 통신되며, 인증 서버가 동일한 소프트웨어 문을 사용하여 애플리케이션의 다른 인스턴스를 상호 연관시킬 수 있도록 하는 &quot;software_id&quot;가 포함되어 있습니다.
 소프트웨어 문은 클라이언트 소프트웨어에 대한 메타데이터 값을 번들로 어설션하는 JSON 웹 토큰(JWT)입니다. 클라이언트 등록 요청의 일부로 인증 서버에 표시되는 경우 소프트웨어 명령문은 JSON 웹 서명(JWS)을 사용하여 디지털 서명되거나 MAC편집되어야 합니다. \
@@ -28,7 +27,7 @@ OAuth 2.0 Dynamic Client Registration Protocol과 호환되도록 CMU 보고서 
 
 1. Adobe Pass DCR 서버에 등록된 응용 프로그램이 있습니다. 이 단계는 다음으로 문의하십시오. [지원 팀](mailto:tve-support@adobe.com).
 2. 소프트웨어 구문 가져오기
-   1. TVE 대시보드로 이동 <a href="https://console-preprod.auth.adobe.com/#!/" target="_blank"> 사전 프로덕션 </a> 또는 <a href="https://console.auth.adobe.com/" target="_blank">PROD</a>
+   1. TVE 대시보드로 이동 <a href="https://console-preprod.auth.adobe.com/#!/" target="_blank"> 사전 프로덕션 </a>  또는 <a href="https://console.auth.adobe.com/" target="_blank">PROD</a>
    2. 프로그래머 선택
    3. 응용 프로그램 탭으로 이동
    4. 애플리케이션 선택
