@@ -2,9 +2,9 @@
 title: 시작 [!UICONTROL Account IQ]
 description: 온보딩, 사전 요구 사항 및 사용 시작 방법에 대해 알아봅니다 [!UICONTROL Account IQ].
 exl-id: 840ab081-0073-492f-86b2-ba174ae93256
-source-git-commit: 3e5bcee38151c88d3538cdbdbf2d07010be929cd
+source-git-commit: a7a37ffea0169a302890ee50b2e2202ddf58d021
 workflow-type: tm+mt
-source-wordcount: '214'
+source-wordcount: '209'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 1. 조직 사용자 할당 대상 **[!UICONTROL TVE Dashboard Read-Write]** 또는 **[!UICONTROL TVE Dashboard Read Only]** 의 프로필 [Adobe Admin Console](https://adminconsole.adobe.com/).
 
-   조직의 관리 사용자는 사용자를 만들고 다음에 대한 액세스 권한을 부여할 수 있습니다. [!UICONTROL Account IQ Dashboard and Reports]. 조직 사용자에게 액세스 권한을 부여하려면 [!UICONTROL Account I]Q: 조직 관리자는 다음 작업을 수행해야 합니다.
+   조직의 관리 사용자는 사용자를 만들고 다음에 대한 액세스 권한을 부여할 수 있습니다. [!UICONTROL Account IQ Dashboard and Reports]. 조직 사용자에게 액세스 권한을 부여하려면 [!UICONTROL Account IQ], 조직 관리자는 다음 작업을 수행해야 합니다.
 
    1. 에 로그인 [Adobe Admin Console](https://adminconsole.adobe.com/).
 

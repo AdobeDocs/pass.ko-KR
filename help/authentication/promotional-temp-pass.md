@@ -2,9 +2,9 @@
 title: 프로모션 임시 패스
 description: 프로모션 임시 패스
 exl-id: 705c1ba9-0430-4e3b-add1-d9e4da3f82d1
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: c88fba76b1805dd88fccb68b13bde11b1b8ea181
 workflow-type: tm+mt
-source-wordcount: '1529'
+source-wordcount: '1510'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ Adobe Pass 인증은 장치 ID와 사용자가 제공한 정보 및 아래 논�
 
 * 사용자 제공 정보 키(예: 이메일)
 * 사용자가 사용할 수 있는 리소스 수
-* TTL - 사용자가 구성된 수의 리소스를 사용할 수 있는 시간 프레임
+* TTL - 사용자가 구성된 리소스 수를 사용할 수 있는 시간 간격
 
 ### 사용자 메타데이터 {#user-metadata}
 

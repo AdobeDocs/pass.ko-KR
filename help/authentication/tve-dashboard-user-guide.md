@@ -2,9 +2,9 @@
 title: Primetime TVE Dashboard 사용 안내서
 description: Primetime TVE Dashboard 사용 안내서
 exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: c6afb9b080ffe36344d7a3d658450e9be767be61
 workflow-type: tm+mt
-source-wordcount: '4386'
+source-wordcount: '4377'
 ht-degree: 0%
 
 ---
@@ -60,6 +60,7 @@ TVE Dashboard는 아래와 같이 Prequal(Prequalification) 및 Release라는 �
 *그림 2: Adobe Pass TVE 대시보드 환경 드롭다운*
 
 >[!IMPORTANT]
+>
 >TVE 대시보드를 통해 Adobe Pass 인증 구성을 관리 변경할 때 기능이 적절히 작동하도록 하려면 아래 시퀀스를 따르는 것이 좋습니다.
 
 TVE 대시보드를 통해 Adobe Pass 인증 구성을 관리적으로 변경하려면 다음을 수행하십시오.
@@ -69,6 +70,7 @@ TVE 대시보드를 통해 Adobe Pass 인증 구성을 관리적으로 변경하
 * 에서 변경 사항 수행 [프로덕션 릴리스 및 유효성 검사](http://sp.auth-staging.adobe.com/apitest/api.html).
 
 >[!IMPORTANT]
+>
 >관리 변경 사항이 실시간으로 적용되려면 사용자가 사이드바의 왼쪽 하단에 표시되는 버튼을 선택하여 &quot;변경 사항 검토 및 푸시&quot; 섹션으로 이동하여 변경 사항을 검토하고, 새로 생성된 변경 사항에 대한 설명을 추가하고, &quot;구성 푸시&quot;를 선택하여 구성 업데이트를 확인해야 합니다.
 
 ![대시보드에서 푸시 알림 검토](assets/tve-review-push-notifications.png)
