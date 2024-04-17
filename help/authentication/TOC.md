@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로, 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 73d87de7db950f23973ad31b61409a1b711fc916
+source-git-commit: 30e2507c0622b882744cf8291525c388575df32f
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '936'
 ht-degree: 3%
 
 ---
@@ -156,6 +156,7 @@ ht-degree: 3%
    + [Adobe Pass Adobe PayTV 패스 모니터링](monitoring-adobe-pay-tv-pass.md)
    + [최소 시스템 요구 사항](minimum-system-requirements.md)
 + 릴리스 정보 {#release-notes}
+   + [Adobe Pass Authentication 2.70 릴리스 노트](auth-rn-270.md)
    + [Adobe Pass Authentication 2.69 릴리스 노트](auth-rn-269.md)
    + [Adobe Pass Authentication 2.68 릴리스 노트](auth-rn-268.md)
    + [Adobe Pass Authentication 2.67 릴리스 노트](auth-rn-267.md)
