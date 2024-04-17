@@ -1,7 +1,8 @@
 ---
 title: 세그먼트 작업
 description: 세그먼트 이해 및 사용. 세그먼트를 만들고 관리하는 방법을 알아봅니다.
-source-git-commit: cfcaa00ab05c99a64bcb0edfe5af60845a6769a9
+exl-id: 01431437-55f5-464d-8ee4-7a79ec553e4f
+source-git-commit: 38402b411dd4fad3490115cff1854faa7f3cb293
 workflow-type: tm+mt
 source-wordcount: '1970'
 ht-degree: 0%
@@ -40,7 +41,7 @@ ht-degree: 0%
 
 세그먼트를 작성하고 가입자의 공유 행동을 분석하려면 다음을 선택합니다. **[!UICONTROL Create new segment]** 오른쪽 상단에 있습니다.
 
-![새 세그먼트 만들기 를 선택합니다](assets/d2c-create-new-segment.png)
+![새 세그먼트 만들기 를 선택합니다](assets/create-new-segment-d2c.png)
 
 *새 세그먼트 만들기 를 선택합니다*
 
@@ -220,7 +221,7 @@ ht-degree: 0%
 
 *편집, 복제 또는 삭제할 세그먼트 선택*
 
-**A.** [비디오 카테고리](product-concepts.md#video-category-def) **B.** [기본 세그먼트](#work-with-segments)
+**A.** [기본 세그먼트](#work-with-segments) **B.** [비디오 카테고리](product-concepts.md#video-category-def)
 
 >[!NOTE]
 >
@@ -278,5 +279,3 @@ ht-degree: 0%
    >[!NOTE]
    >
    >세그먼트는 시스템에서 영구적으로 삭제되며 이 작업은 실행 취소할 수 없습니다.
-
-
