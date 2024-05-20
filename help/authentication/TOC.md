@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로, 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 30e2507c0622b882744cf8291525c388575df32f
+source-git-commit: 26236fbd4b2d5703bcf99fc0cc5e0460e75ed185
 workflow-type: tm+mt
-source-wordcount: '936'
+source-wordcount: '957'
 ht-degree: 3%
 
 ---
@@ -221,4 +221,16 @@ ht-degree: 3%
    + 개념 {#concepts}
       + [사용자 ID 이해](understanding-user-ids.md)
 + [TVE 대시보드 사용 안내서](tve-dashboard-user-guide.md)
++ 새 TVE 대시보드 사용 안내서 {#user-guide}
+   + [TVE 대시보드 개요](/help/authentication/tve-dashboard-overview.md)
+   + [환경](/help/authentication/tve-dashboard-environments.md)
+   + [변경 사항 검토 및 푸시](/help/authentication/tve-dashboard-review-push-changes.md)
+   + [대시보드](/help/authentication/tve-dashboard-home.md)
+   + [채널](/help/authentication/tve-dashboard-channels.md)
+   + [프로그래머](/help/authentication/tve-dashboard-programmers.md)
+   + [MVPD](/help/authentication/tve-dashboard-mvpds.md)
+   + [통합](/help/authentication/tve-dashboard-integrations.md)
+   + [보고서](/help/authentication/tve-dashboard-reports.md)
+   + [변경 로그](/help/authentication/tve-dashboard-changes-log.md)
 + [용어집](glossary.md)
+
