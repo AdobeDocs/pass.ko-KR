@@ -1,13 +1,13 @@
 ---
 title: API 개요
 description: 동시 모니터링 API 개요
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+exl-id: eb232926-9c68-4874-b76d-4c458d059f0d
+source-git-commit: dd370b231acc08ea0544c0dedaa1bdb0683e378f
 workflow-type: tm+mt
-source-wordcount: '1425'
+source-wordcount: '1556'
 ht-degree: 0%
 
 ---
-
 
 # API 개요 {#api-overview}
 
@@ -101,6 +101,24 @@ Swagger UI에서 사용할 수 있는 &quot;스트림 활성 상태 유지&quot;
 * 202 수락됨 - 성공적인 응답
 * 410 세션이 이미 중지된 경우 없어짐.
 
+#### 실행 중인 모든 스트림 가져오기 {#get-all-running-streams}
+
+이 끝점은 모든 애플리케이션에서 특정 테넌트에 대해 현재 실행 중인 모든 세션을 제공합니다. 사용 **제목** 및 **idp** 호출 매개 변수:
+
+![](assets/get-all-running-streams-parameters.png)
+
+전화를 걸면 다음과 같은 응답을 받게 됩니다.
+
+![](assets/get-all-running-streams-success.png)
+
+다음을 참고하십시오. **만료** 머리글입니다. 하트비트를 보내지 않는 한 첫 번째 세션이 만료되는 시간입니다. 다른 테넌트의 응용 프로그램에서 이 사용자에 대해 실행 중인 다른 스트림이 없으므로 OtherStreams의 값이 0입니다.
+메타데이터 필드는 세션이 시작될 때 전송된 모든 메타데이터로 채워집니다. 필터링하지 않으므로 보낸 모든 항목을 받게 됩니다.
+호출을 수행할 때 특정 사용자에 대해 실행 중인 세션이 없는 경우 다음 응답을 받게 됩니다.
+
+![](assets/get-all-running-streams-empty.png)
+
+또한 이 경우 **만료** 헤더가 없습니다.
+
 #### 정책 위반 {#breaking-policy-app-first}
 
 
@@ -157,4 +175,3 @@ Swagger UI에서 사용할 수 있는 &quot;스트림 활성 상태 유지&quot;
 새 세션을 만들 때마다 채널 메타데이터에 다른 값을 사용하면 임계값 2의 범위가 각 값에 개별적으로 할당되므로 모든 호출이 성공합니다.
 
 첫 번째 예에서처럼, 충돌 스트림을 원격으로 중지하기 위해 종료 코드를 사용하거나 스트림 중 하나에서 하트비트가 작동하지 않는다고 가정하고 스트림 중 하나가 만료될 때까지 기다릴 수 있습니다.
-
