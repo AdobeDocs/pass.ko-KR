@@ -4,7 +4,7 @@ description: /authenticate 요청에 '&'reg_code를 사용하지 마십시오.
 exl-id: c0ecb6f9-2167-498c-8a2d-a692425b31c5
 source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
 workflow-type: tm+mt
-source-wordcount: '235'
+source-wordcount: '223'
 ht-degree: 0%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 0%
 
 ## 문제
 
-IE 9 브라우저는 &#39;\®&#39;을(를) 특수 명령으로 해석하고 IE로 ®.
+IE 9 브라우저는 &#39;\&amp;reg&#39;를 특수 명령으로 해석하고 이를 CJA로 ®.
 
 ## 설명
 
-다음과 같은 경우 `/authenticate` 요청은 다음과 같이 구성됩니다.
+`/authenticate` 요청이 다음과 같이 구성된 경우...
 
 
 ```
@@ -41,7 +41,7 @@ IE 9 브라우저는 &#39;\®&#39;을(를) 특수 명령으로 해석하고 IE�
 ```
 
 
-&#39;&amp;&#39;가 없고 Adobe이 을 찾을 수 없으므로 요청자\_id는 univion®\_code=EKAFMFI로 해석됩니다. `regCode` 토큰을 연결할 매개 변수.  AuthN 토큰이 전혀 생성되지 않을 가능성이 있으며, 이 경우 `/checkauthn` 호출에서 토큰을 찾을 수 없습니다.
+&#39;&amp;&#39;가 없고 Adobe이 토큰과 연결할 `regCode` 매개 변수를 찾을 수 없으므로 요청자\_id는 univion®\_code=EKAFMFI로 해석됩니다.  AuthN 토큰이 전혀 만들어지지 않을 수 있습니다. 이 경우 `/checkauthn`개의 호출에서 토큰을 찾을 수 없습니다.
 
 
 
@@ -49,14 +49,14 @@ IE 9 브라우저는 &#39;\®&#39;을(를) 특수 명령으로 해석하고 IE�
 
 다음 옵션 중 하나로 이 문제를 해결할 수 있습니다.
 
-1. 를 사용하지 마십시오. `&reg_code` 다른 쿼리 문자열 매개 변수 간의 매개 변수입니다.  대신 요청 URL의 첫 번째 쿼리 문자열 매개 변수로 이동하여 다음과 같이 요청 URL을 만듭니다.
+1. 다른 쿼리 문자열 매개 변수 사이에 `&reg_code` 매개 변수를 사용하지 마십시오.  대신 요청 URL의 첫 번째 쿼리 문자열 매개 변수로 이동하여 다음과 같이 요청 URL을 만듭니다.
 
 
-       &lt;fqdn>authenticate?reg_code =EKAFMFI&amp;requestor_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
+       &lt;FQDN>인증?reg_code =EKAFMFI&amp;requestor_id=someRequestor&amp;domain_name=someRequestor.com&amp;noflash=true&amp;mso_id=someMvpd&amp;redirect_url=someRequestor.redirect.url.html
    
 
-   이렇게 하면 `&reg` 매개 변수가 잘못 해석되지 않습니다.
+   이 방법으로 `&reg` 매개 변수가 잘못 해석되지 않습니다.
 
-1. 정규화 `&reg_code` 을 사용하는 경우 `&amp;reg_code`.
+1. `&amp;reg_code`을(를) 사용하여 `&reg_code`을(를) 정규화합니다.
 
 1. Adobe은 AuthN 토큰 생성이 실패한 경우 인증 호출에 응답하여 오류 코드를 두 번째 화면으로 다시 전송하는 새 기능을 도입할 수 있습니다.

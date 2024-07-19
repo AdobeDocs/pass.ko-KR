@@ -11,9 +11,9 @@ ht-degree: 0%
 
 # 사용 패턴 {#usage-patterns}
 
-계정 IQ는 가입자 계정의 사용자를 여행자나 통근, 대가족, 커뮤니티 공유 등 사회적 행동의 측면에서 다양한 범주로 분류한다. 다음 **사용 패턴** 페이지에는 이러한 사용자 유형화에 대한 몇 가지 다양한 분석 및 보고서가 표시됩니다. 예를 들어, **사용 패턴 분포** 보고서는 모든 계정과 현재 세그먼트의 사용 동작을 비교합니다.
+Account IQ은 가입자 계정의 사용자를 여행자나 통근자, 대가족, 커뮤니티 공유 등 사회적 행동 측면에서 다양한 범주로 분류한다. **사용 패턴** 페이지에는 이러한 사용자 유형화에 대한 여러 분석 및 보고서가 표시됩니다. 예를 들어 **사용 패턴 분포** 보고서는 현재 세그먼트의 사용 동작을 모든 계정과 비교합니다.
 
-앱의 다른 페이지와 마찬가지로 여기에서 분석 및 보고서는 [세그먼트 패널](/help/accountiq/segments-timeinterval.md).
+앱의 다른 페이지와 마찬가지로 분석 및 보고서는 [세그먼트 패널](/help/accountiq/segments-timeinterval.md)에 정의된 현재 세그먼트를 기반으로 합니다.
 
 ## 사용 패턴 분포 {#usage-pattern-dis}
 
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ![](assets/d2c-segment-users-industry.png)
 
-*사용 패턴 분포-세그먼트의 사용자*
+*사용 패턴 배포-세그먼트의 사용자*
 
 +++
 
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 ## 세그먼트의 사용 패턴 분포 {#usage-pattern-dis-segment}
 
-다음 **[!UICONTROL Usage patterns distribution in segment]** 패널 은 각 사용자 패턴에 대한 다음 정보를 표로 표시합니다.
+**[!UICONTROL Usage patterns distribution in segment]** 패널은 각 사용자 패턴에 대해 다음 정보를 표로 표시합니다.
 
 * 개별 계정이 속한 공유 확률 범위입니다.
 * 해당 패턴의 계정 수 및 백분율.
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 +++D2C 서비스: 지역에 대한 사용 패턴 배포
 
-다음 **[!UICONTROL Usage pattern distribution]** 다음 표에서는 사용 패턴을 비교합니다 [비디오 카테고리](product-concepts.md##video-category-def) 현재 세그먼트.
+**[!UICONTROL Usage pattern distribution]** 테이블은 현재 세그먼트의 [비디오 범주](product-concepts.md##video-category-def)에서 사용 패턴을 비교합니다.
 
 ![](assets/d2c-usage-patterns-regions.png)
 
@@ -71,26 +71,26 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->이전 이미지에 표시된 비디오 카테고리(예: **지역** 는 단지 예시일 뿐입니다. 계정 IQ에 로그인하면 레이블에 회사의 특정 비디오 범주가 표시됩니다.
+>**지역**&#x200B;과 같이 이전 이미지에 표시된 비디오 범주가 예입니다. Account IQ에 로그인하면 레이블에 회사의 특정 비디오 범주가 표시됩니다.
 
 +++
 
 +++프로그래머: MVPD에 대한 사용 패턴 배포
 
-다음 **[!UICONTROL Usage pattern distribution]** 표는 현재 세그먼트의 MVPD들에 대한 사용 패턴 분포의 비교를 제공한다.
+**[!UICONTROL Usage pattern distribution]** 테이블은 현재 세그먼트의 MVPD에 대한 사용 패턴 분포를 비교합니다.
 
 ![](assets/usage-patterns-mvpdwise.png)
 
-*프로그래머를 위한 사용 패턴 분포*
+*프로그래머를 위한 사용 패턴 배포*
 
 +++
 
 +++MVPD: 프로그래머를 위한 사용 패턴 배포
 
-다음 **[!UICONTROL Usage pattern distribution]** 표에서는 현재 세그먼트의 프로그래머 또는 채널에 대한 사용 패턴 분포의 비교를 제공합니다.
+**[!UICONTROL Usage pattern distribution]** 표에서는 현재 세그먼트의 프로그래머 또는 채널에 대한 사용 패턴 분포를 비교합니다.
 
 ![](assets/usage-patterns-programmerwise.png)
 
-*MVPD에 대한 사용 패턴 분포*
+*MVPD에 대한 사용 패턴 배포*
 
 +++

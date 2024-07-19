@@ -1,9 +1,10 @@
 ---
 title: Adobe Pass Authentication 2.66 릴리스 노트
 description: Adobe Pass Authentication 2.66 릴리스 노트
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 7c3cd007-ed2b-455f-8f70-6ec5d0a6552a
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '154'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-266}
 
 Adobe Pass 인증: adobe-pass-**2.66.0.1**
-릴리스 날짜: **2023년 7월 11일 - 2023년 7월 13일**
+릴리스 날짜: **2023/11/07 - 2023/07/13**
 
 ### 릴리스 개요 {#release-overview-266}
 

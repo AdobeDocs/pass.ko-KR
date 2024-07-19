@@ -1,14 +1,13 @@
 ---
 title: 사용자 지정 메타데이터
 description: 사용자 지정 메타데이터
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 0cfd1158-8c6c-47c2-b838-5490ff4bf0ce
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '367'
 ht-degree: 0%
 
 ---
-
-
 
 # 사용자 지정 메타데이터 {#cm}
 
@@ -40,10 +39,9 @@ ht-degree: 0%
 
 1. 고객은 매개 변수 그룹을 보내려고 하며, 이 매개 변수 그룹에는 &quot;SPORTS&quot; 및 &quot;KIDS&quot; 값이 있습니다.
 1. 그런 다음 앱에서 다음을 수행해야 합니다.
-   * 스포츠 채널의 경우 스트림 초기화에서 앱이 전송하는 것입니다 ***type=SPORTS*** 쿼리 매개 변수로
-   * 어린이 관련 콘텐츠가 있는 채널의 경우, 스트림 초기화에서 앱이 전송하는 것입니다 ***type=KIDS*** 쿼리 매개 변수로
+   * 스포츠 채널의 경우 스트림 초기화에서 앱이 쿼리 매개 변수로 ***type=SPORTS***&#x200B;을(를) 보냅니다.
+   * 어린이 관련 콘텐츠가 있는 채널의 경우 스트림 초기화 시 앱에서 쿼리 매개 변수로 ***type=KIDS***&#x200B;을(를) 보냅니다.
 1. 그런 다음 다음과 같은 정책을 정의할 수 있습니다.
    * `GROUP by type HAVING COUNT(streamID) < 4) IF type=KIDS`
    * `GROUP by type HAVING COUNT(streamID) < 2) IF type=SPORTS`
 1. 이는 기본적으로 사용자가 스포츠를 시청할 때는 1개 이상의 디바이스에서 스포츠를 시청할 수 없지만, 사용자가 키즈 컨텐츠를 시청할 때는 최대 3개의 디바이스에서 볼 수 있음을 의미합니다.
-

@@ -4,7 +4,7 @@ description: 부록 B "디버깅 팁"
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '161'
 ht-degree: 0%
 
 ---
@@ -31,20 +31,20 @@ Firefox에서는 브라우저를 신뢰할 수 있지만, &quot;도구&quot; -\>
 
 ## LSO 캐시 지우기 {#clearing-lsos-cache}
 
-액세스 [Flash Player 도움말](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html).
+[Flash Player 도움말](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html)에 액세스합니다.
 
-다음 항목 선택 ```entitlement.\*``` (테스트되는 내용에 따라) 을(를) 클릭하고 &quot;웹 사이트 삭제&quot;를 클릭합니다.
+```entitlement.\*```을(를) 선택하고(테스트 내용에 따라) &quot;웹 사이트 삭제&quot;를 클릭합니다.
 
 
 ## 디버깅 도구 {#tools}
 
 Adobe Pass 인증 엔지니어는 다음 디버깅 도구를 사용합니다.
 
-- 파이어버그 - <http://www.getfirebug.com/>
+- Firebug - <http://www.getfirebug.com/>
 - Flashbug(Flash Player의 디버그 버전에서 작동)
-- 바이올린 - <http://www.fiddler2.com/fiddler2/>
+- Fiddler - <http://www.fiddler2.com/fiddler2/>
 - Charles - <http://www.charlesproxy.com/>
-- 와이어샤크 <http://www.wireshark.org/>
+- Wireshark - <http://www.wireshark.org/>
 
 
 <!--

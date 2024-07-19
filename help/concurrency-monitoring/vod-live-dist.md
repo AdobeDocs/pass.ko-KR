@@ -1,21 +1,21 @@
 ---
 title: 동시 모니터링에서 VOD와 라이브 콘텐츠를 구분하는 방법
 description: 동시 모니터링에서 VOD와 라이브 콘텐츠를 구분하는 방법
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 51ba686a-7c1f-4403-9e8e-cd247bf9e345
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '219'
+source-wordcount: '221'
 ht-degree: 0%
 
 ---
 
-
 # 방법: 동시 모니터링에서 VOD와 라이브 컨텐츠 구분 {#dist-vod-live}
 
-**Q:** 동시성 모니터링 서비스는 재생 중인 콘텐츠 유형(라이브 콘텐츠와 주문형 비디오)을 구분할 수 있습니까?
+**Q:** 동시성 모니터링 서비스에서 재생 중인 콘텐츠 유형(라이브 콘텐츠와 Video on demand)을 구분할 수 있습니까?
 
 
 
-**A:** 동시성 모니터링은 라이브 콘텐츠와 VOD(Video on demand)를 직접 구별할 수 없습니다. 비디오 플레이어는 재생 중인 콘텐츠 유형을 알고 다음 작업 중에 이 정보를 전송해야 합니다. [세션 초기화 호출](/help/concurrency-monitoring/cm-api-overview.md#session-initial) (동시성 모니터링에 필요). 일반 워크플로우는 다음과 같습니다.
+**A:** 동시성 모니터링에서 라이브 콘텐츠와 VOD(Video On Demand)를 직접 구분할 수 없습니다. 비디오 플레이어가 재생 중인 콘텐츠 형식을 알고 있어야 하며 [세션 초기화 호출](/help/concurrency-monitoring/cm-api-overview.md#session-initial) 중에 이 정보를 보내야 합니다(동시 모니터링에 필요). 일반 워크플로우는 다음과 같습니다.
 
 1. 동시성 모니터링 고객은 규칙을 구현할 메타데이터 집합을 정의합니다(예: content-type=live|vod, device-type=mobile|console|desktop).
 1. 동시성 모니터링 팀은 원하는 정책을 구현합니다. 예:

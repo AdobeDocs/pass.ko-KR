@@ -4,7 +4,7 @@ description: 동적 클라이언트 등록
 exl-id: 9bc2597d-b634-4542-849b-8e91a76cb8da
 source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
 workflow-type: tm+mt
-source-wordcount: '265'
+source-wordcount: '263'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,8 @@ ht-degree: 0%
 
 ## 컨텍스트 {#context}
 
-최신 보안 방식과 향상된 UX 및 플랫폼 소유자 요구 사항에 맞게 Adobe Pass 인증 Android SDK 및 iOS SDK는 을 채택하는 방향으로 나아가고 있습니다 [Android Chrome 사용자 지정 탭](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari view controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}.
+최신 보안 사례를 준수하기 위해 UX 및 플랫폼 소유자 개선
+요구 사항, Adobe Pass 인증 Android SDK 및 iOS SDK는 [Android Chrome 사용자 지정 탭](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} 및 [Apple Safari 보기 컨트롤러](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}를 채택하는 방향으로 이동하고 있습니다.
 
 현재 AdobePass 구현에서는 MVPD 로그인 페이지를 표시하는 웹 환경을 제공하기 위해 플랫폼별 웹 보기를 사용합니다. 이러한 웹 보기는 플랫폼 브라우저와 자격 증명 관리를 공유하지 않으므로 Adobe Pass 인증 애플리케이션을 사용할 때 브라우저가 저장한 암호를 사용할 수 없습니다. 또한 보안상의 이유로 일부 플랫폼에서는 인증 작업을 위해 WebView 컨트롤러를 사용하지 않는 방향으로 전환하고 있습니다. Google과 Apple 모두 &quot;Chrome 사용자 지정 탭&quot; 및 &quot;Safari 보기 컨트롤러&quot;와 같은 대체 옵션을 제공합니다. 각 브라우저의 단일 사용 탭입니다. Adobe Pass 인증은 2018년에 이러한 새로운 구성 요소를 채택할 예정입니다.
 

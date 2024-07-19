@@ -4,7 +4,7 @@ description: 인증서 Q&A
 exl-id: d4e493b0-4467-42b1-9758-16c5941d8051
 source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
 workflow-type: tm+mt
-source-wordcount: '245'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 </br>
 
-**Q1:** iOS과 Android에서 인증서를 등록할 수 있습니까?
+**Q1:** iOS 및 Android에서 인증서를 등록할 수 있습니까?
 
-**A:** iOS 및 Android용 인증서는 현재 구성에서 동일합니다. 기본 인증서는 두 플랫폼 모두에 사용됩니다.
+**A:** iOS 및 Android에 대한 인증서는 현재 구성에서 동일합니다. 기본 인증서는 두 플랫폼 모두에 사용됩니다.
 
 </br>
 
@@ -29,6 +29,6 @@ ht-degree: 0%
 
 </br>
 
-**Q3:** 새로운 유연한 TempPass를 사용하는 웹 페이지에 새 인증서가 필요합니까?
+**Q3:** 새로운 유연한 TempPass를 사용하는 웹 페이지에 필요한 새 인증서입니까?
 
-**A:** 인증서(및 모든 인증서)는 미디어 회사 및 프로그래머 수준에서 구성됩니다. FlexibleTempPass는 MVPD이므로 이에 대한 인증서를 구성할 필요가 없습니다. 따라서 기존 프로그래머를 유연한 TempPass와 통합하는 경우 프로그래머/미디어 회사 수준에서 이미 구성된 인증서가 사용됩니다.
+**A:** 인증서(및 모든 인증서)가 미디어 회사 및 프로그래머 수준에서 구성되었습니다. FlexibleTempPass는 MVPD이므로 이에 대한 인증서를 구성할 필요가 없습니다. 따라서 기존 프로그래머를 유연한 TempPass와 통합하는 경우 프로그래머/미디어 회사 수준에서 이미 구성된 인증서가 사용됩니다.

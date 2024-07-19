@@ -17,16 +17,16 @@ ht-degree: 2%
 
 >[!NOTE]
 >
-> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)
+> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)에 의해 제한됩니다.
 
 ## REST API 끝점 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+&lt;레지스트리_FQDN>:
 
 * 프로덕션 - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 스테이징 - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+&lt;SP_FQDN>:
 
 * 프로덕션 - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 스테이징 - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -37,9 +37,9 @@ ht-degree: 2%
 
 요청자에 대해 구성된 MVPD 목록을 반환합니다.
 
-| 엔드포인트 | 호출됨  </br>작성자: | 입력   </br>매개 변수 | HTTP  </br>방법 | 응답 | HTTP  </br>응답 |
+| 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/config/{requestorId}</br></br>예:</br></br>&lt;sp_fqdn>/api/v1/config/sampleRequestorId | Adobe Pass 인증 | 1. 요청자</br>    (경로 구성 요소)</br>_2.  deviceType(더 이상 사용되지 않음)_ | GET | MVPD 목록이 포함된 XML 또는 JSON. | 200 |
+| &lt;SP_FQDN>/api/v1/config/{requestorId}</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/config/sampleRequestorId | Adobe Pass 인증 | 1. 요청자</br>    (경로 구성 요소)</br>_2.  deviceType(더 이상 사용되지 않음)_ | GET | MVPD 목록이 포함된 XML 또는 JSON. | 200 |
 
 {style="table-layout:auto"}
 
@@ -57,8 +57,8 @@ ht-degree: 2%
 
 참고: Platform SSO를 사용하도록 구성된 모든 MVPD는 해당 노드(JSON/XML) 내에 다음과 같은 추가 속성을 갖게 됩니다.
 
-* **enablePlatformServices(부울):** 이 MVPD가 Platform SSO를 통해 통합되었는지 보여 주는 플래그
-* **boardingStatus(문자열):** MVPD가 Platform SSO를 완전히 지원하는지(지원됨) 또는 MVPD가 Platform 선택기에만 표시되는지(PICKER) 보여 주는 플래그
-* **displayInPlatformPicker(부울):** 이 MVPD가 플랫폼 선택기에 표시되어야 함
-* **platformMappingId (문자열):** 플랫폼에서 인식하는 이 MVPD의 식별자
-* **requiredMetadataFields(문자열 배열):** 성공적인 로그인 시 사용할 수 있을 것으로 예상되는 사용자 메타데이터 필드
+* 이 MVPD가 Platform SSO를 통해 통합되었는지 여부를 나타내는 **enablePlatformServices(부울):** 플래그
+* **boardingStatus(문자열):** 플래그는 MVPD가 Platform SSO(지원됨)를 완전히 지원하는지 또는 MVPD가 플랫폼 선택기(PICKER)에만 나타나는지 여부를 나타냅니다.
+* **displayInPlatformPicker(부울):** 이 MVPD가 플랫폼 선택기에 표시되어야 합니다.
+* **platformMappingId(문자열):** 플랫폼에서 인식하는 이 MVPD의 식별자입니다.
+* **requiredMetadataFields(문자열 배열):** 성공적인 로그인 시 사용할 수 있어야 하는 사용자 메타데이터 필드

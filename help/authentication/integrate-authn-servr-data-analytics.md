@@ -4,8 +4,8 @@ description: Adobe Pass 인증 서버측 데이터를 Adobe Analytics에 통합
 exl-id: c1f1f2a3-c98c-4aed-92ad-1f9bfd80b82b
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '1138'
-ht-degree: 4%
+source-wordcount: '1139'
+ht-degree: 0%
 
 ---
 
@@ -19,7 +19,7 @@ Adobe Pass 인증 고객은 보다 쉽게 사용할 수 있도록 Adobe Analytic
 
 데이터는 MVPD당 인증 전환율, MVPD 사용자 ID를 기반으로 한 고유 사용자 등과 같은 중요한 TVE 지표를 추적하는 역할을 합니다.
 
-이미 존재하는 경우 클라이언트 측 구현을 대체하기 위한 것은 아닙니다. 방문자 ID가 없는 경우 아래 특정 이벤트 이후에 사용자 활동을 추적할 수 없기 때문입니다. 고객이 통과 호출에 방문자 ID를 제공하는 경우 기존 고객 데이터와 모든 통과 이벤트에 참여할 수 있는 다른 유형의 Analytics 통합을 실시간으로 잠금 해제할 수 있습니다. 여기에서 가능한 이 새로운 유형의 통합에 대한 자세한 내용은 다음을 참조하십시오.&quot;[Adobe Pass 인증에서 Experience Cloud ID 사용](/help/authentication/exp-cloud-id-authn.md)&quot;
+이미 존재하는 경우 클라이언트 측 구현을 대체하기 위한 것은 아닙니다. 방문자 ID가 없는 경우 아래 특정 이벤트 이후에 사용자 활동을 추적할 수 없기 때문입니다. 고객이 통과 호출에 방문자 ID를 제공하는 경우 기존 고객 데이터와 모든 통과 이벤트에 참여할 수 있는 다른 유형의 Analytics 통합을 실시간으로 잠금 해제할 수 있습니다. 가능한 이 새로운 통합 유형에 대한 자세한 내용은 여기에서 확인하십시오. &quot;[Adobe Pass 인증에서 Experience Cloud ID 사용](/help/authentication/exp-cloud-id-authn.md)&quot;
 
 ## 지표 포함됨 {#metrics-included-int-authn-analyt}
 
@@ -48,9 +48,9 @@ Adobe Pass 인증 고객은 보다 쉽게 사용할 수 있도록 Adobe Analytic
 | SDK 유형 | 사용된 클라이언트 SDK(Flash, HTML5, Android 기본, iOS, Clientless 등) |
 | SDK 버전 | Adobe Pass 인증 클라이언트 SDK 버전 |
 | 리소스 ID | 인증 요청에 포함된 실제 리소스 제목(제공된 경우 MRSS 페이로드에서 항목/제목으로 추출) |
-| AuthZ 오류 유형 | Adobe Pass 인증에서 보고된 실패 이유 <br/> 다음은 가장 일반적인 값입니다 <br/> **noAuthZ** = MVPD가 사용자에게 패키지에 채널이 없다고 응답했습니다<br/> **네트워크** = MVPD에 연결할 수 없습니다. (MVPD는 호출 순간에 문제가 있으며 응답하지 않습니다.)<br/> **norefreshtoken** = 이는 OAuth 구현을 위한 것이며, 사용자가 암호를 변경했거나 MVPD가 몇 가지 이유로 이를 거부했을 경우 발생할 수 있습니다. 일반적으로 새 인증이 발생합니다<br/> **불일치** = 인증 토큰이 있는 장치와 다른 장치에서 요청이 수행된 경우. 사용자가 시스템을 속이려고 하지만 이러한 작업의 대부분은 장치 ID가 계산의 일부로 IP 주소를 사용한 이전 JavaScript SDK의 컨텍스트에서 발생한 경우 발생할 수 있습니다. 사용자가 집에서 TVE를 시청한 다음 직장에서 이 오류가 트리거되어 다시 인증해야 합니다<br/> **잘못됨** = 잘못된 요청, 누락 또는 잘못된 매개변수<br/>  **authzNone** = 프로그래머는 특정 채널 xMVPD 조합에 대한 승인을 거부할 수 있습니다. 이는 프로그래머가 액세스할 수 있는 백엔드 API에 의해 트리거됩니다<br/> **사기** = 우리 측의 보호 장치입니다. 사용자가 인증에 실패한 다음 짧은 간격(초)으로 여러 번 다시 요청하는 경우 직접 호출을 거부합니다. 일반적으로 프로그래머는 구현에 실패하는 경우 지속적으로 인증을 요구하는 버그가 있을 때 발생합니다. |
-| 토큰 유형 | AuthZ All 및 AuthN All로 인해 토큰이 생성되면 성능 저하로 인해 발생한 원인을 알아야 합니다.<br/> 이는 다음과 같습니다.<br/> &quot;normal&quot; = 일반적인 대소문자<br/> &quot;authnall&quot; = AuthN All이 활성화된 경우<br/> &quot;authzall&quot; = AuthZ All이 활성화된 경우<br/>  &quot;hba&quot; = HBA가 활성화된 경우 |
-| 클라이언트 없는 장치 유형 | 현재 Clientless에 사용되는 디바이스 플랫폼(대체 요소)입니다.<br/> 값은 다음과 같습니다.<br/> 해당 사항 없음 - 이벤트가 클라이언트 없는 SDK에서 발생하지 않았습니다.<br/> 알 수 없음 - 의 deviceType 매개 변수 이후 **클라이언트 없는 API** 는 선택 사항이며 값을 포함하지 않는 호출이 있습니다.<br/> 를 통해 전송된 다른 모든 값 **클라이언트 없는 API**. 예를 들어 xbox, appletv 및 roku가 있습니다. |
+| AuthZ 오류 유형 | Adobe Pass 인증 <br/>에서 보고한 실패 이유는 다음과 같습니다. <br/> **noAuthZ** = MVPD가 사용자에게 패키지에 채널이 없다고 회신함<br/> **네트워크** = MVPD에 연결할 수 없습니다(MVPD에서 통화 중에 문제가 발생하여 응답하지 않음)<br/> **norefreshtoken** = 이는 OAuth 구현을 위한 것이며, 사용자가 암호를 변경했거나 MVPD가 어떤 이유로 이를 거부했을 경우 발생할 수 있습니다. 일반적으로 새 인증<br/>이 발생합니다. **불일치** = 인증 토큰이 있는 장치와 다른 장치에서 요청을 하는 경우. 사용자가 시스템을 속이려고 하지만 이러한 작업의 대부분은 장치 ID가 계산의 일부로 IP 주소를 사용한 이전 JavaScript SDK의 컨텍스트에서 발생했습니다. 사용자가 집에서 TVE를 시청한 다음 직장에서 이 오류가 트리거되어 다시 인증해야 함<br/> **잘못됨** = 잘못된 요청, 누락되었거나 잘못된 매개 변수<br/>  **authzNone** = 프로그래머는 특정 channelxMVPD 조합에 대한 승인을 거부할 수 있습니다. 프로그래머가 <br/>에 액세스할 수 있는 백엔드 API에 의해 트리거됩니다. **사기** = 당사 측의 보호 메커니즘입니다. 사용자가 인증에 실패한 다음 짧은 간격(초)으로 여러 번 다시 요청하는 경우 직접 호출을 거부합니다. 일반적으로 프로그래머는 구현에 실패하는 경우 지속적으로 인증을 요구하는 버그가 있을 때 발생합니다. |
+| 토큰 유형 | AuthZ All 및 AuthN All로 인해 토큰이 생성되면 성능 저하로 인해 발생한 원인을 알아야 합니다.<br/> 다음과 같습니다.<br/> &quot;normal&quot; = 일반적인 경우<br/> &quot;authnall&quot; = AuthN All이 활성화된 경우<br/> &quot;authzall&quot; = AuthZ All이 활성화된 경우<br/> &quot;hba&quot; = HBA가 활성화된 경우 |
+| 클라이언트 없는 장치 유형 | 현재 Clientless에 사용되는 디바이스 플랫폼(대체 요소)입니다.<br/> 값은 다음과 같습니다.<br/> 해당 사항 없음 - 이벤트가 클라이언트 없는 SDK에서 발생하지 않음<br/> 알 수 없음 - **클라이언트 없는 API**&#x200B;의 deviceType 매개 변수는 선택 사항이므로 값이 포함되지 않은 호출이 있습니다.<br/> **클라이언트 없는 API**&#x200B;를 통해 전송된 다른 모든 값. 예를 들어 xbox, appletv 및 roku가 있습니다. |
 | MVPD 사용자 ID | 쿠키 기반 방문자 ID를 대체합니다. |
 
 
@@ -114,17 +114,17 @@ Adobe Pass 인증 고객은 보다 쉽게 사용할 수 있도록 Adobe Analytic
 
 | 속성 | eVar |
 |-----------------------------------|--------------------------------|
-| 채널 | eVar1 |
-| MVPD | eVar2 |
-| 프록시 | eVar3 |
-| SDK 유형 | eVar4 |
-| SDK 버전 | eVar5 |
-| 리소스 ID | eVar6 |
-| AuthZ 오류 유형 | eVar7 |
-| 토큰 유형 | eVar8 |
-| 클라이언트 없는 장치 유형 | eVar9 |
+| 채널 | eVar |
+| MVPD | eVar |
+| 프록시 | eVar |
+| SDK 유형 | eVar |
+| SDK 버전 | EVAR 5 |
+| 리소스 ID | EVAR 6 |
+| AuthZ 오류 유형 | EVAR 7 |
+| 토큰 유형 | eVar |
+| 클라이언트 없는 장치 유형 | EVAR9 |
 | MVPD 사용자 ID | visitorID (자동으로 완료) |
-| MVPD 사용자 ID | eVar10 |
+| MVPD 사용자 ID | eVar |
 | 장치 유형 | eVar11 |
 | 운영 체제 | eVar12 |
 | 기본 하드웨어 유형 | eVar13 |
@@ -134,7 +134,7 @@ Adobe Pass 인증 고객은 보다 쉽게 사용할 수 있도록 Adobe Analytic
 | 외부 인증 공급자 | eVar17 |
 | 지연 | eVar18 |
 | 방문자 Id | eVar19 |
-| SSO 메커니즘 | eVar20 |
+| SSO 메커니즘 | eVar |
 | 장치 모델 | eVar21 |
 | 장치 버전 | eVar22 |
 | 장치 하드웨어 모델 | eVar23 |

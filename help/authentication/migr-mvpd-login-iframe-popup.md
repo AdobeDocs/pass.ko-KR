@@ -4,7 +4,7 @@ description: MVPD 로그인 페이지를 iFrame에서 Popup으로 마이그레�
 exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '686'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 * [Adobe Pass Authentication and Safari login issues](https://tve.helpdocsonline.com/adobe-pass)
 * [MVPD iFrame login and 3rd party cookies](https://tve.helpdocsonline.com/mvpd)-->
 
-Adobe Pass 인증 팀 **팝업/새 창 로그인 페이지를 구현하는 것이 좋습니다.** firefox 및 Safari의 iFrame 버전보다 더 좋습니다.  그러나 Internet Explorer용 로그인 페이지를 구현하는 경우 팝업 구현에 문제가 발생할 수 있습니다. IE 문제는 사용자가 팝업 창에서 MVPD로 인증되면 Adobe Pass 인증이 Internet Explorer에서 팝업 차단으로 보이는 상위 페이지 리디렉션을 강제 적용하기 때문에 발생합니다. Adobe Pass 인증 팀 **internet Explorer용 iFrame 로그인 구현 권장**.
+Adobe Pass 인증 팀 **에서는 Firefox 및 Safari에서 iFrame 버전보다 팝업/새 창 로그인 페이지**&#x200B;를 구현하는 것이 좋습니다.  그러나 Internet Explorer용 로그인 페이지를 구현하는 경우 팝업 구현에 문제가 발생할 수 있습니다. IE 문제는 사용자가 팝업 창에서 MVPD로 인증되면 Adobe Pass 인증이 Internet Explorer에서 팝업 차단으로 보이는 상위 페이지 리디렉션을 강제 적용하기 때문에 발생합니다. Adobe Pass 인증 팀 **에서는 Internet Explorer에 대해 iFrame 로그인을 구현할 것을 권장합니다**.
 
 이 기술 노트에 제공된 샘플 코드는 iFrame과 팝업의 하이브리드 구현을 사용하여 Internet Explorer에서는 iFrame을 열고 다른 브라우저에서는 팝업을 엽니다.
 
@@ -32,7 +32,7 @@ iFrame 구현이 이미 있는 것을 고려하여 기술 노트의 첫 번째 �
 
 ## iFrame에 로그인 페이지가 있는 MVPD 선택기 {#mvpd-pickr-iframe}
 
-이전 코드 예제에서는 다음을 포함하는 HTML 페이지를 보여 주었습니다 &lt;div> iFrame 닫기 단추와 함께 iFrame을 만들 태그입니다.
+이전 코드 예제에서는 iFrame 닫기 버튼과 함께 iFrame이 생성될 &lt;div> 태그가 포함된 HTML 페이지를 보여 주었습니다.
 
 ```HTML
 <body> 
@@ -48,7 +48,7 @@ iFrame 구현이 이미 있는 것을 고려하여 기술 노트의 첫 번째 �
 </body>
 ```
 
-관련 항목: **JavaScript** 코드:
+다음은 연결된 **JavaScript** 코드입니다.
 
 ```JavaScript
 /*
@@ -105,7 +105,7 @@ function setSelectedProvider(providerID) {
 
 ## 팝업 창에 로그인 페이지가 있는 MVPD 선택기 {#mvpd-pickr-popup}
 
-Because we will be using an **iFrame** 더 이상 HTML 코드에는 iFrame이나 iFrame을 닫는 단추가 포함되지 않습니다. 이전에 iFrame을 포함한 div - **mvpddiv** - 다음 용도로 보관 및 사용됩니다.
+**iFrame**&#x200B;을 더 이상 사용하지 않으므로 HTML 코드에는 iFrame 또는 iFrame을 닫는 단추가 포함되지 않습니다. 이전에 iFrame(**mvpddiv**)이 들어 있던 div는 다음 용도로 유지되고 사용됩니다.
 
 * 팝업 포커스가 손실되는 경우 MVPD 로그인 페이지가 이미 열려 있음을 사용자에게 알립니다.
 * 팝업에 다시 집중할 수 있는 링크를 제공합니다.
@@ -134,7 +134,7 @@ Because we will be using an **iFrame** 더 이상 HTML 코드에는 iFrame이나
 </body>
 ```
 
-MVPD 목록은 다음 div에 표시됩니다. **선택기** as a select **-mvpdList**.
+MVPD 목록이 **picker** div에 선택 **-mvpdList**(으)로 표시됩니다.
 
 새 API 콜백이 사용됩니다. **setConfig(configXML)**. 콜백은 setRequestor(requestorID) 함수를 호출한 후 트리거됩니다. 이 콜백은 이전에 설정된 requestorID와 통합된 MVPD 목록을 반환합니다. 콜백 메서드에서 들어오는 XML은 구문 분석되고 MVPD 목록은 캐시됩니다. MVPD 선택기도 만들어졌지만 표시되지 않습니다.
 
@@ -230,5 +230,5 @@ function checkClosed() {
 >
 >* 샘플 코드에는 사용된 requestorID - &#39;REF&#39;에 대해 실제 프로그래머 요청자 ID로 대체해야 하는 하드코딩된 변수가 포함되어 있습니다.
 >* 샘플 코드는 사용된 요청자 ID와 연결된 화이트리스트에 있는 도메인에서만 제대로 실행됩니다.
->* 전체 코드를 다운로드할 수 있으므로 이 기술 노트에 표시된 코드는 잘렸습니다. 전체 샘플을 보려면 **JS iFrame과 팝업 샘플 비교**.
->* 외부 JavaScript 라이브러리가 다음에서 연결되었습니다. [Google Hosted Services](https://developers.google.com/speed/libraries/).
+>* 전체 코드를 다운로드할 수 있으므로 이 기술 노트에 표시된 코드는 잘렸습니다. 전체 샘플을 보려면 **JS iFrame과 Popup 샘플**&#x200B;을 참조하십시오.
+>* 외부 JavaScript 라이브러리가 [Google Hosted Services](https://developers.google.com/speed/libraries/)에서 연결되었습니다.

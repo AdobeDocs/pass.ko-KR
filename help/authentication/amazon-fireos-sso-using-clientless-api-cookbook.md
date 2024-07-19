@@ -4,7 +4,7 @@ description: Clientless API Cookbook을 사용한 Amazon FireOS SSO
 exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
 source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '755'
 ht-degree: 0%
 
 ---
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 이 문서의 두 번째 부분에서는 Adobe Pass 인증 클라이언트 없는 API를 구현하는 주요 단계를 설명합니다.
 
-Clientless 솔루션이 작동하는 방식에 대한 광범위한 기술 개요는 [REST API 개요](/help/authentication/rest-api-overview.md). Adobe은 전체 아키텍처 및 첫 번째 구현에 대한 지원을 위한 기본 연락처입니다.
+Clientless 솔루션이 작동하는 방식에 대한 광범위한 기술 개요는 [REST API 개요](/help/authentication/rest-api-overview.md)를 참조하십시오. Adobe은 전체 아키텍처 및 첫 번째 구현에 대한 지원을 위한 기본 연락처입니다.
 
 ## Amazon 클라이언트 없는 SSO {#AMZ-Clientless-SSO}
 
@@ -37,7 +37,7 @@ Amazon SDK를 사용하여 개인화된 페이로드를 검색하고 Adobe 클�
 
 ### Amazon SDK를 사용하기 위해 애플리케이션을 빌드하는 방법 {#Build-entries}
 
-* 최신 버전 다운로드 및 복사 [Amazon 스텁 SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) /SSOEnabler 폴더로 이동하여 앱 디렉토리와 나란히 놓습니다.
+* 최신 [Amazon 스텁 SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar)를 다운로드하여 앱 디렉터리에 평행한 /SSOEnabler 폴더로 복사합니다.
 * 라이브러리 를 사용하도록 매니페스트/gradle 파일을 업데이트합니다.
 
   **매니페스트 파일에 다음 줄을 추가합니다.**
@@ -65,7 +65,7 @@ Amazon SDK를 사용하여 개인화된 페이로드를 검색하고 Adobe 클�
 
 * Amazon 컴패니언 앱의 부재 처리:
 
-  응용 프로그램이 실행 중인 Amazon 장치에 컴패니언이 없을 수도 있지만 런타임에 다음 클래스의 ClassNotFoundException이 발생해야 합니다. `com.amazon.ottssotokenlib.SSOEnabler`.
+  응용 프로그램이 실행 중인 Amazon 장치에 동반자가 없을 수도 있지만 런타임에 `com.amazon.ottssotokenlib.SSOEnabler` 클래스의 ClassNotFoundException이 발생해야 합니다.
 
   이 경우 페이로드 단계를 건너뛰고 일반 PrimeTime 플로우로 되돌아가기만 하면 됩니다. SSO는 활성화되지 않지만 일반 인증 흐름은 정상적으로 발생합니다.
 
@@ -113,7 +113,7 @@ Amazon SDK를 사용하여 개인화된 페이로드를 검색하고 Adobe 클�
 
 * 이 API는 초기화 중에 설정된 콜백을 통해 응답을 제공합니다.
 
-  **이전**. 초기화 중에 생성된 singleton 인스턴스를 사용한 호출:
+  **예**. 초기화 중에 생성된 singleton 인스턴스를 사용한 호출:
 
   ```JAVA
   ssoEnabler.getSSOTokenAsync().
@@ -145,13 +145,13 @@ Amazon SDK를 사용하여 개인화된 페이로드를 검색하고 Adobe 클�
 
 ### Dynamic Client Registration을 사용하도록 Adobe Pass Clientless API 업데이트 {#clientlessdcr}
 
-첫 번째 구현인 경우 다음을 참조하십시오. **Clientless 기술 개요** 지원이 필요한 경우 Adobe에 문의하십시오.
+구현이 처음이라면 **클라이언트 없는 기술 개요**&#x200B;를 보고 지원이 필요한 경우 Adobe에 문의하십시오.
 
 Adobe 클라이언트 없는 API를 사용하려면 애플리케이션이 Adobe 서버를 호출하기 위해 Dynamic Client Registration을 사용해야 합니다.
 
-* 응용 프로그램에서 Dynamic Client Registration을 사용하려면 [Dynamic Client Registration Management를 사용하여 응용 프로그램 등록](/help/authentication/dynamic-client-registration-management.md).
+* 응용 프로그램에서 Dynamic Client Registration을 사용하려면 [Dynamic Client Registration Management의 지침에 따라 응용 프로그램을 등록](/help/authentication/dynamic-client-registration-management.md)합니다.
 
-* Adobe Pass 서버에 대한 인증 및 권한 부여 요청을 수행하기 위해 Dynamic Client Registration API를 구현하려면 의 지침을 따르십시오. [Dynamic Client Registration API](/help/authentication/dynamic-client-registration-api.md) .
+* Adobe Pass 서버에 대한 인증 및 권한 부여 요청을 수행하기 위해 Dynamic Client Registration API를 구현하려면 [Dynamic Client Registration API](/help/authentication/dynamic-client-registration-api.md)의 지침을 따르십시오.
 
 ### Amazon SSO를 사용하도록 Adobe Pass Clientless API 업데이트 {#clientlesssso}
 

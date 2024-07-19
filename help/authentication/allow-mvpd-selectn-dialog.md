@@ -4,7 +4,7 @@ description: 선택 대화 상자에서 MVPD 허용
 exl-id: 2c0e0f06-ddc6-4bea-90dc-d7ef8e78d27e
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '129'
+source-wordcount: '128'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 솔루션 {#solution}
 
-다음에서 `displayProviderDialog()` 콜백, Adobe Pass 인증은 선택한 프로그래머(요청자 ID)와 통합된 모든 MVPD를 반환합니다. 그러나 프로그래머는 MVPD의 반환 배열에 필터를 적용하고 두 목록에 있는 필터만 표시할 수 있습니다.
+`displayProviderDialog()` 콜백에서 Adobe Pass 인증은 선택한 프로그래머(요청자 ID)와 통합된 모든 MVPD를 반환합니다. 그러나 프로그래머는 MVPD의 반환 배열에 필터를 적용하고 두 목록에 있는 필터만 표시할 수 있습니다.
 
 ## 예 {#example}
 

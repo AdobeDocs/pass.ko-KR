@@ -4,7 +4,7 @@ description: 단일 사인온 지원
 exl-id: edc3719e-c627-464c-9b10-367a425698c6
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '1135'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
@@ -42,17 +42,17 @@ ht-degree: 0%
 
 ### Xbox 360 및 Xbox One의 메모 {#notes-xbox-360}
 
-* **Xbox 360**- Xbox 360은 Live 서비스를 사용하여 장치 ID를 임베드하는 토큰을 제공합니다. deviceID에 대한 appID 값의 라이브 서비스 레이어로, 앱에만 범위가 지정됩니다. Xbox 360의 경우, Microsoft은 Adobe에게 토큰을 구문 분석하는 데 도움이 되는 Java 라이브러리를 제공했습니다.
+* **Xbox 360**- Xbox 360은 Live 서비스를 사용하여 deviceID를 포함하는 토큰을 제공합니다. deviceID에 대한 appID 값의 라이브 서비스 레이어로, 앱에만 범위가 지정됩니다. Xbox 360의 경우, Microsoft은 Adobe에게 토큰을 구문 분석하는 데 도움이 되는 Java 라이브러리를 제공했습니다.
 
-* **Xbox One**- 게시자의 인증서/키로 암호화되고 Microsoft에서 서명한 JSON 웹 토큰이 발급됩니다. Adobe은 Xbox 360 매개 변수 PDID(파트너 장치 ID)와 다른 DPI(장치 쌍 ID)라는 매개 변수에서 장치 ID를 추출합니다. PDID는 Xbox One에도 있지만 &quot;장치 쌍 ID&quot;(DPI)라는 새로운 매개 변수로 대체됩니다.
+* **Xbox One**- 게시자의 인증서/키로 암호화되고 Microsoft에서 서명한 JSON 웹 토큰이 발행됩니다. Adobe은 Xbox 360 매개 변수 PDID(파트너 장치 ID)와 다른 DPI(장치 쌍 ID)라는 매개 변수에서 장치 ID를 추출합니다. PDID는 Xbox One에도 있지만 &quot;장치 쌍 ID&quot;(DPI)라는 새로운 매개 변수로 대체됩니다.
 
 
 ### SSO 비활성화 {#disable-sso}
 
 특정 상황에서 일부 앱 또는 사이트는 고급 비즈니스 사례를 충족하기 위해 SSO를 비활성화하기를 원할 것입니다.
 
-* **JS 및 네이티브 SDK의 경우** - Adobe Pass 인증 지원 팀이 요청자 ID/MVPD 쌍에 대해 SSO를 비활성화할 수 있습니다. 사이트나 기본 앱에서는 작업이 필요하지 않습니다.  Adobe Pass 인증 지원 팀에서 SSO를 비활성화하면 지정된 요청자 ID/MVPD 쌍을 사용하여 수행된 인증은 다른 요청자 ID를 사용하는 사이트 또는 앱과 공유되지 않습니다. 또한 다른 요청자 ID를 가진 기존 인증은 SSO가 비활성화된 요청자 ID/MVPD 조합에 대해 유효하지 않습니다. 기술적으로 SSO 비활성화는 AuthN 토큰을 특정 요청자 ID/MVPD 조합에 바인딩함으로써 수행됩니다.
-* **Clientless API용** - REST 호출에서 비어 있지 않은 appId 매개 변수를 지정하여 클라이언트 없는 인증 흐름에서 SSO를 비활성화할 수 있습니다. 해당 문자열이 요청자 ID에 대해 고유한 경우 어떤 문자열이든 값으로 사용할 수 있습니다. Clientless API의 경우 프로그래머/구현자는 사이트 또는 앱을 변경하여 이 요청자별 매개 변수를 추가해야 합니다.
+* **JS 및 기본 SDK의 경우** - Adobe Pass 인증 지원 팀이 요청자 ID/MVPD 쌍에 대해 SSO를 비활성화할 수 있습니다. 사이트나 기본 앱에서는 작업이 필요하지 않습니다.  Adobe Pass 인증 지원 팀에서 SSO를 비활성화하면 지정된 요청자 ID/MVPD 쌍을 사용하여 수행된 인증은 다른 요청자 ID를 사용하는 사이트 또는 앱과 공유되지 않습니다. 또한 다른 요청자 ID를 가진 기존 인증은 SSO가 비활성화된 요청자 ID/MVPD 조합에 대해 유효하지 않습니다. 기술적으로 SSO 비활성화는 AuthN 토큰을 특정 요청자 ID/MVPD 조합에 바인딩함으로써 수행됩니다.
+* **클라이언트 없는 API의 경우** - REST 호출에서 비어 있지 않은 appId 매개 변수를 지정하여 클라이언트 없는 인증 흐름에서 SSO를 비활성화할 수 있습니다. 해당 문자열이 요청자 ID에 대해 고유한 경우 어떤 문자열이든 값으로 사용할 수 있습니다. Clientless API의 경우 프로그래머/구현자는 사이트 또는 앱을 변경하여 이 요청자별 매개 변수를 추가해야 합니다.
 
 >[!IMPORTANT]
 >

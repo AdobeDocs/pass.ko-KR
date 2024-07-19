@@ -4,7 +4,7 @@ description: Adobe Pass 인증 지표에서 Clientless deviceType 매개 변수�
 exl-id: a5004887-d5fa-468e-971b-10806519175b
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '349'
+source-wordcount: '351'
 ht-degree: 0%
 
 ---
@@ -19,45 +19,45 @@ ht-degree: 0%
 
 ## 컨텍스트
 
-선택 사항이지만 매개 변수 `deviceType` 클라이언트 없음 API에서 (있는 경우)는 를 통해 노출되는 Adobe Pass 인증 지표에 사용됩니다. [권한 부여 서비스 모니터링](/help/authentication/entitlement-service-monitoring-overview.md).
+선택 사항이지만 Clientless API의 매개 변수 `deviceType`이(가) 존재하는 경우 [자격 서비스 모니터링](/help/authentication/entitlement-service-monitoring-overview.md)을 통해 노출되는 Adobe Pass 인증 지표에 사용됩니다.
 
-를 고려할 때 `deviceType` 매개 변수 및 해당 **이점** 처음에 명시되지 않은 Adobe Pass 인증 지표에 대해 이 기술 노트의 범위는 더 많은 정보를 추가하는 것입니다.
+Adobe Pass 인증 지표에 있는 `deviceType` 매개 변수와 해당 **이점** 간의 연결이 처음에 언급되지 않았음을 고려하면 이 기술 노트의 범위는 이러한 매개 변수에 대한 정보를 더 추가하는 것입니다.
 
 ## 설명
 
-다음 `deviceType` 매개 변수는 첫 번째 버전 이후 Clientless API에 표시되었지만 Adobe Pass 인증 지표에 미치는 영향은 최신 릴리스에 추가되었습니다.
+`deviceType` 매개 변수는 첫 번째 버전 이후 Clientless API에 존재했지만 Adobe Pass 인증 지표에 미치는 영향이 최신 릴리스에 추가되었습니다.
 
 
 
 >[!IMPORTANT]
 >
->매개 변수인 경우 `deviceType` 가 올바르게 설정되고 다음이 포함됩니다 **이익** 권한 부여 서비스 모니터링에서: 다음과 같은 지표를 제공합니다. [장치 유형별 분류](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) 예: Roku, AppleTV, Xbox 등에 대해 다양한 유형의 분석을 수행할 수 있도록 Clientless를 사용할 때
+>매개 변수 `deviceType`이(가) 올바르게 설정된 경우 권한 부여 서비스 모니터링에 다음 **혜택**&#x200B;이(가) 있습니다. Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type) 지표를 제공하므로 Roku, AppleTV, Xbox 등과 같은 다양한 유형의 분석을 수행할 수 있습니다.
 
 
-권한 부여 서비스 모니터링 API에 대한 자세한 내용은 다음을 참조하십시오. [드릴다운 트리,](/help/authentication/entitlement-service-monitoring-api.md#drill-down_tree) 를 보여 줍니다. [치수](/help/authentication/entitlement-service-monitoring-overview.md#esm_dimensions) (리소스) ESM 2.0에서 사용 가능.
+권한 부여 서비스 모니터링 API에 대한 자세한 내용은 ESM 2.0에서 사용할 수 있는 [차원](/help/authentication/entitlement-service-monitoring-overview.md#esm_dimensions)(리소스)을 보여 주는 [드릴다운 트리,](/help/authentication/entitlement-service-monitoring-api.md#drill-down_tree)를 참조하십시오.
 
 >[!NOTE]
 >
->이 기술 노트의 콘텐츠도 [클라이언트 없는 API](#clientless_device_type).
+>이 기술 노트의 콘텐츠가 [클라이언트 없는 API](#clientless_device_type)에도 추가되었습니다.
 
 
 
 
 ## 구현
 
-Adobe Pass 인증 지표의 이점을 최대한 활용하려면 다음 두 가지 유형을 사용하십시오. [클라이언트 없는 API](#web_srvs_summary) 현재 사용 중이고 올바른 항목이 있어야 합니다. `deviceType` 설정:
+Adobe Pass 인증 지표를 최대한 활용하려면 현재 사용 중이고 올바른 `deviceType`을(를) 설정해야 하는 두 가지 유형의 [클라이언트 없는 API](#web_srvs_summary)가 있습니다.
 
-1. 가 있는 API `regcode` 를 필수 매개 변수로 사용하고 `deviceType` 매개 변수: `regcode`, 다음 API 호출 사용:
-   - [\&lt;reggie _fqdn=&quot;&quot;>/reggie/v1/{requestorId}/regcode](#reg_serv)
+1. `regcode`이(가) 필수 매개 변수로 사용되고 다음 API 호출과 함께 `regcode`을(를) 만들 때 설정된 `deviceType` 매개 변수를 사용하는 API:
+   - [\&lt;REGGIE\_FQDN\>/reggie/v1/{requestorId}/regcode](#reg_serv)
 
-1. 가 있는 API `deviceType` 선택적 매개 변수로:
-   - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/checkauthn](#check_authn_token)
+1. `deviceType`을(를) 선택적 매개 변수로 사용하는 API:
+   - [\&lt;SP\_FQDN\>/api/v1/checkauthn](#check_authn_token)
    - [&lt;span class=&quot;s1&quot;>](#retrieve_authn_token)
-   - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/authorize](#init_authz)
-   - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/tokens/authz](#retrieve_authz_token)
-   - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/tokens/media](#short_media)
-   - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/mediatoken](#short_media)
-   - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/사전 승인](#PreAuthZ_Resources)
-   - [\&lt;sp _fqdn=&quot;&quot;>/api/v1/logout](#init_logout)
+   - [\&lt;SP\_FQDN\>/api/v1/권한 부여](#init_authz)
+   - [\&lt;SP\_FQDN\>/api/v1/토큰/인증](#retrieve_authz_token)
+   - [\&lt;SP\_FQDN\>/api/v1/토큰/미디어](#short_media)
+   - [\&lt;SP\_FQDN\>/api/v1/mediatoken](#short_media)
+   - [\&lt;SP\_FQDN\>/api/v1/사전 권한 부여](#PreAuthZ_Resources)
+   - [\&lt;SP\_FQDN\>/api/v1/로그아웃](#init_logout)
 
-권장 사항은 `deviceType` 매개 변수를 지정하고 모든 API에 대해 올바른 클라이언트 없는 장치 유형을 전달합니다.
+`deviceType` 매개 변수를 사용하고 모든 API에 대해 올바른 Clientless 장치 유형을 전달하는 것이 좋습니다.

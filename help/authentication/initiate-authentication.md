@@ -17,16 +17,16 @@ ht-degree: 0%
 
 >[!NOTE]
 >
-> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)
+> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)에 의해 제한됩니다.
 
 ## REST API 끝점 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+&lt;레지스트리_FQDN>:
 
 * 프로덕션 - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 스테이징 - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+&lt;SP_FQDN>:
 
 * 프로덕션 - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 스테이징 - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -40,9 +40,9 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. MVPD에�
 
 
 
-| 엔드포인트 | 호출됨  </br>작성자: | 입력   </br>매개 변수 | HTTP  </br>방법 | 응답 | HTTP  </br>응답 |
+| 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;sp_fqdn>/api/v1/authenticate | AuthN 모듈 | 1. requestor_id (필수)</br>2.  mso_id(필수)</br>3.  reg_code(필수)</br>4.  domain_name(필수)</br>5.  noflash=true -  </br>    (필수, 잔여 매개 변수)</br>6.  no_iframe=true (필수, 잔차 매개 변수)</br>7.  추가 매개 변수(선택 사항)</br>8.  redirect_url(필수) | GET | 로그인 웹 앱은 MVPD 로그인 페이지로 리디렉션됩니다. | 전체 리디렉션 구현의 경우 302 |
+| &lt;SP_FQDN>/api/v1/인증 | AuthN 모듈 | 1. requestor_id(필수)</br>2.  mso_id(필수)</br>3.  reg_code(필수)</br>4.  domain_name(필수)</br>5.  noflash=true - </br>    (필수, 잔여 매개 변수)</br>6.  no_iframe=true (필수, 잔차 매개 변수)</br>7.  추가 매개 변수(선택 사항)</br>8.  redirect_url(필수) | GET | 로그인 웹 앱은 MVPD 로그인 페이지로 리디렉션됩니다. | 전체 리디렉션 구현의 경우 302 |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. MVPD에�
 >
 >호출에는 다음과 같은 다른 기능을 활성화하는 선택적 매개 변수도 포함될 수 있습니다.
 >
-> * generic\_data - 다음을 사용할 수 있습니다. [프로모션 TempPass](/help/authentication/promotional-temp-pass.md)
+> * generic\_data - [Promotional TempPass](/help/authentication/promotional-temp-pass.md)를 사용할 수 있도록 설정
 >
 >```JSON
 >Example:
@@ -91,10 +91,10 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. MVPD에�
 
 ### **메모** {#notes}
 
-* 값 `domain_name` 매개 변수는 Adobe Pass 인증에 등록된 도메인 이름 중 하나로 설정해야 합니다. 자세한 내용은 다음을 참조하십시오. [등록 및 초기화](/help/authentication/programmer-overview.md).
+* `domain_name` 매개 변수의 값은 Adobe Pass 인증에 등록된 도메인 이름 중 하나로 설정해야 합니다. 자세한 내용은 [등록 및 초기화](/help/authentication/programmer-overview.md)를 참조하세요.
 
 * [/authenticate 요청에 &#39;&amp;&#39;reg\_code를 사용하지 마십시오(기술 노트).](/help/authentication/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
-* 다음 `redirect_url` 매개 변수는 순서대로 마지막 매개 변수여야 합니다.
+* `redirect_url` 매개 변수는 순서대로 마지막 매개 변수여야 합니다.
 
-* 값 `redirect_url` 매개 변수는 URL로 인코딩해야 합니다.
+* `redirect_url` 매개 변수의 값은 URL로 인코딩되어야 합니다.

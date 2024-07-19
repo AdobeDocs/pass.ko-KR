@@ -34,7 +34,7 @@ Adobe Pass 인증의 클라이언트 구성 요소입니다. Adobe Pass 인증�
 
 ## AuthZ 토큰 {#authz-token}
 
-사용자가 보호된 콘텐츠를 볼 수 있는 권한이 부여된 후 Adobe Pass 인증에서 생성된 인증 토큰. AuthZ 토큰은 Adobe Pass 인증 서버에 저장되고 [단기 미디어 토큰](#short-lived-token).
+사용자가 보호된 콘텐츠를 볼 수 있는 권한이 부여된 후 Adobe Pass 인증에서 생성된 인증 토큰. AuthZ 토큰은 Adobe Pass 인증 서버에 저장되며 [수명이 짧은 미디어 토큰](#short-lived-token)을 생성하는 데 사용됩니다.
 
 ## 채널 ID(더 이상 사용되지 않음) {#channel_id}
 
@@ -56,7 +56,7 @@ Adobe Pass 인증 설명서에서 사용되는 용어는 Adobe Pass 인증을 �
 
 ## GUID {#guid}
 
-다음을 참조하십시오 [사용자 ID](#user-id).
+[사용자 ID](#user-id)을(를) 참조하십시오.
 
 ## IdP {#idp}
 
@@ -72,7 +72,7 @@ Adobe Pass 인증 설명서에서 사용되는 용어는 Adobe Pass 인증을 �
 
 ## MVPD ID {#mvpd-id}
 
-다음을 참조하십시오 [사용자 ID](#user-id).
+[사용자 ID](#user-id)을(를) 참조하십시오.
 
 ## 파트너 ID {#partner-id}
 
@@ -80,7 +80,7 @@ Adobe Pass 인증을 요청하는 사용자를 대신하여 식별하는 데 Ado
 
 ## 유료 TV 공급자 {#pay-tv-provider}
 
-의 동의어 [MVPD](#mvpd).
+[MVPD](#mvpd)과 동의어입니다.
 
 ## 프로그래머 {#programmer}
 
@@ -96,15 +96,15 @@ Adobe SP와 직접 통합되지 않지만 프록시 MVPD를 통해 통합된 MVP
 
 ## 요청자 ID {#requestor-id}
 
-를 고유하게 식별합니다. [프로그래머](#programmer) (계정, 브랜드, 채널 또는 속성) Adobe Pass 인증 내에서 사용할 수 있습니다. 이 ID는 계정의 초기 설정 중에 프로그래머와 Adobe 간에 결정됩니다. 웹에서 요청자 ID는 화이트리스트에 추가한 도메인 세트와 관련되어 있습니다. 외부 도메인의 ID를 사용하는 모든 호출은 거부됩니다. 프로그래머는 Analytics에 요청자 ID도 사용합니다. 일반적으로 프로그래머당 하나의 요청자 ID만 있습니다. 요청자 ID와 관련된 한 가지 추가 기능은 setRequestor API 호출이 Adobe Pass 인증 시스템에서 프로그래머를 인증하는 데 사용되는 암호화된 데이터가 전송될 것으로 예상하므로 프로그래머가 Adobe에게 공개 인증서를 제공해야 한다는 것입니다.
+Adobe Pass 인증 내에서 [프로그래머](#programmer)(계정, 브랜드, 채널 또는 속성)를 고유하게 식별합니다. 이 ID는 계정의 초기 설정 중에 프로그래머와 Adobe 간에 결정됩니다. 웹에서 요청자 ID는 화이트리스트에 추가한 도메인 세트와 관련되어 있습니다. 외부 도메인의 ID를 사용하는 모든 호출은 거부됩니다. 프로그래머는 Analytics에 요청자 ID도 사용합니다. 일반적으로 프로그래머당 하나의 요청자 ID만 있습니다. 요청자 ID와 관련된 한 가지 추가 기능은 setRequestor API 호출이 Adobe Pass 인증 시스템에서 프로그래머를 인증하는 데 사용되는 암호화된 데이터가 전송될 것으로 예상하므로 프로그래머가 Adobe에게 공개 인증서를 제공해야 한다는 것입니다.
 
 ## 리소스 ID {#resource-id}
 
-다음을 식별하는 문자열 또는 mRSS 리소스 [프로그래머](#programmer) MVPD에 대한 프로그래머와 MVPD 간에 동의합니다. Adobe Pass 인증은 그대로 리소스 ID를 통과하므로 모든 MVPD에 대해 동일해야 합니다. 프로그래머는 MVPD가 각 ID가 나타내는 내용을 알고 있는 한 여러 리소스 ID를 사용할 수 있습니다.
+MVPD에 대한 [프로그래머](#programmer)을(를) 식별하는 문자열 또는 mRSS 리소스입니다. 프로그래머와 MVPD 간에 동의합니다. Adobe Pass 인증은 그대로 리소스 ID를 통과하므로 모든 MVPD에 대해 동일해야 합니다. 프로그래머는 MVPD가 각 ID가 나타내는 내용을 알고 있는 한 여러 리소스 ID를 사용할 수 있습니다.
 
 ## 세션 GUID {#sessionGUID}
 
-다음을 참조하십시오 [사용자 ID](#user-id).
+[사용자 ID](#user-id)을(를) 참조하십시오.
 
 ## 단기 미디어 토큰 {#short-lived-token}
 
@@ -116,7 +116,7 @@ Adobe Pass 인증 설명서 전체에서 셋톱 박스, 게임 콘솔 및 스마
 
 ## SP{#sp}
 
-서비스 공급자. 일반적으로 *역할* SP의 경우, Adobe Pass 인증에서 재생되며 [MVPD](#mvpd).
+서비스 공급자. 일반적으로 SP의 *역할*&#x200B;을(를) 참조합니다. Adobe Pass 인증은 [MVPD](#mvpd)와의 통합에서 프로그래머를 대신하여 수행합니다.
 
 ## 임시 통과 {#temp-pass}
 
@@ -132,7 +132,7 @@ Adobe Pass 인증 설명서 전체에서 셋톱 박스, 게임 콘솔 및 스마
 
 ## 사용자 ID {#user-id}
 
-프로그래머 앱의 사용자를 고유하게 식별하지만 MVPD에서 시작됩니다. 다양한 사용 사례에 대해 다양한 양식으로 사용할 수 있습니다. 다음을 참조하십시오 [프로그래머 개요에서 사용자 ID 이해](/help/authentication/programmer-overview.md#user-ids).
+프로그래머 앱의 사용자를 고유하게 식별하지만 MVPD에서 시작됩니다. 다양한 사용 사례에 대해 다양한 양식으로 사용할 수 있습니다. [프로그래머 개요에서 사용자 ID 이해](/help/authentication/programmer-overview.md#user-ids)를 참조하십시오.
 
 ## 허용 목록 {#whitelist}
 

@@ -4,7 +4,7 @@ description: 임시 통과
 exl-id: 1df14090-8e71-4e3e-82d8-f441d07c6f64
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '2229'
+source-wordcount: '2243'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 * 프로그래머는 임시 패스의 기간(Time-To-Live 또는 TTL)을 지정합니다.
 * 임시 암호는 요청자별로 작동합니다.  예를 들어 NBC는 요청자 &quot;NBCOlympics&quot;에 대해 4시간 임시 패스를 설정할 수 있습니다.
 * 프로그래머는 특정 요청자에게 부여된 모든 토큰을 재설정할 수 있다.  임시 패스를 구현하는 데 사용되는 &quot;임시 MVPD&quot;는 &quot;요청자별 인증&quot;이 활성화된 상태로 구성해야 합니다.
-* **임시 통과 액세스 권한은 특정 장치의 개별 사용자에게 부여됩니다.**. 사용자에 대한 임시 패스 액세스가 만료된 후 해당 사용자는 만료될 때까지 동일한 장치에서 임시 액세스 권한을 받을 수 없습니다 [인증 토큰](/help/authentication/glossary.md#authz-token) Adobe Pass 인증 서버에서 가 지워졌습니다.
+* **특정 장치의 개별 사용자에게 임시 통과 액세스 권한이 부여됩니다**. 사용자에 대한 임시 통과 액세스가 만료된 후 해당 사용자가 만료된 [인증 토큰](/help/authentication/glossary.md#authz-token)을(를) Adobe Pass 인증 서버에서 지울 때까지 해당 사용자는 동일한 장치에서 임시 액세스 권한을 받을 수 없습니다.
 
 
 >[!NOTE]
@@ -35,15 +35,15 @@ ht-degree: 0%
 
 ## 기능 세부 사항 {#tempass-featur-details}
 
-* **보기 시간 계산 방법** - 임시 패스가 유효한 상태로 유지되는 시간은 사용자가 프로그래머 애플리케이션에서 콘텐츠를 보는 데 소비하는 시간과 관련이 없습니다.  임시 패스를 통한 초기 사용자 승인 요청 시 프로그래머가 지정한 TTL에 초기 현재 요청 시간을 추가하여 만료 시간을 계산합니다. 이 만료 시간은 사용자의 장치 ID 및 프로그래머의 요청자 ID와 연결되며 Adobe Pass 인증 데이터베이스에 저장됩니다. 사용자가 동일한 장치에서 임시 패스를 사용하여 콘텐츠에 액세스하려고 할 때마다 Adobe Pass 인증은 서버 요청 시간을 사용자의 장치 ID 및 프로그래머의 요청자 ID와 연결된 만료 시간과 비교합니다. 서버 요청 시간이 만료 시간보다 짧은 경우 권한이 부여되고 그렇지 않으면 권한이 거부됩니다.
+* **보기 시간이 계산되는 방법** - 임시 패스가 유효한 상태로 유지되는 시간은 사용자가 프로그래머 응용 프로그램에서 콘텐츠를 보는 데 소비하는 시간과 관련이 없습니다.  임시 패스를 통한 초기 사용자 승인 요청 시 프로그래머가 지정한 TTL에 초기 현재 요청 시간을 추가하여 만료 시간을 계산합니다. 이 만료 시간은 사용자의 장치 ID 및 프로그래머의 요청자 ID와 연결되며 Adobe Pass 인증 데이터베이스에 저장됩니다. 사용자가 동일한 장치에서 임시 패스를 사용하여 콘텐츠에 액세스하려고 할 때마다 Adobe Pass 인증은 서버 요청 시간을 사용자의 장치 ID 및 프로그래머의 요청자 ID와 연결된 만료 시간과 비교합니다. 서버 요청 시간이 만료 시간보다 짧은 경우 권한이 부여되고 그렇지 않으면 권한이 거부됩니다.
 * **구성 매개 변수** - 프로그래머가 임시 패스 규칙을 만들기 위해 다음 임시 패스 매개 변수를 지정할 수 있습니다.
-   * **토큰 TL** - 사용자가 MVPD에 로그인하지 않고 볼 수 있는 시간입니다. 이 시간은 시계를 기반으로 하며 사용자가 콘텐츠를 보고 있는지 여부에 관계없이 만료됩니다.
+   * **토큰 TTL** - 사용자가 MVPD에 로그인하지 않고 볼 수 있는 시간입니다. 이 시간은 시계를 기반으로 하며 사용자가 콘텐츠를 보고 있는지 여부에 관계없이 만료됩니다.
   >[!NOTE]
   >요청자 ID에는 두 개 이상의 임시 전달 규칙이 연결되어 있을 수 없습니다.
-* **인증 / 인증** - 임시 패스 흐름에서 MVPD를 &quot;임시 패스&quot;로 지정합니다.  Adobe Pass 인증은 임시 패스 흐름의 실제 MVPD와 통신하지 않으므로 &quot;임시 패스&quot; MVPD는 리소스를 허용합니다. 프로그래머는 사이트의 나머지 리소스에 대한 경우와 마찬가지로 임시 패스를 사용하여 액세스할 수 있는 리소스를 지정할 수 있습니다. 미디어 검증기 라이브러리는 평소와 같이 임시 패스 짧은 미디어 토큰을 확인하고 재생 전에 리소스 검사를 적용하는 데 사용할 수 있습니다.
-* **임시 통과 흐름의 데이터 추적** - 임시 통과 권한 흐름 동안 추적 데이터에 대한 두 가지 지점:
-   * Adobe Pass 인증에서 로 전달되는 추적 ID **sendTrackingData()** callback은 장치 ID의 해시입니다.
-   * 임시 패스 흐름에 사용된 MVPD ID는 &quot;임시 패스&quot;이므로 동일한 MVPD ID가 다시 전달됩니다. **sendTrackingData()**. 대부분의 프로그래머는 임시 패스 지표를 실제 MVPD 지표와 다르게 처리하려고 할 것입니다. 이를 위해서는 분석 구현에서 몇 가지 추가 작업이 필요합니다.
+* **인증/권한 부여** - 임시 패스 흐름에서 MVPD를 &quot;임시 패스&quot;로 지정합니다.  Adobe Pass 인증은 임시 패스 흐름의 실제 MVPD와 통신하지 않으므로 &quot;임시 패스&quot; MVPD는 리소스를 허용합니다. 프로그래머는 사이트의 나머지 리소스에 대한 경우와 마찬가지로 임시 패스를 사용하여 액세스할 수 있는 리소스를 지정할 수 있습니다. 미디어 검증기 라이브러리는 평소와 같이 임시 패스 짧은 미디어 토큰을 확인하고 재생 전에 리소스 검사를 적용하는 데 사용할 수 있습니다.
+* **임시 패스 흐름의 추적 데이터** - 임시 패스 권한 흐름 동안의 추적 데이터에 대한 두 지점:
+   * Adobe Pass 인증에서 **sendTrackingData()** 콜백으로 전달되는 추적 ID는 장치 ID의 해시입니다.
+   * 임시 패스 흐름에 사용된 MVPD ID가 &quot;임시 패스&quot;이므로 동일한 MVPD ID가 **sendTrackingData()**&#x200B;에 다시 전달됩니다. 대부분의 프로그래머는 임시 패스 지표를 실제 MVPD 지표와 다르게 처리하려고 할 것입니다. 이를 위해서는 분석 구현에서 몇 가지 추가 작업이 필요합니다.
 
 다음 그림은 임시 통과 플로우를 보여 줍니다.
 
@@ -57,18 +57,18 @@ Adobe Pass 인증 측에서는 참여하는 프로그래머의 서버 구성에 
 
 프로그래머 측에서는 MVPD가 인증에 사용하는 두 가지 시나리오에 대해 다음과 같이 임시 패스가 구현됩니다.
 
-* **프로그래머 페이지의 iFrame**. 임시 패스는 MVPD의 인증 유형에 관계없이 작동하지만, iFrame 시나리오에서는 현재 인증 흐름을 취소하고 임시 패스로 인증하려면 추가 단계가 필요합니다. 다음 단계는 [iFrame 로그인](/help/authentication/temp-pass.md) 아래요.
-* **MVPD 로그인 페이지로 리디렉션**. MVPD로 인증을 시작하기 전에 임시 패스를 트리거하는 UI가 표시되는 더 일반적인 경우에는 수행해야 할 특별한 단계가 없습니다. 임시 패스는 일반 MVPD처럼 처리되어야 합니다.
+* **프로그래머 페이지의 iFrame**. 임시 패스는 MVPD의 인증 유형에 관계없이 작동하지만, iFrame 시나리오에서는 현재 인증 흐름을 취소하고 임시 패스로 인증하려면 추가 단계가 필요합니다. 이러한 단계는 아래 [iFrame 로그인](/help/authentication/temp-pass.md)에 표시됩니다.
+* **MVPD 로그인 페이지로 리디렉션합니다**. MVPD로 인증을 시작하기 전에 임시 패스를 트리거하는 UI가 표시되는 더 일반적인 경우에는 수행해야 할 특별한 단계가 없습니다. 임시 패스는 일반 MVPD처럼 처리되어야 합니다.
 
 다음 사항은 두 구현 시나리오 모두에 적용됩니다.
 
 * &quot;Temp Pass&quot;는 아직 Temp Pass 인증을 요청하지 않은 사용자에 대해서만 MVPD 선택기에 표시되어야 합니다. 쿠키에 플래그를 유지하면 후속 요청에 대한 표시를 차단할 수 있습니다. 사용자가 브라우저 캐시를 지우지 않는 한 작동합니다. 사용자가 브라우저 캐시를 지우면 선택기에 &quot;Temp Pass&quot;가 다시 나타나고 사용자는 이를 다시 요청할 수 있습니다. &quot;임시 통과&quot; 시간이 아직 만료되지 않은 경우에만 액세스 권한이 부여됩니다.
 * 사용자가 임시 패스를 통해 액세스를 요청하면 Adobe Pass 인증 서버는 인증 프로세스 중에 일반적인 SAML(Security Assertion Markup Language) 요청을 수행하지 않습니다. 대신 인증 끝점은 토큰이 장치에 유효한 동안 호출될 때마다 성공을 반환합니다.
-* 임시 패스가 만료되면 임시 패스 흐름에서 인증 토큰과 인증 토큰의 만료 날짜가 동일하기 때문에 해당 사용자는 더 이상 인증되지 않습니다. 사용자에게 임시 패스가 만료되었음을 알려면 프로그래머는 호출 직후 선택한 MVPD를 검색해야 합니다 `setRequestor()`, 그런 다음 를 호출합니다. `checkAuthentication()` 평상시처럼 다음에서 `setAuthenticationStatus()` 콜백 인증 상태가 0인지 확인하기 위해 검사할 수 있으므로 선택한 MVPD가 &quot;TempPass&quot;인 경우 임시 패스 세션이 만료되었다는 메시지가 사용자에게 표시될 수 있습니다.
+* 임시 패스가 만료되면 임시 패스 흐름에서 인증 토큰과 인증 토큰의 만료 날짜가 동일하기 때문에 해당 사용자는 더 이상 인증되지 않습니다. 사용자에게 임시 패스가 만료되었음을 알려면 프로그래머는 `setRequestor()`을(를) 호출한 직후 선택한 MVPD를 검색한 다음 평소대로 `checkAuthentication()`을(를) 호출해야 합니다. `setAuthenticationStatus()` 콜백에서는 인증 상태가 0인지 확인하기 위해 검사를 수행할 수 있으므로 선택한 MVPD가 &quot;TempPass&quot;인 경우 사용자에게 임시 패스 세션이 만료되었다는 메시지가 표시될 수 있습니다.
 * 사용자가 만료 전에 임시 통과 토큰을 삭제하는 경우, 후속 권한 확인은 남은 시간과 동일한 TTL을 갖는 토큰을 생성합니다.
 * 사용자가 만료 후 임시 통과 토큰을 삭제하는 경우 후속 권한 확인은 &quot;사용자에게 권한이 없음&quot;을 반환합니다.
 
-의 샘플을 참조하십시오. [샘플 코드](/help/authentication/temp-pass.md#tempass-sample-code) 이 섹션에 설명된 구현 세부 사항을 코딩하는 방법에 대한 예는 아래를 참조하십시오.
+이 섹션에 설명된 구현 세부 정보를 코딩하는 방법에 대한 예는 아래 [샘플 코드](/help/authentication/temp-pass.md#tempass-sample-code)의 샘플을 참조하십시오.
 
 ## 샘플 코드 {#tempass-sample-code}
 
@@ -212,7 +212,7 @@ Adobe Pass 인증 측에서는 참여하는 프로그래머의 서버 구성에 
 
 #### iFrame 로그인 사용 사례 {#iframe-login-use-cases}
 
-**임시 패스를 처음 요청하려면**
+**임시 암호를 처음 요청하려면:**
 
 1. 사용자가 프로그래머 페이지에 액세스하여 로그인 링크를 클릭합니다.
 1. MVPD 선택기가 열리고 사용자가 목록에서 MVPD를 선택합니다.
@@ -224,7 +224,7 @@ Adobe Pass 인증 측에서는 참여하는 프로그래머의 서버 구성에 
 1. Adobe Pass 인증 서버는 인증 토큰을 생성합니다.
 1. 사용자가 보호된 콘텐츠에 액세스합니다.
 
-**재방문 임시 패스 사용자가 브라우저 쿠키를 삭제한 후 임시 패스를 다시 요청하려면:**
+**재방문 임시 암호 사용자가 브라우저 쿠키를 삭제한 후 임시 암호를 다시 요청하려면:**
 
 1. 사용자가 프로그래머 페이지에 액세스하여 로그인 링크를 클릭합니다.
 1. MVPD 선택기가 열리고 사용자가 목록에서 MVPD를 선택합니다.
@@ -483,13 +483,13 @@ Adobe Pass 인증 측에서는 참여하는 프로그래머의 서버 구성에 
 Adobe이 두 개의 TempPass 인스턴스를 구성하면 두 개의 추가 MVPD(TempPass1 및 TempPass2)가 프로그래머의 MVPD 목록에 나타납니다.  프로그래머는 여러 임시 패스를 구현하려면 다음 단계를 수행해야 합니다.
 
 1. 사용자가 사이트를 처음 방문할 때 TempPass1으로 자동으로 로그인합니다. 위의 자동 로그인 샘플을 이 작업의 시작점으로 사용할 수 있습니다.
-1. TempPass1이 만료되었음을 감지하면 해당 사실(쿠키/로컬 저장소)을 저장하고 사용자에게 표준 MVPD 선택기를 제공합니다. **해당 목록에서 TempPass1 및 TempPass2를 필터링해야 합니다**.
+1. TempPass1이 만료되었음을 감지하면 해당 사실(쿠키/로컬 저장소)을 저장하고 사용자에게 표준 MVPD 선택기를 제공합니다. **해당 목록에서 TempPass1 및 TempPass2를 필터링하십시오**.
 1. 그 다음 날에 TempPass1이 만료되면 해당 사용자를 TempPass2로 자동 로그인합니다.
 1. TempPass2가 만료되면 당일 팩트(쿠키/로컬 저장소)를 저장하고 사용자에게 표준 MVPD 선택기를 제공합니다. 다시 한 번, 해당 목록에서 TempPass1 및 TempPass2를 필터링해야 합니다.
-1. 새 날짜마다 00:00시간에 를 사용하여 TempPass2에 대한 모든 임시 패스를 다시 설정합니다. [TempPass 웹 API 재설정](/help/authentication/temp-pass.md#reset-all-tempass).
+1. 매일 00:00시에 [TempPass 웹 API 재설정](/help/authentication/temp-pass.md#reset-all-tempass)을 사용하여 TempPass2에 대한 모든 임시 패스를 재설정합니다.
 
 >[!NOTE]
->**프로그래밍 참고 사항:** Adobe Pass 인증에는 10분이 지난 후 무료 스트리밍을 중지하는 내장 메커니즘이 없습니다.  TempPass2가 만료되면 액세스를 제한하는 것은 프로그래머에게 달려 있습니다. 이를 위해 프로그래머는 사이트/앱에서 X분마다 &quot;checkAuthorization&quot; 호출을 구현할 수 있습니다. 여기서 X는 프로그래머가 앱에 대해 적절하다고 결정하는 기간입니다.
+>**프로그래밍 참고:** Adobe Pass 인증에는 10분이 지난 후 무료 스트리밍을 중지하는 기본 제공 메커니즘이 없습니다.  TempPass2가 만료되면 액세스를 제한하는 것은 프로그래머에게 달려 있습니다. 이를 위해 프로그래머는 사이트/앱에서 X분마다 &quot;checkAuthorization&quot; 호출을 구현할 수 있습니다. 여기서 X는 프로그래머가 앱에 대해 적절하다고 결정하는 기간입니다.
 
 ## 모든 임시 통과 재설정 {#reset-all-tempass}
 
@@ -499,7 +499,7 @@ Adobe이 두 개의 TempPass 인스턴스를 구성하면 두 개의 추가 MVPD
 * 속보 시 모든 사용자가 사용할 수 있는 임시 패스 (속보가 시작되자마자 모든 장치에 대해 임시 패스를 재설정해야 합니다.)
 * 일부 길이의 초기 보기 기간과 그 뒤에 다른 길이의 후속 일별 기간의 조합을 제공하는 다중 임시 통과 시나리오
 
-모든 임시 패스를 재설정하기 위해 Adobe Pass 인증은 프로그래머에게 *공용* 웹 API:
+모든 임시 패스를 재설정하기 위해 Adobe Pass 인증은 프로그래머에게 *public* 웹 API를 제공합니다.
 
 ```url
 DELETE https://mgmt.auth.adobe.com/reset-tempass/v2/reset
@@ -522,7 +522,7 @@ DELETE https://mgmt.auth.adobe.com/reset-tempass/v2/reset
       * ApiKey가 지정되지 않은 경우 HTTP 401
       * ApiKey가 잘못된 경우 HTTP 403
 
-예:
+For example:
 
 ```curl
 $ curl -H "Authorization: Bearer <access_token_here>" -X DELETE -v "https://mgmt.auth.adobe.com/reset-tempass/v2.1/reset?device_id=all&requestor_id=AdobeBEAST&mvpd_id=TempPass"
@@ -537,7 +537,7 @@ $ curl -H "Authorization: Bearer <access_token_here>" -X DELETE -v "https://mgmt
 | JS AccessEnabler | 예 | 예 |
 | 기본 클라이언트 iOS | 예 | 예 |
 | 기본 클라이언트 tvOS | 예 | 예 |
-| Native Client Android | 예 | 예 |
+| 기본 클라이언트 Android | 예 | 예 |
 | 기본 클라이언트 fireTV | 예 | 예 |
 | 클라이언트 없는 API | 예 | 예 |
 
@@ -545,6 +545,6 @@ $ curl -H "Authorization: Bearer <access_token_here>" -X DELETE -v "https://mgmt
 
 이 섹션에서는 임시 패스의 현재 구현에 적용되는 제한 사항에 대해 설명합니다.
 
-**JavaScript SDK**: 버전에서 임시 패스 재설정 기능 지원 **3.X 이상**.
+**JavaScript SDK**: 버전 **3.X 이상**&#x200B;에서 임시 패스 재설정 기능을 지원합니다.
 
 <!--For Customers migrating from the 2.X JavaScript AccessEnabler to the 3.X JavaScript AccessEnabler, see [AccessEnabler JS 2.x to JS 3.x migration guide](https://tve.helpdocsonline.com/accessenabler-js-to-js-migration-guide).-->

@@ -19,13 +19,13 @@ ht-degree: 0%
 
 Android AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘을 변경하고 있습니다. 공개 키 및 비밀 시스템을 사용하여 requestorID에 서명하는 대신 SDK가 서버에 대해 수행하는 모든 호출에 나중에 사용되는 액세스 토큰을 얻는 데 사용할 수 있는 소프트웨어 문 문자열 개념을 도입합니다. 소프트웨어 선언문 외에도 응용 프로그램에 대한 딥링크를 만들어야 합니다.
 
-자세한 내용은 [동적 클라이언트 등록](/help/authentication/dynamic-client-registration.md)
+자세한 내용은 [동적 클라이언트 등록](/help/authentication/dynamic-client-registration.md)을 참조하십시오.
 
 ## 소프트웨어 명령문이란? {#what}
 
 소프트웨어 명령문은 애플리케이션에 대한 정보가 포함된 JWT 토큰입니다. 모든 애플리케이션에는 Adobe 시스템에서 애플리케이션을 식별하기 위해 서버에서 사용하는 고유한 소프트웨어 명령문이 있어야 합니다.
 
-다음을 초기화할 때 소프트웨어 문을 전달해야 합니다. `AccessEnabler` SDK. Adobe에 애플리케이션을 등록하는 데 사용됩니다. 등록 시 SDK는 액세스 토큰을 얻는 데 사용되는 클라이언트 ID 및 클라이언트 암호를 수신합니다. SDK에서 Adobe 서버에 대해 수행하는 모든 호출에는 유효한 액세스 토큰이 필요합니다. SDK는 애플리케이션 등록, 액세스 토큰 획득 및 새로 고침을 담당합니다.
+`AccessEnabler` SDK를 초기화할 때 Software 문을 전달해야 합니다. Adobe에 애플리케이션을 등록하는 데 사용됩니다. 등록 시 SDK는 액세스 토큰을 얻는 데 사용되는 클라이언트 ID 및 클라이언트 암호를 수신합니다. SDK에서 Adobe 서버에 대해 수행하는 모든 호출에는 유효한 액세스 토큰이 필요합니다. SDK는 애플리케이션 등록, 액세스 토큰 획득 및 새로 고침을 담당합니다.
 
 >[!NOTE]
 >
@@ -37,31 +37,31 @@ Android AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘�
 
 ### Adobe의 TVE 대시보드에 액세스할 수 있는 경우
 
-1. 브라우저를 열고 다음으로 이동합니다. [Adobe Pass TVE 대시보드](https://console.auth.adobe.com).
+1. 브라우저를 열고 [Adobe Pass TVE 대시보드](https://console.auth.adobe.com)로 이동합니다.
 
-1. 다음으로 이동 **[!UICONTROL Channels]** 섹션을 선택한 다음 채널을 선택합니다.
+1. **[!UICONTROL Channels]** 섹션으로 이동한 다음 채널을 선택하십시오.
 
-1. 다음 위치로 이동 **[!UICONTROL Registered Applications]** 탭.
+1. **[!UICONTROL Registered Applications]** 탭으로 이동합니다.
 
-1. 클릭 **[!UICONTROL Add new application]**.
+1. **[!UICONTROL Add new application]**&#x200B;을(를) 클릭합니다.
 
 1. 애플리케이션 이름을 지정하고 버전을 지정합니다.
 
 1. 애플리케이션을 사용할 수 있는 플랫폼을 선택합니다(이 경우 Android).
 
-1. 다음을 제공합니다. **[!UICONTROL Domain Name]** 프로그래머에 대해 이미 구성된 도메인 목록에서 선택.
+1. 프로그래머용으로 이미 구성된 도메인 목록에서 선택하여 **[!UICONTROL Domain Name]**&#x200B;을(를) 제공하십시오.
 
-1. 변경 사항을 서버에 푸시한 다음 채널의 **[!UICONTROL Registered Applications]** 탭.
+1. 변경 내용을 서버에 푸시한 다음 채널의 **[!UICONTROL Registered Applications]** 탭으로 다시 이동합니다.
 
-   등록된 모든 지원서가 있는 목록이 표시됩니다. 선택 **[!UICONTROL Download]** 을(를) 생성했습니다. 소프트웨어 명령문을 다운로드할 준비가 되기 전에 몇 분 정도 기다려야 할 수 있습니다.
+   등록된 모든 지원서가 있는 목록이 표시됩니다. 만든 응용 프로그램에서 **[!UICONTROL Download]**&#x200B;을(를) 선택합니다. 소프트웨어 명령문을 다운로드할 준비가 되기 전에 몇 분 정도 기다려야 할 수 있습니다.
 
    텍스트 파일을 다운로드합니다. 해당 내용을 소프트웨어 선언으로 사용합니다.
 
-자세한 내용은 [동적 클라이언트 등록 관리](/help/authentication/dynamic-client-registration-management.md)
+자세한 내용은 [동적 클라이언트 등록 관리](/help/authentication/dynamic-client-registration-management.md)를 참조하십시오.
 
 ### Adobe의 TVE 대시보드에 대한 액세스 권한이 없는 경우
 
-다음 대상에게 티켓 제출 `tve-support@adobe.com`. 채널, 애플리케이션 이름, 버전 및 플랫폼 등 필요한 정보를 포함합니다. 지원 팀의 누군가가 귀하를 위해 소프트웨어 설명을 만들 것입니다.
+`tve-support@adobe.com`(으)로 티켓을 제출합니다. 채널, 애플리케이션 이름, 버전 및 플랫폼 등 필요한 정보를 포함합니다. 지원 팀의 누군가가 귀하를 위해 소프트웨어 설명을 만들 것입니다.
 
 ## 소프트웨어 명령문 사용 방법 {#how-to-use-ss}
 
@@ -69,13 +69,13 @@ Android AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘�
 
 ## 응용 프로그램에 대한 딥링크 만들기 및 사용 {#create}
 
-Android에서 소프트웨어 문을 만들 때 선택한 도메인 이름의 역방향을 딥링크 값으로 사용합니다
+Android에서 소프트웨어 명령문을 만들 때 선택한 도메인 이름의 역방향을 딥링크 값으로 사용합니다
 
 생성된 딥링크는 Android 장치에서 고유한 값을 가져야 합니다. 여러 애플리케이션이 동일한 딥링크 값을 사용하는 경우 인증 및 로그아웃 흐름이 방해가 됩니다.
 
 ## Software Statement 및 딥링크를 사용하는 방법 {#use-both}
 
-응용 프로그램의 리소스 파일에서 `strings.xml` 다음 코드를 추가합니다.
+응용 프로그램의 리소스 파일 `strings.xml`에 다음 코드를 추가합니다.
 
 ```JAVA
     <string name="software_statement">softwarestatement value</string>

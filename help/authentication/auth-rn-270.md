@@ -1,7 +1,8 @@
 ---
 title: Adobe Pass Authentication 2.70 릴리스 노트
 description: Adobe Pass Authentication 2.70 릴리스 노트
-source-git-commit: 30e2507c0622b882744cf8291525c388575df32f
+exl-id: 81713f8e-bc51-4057-9b00-6a2d6c83cd02
+source-git-commit: 6d46beb688299aeef2a7dbb013b3eca7b4509593
 workflow-type: tm+mt
 source-wordcount: '141'
 ht-degree: 0%
@@ -24,7 +25,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-270}
 
 Adobe Pass 인증: adobe-pass-**2.70**
-릴리스 날짜: **2024년 4월 23일 - 2024년 4월 25일**
+릴리스 날짜: **04/23/2024 - 04/25/2024**
 
 ### 새로운 기능 {#new-features-270}
 
@@ -33,7 +34,7 @@ Adobe Pass 인증: adobe-pass-**2.70**
 * 보안 취약점이 패치되었습니다.
 * API 서비스 저하가 개선되었습니다.
    * DCR을 성능 저하 API에 대한 보안 메커니즘으로 사용합니다.
-   * 자세한 내용은 여기에서 확인할 수 있습니다. [저하 API 개요](degradation-api-overview.md)
+   * 자세한 내용은 [저하 API 개요](degradation-api-overview.md)를 참조하십시오.
 
 #### REST API {#rest-apis}
 

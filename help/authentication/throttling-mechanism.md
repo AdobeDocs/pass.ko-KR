@@ -1,13 +1,13 @@
 ---
 title: 조절 메커니즘
 description: Adobe Pass 인증에 사용되는 조절 메커니즘에 대해 알아봅니다. 이 페이지에서 이 메커니즘에 대한 개요를 살펴보십시오.
-source-git-commit: 4f81f39427d87e4274c27d8f1b4bd1eb366d9abb
+exl-id: f00f6c8e-2281-45f3-b592-5bbc004897f7
+source-git-commit: 8552a62f4d6d80ba91543390bf0689d942b3a6f4
 workflow-type: tm+mt
 source-wordcount: '987'
 ht-degree: 0%
 
 ---
-
 
 # 조절 메커니즘 {#throttling-mechanism}
 
@@ -40,7 +40,7 @@ Pass Authentication에는 고객의 사용자 간에 리소스를 균등하게 �
 
 서버 간 구현은 &quot;X-Forwarded-For&quot; 헤더 메커니즘을 사용하여 클라이언트의 IP 주소를 전달해야 합니다.
 
-X-Forwarded-For 헤더를 전달하는 방법에 대한 자세한 내용을 찾을 수 있습니다 [여기](rest-api-cookbook-servertoserver.md).
+X-Forwarded-For 헤더를 전달하는 방법에 대한 자세한 내용은 [여기](rest-api-cookbook-servertoserver.md)에서 확인할 수 있습니다.
 
 ### 실제 제한 및 끝점
 
@@ -76,19 +76,19 @@ Adobe Pass 인증 제공 SDK를 사용하는 클라이언트는 끝점과 명시
 
 #### setRequestor
 
-스로틀 한도에 도달했을 때 `setRequestor` sdk의 기능을 사용하면 다음을 통해 CFG429 오류 코드를 반환하게 됩니다. `errorHandler` callback.
+SDK에서 `setRequestor` 함수를 사용하여 스로틀 제한에 도달하면 SDK는 `errorHandler` 콜백을 통해 CFG429 오류 코드를 반환합니다.
 
 #### getAuthorization
 
-스로틀 한도에 도달했을 때 `getAuthorization` SDK에서 함수를 실행하면 SDK는 다음을 통해 Z100 오류 코드를 반환합니다. `errorHandler` callback.
+SDK에서 `getAuthorization` 함수를 사용하여 스로틀 제한에 도달하면 SDK는 `errorHandler` 콜백을 통해 Z100 오류 코드를 반환합니다.
 
 #### checkPreauthorizedResources
 
-스로틀 한도에 도달했을 때 `checkPreauthorizedResources` SDK의 함수, SDK는 다음을 통해 P100 오류 코드를 반환합니다. `errorHandler` callback.
+SDK에서 `checkPreauthorizedResources` 함수를 사용하여 스로틀 제한에 도달하면 SDK는 `errorHandler` 콜백을 통해 P100 오류 코드를 반환합니다.
 
 #### getMetadata
 
-스로틀 한도에 도달했을 때 `getMetadata` SDK의 함수는 다음을 통해 빈 응답을 반환합니다. `setMetadataStatus` callback.
+SDK에서 `getMetadata` 함수를 사용하여 스로틀 제한에 도달하면 SDK는 `setMetadataStatus` 콜백을 통해 빈 응답을 반환합니다.
 
 각 특정 구현에 대한 자세한 내용은 특정 SDK 설명서를 참조하십시오.
 
@@ -135,7 +135,7 @@ p3p: CP="NOI DSP COR CURa ADMa DEVa OUR BUS IND UNI COM NAV STA"
 
 사용자 지정 구현(서버 간 구현 포함)을 사용하여 인증 전달 API와 상호 작용하는 고객은 사용자 IP 주소를 캡처하고 X-Forwarded-For 헤더를 사용하여 인증 전달 API에 올바르게 전달할 수 있는지 확인해야 합니다.
 
-다음을 참조하십시오 [여기](rest-api-cookbook-servertoserver.md) 을 참조하십시오.
+자세한 내용은 [여기](rest-api-cookbook-servertoserver.md)를 참조하세요.
 
 ### 새 응답 코드에 대한 반응
 

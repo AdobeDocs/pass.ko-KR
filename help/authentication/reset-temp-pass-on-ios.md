@@ -4,7 +4,7 @@ description: iOS에서 임시 패스 재설정
 exl-id: 53a22fae-192c-4b4c-9d63-fd9a2d960923
 source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '698'
 ht-degree: 0%
 
 ---
@@ -19,14 +19,14 @@ ht-degree: 0%
 
 iOS 데모 앱에는 임시 패스 TTL을 재설정하기 위한 전용 화면이 포함되어 있습니다. 재설정 작업에는 다음 정보가 필요합니다.
 
-- **환경:** 임시 패스 네트워크 호출 재설정을 수신할 Adobe Pay-TV Pass 서버 끝점을 지정합니다. 가능한 값: **프리쿠알** (*mgmt-prequal.auth-staging.adobe.com*), **릴리스** (*mgmt.auth.adobe.com*) 또는 **사용자 정의** (Adobe 내부 테스트용으로 예약됨).
-- **OAuth2 전달자 토큰:** oauth2 토큰은 프로그래머가 Adobe Pay-TV 인증을 받도록 인증하는 데 필요합니다. 이러한 토큰은 전용 Pay-TV 인증 OAuth2 엔드포인트에서 얻을 수 있습니다 (예: *curl -u &quot;\&lt;consumer _key=&quot;&quot;>:\&lt;consumer _secret=&quot;&quot; _key=&quot;&quot;>*&quot; *&quot;https://mgmt.auth.adobe.com/oauth2/permanent\_accesstoken?grant\_type=client\_credentials&quot;*).
-- **요청자 ID:** 현재 프로그래머의 고유 ID. 이 값은 데모 앱의 기본 화면(요청자 필드)에서 읽습니다.
-- **임시 통과 ID:** 임시 통과 MVPD에 대한 고유 ID.
-- **장치 ID:** 데모 앱에서 계산한 해시된 장치 ID입니다.
-- **일반 키:** 일부 임시 패스 MVPD(즉, 다음 확장 가능한 임시 패스 기능)는 임시 패스 재설정을 위한 일반 키(장치 ID와 함께)를 지원합니다.
+- **환경:**&#x200B;은(는) 임시 패스 네트워크 호출 재설정을 수신할 Adobe Pay-TV Pass 서버 끝점을 지정합니다. 가능한 값: **Prequal**(*mgmt-prequal.auth-staging.adobe.com*), **Release**(*mgmt.auth.adobe.com*) 또는 **Custom**(Adobe 내부 테스트용으로 예약됨).
+- **OAuth2 전달자 토큰:** OAuth2 토큰은 프로그래머가 Adobe Pay-TV 인증을 사용하도록 인증하는 데 필요합니다. 이러한 토큰은 전용 Pay-TV 인증 OAuth2 엔드포인트(예: *curl -u &quot;\&lt;consumer\_key\>:\&lt;consumer\_secret\_key\>*&quot; *&quot;https://mgmt.auth.adobe.com/oauth2/permanent\_accesstoken?grant\_type=client\_credentials&quot;*)에서 가져올 수 있습니다.
+- **요청자 ID:** 현재 프로그래머의 고유 ID입니다. 이 값은 데모 앱의 기본 화면(요청자 필드)에서 읽습니다.
+- **임시 패스 ID:** 임시 패스 MVPD에 대한 고유 ID입니다.
+- **장치 ID:** 데모 앱에서 계산한 장치 ID를 해시했습니다.
+- **일반 키:** 일부 임시 패스 MVPD(즉, 다음 확장 가능한 임시 패스 기능)는 임시 패스 재설정을 위한 일반 키(장치 ID 포함)를 지원합니다.
 
-위의 모든 매개 변수(제외) *일반 키*)은 필수입니다. 다음은 데모 앱에서 수행할 매개 변수 및 관련 네트워크 호출의 예입니다(예제는 *curl *명령의 형식입니다).
+위의 모든 매개 변수(*일반 키* 제외)는 필수입니다. 다음은 데모 앱에서 수행할 매개 변수 및 관련 네트워크 호출의 예입니다(예제는 *curl *명령의 형식입니다).
 
 - **환경:** 릴리스(*mgmt.auth.adobe.com*)
 - **OAuth2 전달자 토큰:** H4j7cF3GtJX81BrsgDa10GwSizVz
@@ -39,11 +39,14 @@ iOS 데모 앱에는 임시 패스 TTL을 재설정하기 위한 전용 화면�
 curl -X DELETE -H "Authorization:Bearer* *H4j7cF3GtJX81BrsgDa10GwSizVz" "https://mgmt.auth.adobe.com/reset-tempass/v2.1/reset?device_id=f23804a37802993fdc8e28a7f244dfe088b6a9ea21457670728e6731fa639991&requestor_id=REF&mvpd_id=TempPassREF"
 ```
 
-에 대한 DELETE HTTP 요청이 수행됩니다. **/reset** 끝점, 전달 *OAuth2 전달자 토큰* Authorization 헤더 및 *장치 ID*, *요청자 ID* 및 *임시 패스 ID(MVPD ID)* 를 매개 변수로 사용하십시오.
+인증 헤더의 *OAuth2 전달자 토큰* 및 매개 변수로 *장치 ID*, *요청자 ID* 및 *임시 패스 ID(MVPD ID)*&#x200B;을(를) 전달하여 **/reset** 끝점에 DELETE HTTP 요청이 이루어집니다.
 
-프로그래머가 다음에 대한 값을 제공하는 경우 *일반 키*&#x200B;을 사용하여 다른 HTTP 호출이 수행됩니다(이번에는 **/reset/generic** endpoint), 전달 *일반 키* 의 내부 *key* 요청 매개 변수.
+프로그래머가 *일반 키*&#x200B;에 대한 값을 제공하면 다른 HTTP 호출이 수행되며(이번에는 **/reset/generic** 끝점에 대해), *key* 요청 매개 변수 내에 *일반 키*&#x200B;을(를) 전달합니다.
 
-예를 들어, *일반 키* (이러한 기능을 지원하는 Temp Pass MVPD의 경우) 전자 메일 주소 해시에 대해 다음과 같은 HTTP 호출이 발생합니다(전자 메일은 다음과 같음). `user@domain.com` SHA-256 해시는 `f7ee5ec7312165148b69fcca1d29075b14b8aef0b5048a332b18b88d09069fb7`):
+예를들어, *일반 키*을(를) 전자 메일 주소 해시로 설정합니다.
+이러한 기능을 지원하는 임시 통과 MVPD는
+다음 HTTP 호출(전자 메일은 SHA-256의 `user@domain.com`입니다.)
+해시는 `f7ee5ec7312165148b69fcca1d29075b14b8aef0b5048a332b18b88d09069fb7`입니다.
 
 ```curl
 curl -X DELETE -H "Authorization:Bearer H4j7cF3GtJX81BrsgDa10GwSizVz"
@@ -58,10 +61,10 @@ curl -X DELETE -H "Authorization:Bearer H4j7cF3GtJX81BrsgDa10GwSizVz"
 
 마지막 사용 사례(iOS 7 이상)가 가장 일반적이므로 프로그래머가 이러한 상황에서 앱에 대한 임시 패스를 재설정하는 방법을 살펴보겠습니다. 다음과 같은 몇 가지 옵션이 있습니다.
 
-1. 데모 앱의 코드를 프로그래머 앱에 연결합니다. 다음 *TempPassResetViewController* 및 *DeviceIdDemoApp* 클래스에는 Temp Pass를 재설정하기 위한 핵심 논리가 포함되어 있으며 이를 쉽게 수정하여 프로그래머 앱에 포함할 수 있습니다.
+1. 데모 앱의 코드를 프로그래머 앱에 연결합니다. *TempPassResetViewController* 및 *DeviceIdDemoApp* 클래스에는 Temp 패스를 재설정하는 코어 논리가 포함되어 있으며 이를 쉽게 수정하여 프로그래머 앱에 포함할 수 있습니다.
 
-1. 다음을 사용하여 임시 전달 재설정에 대한 HTTP 요청 실행 *컬*. device\_Id 매개 변수는 프로그래머 앱의 IDFV를 계산하고 그 위에 SHA-256 해시를 적용하여 얻을 수 있습니다(의 샘플 코드) *DeviceIdDemoApp* class).
+1. *curl*&#x200B;을(를) 사용하여 Temp Pass를 재설정하기 위한 HTTP 요청을 실행합니다. device\_Id 매개 변수는 프로그래머 앱의 IDFV를 계산하고 SHA-256 해시를 적용하여 얻을 수 있습니다(*DeviceIdDemoApp* 클래스의 샘플 코드).
 
-1. 프로그래머 앱의 해시된 IDFV를 로 지정하여 데모 앱에서 재설정을 수행하면 됩니다. *일반 키*. 이렇게 하면 두 개의 네트워크 호출이 발생합니다(프로그래머와 관련 없는 데모 앱에 대한 임시 패스 재설정 및 프로그래머 앱에 대한 임시 패스 재설정).
+1. 프로그래머 앱의 해시된 IDFV를 *일반 키*(으)로 지정하여 데모 앱에서 재설정을 수행하면 됩니다. 이렇게 하면 두 개의 네트워크 호출이 발생합니다(프로그래머와 관련 없는 데모 앱에 대한 임시 패스 재설정 및 프로그래머 앱에 대한 임시 패스 재설정).
 
 위의 모든 옵션은 유사하며, 구현의 용이성에 따라 하나를 선택하는 것은 프로그래머가 결정합니다.

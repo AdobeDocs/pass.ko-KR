@@ -1,13 +1,13 @@
 ---
 title: 격리 모드 MVPD
 description: TV Everywhere 프로그래머를 위한 격리 모드 MVPD에 대해 알아봅니다
-source-git-commit: 5639319ce8915f0c33d927ca9554c405b3b2e87d
+exl-id: 7ffe4ce3-e9cb-4382-a421-bb57d1927b53
+source-git-commit: 2bb570ab14a3295d46ee6dc0d38485697d63809c
 workflow-type: tm+mt
 source-wordcount: '502'
 ht-degree: 0%
 
 ---
-
 
 # TV Everywhere 프로그래머를 위한 격리 모드 MVPD {#isolation-mode-tve}
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ![](assets/isolation-diff-new.png)
 
-*격리 모드 MVPD는 두 구독자가 아닌 네 명의 서로 다른 구독자를 식별합니다*
+*격리 모드 MVPD는 두 구독자가 아닌 네 명의 다른 구독자를 식별합니다*
 
 * 격리 모드 MVPD의 가입자 B(예: Xfinity)가 동일한 장치를 사용하여 두 개의 다른 프로그래머가 제공하는 콘텐츠에 액세스하면 MVPD는 서로 다른 식별자를 두 개의 다른 액세스 시도와 연결합니다. 프로그래머(그림의 L과 M)의 콘텐츠에 접근하는 서로 다른 두 구독자가 있는 것으로 보인다.
 
@@ -45,7 +45,7 @@ ht-degree: 0%
 >
 > 격리 모드의 동작은 표준 모드와 호환되지 않습니다. 격리 모드 MVPD는 다른 MVPD와 혼합될 수 없으며, 그 반대의 경우도 마찬가지입니다.
 
-격리 모드에서 분석되는 세그먼트를 만들려면 다음과 같은 격리 모드 MVPD를 드래그합니다. **Xfinity**&#x200B;세그먼트 정의의 MVPD 섹션으로 이동합니다.
+격리 모드에서 분석되는 세그먼트를 만들려면 격리 모드 MVPD(예: **Xfinity**)를 세그먼트 정의의 MVPD 섹션으로 끌어옵니다.
 
 >[!NOTE]
 >
@@ -53,11 +53,11 @@ ht-degree: 0%
 
 ![](assets/xfinity-in-segment.png)
 
-*격리 모드에서 Xfinity 선택*
+격리 모드에서 *Xfinity 선택*
 
 >[!IMPORTANT]
 >
-> 계정 공유는 모든 프로그래머 애플리케이션에서 스트리밍으로 측정될 때 더 적절합니다. 낮음 예상 **점수 공유** 격리 모드에 있을 때 지표의 일부 변형.
+> 계정 공유는 모든 프로그래머 애플리케이션에서 스트리밍으로 측정될 때 더 적절합니다. 격리 모드에 있는 경우 낮은 **점수 공유**&#x200B;와 지표의 일부 변형이 예상됩니다.
 
 ![](assets/aggregate-sharing-isolation.png)
 

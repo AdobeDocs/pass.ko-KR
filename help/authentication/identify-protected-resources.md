@@ -43,7 +43,7 @@ ht-degree: 0%
 ```
 
 
-예를 들어, 보다 복잡한 지정자에는 추가 등급 정보가 포함될 수 있습니다. 리소스 ID가 필요한 Access Enabler 함수에 전체 RSS 문자열을 전달할 수 있습니다. [`getAuthorization()`](/help/authentication/rest-api-reference.md):
+예를 들어, 보다 복잡한 지정자에는 추가 등급 정보가 포함될 수 있습니다. 리소스 ID가 필요한 Access Enabler 함수(예: [`getAuthorization()`](/help/authentication/rest-api-reference.md))에 전체 RSS 문자열을 전달할 수 있습니다.
 
 ```rss
     var resource = 
@@ -56,7 +56,7 @@ ht-degree: 0%
     getAuthorization(resource);
 ```
 
-리소스 지정자는 Adobe Pass 인증에 불투명하며 단순히 MVPD로 전달됩니다. MVPD가 리소스 지정자를 인식하지 못하거나 구문 분석할 수 없으면 Adobe Pass 인증에 오류를 반환하여 오류를 `tokenRequestFailed()` callback.
+리소스 지정자는 Adobe Pass 인증에 불투명하며 단순히 MVPD로 전달됩니다. MVPD가 리소스 지정자를 인식하지 못하거나 구문 분석할 수 없으면 Adobe Pass 인증에 오류를 반환하여 `tokenRequestFailed()` 콜백에 오류를 다시 전달합니다.
 
 <!--
 ## Related Information {#related}

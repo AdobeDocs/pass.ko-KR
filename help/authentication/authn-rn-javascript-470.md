@@ -1,14 +1,15 @@
 ---
-title: Adobe Pass 인증 JavaScript 4.7.0 릴리스 노트
-description: Adobe Pass 인증 JavaScript 4.7.0 릴리스 노트
-source-git-commit: 9c491478a5560d1f9208e786de285733997bb24b
+title: Adobe Pass Authentication JavaScript 4.7.0 릴리스 노트
+description: Adobe Pass Authentication JavaScript 4.7.0 릴리스 노트
+exl-id: 07f90270-e64a-4c6b-a072-183af0f53352
+source-git-commit: 8552a62f4d6d80ba91543390bf0689d942b3a6f4
 workflow-type: tm+mt
 source-wordcount: '121'
 ht-degree: 0%
 
 ---
 
-# Adobe Pass 인증 JavaScript 4.7.0 릴리스 노트 {#javascript-sdk-470-release-notes}
+# Adobe Pass Authentication JavaScript 4.7.0 릴리스 노트 {#javascript-sdk-470-release-notes}
 
 >[!NOTE]
 >
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 Adobe Pass 인증: JavaScript 4.7.0
 
-릴리스 날짜: **2024년 2월 27일 - 2024년 2월 29일**
+릴리스 날짜: **2/27/2024 - 02/29/2024**
 
 ## 릴리스 개요 {#overview-javascript-sdk-470}
 

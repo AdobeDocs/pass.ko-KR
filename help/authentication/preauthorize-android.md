@@ -36,7 +36,8 @@ ht-degree: 0%
 
 - *PreauthorizeRequest*: 요청을 정의하는 데 사용되는 빌더 개체
 - AccessEnablerCallback : API 응답을 반환하는 데 사용되는 콜백입니다
-- PreauthorizeResponse : API 응답 콘텐츠를 반환하는 데 사용되는 개체
+- PreauthorizeResponse : API 반환에 사용되는 개체
+응답 콘텐츠
 
 
 ### 공용 클래스 PreauthorizeRequest {#androidpreauthorizerequest}
@@ -62,7 +63,7 @@ ht-degree: 0%
     ///
 ```
 
-**public Builder setResources(List\&lt;string> 리소스)**
+**공용 빌더 setResources(List\&lt;String\> resources)**
 
 ```
     ///
@@ -84,7 +85,7 @@ ht-degree: 0%
 ```
 
 
-**public Builder disableFeatures(Set\&lt;preauthorizerequest.feature>
+**공용 빌더 disableFeatures(Set\&lt;PreauthorizeRequest.Feature\>
 기능)**
 
 ```
@@ -105,7 +106,7 @@ ht-degree: 0%
     ///
 ```
 
-**public PreauthorizeRequest build()**
+**공용 PreauthorizeRequest 빌드()**
 
 **enum PreauthorizeRequest.Feature**
 

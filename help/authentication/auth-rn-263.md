@@ -4,7 +4,7 @@ description: Adobe Pass Authentication 2.63 릴리스 노트
 exl-id: 40987328-6d41-4948-aa4a-bab31f98a18a
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '304'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-263}
 
 Adobe Pass 인증: adobe-pass-**2.63**
-릴리스 날짜: **2022년 9월 20일 - 2022년 9월 22일**
+릴리스 날짜: **2022/09/20 - 2022/09/22**
 
 ### 새로운 기능 {#new-features-263}
 
@@ -54,5 +54,5 @@ Adobe Pass 인증: adobe-pass-**2.63**
 
 #### JavaScript SDK 4.6.0 {#js-sdk}
 
-* 의 사용을 제거했습니다. `eval` 를 사용하여 SDK가 컨텐츠 보안 정책을 준수하도록 할 수 있습니다.
+* `eval` 함수 사용을 제거했으므로 SDK가 콘텐츠 보안 정책을 준수하게 되었습니다.
 * 파트너 애플리케이션에서 브라우저의 로컬 스토리지를 명시적으로 삭제했을 때 인증 흐름이 정상적으로 완료되지 않는 문제를 해결했습니다.

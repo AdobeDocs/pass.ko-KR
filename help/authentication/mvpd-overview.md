@@ -4,7 +4,7 @@ description: MVPD 개요
 exl-id: b918550b-96a8-4e80-af28-0a2f63a02396
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '2736'
+source-wordcount: '2734'
 ht-degree: 0%
 
 ---
@@ -45,7 +45,7 @@ Adobe Pass 인증을 통해 MVPD는 다음을 수신합니다.
 Adobe Pass 인증은 얼마나 안전합니까? Adobe Pass 인증 아키텍처의 가장 중요한 우선 순위는 인증된 뷰어만 인증하고 프리미엄 콘텐츠에 대한 액세스 권한을 부여하도록 하는 것입니다. Adobe Pass 인증은 보는 장치에 대한 액세스를 단단히 바인딩하며, 특정 세대의 스트림, 세션 및/또는 장치를 제한하는 데 도움이 될 수 있습니다.
 
 
-Flash Player이 필요합니까? TV Everywhere용 Adobe Pass 인증은 플레이어 및 플랫폼 종류를 불문하며 Silverlight 및 HTML5를 포함한 모든 재생 애플리케이션과 통합됩니다. 또한 Adobe Pass 인증은 iOS 및 Android를 실행하는 휴대폰 및 태블릿과 같은 장치에 대한 기본 지원을 제공합니다.
+Flash Player이 필요합니까? TV Everywhere용 Adobe Pass 인증은 플레이어 및 플랫폼 종류를 불문하며 Silverlight 및 HTML5를 포함한 모든 재생 애플리케이션과 통합됩니다. 또한 Adobe Pass 인증은 iOS 및 Android을 실행하는 휴대폰 및 태블릿과 같은 장치에 대한 기본 지원을 제공합니다.
 
 
 Adobe Pass 인증은 어떤 장치를 지원합니까? Adobe Pass 인증은 브라우저 내 보기 환경을 위한 HTML5 웹 키트를 사용하는 거의 모든 장치에서 지원됩니다. 또한 Adobe Pass 인증은 iOS, Android™, Xbox360(더 이상 사용되지 않음) 및 Adobe Air®(더 이상 사용되지 않음) 응용 프로그램을 포함하여 다양한 장치별 플랫폼에 대한 기본 SDK(소프트웨어 개발 키트)를 지속적으로 배포하고 있습니다. 가장 최근, Adobe Pass 인증은 브라우저 페이지를 렌더링할 수 없는 장치(예: &quot;스마트&quot; TV, 셋톱 박스 및 게임 콘솔)에 대해 클라이언트 없는 솔루션을 출시했습니다.  브라우저 페이지를 렌더링하는 기능은 MVPD로 사용자를 인증하기 위한 요구 사항입니다.
@@ -71,7 +71,8 @@ Adobe Pass 인증은 MVPD와 프로그래머가 모두 요구하는 비즈니스
 Adobe Pass 인증은 SaaS(Software as a Service) 모델을 통해 제공되며, 콘텐츠에 대한 권한을 확인하기 위해 최종 사용자, MVPD 및 프로그래머 간에 보다 안전한 통신이 이루어지도록 합니다. 서비스의 핵심 구성 요소는 다음과 같습니다.
 
 서버 측 - 호스팅된 Adobe Pass 인증 서버. 이것은 MVPD의 인증 시스템과 백 채널(서버 간) 통신을 수행하는 응용 프로그램 서버입니다.
-Client Side: 클라이언트측 Access Enabler - Access Enabler는 프로그래머의 웹 페이지 또는 플레이어 애플리케이션에 로드되는 작은 파일입니다. 프로그래머의 콘텐츠 보기 애플리케이션에 자격 부여 API를 제공하고 Adobe Pass 인증 서버와 통신합니다.
+클라이언트측:
+클라이언트측 Access Enabler - Access Enabler는 프로그래머의 웹 페이지 또는 플레이어 애플리케이션에 로드되는 작은 파일입니다. 프로그래머의 콘텐츠 보기 애플리케이션에 자격 부여 API를 제공하고 Adobe Pass 인증 서버와 통신합니다.
 클라이언트 없는 웹 서비스(웹이 아닌 장치의 경우) - 스마트 TV, 게임 콘솔 및 셋톱 박스와 같은 장치에 권한 부여 API를 제공하는 RESTful 웹 서비스.
 
 >[!NOTE]
@@ -139,9 +140,9 @@ Adobe Pass 인증 권한 부여 솔루션은 인증/권한 부여 워크플로�
 
 인증/권한 부여 워크플로 중에 발행되는 세 가지 유형의 토큰이 있습니다. 두 가지 유형은 &quot;장기&quot;로, 사용자의 보기 경험에 연속성을 제공합니다. 세 번째, 단기 토큰은 스트림 리핑을 통해 사기 행위를 완화하기 위한 업계 모범 사례에 대한 지원을 제공합니다. 토큰의 TTL(&quot;time-to-live&quot;) 값은 MVPD와 프로그래머 간의 계약에 따라 설정됩니다. 비즈니스 및 고객에게 가장 적합한 TTL 값을 결정합니다.
 
-**오래 지속되는 인증 토큰**. 고객이 Adobe Pass 인증을 사용하여 MVPD 계정에 성공적으로 로그온하면 인증이 성공합니다. 그런 다음 Adobe Pass 인증은 요청 장치에 연결된 장기 인증(&quot;authN&quot;) 토큰과 MVPD에 따라 사용자를 익명으로 식별하는 글로벌 고유 식별자(&quot;GUID&quot;)를 생성합니다.
+**오래 지속된 인증 토큰**. 고객이 Adobe Pass 인증을 사용하여 MVPD 계정에 성공적으로 로그온하면 인증이 성공합니다. 그런 다음 Adobe Pass 인증은 요청 장치에 연결된 장기 인증(&quot;authN&quot;) 토큰과 MVPD에 따라 사용자를 익명으로 식별하는 글로벌 고유 식별자(&quot;GUID&quot;)를 생성합니다.
 
-**오래 지속되는 인증 토큰**. 인증에 성공하면 Adobe Pass 인증이 오래 지속되는 인증(&quot;authZ&quot;) 토큰을 만듭니다. 이 토큰은 요청 장치 및 특정 보호된 리소스(예: 채널, 시리즈 또는 에피소드)에 연결되어 있으므로 이동할 수 없습니다. Access Enabler는 장기 AuthZ 토큰을 사용하여 실제 보기 액세스에 사용되는 단기 미디어 토큰을 생성합니다.
+**오래 지속된 인증 토큰**. 인증에 성공하면 Adobe Pass 인증이 오래 지속되는 인증(&quot;authZ&quot;) 토큰을 만듭니다. 이 토큰은 요청 장치 및 특정 보호된 리소스(예: 채널, 시리즈 또는 에피소드)에 연결되어 있으므로 이동할 수 없습니다. Access Enabler는 장기 AuthZ 토큰을 사용하여 실제 보기 액세스에 사용되는 단기 미디어 토큰을 생성합니다.
 
 **수명이 짧은 미디어 토큰**. 사용자에게 권한이 부여되면 Adobe Pass 인증은 authZ 토큰을 생성하고, 이 토큰을 사용하여 Adobe으로 서명되고 교환 중 변조를 방지하기 위해 암호화된 일회성 단기 미디어 토큰을 생성합니다. 단기 토큰은 Access Enabler API 또는 Clientless 웹 서비스를 통해 포함 사이트에 노출되므로 보호된 리소스에 대한 액세스를 제공하기 전에 프로그래머의 미디어 서버는 Adobe Pass 인증 구성 요소인 미디어 토큰 검증기를 사용하여 토큰을 검증해야 합니다.
 
@@ -165,22 +166,22 @@ Adobe Pass 인증 권한 부여 솔루션은 인증/권한 부여 워크플로�
 
 다음 단계에서는 Adobe Pass 인증 인증 흐름의 예를 보여 줍니다.  이것은 프로그래머가 사용자가 MVPD의 유효한 고객인지 여부를 결정하는 자격 프로세스의 일부입니다.  이 시나리오에서, 사용자는 MVPD에 대한 유효한 가입자이다.  사용자가 프로그래머 Flash 응용 프로그램을 사용하여 보호된 콘텐츠를 보려고 합니다.
 
-1. 사용자가 프로그래머 Flash 응용 프로그램과 Adobe Pass Authentication Access Enabler 구성 요소를 사용자 컴퓨터에 로드하는 프로그래머 웹 페이지로 이동합니다. Flash 애플리케이션은 Access Enabler를 사용하여 프로그래머의 ID를 Adobe Pass 인증으로 설정하고 Adobe Pass 인증은 Access Enabler를 해당 프로그래머(&quot;요청자&quot;)에 대한 구성 및 상태 데이터로 채웁니다. Access Enabler는 다른 API 호출을 수행하기 전에 서버에서 이 데이터를 받아야 합니다.  기술 참고 사항: 프로그래머는 Access Enabler를 사용하여 ID를 설정합니다. `setRequestor()` 메서드, 자세한 내용은 [프로그래머 통합 안내서](/help/authentication/programmer-integration-guide-overview.md).
+1. 사용자가 프로그래머 Flash 응용 프로그램과 Adobe Pass Authentication Access Enabler 구성 요소를 사용자 컴퓨터에 로드하는 프로그래머 웹 페이지로 이동합니다. Flash 애플리케이션은 Access Enabler를 사용하여 프로그래머의 ID를 Adobe Pass 인증으로 설정하고 Adobe Pass 인증은 Access Enabler를 해당 프로그래머(&quot;요청자&quot;)에 대한 구성 및 상태 데이터로 채웁니다. Access Enabler는 다른 API 호출을 수행하기 전에 서버에서 이 데이터를 받아야 합니다.  기술 참고: 프로그래머는 Access Enabler의 `setRequestor()` 메서드를 사용하여 ID를 설정합니다. 자세한 내용은 [Programmer 통합 안내서](/help/authentication/programmer-integration-guide-overview.md)를 참조하십시오.
 1. 사용자가 프로그래머로 보호된 콘텐츠를 보려고 하면 프로그래머 애플리케이션은 MVPD의 목록을 사용자에게 제공하고, 사용자는 이 목록에서 공급자를 선택합니다.
 1. 사용자는 Adobe Pass 인증 서버로 리디렉션되며, 여기서 사용자가 선택한 MVPD에 대한 암호화된 SAML 요청을 만듭니다. 이 요청은 프로그래머를 대신하여 MVPD에 인증 요청으로 보내진다. MVPD의 시스템에 따라 사용자의 브라우저는 로그인을 위해 MVPD의 사이트로 리디렉션되거나 프로그래머 앱에서 로그인 iFrame이 만들어집니다.
 1. 두 경우(리디렉션 또는 iFrame) 모두 MVPD가 요청을 수락하고 해당 로그인 페이지를 표시합니다.
 1. 사용자가 MVPD에 로그인하면 MVPD가 사용자의 결제 고객 상태를 확인한 다음 MVPD가 자체 HTTP 세션을 만듭니다.
 1. 사용자가 인증되면 MVPD는 응답(SAML 및 암호화)을 만들어 MVPD가 다시 Adobe Pass 인증으로 보냅니다.
-1. Adobe Pass 인증은 MVPD 응답을 수신하고 Adobe Pass 인증 HTTP 세션이 열려 있는지 확인한 다음 [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) MVPD의 응답이며, 다시 프로그래머 사이트로 리디렉션합니다.
+1. Adobe Pass 인증은 MVPD 응답을 받고, Adobe Pass 인증 HTTP 세션이 열려 있는지 확인하고, MVPD에서 [SAML](https://en.wikipedia.org/wiki/Security_Assertion_Markup_Language) 응답을 확인하고, 프로그래머 사이트로 다시 리디렉션합니다.
 1. 프로그래머 사이트가 다시 로드되고 Access Enabler가 다시 로드되며 프로그래머는 setRequestor()를 다시 호출합니다.  현재 구성이 변경되었기 때문에 setRequestor()에 대한 두 번째 호출이 필요합니다. 이제 Access Enabler에 AuthN 토큰이 서버에서 생성되기를 기다리고 있음을 알리는 플래그가 있습니다.
 1. Access Enabler는 보류 중인 인증이 있음을 확인하고 Adobe Pass 인증 서버에서 토큰을 요청합니다. Flash Player의 DRM 기능을 호출하여 서버에서 토큰을 검색합니다.
 1. AuthN 토큰은 프로그래머의 Flash Player LSO 캐시에 저장됩니다. 이제 인증이 완료되고 Adobe Pass 인증 서버에서 세션이 제거됩니다.
 
 ## 인증 단계 {#authz-steps}
 
-다음 단계는 이전 섹션에서 계속 진행됩니다([인증 단계](#authn-steps)):
+다음 단계는 이전 섹션([인증 단계](#authn-steps))에서 계속됩니다.
 
-1. 사용자가 프로그래머로 보호된 콘텐츠에 액세스하려고 하면 프로그래머 애플리케이션은 먼저 사용자의 로컬 컴퓨터 또는 장치에서 AuthN 토큰을 확인합니다.  해당 토큰이 없으면 [인증 단계](#authn-steps) 다음은 위의 예입니다.  AuthN 토큰이 있는 경우 인증 흐름은 프로그래머 애플리케이션에서 보호된 콘텐츠의 특정 항목에 대한 사용자의 보기 권한을 가져오도록 요청하여 Access Enabler에 대한 호출을 시작하는 것으로 진행됩니다.
+1. 사용자가 프로그래머로 보호된 콘텐츠에 액세스하려고 하면 프로그래머 애플리케이션은 먼저 사용자의 로컬 컴퓨터 또는 장치에서 AuthN 토큰을 확인합니다.  해당 토큰이 없으면 위의 [인증 단계](#authn-steps)를 따릅니다.  AuthN 토큰이 있는 경우 인증 흐름은 프로그래머 애플리케이션에서 보호된 콘텐츠의 특정 항목에 대한 사용자의 보기 권한을 가져오도록 요청하여 Access Enabler에 대한 호출을 시작하는 것으로 진행됩니다.
 1. 보호된 콘텐츠의 특정 항목은 &quot;리소스 식별자&quot;로 표시됩니다.  이는 단순한 문자열이거나 더 복잡한 구조일 수 있지만, 어떤 경우든 리소스 식별자의 특성은 프로그래머와 MVPD 간에 미리 합의됩니다.  프로그래머 애플리케이션은 리소스 식별자를 Access Enabler에 전달합니다.  Access Enabler는 사용자의 로컬 시스템 또는 디바이스에서 AuthZ 토큰을 확인합니다.  AuthZ 토큰이 없으면 Access Enabler가 요청을 백엔드 Adobe Pass 인증 서버에 전달합니다.
 1. Adobe Pass 인증 서버는 표준화된 프로토콜을 사용하여 MVPD 인증 엔드포인트와 통신합니다.  MVPD의 응답이 사용자에게 보호된 콘텐츠를 볼 권한이 있음을 나타내는 경우 Adobe Pass 인증 서버는 AuthZ 토큰을 만들어 다시 Access Enabler에 전달합니다. Access Enabler는 사용자 컴퓨터에 AuthZ 토큰을 저장합니다.
 1. 사용자의 시스템 또는 장치에 저장된 AuthZ 토큰을 사용하여 프로그래머 애플리케이션은 Adobe Pass 인증 서버에서 미디어 토큰을 얻기 위해 Access Enabler를 호출하고 해당 토큰을 프로그래머 애플리케이션에 제공합니다.

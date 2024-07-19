@@ -1,9 +1,10 @@
 ---
 title: Adobe Pass Authentication 2.65.1 릴리스 노트
 description: Adobe Pass Authentication 2.65.1 릴리스 노트
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 28d112db-b038-4d11-93c5-d6ab67a29700
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '172'
+source-wordcount: '182'
 ht-degree: 0%
 
 ---
@@ -24,7 +25,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-2651}
 
 Adobe Pass 인증: adobe-pass-**2.65.1**
-릴리스 날짜: **2023년 6월 20일 - 2023년 6월 22일**
+릴리스 날짜: **2023/06/20 - 2023/06/22**
 
 ### 릴리스 개요 {#release-overview-2651}
 

@@ -1,20 +1,21 @@
 ---
-title: 계정 IQ 버전
-description: 계정 IQ의 다양한 서비스에 사용되는 버전에 대해 알아봅니다.
-source-git-commit: cfcaa00ab05c99a64bcb0edfe5af60845a6769a9
+title: Account IQ 버전
+description: Account IQ의 다양한 서비스에 사용되는 버전에 대해 알아봅니다.
+exl-id: b8b014d5-a8a8-4327-b6aa-15f7e6a63274
+source-git-commit: 2bb570ab14a3295d46ee6dc0d38485697d63809c
 workflow-type: tm+mt
 source-wordcount: '312'
 ht-degree: 0%
 
 ---
 
-# 계정 IQ 버전 {#aiq-versions}
+# Account IQ 버전 {#aiq-versions}
 
-계정 IQ는 특히 비디오 스트리밍 업계 내에서 암호 공유를 자동으로 식별하도록 설계되었습니다. 이 산업에는 소비자 간 직접 거래(D2C)와 TV Everywhere(TVE)의 두 가지 주요 서비스 범주가 있습니다.
+Account IQ은 특히 비디오 스트리밍 업계 내에서 암호 공유를 자동으로 식별하도록 설계되었습니다. 이 산업에는 소비자 간 직접 거래(D2C)와 TV Everywhere(TVE)의 두 가지 주요 서비스 범주가 있습니다.
 
 이 안내서는 비디오 스트리밍 산업 내 D2C 가입자, TV Everywhere 프로그래머 및 TV Everywhere MVPD 기업의 요구를 해결합니다.
 
-D2C와 TVE 간의 약간의 차이 때문에 계정 IQ의 해당 변형이 있습니다. 비디오 스트리밍 회사의 각 유형은 고유한 계정 IQ 버전과 상호 작용합니다.
+D2C와 TVE 간의 약간의 차이 때문에 Account IQ의 해당 변형이 있습니다. 비디오 스트리밍 회사의 각 유형은 고유한 Account IQ 버전과 상호 작용합니다.
 
 ## D2C(직접 소비자) 서비스 {#d-to-c}
 
@@ -24,9 +25,9 @@ D2C는 콘텐츠 제공자가 고객에게 직접 판매하는 비디오 스트�
 
 TV Everywhere는 고객의 기존 TV 구독의 온라인 구성 요소를 의미합니다. 다양한 스트리밍 플랫폼을 통해 온라인상에서 이들 사업자의 콘텐츠에 접근할 수 있는 컴캐스트나 direcTV와 같은 케이블 또는 위성 TV 서비스 가입자가 포함된다.
 
-TV Everywhere에는 두 가지 버전이 있습니다. [프로그래머](/help/accountiq/product-concepts.md#programmer-def) 및 [MVPD](/help/accountiq/product-concepts.md#mvpd-def).
+TV Everywhere에는 [프로그래머](/help/accountiq/product-concepts.md#programmer-def) 및 [MVPD](/help/accountiq/product-concepts.md#mvpd-def)의 두 가지 버전이 있습니다.
 
-다음을 수행하는 경우 [온보드](/help/accountiq/get-started.md) 귀하의 조직은 계정 IQ에 할당되며, 귀하는 프로그래머 또는 MVPD 버전을 할당받습니다.
+조직을 Account IQ에 [온보드](/help/accountiq/get-started.md)하면 프로그래머 또는 MVPD 버전이 할당됩니다.
 
 ### 프로그래머 {#programmers}
 
@@ -38,8 +39,4 @@ MVPD는 다양한 유통 기술을 통해 가입자에게 여러 개의 텔레�
 
 >[!NOTE]
 >
-> 로그인하는 계정 IQ 버전에 따라 특정 레이블이 변경되고 일부 보기는 사용하지 못할 수 있습니다.
-
-
-
-
+> 로그인하는 Account IQ 버전에 따라 특정 레이블이 변경되고 일부 보기를 사용할 수 없습니다.

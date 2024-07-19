@@ -4,7 +4,7 @@ description: Amazon fireTV SSO - 프로그래머 시작 안내서
 exl-id: cf9ba614-57ad-46c3-b154-34204b38742d
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '793'
+source-wordcount: '782'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 소개 {#intro}
 
-이 문서에서는 새로운 기능을 통합하는 데 필요한 정보를 설명합니다 **Adobe Pass 인증의 fireTV SDK** fireTV 애플리케이션. 이 새로운 SDK는 Amazon의 fireTV 플랫폼에서 OS 수준 통합을 활용하여 다음을 제공합니다 **단일 사인온** 지원. SSO(Single Sign On)를 활용하려면 Clientless API에서 새로운 fireTV SDK로 애플리케이션을 마이그레이션하기 위해 측면으로부터 약간의 노력이 필요합니다. 인증 흐름에는 아래에 자세히 설명되어 있는 몇 가지 변경 사항이 있습니다.
+이 문서에서는 fireTV 응용 프로그램에서 새 **Adobe Pass 인증의 fireTV SDK**&#x200B;를 통합하는 데 필요한 정보를 설명합니다. 이 새로운 SDK는 Amazon의 fireTV 플랫폼에서 OS 수준 통합을 활용하므로 **단일 사인온** 지원을 제공합니다. SSO(Single Sign On)를 활용하려면 Clientless API에서 새로운 fireTV SDK로 애플리케이션을 마이그레이션하기 위해 측면으로부터 약간의 노력이 필요합니다. 인증 흐름에는 아래에 자세히 설명되어 있는 몇 가지 변경 사항이 있습니다.
 
 ## 높은 수준의 아키텍처 및 OS 수준의 통합 {#high}
 
@@ -43,42 +43,42 @@ Clientless API 기반 앱과 비교하여 새로운 fireTV SDK를 사용하면 �
 
 따라서 프로그래머는 사용자가 fireTV 장치에서 바로 TV 공급자를 선택할 수 있도록 앱에 MVPD 선택기를 추가해야 합니다. MVPD 선택 시 사용자는 fireTV 장치에서 MVPD 로그인 페이지를 볼 수 있습니다.
 
-fireTV의 일반, HBA 및 SSO 시나리오를 설명하는 사용자 흐름의 와이어프레임은 다음 위치에서 찾을 수 있습니다. [Amazon Fire TV - MVVPD 로그인 사용자 흐름](https://xd.adobe.com/view/9058288e-4b67-43a1-9d5b-5f76ede6c51e/).
+fireTV의 일반, HBA 및 SSO 시나리오를 설명하는 사용자 흐름의 와이어프레임은 [Amazon Fire TV - MVVPD 로그인 사용자 흐름](https://xd.adobe.com/view/9058288e-4b67-43a1-9d5b-5f76ede6c51e/)에서 찾을 수 있습니다.
 
 ## Android SDK 기반 앱에서 fireTV SDK 기반 앱으로 마이그레이션 {#migra2}
 
-이 새로운 fireTV SDK는 기존 Android SDK 및 현재 사용 중인 설명서와 매우 유사합니다 **android SDK 통합** <!--http://tve.helpdocsonline.com/android-technical-overview-->fireTV SDK 문서가 준비될 때까지 사용할 수 있습니다. Android SDK를 사용하는 Android 애플리케이션이 이미 있는 경우 fireTV 애플리케이션에서 fireTV SDK의 통합은 간단해야 합니다.
+이 새로운 fireTV SDK는 기존 Android SDK와 매우 유사하며 **Android SDK 통합**&#x200B;에 대한 현재 설명서를 <!--http://tve.helpdocsonline.com/android-technical-overview-->사용할 수 있습니다. fireTV SDK 문서를 준비해야 합니다. Android SDK를 사용하는 Android 애플리케이션이 이미 있는 경우 fireTV 애플리케이션에서 fireTV SDK를 통합하면 간단합니다.
 
-기존 Android SDK와 비교하여 fireTV SDK에서는 MVPD 로그인 페이지를 관리/제시하고 AuthN 토큰을 검색하는 작업이 AccessEnabler 라이브러리에서 내부적으로 수행되므로 인증 프로세스를 더욱 간편하게 개발할 수 있습니다.
+기존 Android SDK와 비교하여 fireTV SDK에서는 MVPD 로그인 페이지를 관리/제시하고 AuthN 토큰을 검색하는 작업이 AccessEnabler 라이브러리에서 내부적으로 수행되므로 인증 프로세스를 더욱 간단하게 개발할 수 있습니다.
 
 ## FAQ {#faq}
 
-1. 은(는) 어떻게 됩니까? **SSO** 일?
+1. **SSO**&#x200B;이(가) 어떻게 작동합니까?
 
    * SSO는 동일한 Amazon fireTV 장치에서 새로운 fireTV SDK를 사용하는 Adobe Pass 인증에서 제공하는 모든 프로그래머 애플리케이션에서 작동합니다
-   * Clientless REST API에 구현된 프로그래머 앱과 fireTV SDK에 구현된 앱 간의 SSO **이(가) 지원되지 않습니다.**
+   * 클라이언트 없는 REST API에 구현된 프로그래머 앱과 fireTV SDK **에 구현된 앱 간의 SSO는 지원되지 않습니다**
 
 1. fireTV SSO의 MVPD 범위는 얼마입니까?
 
-   * **모든 MVPD** Adobe Pass 인증에 의해 통합되면 fireTV SDK에서 기술적으로 SSO가 지원됩니다.
+   * Adobe Pass 인증에 의해 통합된 **모든 MVPD**&#x200B;은(는) fireTV SDK에서 기술적으로 SSO가 지원됩니다.
 
-1. 새로운 SDK 사용 외에 다른 기능 **워크플로우 변경 사항** 프로그래머가 알아야 할 사항
+1. 새 SDK를 사용하는 것 외에 프로그래머가 알아야 할 다른 **워크플로 변경 사항**&#x200B;은 무엇입니까?
 
    * 프로그래머는 fireTV 플랫폼용 MVPD 선택기를 구현해야 합니다.
 
-1. 인증에 변경 사항이 있습니까 **TTL**?
+1. 인증 **TTL**&#x200B;에 변경 사항이 있습니까?
 
    * 인증 TTL과 관련된 비헤이비어는 변경되지 않습니다.
    * 첫 번째 유효한 인증 토큰은 SSO 수행에 사용되며, 이 경우 SSO를 통해 인증될 다른 모든 애플리케이션은 만료될 때까지 동일한 TTL을 사용합니다. 따라서 한 애플리케이션에서 다른 애플리케이션으로 이동할 때 두 번째 애플리케이션은 인증하는 첫 번째 애플리케이션의 TTL을 공유합니다.
 
-1. 방법 **저하 API** 일?
+1. **저하 API**&#x200B;는 어떻게 작동합니까?
 
    * 성능 저하 API에 필요한 변경 사항이 없습니다. 사용자 경험은 Android 장치와 동일합니다.
 
-1. 방법 **임시 통과** 흐름이 영향을 받습니까?
+1. **TempPass** 흐름은 어떻게 영향을 받습니까?
 
    * TempPass 흐름은 단일 화면이며 다른 모든 기본 디바이스에서와 같이 동작합니다.
 
 1. 다른 Adobe 기능이 이전처럼 작동합니까?
 
-   * 모든 Adobe Pass 인증 기능은 Android 디바이스에서와 같이 fireTV에서 작동합니다.
+   * 모든 Adobe Pass 인증 기능은 Android 장치에서처럼 fireTV에서 작동합니다.

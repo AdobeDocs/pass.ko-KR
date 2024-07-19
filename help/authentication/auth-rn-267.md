@@ -1,9 +1,10 @@
 ---
 title: Adobe Pass Authentication 2.67 릴리스 노트
 description: Adobe Pass Authentication 2.67 릴리스 노트
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: d899fe96-a273-4681-90a5-bde54cc2f3b3
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '125'
+source-wordcount: '131'
 ht-degree: 0%
 
 ---
@@ -26,7 +27,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-267}
 
 Adobe Pass 인증: adobe-pass-**2.67.0.1**
-릴리스 날짜: **2023년 9월 12일 - 2023년 9월 14일**
+릴리스 날짜: **2023/12/09 - 2023/09/14**
 
 ### 새로운 기능 {#new-features-267}
 
@@ -35,7 +36,7 @@ Adobe Pass 인증: adobe-pass-**2.67.0.1**
 
 ### MVPD 업데이트 {#mvpd-updates-267}
 
-* 다음에 대한 업데이트 **DirecTV 푸에르토리코** Adobe과 통합. 자세한 내용은 TAM에 문의하십시오.
+* Adobe과 **DirecTV 푸에르토리코** 통합에 대한 업데이트입니다. 자세한 내용은 TAM에 문의하십시오.
 
 #### 버그 수정 {#bug-fixes-267}
 

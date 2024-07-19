@@ -1,14 +1,15 @@
 ---
-title: Adobe Pass 인증 JavaScript 4.6.0 릴리스 노트
-description: Adobe Pass 인증 JavaScript 4.6.0 릴리스 노트
-source-git-commit: 7057aeda34b4fe0d059912ab0a71ea856427654c
+title: Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트
+description: Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트
+exl-id: 09b79384-2385-48ce-9ee2-6db93bbce15d
+source-git-commit: 8552a62f4d6d80ba91543390bf0689d942b3a6f4
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
-# Adobe Pass 인증 JavaScript 4.6.0 릴리스 노트 {#javascript-sdk-460-release-notes}
+# Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트 {#javascript-sdk-460-release-notes}
 
 >[!NOTE]
 >
@@ -20,12 +21,12 @@ ht-degree: 0%
 
 Adobe Pass 인증: JavaScript 4.6.0
 
-릴리스 날짜: **2022년 9월 20일 - 2022년 9월 22일**
+릴리스 날짜: **20/09/20 - 2022/09/22**
 
 
 ## 릴리스 개요 {#overview-javascript-sdk-460}
 
-* 의 사용을 제거했습니다. `eval` 를 사용하여 SDK가 컨텐츠 보안 정책을 준수하도록 할 수 있습니다.
+* `eval` 함수 사용을 제거했으므로 SDK가 콘텐츠 보안 정책을 준수하게 되었습니다.
 * 파트너 애플리케이션에서 브라우저의 로컬 스토리지를 명시적으로 삭제했을 때 인증 흐름이 정상적으로 완료되지 않는 문제를 해결했습니다.
 
 

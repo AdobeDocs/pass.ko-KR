@@ -1,6 +1,6 @@
 ---
-title: Adobe Pass 인증 및 Android 6 "Marshmallow" 새로운 권한 모델
-description: Adobe Pass 인증 및 Android 6 "Marshmallow" 새로운 권한 모델
+title: Adobe Pass 인증 및 Android 6 "Marshmallow" 새 권한 모델
+description: Adobe Pass 인증 및 Android 6 "Marshmallow" 새 권한 모델
 exl-id: 3c96769e-b25b-48ab-bb74-40f13d4e5a84
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# Adobe Pass 인증 및 Android 6 &quot;Marshmallow&quot; 새로운 권한 모델 {#adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model}
+# Adobe Pass 인증 및 Android 6 &quot;Marshmallow&quot; 새 권한 모델 {#adobe-primetime-authentication-and-the-android-6-marshmallow-new-permissions-model}
 
 >[!NOTE]
 >
@@ -17,16 +17,16 @@ ht-degree: 0%
 
 </br>
 
-새로운 Android 6 Marshmallow 릴리스에서는 기존 Adobe Pass 인증 SDK 버전 1.8 이상을 사용하는 앱의 동작에 영향을 줄 수 있는 권한 모델에 대한 일부 업데이트가 도입되었습니다.
+새로운 Android 6 Marshmallow 릴리스에서는 기존 Adobe Pass 인증 SDK 버전 1.8 이상을 사용하는 앱의 동작에 영향을 줄 수 있는 권한 모델에 대한 일부 업데이트를 도입했습니다.
 
-새로운 기능으로서, 새로운 Android OS는 [설치 및 런타임 시 앱에 필요한 권한에 대한 세부적인 제어](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html).
+새로운 기능으로서, 새로운 Android OS는 [설치 및 런타임 시 앱에 필요한 권한을 세부적으로 제어할 수 있습니다](https://developer.android.com/about/versions/marshmallow/android-6.0-changes.html).
 
 >[!IMPORTANT]
 >
->아래에 설명된 변경 사항은 다음과 같습니다. **android 6.0용으로 특별히 개발된 애플리케이션에만 영향을 미칩니다.** (targetSdkVersion=23). Android 6.0으로 업그레이드할 때 사용자의 디바이스에 이미 설치된 이전 애플리케이션에는 영향을 주지 않습니다.
+>아래에 설명된 변경 사항은 **Android 6.0용으로 특별히 개발된 응용 프로그램에만 영향을 줍니다**(targetSdkVersion=23). Android 6.0으로 업그레이드할 때 사용자의 디바이스에 이미 설치된 이전 애플리케이션에는 영향을 주지 않습니다.
 
 
-특히 Android Studio에서 개발된 앱의 경우 [API 레벨 23](http://developer.android.com/sdk/api_diff/23/changes.html) 및 Adobe Pass 인증 SDK를 사용하는 개발자는 사용자 지정 코드를 작성해야 합니다(아래 코드 조각 참조) [허용/거부 권한 대화 상자를 트리거하려면](https://developer.android.com/training/permissions/requesting.html).
+특히, [API 수준 23](http://developer.android.com/sdk/api_diff/23/changes.html)을 사용하여 Android Studio에서 개발되고 Adobe Pass 인증 SDK를 사용하는 앱의 경우 개발자가 사용자 지정 코드(아래 코드 조각 참조)를 작성하여 [허용/거부 권한 대화 상자를 트리거해야 합니다](https://developer.android.com/training/permissions/requesting.html).
 
 다음은 장치 외부 스토리지에 대한 쓰기 액세스를 요청하는 데 사용되는 코드 발췌문입니다.
 
@@ -62,21 +62,21 @@ if (ContextCompat.checkSelfPermission(thisActivity,
 
 
 
-**사용자의 관점에서**&#x200B;를 설치하면 파일에 대한 읽기/쓰기 권한을 확인하는 창이 표시됩니다(아래 그림 2 참조). 이렇게 하면 다음 두 가지 결과 중 하나가 생성됩니다.
+**사용자의 관점에서** 설치 시 파일에 대한 읽기/쓰기 권한을 확인하는 창이 사용자에게 표시됩니다(아래 그림 2 참조). 이렇게 하면 다음 두 가지 결과 중 하나가 생성됩니다.
 
-1. 사용자인 경우 **확인** 권한, 일반 인증 흐름은 유지되고 토큰은 글로벌 저장소에 저장됩니다. 토큰이 유효한 경우 사용자는 앱 내에서 그리고 Adobe Pass 인증을 사용하는 앱 간에 인증된 상태를 유지합니다.
-1. 사용자인 경우 **거부** 저장소에서 권한, 쓰기 작업이 실패하고 사용자가 앱을 종료할 때까지만 인증됩니다. 전경과 배경 간을 전환할 때 일부 응용 프로그램이 다시 초기화되므로 이 작업을 수행할 때 사용자가 로그아웃됩니다. 토큰은 저장되지 않으며 사용자는 앱을 사용할 때마다 인증해야 합니다.
+1. 사용자가 권한을 **확인**&#x200B;하면 일반 인증 흐름이 유지되고 토큰이 전역 저장소에 저장됩니다. 토큰이 유효한 경우 사용자는 앱 내에서 그리고 Adobe Pass 인증을 사용하는 앱 간에 인증된 상태를 유지합니다.
+1. 사용자가 **권한을 거부**&#x200B;하면 저장소의 쓰기 작업이 실패하고 사용자가 앱을 종료할 때까지 인증만 됩니다. 전경과 배경 간을 전환할 때 일부 응용 프로그램이 다시 초기화되므로 이 작업을 수행할 때 사용자가 로그아웃됩니다. 토큰은 저장되지 않으며 사용자는 앱을 사용할 때마다 인증해야 합니다.
 
 
 >[!TIP]
 >
->Adobe Pass 인증 SDK 1.9에는 현재 스토리지 복원력을 도입하는 기능이 개발 중입니다. 새 SDK가 다음에 대해 타깃팅됨 **10월 마지막 주 릴리스**. 응용 프로그램은 일반 저장소를 사용할 수 없을 때마다 응용 프로그램의 샌드박스 저장소에 쓰는 것으로 대체됩니다. API 레벨 23에서 개발된 애플리케이션의 경우 사용자가 글로벌 스토리지에서 읽기/쓰기 권한을 수락하지 않는 경우를 다룹니다. 토큰은 앱마다 개별적으로 저장되므로 Adobe Pass 인증을 사용하는 앱 간 Single Sign-On이 비활성화됩니다.
+>Adobe Pass 인증 SDK 1.9에는 현재 스토리지 복원력을 도입하는 기능이 개발 중입니다. 새 SDK는 **10월 마지막 주에 릴리스됩니다**. 응용 프로그램은 일반 저장소를 사용할 수 없을 때마다 응용 프로그램의 샌드박스 저장소에 쓰는 것으로 대체됩니다. API 레벨 23에서 개발된 애플리케이션의 경우 사용자가 글로벌 스토리지에서 읽기/쓰기 권한을 수락하지 않는 경우를 다룹니다. 토큰은 앱마다 개별적으로 저장되므로 Adobe Pass 인증을 사용하는 앱 간 Single Sign-On이 비활성화됩니다.
 
 
 ![](assets/android-permissions-request.png)
 
-*그림: API 레벨 23으로 작성된 앱에 대한 권한 요청 대화 상자*
+*그림: API 레벨 23에 작성된 앱에 대한 권한 요청 대화 상자*
 
 >[!IMPORTANT]
 >
-> Adobe 권고 사항 **파트너는 인증 프로세스에서 최상의 사용자 경험을 보장하기 위해 API 레벨 22(targetSdkVersion=22) 이상을 사용하여 앱을 개발할 수 있습니다.**.
+> Adobe은 인증 프로세스에서 최상의 사용자 경험을 보장하기 위해 **파트너에게 API 수준 22(targetSdkVersion=22) 이상을 사용하여 앱을 개발하도록 권장합니다**.

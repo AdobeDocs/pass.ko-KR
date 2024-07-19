@@ -4,7 +4,7 @@ description: 장치 ID가 없는 클라이언트 없는 API 흐름
 exl-id: 6549a6d6-03a9-4d95-99fb-d3ada832323d
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '238'
+source-wordcount: '242'
 ht-degree: 0%
 
 ---
@@ -27,9 +27,9 @@ ht-degree: 0%
 
 장치 ID가 없는 클라이언트의 경우:
 
-1. 를 사용하여 처음으로 등록 코드 서비스를 호출합니다. `deviceId=dummy`
+1. `deviceId=dummy`(으)로 처음 등록 코드 서비스를 호출합니다.
 1. 응답에서 UUID를 추출합니다. UUID는 등록 코드 응답(XML 및 JSON 응답 형식)의 &quot;id&quot; 요소에서 사용할 수 있습니다.
-1. 등록 서비스에 다시 전화합니다. 이번에는 통과 `deviceId=<uuid obtained in step #2>`
+1. 등록 서비스에 다시 전화합니다. 이번에는 `deviceId=<uuid obtained in step #2>`을(를) 전달하십시오.
 1. 3단계에서 얻은 등록 코드를 콘솔 UI에 표시
 
 
@@ -39,7 +39,7 @@ ht-degree: 0%
 
 ## 영구 솔루션
 
-Adobe은 다음을 수행하여 향후 릴리스에서 이를 변경합니다. `deviceId` regCode를 만들고 대신 UUID를 토큰 키로 사용할 때의 선택적 페이로드 `deviceId`, 다음과 같은 경우 `deviceId` 이(가) 없습니다.
+Adobe은 향후 릴리스에서 reg 코드를 만들 때 `deviceId`을(를) 선택적 페이로드로 만들고 `deviceId`이(가) 없을 때 `deviceId` 대신 UUID를 토큰 키로 사용하여 이 값을 변경합니다.
 
 <!--
 ## Related Information

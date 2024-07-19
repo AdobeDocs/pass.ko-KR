@@ -4,7 +4,7 @@ description: Adobe Pass Authentication 2.68 릴리스 노트
 exl-id: 88628696-448e-4afa-91f0-d3767d68d2f4
 source-git-commit: 87d7380aa7045e64e8caff6d5d7610bd0917181e
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '148'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-268}
 
 Adobe Pass 인증: adobe-pass-**2.68.0.5**
-릴리스 날짜: **2023년 12월 5일 - 2023년 12월 7일**
+릴리스 날짜: **12/05/2023 - 12/07/2023**
 
 ### 새로운 기능 {#new-features-268}
 

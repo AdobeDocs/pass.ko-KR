@@ -1,7 +1,8 @@
 ---
 title: Adobe Pass 인증 iOS / tvOS 3.8.4 릴리스 노트
 description: Adobe Pass 인증 iOS / tvOS 3.8.4 릴리스 노트
-source-git-commit: 31620db6a05d4c7043e49c03099e9f84cdbad4fb
+exl-id: 51d38e2a-b500-402b-9583-f7b5ad6648fd
+source-git-commit: 8552a62f4d6d80ba91543390bf0689d942b3a6f4
 workflow-type: tm+mt
 source-wordcount: '102'
 ht-degree: 0%
@@ -31,4 +32,4 @@ Adobe Pass 인증: iOS / tvOS 3.8.4
 
 ## 릴리스 패키지 {#rel-pkg-iostvos384}
 
-에서 iOS/tvOS SDK v3.8.4를 다운로드할 수 있습니다. [여기](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-tvOS-Native-AccessEnabler-Library).
+[여기](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-tvOS-Native-AccessEnabler-Library)에서 iOS/tvOS SDK v3.8.4를 다운로드할 수 있습니다.

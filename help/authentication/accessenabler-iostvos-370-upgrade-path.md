@@ -4,7 +4,7 @@ description: AccessEnabler iOS/tvOS 3.7.0 업그레이드 경로
 exl-id: f15c7414-ec9b-4e21-b457-1ecf59f47441
 source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
 workflow-type: tm+mt
-source-wordcount: '294'
+source-wordcount: '320'
 ht-degree: 0%
 
 ---
@@ -17,9 +17,9 @@ ht-degree: 0%
 
 </br>
 
-에서 키체인 스토리지 변경 [새로운 AccessEnabler 버전 3.7.0](/help/authentication/authn-rn-ios-tvos-370.md) 는 AccessEnabler 버전 3.7.0보다 낮은 버전에서 키체인 스토리지 구현과 호환되지 않습니다.
+[새 AccessEnabler 버전 3.7.0](/help/authentication/authn-rn-ios-tvos-370.md)의 키체인 스토리지 변경 사항이 AccessEnabler 버전 3.7.0보다 낮은 키체인 스토리지 구현과 호환되지 않습니다.
 
-새로운 AccessEnabler 버전 3.7.0을 채택한 하나의 애플리케이션에 대한 업그레이드 경로는 이전 버전의 키체인 스토리지에서 모든 토큰을 마이그레이션하게 됩니다. 따라서 최종 사용자 **인증/권한 부여 세션 손실이 발생하지 않아야 함** AccessEnabler 프레임워크 업데이트 프로세스 중.
+새로운 AccessEnabler 버전 3.7.0을 채택한 하나의 애플리케이션에 대한 업그레이드 경로는 이전 버전의 키체인 스토리지에서 모든 토큰을 마이그레이션하게 됩니다. 따라서 최종 사용자 **은(는) AccessEnabler 프레임워크 업데이트 프로세스 중에 인증/권한 부여 세션**&#x200B;이 손실되지 않아야 합니다.
 
 ## 알려진 제한 사항
 

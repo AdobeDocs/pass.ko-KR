@@ -4,7 +4,7 @@ description: MVPD 통합 기능
 exl-id: fcd65940-9a86-49b2-9d52-9031fb763338
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '1711'
+source-wordcount: '1733'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ## 개요 {#mvpd-int-features-overview}
 
-Adobe Pass 인증은 TV Everywhere에 대한 새로운 표준을 지원합니다. 은(는) **CableLabs OLCA(온라인 컨텐츠 액세스) 사양**&#x200B;온라인 소스에서 유료 TV 고객에게 비디오를 제공하기 위한 기술 요구 사항 및 아키텍처를 제공합니다. Adobe은 2011년 6월에 공동 CableLabs 상호 작용 테스트 프로젝트에 참여했으며 서비스 공급자 구현을 위한 테스트 프로세스를 통과했습니다.  Adobe은 또한 의 활성 구성원입니다. **OATC(Open Authentication Technical Consortium)** 그리고 그 기구의 일부로서 몇몇 분과위원회의 명세 입안 프로젝트에 참여한다.
+Adobe Pass 인증은 TV Everywhere에 대한 새로운 표준을 지원합니다. 온라인 소스에서 유료 TV 고객에게 비디오를 제공하기 위한 기술 요구 사항 및 아키텍처를 제공하는 **CableLabs OLCA(온라인 콘텐츠 액세스) 사양**&#x200B;을 준수합니다. Adobe은 2011년 6월에 공동 CableLabs 상호 작용 테스트 프로젝트에 참여했으며 서비스 공급자 구현을 위한 테스트 프로세스를 통과했습니다.  Adobe은 **OATC(Open Authentication Technical Consortium)**&#x200B;의 활성 멤버이며 해당 본문의 일부로 여러 분과위원회의 사양 작성 프로젝트에 참여합니다.
 
 Adobe Pass 인증 OLCA 준수 및 Adobe의 OATC 참여에 대해 설명했으므로, Adobe Pass 인증이 실제로 &quot;프로토콜 불가지론자&quot;라는 점에 유의하는 것이 중요합니다.  그러나 TVE 시대의 현 단계에서 Adobe Pass 인증은 OLCA 표준을 지향합니다.  이 표준은 서로 다른 TVE 플레이어(프로그래머, MVPD 및 서비스 공급자)가 TVE 기능을 구현할 수 있도록 현재 합의된 방법을 설명합니다. 이러한 기능 중 대부분은 기능 구현 방법에 대한 자세한 내용과 예를 제공하는 관련 페이지에 대한 링크와 함께 아래 표에 나열되어 있습니다.
 
@@ -36,7 +36,7 @@ Adobe Pass 인증 OLCA 준수 및 Adobe의 OATC 참여에 대해 설명했으므
 | 1.1 | [프로그래머가 시작한 로그인](/help/authentication/authn-oauth2-protocol.md) | 뷰어는 MVPD를 선택하고 프로그래머 브랜드의 웹 사이트 또는 애플리케이션에서 인증(AuthN) 흐름을 시작합니다. | A+ |                                                                                                                                                         |
 | 1.2 | [채널 기반 인증](/help/authentication/authz-usecase.md) | 인증되면, 네트워크 채널 식별자 및 사용자 식별자만 MVPD로 전달하여 백그라운드에서 인증(AuthZ)이 발생할 수 있습니다. | A+ |                                                                                                                                                         |
 | 1.3 | 사용자 ID 지속성 | MVPD는 난독화되고 영구적인 UserID를 제공합니다. | A |                                                                                                                                                         |
-| 1.4 | [단일 사인온 지원](/help/authentication/sso-support.md) | 뷰어는 한 브랜드의 사이트에서 MVPD로 로그인한 다음 다른 브랜드로 이동하여 다시 로그인하라는 메시지를 표시하지 않을 수 있습니다. AuthN 세션은 브랜드 간에 공유됩니다. SSO 지원은 웹 사이트와 모바일/디바이스 애플리케이션 모두에 해당됩니다.  MVPD의 경우, 사용자 ID나 브랜드 간 AuthZ에 사용할 수 있는 다른 사용자 토큰을 반환해야 합니다. | A |                                                                                                                                                         |
+| 1.4 | [Single Sign-On 지원](/help/authentication/sso-support.md) | 뷰어는 한 브랜드의 사이트에서 MVPD로 로그인한 다음 다른 브랜드로 이동하여 다시 로그인하라는 메시지를 표시하지 않을 수 있습니다. AuthN 세션은 브랜드 간에 공유됩니다. SSO 지원은 웹 사이트와 모바일/디바이스 애플리케이션 모두에 해당됩니다.  MVPD의 경우, 사용자 ID나 브랜드 간 AuthZ에 사용할 수 있는 다른 사용자 토큰을 반환해야 합니다. | A |                                                                                                                                                         |
 | 1.5 | 장치에 최적화된 UX(로그인 사용자 경험) | MVPD는 보기가 사용 중인 디바이스의 크기에 맞게 로그인 화면 크기를 조정할 수 있도록 지원합니다. | A |                                                                                                                                                         |
 | 1.6 | 기본 MVPD 선택기 로고 | MVPD는 적절한 크기(112x33 픽셀)의 기본 로고에 URL을 제공합니다. | A | 로고는 MVPD에 의해 호스팅되어야 하며 CDN에 의해 캐시되어야 합니다. |
 | 1.7 | [서비스 공급자 범위 지정](/help/authentication/serv-provider-scoping.md) | MVPD는 AuthN 요청에서 브랜드 식별자(요청자 값) 전달을 지원합니다. | A- | 이렇게 하면 서비스 공급자별 로그인 경험이 활성화됩니다. |

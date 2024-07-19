@@ -22,7 +22,7 @@ ht-degree: 0%
 
 ## 솔루션 {#solution-prevent-mvpd-sel-dialog}
 
-해결 방법은 다음과 같은 경우 블록 목록을 수행하는 것입니다. `displayProviderDialog()` 이(가) 호출되었습니다.
+해결 방법은 `displayProviderDialog()`이(가) 호출될 때 차단 목록을 작성하는 것입니다.
 
 예를 들어 CableCompany_1 및 CableCompany_2가 MVPD 선택기 내부에 표시되지 않도록 하려면 다음 예제와 같은 작업을 수행합니다.
 

@@ -4,7 +4,7 @@ description: Dynamic Client Registration API
 exl-id: 06a76c71-bb19-4115-84bc-3d86ebcb60f3
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: '904'
 ht-degree: 0%
 
 ---
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 현재 Adobe Pass 인증에서 애플리케이션을 식별하고 등록하는 두 가지 방법이 있습니다.
 
-* 브라우저 기반 클라이언트는 허용을 통해 등록됩니다. [도메인 목록](/help/authentication/programmer-overview.md)
+* 브라우저 기반 클라이언트는 허용된 [도메인 목록](/help/authentication/programmer-overview.md)을 통해 등록됩니다.
 * iOS 및 Android 애플리케이션과 같은 기본 애플리케이션 클라이언트는 서명된 요청자 메커니즘을 통해 등록됩니다.
 
 Adobe Pass 인증은 응용 프로그램을 등록하기 위한 새로운 메커니즘을 제안합니다. 이 메커니즘은 다음 단락에 설명되어 있습니다.
@@ -28,11 +28,13 @@ Adobe Pass 인증은 응용 프로그램을 등록하기 위한 새로운 메커
 
 ### 기술적인 이유 {#reasons}
 
-Adobe Pass 인증의 인증 메커니즘이 세션 쿠키에 의존하고 있었지만, [Android Chrome 사용자 지정 탭](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} and [Apple Safari View Controller](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank}, 이 목표는 더 이상 달성할 수 없습니다.
+Adobe Pass 인증의 인증 메커니즘이 세션 쿠키를 사용하고 있지만 [Android Chrome 사용자 지정 탭](https://developer.chrome.com/multidevice/android/customtabs){target=_blank} 및 [Apple Safari 보기 컨트롤러](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller){target=_blank} 때문에 이 목표를 더 이상 달성할 수 없습니다.
 
-이러한 제한 사항이 적용되면 Adobe은 모든 클라이언트에 대해 새로운 등록 메커니즘을 도입합니다. OAuth 2.0 RFC를 기반으로 하며 다음 단계로 구성됩니다.
+이러한 제한 사항이 적용되면 Adobe은 모든 클라이언트에 대해 새로운 등록 메커니즘을 도입합니다. OAuth 2.0 RFC를 기반으로 하며 다음과 같이 구성됩니다
+다음 단계 중 하나를 수행합니다.
 
-1. TVE Dashboard에서 소프트웨어 구문 검색
+1. TVE에서 소프트웨어 구문 검색
+대시보드
 1. 클라이언트 자격 증명 가져오기
 1. 액세스 토큰 가져오기
 
@@ -44,7 +46,7 @@ Adobe Pass 인증의 인증 메커니즘이 세션 쿠키에 의존하고 있었
 >
 >소프트웨어 문을 사용할 때 서명된 요청자 ID 메커니즘이 더 이상 필요하지 않습니다.
 
-소프트웨어 명령문을 만드는 방법에 대한 자세한 내용은 다음을 참조하십시오. [TVE 대시보드의 클라이언트 등록](/help/authentication/dynamic-client-registration.md).
+소프트웨어 문을 만드는 방법에 대한 자세한 내용은 [TVE 대시보드의 클라이언트 등록](/help/authentication/dynamic-client-registration.md)을 참조하십시오.
 
 ### 클라이언트 자격 증명 가져오기 {#clientCredentials}
 
@@ -167,7 +169,7 @@ Pragma: no-cache
 
 | **요청 매개 변수** | |
 | --- | --- |
-| `grant_type` | 클라이언트 등록 프로세스에서 수신됨.<br/> **수락된 값**<br/>`client_credentials`: Android SDK와 같은 비보안 클라이언트에 사용됩니다. |
+| `grant_type` | 클라이언트 등록 프로세스에서 수신되었습니다.<br/> **허용되는 값**<br/>`client_credentials`: Android SDK와 같은 비보안 클라이언트에 사용됩니다. |
 | `client_id` | 클라이언트 등록 프로세스에서 가져온 클라이언트 식별자입니다. |
 | `client_secret` | 클라이언트 등록 프로세스에서 가져온 클라이언트 식별자입니다. |
 
@@ -232,9 +234,9 @@ Pragma: no-cache
 
 ## 인증 요청 수행 {#autheticationRequests}
 
-액세스 토큰을 사용하여 Adobe Pass 수행 [인증 API 호출](/help/authentication/initiate-authentication.md). 이렇게 하려면 다음 방법 중 하나로 액세스 토큰을 API 요청에 추가해야 합니다.
+액세스 토큰을 사용하여 Adobe Pass [인증 API 호출](/help/authentication/initiate-authentication.md)을 수행하십시오. 이렇게 하려면 다음 방법 중 하나로 액세스 토큰을 API 요청에 추가해야 합니다.
 
-* 요청에 새 쿼리 매개 변수를 추가합니다. 해당 새 매개 변수는 이라고 합니다. **access_token**.
+* 요청에 새 쿼리 매개 변수를 추가합니다. 이 새 매개 변수를 **access_token**&#x200B;이라고 합니다.
 
 * 요청에 새 HTTP 헤더를 추가하여: Authorization: Bearer. 쿼리 문자열이 서버 로그에 표시되는 경향이 있으므로 HTTP 헤더를 사용하는 것이 좋습니다.
 

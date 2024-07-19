@@ -4,7 +4,7 @@ description: Preflight 기능, 문제를 활성화, 문제 해결 또는 확인�
 exl-id: 9e4ec343-371f-4116-915f-191e5f42cb47
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '498'
 ht-degree: 0%
 
 ---
@@ -20,8 +20,8 @@ PreAuthorization API에 대한 외부 인터페이스는 변경되지 않으므�
 
 Preflight 리소스를 계산하는 방법에는 세 가지가 있습니다.
 
-* **MVPD에 대한 포크 및 조인 방법**: 이는 Adobe이 MVPD에 대해 여러 번의 인증 호출을 하는 것과 관련되어 있습니다(단, 클라이언트는 여전히 한 번의 프리플라이트 호출을 수행해야 함).
-* **채널 라인업**: MVPD가 SAML 인증 응답에서 로그인한 사용자에 대한 채널 라인을 노출하고 Adobe이 이에 따라 승인된 리소스를 반환합니다. SAML 추적기의 SAML authN 응답이 해당 목록을 표시해야 합니다.
+* **MVPD에 대한 메서드 포크 및 조인**: 이 작업에는 Adobe이 MVPD에 대해 여러 권한 부여 호출을 수행하는 작업이 포함됩니다(단, 클라이언트는 여전히 한 번의 프리플라이트 호출을 수행해야 함).
+* **채널 라인업**: MVPD는 SAML 인증 응답에서 로그인한 사용자에 대한 채널 라인업을 노출하고 Adobe은 이에 따라 승인된 리소스를 반환합니다. SAML 추적기의 SAML authN 응답이 해당 목록을 표시해야 합니다.
 * **다중 채널 인증**: 클라이언트 및 Adobe 인증은 모두 리소스 집합에 대해 MVPD를 한 번 호출합니다.
 
 MVPD에 관계없이 클라이언트 애플리케이션은 Preflight 엔드포인트(checkPreauthorizedResources API)에 대한 단일 호출을 수행하여 리소스 ID 세트를 전달합니다. MVPD에서 지원하는 위의 방법 중 하나에 따라 Adobe은 사전 승인된 resourceID를 반환합니다.
@@ -36,6 +36,6 @@ Preflight가 포크 및 조인 방법을 기반으로 하는 경우 Adobe Pass �
 * fork &amp; join만 지원되는 경우 프로그래머는 Preflight 호출에서 전송할 리소스 ID의 수를 요청해야 합니다.
 * MVPD는 상담을 받아야 하며, 포크 및 가입 승인 호출의 &#39;n&#39; 수를 만드는 영향을 알고 있어야 합니다. 그런 다음 값이 5보다 큰 경우 config에 값을 구성해야 합니다.
 
-**제한 사항**
+**제한**
 
 AT&amp;T 및 TWC와 같은 일부 MVPD에 대한 Preflight 호출에서 resourceID를 다시 가져오지 않습니다. 단, Preflight 호출에서 보낸 resourceID 목록에 잘못된 ID 또는 인식할 수 없는 ID가 있는 resourceID가 있는 경우에는 해당 목록에 유효하고 승인된 리소스가 있습니다.

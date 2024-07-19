@@ -4,7 +4,7 @@ description: MVPD 인증
 exl-id: 215780e4-12b6-4ba6-8377-4d21b63b6975
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '579'
+source-wordcount: '584'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ AuthZ 요청의 경우 권한 부여 끝점이 최소한 다음 매개 변수를
 
 * **리소스 ID**. 주어진 콘텐츠 리소스를 식별하는 문자열입니다. 이 리소스 ID는 프로그래머가 지정하며 MVPD는 이러한 리소스에 대한 비즈니스 규칙을 보강해야 합니다(예: 사용자가 특정 채널을 구독하고 있는지 확인).
 
-사용자에게 권한이 부여되었는지 여부를 확인하는 것 외에도 응답에는 이 권한의 TTL(Time-to-Live), 즉 권한이 만료되는 시점이 포함되어야 합니다. TTL이 설정되지 않으면 AuthZ 요청이 실패합니다.  이러한 이유로, **ttl은 Adobe Pass 인증 측의 필수 구성 설정입니다**&#x200B;를 사용하면 MVPD가 요청에 TTL을 포함하지 않을 때 사례를 다룰 수 있습니다.
+사용자에게 권한이 부여되었는지 여부를 확인하는 것 외에도 응답에는 이 권한의 TTL(Time-to-Live), 즉 권한이 만료되는 시점이 포함되어야 합니다. TTL이 설정되지 않으면 AuthZ 요청이 실패합니다.  이러한 이유로 **TTL은 MVPD가 요청에 TTL을 포함하지 않는 경우를 처리하기 위해 Adobe Pass 인증 쪽의 필수 구성 설정입니다**.
 
 ## 인증 요청 {#authz-req}
 
@@ -106,15 +106,15 @@ AuthZ 요청에 대한 응답은 MVPD가 요청을 평가하고 요청된 비즈
 
 다음은 Adobe Pass 인증이 지원하고 프로그래머가 이행할 수 있도록 하는 DENY 의무 목록입니다.
 
-* **항아리:tve:xacml:2.0:obligations:restrict-pc** - 구독자가 자녀 보호 확인에 실패했으며 SP가 이 콘텐츠에 대한 액세스를 제한하기 위해 적절한 조치를 취해야 합니다.
+* **urn:tve:xacml:2.0:obligations:restrict-pc** - 구독자가 자녀 보호 검사에 실패했으며 SP에서 이 콘텐츠에 대한 액세스를 제한하기 위해 적절한 조치를 취해야 합니다.
 
-* **항아리:tve:xacml:2.0:obligations:업그레이드** - 구독자에게 적절한 구독 수준이 없습니다.  콘텐츠에 액세스하려면 구독을 업그레이드해야 합니다.
+* **urn:tve:xacml:2.0:obligations:업그레이드** - 구독자에 적절한 구독 수준이 없습니다.  콘텐츠에 액세스하려면 구독을 업그레이드해야 합니다.
 
-Adobe Pass 인증은 다음을 지원합니다 **허용** 의무를 준수하고 프로그래머가 이를 이행할 수 있도록 합니다.
+Adobe Pass 인증은 다음 **PERMIT** 의무를 지원하며 프로그래머가 이를 이행할 수 있도록 합니다.
 
-* **항아리:cablelabs:olca:1.0:obligations:log** - Adobe Pass은 트랜잭션을 기록하며, 합의된 보고 메커니즘을 통해 사용할 수 있습니다.
+* **urn:cablelabs:olca:1.0:obligations:log** - Adobe Pass은 트랜잭션을 기록하며 합의 보고 메커니즘을 통해 사용할 수 있습니다.
 
-* **항아리:cablelabs:olca:1.0:obligations:재작성** - Adobe Pass 인증은 인증을 n초 만에 다시 새로 고칩니다(XACML AttributeAssignment를 통해 Duty에 대한 인수로 지정됨 - XACML 코어 사양 , 섹션 5.46 참조).
+* **urn:cablelabs:olca:1.0:obligations:다시 인증** - Adobe Pass 인증은 n초 후에 다시 인증을 새로 고칩니다(XACML AttributeAssignment를 통해 Duty에 대한 인수로 지정됨 - XACML 코어 사양 , 섹션 5.46 참조).
 
 <!--
 >![RelatedInformation]

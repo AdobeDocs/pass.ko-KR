@@ -4,7 +4,7 @@ description: 수동 인증을 통한 SSO
 exl-id: ce45899f-6e94-4bb0-a2c1-51f03bd66d8d
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '776'
+source-wordcount: '778'
 ht-degree: 0%
 
 ---
@@ -76,7 +76,8 @@ UX 관점에서는 이 흐름과 일반 MVPD로 실행되는 흐름 간에 차�
 
 
 
-SAML 요청 샘플 다음은 수동 authN 흐름에 대한 SAML 요청 샘플입니다.
+SAML 요청 샘플
+다음은 수동 authN 흐름에 대한 SAML 요청 샘플입니다.
 
 
 ```xml

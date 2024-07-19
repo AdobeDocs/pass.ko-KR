@@ -10,11 +10,11 @@ ht-degree: 28%
 
 ---
 
-# 계정 IQ 도움말 {#aiq-help}
+# Account IQ 도움말 {#aiq-help}
 
-+ [계정 IQ 개요](/help/accountiq/home.md)
-+ [계정 IQ 버전](/help/accountiq/versions-aiq.md)
-+ [계정 IQ 시작](/help/accountiq/get-started.md)
++ [Account IQ 개요](/help/accountiq/home.md)
++ [Account IQ 버전](/help/accountiq/versions-aiq.md)
++ [Account IQ 시작](/help/accountiq/get-started.md)
 + [세그먼트 작업](/help/accountiq/work-with-segments.md)
 + 대시보드 {#dashboard}
    + [대시보드 소개](/help/accountiq/introduction-dashboard.md)

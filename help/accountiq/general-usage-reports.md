@@ -9,13 +9,13 @@ ht-degree: 0%
 
 ---
 
-# [!UICONTROL General usage] 보고서 {#general-usage-reports}
+# [!UICONTROL General usage]개 보고서 {#general-usage-reports}
 
-[!UICONTROL Account IQ] 보고서는 데이터를 드릴다운하여 분리할 수 있는 기본 분석 도구입니다 [집단](/help/accountiq/product-concepts.md#segmet-def), 예외 항목을 식별하고 계정 특성에 대한 이해를 구축합니다.
+[!UICONTROL Account IQ] 보고서는 데이터를 자세히 분석하여 [집단](/help/accountiq/product-concepts.md#segmet-def)을 격리하고, 예외 항목을 식별하며, 계정 특성에 대한 이해를 도울 수 있는 기본 분석 도구입니다.
 
-[!UICONTROL General usage] 보고서 페이지는 사용 중인 계정 장치 수, 감지된 IP 및 해당 우편 번호를 기반으로 하위 그룹 지표를 제거하는 도구를 제공합니다.
+[!UICONTROL General usage] 보고서 페이지에서는 사용 중인 계정 장치 수, 감지된 IP 및 각각의 우편 번호를 기반으로 하위 그룹 지표를 만드는 도구를 제공합니다.
 
-보고서는 모두 다음 항목에서 선택한 현재 세그먼트를 기반으로 합니다. [세그먼트 및 시간 간격](/help/accountiq/segments-timeinterval.md) 패널. 에서 (장치 수, IP 수 및 zip 코드 수) 임계값을 지정하여 선택 항목을 미세 조정하고 범위를 좁힐 수 있습니다. [스냅샷 개요 - 임계값 초과 계정](#snapshot-overview) 패널.
+보고서는 모두 [세그먼트 및 시간 간격](/help/accountiq/segments-timeinterval.md) 패널에서 선택한 현재 세그먼트를 기반으로 합니다. [스냅숏 개요-계정 임계값 초과](#snapshot-overview) 패널에서 임계값을 지정하여(장치 수, IP 수 및 우편 번호 수) 선택 항목을 미세 조정하고 범위를 좁힐 수 있습니다.
 
 ## 요청 및 고유 구독자 재생 {#playreq-uniquesubs}
 
@@ -49,19 +49,19 @@ ht-degree: 0%
 
 <br/>
 
-x축은 현재 간격을 기준으로 한 시간을 나타내고 y축은 해당 기간 동안의 기본 가입자 활동 지표를 나타낸다. 선 그래프는 현재 세그먼트에 있는 구독자의 활동을 시각화하고 비교하는 데 도움이 됩니다. 계정 IQ 버전에 따라 지표는 다음과 같습니다.
+x축은 현재 간격을 기준으로 한 시간을 나타내고 y축은 해당 기간 동안의 기본 가입자 활동 지표를 나타낸다. 선 그래프는 현재 세그먼트에 있는 구독자의 활동을 시각화하고 비교하는 데 도움이 됩니다. Account IQ 버전에 따라 지표는 다음과 같습니다.
 
-* **AuthN 확인**: 성공한 인증 수입니다. 자세한 내용 [AuthN 확인](/help/accountiq/product-concepts.md#authn-ok-def).
+* **AuthN OK**: 성공한 인증 수입니다. [AuthN OK](/help/accountiq/product-concepts.md#authn-ok-def)에 대해 자세히 알아보십시오.
 
-* **AuthZ 확인**: 성공한 승인 수입니다. 자세한 내용 [AuthZ 확인](/help/accountiq/product-concepts.md#authz-ok-def).
+* **AuthZ OK**: 성공한 승인 수입니다. [AuthZ OK](/help/accountiq/product-concepts.md#authz-ok-def)에 대해 자세히 알아보십시오.
 
-* **요청 재생**: 재생 요청 수 자세한 내용 [요청 재생](/help/accountiq/product-concepts.md#play-requests-def).
+* **재생 요청**: 재생 요청 수입니다. [재생 요청](/help/accountiq/product-concepts.md#play-requests-def)에 대해 자세히 알아보세요.
 
-* **고유 구독자**: 성공한 고유 구독자 수. 자세한 내용 [고유 구독자](/help/accountiq/product-concepts.md#unique-subscriber-def).
+* **고유 구독자**: 성공한 고유 구독자 수입니다. [고유 구독자](/help/accountiq/product-concepts.md#unique-subscriber-def)에 대해 자세히 알아보세요.
 
 >[!NOTE]
 >
->지표의 사용 가능 여부는 계정 IQ의 버전에 따라 다릅니다.
+>지표의 사용 가능 여부는 Account IQ 버전에 따라 다릅니다.
 
 ## 스냅샷 개요 - 임계값 초과 계정 {#snapshot-overview}
 
@@ -73,7 +73,7 @@ x축은 현재 간격을 기준으로 한 시간을 나타내고 y축은 해당 
 
 * 우편 번호 임계값 수
 
-에서 임계값을 업데이트하는 경우 [계정 선택된 임계값 기반 세그먼트](#account-segments-basedon-segments) 패널, 효과 보기 위치:
+[선택한 임계값을 기반으로 하는 계정 세그먼트](#account-segments-basedon-segments) 패널에서 임계값을 업데이트하면 다음에서 효과를 볼 수 있습니다.
 
 * [계정당 주당(또는 월별) 장치](#devices-week-account)
 
@@ -85,11 +85,11 @@ x축은 현재 간격을 기준으로 한 시간을 나타내고 y축은 해당 
 
 >[!NOTE]
 >
->각 임계값은 기본값 4로 설정됩니다. 즉, [일반 사용] 페이지에는 4개 이상의 디바이스를 사용하고 4개 이상의 다른 IP 주소에서 콘텐츠를 사용하는 구독자에 대한 분석이 표시됩니다. *및* 4개 이상의 다른 우편 번호.
+>각 임계값은 기본값 4로 설정됩니다. 즉, [일반 사용] 페이지에는 4개 이상의 장치를 사용하고 4개 이상의 서로 다른 IP 주소 *및*&#x200B;의 서로 다른 우편번호를 사용하는 구독자에 대한 분석이 표시됩니다.
 
 ### 선택한 임계값을 기반으로 세그먼트 기반 계정 {#account-segments-basedon-segments}
 
-다음 **계정 선택된 임계값 기반 세그먼트** 패널은 장치 수, IP 수 및 우편번호 수에 대한 임계값(1~10 사이)을 설정하는 옵션을 제공합니다.
+**선택한 임계값에 기반한 계정 세그먼트** 패널을 통해 장치 수, IP 수 및 우편번호 수에 대한 임계값(1에서 10 사이)을 설정할 수 있는 옵션을 제공합니다.
 
 그래프는 다음을 보여 줍니다.
 
@@ -121,7 +121,7 @@ x축은 계정 수, y축은 장치 수를 나타냅니다. 계정당 장치 수�
 
 ## 계정당 주당(또는 월별) 위치 {#locations-week-account}
 
-의 지표와 유사 [계정당 주당(또는 월별) 장치](#devices-week-account), 계정당 주당(또는 월별) 위치 지표를 사용하면 다른 위치의 구독자 계정 사용을 분석할 수 있습니다. X축은 계정 수, Y축은 위치 수를 나타냅니다.
+계정당 매주 [장치(또는 매월)](#devices-week-account)에 대한 지표와 마찬가지로, 계정당 매주(또는 매월) 위치 지표를 사용하면 다른 위치에서 구독자 계정 사용을 분석할 수 있습니다. X축은 계정 수, Y축은 위치 수를 나타냅니다.
 
 ![](assets/graph-loc-week-acc.png)
 
@@ -135,7 +135,7 @@ x축은 계정 수, y축은 장치 수를 나타냅니다. 계정당 장치 수�
 
 ## 계정당 주당(또는 월별) IP {#ip-week-account}
 
-의 지표와 유사 **계정당 주당 위치 수**, **계정당 주당 IP 수** 지표를 사용하면 현재 세그먼트에 대한 스트리밍 소스에서 변경 양을 평가할 수 있습니다.
+**계정당 주당 위치 수**&#x200B;에 대한 지표와 마찬가지로 **계정당 주당 IP 수** 지표를 사용하면 현재 세그먼트에 대한 스트리밍 원본의 변경 양을 평가할 수 있습니다.
 
 x축은 계정 수를, y축은 IP 수를 나타냅니다.
 
@@ -151,13 +151,13 @@ x축은 계정 수를, y축은 IP 수를 나타냅니다.
 
 ## 계정 세그먼트-내역 보기 {#account-segment-historical-view}
 
-내역 보기 막대 그래프는 다양한 시간 간격의 사용 지표를 비교하는 데 도움이 됩니다. 또한 다음과 같은 다양한 사용 지표를 전체적으로 표시합니다. [계정당 주당(또는 월별) 장치](#devices-week-account), [계정당 주당(또는 월별) 위치](#locations-week-account), 및 [계정당 주당(또는 월별) IP](#ip-week-account).
+내역 보기 막대 그래프는 다양한 시간 간격의 사용 지표를 비교하는 데 도움이 됩니다. 또한, 계정당 [주(또는 월) 장치](#devices-week-account), 계정당 [주(또는 월) 위치](#locations-week-account), 계정당 [주(또는 월) IP](#ip-week-account) 등 다양한 사용 지표를 집합적으로 표시합니다.
 
 * x축은 시간 간격을 나타내고 y축은 가입자 계정, 장치, 위치 및 IP 수를 나타냅니다.
 
 * 주황색 막대는 다양한 시간 간격으로 세그먼트를 나타냅니다.
 
-* 선 그래프는에서 변경 사항을 표시합니다. [계정당 주당(또는 월별) 장치](#devices-week-account), [계정당 주당(또는 월별) 위치](#locations-week-account), 및 [계정당 주당(또는 월별) IP](#ip-week-account) 임계값에 기반한 시간 간격 값.
+* 선 그래프는 임계값에 따라 시간 간격 동안 [계정당 주(또는 월)당 장치](#devices-week-account), 계정당 주(또는 월)당 위치 [개](#locations-week-account), 계정당 주(또는 월)당 IP [개](#ip-week-account) 값의 변경 내용을 표시합니다.
 
 ![](assets/historical-view.png)
 

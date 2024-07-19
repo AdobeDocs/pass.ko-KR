@@ -4,7 +4,7 @@ description: Adobe Pass 인증에서 Experience Cloud ID 사용
 exl-id: 03354c01-5aad-4d81-beee-1c3834599134
 source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
 workflow-type: tm+mt
-source-wordcount: '397'
+source-wordcount: '396'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ Experience Cloud ID(줄여서 ECID)는 애플리케이션/웹 사이트의 각 �
 
 방문자 ID를 제공하는 시스템이 이미 있는 경우 이 문서의 범위에 동일한 ID를 사용해야 합니다.
 
-ECID를 얻는 한 가지 방법은 Experience Cloud ID 서비스를 사용하는 것입니다. TDM, JS 라이브러리, 서버측, 직접 통합 또는 모바일 플랫폼용 기본 라이브러리를 기반으로 원하는 구현 유형을 사용할 수 있습니다. 사용 가능한 서비스, 라이브러리, SDK 및 구현 안내서에 대한 포괄적인 보기에 대해서는 다음을 참조하십시오. <https://experienceleague.adobe.com/docs/id-service/using/implementation/implementation-guides.html>
+ECID를 얻는 한 가지 방법은 Experience Cloud ID 서비스를 사용하는 것입니다. TDM, JS 라이브러리, 서버측, 직접 통합 또는 모바일 플랫폼용 기본 라이브러리를 기반으로 원하는 구현 유형을 사용할 수 있습니다. 사용 가능한 서비스, 라이브러리, SDK 및 구현 안내서를 종합적으로 보려면 <https://experienceleague.adobe.com/docs/id-service/using/implementation/implementation-guides.html>을(를) 참조하십시오.
 
 ## Adobe Pass 인증에서 Experience Cloud ID를 사용하면 어떤 이점이 있습니까? {#benefit-ex-cloud-id}
 
@@ -33,7 +33,7 @@ ECID(위에 설명)를 가져온 후에는 이 정보를 SDK 및 Clientless REST
 
 ### JS SDK {#js-sdk}
 
-JavaScript의 경우 맵에서 ECID를 setRequestor 호출에 세 번째 매개 변수로 전달해야 합니다.
+JavaScript의 경우 맵의 ECID를 setRequestor 호출에 세 번째 매개 변수로 전달해야 합니다.
 
 **사용 예:**
 
@@ -76,7 +76,7 @@ accessEnabler.setOptions(options);
 
 ### 클라이언트 없는 API {#clientless-api}
 
-REST API를 통해 Adobe Pass을 사용하는 경우 **ECID** 값을 전송해야 합니다. **모든 API에서** 를 이라는 매개 변수로 **&#39;ap_vi&#39;**.
+REST API를 통해 Adobe Pass을 사용하는 경우 **ECID** 값을 **&#39;ap_vi&#39;**(이)라는 매개 변수로 모든 API에서 **전송**&#x200B;해야 합니다.
 
 **사용 예:**
 

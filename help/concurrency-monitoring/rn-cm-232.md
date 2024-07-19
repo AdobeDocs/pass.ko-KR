@@ -1,13 +1,13 @@
 ---
 title: Adobe Pass Concurrency Monitoring 2.3.2 릴리스 노트
 description: Adobe Pass Concurrency Monitoring 2.3.2 릴리스 노트
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+exl-id: 3996da45-498c-482a-b374-3cda1c5df2f7
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '130'
-ht-degree: 0%
+source-wordcount: '141'
+ht-degree: 1%
 
 ---
-
 
 # Adobe Pass Concurrency Monitoring 2.3.2 릴리스 노트 {#cm-232}
 
@@ -22,7 +22,7 @@ ht-degree: 0%
    * mvpd - 호출 URL에 보고된 MVPD
    * 채널 - 사용자 지정 메타데이터 채널
    * platform - 사용자 지정 메타데이터 applicationPlatform
-* 와 관련된 새 지표 **스트림 기간** 사용량 보고서에서 사용할 수 있습니다. 새 지표를 사용하여 스트림 기간의 히스토그램을 만들 수 있습니다. 현재 다음 간격(분)을 사용할 수 있습니다.
+* 사용 현황 보고서에서 **스트림 기간**&#x200B;과 관련된 새 지표를 사용할 수 있습니다. 새 지표를 사용하여 스트림 기간의 히스토그램을 만들 수 있습니다. 현재 다음 간격(분)을 사용할 수 있습니다.
    * duration_0-15
    * duration_15-30
    * duration_30-60

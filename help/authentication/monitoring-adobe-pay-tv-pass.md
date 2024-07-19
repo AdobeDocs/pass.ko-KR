@@ -17,13 +17,13 @@ ht-degree: 0%
 
 ## 소개 {#intro}
 
-고객은 다음을 사용할 수 있습니다 [나기오스](http://www.nagios.org) 또는 Adobe Pass 인증이 설정되어 있는지 여부를 확인하는 기타 도구입니다.
+고객은 [Nagios](http://www.nagios.org) 또는 다른 도구를 사용하여 Adobe Pass 인증이 작동되고 있는지 여부를 확인할 수 있습니다.
 
 ## 엔드포인트 모니터링 {#monitoring-endpoints}
 
 ### 모니터링할 수 있는 엔드포인트 {#endpoints-to-monitor}
 
-* 모든 플랫폼에 대한 구성 끝점: `https://sp.auth.adobe.com/adobe-services/config/[your-config-ID]`- HTTP 또는 HTTPS를 통해 사용할 수 있습니다(콘텐츠 제공업체의 개발자가 선택한 사항에 따라 다름). 이 끝점이 없으면 모든 플랫폼 및 모든 MVPD에서 콘텐츠를 사용할 수 없게 됩니다. Clientless REST API의 경우 다음 엔드포인트도 있습니다.  `https://api.auth.adobe.com/adobe-services/config your-config-ID]`.
+* 모든 플랫폼에 대한 구성 끝점: `https://sp.auth.adobe.com/adobe-services/config/[your-config-ID]`- 콘텐츠 공급자의 개발자가 선택한 내용에 따라 HTTP 또는 HTTPS를 통해 사용할 수 있습니다. 이 끝점이 없으면 모든 플랫폼 및 모든 MVPD에서 콘텐츠를 사용할 수 없게 됩니다. Clientless REST API의 경우 `https://api.auth.adobe.com/adobe-services/config your-config-ID]` 끝점도 있습니다.
 
 * 다음 종단점은 Adobe Pass 인증 웹 SDK의 일부입니다.  누락된 경우 모든 프로그래머 및 모든 웹 속성에 대해 pay-TVpass가 다운되었음을 의미합니다.
 
@@ -37,6 +37,6 @@ ht-degree: 0%
 
   이 끝점에는 MVPD SAML 응답이 필요하므로 항상 503 오류가 발생합니다.
 
-* 기타 자격 엔드포인트 - `adobe-services/1.0/authenticate/`, `adobe-services/1.0/deviceShortAuthorize`, `adobe-services/1.0/authorize`
+* 기타 권한 부여 끝점 - `adobe-services/1.0/authenticate/`, `adobe-services/1.0/deviceShortAuthorize`, `adobe-services/1.0/authorize`
 
 관련 회신에 대한 페이로드가 필요하므로 이러한 끝점을 모니터링할 수 없습니다.

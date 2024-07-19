@@ -1,13 +1,13 @@
 ---
 title: API 개요
 description: API 개요
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 3fe6f6d8-5b2f-47e5-a8da-06fb18a5d46b
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '2054'
+source-wordcount: '2043'
 ht-degree: 0%
 
 ---
-
 
 # 동시성 모니터링 사용 API {#cmu-api-usage}
 
@@ -17,18 +17,18 @@ ht-degree: 0%
 
 ## API 개요 {#api-overview}
 
-CMU(동시성 모니터링 사용)는 WOLAP(웹 기반)로 구현됨 [온라인 분석 처리](http://en.wikipedia.org/wiki/Online_analytical_processing)) 프로젝트. CMU는 Data Warehouse에서 지원하는 일반적인 비즈니스 보고 웹 API입니다. 일반 OLAP 작업을 RESTfully로 수행할 수 있도록 하는 HTTP 쿼리 언어 역할을 합니다.
+CMU(동시성 모니터링 사용)는 WOLAP(웹 기반 [온라인 분석 처리](http://en.wikipedia.org/wiki/Online_analytical_processing)) 프로젝트로 구현됩니다. CMU는 Data Warehouse에서 지원하는 일반적인 비즈니스 보고 웹 API입니다. 일반 OLAP 작업을 RESTfully로 수행할 수 있도록 하는 HTTP 쿼리 언어 역할을 합니다.
 
 
 >[!NOTE]
 >
 >CMU API는 일반적으로 사용할 수 없습니다. 가용성에 대한 질문이 있는 경우 Adobe 담당자에게 문의하십시오.
 
-CMU API는 기본 OLAP 큐브의 계층 구조 보기를 제공합니다. 각 리소스([차원](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics) 차원 계층에서 URL 경로 세그먼트로 매핑됨)은 (집계됨)을 사용하여 보고서를 생성합니다 [지표](/help/authentication/entitlement-service-monitoring-overview.md#programmers-can-monitor-the-following-metrics) 현재 선택 항목에 사용됩니다. 각 리소스는 상위 리소스(롤업용)와 하위 리소스(드릴다운용)를 가리킵니다. 슬라이싱 및 다이싱은 특정 값 또는 범위에 차원을 고정하는 쿼리 문자열 매개 변수를 통해 수행됩니다.
+CMU API는 기본 OLAP 큐브의 계층 구조 보기를 제공합니다. 각 리소스([차원](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics), URL 경로 세그먼트로 매핑됨)는 현재 선택 항목에 대해 [지표](/help/authentication/entitlement-service-monitoring-overview.md#programmers-can-monitor-the-following-metrics)이(가) 포함된(집계된) 보고서를 생성합니다. 각 리소스는 상위 리소스(롤업용)와 하위 리소스(드릴다운용)를 가리킵니다. 슬라이싱 및 다이싱은 특정 값 또는 범위에 차원을 고정하는 쿼리 문자열 매개 변수를 통해 수행됩니다.
 
 REST API는 차원 경로, 제공된 필터 및 선택한 지표에 따라 요청에 지정된 시간 간격(제공되지 않은 경우 기본값으로 폴백) 내에 사용 가능한 데이터를 제공합니다. 시간 차원 (연도, 월, 일, 시간, 분, 초)이 포함되지 않은 보고서에는 시간 범위가 적용되지 않습니다.
 
-끝점 URL 루트 경로는 사용 가능한 드릴다운 옵션에 대한 링크와 함께 단일 레코드 내에서 전체 집계된 지표를 반환합니다. API 버전은 끝점 URI 경로의 후행 세그먼트로 매핑됩니다. 예: https://mgmt.auth.adobe.com/cmu/*v2* 는 클라이언트가 WOLAP 버전 2에 액세스함을 의미합니다.
+끝점 URL 루트 경로는 사용 가능한 드릴다운 옵션에 대한 링크와 함께 단일 레코드 내에서 전체 집계된 지표를 반환합니다. API 버전은 끝점 URI 경로의 후행 세그먼트로 매핑됩니다. 예를 들어 https://mgmt.auth.adobe.com/cmu/*v2*&#x200B;은(는) 클라이언트가 WOLAP 버전 2에 액세스함을 의미합니다.
 
 사용 가능한 URL 경로는 응답에 포함된 링크를 통해 검색할 수 있습니다. 유효한 URL 경로는 집계된 지표를 보유하는 기본 드릴다운 트리 내의 경로를 매핑하기 위해 유지됩니다. /dimension1/dimension2/dimension3 형식의 경로는 이러한 세 차원의 사전 집계를 반영합니다(SQL 절 GROUP BY dimension1, dimension2, dimension3과 동일). 이러한 사전 집계가 존재하지 않고 시스템이 즉시 계산할 수 없는 경우, API는 404 Not Found 응답을 반환합니다.
 
@@ -36,11 +36,11 @@ REST API는 차원 경로, 제공된 필터 및 선택한 지표에 따라 요�
 
 다음 드릴다운 트리는 CMU 2.0에서 사용할 수 있는 차원(리소스)을 보여 줍니다.
 
-**CM 테넌트가 사용할 수 있는 Dimension**
+CM 테넌트가 사용할 수 있는 Dimension **개**
 
 ![](assets/new_breakdown.png)
 
-A `GET` (으)로 `https://mgmt.auth.adobe.com/cmu/v2` API 끝점은 다음을 포함하는 표현을 반환합니다.
+`https://mgmt.auth.adobe.com/cmu/v2` API 끝점에 대한 `GET`이(가) 다음을 포함하는 표현을 반환합니다.
 
 * 사용 가능한 루트 드릴다운 경로 링크:
 
@@ -62,10 +62,10 @@ A `GET` (으)로 `https://mgmt.auth.adobe.com/cmu/v2` API 끝점은 다음을 �
 
 다음 필터링 옵션을 사용할 수 있습니다.
 
-* **다음과 같음** 필터는 차원 이름을 쿼리 문자열의 특정 값으로 설정하여 제공합니다.
-* **위치** 필터는 차원=값1&amp;차원=값2 와 같이 다른 값으로 동일한 차원-이름 매개 변수를 여러 번 추가하여 지정할 수 있습니다.
+* 쿼리 문자열에서 차원 이름을 특정 값으로 설정하여 **같음** 필터를 제공합니다.
+* **IN** 필터는 다른 값으로 동일한 차원 이름 매개 변수를 여러 번 추가하여 지정할 수 있습니다. dimension=value1&amp;dimension=value2
 * **같지 않음** 필터는 &#39;!&#39;를 사용해야 합니다. 치수 이름 뒤에 기호가 있으면 &#39;!=&#39; &quot;operator&quot;: 차원!=value
-* **다음에 없음** 필터에는 &#39;!=&#39; 연산자를 집합에 있는 각 값에 대해 한 번씩 여러 번 사용합니다. 차원!=value1&amp;dimension!=value2&amp;...
+* **NOT IN** 필터에는 &#39;!=&#39; 연산자를 집합에 있는 각 값에 대해 한 번씩 여러 번 사용합니다. 차원!=value1&amp;dimension!=value2&amp;...
 
 
 쿼리 문자열의 차원 이름에 대한 특별한 용도가 있습니다. 차원 이름이 값 없이 쿼리 문자열 매개 변수로 사용되는 경우 API에 보고서에 해당 차원을 포함하는 프로젝션을 반환하도록 지시합니다.
@@ -78,7 +78,7 @@ CMU 쿼리 예:
 | /dimension1/dimension2/dimension3?dimension1=value1&amp;dimension1=value2 | (&#39;value1&#39;, &#39;value2&#39;)에서 GROUP BY dimension1, dimension2, dimension3의 투영에서 *를 선택합니다. |
 | /dimension1/dimension2/dimension3?dimension1!=value1 | DIMENSION1 &lt;> &#39;value1&#39; GROUP BY DIMENSION1, dimension2, dimension3에서 * 선택 |
 | /dimension1/dimension2/dimension3?dimension1!=value1&amp;dimension2!=value2 | DIMENSION1이 (&#39;value1&#39;, &#39;value2&#39;)에 없는 투영에서 * GROUP BY dimension1, dimension2, dimension3을 선택합니다. |
-| 직접 경로인 /dimension1/dimension3이 없지만 /dimension1/dimension2/dimension3이 있다고 가정합니다.  </br></br> /dimension1?dimension3 | 치수 1,dimension3에 의한 투영 그룹에서 * 선택 |
+| 직접 경로인 /dimension1/dimension3이 없지만 경로가 있다고 가정합니다. /dimension1/dimension2/dimension3 </br></br> /dimension1?dimension3 | 치수 1,dimension3에 의한 투영 그룹에서 * 선택 |
 
 >[!NOTE]
 >
@@ -96,7 +96,7 @@ CMU API 예약 쿼리 문자열 매개 변수:
 | 형식 | 예 | 콘텐츠 협상에 사용됩니다(효과는 동일하지만 경로 &quot;확장&quot;보다 우선하지 않음 - 아래 참조). | 없음: 콘텐츠 협상에서는 다른 전략을 시도합니다. | format=json |
 | 제한 | 예 | 반환할 최대 행 수 | 요청에 제한이 지정되지 않은 경우 서버가 자체 링크에서 보고한 기본값 | limit=1500 |
 | 지표 | 예 | 반환할 지표 이름을 쉼표로 구분한 목록. 페이로드 크기를 줄이기 위해 사용 가능한 지표의 하위 집합을 필터링하고 기본 최적 투영이 아닌 요청된 지표를 포함하는 투영을 반환하도록 API를 적용하는 데 모두 사용해야 합니다. | 이 매개변수가 제공되지 않을 경우 현재 투영에 사용할 수 있는 모든 지표가 반환됩니다. | metrics=m1,m2 |
-| 시작 | 예 | ISO8601로 보고서의 시작 시간. 접두사만 제공되는 경우 서버는 나머지 부분을 채웁니다. 예를 들어 start=2012이면 start=2012-01-01이 됩니다.:00:00시 | 서버가 자체 링크에서 보고함. 서버는 선택한 시간 세부기간을 기반으로 적절한 기본값을 제공하려고 합니다. | start=2012-07-15 |
+| 시작 | 예 | ISO8601로 보고서의 시작 시간. 접두사만 제공되는 경우 서버는 나머지 부분을 채웁니다. 예를 들어 start=2012로 시작하면 start=2012-01-01:00:00:00이 됩니다. | 서버가 자체 링크에서 보고함. 서버는 선택한 시간 세부기간을 기반으로 적절한 기본값을 제공하려고 합니다. | start=2012-07-15 |
 
 
 현재 사용 가능한 HTTP 메서드는 GET 뿐입니다. OPTIONS/HEAD 방법에 대한 지원은 이후 버전에서 제공될 수 있습니다.
@@ -129,9 +129,9 @@ CMU API 예약 쿼리 문자열 매개 변수:
 
 클라이언트가 사용할 수 있는 콘텐츠 협상 전략은 다음과 같습니다(우선 순위는 목록의 위치에 의해 지정됩니다.).
 
-1. URL 경로의 마지막 세그먼트에 추가된 &quot;파일 확장명&quot;(예: /cmu/v2/tenant/year/month/day.xml). URL에 쿼리 문자열이 포함된 경우 확장은 물음표 앞에 와야 합니다. `/cmu/v2/tenant/year/month/day.csv?mvpd=SomeMVPD`
-1. 형식 쿼리 문자열 매개 변수: 예: `/cmu/report?format=json`
-1. 표준 HTTP Accept 헤더(예: ) `Accept: application/xml`
+1. URL 경로의 마지막 세그먼트에 추가된 &quot;파일 확장명&quot;(예: /cmu/v2/tenant/year/month/day.xml). URL에 쿼리 문자열이 포함된 경우 확장명은 물음표 앞에 와야 합니다. `/cmu/v2/tenant/year/month/day.csv?mvpd=SomeMVPD`
+1. 형식 쿼리 문자열 매개 변수(예: `/cmu/report?format=json`)
+1. 표준 HTTP Accept 헤더(예: `Accept: application/xml`)
 
 &quot;확장&quot; 및 쿼리 매개 변수는 모두 다음 값을 지원합니다.
 
@@ -144,7 +144,7 @@ CMU API 예약 쿼리 문자열 매개 변수:
 
 ## HAL(하이퍼텍스트 응용 프로그램 언어) {#hypertext-app-lang}
 
-JSON 및 XML의 경우 페이로드는 다음에 설명된 대로 HAL로 인코딩됩니다. `http://stateless.co/hal_specification.html`.
+JSON 및 XML의 경우 페이로드는 `http://stateless.co/hal_specification.html`에 설명된 대로 HAL로 인코딩됩니다.
 
 실제 보고서(&quot;report&quot;라는 중첩된 태그/속성)는 선택한/적용할 수 있는 모든 차원과 지표가 포함된 실제 레코드 목록으로 구성되며, 해당 값은 다음과 같이 인코딩됩니다.
 
@@ -174,9 +174,9 @@ JSON 및 XML의 경우 페이로드는 다음에 설명된 대로 HAL로 인코�
 
 XML 및 JSON 형식의 경우 레코드 내의 필드(차원 및 지표) 순서가 지정되지 않지만 일관됩니다(모든 레코드에서 순서가 동일함). 그러나 클라이언트는 레코드 내의 특정 필드 순서에 의존해서는 안 됩니다.
 
-리소스 링크(JSON의 &quot;self&quot; rel 및 XML의 &quot;href&quot; 리소스 속성)에는 인라인 보고서에 사용되는 현재 경로 및 쿼리 문자열이 포함되어 있습니다. 쿼리 문자열은 암시적 및 명시적 매개 변수를 모두 표시하므로 페이로드는 사용된 시간 간격, 암시적 필터(있는 경우) 등을 명시적으로 지정합니다. 리소스 내의 나머지 링크에는 현재 데이터에서 드릴다운하기 위해 따를 수 있는 사용 가능한 모든 세그먼트가 포함됩니다. 롤업에 대한 링크도 제공되며 상위 경로(있는 경우)를 가리킵니다. 다음 `href` 드릴다운/롤업 링크의 값에는 URL 경로만 포함됩니다(쿼리 문자열은 포함되지 않으므로 필요한 경우 클라이언트가 추가해야 함). 현재 리소스에서 사용(또는 암시적)한 모든 쿼리 문자열 매개 변수를 &quot;롤업&quot; 또는 &quot;드릴다운&quot; 링크에 적용할 수 있는 것은 아닙니다(예: 하위 또는 상위 리소스에는 필터가 적용되지 않을 수 있음).
+리소스 링크(JSON의 &quot;self&quot; rel 및 XML의 &quot;href&quot; 리소스 속성)에는 인라인 보고서에 사용되는 현재 경로 및 쿼리 문자열이 포함되어 있습니다. 쿼리 문자열은 암시적 및 명시적 매개 변수를 모두 표시하므로 페이로드는 사용된 시간 간격, 암시적 필터(있는 경우) 등을 명시적으로 지정합니다. 리소스 내의 나머지 링크에는 현재 데이터에서 드릴다운하기 위해 따를 수 있는 사용 가능한 모든 세그먼트가 포함됩니다. 롤업에 대한 링크도 제공되며 상위 경로(있는 경우)를 가리킵니다. 드릴다운/롤업 링크의 `href` 값에는 URL 경로만 포함됩니다. 여기에는 쿼리 문자열이 포함되지 않으므로 필요한 경우 클라이언트가 추가해야 합니다. 현재 리소스에서 사용(또는 암시적)한 모든 쿼리 문자열 매개 변수를 &quot;롤업&quot; 또는 &quot;드릴다운&quot; 링크에 적용할 수 있는 것은 아닙니다(예: 하위 또는 상위 리소스에는 필터가 적용되지 않을 수 있음).
 
-예(클라이언트라는 단일 지표가 있고 의 사전 집계가 있다고 가정) `year/month/day/...`):
+예(클라이언트라는 단일 지표가 있고 `year/month/day/...`에 대한 사전 집계가 있다고 가정):
 
 * `https://mgmt.auth.adobe.com/cmu/v2/year/month.xml`
 
@@ -228,11 +228,11 @@ CSV 데이터 형식에서는 링크 또는 기타 메타데이터(헤더 행 �
 report__<start-date>_<end-date>_<filter-values,...>.csv
 ```
 
-CSV에는 머리글 행이 포함된 다음 보고서 데이터가 후속 행으로 포함됩니다. 머리글 행에는 모든 차원이 포함되며 그 뒤에는 모든 지표가 포함됩니다. 보고서 데이터의 정렬 순서는 차원 순서로 반영됩니다. 따라서 데이터가 D1을 기준으로 정렬된 다음 D2를 기준으로 정렬되면 CSV 헤더는 다음과 같이 표시됩니다. `D1, D2, ...metrics....`
+CSV에는 머리글 행이 포함된 다음 보고서 데이터가 후속 행으로 포함됩니다. 머리글 행에는 모든 차원이 포함되며 그 뒤에는 모든 지표가 포함됩니다. 보고서 데이터의 정렬 순서는 차원 순서로 반영됩니다. 따라서 데이터를 D1을 기준으로 정렬한 다음 D2를 기준으로 정렬하면 CSV 헤더는 `D1, D2, ...metrics....`과(와) 같이 표시됩니다.
 
 머리글 행의 필드 순서는 테이블 데이터의 정렬 순서를 반영합니다.
 
-예: https://mgmt.auth.adobe.com/cmu/v2/year/month.csv에서 라는 파일을 생성합니다. ```report__2012-07-20_2012-08-20_1000.csv``` (다음 컨텐츠 포함)
+예: https://mgmt.auth.adobe.com/cmu/v2/year/month.csv은 다음 내용이 포함된 ```report__2012-07-20_2012-08-20_1000.csv``` 파일을 생성합니다.
 
 | 년 | 월 | 클라이언트 |
 |:----:|:-----:|:-------:|
@@ -241,14 +241,14 @@ CSV에는 머리글 행이 포함된 다음 보고서 데이터가 후속 행으
 
 ## 데이터 새로 고침 {#data-freshness}
 
-요청에 Last-Modified 헤더가 포함되어 있지만 **다음이 아님** 본문의 보고서가 마지막으로 업데이트된 시간을 반영합니다. 일반 보고서는 다음 규칙을 사용하여 정기적으로 계산됩니다.
+요청에 Last-Modified 헤더가 포함되어 있지만 본문의 보고서가 마지막으로 업데이트된 시간을 **DOES**&#x200B;이(가) 반영하지 않습니다. 일반 보고서는 다음 규칙을 사용하여 정기적으로 계산됩니다.
 
-* 시간 세부기간이 인 경우 **년** 또는 **개월**&#x200B;그러면 보고서가 2일마다 업데이트됩니다
-* 시간 세부기간이 인 경우 **일**&#x200B;그런 다음 보고서가 3시간마다 업데이트됩니다
-* 시간 세부기간이 인 경우 **시간**&#x200B;그런 다음 보고서가 매시간 업데이트됩니다
-* 시간 세부기간이 인 경우 **분**: 그런 다음 보고서가 매분마다 업데이트됩니다
+* 시간 세부기간이 **년** 또는 **개월**&#x200B;인 경우 보고서는 2일마다 업데이트됩니다
+* 시간 세부기간이 **일**&#x200B;인 경우 보고서는 3시간마다 업데이트됩니다
+* 시간 세부기간이 **시간**&#x200B;이면 보고서가 매시간 업데이트됩니다
+* 시간 세부기간이 **분**&#x200B;인 경우 보고서는 매 분마다 업데이트됩니다
 
-다음 **활동 수준** 및 **동시성 수준** 보고서는 시간 세부기간에 관계없이 매일 업데이트됩니다.
+**활동 수준** 및 **동시성 수준** 보고서는 시간 세부기간에 관계없이 매일 업데이트됩니다.
 
 ## GZIP 압축 {#gzip-compression}
 

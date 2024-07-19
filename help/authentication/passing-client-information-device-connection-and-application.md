@@ -4,8 +4,8 @@ description: 클라이언트 정보 전달(장치, 연결 및 애플리케이션
 exl-id: 0b21ef0e-c169-48ff-ac01-25411cfece1e
 source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
 workflow-type: tm+mt
-source-wordcount: '1681'
-ht-degree: 0%
+source-wordcount: '1643'
+ht-degree: 1%
 
 ---
 
@@ -32,30 +32,30 @@ ht-degree: 0%
 클라이언트 정보는 다음과 같이 구성됩니다.
 
 * **장치** 사용자가 프로그래머 콘텐츠를 사용하려는 장치의 하드웨어 및 소프트웨어 특성에 대한 정보입니다.
-* **연결** 사용자가 Adobe Pass 인증 서비스 및/또는 프로그래머 서비스에 연결하는 장치의 연결 특성에 대한 정보입니다(예: 서버 간 구현).
-* **애플리케이션** 사용자가 프로그래머 콘텐츠를 사용하려는 등록된 응용 프로그램에 대한 정보입니다.
+* **연결** 사용자가 Adobe Pass 인증 서비스 및/또는 프로그래머 서비스(예: 서버 간 구현)에 연결하는 장치의 연결 특성에 대한 정보입니다.
+* **응용 프로그램** 사용자가 프로그래머 콘텐츠를 사용하려는 등록된 응용 프로그램에 대한 정보입니다.
 
 클라이언트 정보는 다음 표에 표시된 키로 구축된 JSON 개체입니다.
 
 >[!NOTE]
 >
->다음 **키** 은(는) **필수** 클라이언트 정보 JSON 개체로 전송하려면 다음을 수행하십시오. **모델**, **osName**.
+>다음 **키**&#x200B;은(는) 클라이언트 정보 JSON 개체에서 보낼 **필수**&#x200B;입니다. **모델**, **osName**.
 >
->다음 키에는 **제한됨** 값: `primaryHardwareType`, `osName`, `osFamily`, `browserName`, `browserVendor`, `connectionSecure`.
+>`primaryHardwareType`, `osName`, `osFamily`, `browserName`, `browserVendor`, `connectionSecure` 키에 **restricted** 값이 있습니다.
 
 |   | 키 | 제한됨 | 설명 | 가능한 값 |
 |---|---|---|---|---|
-|            | 기본 하드웨어 유형 | # 예 | 디바이스의 기본 하드웨어 유형입니다. | # 값이 제한됨: Camera DataCollectionTerminal Desktop EmbeddedNetworkModule eReader GamesConsole GeolocationTracker Glasses MediaPlayer MobilePhone PaymentTerminal PluginModem SetTopBox TV Tablet WirelessHotspot Wristwatch Unknown |
+|            | 기본 하드웨어 유형 | # 예 | 디바이스의 기본 하드웨어 유형입니다. | # 값이 제한됨:                                                                     카메라                                                      DataCollectionTerminal                                                      데스크탑                                                      포함된 네트워크 모듈                                                      eReader                                                      게임콘솔                                                      GeolocationTracker                                                      안경                                                      MediaPlayer                                                      휴대폰                                                      결제 단말기                                                      플러그인 모뎀                                                      셋톱 박스                                                      TV                                                      태블릿                                                      WirelessHotspot                                                      손목시계                                                      알 수 없음 |
 | #mandatory | 모델 | 아니요 | 장치의 모델 이름입니다. | 예: iPhone, SM-G930V, AppleTV 등 |
 |            | 버전 | 아니요 | 디바이스 버전. | 예: 2.0.1 등 |
 |            | 제조업체 | 아니요 | 장치의 제조 회사/조직입니다. | 예: 삼성, LG, ZTE, 화웨이, 모토로라, Apple 등 |
 |            | 공급업체 | 아니요 | 장치의 판매 회사/조직입니다. | 예: Apple, Samsung, LG, Google 등 |
-| #mandatory | osName | # 예 | 장치의 운영 체제(OS) 이름입니다. | # 값은 제한됩니다. Android Chrome OS Linux Mac OS X OpenBSD Roku OS Windows iOS tvOS webOS |
-|            | osFamily | 예 | 장치의 운영 체제(OS) 그룹 이름입니다. | # 값이 제한됩니다. Android BSD Linux PlayStation OS Roku OS Symbian Tizen Windows iOS macOS tvOS webOS |
-|            | osVendor | 아니요 | 장치의 운영 체제(OS) 공급업체. | Amazon Apple Google LG Microsoft Mozilla 닌텐도 Nokia Roku 삼성 소니 타이젠 프로젝트 |
+| #mandatory | osName | # 예 | 장치의 운영 체제(OS) 이름입니다. | # 값이 제한됨:                                                   Android                   Chrome                   리눅스                   Mac                   OS X                   OpenBSD                   Roku 운영 체제                   Windows                   iOS                   tvOS                   webOS |
+|            | osFamily | 예 | 장치의 운영 체제(OS) 그룹 이름입니다. | # 값이 제한됨:                                                   Android                   BSD                   리눅스                   플레이스테이션                   Roku 운영 체제                   Symbian                   티젠                   Windows                   iOS                   macOS                   tvOS                   webOS |
+|            | osVendor | 아니요 | 장치의 운영 체제(OS) 공급업체. | Amazon                   Apple                   Google                   LG                   Microsoft                   모질라                   닌텐도                   노키아                   Roku                   Samsung                   소니                   Tizen 프로젝트 |
 |            | osVersion | 아니요 | 장치의 운영 체제(OS) 버전입니다. | 예: 10.2, 9.0.1 등 |
-|            | browserName | # 예 | 브라우저의 이름입니다. | # 값이 제한됩니다: Android 브라우저 Chrome Edge Firefox Internet Explorer Opera Safari SeaMonkey Symbian 브라우저 |
-|            | browserVendor | # 예 | 브라우저의 빌드 회사/조직입니다. | # 값이 제한됨: Amazon Apple Google Microsoft Motorola Mozilla Netscape Nintendo Nokia Samsung Sony Ericsson |
+|            | browserName | # 예 | 브라우저의 이름입니다. | # 값이 제한됨:                                                   Android 브라우저                   Chrome                   Edge                   Firefox                   Internet Explorer                   Opera                   Safari                   시몽키                   Symbian 브라우저 |
+|            | browserVendor | # 예 | 브라우저의 빌드 회사/조직입니다. | # 값이 제한됨:                                                   Amazon                   Apple                   Google                   Microsoft                   모토로라                   모질라                   넷스케이프                   닌텐도                   노키아                   Samsung                   소니 에릭슨 |
 |            | browserVersion | 아니요 | 장치의 브라우저 버전입니다. | 예: 60.0.3112 |
 |            | userAgent | 아니요 | 장치의 사용자 에이전트입니다. | 예: Mozilla/5.0 (Macintosh, Intel Mac OS X 10_12_3) AppleWebKit/602.4.8 (KHTML, 예: Gecko) 버전/10.0.3 Safari/602.4.8 |
 |            | displayWidth | 아니요 | 장치의 실제 화면 너비입니다. |                                                                                                                                                                                                                                                                                                                                                           |
@@ -65,7 +65,7 @@ ht-degree: 0%
 |            | connectionIp | 아니요 | HTTP 요청을 보내는 데 사용되는 장치의 IP입니다. | 예: 8.8.4.4 |
 |            | connectionPort | 아니요 | HTTP 요청을 전송하는 데 사용되는 장치의 포트입니다. | 예: 53124 |
 |            | connectionType | 아니요 | 네트워크 연결 유형입니다. | 예: WiFi, LAN, 3G, 4G, 5G |
-|            | connectionSecure | # 예 | 네트워크 연결 보안 상태입니다. | # 값이 제한됨: true - 보안 네트워크의 경우 false - 공용 핫스팟의 경우 |
+|            | connectionSecure | # 예 | 네트워크 연결 보안 상태입니다. | # 값이 제한됨:                                                   true - 보안 네트워크의 경우                   false - 공용 핫스팟의 경우 |
 |            | applicationId | 아니요 | 애플리케이션 고유 식별자. | 예: CNN |
 
 ## API 참조 {#api-ref}
@@ -76,52 +76,52 @@ ht-degree: 0%
 
 Adobe Pass 인증 서비스는 다음과 같은 방법으로 클라이언트 정보 수신을 지원합니다.
 
-* 로서의 **헤더: &quot;X-Device-Info&quot;**
-* 로서의 **쿼리 매개 변수: &quot;device_info&quot;**
-* 로서의 **post 매개 변수: &quot;device_info&quot;**
+* **헤더로서: &quot;X-Device-Info&quot;**
+* **쿼리 매개 변수: &quot;device_info&quot;**
+* **post 매개 변수로: &quot;device_info&quot;**
 
 >[!IMPORTANT]
 >
->세 시나리오 모두에서 헤더 또는 매개 변수의 페이로드는 다음과 같아야 합니다. **Base64로 인코딩되고 URL로 인코딩됨**.
+>세 시나리오 모두에서 헤더 또는 매개 변수의 페이로드는 **Base64로 인코딩되고 URL로 인코딩되어야 합니다**.
 
 **SDK**
 
-#### JavaScript SDK {#js-sdk}
+#### JAVASCRIPT SDK {#js-sdk}
 
 AccessEnabler JavaScript SDK는 기본적으로 클라이언트 정보 JSON 개체를 빌드하며, 이 개체는 재정의되지 않는 한 Adobe Pass 인증 서비스에 전달됩니다.
 
-AccessEnabler JavaScript SDK는 **재정의만** 클라이언트 정보 JSON 개체에서 다음을 통해 &quot;applicationId&quot; 키 [setRequestor](/help/authentication/javascript-sdk-api-reference.md#setrequestor(inRequestorID,endpoints,options))의 *applicationId* options 매개 변수입니다.
+AccessEnabler JavaScript SDK는 [setRequestor](/help/authentication/javascript-sdk-api-reference.md#setrequestor(inRequestorID,endpoints,options))의 *applicationId* 옵션 매개 변수를 통해 클라이언트 정보 JSON 개체에서 &quot;applicationId&quot; 키만 **재정의**&#x200B;할 수 있습니다.
 
 >[!CAUTION]
 >
->다음 `applicationId` 매개 변수 값은 일반 텍스트 문자열 값이어야 합니다.
->프로그래머 애플리케이션이 applicationId를 전달하기로 결정하는 경우 나머지 클라이언트 정보 키는 여전히 AccessEnabler JavaScript SDK에서 계산됩니다.
+>`applicationId` 매개 변수 값은 일반 텍스트 문자열 값이어야 합니다.
+>프로그래머 애플리케이션에서 applicationId를 전달하기로 결정한 경우 나머지 클라이언트 정보 키는 AccessEnabler JavaScript SDK에서 계속 계산됩니다.
 
 #### iOS/tvOs SDK {#ios-tvos-sdk}
 
 AccessEnabler iOS/tvOS SDK는 기본적으로 클라이언트 정보 JSON 개체를 빌드하며, 이 개체는 재정의되지 않는 한 Adobe Pass 인증 서비스에 전달됩니다.
 
-AccessEnabler iOS/tvOS SDK는 **전체 재정의** 다음을 통한 클라이언트 정보 JSON 개체 [setOptions](/help/authentication/iostvos-sdk-api-reference.md#setoptions)의 device_info 매개 변수.
+AccessEnabler iOS/tvOS SDK는 [setOptions](/help/authentication/iostvos-sdk-api-reference.md#setoptions)의 device_info 매개 변수를 통해 **전체** 클라이언트 정보 JSON 개체를 재정의할 수 있습니다.
 
 >[!CAUTION]
 >
->다음 *device_info* 매개 변수 값은 이어야 합니다. **Base64 인코딩됨** *NSString* 값.
+>*device_info* 매개 변수 값은 **Base64 인코딩** *NSString* 값이어야 합니다.
 >
->프로그래머 응용 프로그램에서 *device_info*&#x200B;그러면 AccessEnabler iOS/tvOS SDK에서 계산한 모든 클라이언트 정보 키가 무시됩니다. 따라서 가능한 한 많은 키에 대한 값을 계산하고 전달하는 것이 매우 중요합니다. 구현에 대한 자세한 내용은 [개요](#pass-client-info-overview) 테이블 및 [iOS/tvOS Cookbook](#ios-tvos).
+>프로그래머 응용 프로그램에서 *device_info*&#x200B;을(를) 전달하기로 결정하는 경우 AccessEnabler iOS/tvOS SDK에서 계산한 모든 클라이언트 정보 키가 재정의됩니다. 따라서 가능한 한 많은 키에 대한 값을 계산하고 전달하는 것이 매우 중요합니다. 구현에 대한 자세한 내용은 [개요](#pass-client-info-overview) 테이블 및 [iOS/tvOS Cookbook](#ios-tvos)을 참조하십시오.
 
 #### Android/Fireos SDK {#and-fire-os-sdk}
 
-다음 `AccessEnabler` Android/FireOS SDK는 기본적으로 클라이언트 정보 JSON 개체를 빌드하며, 재정의되지 않는 한 Adobe Pass 인증 서비스로 전달됩니다.
+`AccessEnabler` Android/FireOS SDK는 기본적으로 클라이언트 정보 JSON 개체를 빌드하며, 재정의되지 않는 한 Adobe Pass 인증 서비스로 전달됩니다.
 
-다음 `AccessEnabler` Android/FireOS SDK 지원 **전체 재정의** 다음을 통한 클라이언트 정보 JSON 개체 [setOptions](/help/authentication/android-sdk-api-reference.md#setOptions)s/[setOptions](/help/authentication/amazon-fireos-native-client-api-reference.md#fire_setOption)의 `device_info` 매개 변수.
+`AccessEnabler` Android/FireOS SDK는 [setOptions](/help/authentication/android-sdk-api-reference.md#setOptions)의/[setOptions](/help/authentication/amazon-fireos-native-client-api-reference.md#fire_setOption)의 `device_info` 매개 변수를 통해 **전체** 클라이언트 정보 JSON 개체를 재정의할 수 있습니다.
 
 >[!NOTE]
 >
->다음 `device_info` 매개 변수 값은 이어야 합니다. **Base64 인코딩됨** 문자열 값.
+>`device_info` 매개 변수 값은 **Base64 인코딩** 문자열 값이어야 합니다.
 
 >[!IMPORTANT]
 >
->프로그래머 응용 프로그램에서 `device_info`를 클릭한 다음 `AccessEnabler` Android/FireOS SDK가 재정의됩니다. 따라서 가능한 한 많은 키에 대한 값을 계산하고 전달하는 것이 매우 중요합니다. 구현에 대한 자세한 내용은 [개요](#pass-client-info-overview) 테이블 및 [Android](#android) 및 [FireOS](#fire-tv) 요리책.
+>프로그래머 응용 프로그램에서 `device_info`을(를) 전달하기로 결정하는 경우 `AccessEnabler` Android/FireOS SDK에서 계산한 모든 클라이언트 정보 키가 재정의됩니다. 따라서 가능한 한 많은 키에 대한 값을 계산하고 전달하는 것이 매우 중요합니다. 구현에 대한 자세한 내용은 [개요](#pass-client-info-overview) 테이블 및 [Android](#android) 및 [FireOS](#fire-tv) Cookbook을 참조하십시오.
 
 ## 요리책 {#cookbooks}
 
@@ -129,13 +129,13 @@ AccessEnabler iOS/tvOS SDK는 **전체 재정의** 다음을 통한 클라이언
 
 >[!IMPORTANT]
 >
->로 표시된 키  **!** 은(는) 의무적으로 전송됩니다.
+>**(으)로 표시된 키!**&#x200B;은(는) 필수입니다.
 
 ### Android {#android}
 
 장치 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---------------|-----------------------------|---------------|
 | ! | 모델 | Build.MODEL | GT-I9505 |
 |   | 공급업체 | Build.BRAND | 삼성 |
@@ -148,20 +148,20 @@ AccessEnabler iOS/tvOS SDK는 **전체 재정의** 다음을 통한 클라이언
 
 연결 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---|---|---|
 | ! | connectionType | `<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>` `getSystemService(Context.CONNECTIVITY_SERVICE).getActiveNetworkInfo().getType()` | `"WIFI","BLUETOOTH","MOBILE","ETHERNET","VPN","DUMMY","MOBILE_DUN","WIMAX","notAccessible"` |
 |   | connectionSecure |                                                                                                                                                           |                                                                                           |
 
 애플리케이션 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---------------|-----------|--------------|
 |   | applicationId | 하드코드 | CNN |
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 객체는 다음과 같아야 합니다. **Base64 인코딩됨**. 또한 Adobe Pass 인증 REST API의 경우 값은 다음과 같아야 합니다. **URL 인코딩됨**.
+장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
 
 **샘플 코드**
 
@@ -241,13 +241,13 @@ private JSONObject computeClientInformation() {
 >[!NOTE]
 >
 **리소스:**
-* 공개 수업 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank} Java 개발자 설명서에서 참조하십시오.
+* Java 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}.
 
 ### 파이어TV {#fire-tv}
 
 장치 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예:) |
+|   | 키 | Source | 값(예:) |
 |---|---------------|-----------------------------|--------------|
 | ! | 모델 | Build.MODEL | AFTM |
 |   | 공급업체 | Build.BRAND | Amazon |
@@ -260,32 +260,32 @@ private JSONObject computeClientInformation() {
 
 연결 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|------------------|--------|---------------|
 | ! | connectionType |        |               |
 |   | connectionSecure |        |               |
 
 애플리케이션 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---------------|-----------|--------------|
 |   | applicationId | 하드코드 | CNN |
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 객체는 다음과 같아야 합니다. **Base64 인코딩됨**. 또한 Adobe Pass 인증 REST API의 경우 값은 다음과 같아야 합니다. **URL 인코딩됨**.
+장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
 
 >[!NOTE]
 >
 **리소스:**
-* 공개 수업 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank} Android 개발자 설명서에서 확인할 수 있습니다.
+* Android 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}.
 * [FireTV 장치 식별](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html){target=_blank}
 
 ### iOS/tvOS {#ios-tvos}
 
 장치 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---------------|------------------------|--------------|
 | ! | 모델 | uname.machine | iPhone |
 |   | 공급업체 | 하드코드 | Apple |
@@ -298,15 +298,15 @@ private JSONObject computeClientInformation() {
 
 연결 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|------------------|-------------------------------------------|--------------|
-| ! | connectionType | [연결 가능 currentReachabilityStatus] |              |
+| ! | connectionType | [Reachability currentReachabilityStatus] |              |
 |   | connectionSecure |                                           |              |
 
 
 애플리케이션 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---------------|-----------|--------------|
 |   | applicationId | 하드코드 | CNN |
 
@@ -393,7 +393,7 @@ private JSONObject computeClientInformation() {
 
 장치 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-| 키 | 소스 | 값(예) |                 |
+| 키 | Source | 값(예) |                 |
 |-----|---------------|--------------------------------------------|-----------------|
 | ! | 모델 | 하드코드 | &quot;Roku&quot; |
 |     | 공급업체 | ifDeviceInfo.GetModelDetails().VendorName | &quot;Sharp&quot;, &quot;Roku&quot; |
@@ -406,30 +406,30 @@ private JSONObject computeClientInformation() {
 
 연결 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---|---|---|
 | ! | connectionType | ifDeviceInfo.GetConnectionType() | &quot;WifiConnection&quot;, &quot;WiredConnection&quot; |
 |   | connectionSecure | 하드코드 | 연결이 유선인 경우 true |
 
 애플리케이션 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---------------|-----------|--------------|
 |   | applicationId | 하드코드 | CNN |
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 객체는 다음과 같아야 합니다. **Base64 인코딩됨**. 또한 Adobe Pass 인증 REST API의 경우 값은 URL로 인코딩되어야 합니다.
+장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 URL로 인코딩되어야 합니다.
 
 >[!NOTE]
 >
-자세한 내용은 [ifDeviceInfo](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)
+자세한 내용은 [ifDeviceInfo](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)을(를) 참조하십시오
 
 ### 엑스박스 {#xbox}
 
 장치 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 값(예) |
+|   | 키 | Source | 값(예) |
 |---|---|---|---|
 | ! | 모델 | EasClientDeviceInformation.SystemProductName |                 |
 |   | 공급업체 | 하드코드 | Microsoft |
@@ -442,20 +442,20 @@ private JSONObject computeClientInformation() {
 
 연결 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-|   | 키 | 소스 | 예 |
+|   | 키 | Source | 예 |
 |---|---|---|---|
 | ! | connectionType |                                                   |                   |
 |   | connectionSecure | NetworkAuthenticationType | &quot;없음&quot;, &quot;Wpa&quot; 등 |
 
 애플리케이션 정보는 다음과 같은 방법으로 구성할 수 있습니다.
 
-| 키 | 소스 | 값(예) |
+| 키 | Source | 값(예) |
 |---|---|---|
 | applicationId | 하드코드 | CNN |
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 객체는 다음과 같아야 합니다. **Base64 인코딩됨**. 또한 Adobe Pass 인증 REST API의 경우 값은 다음과 같아야 합니다. **URL 인코딩됨**.
+장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
 
 **리소스**
 

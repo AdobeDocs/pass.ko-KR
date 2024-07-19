@@ -4,7 +4,7 @@ description: 최소 시스템 요구 사항
 exl-id: 57b21e2a-abd7-4b4b-85f1-25584a850e40
 source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
 workflow-type: tm+mt
-source-wordcount: '434'
+source-wordcount: '446'
 ht-degree: 0%
 
 ---
@@ -34,22 +34,22 @@ Adobe Pass은 고객 및 파트너에게 성능, 효율성 및 보안 개선 외
 
 | 웹/모바일 브라우저(†) | 지원되는 버전 |
 |---|---|
-| Google 크롬 | **70** 또는 나중에 |
-| Mozilla Firefox | **57** 또는 나중에 |
-| Apple Safari | **14** 또는 나중에 |
-| Microsoft Edge | **10** 또는 나중에 |
+| Google Chrome | **70** 이상 |
+| Mozilla Firefox | **57** 이상 |
+| Apple Safari | **14** 이상 |
+| Microsoft Edge | **100** 이상 |
 
 (†) Adobe은 비공개 또는 시크릿 모드 사용을 권장합니다.
 
 | 운영 체제 | 지원되는 버전 |
 |---|---|
-| *Android* | **7.0** (Nougat) 이상 |
-| *iOS* | **14** 또는 나중에 |
-| *iPadOs* | **14** 또는 나중에 |
-| *tvOS* | **14** 또는 나중에 |
-| *Fire OS* | **5(Android 5.1)** 또는 나중에 |
-| *Mac* | **10.13** 또는 나중에 |
-| *Microsoft Windows* | **10** 또는 나중에 |
+| *Android* | **7.0**(Nougat) 이상 |
+| *iOS* | **14** 이상 |
+| *iPadOS* | **14** 이상 |
+| *tvOS* | **14** 이상 |
+| *OS 실행* | **5(Android 5.1)** 이상 |
+| *Mac OS* | **10.13** 이상 |
+| *Microsoft Windows* | **10** 이상 |
 
 
 
@@ -62,7 +62,7 @@ Adobe Pass은 고객 및 파트너에게 성능, 효율성 및 보안 개선 외
 ## REST(클라이언트 없음) 구현을 위한 장치 요구 사항 {#general_clientless_reqs}
 
 
-클라이언트 없는 구현을 통해 Adobe Pass 인증 서비스를 사용하는 모든 장치 **은(는) 다음을 수행할 수 있어야 합니다.**:
+클라이언트 없는 구현 **을(를) 통해 Adobe Pass 인증 서비스를 사용하는 모든 장치는**&#x200B;할 수 있어야 합니다.
 
 * 고유한 해시된 장치 ID를 제공합니다. 장치에서 해시된 고유 장치 ID를 제공하지 않는 경우 Adobe Pass 인증에서 제공한 고유 ID를 유지할 수 있어야 합니다. 장치는 Adobe Pass 인증 API를 호출할 때 로컬 저장소에서 고유 ID를 영구적으로 유지하고 고유 ID를 장치 ID로 제공할 수 있어야 합니다.
 * HMAC-SHA1 알고리즘을 사용하여 디지털 서명 생성

@@ -1,5 +1,5 @@
 ---
-title: 계정 IQ 용어집
+title: Account IQ 용어
 description: 제품 용어집입니다.
 exl-id: 2ee54442-9538-4c30-b999-265310b3935f
 source-git-commit: cfcaa00ab05c99a64bcb0edfe5af60845a6769a9
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 ## D2C 및 TV Everywhere의 공통 용어
 
-다음 제품 용어 및 그 정의는 모두에게 공통적입니다 [계정 IQ 버전](versions-aiq.md).
+다음 제품 용어 및 해당 정의는 모든 [버전의 Account IQ](versions-aiq.md)에 공통됩니다.
 
 ### [!UICONTROL Accounts Sharing Probability] {#account-sharing-probability-def}
 
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ### [!UICONTROL Action] {#action-def}
 
-와 관련된 직접 또는 간접 이벤트 [작업](#operation-def) 관련 작업 세그먼트의 특성(예: 공유 점수 또는 사용 중인 장치 수)에 영향을 주는 세그먼트.
+관련 작업 세그먼트의 특성(예: 점수 또는 사용 중인 장치 수 공유)에 영향을 주는 [Operation](#operation-def)과(와) 관련된 직접 또는 간접 이벤트입니다.
 
 ### [!UICONTROL Aggregated sharing score] {#sharing-probability-level-def}
 
@@ -90,7 +90,7 @@ ht-degree: 0%
 
 ### 작업 {#operation-def}
 
-작업은 특정 작업의 효과를 추적하기 위해 만들어진 레코드입니다 [작업](#action-def) 연결된 세그먼트. 작업의 예로는 세그먼트로 식별된 계정에 허용된 동시 스트림 수에 대한 제한이 있을 수 있습니다.
+작업은 연결된 세그먼트에서 특정 [action](#action-def)의 효과를 추적하기 위해 만들어진 레코드입니다. 작업의 예로는 세그먼트로 식별된 계정에 허용된 동시 스트림 수에 대한 제한이 있을 수 있습니다.
 
 ### [!UICONTROL Overall sharing score] {#overall-sharing-score}
 

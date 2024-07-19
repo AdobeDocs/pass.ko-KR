@@ -4,7 +4,7 @@ description: Adobe Pass Authentication 2.64.1 릴리스 노트
 exl-id: b0edbd90-ebb5-40a7-9034-1699dccfadb5
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '130'
+source-wordcount: '137'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-2641}
 
 Adobe Pass 인증: adobe-pass-**2.64.1**
-릴리스 날짜: **2023년 1월 31일 - 2023년 2월 02일**
+릴리스 날짜: **01/31/2023 - 02/02/2023**
 
 ### 릴리스 개요 {#release-overview-2641}
 

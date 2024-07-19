@@ -1,14 +1,15 @@
 ---
-title: Adobe Pass 인증 JavaScript 4.1.1 릴리스 노트
-description: Adobe Pass 인증 JavaScript 4.1.1 릴리스 노트
-source-git-commit: 7057aeda34b4fe0d059912ab0a71ea856427654c
+title: Adobe Pass Authentication JavaScript 4.1.1 릴리스 노트
+description: Adobe Pass Authentication JavaScript 4.1.1 릴리스 노트
+exl-id: 00d017b3-700d-48b6-a43f-c0d7b8b67c3d
+source-git-commit: 8552a62f4d6d80ba91543390bf0689d942b3a6f4
 workflow-type: tm+mt
 source-wordcount: '110'
 ht-degree: 0%
 
 ---
 
-# Adobe Pass 인증 JavaScript 4.1.1 릴리스 노트 {#javascript-sdk-411-release-notes}
+# Adobe Pass Authentication JavaScript 4.1.1 릴리스 노트 {#javascript-sdk-411-release-notes}
 
 >[!NOTE]
 >
@@ -20,7 +21,7 @@ ht-degree: 0%
 
 Adobe Pass 인증: JavaScript 4.1.1
 
-릴리스 날짜: **2019년 2월 13일**
+릴리스 날짜: **2/13/2019**
 
 
 ## 릴리스 개요 {#overview-javascript-sdk-411}

@@ -11,21 +11,21 @@ ht-degree: 1%
 
 # 공유 점수가 높은 계정의 정보 내보내기 {#export-account-info-high-score}
 
-[!UICONTROL Account IQ] 을(를) 통해 상위 1000개 가입자 계정의 계정 공유 세부 사항을 내보낼 수 있습니다. [확률 공유](/help/accountiq/product-concepts.md#account-sharing-probability-def). 현재 항목에 대한 계정 공유 정보를 내보낼 수 있습니다 [세그먼트](/help/accountiq/product-concepts.md#segment-def) 및 [지정된 시간 간격](/help/accountiq/product-concepts.md#time-interval-def) 다음에 있음 [공유 계정 보고서](/help/accountiq/shared-acc-reports.md) 페이지를 가리키도록 업데이트하는 중입니다.
+[!UICONTROL Account IQ]을(를) 사용하면 [공유 가능성](/help/accountiq/product-concepts.md#account-sharing-probability-def)을 기준으로 상위 1000개 구독자 계정에 대한 계정 공유 세부 정보를 내보낼 수 있습니다. [공유 계정 보고서](/help/accountiq/shared-acc-reports.md) 페이지에서 현재 [세그먼트](/help/accountiq/product-concepts.md#segment-def) 및 [지정된 시간 간격](/help/accountiq/product-concepts.md#time-interval-def)에 대한 계정 공유 정보를 내보낼 수 있습니다.
 
 단계에 따라 특정 세그먼트에 대한 가입자 계정의 계정 공유 정보를 내보냅니다.
 
 1. 자격 증명으로 로그인합니다.
-1. 다음 위치로 이동 **공유 계정** 아래의 탭 **보고서** 섹션.
-1. 세그먼트 및 시간 간격 패널에서 필요한 세그먼트 및 시간 간격을 선택합니다. 학습 [세그먼트 및 시간 간격을 선택하는 방법](segments-timeinterval.md).
+1. **보고서** 섹션 아래의 **공유 계정** 탭으로 이동합니다.
+1. 세그먼트 및 시간 간격 패널에서 필요한 세그먼트 및 시간 간격을 선택합니다. [세그먼트 및 시간 간격을 선택하는 방법](segments-timeinterval.md)을 알아보세요.
 
-   필요한 경우 다음 지침을 참조하십시오. [세그먼트 만들기](work-with-segments.md#create-new-segment) 또는 [세그먼트 편집](work-with-segments.md#edit-segment).
+   필요한 경우 [세그먼트 만들기](work-with-segments.md#create-new-segment) 또는 [세그먼트 편집](work-with-segments.md#edit-segment)에 대한 지침을 참조하세요.
 
-1. 선택 **[!UICONTROL Export top 1000 accounts]** 세그먼트 및 시간 간격 패널의 오른쪽 위 모서리에 있습니다.
+1. 세그먼트 및 시간 간격 패널의 오른쪽 위 모서리에 있는 **[!UICONTROL Export top 1000 accounts]**&#x200B;을(를) 선택합니다.
 
    ![상위 1000개 계정 내보내기](assets/export-top-1000-accounts.png)
 
-   *상위 1000개 계정 내보내기 옵션을 선택합니다.*
+   *상위 1000개 계정 내보내기 옵션 선택*
 
 파일은 로컬 컴퓨터에 .csv 로 자동으로 다운로드됩니다.
 
@@ -33,7 +33,7 @@ ht-degree: 1%
 
 다음은 내보낸 .csv 파일의 예입니다.
 
-![.csv 파일로 내보낸 데이터](assets/exported-csv.png)
+![내보낸 데이터를 .csv 파일로](assets/exported-csv.png)
 
 *.csv 파일로 내보낸 데이터*
 
@@ -41,7 +41,7 @@ ht-degree: 1%
 
 **주/월**
 
-다음 기간 내에 선택한 주 또는 월 **[!UICONTROL Granularity and Time Interval]** 선택 사항을 추가합니다.
+세그먼트 선택기의 **[!UICONTROL Granularity and Time Interval]** 옵션 내에서 선택한 주 또는 월입니다.
 
 **MVPD**
 
@@ -49,7 +49,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 다음 **MVPD** 열은 TV Everywhere 버전에만 사용할 수 있습니다.
+> **MVPD** 열은 TV Everywhere 버전에서만 사용할 수 있습니다.
 
 **구독자 ID**
 
@@ -63,7 +63,7 @@ ht-degree: 1%
 >
 >콘텐츠를 스트리밍하는 장치의 실제 수는 특정 계정에 대해 지정된 최소 장치 수보다 큽니다.
 
-**최소 인원 수**
+**최소 사용자 수**
 
 해당 디바이스를 사용하여 컨텐츠를 능동적으로 스트리밍한 개인의 최소 수입니다.
 
@@ -89,7 +89,7 @@ ht-degree: 1%
 
 **[!UICONTROL # Clusters]**
 
-고유 개수 [클러스터](/help/accountiq/product-concepts.md#cluster-def) 스트리밍이 발생한 위치.
+스트리밍이 발생한 고유한 [클러스터](/help/accountiq/product-concepts.md#cluster-def)의 수입니다.
 
 **[!UICONTROL Geographic span (miles)]**
 
@@ -101,7 +101,7 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> 일부 D2C 서비스에는 표시되지 않을 수 있습니다. **[!UICONTROL # AuthN OK]** 회사 데이터에 포함되지 않을 수 있는 데이터입니다.
+> 일부 D2C 서비스에서는 **[!UICONTROL # AuthN OK]** 데이터가 회사 데이터에 포함되어 있지 않을 수 있으므로 해당 데이터가 표시되지 않을 수 있습니다.
 
 **[!UICONTROL # AuthZ OK]**
 
@@ -109,11 +109,11 @@ MVPD가 해당 계정에 대한 스트림을 승인하거나 콘텐츠에 대한
 
 >[!NOTE]
 >
->**[!UICONTROL # AuthZ OK]** 는 D2C 서비스에 사용할 수 없습니다.
+>**[!UICONTROL # AuthZ OK]**&#x200B;은(는) D2C 서비스에 사용할 수 없습니다.
 
 >[!NOTE]
 >
->TV는 어디에서나 **[!UICONTROL # AuthZ OK]** 은(는) 의 수와 상관 관계가 있습니다. **[재생 요청 수](/help/accountiq/product-concepts.md##play-requests-def)**. 항상 다음보다 작음 **[!UICONTROL # Play Requests]** Adobe은 일반적으로 약 24시간 동안 MVPD의 권한을 캐시하기 때문입니다.
+>TV Everywhere의 경우 **[!UICONTROL # AuthZ OK]**&#x200B;은(는) **[# 재생 요청](/help/accountiq/product-concepts.md##play-requests-def)**&#x200B;의 수와 관련이 있습니다. 일반적으로 Adobe이 약 24시간 동안 MVPD의 권한을 캐시하므로 항상 **[!UICONTROL # Play Requests]**&#x200B;보다 작습니다.
 
 
 **[!UICONTROL # Play Requests]**
@@ -122,7 +122,7 @@ MVPD가 해당 계정에 대한 스트림을 승인하거나 콘텐츠에 대한
 
 >[!NOTE]
 >
->다음 [재생 요청 수](/help/accountiq/product-concepts.md##play-requests-def) 열은 TV Everywhere MVPD 버전에서 사용할 수 없습니다.
+>[# 재생 요청](/help/accountiq/product-concepts.md##play-requests-def) 열은 TV Everywhere MVPD 버전에서 사용할 수 없습니다.
 
 **[!UICONTROL # Channels]**
 
@@ -130,7 +130,7 @@ MVPD가 해당 계정에 대한 스트림을 승인하거나 콘텐츠에 대한
 
 >[!NOTE]
 >
-> D2C 서비스용 **[!UICONTROL # Channels]** 은(는) 의 수에 해당합니다. **[!UICONTROL # Video categories]**.
+> D2C 서비스의 경우 **[!UICONTROL # Channels]**&#x200B;은(는) **[!UICONTROL # Video categories]**&#x200B;의 수와 같습니다.
 
 >[!NOTE]
 >
@@ -200,10 +200,10 @@ MVPD가 해당 계정에 대한 스트림을 승인하거나 콘텐츠에 대한
 
 *사용 패턴을 포함하는 내보낸 .csv 매핑의 사용 패턴 식별자*
 
-**공유 확률**
+**공유 가능성**
 
 특정 계정이 자격 증명을 공유하고 있을 가능성.
 
 >[!NOTE]
 >
-> 선택한 세그먼트의 모든 계정에 대한 공유 확률의 평균을 사용하여 [공유 수준](/help/accountiq/data-panels.md#sharing-level) / [평균 공유 점수](/help/accountiq/data-panels.md#aggregated-sharing).
+> 선택한 세그먼트에 있는 모든 계정의 공유 확률 평균은 [평균 공유 점수](/help/accountiq/data-panels.md#aggregated-sharing)의 [공유 수준](/help/accountiq/data-panels.md#sharing-level)을 계산하는 데 사용됩니다.

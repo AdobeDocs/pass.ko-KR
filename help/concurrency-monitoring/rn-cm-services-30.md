@@ -1,13 +1,13 @@
 ---
 title: Concurrency Monitoring Services 3.0 릴리스 정보
 description: Concurrency Monitoring Services 3.0 릴리스 정보
-source-git-commit: 19ed211c65deaa1fe97ae462065feac9f77afa64
+exl-id: 247e310f-35a2-4078-a3d7-53b44ef08ad9
+source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
-source-wordcount: '88'
-ht-degree: 0%
+source-wordcount: '93'
+ht-degree: 2%
 
 ---
-
 
 # Concurrency Monitoring Services 3.0 릴리스 정보 {#cms-rn-30}
 
@@ -15,7 +15,8 @@ ht-degree: 0%
 
 ## 릴리스 정보 {#release-info}
 
-버전: 3.0 릴리스 날짜: 2020/05/05
+버전: 3.0
+릴리스 날짜: 2020/05/05
 
 ## 릴리스 개요 {#release-overview}
 

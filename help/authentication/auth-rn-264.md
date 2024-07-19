@@ -4,7 +4,7 @@ description: Adobe Pass Authentication 2.64 릴리스 노트
 exl-id: 4db21026-a0c2-4e33-b01f-4ccae824a110
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '136'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ ht-degree: 0%
 
 Adobe Pass 인증: adobe-pass-**2.64**
 
-릴리스 날짜: **2022년 11월 8일 - 2022년 11월 10일**
+릴리스 날짜: **11/08/2022 - 11/10/2022**
 
 ### 새로운 기능 {#new-featres-264}
 

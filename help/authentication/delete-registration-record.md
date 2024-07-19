@@ -17,16 +17,16 @@ ht-degree: 1%
 
 >[!NOTE]
 >
-> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)
+> REST API 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md)에 의해 제한됩니다.
 
 ## REST API 끝점 {#clientless-endpoints}
 
-&lt;reggie_fqdn>:
+&lt;레지스트리_FQDN>:
 
 * 프로덕션 - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 스테이징 - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
 
-&lt;sp_fqdn>:
+&lt;SP_FQDN>:
 
 * 프로덕션 - [api.auth.adobe.com](http://api.auth.adobe.com/)
 * 스테이징 - [api.auth-staging.adobe.com](http://api.auth-staging.adobe.com/)
@@ -38,9 +38,9 @@ ht-degree: 1%
 
 정규 코드 레코드를 삭제하고 재사용을 위해 정규 코드를 해제합니다.
 
-| 엔드포인트 | 호출됨  </br>작성자: | 입력   </br>매개 변수 | HTTP  </br>방법 | 응답 | HTTP  </br>응답 |
+| 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;reggie_fqdn>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>예:</br></br>&lt;reggie_fqdn>/reggie/v1/regcode/ER45RTY | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자 ID  </br>    (경로 구성 요소)</br>2.  등록 코드  </br>    (경로 구성 요소) | DELETE | 없음 | 204 |
+| &lt;REGGIE_FQDN>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>예:</br></br>&lt;REGGIE_FQDN>/reggie/v1/regcode/ER45RTY | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자 ID </br>    (경로 구성 요소)</br>2.  등록 코드 </br>    (경로 구성 요소) | DELETE | 없음 | 204 |
 
 {style="table-layout:auto"}
 

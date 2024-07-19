@@ -4,7 +4,7 @@ description: Amazon FireOS SDK(동적 클라이언트 등록 포함)
 exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
 source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
 workflow-type: tm+mt
-source-wordcount: '1150'
+source-wordcount: '1145'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 FireTV용 FireOS AccessEnabler SDK가 세션 쿠키를 사용하지 않고 인증을 사용하도록 수정되었습니다. 쿠키 접근을 제한하는 브라우저가 늘어나면서 인증을 허용하는 다른 방법이 필요했다.
 
-**FireOS SDK 3.0.4** 는 서명된 요청자 ID 및 세션 쿠키 인증을 기반으로 현재 앱 등록 메커니즘을 [동적 클라이언트 등록](/help/authentication/dynamic-client-registration.md).
+**FireOS SDK 3.0.4**&#x200B;은(는) 서명된 요청자 ID 및 세션 쿠키 인증을 기반으로 현재 앱 등록 메커니즘을 [Dynamic Client Registration](/help/authentication/dynamic-client-registration.md)(으)로 대체합니다.
 
 
 ## API 변경 사항 {#API}
@@ -38,8 +38,8 @@ FireTV용 FireOS AccessEnabler SDK가 세션 쿠키를 사용하지 않고 인�
 
 **매개 변수:**
 
-- *appContext*: Android 애플리케이션 컨텍스트
-- *softwareStatement*: TVE 대시보드에서 얻은 값 또는 *null* &quot;software\_statement&quot;가 strings.xml에 설정된 경우
+- *appContext*: Android 응용 프로그램 컨텍스트
+- *softwareStatement*: &quot;software\_statement&quot;가 strings.xml에 설정된 경우 TVE 대시보드에서 가져온 값 또는 *null*
 - *redirectUrl* : FireTV 구현의 경우 이 매개 변수는 null이어야 합니다. 이 특성에 대한 모든 설정은 무시됩니다.
 
 **메모**
@@ -53,9 +53,9 @@ FireTV용 FireOS AccessEnabler SDK가 세션 쿠키를 사용하지 않고 인�
 
 서버 응답에는 채널 ID에 첨부된 일부 구성 정보와 함께 MVPD 목록이 포함됩니다. 서버 응답은 Access Enabler에서 내부적으로 사용됩니다. 작업의 상태(즉, SUCCESS/FAIL)만 setRequestorComplete() 콜백을 통해 응용 프로그램에 표시됩니다.
 
-다음과 같은 경우 *url* 매개 변수가 사용되지 않으면 결과 네트워크 호출이 기본 서비스 공급자 URL(Adobe 릴리스 프로덕션 환경)을 타깃팅합니다.
+*url* 매개 변수를 사용하지 않으면 결과 네트워크 호출은 기본 서비스 공급자 URL(Adobe 릴리스 프로덕션 환경)을 대상으로 합니다.
 
-에 대한 값이 제공되는 경우 *url* 매개 변수, 결과 네트워크 호출은에 제공된 모든 URL을 타겟팅합니다. *url* 매개 변수. 모든 구성 요청은 별도의 스레드에서 동시에 트리거됩니다. MVPD 목록을 컴파일할 때 첫 번째 응답자가 우선합니다. 목록에 있는 각 MVPD에 대해 Access Enabler는 관련 서비스 공급자의 URL을 기억합니다. 모든 후속 자격 요청은 구성 단계 동안 대상 MVPD와 쌍을 이룬 서비스 공급자와 연결된 URL로 전달됩니다.
+*url* 매개 변수에 대한 값이 제공되면 결과 네트워크 호출은 *url* 매개 변수에 제공된 모든 URL을 대상으로 합니다. 모든 구성 요청은 별도의 스레드에서 동시에 트리거됩니다. MVPD 목록을 컴파일할 때 첫 번째 응답자가 우선합니다. 목록에 있는 각 MVPD에 대해 Access Enabler는 관련 서비스 공급자의 URL을 기억합니다. 모든 후속 자격 요청은 구성 단계 동안 대상 MVPD와 쌍을 이룬 서비스 공급자와 연결된 URL로 전달됩니다.
 
 | API 호출: 요청자 구성 |
 | --- |
@@ -71,7 +71,7 @@ FireTV용 FireOS AccessEnabler SDK가 세션 쿠키를 사용하지 않고 인�
 
 **매개 변수:**
 
-- *요청자 ID*: 채널과 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe이 할당한 고유 ID를 사이트에 전달합니다.
+- *requestorID*: 채널과 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe이 할당한 고유 ID를 사이트에 전달합니다.
 - *url*: 선택적 매개 변수. 기본적으로 Adobe 서비스 공급자가 사용됩니다(http://sp.auth.adobe.com/). 이 배열을 사용하면 Adobe에서 제공하는 인증 및 권한 부여 서비스에 대한 끝점을 지정할 수 있습니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 이 옵션을 사용하여 여러 Adobe Pass 인증 서비스 공급자 인스턴스를 지정할 수 있습니다. 이렇게 하면 MVPD 목록은 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD는 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD를 지원하는 공급자와 연결됩니다.
 
 사용되지 않음:
@@ -84,7 +84,7 @@ FireTV용 FireOS AccessEnabler SDK가 세션 쿠키를 사용하지 않고 인�
 
 ### 로그아웃
 
-**설명:** 이 메서드를 사용하여 로그아웃 흐름을 시작합니다. 로그아웃은 사용자가 Adobe Pass 인증 서버와 MVPD의 서버 모두에서 로그아웃해야 하므로 일련의 HTTP 리디렉션 작업의 결과입니다. 따라서 이 플로우는 로그아웃을 실행할 ChromeCustomTab 창을 엽니다.
+**설명:** 로그아웃 흐름을 시작하려면 이 메서드를 사용하십시오. 로그아웃은 사용자가 Adobe Pass 인증 서버와 MVPD의 서버 모두에서 로그아웃해야 하므로 일련의 HTTP 리디렉션 작업의 결과입니다. 따라서 이 플로우는 로그아웃을 실행할 ChromeCustomTab 창을 엽니다.
 
 | API 호출: 로그아웃 흐름 시작 |
 | --- |
@@ -98,7 +98,7 @@ FireTV용 FireOS AccessEnabler SDK가 세션 쿠키를 사용하지 않고 인�
 
 ## 프로그래머 구현 흐름 {#Progr}
 
-### **1. 애플리케이션 등록**
+### **1. 응용 프로그램 등록**
 
 1. Adobe Pass( TVE Dashboard )에서 software\_statement 가져오기
 1. 이러한 값을 Adobe Pass SDK에 전달하는 방법에는 두 가지가 있습니다.
@@ -112,29 +112,29 @@ FireTV용 FireOS AccessEnabler SDK가 세션 쿠키를 사용하지 않고 인�
 
 
 
-### **2. 애플리케이션 구성**
+### **2. 응용 프로그램 구성**
 
 - a. setRequestor(requestor\_id)
 
   SDK는 다음 작업을 수행합니다.
 
-   - 응용 프로그램 등록: 사용 **software\_statement**, SDK는 **client\_id, client\_secret, client\_id\_issued\_at, redirect\_uris, grant\_types**. 이 정보는 애플리케이션의 내부 저장소에 저장됩니다.
-   - 다음 항목 얻기 **access\_token** client\_id, client\_secret 및 grant\_type=&quot;client\_credentials&quot; 사용 . 이 액세스\_토큰은 SDK에서 Adobe Pass 서버에 대해 수행하는 각 호출에 사용됩니다.
+   - 응용 프로그램 등록: **software\_statement**&#x200B;을(를) 사용하여 SDK는 **client\_id, client\_secret, client\_id\_issued\_at, redirect\_uris, grant\_types**&#x200B;을(를) 가져옵니다. 이 정보는 애플리케이션의 내부 저장소에 저장됩니다.
+   - client\_id, client\_secret 및 grant\_type=&quot;client\_credentials&quot; 를 사용하여 **access\_token**&#x200B;을 가져옵니다. 이 액세스\_토큰은 SDK에서 Adobe Pass 서버에 대해 수행하는 각 호출에 사용됩니다.
 
 | 토큰 오류 응답: |  |  |
 |--- | --- | --- |
 | HTTP 400(잘못된 요청) | {&quot;error&quot;: &quot;invalid\_request&quot;} | 요청에 필수 매개 변수가 없거나, 지원되지 않는 매개 변수 값(권한 부여 유형 제외)이 포함되어 있거나, 매개 변수를 반복하거나, 여러 자격 증명을 포함하거나, 클라이언트 인증을 위해 둘 이상의 메커니즘을 활용하거나, 형식이 잘못되었습니다. |
-| HTTP 400(잘못된 요청) | {&quot;error&quot;: &quot;invalid\_client&quot;} | 클라이언트를 알 수 없으므로 클라이언트 인증에 실패했습니다. SDK *필수* 인증 서버에 다시 등록합니다. |
+| HTTP 400(잘못된 요청) | {&quot;error&quot;: &quot;invalid\_client&quot;} | 클라이언트를 알 수 없으므로 클라이언트 인증에 실패했습니다. SDK *MUST*&#x200B;이(가) 인증 서버에 다시 등록됩니다. |
 | HTTP 400(잘못된 요청) | {&quot;error&quot;: &quot;unauthorized\_client&quot;} | 인증된 클라이언트는 이 권한 부여 유형을 사용할 수 있는 권한이 없습니다. |
 
 - MVPD에 수동 인증이 필요한 경우 WebView가 열려 해당 MVPD로 수동 인증이 실행되며 완료되면 종료됩니다
 
 - b. checkAuthentication()
 
-   - *true* : 권한 부여로 이동
+   - *true* : 인증으로 이동
    - *false* : MVPD 선택으로 이동
 
-- c. getAuthentication : SDK에는 **access_token** 호출 매개 변수
+- c. getAuthentication : SDK는 호출 매개 변수에 **access_token**&#x200B;을 포함합니다.
 
    - mvpd 기억됨 : setSelectedProvider(mvpd\_id)로 이동
    - mvpd 선택 안 됨 : displayProviderDialog
@@ -147,20 +147,20 @@ FireTV용 FireOS AccessEnabler SDK가 세션 쿠키를 사용하지 않고 인�
    - 로그인 취소됨 : MVPD 선택 재설정
    - 인증이 완료되면 캡처하기 위해 URL 체계가 &quot;adobepass://android.app&quot;로 설정됩니다.
 
-- e. get/checkAuthorization : SDK는 **access\_token **in 헤더를 Authorization: Bearer로 포함합니다. **access\_token**
+- e. get/checkAuthorization : SDK는 **access\_token **in 헤더를 Authorization: Bearer **access\_token**&#x200B;으로 포함합니다.
 
 - 인증이 성공하면 미디어 토큰을 얻기 위한 호출이 수행됩니다
 
 - f. 로그아웃 :
 
    - SDK는 현재 요청자에 대한 유효한 토큰을 삭제합니다(SSO를 통하지 않고 다른 애플리케이션에서 획득한 인증은 유효한 상태로 유지됨).
-   - SDK는 Chrome 사용자 지정 탭을 열어 mvpd\_id 로그아웃 끝점에 도달합니다. 완료되면 Chrome 사용자 지정 탭이 닫힙니다
+   - SDK는 Chrome 사용자 지정 탭을 열어 mvpd\_id 로그아웃 끝점에 도달합니다. 완료되면 Chrome 사용자 정의 탭이 닫힙니다.
    - 로그아웃이 완료되는 순간을 캡처하기 위해 URL 체계가 &quot;adobepass://logout&quot;로 설정됩니다.
    - 로그아웃하면 sendTrackingData(new Event(EVENT\_LOGOUT,USER\_NOT\_AUTHENTICATED\_ERROR) 및 callback : setAuthenticationStatus(0,&quot;Logout&quot;)가 트리거됩니다.
 
 
 
-**참고:** 각 호출에 **access_token**&#x200B;아래에서 가능한 오류 코드는 SDK에서 처리됩니다.
+**참고:** 호출마다 **access_token**&#x200B;이 필요하므로 아래에서 가능한 오류 코드는 SDK에서 처리됩니다.
 
 | 오류 응답 |  |  |
 |--- | --- | --- |

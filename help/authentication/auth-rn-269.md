@@ -1,7 +1,8 @@
 ---
 title: Adobe Pass Authentication 2.69 릴리스 노트
 description: Adobe Pass Authentication 2.69 릴리스 노트
-source-git-commit: 4417c5c50873c73c615f9845cadd4a42c26f3068
+exl-id: d031c4c5-dbd5-4a77-b298-a53b992cc4c5
+source-git-commit: 8552a62f4d6d80ba91543390bf0689d942b3a6f4
 workflow-type: tm+mt
 source-wordcount: '215'
 ht-degree: 0%
@@ -24,7 +25,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-269}
 
 Adobe Pass 인증: adobe-pass-**2.69**
-릴리스 날짜: **2024년 2월 27일 - 2024년 2월 29일**
+릴리스 날짜: **02/27/2024 - 02/29/2024**
 
 ### 새로운 기능 {#new-features-269}
 
@@ -32,7 +33,7 @@ Adobe Pass 인증: adobe-pass-**2.69**
 
 * 보안 취약점이 패치되었습니다.
 * DCR(Dynamic Client Registration)을 사용하여 임시 패스 보안 계층을 재설정하도록 개선되었습니다.
-   * 자세한 내용은 여기에서 확인할 수 있습니다. [임시 통과 재설정](reset-temp-pass.md)
+   * 자세한 내용은 다음을 참조하십시오. [임시 패스 재설정](reset-temp-pass.md)
 * 플랫폼 식별 보고 기능이 개선되었습니다.
 
 #### REST API {#rest-apis}
@@ -50,4 +51,4 @@ Adobe Pass 인증: adobe-pass-**2.69**
 #### JavaScript SDK 4.7.0 {#js-sdk}
 
 * 보안 취약성으로 인해 더 이상 사용되지 않는 Access Enabler JavaScript SDK 버전 2.0.1이 제거되었습니다.
-   * 자세한 내용은 링크를 참조하십시오. [Adobe Pass 인증 JavaScript 4.7.0 릴리스 노트](authn-rn-javascript-470.md)
+   * 자세한 내용은 다음 링크를 참조하십시오. [Adobe Pass 인증 JavaScript 4.7.0 릴리스 노트](authn-rn-javascript-470.md)
