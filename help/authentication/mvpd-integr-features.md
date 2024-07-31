@@ -2,7 +2,7 @@
 title: MVPD 통합 기능
 description: MVPD 통합 기능
 exl-id: fcd65940-9a86-49b2-9d52-9031fb763338
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: e4567dd870790d11b9c5904d635fc00bdd1a23d2
 workflow-type: tm+mt
 source-wordcount: '1733'
 ht-degree: 2%
@@ -84,8 +84,8 @@ Adobe Pass 인증 OLCA 준수 및 Adobe의 OATC 참여에 대해 설명했으므
 | 3.3 | 인라인 계정 등록 | MVPD는 연결된 AuthN 흐름에 인라인으로 새 계정을 만드는 수단을 제공합니다. | A |                                                                                                                                                           |
 | 3.4 | 인라인 도움말/지원 | MVPD는 페더레이션 AuthN 흐름 동안 도움을 제공하는 수단을 제공합니다. | A |                                                                                                                                                           |
 | 3.5 | 모뎀 기반 홈 인증 | MVPD는 등록된 모델의 로컬 네트워크에 있을 때 장치를 자동으로 인증합니다(ISP MVPD만 해당). | B | 이는 많은 사람들이 아직 지원할 수 없는 최적화이기 때문에 우선순위가 더 낮고 사기 완화 및 부모 통제를 위한 몇 가지 문제를 도입합니다 |
-이제 파일/테이블 데이터 붙여넣기... 대화 상자를 사용하여 Markdown 테이블 코드를 직접 가져올 수 있습니다.
 
+이제 파일/테이블 데이터 붙여넣기... 대화 상자를 사용하여 Markdown 테이블 코드를 직접 가져올 수 있습니다.
 
 
 ## 4. Analytics 기능 {#analytics-features}
