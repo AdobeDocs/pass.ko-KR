@@ -1,10 +1,10 @@
 ---
 title: 파트너 인증 요청 검색
 description: REST API V2 - 파트너 인증 요청 검색
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4598aaa0827b943de83a9e7d847227edf6b0b387
 workflow-type: tm+mt
-source-wordcount: '1093'
-ht-degree: 1%
+source-wordcount: '1104'
+ht-degree: 0%
 
 ---
 
@@ -13,7 +13,11 @@ ht-degree: 1%
 
 >[!NOTE]
 >
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+>[!IMPORTANT]
+>
+> REST API V2 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md) 설명서에 의해 제한됩니다.
 
 ## 요청 {#request}
 
