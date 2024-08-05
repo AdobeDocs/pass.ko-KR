@@ -1,15 +1,19 @@
 ---
 title: 기본 인증 - 기본 애플리케이션 - 플로우
 description: REST API V2 - 기본 권한 부여 - 기본 애플리케이션 - 흐름
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
 workflow-type: tm+mt
-source-wordcount: '566'
+source-wordcount: '592'
 ht-degree: 0%
 
 ---
 
 
 # 기본 애플리케이션 내에서 수행되는 기본 인증 흐름 {#basic-authorization-flow-performed-within-primary-application}
+
+>[!NOTE]
+>
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트리밍 응용 프로그램에서 MVPD가 사용자의 콘텐츠 스트리밍 요청을 허용할지 또는 거부할지 여부를 확인할 수 있습니다. 결정이 `Permit`인 경우 응답에 미디어 토큰이 포함됩니다. Adobe Pass 서버는 미디어 토큰에 서명하고 스트리밍 애플리케이션이 미디어 토큰 검증기 라이브러리를 사용하여 스트림이 릴리스되기 전에 그 진위를 확인할 수 있도록 합니다.
 

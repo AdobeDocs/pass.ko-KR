@@ -1,15 +1,19 @@
 ---
 title: 임시 액세스 흐름
 description: REST API V2 - 임시 액세스 흐름
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
 workflow-type: tm+mt
-source-wordcount: '3173'
+source-wordcount: '3199'
 ht-degree: 0%
 
 ---
 
 
 # 임시 액세스 흐름 {#temporary-access-flows}
+
+>[!NOTE]
+>
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 TempPass를 사용하면 프로그래머가 사용자에게 유효한 MVPD 계정으로 인증하도록 요청하지 않고도 보호된 콘텐츠에 일시적으로 액세스할 수 있습니다.
 

@@ -1,15 +1,19 @@
 ---
 title: 기본 로그아웃 - 기본 애플리케이션 - 플로우
 description: REST API V2 - 기본 로그아웃 - 기본 애플리케이션 - 흐름
-source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
+source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '937'
 ht-degree: 0%
 
 ---
 
 
 # 기본 애플리케이션 내에서 수행되는 기본 로그아웃 흐름 {#basic-logout-flow-performed-within-primary-application}
+
+>[!NOTE]
+>
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 Adobe Pass 인증 권한 내의 **로그아웃 흐름**&#x200B;을(를) 사용하면 스트리밍 응용 프로그램에서 두 가지 기본 단계를 수행할 수 있습니다.
 
