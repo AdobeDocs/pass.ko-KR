@@ -1,7 +1,7 @@
 ---
 title: 인증 세션 다시 시작
 description: REST API V2 - 인증 세션 다시 시작
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: 4afd8492c77fdceae3c2504ba392fbcfc0979b22
 workflow-type: tm+mt
 source-wordcount: '755'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # 인증 세션 다시 시작 {#resume-authentication-session}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 > 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 

@@ -1,7 +1,7 @@
 ---
 title: 인증 세션 만들기
 description: REST API V2 - 인증 세션 만들기
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: 4afd8492c77fdceae3c2504ba392fbcfc0979b22
 workflow-type: tm+mt
 source-wordcount: '966'
 ht-degree: 1%
@@ -13,19 +13,19 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+>이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 >[!IMPORTANT]
 >
-> REST API V2 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+>REST API V2 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md) 설명서에 의해 제한됩니다.
 
 ## 요청 {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">경로</td>
@@ -38,9 +38,9 @@ ht-degree: 1%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">경로 매개 변수</th>
+      <th style="background-color: #EFF2F7;">경로 매개 변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -48,9 +48,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문 매개 변수</th>
+      <th style="background-color: #EFF2F7;">본문 매개 변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">mvpd</td>
@@ -82,9 +82,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
@@ -164,10 +164,10 @@ ht-degree: 1%
 
 ## 응답 {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">코드</th>
-      <th style="background-color: #EFF2F7; width: 20%;">텍스트</th>
+      <th style="background-color: #EFF2F7;">코드</th>
+      <th style="background-color: #EFF2F7;">텍스트</th>
       <th style="background-color: #EFF2F7;">설명</th>
    </tr>
    <tr>
@@ -209,11 +209,11 @@ ht-degree: 1%
 
 ### 성공 {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -226,19 +226,19 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
       <td>
          다음 속성이 있는 JSON 개체:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">속성</th>
+               <th style="background-color: #EFF2F7;">속성</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">actionName</td>
@@ -246,9 +246,9 @@ ht-degree: 1%
                   인증 흐름을 완료하기 위해 스트리밍 장치가 수행해야 하는 작업입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
-                  <table>
+                  <table style="table-layout:auto">
                      <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
+                        <th style="background-color: #EFF2F7;">값</th>
                         <th style="background-color: #EFF2F7;"></th>
                      </tr>
                      <tr>
@@ -272,9 +272,9 @@ ht-degree: 1%
                   'actionName' 특성에 지정된 작업으로 흐름을 계속하려면 스트리밍 장치가 수행해야 하는 상호 작용 유형입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
-                  <table>
+                  <table style="table-layout:auto">
                      <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
+                        <th style="background-color: #EFF2F7;">값</th>
                         <th style="background-color: #EFF2F7;"></th>
                      </tr>
                      <tr>
@@ -325,11 +325,11 @@ ht-degree: 1%
 
 ### 오류 {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -342,9 +342,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">오류</td>
