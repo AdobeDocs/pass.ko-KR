@@ -4,10 +4,10 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로, 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 26236fbd4b2d5703bcf99fc0cc5e0460e75ed185
+source-git-commit: c3aa2a24b242669ce0818b95ec34de2adec8001b
 workflow-type: tm+mt
-source-wordcount: '957'
-ht-degree: 3%
+source-wordcount: '1125'
+ht-degree: 2%
 
 ---
 
@@ -28,7 +28,7 @@ ht-degree: 3%
    + [프로그래머 활용 사례](programmer-use-cases.md)
    + [클라이언트 정보 전달(장치, 연결 및 애플리케이션)](passing-client-information-device-connection-and-application.md)
    + [조절 메커니즘](throttling-mechanism.md)
-   + REST API {#restapi}
+   + REST API V1 {#rest-api-v1}
       + [REST API 개요](rest-api-overview.md)
       + [REST API Cookbook(서버 간)](rest-api-cookbook-servertoserver.md)
       + [REST API Cookbook(클라이언트-서버)](rest-api-cookbook-clienttoserver.md)
@@ -52,6 +52,52 @@ ht-degree: 3%
          + [프로필 요청 검색](retrieve-profilerequest.md)
          + [토큰 교환](token-exchange.md)
          + [임시 패스 및 프로모션 임시 패스에 대한 무료 미리보기](free-preview-for-temp-pass-and-promotional-temp-pass.md)
+   + REST API V2 {#rest-api-v2}
+      + API {#rest-api-v2-apis}
+         + 구성 {#rest-api-v2-configuration-apis}
+            + [특정 서비스 공급자에 대한 구성 검색](./rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
+         + 세션 {#rest-api-v2-sessions-apis}
+            + [인증 세션 만들기](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+            + [인증 세션 다시 시작](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
+            + [인증 세션 검색](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md)
+         + 프로필 {#rest-api-v2-profiles-apis}
+            + [프로필 검색](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
+            + [특정 mvpd에 대한 프로필 검색](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles-for-specific-mvpd.md)
+            + [특정 코드에 대한 프로필 검색](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles-for-specific-code.md)
+         + 결정 {#rest-api-v2-decisions-apis}
+            + [특정 mvpd를 사용하여 권한 부여 결정 검색](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
+            + [특정 mvpd를 사용하여 사전 권한 부여 결정 검색](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
+         + {#rest-api-v2-logout-apis} 로그아웃
+            + [특정 mvpd에 대한 로그아웃 시작](./rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
+         + 파트너 SSO(Single Sign-On) {#rest-api-v2-partner-single-sign-on-apis}
+            + [파트너 인증 요청 검색](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
+            + [파트너 인증 응답을 사용하여 프로필 검색](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
+      + 흐름 {#rest-api-v2-flows}
+         + 기본 흐름 {#rest-api-v2-basic-flows}
+            + [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
+            + [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
+            + [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
+            + [보조 애플리케이션 내에서 수행되는 기본 인증 흐름](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
+            + [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
+            + [기본 애플리케이션 내에서 수행되는 기본 사전 인증 흐름](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
+            + [기본 애플리케이션 내에서 수행되는 기본 로그아웃 흐름](./rest-api-v2/flows/basic-flows/rest-api-v2-basic-logout-primary-application-flow.md)
+         + 액세스 흐름 {#rest-api-v2-degraded-access-flows} 성능 저하
+            + [액세스 흐름 성능 저하](rest-api-v2/flows/access-degraded-flows/rest-api-v2-access-degraded-flows.md)
+         + 임시 액세스 흐름 {#rest-api-v2-temporary-access-flows}
+            + [임시 액세스 흐름](rest-api-v2/flows/access-temporary-flows/rest-api-v2-access-temporary-flows.md)
+         + SSO(Single Sign-On) 흐름 {#rest-api-v2-single-sign-on-flows}
+            + [파트너 흐름을 사용한 SSO(Single Sign-On)](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-partner-flows.md)
+            + [플랫폼 ID 흐름을 사용한 SSO(Single Sign-On)](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-platform-identity-flows.md)
+            + [서비스 토큰 흐름을 사용한 SSO(Single Sign-On)](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-service-token-flows.md)
+            + [단일 로그아웃 흐름](./rest-api-v2/flows/single-sign-on-flows/rest-api-v2-single-sign-on-logout-flow.md)
+      + 부록 {#rest-api-v2-appendix}
+         + 헤더 {#rest-api-v2-appendix-headers}
+            + [헤더 - AD-Service-Token](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
+            + [헤더 - Adobe-주체-토큰](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
+            + [헤더 - AP-Device-Identifier](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
+            + [헤더 - AP-Partner-Framework-Status](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
+            + [헤더 - AP-TempPass-Identity](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
+            + [헤더 - X-Device-Info](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
    + AccessEnabler SDK {#accessenabler-sdk}
       + JavaScript SDK {#javascriptsdk}
          + [JavaScript SDK 개요](javascript-sdk-overview.md)
