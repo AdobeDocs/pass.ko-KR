@@ -1,7 +1,7 @@
 ---
 title: 특정 서비스 공급자에 대한 구성 검색
 description: REST API V2 - 특정 서비스 공급자에 대한 구성 검색
-source-git-commit: 4598aaa0827b943de83a9e7d847227edf6b0b387
+source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 2%
@@ -11,7 +11,7 @@ ht-degree: 2%
 
 # 특정 서비스 공급자에 대한 구성 검색 {#retrieve-configuration-for-specific-service-provider}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 > 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 

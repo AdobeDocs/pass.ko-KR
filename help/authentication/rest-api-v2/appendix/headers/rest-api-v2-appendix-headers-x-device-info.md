@@ -1,7 +1,7 @@
 ---
 title: 헤더 - X-Device-Info
 description: REST API V2 - 헤더 - X-Device-Info
-source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
+source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
 source-wordcount: '428'
 ht-degree: 0%
@@ -55,10 +55,10 @@ ht-degree: 0%
         <td>
             값이 제한됩니다.
             <ul>
-                <li>카메라</li>
-                <li>DataCollectionTerminal</li>
-                <li>데스크탑</li>
-                <li>포함된 네트워크 모듈</li>
+                <li>사진기</li>
+                <li>데이터 수집 터미널</li>
+                <li>바탕 화면</li>
+                <li>임베디드네트워크모듈(EmbeddedNetworkModule)</li>
                 <li>eReader</li>
                 <li>게임콘솔</li>
                 <li>GeolocationTracker</li>
@@ -70,7 +70,7 @@ ht-degree: 0%
                 <li>셋톱 박스</li>
                 <li>TV</li>
                 <li>태블릿</li>
-                <li>WirelessHotspot</li>
+                <li>무선핫스팟</li>
                 <li>손목시계</li>
                 <li>알 수 없음</li>
             </ul>
@@ -101,8 +101,8 @@ ht-degree: 0%
         <td>예: Apple, Samsung, LG, Google 등</td>
     </tr>
     <tr>
-        <td>osName</td>
-        <td>장치의 운영 체제(OS) 이름.</td>
+        <td>osName(osName)</td>
+        <td>디바이스 OS(운영 체제) 이름입니다.</td>
         <td><i>필수</i></td>
         <td>
             값이 제한됩니다.
@@ -144,8 +144,8 @@ ht-degree: 0%
         </td>
     </tr>
     <tr>
-        <td>osVendor</td>
-        <td>장치의 운영 체제(OS) 공급업체.</td>
+        <td>osVendor (영문)</td>
+        <td>디바이스 OS(운영 체제) 공급업체입니다.</td>
         <td></td>
         <td>
             값이 제한됩니다.
@@ -161,19 +161,19 @@ ht-degree: 0%
                 <li>Roku</li>
                 <li>Samsung</li>
                 <li>소니</li>
-                <li>Tizen 프로젝트</li>
+                <li>타이젠 프로젝트</li>
             </ul>
         </td>
     </tr>
     <tr>
         <td>osVersion</td>
-        <td>장치의 운영 체제(OS) 버전.</td>
+        <td>디바이스 OS(운영 체제) 버전입니다.</td>
         <td></td>
         <td>예: 10.2, 9.0.1 등</td>
     </tr>
     <tr>
-        <td>browserName</td>
-        <td>브라우저의 이름입니다.</td>
+        <td>브라우저 이름</td>
+        <td>브라우저 이름입니다.</td>
         <td></td>
         <td>
             값이 제한됩니다.
@@ -192,13 +192,13 @@ ht-degree: 0%
     </tr>
     <tr>
         <td>browserVendor</td>
-        <td>브라우저의 빌드 회사/조직입니다.</td>
+        <td>브라우저 사용자의 건축 회사/조직입니다.</td>
         <td></td>
         <td>
             값이 제한됩니다.
             <ul>
-                <li>Amazon</li>
-                <li>Apple</li>
+                <li>아마존</li>
+                <li>사과</li>
                 <li>Google</li>
                 <li>Microsoft</li>
                 <li>모토로라</li>
@@ -248,8 +248,8 @@ ht-degree: 0%
         <td>예: 5.5, 10.1</td>
     </tr>
     <tr>
-        <td>connectionIp</td>
-        <td>HTTP 요청을 전송하는 데 사용되는 장치의 IP입니다.</td>
+        <td>연결 IP</td>
+        <td>HTTP 요청을 전송하는 데 사용되는 디바이스 IP입니다.</td>
         <td></td>
         <td>예: 8.8.4.4</td>
     </tr>

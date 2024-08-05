@@ -1,15 +1,15 @@
 ---
-title: 코드를 사용하여 인증 세션 검색
-description: REST API V2 - 코드를 사용하여 인증 세션 검색
+title: 특정 코드에 대한 프로필 검색
+description: REST API V2 - 특정 코드에 대한 프로필 검색
 source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
-source-wordcount: '409'
-ht-degree: 2%
+source-wordcount: '570'
+ht-degree: 1%
 
 ---
 
 
-# 코드를 사용하여 인증 세션 검색 {#retrieve-authentication-session-using-code}
+# 특정 코드에 대한 프로필 검색 {#retrieve-profile-for-specific-code}
 
 >[!IMPORTANT]
 >
@@ -29,7 +29,7 @@ ht-degree: 2%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">경로</td>
-      <td>/api/v2/{serviceProvider}/sessions/{code}</td>
+      <td>/api/v2/{serviceProvider}/profiles/{code}</td>
       <td></td>
    </tr>
    <tr>
@@ -47,7 +47,7 @@ ht-degree: 2%
       <td>온보딩 프로세스 중 서비스 공급자와 연결된 내부 고유 식별자입니다.</td>
       <td><i>필수</i></td>
    </tr>
-    <tr>
+   <tr>
       <td style="background-color: #DEEBFF;">코드</td>
       <td>스트리밍 장치에서 인증 세션을 만든 후 얻은 인증 코드입니다.</td>
       <td><i>필수</i></td>
@@ -70,7 +70,7 @@ ht-degree: 2%
          특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.
          <br/><br/>
          클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.
-      </td> 
+      </td>
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -101,7 +101,7 @@ ht-degree: 2%
       <td>200</td>
       <td>확인</td>
       <td>
-        응답 본문에는 인증 세션에 대한 정보가 포함되어 있습니다.
+        응답 본문에 유효한 프로필 맵이 포함되어 있으며, 이 맵은 비어 있을 수 있습니다.
       </td>
    </tr>
    <tr>
@@ -148,14 +148,34 @@ ht-degree: 2%
       <td><i>필수</i></td>
    </tr>
    <tr>
+      <td style="background-color: #DEEBFF;">Content-Type</td>
+      <td>application/json</td>
+      <td><i>필수</i></td>
+   </tr>
+   <tr>
       <th style="background-color: #EFF2F7; width: 15%;">본문</th>
       <th style="background-color: #EFF2F7"></th>
       <th style="background-color: #EFF2F7; width: 10%;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">매개 변수</td>
+      <td style="background-color: #DEEBFF;">프로필</td>
       <td>
-         다음 속성이 있는 JSON 개체:
+        키, 값 쌍의 맵이 포함된 JSON.
+        <br/><br/>
+        키 요소는 다음 값으로 정의됩니다.
+        <table>
+            <tr>
+               <th style="background-color: #EFF2F7; width: 20%;">값</th>
+               <th style="background-color: #EFF2F7"></th>
+               <th style="background-color: #EFF2F7; width: 15%;"></th>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">mvpd</td>
+               <td>온보딩 프로세스 중 ID 공급자와 연결된 내부 고유 식별자입니다.</td>
+               <td><i>필수</i></td>
+            </tr>
+         </table>
+         값 요소는 다음 속성으로 정의됩니다.
          <table>
             <tr>
                <th style="background-color: #EFF2F7; width: 20%;">속성</th>
@@ -163,13 +183,106 @@ ht-degree: 2%
                <th style="background-color: #EFF2F7; width: 15%;"></th>
             </tr>
             <tr>
-               <td style="background-color: #DEEBFF;">기존</td>
-               <td>이미 제공된 기존 매개 변수입니다.</td>
+               <td style="background-color: #DEEBFF;">notBefore</td>
+               <td>프로필이 유효하지 않은 타임스탬프.</td>
                <td><i>필수</i></td>
             </tr>
             <tr>
-               <td style="background-color: #DEEBFF;">누락</td>
-               <td>인증 흐름을 완료하기 위해 제공해야 하는 누락된 매개 변수입니다.</td>
+               <td style="background-color: #DEEBFF;">notAfter</td>
+               <td>프로필이 유효하지 않은 타임스탬프.</td>
+               <td><i>필수</i></td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">발급자</td>
+               <td>
+                  프로필을 소유하는 엔티티입니다.
+                  <br/><br/>
+                  가능한 값:
+                  <table>
+                     <tr>
+                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
+                        <th style="background-color: #EFF2F7;"></th>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">mvpd<br/><br/>예: 스펙트럼, 케이블비전 등</td>
+                        <td>
+                            프로필은 다음과 같은 결과로 생성되었습니다.
+                            <ul>
+                                <li>기본 인증</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">Adobe</td>
+                        <td>
+                            프로필은 다음과 같은 결과로 생성되었습니다.
+                            <ul>
+                                <li>액세스 성능 저하</li>
+                                <li>임시 액세스</li>
+                            </ul>
+                        </td>
+                     </tr>
+                  </table>
+               <td><i>필수</i></td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">유형</td>
+               <td>
+                  프로필의 유형입니다.
+                  <br/><br/>
+                  가능한 값:
+                  <table>
+                     <tr>
+                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
+                        <th style="background-color: #EFF2F7;"></th>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">보통</td>
+                        <td>
+                            프로필은 다음과 같은 결과로 생성되었습니다.
+                            <ul>
+                                <li>기본 인증</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">성능 저하</td>
+                        <td>
+                            프로필은 다음과 같은 결과로 생성되었습니다.
+                            <ul>
+                                <li>액세스 성능 저하</li>
+                            </ul>
+                        </td>
+                     </tr>
+                     <tr>
+                        <td style="background-color: #DEEBFF;">임시</td>
+                        <td>
+                            프로필은 다음과 같은 결과로 생성되었습니다.
+                            <ul>
+                                <li>임시 액세스</li>
+                            </ul>
+                        </td>
+                     </tr>
+                  </table>
+               <td><i>필수</i></td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">속성</td>
+               <td>
+                    사용자 메타데이터 속성 목록입니다.
+                    <br/><br/>
+                    이러한 속성은 다음과 같을 수 있습니다.
+                    <ul>
+                        <li>필수, 예: 'userId'</li>
+                        <li>'zip', 'householdId', 'maxRating' 등과 같이 필수가 아닙니다.</li>
+                    </ul>
+                    속성의 값은 다음과 같을 수 있습니다.
+                    <ul>
+                        <li>단순</li>
+                        <li>목록</li>
+                        <li>맵</li>
+                    </ul>
+               </td>
                <td><i>필수</i></td>
             </tr>
          </table>
@@ -209,34 +322,54 @@ ht-degree: 2%
 
 ## 샘플 {#samples}
 
-### 1. 코드를 사용하여 기존 인증 세션에 대한 정보 검색
+### 1. 기본 인증을 수행한 후 보조 장치에서 기존 및 유효한 인증된 프로필 검색
 
 >[!BEGINTABS]
 
 >[!TAB 요청]
 
 ```JSON
-GET /api/v2/sessions/REF30/8BLW4RW
+GET /api/v2/REF30/profiles/Cablevision/XTC98W
  
 Authorization: Bearer ....
 AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
 X-Device-Info ....
 Accept: application/json
-Content-Type: application/x-www-form-urlencoded
-User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 14.5 like Mac OS X; en_US)
 ```
 
 >[!TAB 응답]
 
 ```JSON
 HTTP/1.1 200 OK
+Content-Type: application/json; charset=utf-8
  
-"parameters" : {
-    "existing" : {           
-         "mvpd" : "Cablevision",
-         "domain" : "adobe.com"
-    },
-    "missing" : ["redirectUrl"]
+{
+    "profiles" : {
+        "Cablevision" : {
+            "notBefore" : 1623943955,
+            "notAfter" : 1623951155,
+            "issuer" : "Cablevision",
+            "type" : "regular",
+            "attributes" : {
+                "userId" : {
+                    "value" : "BASE64_value_userId",
+                    "state" : "plain"
+                },
+                "householdId" : {
+                    "value" : "BASE64_value_householdId",
+                    "state" : "plain"
+                },
+                "zip" : {
+                    "value" : "BASE64_value_zip",
+                    "state" : "enc"
+                },
+                "parental-controls" : {
+                    "value" : BASE64_value_parental-controls,
+                    "state" : "plain"
+                }
+            }
+        }
+     }
 }
 ```
 

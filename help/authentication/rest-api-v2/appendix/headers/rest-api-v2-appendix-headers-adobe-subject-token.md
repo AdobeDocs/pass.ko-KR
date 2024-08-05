@@ -1,7 +1,7 @@
 ---
 title: 헤더 - Adobe-주체-토큰
 description: REST API V2 - 헤더 - Adobe-주체-토큰
-source-git-commit: 4d1ce1301d6baf7309e8ee52c43b02403aa2fab9
+source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
 source-wordcount: '156'
 ht-degree: 1%
@@ -21,7 +21,7 @@ ht-degree: 1%
 
 이 헤더는 Platform Identity 메서드를 활용하는 SSO(Single Sign-On) 지원 흐름에서 사용하도록 설계되었습니다.
 
-플랫폼 ID 메서드를 활용하는 SSO(Single Sign-On) 사용 흐름에 대한 자세한 내용은 [플랫폼 ID 흐름을 사용하는 Single Sign-On](../../flows/single-sign-on-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) 설명서를 참조하십시오.
+플랫폼 ID 메서드를 활용하는 SSO(Single Sign-On) 사용 흐름에 대한 자세한 내용은 [플랫폼 ID 흐름을 사용하는 Single Sign-On](../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md) 설명서를 참조하십시오.
 
 ## 구문 {#syntax}
 

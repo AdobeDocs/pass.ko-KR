@@ -1,7 +1,7 @@
 ---
 title: 특정 mvpd를 사용하여 사전 인증 결정 검색
 description: REST API V2 - 특정 mvpd를 사용하여 사전 인증 결정 검색
-source-git-commit: 4598aaa0827b943de83a9e7d847227edf6b0b387
+source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 1%
@@ -11,7 +11,7 @@ ht-degree: 1%
 
 # 특정 mvpd를 사용하여 사전 인증 결정 검색 {#retrieve-preauthorization-decisions-using-specific-mvpd}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 > 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
@@ -115,7 +115,7 @@ ht-degree: 1%
       <td>
         플랫폼 ID 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-주체-토큰</a> 문서에 설명되어 있습니다.
         <br/><br/>
-        플랫폼 ID를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-flows/rest-api-v2-single-sign-on-platform-identity-flows.md">플랫폼 ID 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
+        플랫폼 ID를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md">플랫폼 ID 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
       <td>선택 사항</td>
    </tr>
@@ -124,7 +124,7 @@ ht-degree: 1%
       <td>
         서비스 토큰 메서드에 대한 SSO(Single Sign-On) 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md">AD-Service-Token</a> 문서에 설명되어 있습니다.
         <br/><br/>
-        서비스 토큰을 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-flows/rest-api-v2-single-sign-on-service-token-flows.md">서비스 토큰 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
+        서비스 토큰을 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md">서비스 토큰 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
       <td>선택 사항</td>
    </tr>
@@ -133,7 +133,7 @@ ht-degree: 1%
       <td>
         Partner 메서드에 대한 SSO(Single Sign-On) 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md">AP-Partner-Framework-Status</a> 문서에 설명되어 있습니다.
         <br/><br/>
-        파트너를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-flows/rest-api-v2-single-sign-on-partner-flows.md">파트너 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.</td>
+        파트너를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md">파트너 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
