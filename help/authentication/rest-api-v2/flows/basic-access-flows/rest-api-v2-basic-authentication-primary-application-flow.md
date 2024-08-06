@@ -1,7 +1,7 @@
 ---
 title: 기본 인증 - 기본 애플리케이션 - 흐름
 description: REST API V2 - 기본 인증 - 기본 애플리케이션 - 흐름
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 0%
@@ -91,6 +91,8 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > * _required_ 매개 변수와 헤더가 유효해야 합니다.
    > * 입력한 `serviceProvider`과(와) `mvpd` 간의 통합이 활성화되어 있어야 합니다.
+   > 
+   > <br/>
    > 
    > 유효성 검사가 실패하면 오류 응답이 생성되고 [향상된 오류 코드](../../../enhanced-error-codes.md) 설명서를 준수하는 추가 정보가 제공됩니다.
 

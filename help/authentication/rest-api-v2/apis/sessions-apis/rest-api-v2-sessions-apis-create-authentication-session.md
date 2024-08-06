@@ -1,23 +1,23 @@
 ---
 title: 인증 세션 만들기
 description: REST API V2 - 인증 세션 만들기
-source-git-commit: cf479236cbd43d5e4585bf0eac18a12dbe4bc6c4
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '964'
 ht-degree: 1%
 
 ---
 
 
-# 인증 세션 만들기 - 테스트 {#create-authentication-session}
+# 인증 세션 만들기 {#create-authentication-session}
 
 >[!IMPORTANT]
 >
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 >[!IMPORTANT]
 >
->REST API V2 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+> REST API V2 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md) 설명서에 의해 제한됩니다.
 
 ## 요청 {#request}
 
@@ -247,18 +247,9 @@ ht-degree: 1%
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
                   <ul>
-                    <li><b>인증</b></li>
-                    <ul>
-                        <li>스트리밍 장치 또는 다른 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.</li>
-                    </ul>
-                    <li><b>다시 시작</b></li>
-                    <ul>
-                        <li>스트리밍 장치 또는 다른 장치는 누락된 매개 변수를 제공하고 코드를 사용하여 인증 세션을 다시 시작해야 합니다.</li>
-                    </ul>
-                    <li><b>authorize</b></li>
-                    <ul>
-                        <li>스트리밍 디바이스는 결정 흐름들을 직접 진행할 수 있다.</li>
-                    </ul>
+                    <li><b>인증</b><br/>스트리밍 장치나 다른 장치에서 사용자 에이전트에서 제공된 URL을 열어야 합니다.</li>
+                    <li><b>다시 시작</b><br/>스트리밍 장치나 다른 장치에서 누락된 매개 변수를 제공하고 코드를 사용하여 인증 세션을 다시 시작해야 합니다.</li>
+                    <li><b>승인</b><br/>스트리밍 장치가 결정 흐름을 직접 진행할 수 있습니다.</li>
                   </ul>
                <td><i>필수</i></td>
             </tr>
@@ -269,14 +260,8 @@ ht-degree: 1%
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
                   <ul>
-                    <li><b>인터랙티브한</b></li>
-                    <ul>
-                        <li>흐름은 사용자 에이전트를 사용하여 제공된 URL을 탐색하는 방식으로 계속됩니다.</li>
-                    </ul>
-                    <li><b>직접</b></li>
-                    <ul>
-                        <li>이 흐름은 클라이언트 구현에 사용할 수 있는 HTTP 클라이언트를 사용하여 제공된 URL을 직접 호출하여 계속됩니다.</li>
-                    </ul>
+                    <li><b>대화식</b><br/>흐름은 사용자 에이전트를 사용하여 제공된 URL로 탐색을 계속합니다.</li>
+                    <li><b>직접</b><br/>클라이언트 구현에 사용할 수 있는 HTTP 클라이언트를 사용하여 제공된 URL을 직접 호출하면서 흐름이 계속됩니다.</li>
                   </ul>
                <td><i>필수</i></td>
             </tr>

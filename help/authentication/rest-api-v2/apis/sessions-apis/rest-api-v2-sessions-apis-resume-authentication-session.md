@@ -1,9 +1,9 @@
 ---
 title: 인증 세션 다시 시작
 description: REST API V2 - 인증 세션 다시 시작
-source-git-commit: 4afd8492c77fdceae3c2504ba392fbcfc0979b22
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '753'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 ## 요청 {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">경로</td>
@@ -38,9 +38,9 @@ ht-degree: 1%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">경로 매개 변수</th>
+      <th style="background-color: #EFF2F7;">경로 매개 변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -53,9 +53,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문 매개 변수</th>
+      <th style="background-color: #EFF2F7;">본문 매개 변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">mvpd</td>
@@ -87,9 +87,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
@@ -134,10 +134,10 @@ ht-degree: 1%
 
 ## 응답 {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">코드</th>
-      <th style="background-color: #EFF2F7; width: 20%;">텍스트</th>
+      <th style="background-color: #EFF2F7;">코드</th>
+      <th style="background-color: #EFF2F7;">텍스트</th>
       <th style="background-color: #EFF2F7;">설명</th>
    </tr>
    <tr>
@@ -179,11 +179,11 @@ ht-degree: 1%
 
 ### 성공 {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -191,19 +191,19 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
       <td>
          다음 속성이 있는 JSON 개체:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">속성</th>
+               <th style="background-color: #EFF2F7;">속성</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">actionName</td>
@@ -211,24 +211,11 @@ ht-degree: 1%
                   인증 흐름을 완료하기 위해 스트리밍 장치가 수행해야 하는 작업입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">인증</td>
-                        <td>스트리밍 장치 또는 다른 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">다시 시도</td>
-                        <td>스트리밍 장치 또는 다른 장치에서 누락된 매개 변수를 제공하고 코드를 사용하여 인증 세션 다시 시작을 다시 시도해야 합니다.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">authorize</td>
-                        <td>스트리밍 디바이스는 결정 흐름들을 직접 진행할 수 있다.</td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b>인증</b><br/>스트리밍 장치나 다른 장치에서 사용자 에이전트에서 제공된 URL을 열어야 합니다.</li>
+                    <li><b>다시 시도</b><br/>스트리밍 장치나 다른 장치에서 누락된 매개 변수를 제공하고 코드를 사용하여 인증 세션 다시 시작을 다시 시도해야 합니다.</li>
+                    <li><b>승인</b><br/>스트리밍 장치가 결정 흐름을 직접 진행할 수 있습니다.</li>
+                  </ul> 
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -237,20 +224,10 @@ ht-degree: 1%
                   'actionName' 특성에 지정된 작업으로 흐름을 계속하려면 스트리밍 장치가 수행해야 하는 상호 작용 유형입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">직접</td>
-                        <td>이 흐름은 클라이언트 구현에 사용할 수 있는 HTTP 클라이언트를 사용하여 제공된 URL을 직접 호출하여 계속됩니다.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">인터랙티브한</td>
-                        <td>흐름은 사용자 에이전트를 사용하여 제공된 URL을 탐색하는 방식으로 계속됩니다.</td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b>대화식</b><br/>흐름은 사용자 에이전트를 사용하여 제공된 URL로 탐색을 계속합니다.</li>
+                    <li><b>직접</b><br/>클라이언트 구현에 사용할 수 있는 HTTP 클라이언트를 사용하여 제공된 URL을 직접 호출하면서 흐름이 계속됩니다.</li>
+                  </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -290,11 +267,11 @@ ht-degree: 1%
 
 ### 오류 {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -307,9 +284,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">오류</td>

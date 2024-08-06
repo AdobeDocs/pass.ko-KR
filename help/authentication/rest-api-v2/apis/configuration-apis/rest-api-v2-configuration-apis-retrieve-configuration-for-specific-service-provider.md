@@ -1,7 +1,7 @@
 ---
 title: 특정 서비스 공급자에 대한 구성 검색
 description: REST API V2 - 특정 서비스 공급자에 대한 구성 검색
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
 source-wordcount: '521'
 ht-degree: 2%
@@ -21,11 +21,11 @@ ht-degree: 2%
 
 ## 요청 {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">경로</td>
@@ -38,9 +38,9 @@ ht-degree: 2%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">경로 매개 변수</th>
+      <th style="background-color: #EFF2F7;">경로 매개 변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -48,9 +48,9 @@ ht-degree: 2%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">쿼리 매개변수</th>
+      <th style="background-color: #EFF2F7;">쿼리 매개변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">프로필</td>
@@ -58,9 +58,9 @@ ht-degree: 2%
       <td>선택 사항</td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
@@ -114,10 +114,10 @@ ht-degree: 2%
 
 ## 응답 {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">코드</th>
-      <th style="background-color: #EFF2F7; width: 20%;">텍스트</th>
+      <th style="background-color: #EFF2F7;">코드</th>
+      <th style="background-color: #EFF2F7;">텍스트</th>
       <th style="background-color: #EFF2F7;">설명</th>
    </tr>
    <tr>
@@ -159,11 +159,11 @@ ht-degree: 2%
 
 ### 성공 {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -176,19 +176,19 @@ ht-degree: 2%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
       <td>
          각 요소에 다음 속성이 있는 요소 목록이 포함된 JSON:
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">속성</th>
+               <th style="background-color: #EFF2F7;">속성</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                 <td style="background-color: #DEEBFF;">장치</td>
@@ -207,62 +207,32 @@ ht-degree: 2%
             </tr>
             <tr>
                 <td style="background-color: #DEEBFF;">요청자</td>
-                <td>다음 속성이 있는 JSON:
-                <table>
-                    <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">속성</th>
-                    </tr>
-                    <tr>
-                        <td>id</td>
-                    </tr>
-                    <tr>
-                        <td>이름</td>
-                    </tr>
-                    <tr>
-                        <td>도메인</td>
-                    </tr>
-                </table>
+                <td>
+                    다음 속성이 있는 JSON 개체:
+                    <ul>
+                        <li><b>id</b></li>
+                        <li><b>이름</b></li>
+                        <li><b>도메인</b></li>
+                    </ul>
                 </td>
                 <td><i>필수</i></td>
             </tr>
             <tr>
                 <td style="background-color: #DEEBFF;">mvpds</td>
-                <td>다음 속성이 있는 JSON:
-                <table>
-                    <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">속성</th>
-                    </tr>
-                    <tr>
-                        <td>id</td>
-                    </tr>
-                    <tr>
-                        <td>displayName</td>
-                    </tr>
-                    <tr>
-                        <td>로고 URL</td>
-                    </tr>
-                    <tr>
-                        <td>isTempPass</td>
-                    </tr>
-                    <tr>
-                        <td>isProxy</td>
-                    </tr>
-                    <tr>
-                        <td>boardingStatus</td>
-                    </tr>
-                    <tr>
-                        <td>플랫폼 매핑 ID</td>
-                    </tr>
-                    <tr>
-                        <td>enablePlatformServices</td>
-                    </tr>
-                    <tr>
-                        <td>displayInPlatformPicker</td>
-                    </tr>
-                    <tr>
-                        <td>enforcePlatformPermissions</td>
-                    </tr>
-                </table>
+                <td>
+                    다음 속성이 있는 JSON 개체:
+                    <ul>
+                        <li><b>id</b></li>
+                        <li><b>displayName</b></li>
+                        <li><b>로고</b></li>
+                        <li><b>isTempPass</b></li>
+                        <li><b>isProxy</b></li>
+                        <li><b>boardingStatus</b></li>
+                        <li><b>플랫폼 매핑 ID</b></li>
+                        <li><b>enablePlatformServices</b></li>
+                        <li><b>displayInPlatformPicker</b></li>
+                        <li><b>enforcePlatformPermissions</b></li>
+                    </ul>
                 </td>
                 <td><i>필수</i></td>
             </tr>
@@ -278,11 +248,11 @@ ht-degree: 2%
 
 ### 오류 {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -295,9 +265,9 @@ ht-degree: 2%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">오류</td>

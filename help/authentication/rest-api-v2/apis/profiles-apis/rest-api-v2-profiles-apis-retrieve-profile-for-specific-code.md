@@ -1,7 +1,7 @@
 ---
 title: 특정 코드에 대한 프로필 검색
 description: REST API V2 - 특정 코드에 대한 프로필 검색
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
 source-wordcount: '570'
 ht-degree: 1%
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 ## 요청 {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">경로</td>
@@ -38,9 +38,9 @@ ht-degree: 1%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">경로 매개 변수</th>
+      <th style="background-color: #EFF2F7;">경로 매개 변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -53,9 +53,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
@@ -91,10 +91,10 @@ ht-degree: 1%
 
 ## 응답 {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">코드</th>
-      <th style="background-color: #EFF2F7; width: 20%;">텍스트</th>
+      <th style="background-color: #EFF2F7;">코드</th>
+      <th style="background-color: #EFF2F7;">텍스트</th>
       <th style="background-color: #EFF2F7;">설명</th>
    </tr>
    <tr>
@@ -136,11 +136,11 @@ ht-degree: 1%
 
 ### 성공 {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -153,9 +153,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">프로필</td>
@@ -163,11 +163,11 @@ ht-degree: 1%
         키, 값 쌍의 맵이 포함된 JSON.
         <br/><br/>
         키 요소는 다음 값으로 정의됩니다.
-        <table>
+        <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">값</th>
+               <th style="background-color: #EFF2F7;">값</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">mvpd</td>
@@ -176,11 +176,11 @@ ht-degree: 1%
             </tr>
          </table>
          값 요소는 다음 속성으로 정의됩니다.
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">속성</th>
+               <th style="background-color: #EFF2F7;">속성</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
@@ -197,32 +197,11 @@ ht-degree: 1%
                <td>
                   프로필을 소유하는 엔티티입니다.
                   <br/><br/>
-                  가능한 값:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">mvpd<br/><br/>예: 스펙트럼, 케이블비전 등</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>기본 인증</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">Adobe</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>액세스 성능 저하</li>
-                                <li>임시 액세스</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  가능한 값은 다음과 같습니다.
+                  <ul>
+                    <li><b>mvpd(예: Spectrum, Cablevision 등)</b><br/>기본 인증의 결과로 프로필이 만들어졌습니다.</li>
+                    <li><b>Adobe</b><br/>액세스 성능 저하, 임시 액세스로 인해 프로필이 만들어졌습니다.</li>
+                  </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -230,40 +209,12 @@ ht-degree: 1%
                <td>
                   프로필의 유형입니다.
                   <br/><br/>
-                  가능한 값:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">보통</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>기본 인증</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">성능 저하</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>액세스 성능 저하</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">임시</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>임시 액세스</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  가능한 값은 다음과 같습니다.
+                  <ul>
+                    <li><b>일반</b><br/>기본 인증의 결과로 프로필이 만들어졌습니다.</li>
+                    <li><b>성능 저하</b><br/>액세스 성능 저하로 인해 프로필이 만들어졌습니다.</li>
+                    <li><b>임시</b><br/>임시 액세스로 인해 프로필이 만들어졌습니다.</li>
+                  </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -292,11 +243,11 @@ ht-degree: 1%
 
 ### 오류 {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -309,9 +260,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">오류</td>

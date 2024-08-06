@@ -1,9 +1,9 @@
 ---
 title: 특정 mvpd에 대한 로그아웃 시작
 description: REST API V2 - 특정 mvpd에 대한 로그아웃 시작
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
-source-wordcount: '911'
+source-wordcount: '909'
 ht-degree: 1%
 
 ---
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 ## 요청 {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">경로</td>
@@ -38,9 +38,9 @@ ht-degree: 1%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">경로 매개 변수</th>
+      <th style="background-color: #EFF2F7;">경로 매개 변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -53,9 +53,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">쿼리 매개변수</th>
+      <th style="background-color: #EFF2F7;">쿼리 매개변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">redirectUrl</td>
@@ -67,9 +67,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
@@ -141,10 +141,10 @@ ht-degree: 1%
 
 ## 응답 {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">코드</th>
-      <th style="background-color: #EFF2F7; width: 20%;">텍스트</th>
+      <th style="background-color: #EFF2F7;">코드</th>
+      <th style="background-color: #EFF2F7;">텍스트</th>
       <th style="background-color: #EFF2F7;">설명</th>
    </tr>
    <tr>
@@ -186,11 +186,11 @@ ht-degree: 1%
 
 ### 성공 {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -203,9 +203,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">로그아웃</td>
@@ -213,11 +213,11 @@ ht-degree: 1%
          키, 값 쌍의 맵이 포함된 JSON.
          <br/><br/>
          키 요소는 다음 값으로 정의됩니다.
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">값</th>
+               <th style="background-color: #EFF2F7;">값</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">mvpd</td>
@@ -225,11 +225,11 @@ ht-degree: 1%
                <td><i>필수</i></td>
          </table>
          값 요소는 다음 속성으로 정의됩니다.
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">속성</th>
+               <th style="background-color: #EFF2F7;">속성</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">actionName</td>
@@ -237,47 +237,11 @@ ht-degree: 1%
                   로그아웃 흐름을 완료하기 위해 스트리밍 장치가 수행해야 하는 작업입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">로그아웃</td>
-                        <td>
-                            스트리밍 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.
-                            <br/><br/>
-                            이 작업은 다음 시나리오에 적용됩니다.
-                            <ul>
-                                <li>로그아웃 끝점을 사용하여 MVPD에서 로그아웃</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">완료</td>
-                        <td>
-                            스트리밍 디바이스는 어떠한 후속 동작들도 수행할 필요가 없다.
-                            <br/><br/>
-                            이 작업은 다음 시나리오에 적용됩니다.
-                            <ul>\
-                                <li>로그아웃 끝점 없이 MVPD에서 로그아웃(더미 로그아웃 기능)</li>
-                                <li>액세스 성능이 저하된 도중 로그아웃</li>
-                                <li>임시 액세스 중 로그아웃</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">잘못됨</td>
-                        <td>
-                            스트리밍 디바이스는 어떠한 후속 동작들도 수행할 필요가 없다.
-                            <br/><br/>
-                            이 작업은 다음 시나리오에 적용됩니다.
-                            <ul>
-                                <li>유효한 프로필이 없으면 MVPD에서 로그아웃합니다.</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b>로그아웃</b><br/>스트리밍 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 로그아웃 끝점을 사용하여 MVPD에서 로그아웃합니다.</li>
+                    <li><b>완료</b><br/>스트리밍 장치는 후속 작업을 수행할 필요가 없습니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 로그아웃 끝점 없이 MVPD에서 로그아웃하고(더미 로그아웃 기능), 액세스 성능이 저하된 동안에는 로그아웃하고, 임시 액세스 중에는 로그아웃합니다.</li>
+                    <li><b>잘못됨</b><br/>스트리밍 장치는 후속 작업을 수행할 필요가 없습니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 유효한 프로필이 없으면 MVPD에서 로그아웃합니다.</li>
+                  </ul>  
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -286,31 +250,10 @@ ht-degree: 1%
                   'actionName' 특성에 지정된 작업으로 흐름을 계속하려면 스트리밍 장치가 수행해야 하는 상호 작용 유형입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">인터랙티브한</td>
-                        <td>
-                            이 유형은 'actionName' 속성의 다음 값에 적용됩니다.
-                            <ul>
-                                <li>로그아웃</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">없음</td>
-                        <td>
-                            이 유형은 'actionName' 속성의 다음 값에 적용됩니다.
-                            <ul>
-                                <li>완료</li>
-                                <li>잘못됨</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b>대화식</b><br/>이 형식은 'actionName' 특성의 다음 값에 적용됩니다. <b>로그아웃</b>.</li>
+                    <li><b>없음</b><br/>이 유형은 'actionName' 특성의 다음 값에 적용됩니다. <b>완료</b>, <b>잘못됨</b>.</li>
+                  </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -325,8 +268,8 @@ ht-degree: 1%
                   <br/><br/>
                   다음 'actionName' 속성 값은 표시되지 않습니다.
                   <ul>
-                    <li>완료</li>
-                    <li>잘못됨</li>
+                    <li><b>완료</b></li>
+                    <li><b>잘못됨</b></li>
                   </ul>
                </td>
                <td>선택 사항</td>
@@ -338,11 +281,11 @@ ht-degree: 1%
 
 ### 오류 {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -355,9 +298,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">오류</td>

@@ -1,9 +1,9 @@
 ---
 title: 특정 mvpd에 대한 프로필 검색
-description: REST API V2 - 특정 mvpd에 대한 프로파일 검색
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+description: REST API V2 - 특정 mvpd에 대한 프로필 검색
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
-source-wordcount: '965'
+source-wordcount: '966'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> 이 페이지 상의 컨텐츠 는 정보 제공의 목적으로만 제공됩니다. 이 API를 사용하려면 Adobe Systems 의 최신 라이센스가 필요합니다. 무단 사용은 허용되지 않습니다.
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 >[!IMPORTANT]
 >
@@ -21,11 +21,11 @@ ht-degree: 1%
 
 ## 요청 {#request}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">HTTP</th>
+      <th style="background-color: #EFF2F7;">HTTP</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">경로</td>
@@ -38,9 +38,9 @@ ht-degree: 1%
       <td></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">경로 매개 변수</th>
+      <th style="background-color: #EFF2F7;">경로 매개 변수</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">serviceProvider</td>
@@ -48,14 +48,14 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">엠피디(MVPD)</td>
-      <td>온보딩 프로세스 중에 ID 공급자와 연결된 내부 고유 식별자입니다.</td>
+      <td style="background-color: #DEEBFF;">mvpd</td>
+      <td>온보딩 프로세스 중 ID 공급자와 연결된 내부 고유 식별자입니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
@@ -115,15 +115,15 @@ ht-degree: 1%
         Partner 메서드에 대한 SSO(Single Sign-On) 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md">AP-Partner-Framework-Status</a> 문서에 설명되어 있습니다.
         <br/><br/>
         파트너를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md">파트너 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.</td>
-      <td>선택적</td>
+      <td>선택 사항</td>
     </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">AP-TempPass-ID</td>
-      <td>사용자 고유 식별자 페이로드 생성은 AP-TempPass-Identity</a> 설명서에 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md">설명되어 있습니다.</td>
-      <td>선택적</td>
+      <td style="background-color: #DEEBFF;">AP-TempPass-Identity</td>
+      <td>사용자 고유 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md">AP-TempPass-Identity</a> 문서에 설명되어 있습니다.</td>
+      <td>선택 사항</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">받아들이다</td>
+      <td style="background-color: #DEEBFF;">Accept</td>
       <td>
          클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
          <br/><br/>
@@ -140,10 +140,10 @@ ht-degree: 1%
 
 ## 응답 {#response}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 10%;">코드</th>
-      <th style="background-color: #EFF2F7; width: 20%;">텍스트</th>
+      <th style="background-color: #EFF2F7;">코드</th>
+      <th style="background-color: #EFF2F7;">텍스트</th>
       <th style="background-color: #EFF2F7;">설명</th>
    </tr>
    <tr>
@@ -157,7 +157,7 @@ ht-degree: 1%
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못된 경우 클라이언트는 요청을 수정하고 다시 시도해야 합니다. 응답 본문에는 향상된 오류 코드</a> 설명서를 준수<a href="../../../enhanced-error-codes.md">하는 오류 정보가 포함될 수 있습니다.
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
    <tr>
@@ -185,11 +185,11 @@ ht-degree: 1%
 
 ### 성공 {#success}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -202,9 +202,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">프로필</td>
@@ -212,11 +212,11 @@ ht-degree: 1%
         키, 값 쌍의 맵이 포함된 JSON.
         <br/><br/>
         키 요소는 다음 값으로 정의됩니다.
-        <table>
+        <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">값</th>
+               <th style="background-color: #EFF2F7;">값</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">mvpd</td>
@@ -225,11 +225,11 @@ ht-degree: 1%
             </tr>
          </table>
          값 요소는 다음 속성으로 정의됩니다.
-         <table>
+         <table style="table-layout:auto">
             <tr>
-               <th style="background-color: #EFF2F7; width: 20%;">속성</th>
+               <th style="background-color: #EFF2F7;">속성</th>
                <th style="background-color: #EFF2F7"></th>
-               <th style="background-color: #EFF2F7; width: 15%;"></th>
+               <th style="background-color: #EFF2F7;"></th>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
@@ -246,43 +246,12 @@ ht-degree: 1%
                <td>
                   프로필을 소유하는 엔티티입니다.
                   <br/><br/>
-                  가능한 값:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">mvpd<br/><br/>예: 스펙트럼, 케이블비전 등</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>기본 인증</li>
-                                <li>플랫폼 ID를 사용한 SSO(Single Sign-On)</li>
-                                <li>서비스 토큰을 사용한 SSO(Single Sign-On)</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">Adobe</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>액세스 성능 저하</li>
-                                <li>임시 액세스</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">Apple</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>파트너 Apple을 사용한 SSO(Single Sign-On)</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  가능한 값은 다음과 같습니다.
+                  <ul>
+                    <li><b>mvpd(예: Spectrum, Cablevision 등)</b><br/>기본 인증, 플랫폼 ID를 사용한 SSO(Single Sign-On) 또는 서비스 토큰을 사용한 SSO(Single Sign-On)의 결과로 프로필이 만들어졌습니다.</li>
+                    <li><b>Adobe</b><br/>액세스 성능 저하, 임시 액세스로 인해 프로필이 만들어졌습니다.</li>
+                    <li><b>Apple</b><br/>Single Sign-On으로 인해 파트너 Apple을 사용하여 프로필이 만들어졌습니다.</li>
+                  </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -290,67 +259,15 @@ ht-degree: 1%
                <td>
                   프로필의 유형입니다.
                   <br/><br/>
-                  가능한 값:
-                  <table>
-                     <tr>
-                        <th style="background-color: #EFF2F7; width: 30%;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">보통</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>기본 인증</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">저하</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 만들어졌습니다.
-                            <ul>
-                                <li>저하된 액세스 권한</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">일시적인</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>임시 액세스</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">appleSSO</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>파트너 Apple을 사용한 SSO(Single Sign-On)</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">플랫폼 SSO</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>플랫폼 ID를 사용한 SSO(Single Sign-On)</li>
-                            </ul>
-                        </td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">serviceTokenSSO</td>
-                        <td>
-                            프로필은 다음과 같은 결과로 생성되었습니다.
-                            <ul>
-                                <li>서비스 토큰을 사용한 SSO(Single Sign-On)</li>
-                            </ul>
-                        </td>
-                     </tr>
-                  </table>
+                  가능한 값은 다음과 같습니다.
+                  <ul>
+                    <li><b>일반</b><br/>기본 인증의 결과로 프로필이 만들어졌습니다.</li>
+                    <li><b>성능 저하</b><br/>액세스 성능 저하로 인해 프로필이 만들어졌습니다.</li>
+                    <li><b>임시</b><br/>임시 액세스로 인해 프로필이 만들어졌습니다.</li>
+                    <li><b>appleSSO</b><br/>Single Sign-On으로 파트너 Apple을 사용하여 프로필이 만들어졌습니다.</li>
+                    <li><b>platformSSO</b><br/>Single Sign-On으로 인해 플랫폼 ID를 사용하여 프로필이 만들어졌습니다.</li>
+                    <li><b>serviceTokenSSO</b><br/>서비스 토큰을 사용하여 SSO(Single Sign-On)로 인해 프로필이 만들어졌습니다.</li>
+                  </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -379,11 +296,11 @@ ht-degree: 1%
 
 ### 오류 {#error}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">헤더</th>
+      <th style="background-color: #EFF2F7;">헤더</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
@@ -396,9 +313,9 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <th style="background-color: #EFF2F7; width: 15%;">본문</th>
+      <th style="background-color: #EFF2F7;">본문</th>
       <th style="background-color: #EFF2F7;"></th>
-      <th style="background-color: #EFF2F7; width: 10%;"></th>
+      <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">오류</td>

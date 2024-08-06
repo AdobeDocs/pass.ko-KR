@@ -1,7 +1,7 @@
 ---
 title: 기본 인증 - 보조 애플리케이션 - 흐름
-description: 기본 인증 - REST API V2 - 보조 애플리케이션 - 흐름
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+description: REST API V2 - 기본 인증 - 보조 애플리케이션 - 흐름
+source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
 workflow-type: tm+mt
 source-wordcount: '1756'
 ht-degree: 0%
