@@ -1,9 +1,9 @@
 ---
 title: 인증 세션 만들기
 description: REST API V2 - 인증 세션 만들기
-source-git-commit: 9c04ec17c848d6734dc2ca2d6357ed5fb49341ec
+source-git-commit: cf479236cbd43d5e4585bf0eac18a12dbe4bc6c4
 workflow-type: tm+mt
-source-wordcount: '967'
+source-wordcount: '965'
 ht-degree: 1%
 
 ---
@@ -246,24 +246,20 @@ ht-degree: 1%
                   인증 흐름을 완료하기 위해 스트리밍 장치가 수행해야 하는 작업입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
-                  <table style="table-layout:auto">
-                     <tr>
-                        <th style="background-color: #EFF2F7;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">인증</td>
-                        <td>스트리밍 장치 또는 다른 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">다시 시작</td>
-                        <td>스트리밍 장치 또는 다른 장치는 누락된 매개 변수를 제공하고 코드를 사용하여 인증 세션을 다시 시작해야 합니다.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">authorize</td>
-                        <td>스트리밍 디바이스는 결정 흐름들을 직접 진행할 수 있다.</td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b>인증</b></li>
+                    <ul>
+                        <li>스트리밍 장치 또는 다른 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.</li>
+                    </ul>
+                    <li><b>다시 시작</b></li>
+                    <ul>
+                        <li>스트리밍 장치 또는 다른 장치는 누락된 매개 변수를 제공하고 코드를 사용하여 인증 세션을 다시 시작해야 합니다.</li>
+                    </ul>
+                    <li><b>authorize</b></li>
+                    <ul>
+                        <li>스트리밍 디바이스는 결정 흐름들을 직접 진행할 수 있다.</li>
+                    </ul>
+                  </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -272,20 +268,16 @@ ht-degree: 1%
                   'actionName' 특성에 지정된 작업으로 흐름을 계속하려면 스트리밍 장치가 수행해야 하는 상호 작용 유형입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
-                  <table style="table-layout:auto">
-                     <tr>
-                        <th style="background-color: #EFF2F7;">값</th>
-                        <th style="background-color: #EFF2F7;"></th>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">직접</td>
-                        <td>이 흐름은 클라이언트 구현에 사용할 수 있는 HTTP 클라이언트를 사용하여 제공된 URL을 직접 호출하여 계속됩니다.</td>
-                     </tr>
-                     <tr>
-                        <td style="background-color: #DEEBFF;">인터랙티브한</td>
-                        <td>흐름은 사용자 에이전트를 사용하여 제공된 URL을 탐색하는 방식으로 계속됩니다.</td>
-                     </tr>
-                  </table>
+                  <ul>
+                    <li><b>인터랙티브한</b></li>
+                    <ul>
+                        <li>흐름은 사용자 에이전트를 사용하여 제공된 URL을 탐색하는 방식으로 계속됩니다.</li>
+                    </ul>
+                    <li><b>직접</b></li>
+                    <ul>
+                        <li>이 흐름은 클라이언트 구현에 사용할 수 있는 HTTP 클라이언트를 사용하여 제공된 URL을 직접 호출하여 계속됩니다.</li>
+                    </ul>
+                  </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
