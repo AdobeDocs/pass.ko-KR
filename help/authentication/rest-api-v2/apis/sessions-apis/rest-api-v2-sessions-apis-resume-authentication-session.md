@@ -1,7 +1,7 @@
 ---
 title: 인증 세션 다시 시작
 description: REST API V2 - 인증 세션 다시 시작
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+source-git-commit: c849882286c88d16a5652717d381700287c53277
 workflow-type: tm+mt
 source-wordcount: '753'
 ht-degree: 1%
@@ -47,7 +47,7 @@ ht-degree: 1%
       <td>온보딩 프로세스 중 서비스 공급자와 연결된 내부 고유 식별자입니다.</td>
       <td><i>필수</i></td>
    </tr>
-    <tr>
+   <tr>
       <td style="background-color: #DEEBFF;">코드</td>
       <td>스트리밍 장치에서 인증 세션을 만든 후 얻은 인증 코드입니다.</td>
       <td><i>필수</i></td>

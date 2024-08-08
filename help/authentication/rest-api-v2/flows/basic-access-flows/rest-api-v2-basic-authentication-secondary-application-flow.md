@@ -1,9 +1,9 @@
 ---
 title: 기본 인증 - 보조 애플리케이션 - 흐름
 description: REST API V2 - 기본 인증 - 보조 애플리케이션 - 흐름
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+source-git-commit: c849882286c88d16a5652717d381700287c53277
 workflow-type: tm+mt
-source-wordcount: '1756'
+source-wordcount: '2000'
 ht-degree: 0%
 
 ---
@@ -109,7 +109,46 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
    Adobe Pass 백엔드가 올바른 프로필을 식별하지 않는 경우 스트리밍 응용 프로그램은 보조 응용 프로그램 내에서 인증 세션을 다시 시작하는 데 사용할 수 있는 `code`을(를) 표시합니다.
 
+1. **인증 코드 유효성 검사:** 보조 응용 프로그램에서 사용자 에이전트에서 MVPD 인증을 계속 진행할 수 있도록 `code`을(를) 제공한 사용자의 유효성을 검사합니다.
+
+   >[!IMPORTANT]
+   >
+   > 자세한 내용은 [인증 세션 정보 가져오기](../../apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) API 설명서를 참조하십시오.
+   >
+   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`과(와) 같은 모든 _required_ 헤더
+   > * 모든 _선택적_ 매개 변수 및 헤더
+
+1. **인증 세션에 대한 정보를 반환합니다.** 세션 끝점 응답에 다음 데이터가 포함되어 있습니다.
+   * `existing` 특성에 이미 제공된 기존 매개 변수가 포함되어 있습니다.
+   * `missing` 특성에 인증 흐름을 완료하기 위해 제공해야 하는 매개 변수가 없습니다.
+
+   >[!IMPORTANT]
+   >
+   > 세션 유효성 검사 응답에 제공된 정보에 대한 자세한 내용은 [인증 세션 정보 검색](../../apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) API 설명서를 참조하십시오.
+   >
+   > <br/>
+   >
+   > 세션 끝점은 요청 데이터를 확인하여 기본 조건이 충족되는지 확인합니다.
+   >
+   > * _required_ 매개 변수와 헤더가 유효해야 합니다.
+   >
+   > <br/>
+   >
+   > 유효성 검사가 실패하면 오류 응답이 생성되고 [향상된 오류 코드](../../../enhanced-error-codes.md) 설명서를 준수하는 추가 정보가 제공됩니다.
+
+   >[!NOTE]
+   >
+   > 제안: 보조 응용 프로그램은 누락된 인증 세션을 나타내는 오류 응답 이벤트에서 사용된 `code`이(가) 유효하지 않다는 것을 사용자에게 알리고 새 세션으로 다시 시도하도록 권장할 수 있습니다.
+
 1. **사용자 에이전트에서 URL 열기:** 보조 응용 프로그램에서 사용자 에이전트를 열어 자체 계산된 `url`을(를) 로드하고 인증 끝점에 요청합니다. 이 플로우는 여러 리디렉션을 포함할 수 있으며, 궁극적으로 사용자를 MVPD 로그인 페이지로 유도하고 유효한 자격 증명을 제공합니다.
+
+   >[!IMPORTANT]
+   >
+   > 자세한 내용은 [사용자 에이전트에서 인증 수행](../../apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md) API 설명서를 참조하십시오.
+   >
+   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
+   > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **MVPD 인증 완료:** 인증 흐름이 성공하면 사용자 에이전트 상호 작용이 Adobe Pass 백엔드에 일반 프로필을 저장하고 제공된 `redirectUrl`에 도달합니다.
 
@@ -231,6 +270,10 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    > <br/>
    > 
    > 유효성 검사가 실패하면 오류 응답이 생성되고 [향상된 오류 코드](../../../enhanced-error-codes.md) 설명서를 준수하는 추가 정보가 제공됩니다.
+
+   >[!NOTE]
+   >
+   > 제안: 보조 응용 프로그램은 누락된 인증 세션을 나타내는 오류 응답 이벤트에서 사용된 `code`이(가) 잘못되었음을 사용자에게 알리고 새 세션을 사용하여 다시 시도하도록 사용자에게 알릴 수 있습니다.
 
 1. **기존 프로필 표시:** 세션 끝점 응답에 다음 데이터가 포함되어 있습니다.
    * `actionName` 특성이 &quot;authorize&quot;로 설정되어 있습니다.
