@@ -1,7 +1,7 @@
 ---
 title: 사용자 에이전트에서 인증 수행
 description: REST API V2 - 사용자 에이전트에서 인증 수행
-source-git-commit: c849882286c88d16a5652717d381700287c53277
+source-git-commit: d59afc0384a1c3617143efcef4ab5fb1a323e511
 workflow-type: tm+mt
 source-wordcount: '230'
 ht-degree: 3%
