@@ -2,9 +2,9 @@
 title: REST API Cookbook(클라이언트-서버)
 description: 서버에 대한 REST API Cookbook 클라이언트입니다.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: ea064031c3a1fee3298d85cf442c40bd4bb56281
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '870'
+source-wordcount: '868'
 ht-degree: 0%
 
 ---
@@ -50,7 +50,7 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/throttl
 
 ### DCR(Dynamic Client Registration)
 
-Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서버와 Adobe Pass 서비스 간의 클라이언트 통신을 보호합니다. DCR 플로우는 별도의 종속 및 필수 구성 요소 플로우이며 [동적 클라이언트 등록](/help/authentication/dynamic-client-registration.md)에서 찾을 수 있습니다.
+Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서버와 Adobe Pass 서비스 간의 클라이언트 통신을 보호합니다. DCR 플로우는 서로 별개이며 [동적 클라이언트 등록 개요](./dcr-api/dynamic-client-registration-overview.md) 설명서에 설명되어 있습니다.
 
 
 ### 스트리밍(스마트 장치) 앱 흐름

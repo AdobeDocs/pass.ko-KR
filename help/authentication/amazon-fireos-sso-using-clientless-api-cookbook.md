@@ -2,9 +2,9 @@
 title: Clientless API Cookbook을 사용한 Amazon FireOS SSO
 description: Clientless API Cookbook을 사용한 Amazon FireOS SSO
 exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '755'
+source-wordcount: '761'
 ht-degree: 0%
 
 ---
@@ -149,9 +149,9 @@ Amazon SDK를 사용하여 개인화된 페이로드를 검색하고 Adobe 클�
 
 Adobe 클라이언트 없는 API를 사용하려면 애플리케이션이 Adobe 서버를 호출하기 위해 Dynamic Client Registration을 사용해야 합니다.
 
-* 응용 프로그램에서 Dynamic Client Registration을 사용하려면 [Dynamic Client Registration Management의 지침에 따라 응용 프로그램을 등록](/help/authentication/dynamic-client-registration-management.md)합니다.
+* 응용 프로그램에서 Dynamic Client Registration을 사용하려면 [Dynamic Client Registration Management](./dcr-api/dynamic-client-registration-overview.md#dynamic-client-registration-management)의 지침에 따라 등록된 응용 프로그램을 만들고 소프트웨어 문을 다운로드합니다.
 
-* Adobe Pass 서버에 대한 인증 및 권한 부여 요청을 수행하기 위해 Dynamic Client Registration API를 구현하려면 [Dynamic Client Registration API](/help/authentication/dynamic-client-registration-api.md)의 지침을 따르십시오.
+* Adobe Pass 서버에 대한 인증 및 권한 부여 요청을 수행하기 위해 Dynamic Client Registration API를 구현하려면 [Dynamic Client Registration Flow](./dcr-api/flows/dynamic-client-registration-flow.md)의 지침을 따르십시오.
 
 ### Amazon SSO를 사용하도록 Adobe Pass Clientless API 업데이트 {#clientlesssso}
 

@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로, 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: d59afc0384a1c3617143efcef4ab5fb1a323e511
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '1142'
+source-wordcount: '1149'
 ht-degree: 2%
 
 ---
@@ -68,7 +68,7 @@ ht-degree: 2%
             + [특정 코드에 대한 프로필 검색](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
          + 결정 {#rest-api-v2-decisions-apis}
             + [특정 mvpd를 사용하여 권한 부여 결정 검색](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
-            + [특정 mvpd를 사용하여 사전 권한 부여 결정 검색](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
+            + [특정 mvpd를 사용하여 사전 인증 결정 검색](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
          + {#rest-api-v2-logout-apis} 로그아웃
             + [특정 mvpd에 대한 로그아웃 시작](./rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
          + 파트너 SSO(Single Sign-On) {#rest-api-v2-partner-single-sign-on-apis}
@@ -95,12 +95,13 @@ ht-degree: 2%
             + [단일 로그아웃 흐름](rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-logout-flow.md)
       + 부록 {#rest-api-v2-appendix}
          + 헤더 {#rest-api-v2-appendix-headers}
+            + [헤더 - 인증](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md)
+            + [헤더 - AP-Device-Identifier](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
+            + [헤더 - X-Device-Info](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
             + [헤더 - AD-Service-Token](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
             + [헤더 - Adobe-주체-토큰](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
-            + [헤더 - AP-Device-Identifier](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
             + [헤더 - AP-Partner-Framework-Status](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
             + [헤더 - AP-TempPass-Identity](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
-            + [헤더 - X-Device-Info](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
    + AccessEnabler SDK {#accessenabler-sdk}
       + JavaScript SDK {#javascriptsdk}
          + [JavaScript SDK 개요](javascript-sdk-overview.md)
@@ -175,7 +176,7 @@ ht-degree: 2%
    + 임시 통과 {#temp-pass}
       + [임시 통과](temp-pass.md)
       + [프로모션 임시 패스](promotional-temp-pass.md)
-      + [임시 패스 재설정](reset-temp-pass.md)
+      + [임시 통과 재설정](reset-temp-pass.md)
    + SSO(Single Sign-On) {#sso}
       + [단일 사인온 지원](sso-support.md)
       + [수동 인증을 통한 SSO](sso-passive-authn.md)
@@ -188,10 +189,13 @@ ht-degree: 2%
    + {#error-reportn} 보고 오류
       + [오류 보고](error-reporting.md)
       + [향상된 오류 코드](enhanced-error-codes.md)
-   + 클라이언트 등록 {#client-regn}
-      + [동적 클라이언트 등록](dynamic-client-registration.md)
-      + [Dynamic Client Registration API](dynamic-client-registration-api.md)
-      + [동적 클라이언트 등록 관리](dynamic-client-registration-management.md)
+   + 클라이언트 등록 {#dcr-api}
+      + [동적 클라이언트 등록 개요](./dcr-api/dynamic-client-registration-overview.md)
+      + API {#dcr-api-apis}
+         + [클라이언트 자격 증명 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-client-credentials.md)
+         + [액세스 토큰 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-access-token.md)
+      + 흐름 {#dcr-api-flows}
+         + [동적 클라이언트 등록 흐름](./dcr-api/flows/dynamic-client-registration-flow.md)
    + 서비스 {#degrn-service} 저하
       + [저하 API 개요](degradation-api-overview.md)
    + 개인 정보 준비 {#privacy-readiness}
@@ -282,4 +286,3 @@ ht-degree: 2%
    + [보고서](/help/authentication/tve-dashboard-reports.md)
    + [변경 로그](/help/authentication/tve-dashboard-changes-log.md)
 + [용어집](glossary.md)
-

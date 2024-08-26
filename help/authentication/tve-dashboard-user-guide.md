@@ -2,9 +2,9 @@
 title: Primetime TVE Dashboard 사용 안내서
 description: Primetime TVE Dashboard 사용 안내서
 exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: c6afb9b080ffe36344d7a3d658450e9be767be61
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '4377'
+source-wordcount: '5504'
 ht-degree: 0%
 
 ---
@@ -112,12 +112,11 @@ TVE 대시보드를 통해 Adobe Pass 인증 구성을 관리적으로 변경하
   사용 가능한 MVPD와의 통합 목록과 함께 사용 가능한 각 통합의 상태를 포함합니다. 특정 항목을 클릭하면 통합 페이지로 이동할 수 있습니다.
 * **등록된 응용 프로그램**
 
-  응용 프로그램 등록 목록을 포함합니다. 자세한 내용은 [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md) 문서를 검토하십시오.
+  응용 프로그램 등록 목록을 포함합니다. 자세한 내용은 [Dynamic Client Registration Management](/help/authentication/dcr-api/dynamic-client-registration-overview.md#dynamic-client-registration-management) 문서를 검토하십시오.
 
 * **사용자 지정 구성표**
 
-  사용자 지정 체계 목록을 포함합니다. 자세한 내용은 [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md) 및 [동적 클라이언트 등록 관리](/help/authentication/dynamic-client-registration-management.md)를 참조하십시오.
-
+  사용자 지정 체계 목록을 포함합니다. 자세한 내용은 [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md) 및 [Dynamic Client Registration Management](/help/authentication/dcr-api/dynamic-client-registration-overview.md#dynamic-client-registration-management)를 참조하십시오.
 
 #### 도메인 추가/삭제 {#add-delete-domains}
 
@@ -126,6 +125,50 @@ TVE 대시보드를 통해 Adobe Pass 인증 구성을 관리적으로 변경하
 ![선택한 채널 섹션에 새 도메인 추가](assets/add-domain-to-channel-sec.png)
 
 *그림: 채널의 도메인 탭*
+
+#### 채널 수준에서 등록된 응용 프로그램 만들기 {#create-registered-application-channel-level}
+
+채널 수준에서 등록된 응용 프로그램을 만들려면 &quot;채널&quot; 메뉴로 이동하여 응용 프로그램을 만들 채널을 선택합니다. 그런 다음 &quot;등록된 응용 프로그램&quot; 탭으로 이동한 후 &quot;새 응용 프로그램 추가&quot; 단추를 클릭합니다.
+
+![](./assets/reg-new-app-channel-level.png)
+
+아래 이미지에 표시된 대로 입력해야 하는 필드는 다음과 같습니다.
+
+* **응용 프로그램 이름** - 응용 프로그램 이름
+
+* **채널에 할당됨** - 아래 표시된 대로 프로그래머 수준에서 수행한 동일한 작업과 비교하여 약간 다른 점은 &quot;할당된 채널&quot; 드롭다운이 활성화되지 않았으므로 현재 채널 이외의 채널에 등록된 응용 프로그램을 바인딩할 수 있는 옵션이 없습니다.
+
+* **응용 프로그램 버전** - 기본적으로 &quot;1.0.0&quot;으로 설정되어 있지만 고유한 응용 프로그램 버전으로 수정하는 것이 좋습니다. 가장 좋은 방법은 응용 프로그램의 버전을 변경하기로 결정한 경우 해당 응용 프로그램에 대해 등록된 새 응용 프로그램을 만드는 것입니다.
+
+* **응용 프로그램 플랫폼** - 연결할 응용 프로그램의 플랫폼입니다. 모든 값 또는 여러 값을 선택할 수 있습니다.
+
+* **도메인 이름** - 연결할 응용 프로그램의 도메인입니다. 드롭다운 목록의 도메인은 모든 채널에서 모든 도메인을 통합적으로 선택한 것입니다. 목록에서 여러 도메인을 선택할 수 있습니다. 도메인의 의미는 리디렉션 URL [RFC6749](https://tools.ietf.org/html/rfc6749)입니다. 클라이언트 등록 프로세스에서, 클라이언트 애플리케이션은 인증 흐름의 확정을 위해 리디렉션 URL을 사용하도록 허가되도록 요청할 수 있다. 클라이언트 애플리케이션이 특정 리디렉션 URL을 요청하면 소프트웨어 문과 연결된 이 등록된 애플리케이션에 화이트리스트에 있는 도메인에 대해 유효성이 검사됩니다.
+
+![](./assets/new-reg-app-channel.png)
+
+필드에 적절한 값을 입력한 후 &quot;완료&quot;를 클릭해야 구성에 응용 프로그램을 저장할 수 있습니다.
+
+**이미 만들어진 응용 프로그램을 수정하는 옵션이 없습니다**. 작성된 항목이 더 이상 요구 사항을 충족하지 않는 경우 새로운 등록 애플리케이션을 만들어 요구 사항이 충족되는 클라이언트 애플리케이션과 함께 사용해야 합니다.
+
+##### 소프트웨어 구문 다운로드 {#download-software-statement-channel-level}
+
+![](./assets/reg-app-list.png)
+
+소프트웨어 문이 필요한 목록 항목의 &quot;다운로드&quot; 단추를 클릭하면 텍스트 파일이 생성됩니다. 이 파일에는 아래 샘플 출력과 유사한 내용이 포함됩니다.
+
+![](./assets/download-software-statement.png)
+
+파일 이름은 앞에 &quot;software_statement&quot;를 추가하고 현재 타임스탬프를 추가하여 고유하게 식별됩니다.
+
+등록된 동일한 애플리케이션의 경우 다운로드 버튼을 클릭할 때마다 다른 소프트웨어 명령문이 수신되지만 이는 이 애플리케이션에 대해 이전에 획득한 소프트웨어 명령문을 무효화하지 않습니다. 이 문제는 작업 요청에 따라 즉석에서 생성되기 때문에 발생합니다.
+
+다운로드 작업에 대한 **제한**&#x200B;이 하나 있습니다. 등록된 애플리케이션을 만든 직후 &quot;다운로드&quot; 버튼을 클릭하여 소프트웨어 문에 대한 요청을 받았지만 아직 저장되지 않았으며 구성 json이 동기화되지 않은 경우, 페이지 하단에 다음 오류 메시지가 표시됩니다.
+
+![](./assets/error-sw-statement-notready.png)
+
+등록된 애플리케이션의 ID가 아직 전파되지 않았으며 코어에서 이에 대한 정보가 없기 때문에 코어에서 받은 HTTP 404 Not Found 오류 코드를 래핑합니다.
+
+등록된 응용 프로그램을 만든 후 구성이 동기화되는 데 최대 2분이 걸릴 때까지 기다리는 것이 해결책입니다. 이 경우 오류 메시지가 더 이상 수신되지 않으며 소프트웨어 문이 있는 텍스트 파일을 다운로드할 수 있습니다.
 
 ### 프로그래머 {#tve-db-programmers-section}
 
@@ -147,12 +190,57 @@ TVE 대시보드를 통해 Adobe Pass 인증 구성을 관리적으로 변경하
 
 * **등록된 응용 프로그램**
 
-  응용 프로그램 등록 목록을 포함합니다. 자세한 내용은 [동적 클라이언트 등록 관리](/help/authentication/dynamic-client-registration-management.md)를 참조하십시오.
+  응용 프로그램 등록 목록을 포함합니다. 자세한 내용은 [Dynamic Client Registration Management](/help/authentication/dcr-api/dynamic-client-registration-overview.md#dynamic-client-registration-management)를 참조하십시오.
 
 * **사용자 지정 구성표**
 
-  사용자 지정 체계 목록을 포함합니다. 자세한 내용은 [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md) 및 [동적 클라이언트 등록 관리](/help/authentication/dynamic-client-registration-management.md)를 참조하십시오.
+  사용자 지정 체계 목록을 포함합니다. 자세한 내용은 [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md)을 참조하세요.
 
+#### 프로그래머 수준에서 등록된 응용 프로그램 만들기 {#create-registered-application-programmer-level}
+
+**프로그래머** > **등록된 응용 프로그램** 탭으로 이동합니다.
+
+![](./assets/reg-app-progr-level.png)
+
+등록된 응용 프로그램 탭에서 **새 응용 프로그램 추가**&#x200B;를 클릭합니다. 새 창에서 필수 필드를 입력합니다.
+
+아래 이미지에 표시된 대로 입력해야 하는 필드는 다음과 같습니다.
+
+* **응용 프로그램 이름** - 응용 프로그램 이름
+
+* **채널에 할당** - 이 응용 프로그램이 연결된 채널의 이름 t</span>입니다. 드롭다운 마스크의 기본 설정은 **모든 채널입니다.** 인터페이스를 사용하면 한 채널 또는 모든 채널을 선택할 수 있습니다.
+
+* **응용 프로그램 버전** - 기본적으로 &quot;1.0.0&quot;으로 설정되어 있지만 고유한 응용 프로그램 버전으로 수정하는 것이 좋습니다. 가장 좋은 방법은 응용 프로그램의 버전을 변경하기로 결정한 경우 해당 응용 프로그램에 대해 등록된 새 응용 프로그램을 만드는 것입니다.
+
+* **응용 프로그램 플랫폼** - 연결할 응용 프로그램의 플랫폼입니다. 모든 값 또는 여러 값을 선택할 수 있습니다.
+
+* **도메인 이름** - 연결할 응용 프로그램의 도메인입니다. 드롭다운 목록의 도메인은 모든 채널에서 모든 도메인을 통합적으로 선택한 것입니다. 목록에서 여러 도메인을 선택할 수 있습니다. 도메인의 의미는 리디렉션 URL [RFC6749](https://tools.ietf.org/html/rfc6749)입니다. 클라이언트 등록 프로세스에서, 클라이언트 애플리케이션은 인증 흐름의 확정을 위해 리디렉션 URL을 사용하도록 허가되도록 요청할 수 있다. 클라이언트 애플리케이션이 특정 리디렉션 URL을 요청하면 소프트웨어 문과 연결된 이 등록된 애플리케이션에 화이트리스트에 있는 도메인에 대해 유효성이 검사됩니다.
+
+![](./assets/new-reg-app.png)
+
+필드에 적절한 값을 입력한 후 &quot;완료&quot;를 클릭해야 구성에 응용 프로그램을 저장할 수 있습니다.
+
+**이미 만들어진 응용 프로그램을 수정하는 옵션이 없습니다**. 작성된 항목이 더 이상 요구 사항을 충족하지 않는 경우 새로운 등록 애플리케이션을 만들어 요구 사항이 충족되는 클라이언트 애플리케이션과 함께 사용해야 합니다.
+
+##### 소프트웨어 구문 다운로드 {#download-software-statement-programmer-level}
+
+![](./assets/reg-app-list.png)
+
+소프트웨어 문이 필요한 목록 항목의 &quot;다운로드&quot; 단추를 클릭하면 텍스트 파일이 생성됩니다. 이 파일에는 아래 샘플 출력과 유사한 내용이 포함됩니다.
+
+![](./assets/download-software-statement.png)
+
+파일 이름은 앞에 &quot;software_statement&quot;를 추가하고 현재 타임스탬프를 추가하여 고유하게 식별됩니다.
+
+등록된 동일한 애플리케이션의 경우 다운로드 버튼을 클릭할 때마다 다른 소프트웨어 명령문이 수신되지만 이는 이 애플리케이션에 대해 이전에 획득한 소프트웨어 명령문을 무효화하지 않습니다. 이 문제는 작업 요청에 따라 즉석에서 생성되기 때문에 발생합니다.
+
+다운로드 작업에 대한 **제한**&#x200B;이 하나 있습니다. 등록된 애플리케이션을 만든 직후 &quot;다운로드&quot; 버튼을 클릭하여 소프트웨어 문에 대한 요청을 받았지만 아직 저장되지 않았으며 구성 json이 동기화되지 않은 경우 페이지 하단에 다음 오류 메시지가 표시됩니다.
+
+![](./assets/error-sw-statement-notready.png)
+
+등록된 애플리케이션의 ID가 아직 전파되지 않았으며 코어에서 이에 대한 정보가 없기 때문에 코어에서 받은 HTTP 404 Not Found 오류 코드를 래핑합니다.
+
+등록된 응용 프로그램을 만든 후 구성이 동기화되는 데 최대 2분이 걸릴 때까지 기다리는 것이 해결책입니다. 이 경우 오류 메시지가 더 이상 수신되지 않으며 소프트웨어 문이 있는 텍스트 파일을 다운로드할 수 있습니다.
 
 ### 통합 {#tve-db-integrations-sec}
 

@@ -1,7 +1,7 @@
 ---
 title: 코드를 사용하여 인증 세션 검색
 description: REST API V2 - 코드를 사용하여 인증 세션 검색
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
 source-wordcount: '406'
 ht-degree: 2%
@@ -59,7 +59,7 @@ ht-degree: 2%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
-      <td>전달자 토큰 페이로드의 생성은 <a href="../../../dynamic-client-registration-api.md">동적 클라이언트 등록</a> 문서에 설명되어 있습니다.</td>
+      <td>전달자 토큰 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -115,7 +115,7 @@ ht-degree: 2%
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../dynamic-client-registration-api.md">동적 클라이언트 등록</a> 설명서를 참조하십시오.
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../dcr-api/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
       </td>
    </tr>
    <tr>

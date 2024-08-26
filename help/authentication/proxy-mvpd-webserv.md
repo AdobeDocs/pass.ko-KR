@@ -2,29 +2,28 @@
 title: 프록시 MVPD 웹 서비스
 description: 프록시 MVPD 웹 서비스
 exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
-source-git-commit: f8cef3c41fb7132204c4fa499301c3010f62ca14
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
 source-wordcount: '1003'
 ht-degree: 0%
 
 ---
 
+
 # 프록시 MVPD 웹 서비스 {#proxy-mvpd-wbservice}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
->프록시 MVPD 웹 서비스를 사용하려면 다음을 수행해야 합니다.
->- 지원 팀에 등록된 응용 프로그램에 대한 소프트웨어 설명을 요청하십시오.
->- [동적 클라이언트 등록](dynamic-client-registration.md)을(를) 기반으로 액세스 토큰 가져오기
-> 
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->프록시 MVPD 웹 서비스를 사용하려면 다음을 수행해야 합니다.
->- 지원 팀에 등록된 응용 프로그램에 대한 소프트웨어 설명을 요청하십시오.
->- [동적 클라이언트 등록](dynamic-client-registration.md)을(를) 기반으로 액세스 토큰 가져오기
-> 
+> 프록시 MVPD 웹 서비스를 사용하기 전에 다음 전제 조건이 충족되었는지 확인하십시오.
+>
+> * [클라이언트 자격 증명 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API 설명서에 설명된 대로 클라이언트 자격 증명을 가져옵니다.
+> * [액세스 토큰 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 액세스 토큰을 가져옵니다.
+>
+> 등록된 응용 프로그램을 만들고 소프트웨어 문을 다운로드하는 방법에 대한 자세한 내용은 [동적 클라이언트 등록 개요](./dcr-api/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
 ## 개요 {#overview-proxy-mvpd-webserv}
 
@@ -232,7 +231,7 @@ Adobe은 당사의 공개 웹 서비스에서/로 프록시화된 MVPD를 게시
 
 요청이 유효한 것으로 간주되려면 다음 규칙을 준수해야 합니다.
 
-- 요청 헤더에는 [Dynamic Client Registration](dynamic-client-registration.md)의 보안 Oauth2 액세스 토큰이 포함되어야 합니다.
+- 요청 헤더에는 [액세스 토큰 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 가져온 보안 Oauth2 액세스 토큰이 포함되어야 합니다.
 - 허용된 특정 IP 주소에서 요청을 가져와야 합니다.
 - SSL 프로토콜을 통해 요청을 전송해야 합니다.
 

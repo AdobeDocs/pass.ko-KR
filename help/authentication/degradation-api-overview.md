@@ -2,29 +2,28 @@
 title: 저하 API 개요
 description: 저하 API 개요
 exl-id: c7d6685b-a235-42eb-9c9c-0ffa1747f614
-source-git-commit: f918d7f9f7b2af5b4364421f6703211e413eafb4
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '427'
 ht-degree: 0%
 
 ---
 
+
 # 저하 API 개요 {#degradation-api-overview}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
->저하 API를 사용하려면 다음을 수행해야 합니다.
->- 지원 팀에 등록된 응용 프로그램에 대한 소프트웨어 설명을 요청하십시오.
->- [동적 클라이언트 등록](dynamic-client-registration.md)을(를) 기반으로 액세스 토큰 가져오기
-> 
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
->[!NOTE]
+>[!IMPORTANT]
 >
->저하 API를 사용하려면 다음을 수행해야 합니다.
->- 지원 팀에 등록된 응용 프로그램에 대한 소프트웨어 설명을 요청하십시오.
->- [동적 클라이언트 등록](dynamic-client-registration.md)을(를) 기반으로 액세스 토큰 가져오기
-> 
+> Degradation API를 사용하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
+>
+> * [클라이언트 자격 증명 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API 설명서에 설명된 대로 클라이언트 자격 증명을 가져옵니다.
+> * [액세스 토큰 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 액세스 토큰을 가져옵니다.
+>
+> 등록된 응용 프로그램을 만들고 소프트웨어 문을 다운로드하는 방법에 대한 자세한 내용은 [동적 클라이언트 등록 개요](./dcr-api/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
 ## 일반 정보 {#general_info}
 
@@ -42,7 +41,7 @@ ht-degree: 0%
 
 - 이 기능은 사용 모니터링 API와 함께 사용하도록 설계되었습니다. 이 API는 MVPD당 인증 및 권한 부여 수, 평균 인증 지연 시간 및 전체 서비스 개요에 필요한 기타 지표에 대한 실시간 정보를 제공합니다.
 - 이 기능을 사용하면 Adobe Primetime 인증 서비스를 우회할 수 없습니다. Adobe Pass 인증이 다운된 경우 서비스 내에서 사용자가 콘텐츠를 볼 수 있도록 하는 데 사용할 수 있는 메커니즘이 없습니다. 그러나 사이트 또는 앱은 Adobe Pass 인증 주변을 스스로 라우팅할 수 있습니다.
-- Adobe이 현재 바로 성능 저하를 트리거하지 않습니다. 결정은 항상 MVPD와 이러한 조건에 동의한 특정 프로그래머와 함께 있어야 합니다. MVPD로 계약(SLA 보호)에 도달할 수 있는 경우 향후 Adobe Pass 인증이 성능 저하 규칙을 트리거하는 데 사전 예방적일 수 있습니다.
+- Adobe이 현재 바로 성능 저하를 트리거하지 않습니다. 결정은 항상 MVPD와 이러한 조건에 동의한 특정 프로그래머와 함께 있어야 합니다. 향후 Adobe Pass 인증은 MVPD와 계약(SLA 보호)에 도달할 수 있는 경우 성능 저하 규칙을 트리거할 때 사전 예방적일 수 있습니다.
 
 <!--
 ## Related Information {#related}

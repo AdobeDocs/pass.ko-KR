@@ -2,9 +2,9 @@
 title: 채널
 description: TVE 대시보드 내의 채널과 다양한 구성에 대해 알아봅니다.
 exl-id: bbddeccb-6b6f-4a8f-87ab-d4af538eee1d
-source-git-commit: c2dcea9e4170a3e10654bcd3f8d2f5cdb82c9603
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '1140'
+source-wordcount: '1124'
 ht-degree: 0%
 
 ---
@@ -206,11 +206,11 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 ### 등록된 응용 프로그램 {#registered-applications}
 
-이 탭에는 응용 프로그램 등록 목록이 제공됩니다. 자세한 내용은 [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md)를 참조하십시오.
+이 탭에는 응용 프로그램 등록 목록이 제공됩니다.
 
 ### 사용자 지정 체계 {#custom-schemes}
 
-이 탭에는 사용자 지정 체계 목록이 표시됩니다. 자세한 내용은 [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md) 및 [동적 클라이언트 등록 관리](/help/authentication/dynamic-client-registration-management.md)를 참조하십시오.
+이 탭에는 사용자 지정 체계 목록이 표시됩니다. [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md) 보기
 
 ## 새 채널 추가 {#add-new-channel}
 

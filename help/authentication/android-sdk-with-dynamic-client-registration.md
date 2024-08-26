@@ -2,9 +2,9 @@
 title: Android SDK(동적 클라이언트 등록 포함)
 description: Android SDK(동적 클라이언트 등록 포함)
 exl-id: 8d0c1507-8e80-40a4-8698-fb795240f618
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '1277'
+source-wordcount: '1278'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Android의 경우 Chrome 사용자 정의 탭을 사용하면 다른 애플리�
 
 ## 동적 클라이언트 등록 {#DCR}
 
-Android SDK v3.0+는 [동적 클라이언트 등록](/help/authentication/dynamic-client-registration.md)에 정의된 대로 동적 클라이언트 등록 절차를 사용합니다.
+Android SDK v3.0+는 [동적 클라이언트 등록 개요](./dcr-api/dynamic-client-registration-overview.md)에 정의된 대로 동적 클라이언트 등록 절차를 사용합니다.
 
 
 ## 기능 데모 {#Demo}

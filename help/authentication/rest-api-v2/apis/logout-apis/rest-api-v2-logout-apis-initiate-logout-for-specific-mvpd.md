@@ -1,9 +1,9 @@
 ---
 title: 특정 mvpd에 대한 로그아웃 시작
 description: REST API V2 - 특정 mvpd에 대한 로그아웃 시작
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '909'
+source-wordcount: '913'
 ht-degree: 1%
 
 ---
@@ -73,18 +73,18 @@ ht-degree: 1%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
-      <td>전달자 토큰 페이로드의 생성은 <a href="../../../dynamic-client-registration-api.md">동적 클라이언트 등록</a> 문서에 설명되어 있습니다.</td>
+      <td>전달자 토큰 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-authorization.md">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-Device-Identifier</td>
-      <td>장치 식별자 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md">AP-Device-Identifier</a> 문서에 설명되어 있습니다.</td>
+      <td>장치 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Device-Info</td>
       <td>
-         장치 정보 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md">X-Device-Info</a> 설명서에 설명되어 있습니다.
+         장치 정보 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md">X-Device-Info</a> 헤더 설명서에 설명되어 있습니다.
          <br/><br/>
          응용 프로그램의 장치 플랫폼에서 유효한 값의 명시적 제공을 허용하는 경우 항상 사용하는 것이 좋습니다.
          <br/><br/>
@@ -108,7 +108,7 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">Adobe-주체-토큰</td>
       <td>
-        플랫폼 ID 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-주체-토큰</a> 문서에 설명되어 있습니다.
+        플랫폼 ID 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-주체-토큰</a> 헤더 설명서에 설명되어 있습니다.
         <br/><br/>
         플랫폼 ID를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md">플랫폼 ID 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
@@ -117,7 +117,7 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">광고 서비스 토큰</td>
       <td>
-        서비스 토큰 메서드에 대한 SSO(Single Sign-On) 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md">AD-Service-Token</a> 문서에 설명되어 있습니다.
+        서비스 토큰 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md">AD-Service-Token</a> 헤더 설명서에 설명되어 있습니다.
         <br/><br/>
         서비스 토큰을 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md">서비스 토큰 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
@@ -165,7 +165,7 @@ ht-degree: 1%
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../dynamic-client-registration-api.md">동적 클라이언트 등록</a> 설명서를 참조하십시오.
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../dcr-api/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
       </td>
    </tr>
    <tr>

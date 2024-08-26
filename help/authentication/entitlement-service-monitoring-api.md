@@ -2,18 +2,27 @@
 title: 권한 부여 서비스 모니터링 API
 description: 권한 부여 서비스 모니터링 API
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: 1ad2a4e75cd64755ccbde8f3b208148b7d990d82
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '2010'
+source-wordcount: '2070'
 ht-degree: 0%
 
 ---
 
 # 권한 부여 서비스 모니터링 API {#entitlement-service-monitoring-api}
 
->[!NOTE]
+>[!IMPORTANT]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+>[!IMPORTANT]
+>
+> Degradation API를 사용하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
+>
+> * [클라이언트 자격 증명 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API 설명서에 설명된 대로 클라이언트 자격 증명을 가져옵니다.
+> * [액세스 토큰 검색](./dcr-api/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 액세스 토큰을 가져옵니다.
+>
+> 등록된 응용 프로그램을 만들고 소프트웨어 문을 다운로드하는 방법에 대한 자세한 내용은 [동적 클라이언트 등록 개요](./dcr-api/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
 ## API 개요 {#api-overview}
 

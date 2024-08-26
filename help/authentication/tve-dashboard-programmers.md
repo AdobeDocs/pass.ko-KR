@@ -2,9 +2,9 @@
 title: 프로그래머
 description: TVE 대시보드 내 프로그래머 및 해당 구성에 대해 알아봅니다.
 exl-id: b450d7cc-d5b5-4454-8f95-8047856bfb98
-source-git-commit: c2dcea9e4170a3e10654bcd3f8d2f5cdb82c9603
+source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
 workflow-type: tm+mt
-source-wordcount: '717'
+source-wordcount: '701'
 ht-degree: 0%
 
 ---
@@ -120,11 +120,11 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 ### 등록된 응용 프로그램 {#registered-applications}
 
-이 탭에는 응용 프로그램 등록 목록이 제공됩니다. 자세한 내용은 [Dynamic Client Registration Management](/help/authentication/dynamic-client-registration-management.md)를 참조하십시오.
+이 탭에는 응용 프로그램 등록 목록이 제공됩니다.
 
 ### 사용자 지정 체계 {#custom-schemes}
 
-이 탭에는 사용자 지정 체계 목록이 표시됩니다. 자세한 내용은 [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md) 및 [동적 클라이언트 등록 관리](/help/authentication/dynamic-client-registration-management.md)를 참조하십시오.
+이 탭에는 사용자 지정 체계 목록이 표시됩니다. [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md) 보기
 
 ## 새 프로그래머 추가 {#add-new-programmer}
 
