@@ -2,9 +2,9 @@
 title: 프록시 MVPD 웹 서비스
 description: 프록시 MVPD 웹 서비스
 exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+source-git-commit: 186335e27c05b2e0dd553607715a625376d9f299
 workflow-type: tm+mt
-source-wordcount: '1003'
+source-wordcount: '1027'
 ht-degree: 0%
 
 ---
@@ -239,14 +239,14 @@ Adobe은 당사의 공개 웹 서비스에서/로 프록시화된 MVPD를 게시
 
 Curl 예:
 
-`curl -X GET -H "Authorization: Bearer <access_token_here>" "https://mgmt-prequal.auth-staging.adobe.com/control/v3/proxiedMvpds"`
+`curl -X GET -H "Authorization: Bearer <access_token_here>" "https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier&gt;/mvpds"`
 
 ## Adobe Pass 인증 환경에 대한 프록시 MVPD 웹 서비스 끝점 {#proxy-mvpd-wevserv-endpoints}
 
-- **프로덕션 URL:** https://mgmt.auth.adobe.com/control/v3/proxiedMvpds
-- **스테이징 URL:** https://mgmt.auth-staging.adobe.com/control/v3/proxiedMvpds
-- **PreQual-Production URL:** https://mgmt-prequal.auth.adobe.com/control/v3/proxiedMvpds
-- **PreQual-Staging URL:** https://mgmt-prequal.auth-staging.adobe.com/control/v3/proxiedMvpds
+- **프로덕션 URL:** https://mgmt.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **스테이징 URL:** https://mgmt.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **PreQual-Production URL:** https://mgmt-prequal.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **PreQual-Staging URL:** https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
 
 <!--
 >[!RELATEDINFORMATION]
