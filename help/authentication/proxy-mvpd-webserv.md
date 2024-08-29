@@ -2,7 +2,7 @@
 title: 프록시 MVPD 웹 서비스
 description: 프록시 MVPD 웹 서비스
 exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
-source-git-commit: 186335e27c05b2e0dd553607715a625376d9f299
+source-git-commit: 6cd7093862b2a343d8105ba4d8e493851e93b87e
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -239,7 +239,7 @@ Adobe은 당사의 공개 웹 서비스에서/로 프록시화된 MVPD를 게시
 
 Curl 예:
 
-`curl -X GET -H "Authorization: Bearer <access_token_here>" "https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier&gt;/mvpds"`
+`curl -X GET -H "Authorization: Bearer <access_token_here>" "https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/<proxy-mvpd-identifier>/mvpds"`
 
 ## Adobe Pass 인증 환경에 대한 프록시 MVPD 웹 서비스 끝점 {#proxy-mvpd-wevserv-endpoints}
 
