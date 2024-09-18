@@ -1,7 +1,7 @@
 ---
 title: REST API V2 - Cookbook - 클라이언트/서버 구현 단계
 description: REST API V2 - Cookbook - 클라이언트/서버 구현 단계
-source-git-commit: 5ba888b35731ef64b3dd1878f2fa55083989f857
+source-git-commit: 5ba538bdb13d121ba27005df82d4ae604f912241
 workflow-type: tm+mt
 source-wordcount: '698'
 ht-degree: 0%
@@ -26,6 +26,7 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
 ## A. 등록 단계 {#registration-phase}
 
 ### 1단계: 애플리케이션 등록 {#step-1-register-your-application}
+
 애플리케이션이 Adobe Pass REST API V2를 호출하려면 API 보안 계층에 필요한 액세스 토큰이 필요합니다.
 액세스 토큰을 가져오려면 애플리케이션은 다음과 같이 단계를 수행해야 합니다.
 [동적 클라이언트 등록](./dynamic-client-registration.md)
@@ -33,6 +34,7 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
 ## B. 인증 단계 {#authentication-phase}
 
 ### 2단계: 인증된 기존 프로필 확인 {#step-2-check-for-existing-authenticated-profiles}
+
 스트리밍 응용 프로그램에서 기존 인증된 프로필을 확인합니다. <b>/api/v2/{serviceProvider}/프로필</b><br>
 ([인증된 프로필 검색](./apis/profiles-apis/rest-api-v2-retrieve-authenticated-profiles.md))
 
@@ -49,6 +51,7 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
       * 프로필이 발견되면 스트리밍 응용 프로그램이 <a href="#preauthorization-phase">C로 진행될 수 있습니다. 사전 인증 단계</a> 또는 <a href="#authorization-phase">D. 인증 단계</a>
 
 ### 3단계: 사용자 인증 {#step-3-authenticate-the-user}
+
 브라우저 또는 두 번째 화면 웹 기반 애플리케이션 사용:
 
 * 옵션 1. 스트리밍 애플리케이션은 브라우저 또는 웹 보기를 열고 인증할 URL을 로드하며 사용자는 자격 증명을 제출해야 하는 MVPD 로그인 페이지에 도달합니다
@@ -57,6 +60,7 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
    * 사용자 로그인/암호 입력, 최종 리디렉션에 성공 페이지가 표시됨
 
 ### 4단계: 인증된 프로필 확인 {#step-4-check-for-authenticated-profiles}
+
 스트리밍 애플리케이션은 브라우저 또는 두 번째 화면에서 완료하기 위해 MVPD를 사용한 인증을 확인합니다.
 
 * <b>/api/v2/{serviceProvider}/profiles/{mvpd}</b><br>에서 15초마다 폴링하는 것이 좋습니다.
@@ -70,8 +74,10 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
 ## C. 사전 인증 단계 {#preauthorization-phase}
 
 ### 5단계: 사전 승인된 리소스 확인 {#step-5-check-for-preauthorized-resources}
+
 스트리밍 애플리케이션은 인증된 사용자가 사용할 수 있는 비디오를 표시하도록 준비하며 다음을 확인할 수 있습니다.
 이러한 리소스에 대한 액세스 권한.
+
 * 응용 프로그램에서 인증된 사용자 패키지에서 사용할 수 없는 리소스를 필터링하려는 경우 단계는 선택 사항이며 실행됩니다.
 * <b>/api/v2/{serviceProvider}/decisions/preauthorize/{mvpd}</b><br> 호출
 ([특정 MVPD를 사용하여 사전 권한 부여 결정 검색](.apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md))
@@ -80,6 +86,7 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
 ## D. 인증 단계 {#authorization-phase}
 
 ### 6단계: 승인된 리소스 확인 {#step-6-check-for-authorized-resources}
+
 스트리밍 애플리케이션은 사용자가 선택한 비디오/에셋/리소스의 재생을 준비한다.
 
 * 모든 재생 시작에 단계가 필요합니다.
@@ -91,6 +98,7 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
 ## E. 로그아웃 단계 {#logout-phase}
 
 ### 7단계: 로그아웃 {#step-7-logout}
+
 스트리밍 장치 : 사용자가 MVPD에서 로그아웃하려고 합니다.
 
 * <b>/api/v2/{serviceProvider}/logout/{mvpd}</b><br> 호출
