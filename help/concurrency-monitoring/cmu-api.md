@@ -2,7 +2,7 @@
 title: API 개요
 description: API 개요
 exl-id: 3fe6f6d8-5b2f-47e5-a8da-06fb18a5d46b
-source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
+source-git-commit: 301825253b21746684df9b6372a239b03305d50e
 workflow-type: tm+mt
 source-wordcount: '2043'
 ht-degree: 0%
@@ -24,7 +24,7 @@ CMU(동시성 모니터링 사용)는 WOLAP(웹 기반 [온라인 분석 처리]
 >
 >CMU API는 일반적으로 사용할 수 없습니다. 가용성에 대한 질문이 있는 경우 Adobe 담당자에게 문의하십시오.
 
-CMU API는 기본 OLAP 큐브의 계층 구조 보기를 제공합니다. 각 리소스([차원](/help/authentication/entitlement-service-monitoring-overview.md#progr-filter-metrics), URL 경로 세그먼트로 매핑됨)는 현재 선택 항목에 대해 [지표](/help/authentication/entitlement-service-monitoring-overview.md#programmers-can-monitor-the-following-metrics)이(가) 포함된(집계된) 보고서를 생성합니다. 각 리소스는 상위 리소스(롤업용)와 하위 리소스(드릴다운용)를 가리킵니다. 슬라이싱 및 다이싱은 특정 값 또는 범위에 차원을 고정하는 쿼리 문자열 매개 변수를 통해 수행됩니다.
+CMU API는 기본 OLAP 큐브의 계층 구조 보기를 제공합니다. 각 리소스([차원](/help/concurrency-monitoring/cm-usage-reports.md#dimensions-2-filter-metrics), URL 경로 세그먼트로 매핑됨)는 현재 선택 항목에 대해 [지표](/help/concurrency-monitoring/cm-usage-reports.md#monitor-metrics)이(가) 포함된(집계된) 보고서를 생성합니다. 각 리소스는 상위 리소스(롤업용)와 하위 리소스(드릴다운용)를 가리킵니다. 슬라이싱 및 다이싱은 특정 값 또는 범위에 차원을 고정하는 쿼리 문자열 매개 변수를 통해 수행됩니다.
 
 REST API는 차원 경로, 제공된 필터 및 선택한 지표에 따라 요청에 지정된 시간 간격(제공되지 않은 경우 기본값으로 폴백) 내에 사용 가능한 데이터를 제공합니다. 시간 차원 (연도, 월, 일, 시간, 분, 초)이 포함되지 않은 보고서에는 시간 범위가 적용되지 않습니다.
 
