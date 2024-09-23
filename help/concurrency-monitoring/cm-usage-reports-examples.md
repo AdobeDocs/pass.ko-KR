@@ -1,9 +1,9 @@
 ---
 title: 동시성 모니터링 사용 보고서 예
 description: 동시성 모니터링 사용 보고서 예
-source-git-commit: 1ee6ba156364b183e7b5271e38af2c34687fca65
+source-git-commit: 7adfa5c803d27ac63f4fde64cf86edfb6bfca9cd
 workflow-type: tm+mt
-source-wordcount: '2400'
+source-wordcount: '2387'
 ht-degree: 0%
 
 ---
@@ -37,8 +37,6 @@ ht-degree: 0%
 | 활동 수준 월별 보고서 | &quot;year&quot;, &quot;month&quot;, &quot;activity-level&quot; | cmu/v2/년/월/활동 수준 | &quot;activity-level&quot;, &quot;users&quot; |
 | 테넌트당 활동 수준 월별 보고서 | &quot;year&quot;, &quot;month&quot;, &quot;activity-level&quot;, &quot;tenant&quot; | cmu/v2/year/month/activity-level/tenant | &quot;activity-level&quot;, &quot;tenant&quot;, &quot;users&quot; |
 | 테넌트 mvpd당 활동 수준 월별 보고서 | &quot;year&quot;, &quot;month&quot;, &quot;activity-level&quot;, &quot;tenant&quot;, &quot;mvpd&quot; | cmu/v2/year/month/activity-level/tenant/mvpd | &quot;activity-level&quot;, &quot;tenant&quot;, &quot;mvpd&quot;,&quot;users&quot; |
-
-*TODO:동시성 및 활동 수준 보고서가 올바른지 BG로 확인 *
 
 ## 일별 보고서 예 {#daily-reports-examples}
 
