@@ -1,13 +1,13 @@
 ---
 title: 클라이언트 자격 증명 검색
 description: Dynamic Client Registration API - 클라이언트 자격 증명 검색
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: 0b39768b-25b8-47b9-8080-59c56fb829fb
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
-source-wordcount: '431'
-ht-degree: 1%
+source-wordcount: '0'
+ht-degree: 0%
 
 ---
-
 
 # 클라이언트 자격 증명 검색 {#retrieve-client-credentials}
 
@@ -45,7 +45,7 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">software_statement</td>
       <td>
-            <a href="https://console.auth.adobe.com/">Adobe Pass TVE Dashboard</a>에서 만들고 다운로드한 등록된 응용 프로그램과 연결된 소프트웨어 문입니다.
+            <a href="https://experience.adobe.com/#/pass/authentication">Adobe Pass TVE Dashboard</a>에서 만들고 다운로드한 등록된 응용 프로그램과 연결된 소프트웨어 문입니다.
             <br/><br/>
             등록된 응용 프로그램의 관리는 <a href="../dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 문서에 설명되어 있습니다.
       </td>

@@ -2,9 +2,9 @@
 title: CMU API 액세스
 description: CMU API 액세스
 exl-id: 8d216703-aabc-489e-93fe-d4d105616b1d
-source-git-commit: 52c0ffe75f6ac9fda3da39ff08b0dc4c5d5ca428
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
-source-wordcount: '407'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -27,20 +27,22 @@ OAuth 2.0 Dynamic Client Registration Protocol과 호환되도록 CMU 보고서 
 ## 액세스 절차 단계 {#access-procedure-steps}
 
 1. Adobe Pass DCR 서버에 등록된 응용 프로그램이 있습니다. 이 단계는 [지원 팀](mailto:tve-support@adobe.com)에 문의하십시오.
+
 2. 소프트웨어 구문 가져오기
-   1. TVE 대시보드 <a href="https://console-preprod.auth.adobe.com/#!/" target="_blank"> 사전 프로덕션 </a> 또는 <a href="https://console.auth.adobe.com/" target="_blank">PROD</a>(으)로 이동
+   1. [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)(으)로 이동
    2. 프로그래머 선택
-   3. 응용 프로그램 탭으로 이동
+   3. *등록된 응용 프로그램* 탭으로 이동
    4. 애플리케이션 선택
-   5. DownLoad Software Statement 를 클릭하여 아래 캡처와 유사한 파일을 가져옵니다.
+   5. 소프트웨어 명령문을 가져올 등록된 응용 프로그램 행에서 다운로드를 클릭하고 로컬 컴퓨터에 파일로 저장합니다
       <figure>
-          <img src="assets/software_statement_1_download.png"
+          <img src="assets/programmer-download-software-statement-button.png"
                alt="소프트웨어 구문 다운로드">
-       </figure>
+      </figure>
+
       <figure>
           <img src="assets/software_statement_2.png"
                alt="소프트웨어 구문 샘플">
-       </figure>
+      </figure>
 
 3. 액세스 토큰 가져오기
    1. 위에서 얻은 소프트웨어 문을 사용하고 아래 호출을 수행하여 클라이언트 자격 증명을 가져옵니다. 이러한 방식으로 액세스 토큰을 가져오는 데 사용할 수 있는 client_id - client_secret 쌍을 얻습니다.

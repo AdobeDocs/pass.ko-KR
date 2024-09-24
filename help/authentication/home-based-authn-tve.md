@@ -2,9 +2,9 @@
 title: TV Everywhere를 위한 홈 기반 인증
 description: TV Everywhere를 위한 홈 기반 인증
 exl-id: abdc7724-4290-404a-8f93-953662cdc2bc
-source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
-source-wordcount: '1638'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ SAML 인증 프로토콜에 대한 HBA 인증 흐름에 대한 설명
 ## HBA 활성화 방법 {#how-to-activate-hba}
 
 * **OAuth 프로토콜:**
-   * HBA를 사용하려면 [Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md)를 참조하십시오.
+   * HBA를 사용하려면 [Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)를 참조하십시오.
 * **SAML 프로토콜:** 홈 기반 인증이 MVPD 측에서 활성화됩니다. 프로그래머 또는 Adobe은 작업을 수행할 필요가 없습니다.
 홈 기반 인증을 지원하는 MVPD에 대한 자세한 내용은 MVPD에 대한 [HBA 상태](/help/authentication/hba-status-mvpds.md)를 참조하십시오.
 
@@ -156,5 +156,5 @@ SAML 인증 프로토콜에 대한 HBA 인증 흐름에 대한 설명
 * [홈 기반 인증 정보](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf?dc=201604260953-2640){target=_blank} - Adobe
 * [OAuth 2.0 프로토콜을 사용한 인증](/help/authentication/authn-oauth2-protocol.md)
 * [SAML MVPD를 사용한 인증](/help/authentication/authn-usecase.md)
-* [Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md)
+* [Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)
 * [hba_status 사용자 메타데이터](/help/authentication/user-metadata-feature.md#obtaining)

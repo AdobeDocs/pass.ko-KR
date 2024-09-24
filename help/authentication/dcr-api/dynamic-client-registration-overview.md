@@ -2,9 +2,9 @@
 title: 동적 클라이언트 등록 개요
 description: 동적 클라이언트 등록 개요
 exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
-source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
-source-wordcount: '840'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -51,11 +51,11 @@ Dynamic Client Registration을 관리하고 사용하는 방법에 대한 자세
 
 ## 동적 클라이언트 등록 관리 {#dynamic-client-registration-management}
 
-동적 클라이언트 등록 관리 프로세스를 사용하면 특정 플랫폼에서 실행되고 특정 Adobe Pass 인증 API에 액세스해야 하는 클라이언트 응용 프로그램이 [Adobe Pass TVE 대시보드](https://console.auth.adobe.com/)를 통해 등록할 수 있습니다.
+동적 클라이언트 등록 관리 프로세스를 사용하면 특정 플랫폼에서 실행되고 특정 Adobe Pass 인증 API에 액세스해야 하는 클라이언트 응용 프로그램이 [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)를 통해 등록할 수 있습니다.
 
-Adobe Pass TVE Dashboard는 Adobe Pass 인증 고객(프로그래머)이 구성 및 데이터를 관리하는 도구입니다. 이 셀프 서비스 대시보드를 사용하면 [Adobe Pass TVE 대시보드 사용 안내서](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) 설명서에 설명된 다양한 기능을 사용할 수 있습니다.
+Adobe Pass TVE Dashboard는 Adobe Pass 인증 고객(프로그래머)이 구성 및 데이터를 관리하는 도구입니다. 이 셀프 서비스 대시보드를 사용하면 [Adobe Pass TVE 대시보드 사용 안내서](../tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md) 설명서에 설명된 다양한 기능을 사용할 수 있습니다.
 
-[Adobe Pass TVE 대시보드](https://console.auth.adobe.com/)에 액세스할 수 있는 경우 아래 섹션의 단계에 따라 등록된 응용 프로그램을 만들고 소프트웨어 문을 다운로드하십시오.
+[Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)에 액세스할 수 있는 경우 아래 섹션의 단계에 따라 등록된 응용 프로그램을 만들고 소프트웨어 문을 다운로드하십시오.
 
 ### 등록된 응용 프로그램 관리 {#manage-registered-applications}
 
@@ -67,12 +67,12 @@ Adobe Pass TVE Dashboard는 Adobe Pass 인증 고객(프로그래머)이 구성 
 
 * **프로그래머 수준**
 
-  프로그래머 수준의 등록 프로세스를 사용하면 사용 가능한 모든 채널 또는 선택한 채널 하위 집합에 연결된 등록된 애플리케이션을 만들 수 있습니다. 자세한 내용은 [TVE Dashboard 사용 안내서](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) 설명서의 [프로그래머 수준에서 등록된 응용 프로그램 만들기](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md#create-registered-application-programmer-level) 섹션을 참조하십시오.
+  프로그래머 수준의 등록 프로세스를 사용하면 사용 가능한 모든 채널 또는 선택한 채널 하위 집합에 연결된 등록된 애플리케이션을 만들 수 있습니다. 자세한 내용은 [프로그래머를 위한 TVE 대시보드 사용 안내서](../tve-dashboard/new-tve-dashboard/tve-dashboard-programmers.md) 설명서를 참조하십시오.
 
 
 * **채널 수준**
 
-  채널 수준 등록 프로세스를 사용하면 현재 선택한 채널에만 연결된 등록된 애플리케이션을 만들 수 있습니다. 자세한 내용은 [TVE 대시보드 사용 안내서](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) 설명서의 [채널 수준에서 등록된 응용 프로그램 만들기](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md#create-registered-application-channel-level) 섹션을 참조하십시오.
+  채널 수준 등록 프로세스를 사용하면 현재 선택한 채널에만 연결된 등록된 애플리케이션을 만들 수 있습니다. 자세한 내용은 [채널에 대한 TVE 대시보드 사용 안내서](../tve-dashboard/new-tve-dashboard/tve-dashboard-channels.md) 설명서를 참조하십시오.
 
 >[!IMPORTANT]
 >
@@ -92,11 +92,11 @@ Adobe Pass TVE Dashboard는 Adobe Pass 인증 고객(프로그래머)이 구성 
 
 * **프로그래머 수준**
 
-  자세한 내용은 [TVE Dashboard 사용 안내서](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) 설명서의 [프로그래머 수준에서 소프트웨어 문 다운로드](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md#download-software-statement-programmer-level) 섹션을 참조하십시오.
+  자세한 내용은 [프로그래머를 위한 TVE 대시보드 사용 안내서](../tve-dashboard/new-tve-dashboard/tve-dashboard-programmers.md) 설명서를 참조하십시오.
 
 * **채널 수준**
 
-  자세한 내용은 [TVE 대시보드 사용 안내서](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md) 설명서의 [채널 수준에서 소프트웨어 문 다운로드](../tve-dashboard/old-tve-dashboard/tve-dashboard-user-guide.md#download-software-statement-channel-level) 섹션을 참조하십시오.
+  자세한 내용은 [채널에 대한 TVE 대시보드 사용 안내서](../tve-dashboard/new-tve-dashboard/tve-dashboard-channels.md) 설명서를 참조하십시오.
 
 Software 문은 클라이언트 응용 프로그램 소프트웨어에 대한 정보를 번들로 포함하는 JSON 웹 토큰(`JWT`)입니다. [클라이언트 자격 증명 검색](./apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API에 제공되면 소프트웨어 문은 JSON 웹 서명(`JWS`)을 사용하여 디지털 서명됩니다.
 

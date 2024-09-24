@@ -2,9 +2,9 @@
 title: iOS/tvOS 애플리케이션 등록
 description: iOS/tvOS 애플리케이션 등록
 exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ iOS/tvOS AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘�
 
 ### Adobe의 TVE 대시보드에 액세스할 수 있는 경우:
 
-- 브라우저를 열고 <https://console.auth.adobe.com>(으)로 이동
+- 브라우저를 열고 <https://experience.adobe.com/#/pass/authentication>(으)로 이동
 - `Channels` 섹션으로 이동하여 채널을 선택하십시오.
 - `Registered Applications` 탭으로 이동합니다.
 - `Add new application`을(를) 클릭합니다.
@@ -55,7 +55,7 @@ iOS/tvOS AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘�
 
 ### Adobe의 TVE 대시보드에 액세스할 수 있는 경우:
 
-- 브라우저를 열고 <https://console.auth.adobe.com>(으)로 이동
+- 브라우저를 열고 <https://experience.adobe.com/#/pass/authentication>(으)로 이동
 - `Channels` 섹션으로 이동하여 채널을 선택하십시오.
 - `Custom Schemes` 탭으로 이동합니다.
 - `Generate a new custom scheme`을(를) 클릭합니다.

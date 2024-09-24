@@ -2,9 +2,9 @@
 title: Apple SSO 개요
 description: Apple SSO 개요
 exl-id: 7cf47d01-a35a-4c85-b562-e5ebb6945693
-source-git-commit: 59672b44074c472094ed27a23d6bfbcd7654c901
+source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
 workflow-type: tm+mt
-source-wordcount: '1417'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ SSO(Single Sign-On) 사용자 경험을 활용하려면 한 프로그래머가 �
 
 1. [비디오 구독자 Single Sign-On 권한](https://developer.apple.com/documentation/bundleresources/entitlements/com_apple_developer_video-subscriber-single-sign-on)을 Apple 개발자 계정에 구성하도록 합니다. Apple 팀 ID에 대해 [비디오 구독자 계정 프레임워크](https://developer.apple.com/documentation/videosubscriberaccount)를 활성화하려면 Apple에 문의하십시오.
 
-1. [Adobe Primetime TVE 대시보드](https://console.auth.adobe.com/)를 통해 원하는 각 통합(Channel x MVPD) 및 원하는 플랫폼(iOS/tvOS)에 대해 SSO(Single Sign-On)를 활성화합니다.
+1. [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)를 통해 원하는 각 통합(Channel x MVPD) 및 원하는 플랫폼(iOS/tvOS)에 대해 SSO(Single Sign-On)를 활성화합니다.
 
 1. Adobe Pass 인증 팀에서 제공하는 다음 두 가지 솔루션 중 하나를 사용하여 Apple SSO 워크플로를 통합합니다.
 
@@ -90,7 +90,7 @@ MVPD는 다음 작업을 수행해야 합니다.
 ## FAQ {#FAQ}
 
 1. Apple SSO 워크플로에서 문제가 발생하는 경우 AccessEnabler iOS/tvOS SDK를 사용하는 애플리케이션이 일반 인증 플로우로 전환할 수 있습니까?
-   - 가능하지만 [Adobe Primetime TVE 대시보드](https://console.auth.adobe.com/)에서 구성을 변경해야 합니다. 원하는 통합(Channel x MVPD) 및 원하는 플랫폼(iOS/tvOS)에 대해 *SSO(Single Sign-On) 사용*&#x200B;을 *아니요*&#x200B;에 설정해야 합니다.
+   - 가능하지만 [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)에서 구성을 변경해야 합니다. 원하는 통합(Channel x MVPD) 및 원하는 플랫폼(iOS/tvOS)에 대해 *SSO(Single Sign-On) 사용*&#x200B;을 *아니요*&#x200B;에 설정해야 합니다.
    - 응용 프로그램이 AccessEnabler iOS/tvOS SDK를 사용하는 경우 [setRequestor](/help/authentication/iostvos-sdk-api-reference.md#setReqV3) API를 호출한 후에만 구성 변경을 승인합니다.
 1. 다른 장치 또는 다른 애플리케이션에서 플랫폼 SSO를 통해 로그인한 결과 인증이 언제 발생했는지 애플리케이션이 알 수 있습니까?
    - 이 정보는 사용할 수 없습니다.
@@ -98,13 +98,13 @@ MVPD는 다음 작업을 수행해야 합니다.
    - 이 정보는 사용자 메타데이터 키 *tokenSource*&#x200B;의 일부로 사용할 수 있으며, 이 경우 문자열 값 &quot;Apple&quot;를 반환해야 합니다.
 1. 사용자가 애플리케이션과 통합되지 않은 MVPD를 사용하여 iOS/iPadOS의 *`Settings -> TV Provider`* 또는 tvOS 섹션의 *`Settings -> Accounts -> TV Provider`*(으)로 이동하여 로그인하면 어떻게 됩니까?
    - 사용자가 애플리케이션을 실행하면 Apple SSO 워크플로를 통해 사용자가 인증되지 않습니다. 따라서 응용 프로그램은 일반 인증 흐름으로 폴백하여 자체 MVPD 선택기를 표시해야 합니다.
-1. 사용자가 iOS/tvOS 플랫폼용 [Adobe Primetime TVE 대시보드](https://console.auth.adobe.com/)의 *아니요*&#x200B;에 *Single Sign-On 사용*&#x200B;이 설정된 MVPD를 사용하여 iOS/iPadOS의 *`Settings -> TV Provider`* 또는 tvOS 섹션의 *`Settings -> Accounts -> TV Provider`*(으)로 이동하여 로그인하면 어떻게 됩니까?
+1. 사용자가 iOS/tvOS 플랫폼용 [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)의 *아니요*&#x200B;에 *Single Sign-On 사용*&#x200B;이 설정된 MVPD를 사용하여 iOS/iPadOS의 *`Settings -> TV Provider`* 또는 tvOS 섹션의 *`Settings -> Accounts -> TV Provider`*(으)로 이동하여 로그인하면 어떻게 됩니까?
    - 사용자가 애플리케이션을 실행하면 Apple SSO 워크플로를 통해 사용자가 인증되지 않습니다. 따라서 응용 프로그램은 일반 인증 흐름으로 폴백하여 자체 MVPD 선택기를 표시해야 합니다.
 1. 사용자에게 Apple에서 온보딩하지 않았지만(지원되지 않음) Apple 선택기에 있는 MVPD가 있는 경우 어떻게 됩니까?
    - 사용자가 애플리케이션을 실행하면 사용자는 인증 플로우를 완료하지 않고 Apple SSO 워크플로를 통해서만 MVPD를 선택합니다. 따라서 애플리케이션은 일반 인증 플로우로 폴백해야 하지만 이미 선택한 MVPD를 사용할 수 있습니다.
 1. 사용자에게 Apple에서 온보딩하지 않은(지원되지 않는) MVPD가 있는 경우 어떻게 됩니까?
    - 사용자가 애플리케이션을 시작하면 사용자는 Apple SSO 워크플로를 통해 &quot;기타 TV 공급자&quot; 선택 옵션을 선택합니다. 따라서 응용 프로그램은 일반 인증 흐름으로 폴백하여 자체 MVPD 선택기를 표시해야 합니다.
-1. 사용자가 [Adobe Primetime TVE 대시보드](https://console.auth.adobe.com/)를 통해 성능이 저하된 MVPD를 사용하는 경우 어떻게 됩니까?
+1. 사용자가 [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)를 통해 성능이 저하된 MVPD를 사용하는 경우 어떻게 됩니까?
    - 사용자가 애플리케이션을 실행하면 사용자는 Apple SSO 워크플로가 아닌 성능 저하 메커니즘을 통해 인증됩니다.
    - AccessEnabler iOS/tvOS SDK를 사용하는 경우 애플리케이션에 *N010* 경고 코드를 통해 알림이 표시되지만, 사용자에게는 원활한 경험이 제공되어야 합니다.
 1. Apple SSO와 비 Apple SSO 인증 흐름 간에 MVPD 사용자 ID가 변경됩니까?
