@@ -2,9 +2,9 @@
 title: 프로그래머
 description: TVE 대시보드 내 프로그래머 및 해당 구성에 대해 알아봅니다.
 exl-id: b450d7cc-d5b5-4454-8f95-8047856bfb98
-source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
+source-git-commit: c29af84963b010ef9d2a2d318486aae8fffccecc
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '1139'
 ht-degree: 0%
 
 ---
@@ -122,11 +122,87 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 ### 등록된 응용 프로그램 {#registered-applications}
 
-이 탭에는 응용 프로그램 등록 목록이 제공됩니다.
+이 탭에는 등록된 응용 프로그램 목록이 표시됩니다. 등록된 응용 프로그램 사용과 관련된 자세한 내용은 [동적 클라이언트 등록 개요](../../dcr-api/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
+
+등록된 응용 프로그램을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
+
+* [새로 등록된 응용 프로그램 추가](#add-registered-applications)
+* [소프트웨어 구문 다운로드](#download-software-statement)
+
+#### 새로 등록된 응용 프로그램 추가 {#add-registered-applications}
+
+등록된 새 애플리케이션을 추가하려면 다음 단계를 따르십시오.
+
+1. **등록된 응용 프로그램** 섹션의 오른쪽 상단 모서리에서 **새 응용 프로그램 추가**&#x200B;를 선택합니다.
+
+   ![새 응용 프로그램 추가](../../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-application-button.png)
+
+   *새 응용 프로그램 추가*
+
+1. **새 응용 프로그램** 대화 상자의 드롭다운 메뉴에서 **채널에 할당됨**&#x200B;을(를) 선택합니다.
+
+   >[!IMPORTANT]
+   >
+   > 보안을 강화하고 무단 액세스를 방지하기 위해 보다 구체적이고 제한된 권한으로 등록된 애플리케이션을 만드는 것이 좋습니다. 따라서 등록된 응용 프로그램을 만들 때는 할당된 `channel`에 대해 더 좁은 옵션을 사용하는 것이 좋습니다.
+
+1. 드롭다운 메뉴에서 **플랫폼**&#x200B;을 선택합니다.
+
+   >[!IMPORTANT]
+   >
+   > 보안을 강화하고 무단 액세스를 방지하기 위해 보다 구체적이고 제한된 권한으로 등록된 애플리케이션을 만드는 것이 좋습니다. 따라서 등록된 응용 프로그램을 만들 때는 할당된 `platforms`에 대해 더 좁은 옵션을 사용하는 것이 좋습니다.
+
+1. 드롭다운 메뉴에서 **도메인**&#x200B;을(를) 선택합니다.
+
+   >[!IMPORTANT]
+   >
+   > 클라이언트 등록 프로세스에서, 클라이언트 애플리케이션은 인증 흐름의 확정을 위해 리디렉션 URL을 사용하도록 허가되도록 요청할 수 있다. 클라이언트 응용 프로그램에서 특정 리디렉션 URL을 사용하는 경우 이 선택 항목에서 선택한 `domains`에 대해 유효성이 검사됩니다.
+
+1. 응용 프로그램의 **이름**&#x200B;을(를) 입력하십시오.
+
+1. 응용 프로그램의 **버전**&#x200B;을(를) 입력하십시오.
+
+   >[!IMPORTANT]
+   >
+   > 클라이언트 애플리케이션의 각 주요 업데이트에 대해 등록된 애플리케이션을 새로 만들어 수명 주기와 사용량을 관리하는 것이 좋습니다. 필요한 경우 [Zendesk](https://adobeprimetime.zendesk.com)를 통해 티켓을 만들고 특정 클라이언트 응용 프로그램 버전의 기능을 차단하기 위해 등록된 응용 프로그램을 취소하도록 기술 계정 관리자(TAM)에게 요청하십시오.
+
+1. 드롭다운 메뉴에서 **Type** 값 &quot;DIRECT&quot;를 선택합니다.
+
+1. **응용 프로그램 추가**&#x200B;를 선택합니다.
+
+새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. **등록된 응용 프로그램** 섹션에 나열된 새로 등록된 응용 프로그램을 사용하려면 [변경 내용 검토 및 푸시](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-review-push-changes.md) 흐름을 진행하십시오.
+
+#### 소프트웨어 구문 다운로드 {#download-software-statement}
+
+다음 단계에 따라 소프트웨어 명령문을 다운로드합니다.
+
+1. **등록된 응용 프로그램** 목록에서 소프트웨어 문을 다운로드할 등록된 응용 프로그램을 마우스로 가리킵니다.
+
+1. **다운로드**&#x200B;를 선택합니다.
+
+   ![소프트웨어 문 다운로드](../../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-download-software-statement-button.png)
+
+   *소프트웨어 문 다운로드*
+
 
 ### 사용자 지정 체계 {#custom-schemes}
 
-이 탭에는 사용자 지정 체계 목록이 표시됩니다. [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md) 보기
+이 탭에는 사용자 지정 체계 목록이 표시됩니다. 사용자 지정 구성표 사용과 관련된 자세한 내용은 [iOS/tvOS 응용 프로그램 등록](/help/authentication/iostvos-application-registration.md)을 참조하세요.
+
+사용자 지정 체계를 다음과 같이 변경할 수 있습니다.
+
+* [새 사용자 지정 체계 생성](#generate-custom-schemes)
+
+#### 새 사용자 지정 체계 생성 {#generate-custom-schemes}
+
+다음 단계에 따라 새 사용자 지정 체계를 생성합니다.
+
+1. **새 사용자 지정 구성표 생성**&#x200B;을 선택합니다.
+
+   ![새 사용자 지정 구성표 생성](../../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-custom-scheme-button.png)
+
+   *새 사용자 지정 구성표 생성*
+
+새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. **사용자 지정 체계** 섹션에 나열된 새 사용자 지정 체계를 사용하려면 [변경 내용 검토 및 푸시](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-review-push-changes.md) 흐름을 진행하십시오.
 
 ## 새 프로그래머 추가 {#add-new-programmer}
 
