@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 837276ce85445da5c3877592b194e37adf35fa32
+source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
 workflow-type: tm+mt
-source-wordcount: '1165'
+source-wordcount: '1169'
 ht-degree: 2%
 
 ---
@@ -53,9 +53,10 @@ ht-degree: 2%
          + [토큰 교환](token-exchange.md)
          + [임시 패스 및 프로모션 임시 패스에 대한 무료 미리보기](free-preview-for-temp-pass-and-promotional-temp-pass.md)
    + REST API V2 {#rest-api-v2}
-      + [REST API V2 - 개요](./rest-api-v2/rest-api-v2-overview.md)
+      + [REST API V2 개요](./rest-api-v2/rest-api-v2-overview.md)
+      + [REST API V2 용어집](./rest-api-v2/rest-api-v2-glossary.md)
       + API {#rest-api-v2-apis}
-         + [REST API V2 - API - 개요](./rest-api-v2/apis/rest-api-v2-apis-overview.md)
+         + [REST API V2 API 개요](./rest-api-v2/apis/rest-api-v2-apis-overview.md)
          + 구성 {#rest-api-v2-configuration-apis}
             + [특정 서비스 공급자에 대한 구성 검색](./rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
          + 세션 {#rest-api-v2-sessions-apis}
@@ -76,7 +77,7 @@ ht-degree: 2%
             + [파트너 인증 요청 검색](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
             + [파트너 인증 응답을 사용하여 프로필 검색](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
       + 흐름 {#rest-api-v2-flows}
-         + [REST API V2 - 흐름 - 개요](./rest-api-v2/flows/rest-api-v2-flows-overview.md)
+         + [REST API V2 흐름 개요](./rest-api-v2/flows/rest-api-v2-flows-overview.md)
          + 기본 액세스 흐름 {#rest-api-v2-basic-access-flows}
             + [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
             + [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)

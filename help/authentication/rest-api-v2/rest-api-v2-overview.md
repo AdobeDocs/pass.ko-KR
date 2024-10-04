@@ -1,14 +1,14 @@
 ---
-title: REST API V2 - 개요
-description: REST API V2 - 개요
-source-git-commit: 94fcb4e8c94330561596cd4006738c4f4d75e371
+title: REST API V2 개요
+description: REST API V2 개요
+source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
 workflow-type: tm+mt
-source-wordcount: '494'
+source-wordcount: '490'
 ht-degree: 0%
 
 ---
 
-# REST API V2 - 개요 {#rest-api-v2-overview}
+# REST API V2 개요 {#rest-api-v2-overview}
 
 >[!IMPORTANT]
 >
@@ -70,7 +70,11 @@ Dynamic Client Registration은 모든 플로우 및 기능에서 사용되는 �
 
 ## 자세히 알아보시겠습니까?
 
-시작하려면 공개 설명서를 방문하여 [흐름 설명](./flows/rest-api-v2-flows-overview.md) 및 [API 참조](./apis/rest-api-v2-apis-overview.md)에 액세스하세요.
+시작하려면 다음 공개 설명서를 참조하십시오.
+
+- [용어집](rest-api-v2-glossary.md)
+- [API](./apis/rest-api-v2-apis-overview.md)
+- [플로우](./flows/rest-api-v2-flows-overview.md)
 
 또한 전담 지원 팀이 귀하에게 필요한 질문이나 기술 지원을 도와드릴 수 있습니다.
 

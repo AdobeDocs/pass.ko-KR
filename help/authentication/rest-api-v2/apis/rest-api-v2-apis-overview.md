@@ -1,21 +1,21 @@
 ---
-title: REST API V2 - API - 개요
-description: REST API V2 - API - 개요
+title: REST API V2 API 개요
+description: REST API V2 API 개요
 exl-id: 62b48bf0-d200-4949-b268-8f8ea2daabfa
-source-git-commit: 94fcb4e8c94330561596cd4006738c4f4d75e371
+source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '144'
 ht-degree: 1%
 
 ---
 
-# REST API V2 - API - 개요 {#rest-api-v2-apis-overview}
+# REST API V2 API 개요 {#rest-api-v2-apis-overview}
 
 >[!IMPORTANT]
 >
 > 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-시작하려면 아래 목록에서 각 항목의 공개 설명서를 참조하십시오.
+시작하려면 아래 목록에 있는 API의 공개 설명서를 참조하십시오.
 
 ## 구성 {#rest-api-v2-apis-configuration}
 
