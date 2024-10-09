@@ -2,9 +2,9 @@
 title: 사용자 메타데이터 기능
 description: 사용자 메타데이터 기능
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: 8896fa2242664d09ddd871af8f72d8858d1f0d50
+source-git-commit: 8c5203aa4a897a5e119a9886afc64a1b1556ee4f
 workflow-type: tm+mt
-source-wordcount: '1644'
+source-wordcount: '1654'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,7 @@ ht-degree: 0%
 - 인증 및 권한 부여 흐름 중에 프로그래머의 애플리케이션으로 전달됨
 - 값이 토큰에 저장됩니다.
 - 상이한 MVPD들이 상이한 포맷들로 데이터를 제공하는 경우 값들은 정규화될 수 있다
-- 일부 매개 변수는 프로그래머 키(예: zip 코드)를 사용하여 암호화할 수 있습니다
+- 일부 매개 변수는 프로그래머 키(예: 우편 번호)를 사용하여 암호화할 수 있습니다. 암호화 인증서 생성은 [암호화에 대한 사용자 메타데이터 인증서](./user-metadata-certificate.md)를 참조하십시오.
 - 특정 값은 구성 변경을 통해 Adobe에서 사용할 수 있습니다
 
 ## 사용자 메타데이터 가져오기 {#obtaining}

@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
+source-git-commit: 8c5203aa4a897a5e119a9886afc64a1b1556ee4f
 workflow-type: tm+mt
-source-wordcount: '1169'
+source-wordcount: '1174'
 ht-degree: 2%
 
 ---
@@ -189,6 +189,7 @@ ht-degree: 2%
       + [MVPD에 대한 HBA 상태](hba-status-mvpds.md)
    + 사용자 메타데이터 {#user-metadat}
       + [사용자 메타데이터](user-metadata-feature.md)
+      + [암호화를 위한 사용자 메타데이터 인증서](user-metadata-certificate.md)
    + [Preflight 인증](preflight-authz.md)
    + {#error-reportn} 보고 오류
       + [오류 보고](error-reporting.md)
