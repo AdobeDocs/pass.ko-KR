@@ -1,13 +1,13 @@
 ---
 title: 특정 mvpd에 대한 로그아웃 시작
 description: REST API V2 - 특정 mvpd에 대한 로그아웃 시작
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: 2482de87-b3d4-4ea8-bd4a-25bf10017e01
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '913'
+source-wordcount: '915'
 ht-degree: 1%
 
 ---
-
 
 # 특정 mvpd에 대한 로그아웃 시작 {#initiate-logout-for-specific-mvpd}
 
@@ -303,8 +303,8 @@ ht-degree: 1%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">오류</td>
-      <td>오류는 <a href="../../../enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 정보를 제공합니다.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>응답 본문은 <a href="../../../enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>

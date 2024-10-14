@@ -1,13 +1,13 @@
 ---
 title: 특정 서비스 공급자에 대한 구성 검색
 description: REST API V2 - 특정 서비스 공급자에 대한 구성 검색
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '523'
+source-wordcount: '525'
 ht-degree: 2%
 
 ---
-
 
 # 특정 서비스 공급자에 대한 구성 검색 {#retrieve-configuration-for-specific-service-provider}
 
@@ -270,8 +270,8 @@ ht-degree: 2%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">오류</td>
-      <td>오류는 <a href="../../../enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 정보를 제공합니다.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>응답 본문은 <a href="../../../enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>

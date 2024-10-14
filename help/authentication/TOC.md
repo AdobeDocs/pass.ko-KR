@@ -4,7 +4,7 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 8c5203aa4a897a5e119a9886afc64a1b1556ee4f
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
 source-wordcount: '1174'
 ht-degree: 2%
@@ -113,8 +113,8 @@ ht-degree: 2%
          + [JavaScript SDK API 참조](javascript-sdk-api-reference.md)
          + 지침 {#js-sdk-guidelines}
             + [새로 고침 없이 로그인 및 로그아웃](refreshless-login-and-logout.md)
-         + JavaScript API {#js-api}
-            + [사전 승인](js-preauthorize.md)
+         + JavaScript API {#javascript-sdk-api}
+            + [사전 승인](preauthorize-api-javascript-sdk.md)
       + iOS/tvOS SDK {#ios-sdk}
          + [iOS/tvOS SDK 개요](iostvos-sdk-overview.md)
          + [iOS/tvOS SDK Cookbook](iostvos-sdk-cookbook.md)
@@ -124,8 +124,8 @@ ht-degree: 2%
             + 마이그레이션 지침 {#migration-guidelines}
                + [iOS/tvOS v3.x 마이그레이션 안내서](iostvos-v3x-migration-guide.md)
             + [iOS/tvOS 스토리지 무결성 검사](iostvos-sdk-storage-integrity-checks.md)
-         + iOS/tvOS API {#ios-tvos-api}
-            + [사전 승인](preauthorize.md)
+         + iOS/tvOS API {#ios-tvos-sdk-api}
+            + [사전 승인](preauthorize-api-ios-tvos-sdk.md)
       + Android SDK {#androidsdk}
          + [Android SDK 개요](android-sdk-overview.md)
          + [Android SDK Cookbook](android-sdk-cookbook.md)
@@ -133,8 +133,8 @@ ht-degree: 2%
          + 지침 {#androidguidelines}
             + [Android 애플리케이션 등록](android-application-registration.md)
             + [Android SDK(동적 클라이언트 등록 포함)](android-sdk-with-dynamic-client-registration.md)
-         + Android API{#androidapi}
-            + [사전 승인](preauthorize-android.md)
+         + Android API{#android-sdk-api}
+            + [사전 승인](preauthorize-api-android-sdk.md)
       + Amazon FireOS SDK {#fireossdk}
          + [Amazon FireOS SSO - 프로그래머 시작 안내서](amazon-firetv-sso-programmer-kickoff-guide.md)
          + [Clientless API Cookbook을 사용한 Amazon FireOS SSO](amazon-fireos-sso-using-clientless-api-cookbook.md)

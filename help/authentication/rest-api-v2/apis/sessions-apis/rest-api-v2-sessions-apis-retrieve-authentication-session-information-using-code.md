@@ -1,13 +1,13 @@
 ---
 title: 코드를 사용하여 인증 세션 검색
 description: REST API V2 - 코드를 사용하여 인증 세션 검색
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+exl-id: 5cc209eb-ee6b-4bb9-9c04-3444408844b7
+source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
 workflow-type: tm+mt
-source-wordcount: '406'
+source-wordcount: '408'
 ht-degree: 2%
 
 ---
-
 
 # 코드를 사용하여 인증 세션 검색 {#retrieve-authentication-session-using-code}
 
@@ -188,8 +188,8 @@ ht-degree: 2%
       <th style="background-color: #EFF2F7;"></th>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">오류</td>
-      <td>오류는 <a href="../../../enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 정보를 제공합니다.</td>
+      <td style="background-color: #DEEBFF;"></td>
+      <td>응답 본문은 <a href="../../../enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>
