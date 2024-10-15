@@ -2,10 +2,10 @@
 title: 특정 코드에 대한 프로필 검색
 description: REST API V2 - 특정 코드에 대한 프로필 검색
 exl-id: d6ead7d5-de5f-4033-8115-980953a370c0
-source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
+source-git-commit: ca8eaff83411daab5f136f01394e1d425e66f393
 workflow-type: tm+mt
-source-wordcount: '573'
-ht-degree: 2%
+source-wordcount: '701'
+ht-degree: 1%
 
 ---
 
@@ -74,6 +74,11 @@ ht-degree: 2%
       <td>선택 사항</td>
    </tr>
    <tr>
+      <td style="background-color: #DEEBFF;">AP-TempPass-Identity</td>
+      <td>사용자 고유 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md">AP-TempPass-Identity</a> 헤더 문서에 설명되어 있습니다.</td>
+      <td>선택 사항</td>
+   </tr>
+   <tr>
       <td style="background-color: #DEEBFF;">Accept</td>
       <td>
          클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
@@ -118,6 +123,13 @@ ht-degree: 2%
         액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../dcr-api/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
       </td>
    </tr>
+   <tr>
+      <td>403</td>
+      <td>금지됨</td>
+      <td>
+        임시 액세스 TTL(time-to-live)이 만료되었거나 최대 리소스 수를 초과했습니다. 클라이언트는 일반 MVPD를 사용하여 기본 인증 흐름을 시작하도록 사용자에게 표시해야 합니다. 응답 본문에는 <a href="../../../enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+      </td>
+   </tr> 
    <tr>
       <td>405</td>
       <td>메서드가 허용되지 않음</td>
@@ -251,7 +263,7 @@ ht-degree: 2%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">상태</td>
-      <td>400, 401, 405, 500</td>
+      <td>400, 401, 403, 405, 500</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -273,55 +285,300 @@ ht-degree: 2%
 
 ## 샘플 {#samples}
 
-### 1. 기본 인증을 수행한 후 보조 장치에서 기존 및 유효한 인증된 프로필 검색
+### 1. 기본 인증을 통해 얻은 특정 코드에 대한 프로필 검색
 
 >[!BEGINTABS]
 
 >[!TAB 요청]
 
-```JSON
-GET /api/v2/REF30/profiles/Cablevision/XTC98W
- 
-Authorization: Bearer ....
-AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
-X-Device-Info ....
-Accept: application/json
+```HTTPS
+GET /api/v2/REF30/profiles/code/XTC98W HTTP/1.1
+
+    Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNGZjM2U3ZS0xMmQ5LTQ5NWQtYjc0Mi02YWVhYzhhNDkwZTciLCJuYmYiOjE3MjQwODc4NjgsImlzcyI6ImF1dGguYWRvYmUuY29tIiwic2NvcGVzIjoiYXBpOmNsaWVudDp2MiIsImV4cCI6MTcyNDEwOTQ2OCwiaWF0IjoxNzI0MDg3ODY4fQ.DJ9GFl_yKAp2Qw-NVcBeRSnxIhqrwxhns5T5jU31N2tiHxCucKLSQ5guBygqkkJx6D0N_93f50meEEyfb7frbHhVHHwmRjHYjkfrWqHCpviwVjVZKKwl8Y3FEMb0bjKIB8p_E3txX9IbzeNGWRufZBRh2sxB5Q9B7XYINpVfh8s_sFvskrbDu5c01neCx5kEagEW5CtE0_EXTgEb5FSr_SfQG3UUu_iwlkOggOh_kOP_5GueElf9jn-bYBMnpObyN5s-FzuHDG5Rtac5rvcWqVW2reEqFTHqLI4rVC7UKQb6DSvPBPV4AgrutAvk30CYgDsOQILVyrjniincp7r9Ww
+    Accept: application/json
+    User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 11.0 like Mac OS X; en_US)
 ```
 
 >[!TAB 응답]
 
-```JSON
+```HTTPS
 HTTP/1.1 200 OK
-Content-Type: application/json; charset=utf-8
- 
+
+Content-Type: application/json;charset=UTF-8
+
 {
-    "profiles" : {
-        "Cablevision" : {
-            "notBefore" : 1623943955,
-            "notAfter" : 1623951155,
-            "issuer" : "Cablevision",
-            "type" : "regular",
-            "attributes" : {
-                "userId" : {
-                    "value" : "BASE64_value_userId",
-                    "state" : "plain"
+    "profiles": {
+        "Cablevision": {
+            "notBefore": 1623943955,
+            "notAfter": 1623951155,
+            "issuer": "Cablevision",
+            "type": "regular",
+            "attributes": {
+                "userId": {
+                    "value": "BASE64_value_userId",
+                    "state": "plain"
                 },
                 "householdId" : {
-                    "value" : "BASE64_value_householdId",
-                    "state" : "plain"
+                    "value": "BASE64_value_householdId",
+                    "state": "plain"
                 },
                 "zip" : {
-                    "value" : "BASE64_value_zip",
-                    "state" : "enc"
+                    "value": "BASE64_value_zip",
+                    "state": "enc"
                 },
                 "parental-controls" : {
-                    "value" : BASE64_value_parental-controls,
-                    "state" : "plain"
+                    "value": BASE64_value_parental-controls,
+                    "state": "plain"
                 }
             }
         }
      }
 }
 ```
+
+>[!ENDTABS]
+
+### 2. 기본 TempPass가 선택된 동안 특정 코드에 대한 프로필 검색
+
+>[!BEGINTABS]
+
+>[!TAB 요청]
+
+```HTTPS
+GET /api/v2/REF30/profiles/code/XTC98W HTTP/1.1
+
+    Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNGZjM2U3ZS0xMmQ5LTQ5NWQtYjc0Mi02YWVhYzhhNDkwZTciLCJuYmYiOjE3MjQwODc4NjgsImlzcyI6ImF1dGguYWRvYmUuY29tIiwic2NvcGVzIjoiYXBpOmNsaWVudDp2MiIsImV4cCI6MTcyNDEwOTQ2OCwiaWF0IjoxNzI0MDg3ODY4fQ.DJ9GFl_yKAp2Qw-NVcBeRSnxIhqrwxhns5T5jU31N2tiHxCucKLSQ5guBygqkkJx6D0N_93f50meEEyfb7frbHhVHHwmRjHYjkfrWqHCpviwVjVZKKwl8Y3FEMb0bjKIB8p_E3txX9IbzeNGWRufZBRh2sxB5Q9B7XYINpVfh8s_sFvskrbDu5c01neCx5kEagEW5CtE0_EXTgEb5FSr_SfQG3UUu_iwlkOggOh_kOP_5GueElf9jn-bYBMnpObyN5s-FzuHDG5Rtac5rvcWqVW2reEqFTHqLI4rVC7UKQb6DSvPBPV4AgrutAvk30CYgDsOQILVyrjniincp7r9Ww
+    Accept: application/json
+    User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 11.0 like Mac OS X; en_US)
+```
+
+>[!TAB 응답 - 사용 가능]
+
+```HTTPS
+HTTP/1.1 200 OK
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "profiles": {
+        "TempPass_TEST40": {
+            "notBefore": 1697718650206,
+            "notAfter": 1697718710206,
+            "issuer": "Adobe",
+            "type": "temporary",
+            "attributes": {
+                "expiration_date": {
+                    "value": 1697718710206,
+                    "state": "plain"
+                },
+                "userID": {
+                    "value": "temppass_0bdf451aa9c8fa60e80f6b99ab48310c73b480f1",
+                    "state": "plain"
+                }
+            }
+        }
+    }
+}
+```
+
+>[!TAB 응답 - 기간 제한 초과]
+
+```HTTPS
+HTTP/1.1 403 Forbidden
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": 403,
+    "code": "temporary_access_duration_limit_exceeded",
+    "message": "The temporary access duration limit has been exceeded.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "authentication"
+}
+```
+
+>[!TAB 응답 - 잘못된 구성]
+
+```HTTPS
+HTTP/1.1 500 Internal Server Error
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": 500,
+    "code": "invalid_configuration_temporary_access",
+    "message": "The temporary access configuration is invalid.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "configuration"
+}
+```
+
+>[!ENDTABS]
+
+### 3. 프로모션 TempPass가 선택된 동안 특정 코드에 대한 프로필 검색
+
+>[!BEGINTABS]
+
+>[!TAB 요청]
+
+```HTTPS
+GET /api/v2/REF30/profiles/code/XTC98W HTTP/1.1
+
+    Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNGZjM2U3ZS0xMmQ5LTQ5NWQtYjc0Mi02YWVhYzhhNDkwZTciLCJuYmYiOjE3MjQwODc4NjgsImlzcyI6ImF1dGguYWRvYmUuY29tIiwic2NvcGVzIjoiYXBpOmNsaWVudDp2MiIsImV4cCI6MTcyNDEwOTQ2OCwiaWF0IjoxNzI0MDg3ODY4fQ.DJ9GFl_yKAp2Qw-NVcBeRSnxIhqrwxhns5T5jU31N2tiHxCucKLSQ5guBygqkkJx6D0N_93f50meEEyfb7frbHhVHHwmRjHYjkfrWqHCpviwVjVZKKwl8Y3FEMb0bjKIB8p_E3txX9IbzeNGWRufZBRh2sxB5Q9B7XYINpVfh8s_sFvskrbDu5c01neCx5kEagEW5CtE0_EXTgEb5FSr_SfQG3UUu_iwlkOggOh_kOP_5GueElf9jn-bYBMnpObyN5s-FzuHDG5Rtac5rvcWqVW2reEqFTHqLI4rVC7UKQb6DSvPBPV4AgrutAvk30CYgDsOQILVyrjniincp7r9Ww
+    AP-TempPass-Identity: eyJlbWFpbCI6ImZvb0BiYXIuY29tIn0=
+    Accept: application/json
+    User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 11.0 like Mac OS X; en_US)
+```
+
+>[!TAB 응답 - 사용 가능]
+
+```HTTPS
+HTTP/1.1 200 OK
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "profiles": {
+        "flexibleTempPass": {
+            "notBefore": 1697720528524,
+            "notAfter": 1697720588524,
+            "issuer": "Adobe",
+            "type": "temporary",
+            "attributes": {
+                "remaining_resources": {
+                    "value": 1,
+                    "state": "plain"
+                },
+                "used_assets": {
+                    "value": [
+                        "res04",
+                        "res02",
+                        "res03",
+                        "res01"
+                    ],
+                    "state": "plain"
+                },
+                "expiration_date": {
+                    "value": 1697720528524,
+                    "state": "plain"
+                },
+                "userID": {
+                    "value": "temppass_0bdf451aa9c8fa60e80f6b99ab48310c73b480f1",
+                    "state": "plain"
+                }
+            }
+        }
+    }
+}
+```
+
+>[!TAB 응답 - 기간 제한 초과]
+
+```HTTPS
+HTTP/1.1 403 Forbidden
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": 403,
+    "code": "temporary_access_duration_limit_exceeded",
+    "message": "The temporary access duration limit has been exceeded.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "authentication"
+}
+```
+
+>[!TAB 응답 - 리소스 제한 초과]
+
+```HTTPS
+HTTP/1.1 403 Forbidden
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": 403,
+    "code": "temporary_access_resources_limit_exceeded",
+    "message": "The temporary access resources limit has been exceeded.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "authentication"
+}
+```
+
+>[!TAB 응답 - 잘못된 구성]
+
+```HTTPS
+HTTP/1.1 500 Internal Server Error
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": 500,
+    "code": "invalid_configuration_temporary_access",
+    "message": "The temporary access configuration is invalid.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "configuration"
+}
+```
+
+>[!TAB 응답 - 잘못된 ID]
+
+```HTTPS
+HTTP/1.1 400 Bad Request
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "status": 400,
+    "code": "invalid_header_identity_for_temporary_access",
+    "message": "The identity for temporary access header value is missing or invalid.",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "action": "none"
+}
+```
+
+>[!ENDTABS]
+
+### 4. 저하가 적용되는 동안 특정 코드에 대한 프로필 검색
+
+>[!BEGINTABS]
+
+>[!TAB 요청]
+
+```HTTPS
+GET /api/v2/REF30/profiles/code/XTC98W HTTP/1.1
+
+    Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNGZjM2U3ZS0xMmQ5LTQ5NWQtYjc0Mi02YWVhYzhhNDkwZTciLCJuYmYiOjE3MjQwODc4NjgsImlzcyI6ImF1dGguYWRvYmUuY29tIiwic2NvcGVzIjoiYXBpOmNsaWVudDp2MiIsImV4cCI6MTcyNDEwOTQ2OCwiaWF0IjoxNzI0MDg3ODY4fQ.DJ9GFl_yKAp2Qw-NVcBeRSnxIhqrwxhns5T5jU31N2tiHxCucKLSQ5guBygqkkJx6D0N_93f50meEEyfb7frbHhVHHwmRjHYjkfrWqHCpviwVjVZKKwl8Y3FEMb0bjKIB8p_E3txX9IbzeNGWRufZBRh2sxB5Q9B7XYINpVfh8s_sFvskrbDu5c01neCx5kEagEW5CtE0_EXTgEb5FSr_SfQG3UUu_iwlkOggOh_kOP_5GueElf9jn-bYBMnpObyN5s-FzuHDG5Rtac5rvcWqVW2reEqFTHqLI4rVC7UKQb6DSvPBPV4AgrutAvk30CYgDsOQILVyrjniincp7r9Ww
+    Accept: application/json
+    User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 11.0 like Mac OS X; en_US)
+```
+
+>[!TAB 응답 - AuthNaLl 저하]
+
+```HTTPS
+HTTP/1.1 200 OK
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "profiles": {
+        "${degradedMvpd}": {
+            "notBefore": 1697719042666,
+            "notAfter": 1697719102666,
+            "issuer": "Adobe",
+            "type": "degraded",
+            "attributes":
+                "userID": {
+                    "value": "95cf93bcd183214a0bdf451aa9c8fa60e80f6b99ab48310c73b480f1",
+                    "state": "plain"
+                }
+            }
+        }
+    }
+}
+```
+
+>[!IMPORTANT]
+>
+> `95cf93bcd183214a`은(는) 성능 저하 관련 접두사입니다.
 
 >[!ENDTABS]

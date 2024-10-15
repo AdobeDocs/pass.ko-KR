@@ -1,13 +1,13 @@
 ---
 title: 임시 액세스 흐름
 description: REST API V2 - 임시 액세스 흐름
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
+source-git-commit: ca8eaff83411daab5f136f01394e1d425e66f393
 workflow-type: tm+mt
-source-wordcount: '3210'
+source-wordcount: '3215'
 ht-degree: 0%
 
 ---
-
 
 # 임시 액세스 흐름 {#temporary-access-flows}
 
@@ -369,7 +369,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../temp-pass.md) 
 > <br/>
 > 
 > * 제공된 `serviceProvider`과(와) `mvpd` 사이의 통합에 적용되는 기본 또는 프로모션 TempPass의 올바른 구성 설정이 있어야 합니다.
-> * 기본 또는 프로모션 TempPass에 대해 구성된 TTL(Time-To-Live)이 만료되었습니다.
+> * 기본 또는 프로모션에 대해 구성된 TTL(Time-To-Live)입니다. 임시 액세스 기간 제한을 초과했습니다.
 
 ### 워크플로 {#workflow-retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires}
 
