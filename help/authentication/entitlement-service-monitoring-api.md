@@ -2,9 +2,9 @@
 title: 권한 부여 서비스 모니터링 API
 description: 권한 부여 서비스 모니터링 API
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+source-git-commit: 8fa1e63619f4e22794d701a218c77649f73d9f60
 workflow-type: tm+mt
-source-wordcount: '2070'
+source-wordcount: '2027'
 ht-degree: 0%
 
 ---
@@ -36,13 +36,13 @@ ESM API는 기본 OLAP 큐브의 계층 구조 보기를 제공합니다. 각 �
 
 REST API는 차원 경로, 제공된 필터 및 선택한 지표에 따라 요청에 지정된 시간 간격(제공되지 않은 경우 기본값으로 폴백) 내에 사용 가능한 데이터를 제공합니다. 시간 차원 (연도, 월, 일, 시간, 분, 초)이 포함되지 않은 보고서에는 시간 범위가 적용되지 않습니다.
 
-끝점 URL 루트 경로는 사용 가능한 드릴다운 옵션에 대한 링크와 함께 단일 레코드 내에서 전체 집계된 지표를 반환합니다. API 버전은 끝점 URI 경로의 후행 세그먼트로 매핑됩니다. 예를 들어 `https://mgmt.auth.adobe.com/*v2*`은(는) 클라이언트가 WOLAP 버전 2에 액세스함을 의미합니다.
+끝점 URL 루트 경로는 사용 가능한 드릴다운 옵션에 대한 링크와 함께 단일 레코드 내에서 전체 집계된 지표를 반환합니다. API 버전은 끝점 URI 경로의 후행 세그먼트로 매핑됩니다. 예를 들어 `https://mgmt.auth.adobe.com/esm/v3`은(는) 클라이언트가 WOLAP 버전 3에 액세스함을 의미합니다.
 
 사용 가능한 URL 경로는 응답에 포함된 링크를 통해 검색할 수 있습니다. 유효한 URL 경로는 집계된 지표를 보유하는 기본 드릴다운 트리 내의 경로를 매핑하기 위해 유지됩니다. `/dimension1/dimension2/dimension3` 형식의 경로는 이러한 세 차원의 사전 집계를 반영합니다(`dimension1`, `dimension2`, `dimension3`의 SQL `clause GROUP`에 해당). 이러한 사전 집계가 존재하지 않고 시스템이 즉시 계산할 수 없는 경우, API는 404 Not Found 응답을 반환합니다.
 
 ## 드릴다운 트리 {#drill-down-tree}
 
-다음 드릴다운 트리는 [프로그래머](#progr-dimensions) 및 [MVPD](#mvpd-dimensions)에 대해 ESM 2.0에서 사용할 수 있는 차원(리소스)을 보여 줍니다.
+다음 드릴다운 트리는 [프로그래머](#progr-dimensions) 및 [MVPD](#mvpd-dimensions)에 대해 ESM 3.0에서 사용할 수 있는 차원(리소스)을 보여 줍니다.
 
 
 ### 프로그래머가 사용할 수 있는 Dimension {#progr-dimensions}
@@ -63,13 +63,13 @@ REST API는 차원 경로, 제공된 필터 및 선택한 지표에 따라 요�
 
 ![](assets/esm-mvpd-dimensions.png)
 
-`https://mgmt.auth.adobe.com/v2` API 끝점에 대한 GET이 다음을 포함하는 표현을 반환합니다.
+`https://mgmt.auth.adobe.com/esm/v3` API 끝점에 대한 GET이 다음을 포함하는 표현을 반환합니다.
 
 * 사용 가능한 루트 드릴다운 경로 링크:
 
-   * `<link rel="drill-down" href="/v2/dimensionA"/>`
+   * `<link rel="drill-down" href="/v3/dimensionA"/>`
 
-   * `<link rel="drill-down" href="/v2/dimensionB"/>`
+   * `<link rel="drill-down" href="/v3/dimensionB"/>`
 
 * 모든 지표에 대한 요약(집계된 값)(기본값)
 interval. 쿼리 문자열 매개 변수가 제공되지 않으므로 아래를 참조하십시오.
@@ -119,8 +119,8 @@ interval. 쿼리 문자열 매개 변수가 제공되지 않으므로 아래를 
 ### ESM API 예약 쿼리 문자열 매개 변수
 
 | 매개 변수 | 선택 사항 | 설명 | 기본값 | 예 |
-| --- | ---- | --- | ---- | --- |
-| access_token | 예 | IMS OAuth 보호가 활성화된 경우 IMS 토큰을 표준 Authorization Bearer 토큰 또는 쿼리 문자열 매개 변수로 전달할 수 있습니다. | 없음 | access_token=XXXXXX |
+| --- | ---- |-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------| ---- | --- |
+| access_token | 예 | DCR 토큰은 표준 Authorization Bearer 토큰으로 전달될 수 있습니다. | 없음 | access_token=XXXXXX |
 | dimension-name | 예 | 모든 차원 이름 - 현재 URL 경로 또는 유효한 하위 경로에 포함되어 있으며 값은 같음 필터로 처리됩니다. 값을 제공하지 않으면 지정된 차원이 현재 경로에 포함되어 있지 않거나 인접한 경우에도 출력에 포함됩니다 | 없음 | someDimension=someValue&amp;someOtherDimension |
 | 종료 | 예 | 보고서 종료 시간(밀리초) | 서버의 현재 시간 | end=2012-07-30 |
 | 형식 | 예 | 콘텐츠 협상에 사용됩니다(효과는 동일하지만 경로 &quot;확장&quot;보다 우선하지 않음 - 아래 참조). | 없음: 콘텐츠 협상에서는 다른 전략을 시도합니다. | format=json |
@@ -128,8 +128,7 @@ interval. 쿼리 문자열 매개 변수가 제공되지 않으므로 아래를 
 | 지표 | 예 | 반환할 지표 이름을 쉼표로 구분한 목록. 페이로드 크기를 줄이기 위해 사용 가능한 지표의 하위 집합을 필터링하고 기본 최적 투영이 아닌 요청된 지표를 포함하는 투영을 반환하도록 API를 적용하는 데 모두 사용해야 합니다. | 이 매개변수가 제공되지 않을 경우 현재 투영에 사용할 수 있는 모든 지표가 반환됩니다. | metrics=m1,m2 |
 | 시작 | 예 | ISO8601로 보고서의 시작 시간. 접두사만 제공되는 경우 서버는 나머지 부분을 채웁니다. 예를 들어 start=2012로 시작하면 start=2012-01-01:00:00:00이 됩니다. | 서버가 자체 링크에서 보고함. 서버는 선택한 시간 세부기간을 기반으로 적절한 기본값을 제공하려고 합니다. | start=2012-07-15 |
 
-현재 사용 가능한 HTTP 메서드는 GET 뿐입니다. OPTIONS 지원 /
-HEAD 방법은 이후 버전에서 제공될 수 있습니다.
+현재 사용 가능한 HTTP 메서드는 GET 뿐입니다.
 
 ## ESM API 상태 코드 {#esm-api-status-codes}
 
@@ -156,7 +155,7 @@ HEAD 방법은 이후 버전에서 제공될 수 있습니다.
 
 클라이언트가 사용할 수 있는 콘텐츠 협상 전략은 다음과 같습니다(우선 순위는 목록의 위치에 의해 지정됩니다.).
 
-1. URL 경로의 마지막 세그먼트에 추가된 &quot;파일 확장명&quot;(예: `/esm/v2/media-company/year/month/day.xml`). URL에 쿼리 문자열이 포함된 경우 확장명은 물음표 앞에 와야 합니다. `/esm/v2/media-company/year/month/day.csv?mvpd= SomeMVPD`
+1. URL 경로의 마지막 세그먼트에 추가된 &quot;파일 확장명&quot;(예: `/esm/v3/media-company/year/month/day.xml`). URL에 쿼리 문자열이 포함된 경우 확장명은 물음표 앞에 와야 합니다. `/esm/v3/media-company/year/month/day.csv?mvpd= SomeMVPD`
 1. 형식 쿼리 문자열 매개 변수(예: `/esm/report?format=json`)
 1. 표준 HTTP Accept 헤더(예: `Accept: application/xml`)
 
@@ -205,13 +204,13 @@ XML 및 JSON 형식의 경우 레코드 내의 필드(차원 및 지표) 순서�
 
 예(`clients`이라는 단일 지표가 있고 `year/month/day/...`에 대한 사전 집계가 있다고 가정):
 
-* https://mgmt.auth.adobe.com/esm/v2/year/month.xml
+* https://mgmt.auth.adobe.com/esm/v3/year/month.xml
 
 ```XML
-   <resource href="/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21">
+   <resource href="/esm/v3/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21">
    <links>
-   <link rel="roll-up" href="/esm/v2/year"/>
-   <link rel="drill-down" href="/esm/v2/year/month/day"/>
+   <link rel="roll-up" href="/esm/v3/year"/>
+   <link rel="drill-down" href="/esm/v3/year/month/day"/>
    </links>
    <report>
    <record month="6" year="2012" clients="205"/>
@@ -220,19 +219,19 @@ XML 및 JSON 형식의 경우 레코드 내의 필드(차원 및 지표) 순서�
    </resource>
 ```
 
-* https://mgmt.auth.adobe.com/esm/v2/year/month.json
+* https://mgmt.auth.adobe.com/esm/v3/year/month.json
 
   ```JSON
       {
         "_links" : {
           "self" : {
-            "href" : "/esm/v2/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
+            "href" : "/esm/v3/year/month?start=2012-07-20T00:00:00&end=2012-08-20T14:35:21"
           },
           "roll-up" : {
-            "href" : "/esm/v2/year"
+            "href" : "/esm/v3/year"
           },
           "drill-down" : {
-            "href" : "/esm/v2/year/month/day"
+            "href" : "/esm/v3/year/month/day"
           }
         },
         "report" : [ {
@@ -260,7 +259,7 @@ CSV에는 머리글 행이 포함된 다음 보고서 데이터가 후속 행으
 머리글 행의 필드 순서는 테이블 데이터의 정렬 순서를 반영합니다.
 
 
-예: https://mgmt.auth.adobe.com/v2/year/month.csv은 다음 내용이 포함된 `report__2012-07-20_2012-08-20_1000.csv` 파일을 생성합니다.
+예: https://mgmt.auth.adobe.com/esm/v3/year/month.csv은 다음 내용이 포함된 `report__2012-07-20_2012-08-20_1000.csv` 파일을 생성합니다.
 
 
 | 년 | 월 | 클라이언트 |
@@ -273,8 +272,6 @@ CSV에는 머리글 행이 포함된 다음 보고서 데이터가 후속 행으
 성공적인 HTTP 응답에는 본문의 보고서가 마지막으로 업데이트된 시간을 나타내는 `Last-Modified` 헤더가 포함되어 있습니다. Last-Modified 헤더가 없다는 것은 보고서 데이터가 실시간으로 계산됨을 나타냅니다.
 
 일반적으로 조악한 데이터는 세분화된 데이터보다 덜 자주 업데이트됩니다(예: 분 단위 값 또는 시간별 값은 일별 값보다 더 최신일 수 있으며, 특히 고유 카운트와 같이 더 작은 세부기간을 기반으로 계산할 수 없는 지표의 경우).
-
-향후 버전의 ESM에서는 표준 &quot;If-Modified-Since&quot; 헤더를 제공하여 클라이언트가 조건부 GET을 수행할 수 있습니다.
 
 ## GZIP 압축 {#gzip-compression}
 
