@@ -1,9 +1,9 @@
 ---
 title: REST API V2 Cookbook(클라이언트-서버)
 description: REST API V2 Cookbook(클라이언트-서버)
-source-git-commit: 709835276710ec4b92abec3e39aaecae99872e77
+source-git-commit: 0d6693d51887c9e794401e984f3a4075be091ee5
 workflow-type: tm+mt
-source-wordcount: '689'
+source-wordcount: '695'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 클라이언트측 애플리케이션에서 REST API V2를 구현하는 절차 {#steps-to-implement-the-rest-api-v2-in-client-side-applications}
 
-Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계를 수행해야 합니다.
+Adobe Pass REST API V2를 구현하려면 단계별로 그룹화된 아래 단계를 수행해야 합니다.
 
 ## A. 등록 단계 {#registration-phase}
 
@@ -40,11 +40,11 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
 
 * 프로필을 찾을 수 없고 스트리밍 애플리케이션이 TempPass 플로우를 구현하는 경우
    * [임시 액세스 흐름](../flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md)을 구현하는 방법에 대한 설명서를 따르십시오.
-* 프로필을 찾을 수 없는 경우 스트리밍 애플리케이션은 인증 흐름을 구현합니다.
-   * 스트리밍 응용 프로그램이 serviceProvider에 사용할 수 있는 MVPD 목록을 검색합니다. <b>/api/v2/{serviceProvider}/구성</b><br>
+* 프로필을 찾을 수 없고 스트리밍 애플리케이션이 인증 흐름을 구현하는 경우
+   * 스트리밍 응용 프로그램이 serviceProvider에 사용할 수 있는 MVPD 목록을 검색합니다. <b>/api/v2/{serviceProvider}/configuration</b><br>
 ([사용 가능한 MVPD 목록 검색](../apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md))
    * 스트리밍 애플리케이션은 MVPD의 목록에 필터링을 구현하고 다른 항목을 숨기고 의도한 MVPD만 표시할 수 있습니다(TempPass, 테스트 MVPD, 개발 중인 MVPD 등)
-   * 스트리밍 애플리케이션 디스플레이 선택기, 사용자가 MVPD를 선택합니다.
+   * 스트리밍 애플리케이션은 선택기를 표시하고 사용자는 MVPD를 선택합니다.
    * 스트리밍 응용 프로그램에서 세션을 만듭니다. <b>/api/v2/{serviceProvider}/세션</b><br>
 ([인증 세션 만들기](../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md))<br>
       * 인증에 사용할 코드 및 URL이 반환됩니다
@@ -55,7 +55,7 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
 브라우저 또는 두 번째 화면 웹 기반 애플리케이션 사용:
 
 * 옵션 1. 스트리밍 애플리케이션은 브라우저 또는 웹 보기를 열고 인증할 URL을 로드하며 사용자는 자격 증명을 제출해야 하는 MVPD 로그인 페이지에 도달합니다
-   * 사용자 로그인/암호 입력, 최종 리디렉션에 성공 페이지가 표시됨
+   * 사용자가 로그인/암호 입력, 최종 리디렉션에 성공 페이지가 표시됨
 * 옵션 2. 스트리밍 애플리케이션은 브라우저를 열 수 없으며 CODE만 표시합니다. <b>코드, 빌드 및 열기 URL(<b>/api/v2/authenticate/{serviceProvider}/{CODE}</b>)을 입력하도록 사용자에게 요청하려면 별도의 웹 응용 프로그램을 개발해야 합니다</b>
    * 사용자 로그인/암호 입력, 최종 리디렉션에 성공 페이지가 표시됨
 
@@ -68,7 +68,7 @@ Adobe Pass REST API V2를 구현하려면 단계로 그룹화된 아래 단계�
    * MVPD 선택기가 두 번째 화면 애플리케이션에 표시되므로 스트리밍 애플리케이션에서 MVPD를 선택하지 않으면 코드 <b>/api/v2/{serviceProvider}/profiles/code/{CODE}</b><br>에서 폴링이 발생합니다
 ([특정 코드에 대해 인증된 프로필 검색](../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md))
 * 폴링은 30분을 초과할 수 없습니다. 30분에 도달하고 스트리밍 애플리케이션이 여전히 활성 상태인 경우 새 세션을 시작해야 하며 새 코드와 URL이 반환됩니다
-* 인증이 완료되면 인증된 프로필로 반환은 200입니다.
+* 인증이 완료되면 인증된 프로필로 반환은 200입니다
 * 스트리밍 응용 프로그램이 <a href="#preauthorization-phase">C로 진행될 수 있습니다. 사전 인증 단계</a> 또는 <a href="#authorization-phase">D. 인증 단계</a>
 
 ## C. 사전 인증 단계 {#preauthorization-phase}
