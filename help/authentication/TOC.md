@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 2f5e511f774e1a2d8b8b60084844edfe27be6c76
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '1181'
+source-wordcount: '1199'
 ht-degree: 2%
 
 ---
@@ -56,28 +56,28 @@ ht-degree: 2%
       + [REST API V2 개요](./rest-api-v2/rest-api-v2-overview.md)
       + [REST API V2 용어집](./rest-api-v2/rest-api-v2-glossary.md)
       + API {#rest-api-v2-apis}
-         + [REST API V2 API 개요](./rest-api-v2/apis/rest-api-v2-apis-overview.md)
+         + [REST API V2 API 개요](rest-api-v2/apis/rest-api-v2-apis-overview.md)
          + 구성 {#rest-api-v2-configuration-apis}
-            + [특정 서비스 공급자에 대한 구성 검색](./rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
+            + [특정 서비스 공급자에 대한 구성 검색](rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md)
          + 세션 {#rest-api-v2-sessions-apis}
-            + [인증 세션 만들기](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
-            + [인증 세션 다시 시작](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
-            + [인증 세션 검색](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md)
-            + [사용자 에이전트에서 인증 수행](./rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md)
+            + [인증 세션 만들기](rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+            + [인증 세션 다시 시작](rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
+            + [인증 세션 검색](rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md)
+            + [사용자 에이전트에서 인증 수행](rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md)
          + 프로필 {#rest-api-v2-profiles-apis}
-            + [프로필 검색](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
-            + [특정 mvpd에 대한 프로필 검색](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
-            + [특정 코드에 대한 프로필 검색](./rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
+            + [프로필 검색](rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
+            + [특정 mvpd에 대한 프로필 검색](rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
+            + [특정 코드에 대한 프로필 검색](rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
          + 결정 {#rest-api-v2-decisions-apis}
-            + [특정 mvpd를 사용하여 권한 부여 결정 검색](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
-            + [특정 mvpd를 사용하여 사전 인증 결정 검색](./rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
+            + [특정 mvpd를 사용하여 권한 부여 결정 검색](rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
+            + [특정 mvpd를 사용하여 사전 인증 결정 검색](rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
          + {#rest-api-v2-logout-apis} 로그아웃
-            + [특정 mvpd에 대한 로그아웃 시작](./rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
+            + [특정 mvpd에 대한 로그아웃 시작](rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
          + 파트너 SSO(Single Sign-On) {#rest-api-v2-partner-single-sign-on-apis}
             + [파트너 인증 요청 검색](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
             + [파트너 인증 응답을 사용하여 프로필 검색](rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
       + 흐름 {#rest-api-v2-flows}
-         + [REST API V2 흐름 개요](./rest-api-v2/flows/rest-api-v2-flows-overview.md)
+         + [REST API V2 흐름 개요](rest-api-v2/flows/rest-api-v2-flows-overview.md)
          + 기본 액세스 흐름 {#rest-api-v2-basic-access-flows}
             + [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
             + [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
@@ -99,13 +99,13 @@ ht-degree: 2%
          + [REST API V2 Cookbook(클라이언트-서버)](rest-api-v2/cookbooks/rest-api-v2-cookbooks-client-server.md)
       + 부록 {#rest-api-v2-appendix}
          + 헤더 {#rest-api-v2-appendix-headers}
-            + [헤더 - 인증](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md)
-            + [헤더 - AP-Device-Identifier](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
-            + [헤더 - X-Device-Info](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
-            + [헤더 - AD-Service-Token](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
-            + [헤더 - Adobe-주체-토큰](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
-            + [헤더 - AP-Partner-Framework-Status](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
-            + [헤더 - AP-TempPass-Identity](./rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
+            + [헤더 - 인증](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md)
+            + [헤더 - AP-Device-Identifier](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
+            + [헤더 - X-Device-Info](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
+            + [헤더 - AD-Service-Token](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
+            + [헤더 - Adobe-주체-토큰](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
+            + [헤더 - AP-Partner-Framework-Status](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
+            + [헤더 - AP-TempPass-Identity](rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + AccessEnabler SDK {#accessenabler-sdk}
       + JavaScript SDK {#javascriptsdk}
          + [JavaScript SDK 개요](javascript-sdk-overview.md)
@@ -136,20 +136,24 @@ ht-degree: 2%
          + Android API{#android-sdk-api}
             + [사전 승인](preauthorize-api-android-sdk.md)
       + Amazon FireOS SDK {#fireossdk}
-         + [Amazon FireOS SSO - 프로그래머 시작 안내서](amazon-firetv-sso-programmer-kickoff-guide.md)
-         + [Clientless API Cookbook을 사용한 Amazon FireOS SSO](amazon-fireos-sso-using-clientless-api-cookbook.md)
          + [Amazon FireOS 기술 개요](amazon-fireos-technical-overview.md)
          + [Amazon FireOS 통합 Cookbook](amazon-fireos-integration-cookbook.md)
          + [Amazon FireOS API 참조](amazon-fireos-native-client-api-reference.md)
          + [Amazon FireOS 애플리케이션 등록](amazon-fireos-application-registration.md)
          + [Dynamic Client Registration이 포함된 FireOS SDK](fireos-sdk-with-dynamic-client-registration.md)
-   + 플랫폼 SSO {#platform-sso}
-      + Apple SSO {#apple-sso}
-         + [Apple SSO 개요](apple-sso-overview.md)
-         + [Apple SSO Cookbook (REST API)](apple-sso-cookbook-rest-api.md)
-         + [Apple SSO Cookbook(iOS/tvOS SDK)](apple-sso-cookbook-iostvos-sdk.md)
-      + Roku SSO {#roku-sso}
-         + [Roku SSO](roku-sso-overview.md)
+         + [Amazon FireOS SSO - 프로그래머 시작 안내서](amazon-firetv-sso-programmer-kickoff-guide.md)
+   + SSO(Single Sign-On) {#sso}
+      + 파트너 SSO(Single Sign-On) {#partner-sso}
+         + Apple Single Sign-On {#apple-sso}
+            + [Apple SSO 개요](single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-overview.md)
+            + [Apple SSO Cookbook(REST API V2)](single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-rest-api-v2.md)
+            + [Apple SSO Cookbook (REST API V1)](single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-rest-api-v1.md)
+            + [Apple SSO Cookbook(iOS/tvOS SDK)](single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-iostvos-sdk.md)
+      + Platform Single Sign-On {#platform-sso}
+         + Amazon Single Sign-On {#amazon-sso}
+            + [Amazon SSO Cookbook (REST API V1)](single-sign-on/platform-single-sign-on/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)
+         + Roku Single Sign-On {#roku-sso}
+            + [Roku SSO 개요](single-sign-on/platform-single-sign-on/roku-single-sign-on/roku-sso-overview.md)
    + 콘텐츠 메타데이터 {#content-metadata}
       + [보호된 리소스 식별](identify-protected-resources.md)
    + Content Server 통합 {#content-serv-int}

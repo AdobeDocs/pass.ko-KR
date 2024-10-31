@@ -1,13 +1,13 @@
 ---
 title: SSO(Single Sign-On) - 서비스 토큰 - 흐름
 description: REST API V2 - Single Sign-On - 서비스 토큰 - 흐름
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: b0082d2a-e491-4cb5-bb40-35ba10db6b1a
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '1848'
 ht-degree: 0%
 
 ---
-
 
 # 서비스 토큰 흐름을 사용한 SSO(Single Sign-On){#single-sign-on-service-token-full-flows}
 
@@ -120,7 +120,7 @@ ht-degree: 0%
    > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
-   >[!NOTE]
+   >[!TIP]
    >
    > 제안: 스트리밍 응용 프로그램은 사용자 에이전트가 제공된 `redirectUrl`에 도달할 때까지 기다렸다가 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
 

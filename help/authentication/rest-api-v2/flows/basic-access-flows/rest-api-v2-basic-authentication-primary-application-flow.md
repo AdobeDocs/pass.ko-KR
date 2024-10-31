@@ -1,13 +1,13 @@
 ---
 title: 기본 인증 - 기본 애플리케이션 - 흐름
 description: REST API V2 - 기본 인증 - 기본 애플리케이션 - 흐름
-source-git-commit: dc9fab27c7eced2be5dd9f364ab8f2d64f8e4177
+exl-id: 8122108d-e9da-43c5-9abb-ab177cb21eb6
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '894'
 ht-degree: 0%
 
 ---
-
 
 # 기본 애플리케이션 내에서 수행되는 기본 인증 흐름 {#basic-authentication-flow-performed-within-primary-application}
 
@@ -121,7 +121,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
-   >[!NOTE]
+   >[!TIP]
    >
    > 제안: 스트리밍 응용 프로그램은 사용자 에이전트가 제공된 `redirectUrl`에 도달할 때까지 기다렸다가 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
 

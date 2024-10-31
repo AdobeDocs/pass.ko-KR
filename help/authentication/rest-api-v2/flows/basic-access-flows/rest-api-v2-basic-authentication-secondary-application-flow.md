@@ -1,13 +1,13 @@
 ---
 title: 기본 인증 - 보조 애플리케이션 - 흐름
 description: REST API V2 - 기본 인증 - 보조 애플리케이션 - 흐름
-source-git-commit: d59afc0384a1c3617143efcef4ab5fb1a323e511
+exl-id: 83bf592e-c679-4cfe-984d-710a9598c620
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '2000'
 ht-degree: 0%
 
 ---
-
 
 # 보조 애플리케이션 내에서 수행되는 기본 인증 흐름 {#basic-authentication-flow-performed-within-secondary-application}
 
@@ -137,7 +137,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 유효성 검사가 실패하면 오류 응답이 생성되고 [향상된 오류 코드](../../../enhanced-error-codes.md) 설명서를 준수하는 추가 정보가 제공됩니다.
 
-   >[!NOTE]
+   >[!TIP]
    >
    > 제안: 보조 응용 프로그램은 누락된 인증 세션을 나타내는 오류 응답 이벤트에서 사용된 `code`이(가) 잘못되었음을 사용자에게 알리고 새 세션을 사용하여 다시 시도하도록 사용자에게 알릴 수 있습니다.
 
@@ -162,7 +162,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
-   >[!NOTE]
+   >[!TIP]
    >
    > 제안: 스트리밍 응용 프로그램에서 `code`을(를) 사용하여 폴링 메커니즘을 구현하여 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
 
@@ -271,7 +271,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    > 
    > 유효성 검사가 실패하면 오류 응답이 생성되고 [향상된 오류 코드](../../../enhanced-error-codes.md) 설명서를 준수하는 추가 정보가 제공됩니다.
 
-   >[!NOTE]
+   >[!TIP]
    >
    > 제안: 보조 응용 프로그램은 누락된 인증 세션을 나타내는 오류 응답 이벤트에서 사용된 `code`이(가) 잘못되었음을 사용자에게 알리고 새 세션을 사용하여 다시 시도하도록 사용자에게 알릴 수 있습니다.
 
@@ -300,7 +300,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
-   >[!NOTE]
+   >[!TIP]
    >
    > 제안: 스트리밍 응용 프로그램에서 `code`을(를) 사용하여 폴링 메커니즘을 구현하여 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
 

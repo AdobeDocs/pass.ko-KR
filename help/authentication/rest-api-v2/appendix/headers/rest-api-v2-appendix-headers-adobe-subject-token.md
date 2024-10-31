@@ -1,13 +1,13 @@
 ---
 title: 헤더 - Adobe-주체-토큰
 description: REST API V2 - 헤더 - Adobe-주체-토큰
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: 906d88f4-3b8f-491a-ab58-8e63d3b958d8
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '156'
+source-wordcount: '166'
 ht-degree: 1%
 
 ---
-
 
 # 헤더 - Adobe-주체-토큰 {#header-adobe-subject-token}
 
@@ -47,10 +47,10 @@ ht-degree: 1%
 
 이 기능은 다음 플랫폼에 사용할 수 있습니다.
 
-* [Amazon](../../../amazon-fireos-sso-using-clientless-api-cookbook.md)
+* [Amazon SSO Cookbook(REST API V2)](../../../single-sign-on/platform-single-sign-on/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)
 
 ## 예시 {#examples}
 
 다음 플랫폼에 대해 설명된 예를 참조하십시오.
 
-* [Amazon](../../../amazon-fireos-sso-using-clientless-api-cookbook.md)
+* [Amazon SSO Cookbook(REST API V2)](../../../single-sign-on/platform-single-sign-on/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)

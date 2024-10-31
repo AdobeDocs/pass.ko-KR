@@ -1,13 +1,13 @@
 ---
 title: SSO(Single Sign-On) - 파트너 - 플로우
 description: REST API V2 - Single Sign-On - 파트너 - 흐름
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: 5735d67f-a311-4d03-ad48-93c0fcbcace5
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '1317'
+source-wordcount: '1444'
 ht-degree: 0%
 
 ---
-
 
 # 파트너 흐름을 사용한 SSO(Single Sign-On) {#single-sign-on-partner-flows}
 
@@ -18,6 +18,18 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+Partner 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여러 애플리케이션이 파트너 프레임워크 상태 페이로드를 사용하여 장치 수준에서 SSO(Single Sign-On)를 수행할 수 있습니다.
+
+애플리케이션은 Adobe Pass 시스템 외부의 파트너별 프레임워크 또는 라이브러리를 사용하여 파트너 프레임워크 상태 페이로드를 검색합니다.
+
+응용 프로그램은 이 파트너 프레임워크 상태 페이로드를 지정하는 모든 요청에 대해 `AP-Partner-Framework-Status` 헤더의 일부로 포함합니다.
+
+`AP-Partner-Framework-Status` 헤더에 대한 자세한 내용은 [AP-Partner-Framework-Status](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) 설명서를 참조하십시오.
+
+Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클라이언트 애플리케이션의 최종 사용자를 위한 Partner SSO(Single Sign-On)를 지원합니다.
+
+Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO Cookbook(REST API V2)](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-rest-api-v2.md) 설명서를 참조하십시오.
 
 ## 파트너 인증 요청 검색 {#retrieve-partner-authentication-request}
 
@@ -61,7 +73,7 @@ ht-degree: 0%
    > 자세한 내용은 [파트너 인증 요청 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) API 설명서를 참조하십시오.
    >
    > * `serviceProvider` 및 `partner`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
+   > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 헤더 및 매개 변수
    >
    > <br/>
@@ -175,7 +187,7 @@ ht-degree: 0%
    > 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API 설명서를 참조하십시오.
    >
    > * `serviceProvider`, `partner` 및 `SAMLResponse`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
+   > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 헤더 및 매개 변수
    >
    > <br/>

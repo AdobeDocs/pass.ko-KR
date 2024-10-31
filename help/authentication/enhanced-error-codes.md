@@ -2,7 +2,7 @@
 title: 향상된 오류 코드
 description: 향상된 오류 코드
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 6c328eb2c635a1d76fc7dae8148a4de291c126e0
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '2593'
 ht-degree: 2%
@@ -301,8 +301,8 @@ Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 
 | **없음** | *invalid_parameter_service_provider* | 400 | 서비스 공급자 매개 변수 값이 없거나 잘못되었습니다. |
 |                              | *invalid_parameter_mvpd* | 400 | mvpd 매개 변수 값이 없거나 잘못되었습니다. |
 |                              | *invalid_parameter_code* | 400 | 코드 매개 변수 값이 누락되었거나 잘못되었습니다. |
-|                              | *invalid_parameter_resources* | 400 | 리디렉션 URL 매개 변수 값이 없거나 잘못되었습니다. |
-|                              | *invalid_parameter_redirect_url* | 400 | 리소스 매개 변수 값이 누락되었거나 잘못되었습니다. |
+|                              | *invalid_parameter_resources* | 400 | 리소스 매개 변수 값이 누락되었거나 잘못되었습니다. |
+|                              | *invalid_parameter_redirect_url* | 400 | 리디렉션 URL 매개 변수 값이 없거나 잘못되었습니다. |
 |                              | *invalid_parameter_partner* | 400 | 파트너 매개 변수 값이 누락되었거나 잘못되었습니다. |
 |                              | *invalid_parameter_saml_response* | 400 | SAML 응답 매개 변수 값이 없거나 잘못되었습니다. |
 |                              | *invalid_header_device_info* | 400 | 디바이스 정보 헤더 값이 누락되었거나 잘못되었습니다. |

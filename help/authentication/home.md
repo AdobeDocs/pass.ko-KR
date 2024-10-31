@@ -2,9 +2,9 @@
 title: Adobe&reg; 인증 통과!
 description: Adobe&reg; 인증 전달 개요 시작
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: 7107d4a915113fb237602143aafc350b776c55d6
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '331'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Adobe Pass 인증은 TV Everywhere에 대한 권한 부여 솔루션으로, 리�
 
 | **추천 항목** |
 |---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul><li>[iOS용 Single Sign-On](/help/authentication/apple-sso-overview.md)</li><li>[프로모션 임시 패스](/help/authentication/promotional-temp-pass.md)</li><li>[홈 기반 인증(HBA)](/help/authentication/home-based-authn-tve.md)</li><li>[HBA 인포그래픽](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
+| <ul><li>[iOS용 Single Sign-On](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-overview.md)</li><li>[프로모션 임시 패스](/help/authentication/promotional-temp-pass.md)</li><li>[홈 기반 인증(HBA)](/help/authentication/home-based-authn-tve.md)</li><li>[HBA 인포그래픽](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
 
 | 프로그래머용 **1}** | **MVPD용** |
 |------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|

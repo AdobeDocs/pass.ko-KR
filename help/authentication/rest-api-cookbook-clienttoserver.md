@@ -2,9 +2,9 @@
 title: REST API Cookbook(클라이언트-서버)
 description: 서버에 대한 REST API Cookbook 클라이언트입니다.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 3cff9d143eedb35155aa06c72d53b951b2d08d39
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '876'
 ht-degree: 0%
 
 ---
@@ -130,12 +130,18 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 1. 사용자를 다시 스마트 장치 앱으로 보내어 인증 흐름을 완료합니다.
 
-## 플랫폼 SSO {#platform-sso}
+## Partner Single Sign-On {#partner-sso}
 
-일부 플랫폼은 SSO(Single Sign-On)를 전적으로 지원합니다. 구현 세부 사항은 각 플랫폼에 대해 찾을 수 있습니다.
+일부 디바이스는 Partner SSO(Single Sign-On)에 대한 전용 지원을 제공합니다.
 
-* [APPLE SSO](/help/authentication/apple-sso-cookbook-rest-api.md)
-* AMAZON SSO
+* [APPLE SSO](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-cookbook-rest-api-v1.md)
+
+## Platform Single Sign-On {#platform-sso}
+
+일부 장치는 Platform SSO(Single Sign-On)를 전적으로 지원합니다.
+
+* [AMAZON SSO](./single-sign-on/platform-single-sign-on/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)
+* [Roku SSO](./single-sign-on/platform-single-sign-on/roku-single-sign-on/roku-sso-overview.md)
 
 ## REST API용 TempPass 및 프로모션 TempPass {#temppass}
 

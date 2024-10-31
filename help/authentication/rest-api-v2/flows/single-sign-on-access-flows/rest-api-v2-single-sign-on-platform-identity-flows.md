@@ -1,13 +1,13 @@
 ---
 title: SSO(Single Sign-On) - 플랫폼 ID - 흐름
 description: REST API V2 - Single Sign-On - 플랫폼 ID - 흐름
-source-git-commit: 150e064d0287eaac446c694fb5a2633f7ea4b797
+exl-id: 5200e851-84e8-4cb4-b068-63b91a2a8945
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
 source-wordcount: '1830'
 ht-degree: 0%
 
 ---
-
 
 # 플랫폼 ID 흐름을 사용한 SSO(Single Sign-On) {#single-sign-on-platform-identity-full-flows}
 
@@ -117,7 +117,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
    > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
-   >[!NOTE]
+   >[!TIP]
    >
    > 제안: 스트리밍 응용 프로그램은 사용자 에이전트가 제공된 `redirectUrl`에 도달할 때까지 기다렸다가 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
 

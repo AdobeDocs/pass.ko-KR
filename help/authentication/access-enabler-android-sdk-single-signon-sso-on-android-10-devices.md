@@ -2,9 +2,9 @@
 title: Android 10 앱에서 Enabler Android SDK SSO(Single Sign-On) 액세스
 description: Android 10 앱에서 Enabler Android SDK SSO(Single Sign-On) 액세스
 exl-id: dedade15-c451-4757-b684-d3728e11dd87
-source-git-commit: 1b8371a314488335c68c82882c930b7c19aa64ad
+source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
 workflow-type: tm+mt
-source-wordcount: '383'
+source-wordcount: '379'
 ht-degree: 0%
 
 ---
@@ -23,8 +23,6 @@ Adobe Pass 인증 기반 앱 간의 SSO(Single Sign-On)는 Access Enabler Androi
 
 이러한 변경 사항으로 인해 Access Enabler Android 버전 **3.2.1 SDK(최신)** 및 이전 버전에서 제공하는 SSO(Single Sign-On)가 다음 섹션에 설명된 대로 Android 10 디바이스에서 영향을 받을 수 있습니다.
 
-[Roku SSO 개요](/help/authentication/roku-sso-overview.md)를 참조하십시오.
-
 ## 비헤이비어
 
 앱의 **[!UICONTROL target SDK level]** 또는 **android:requestLegacyExternalStorage** 매니페스트 특성 사용에 따라 Access Enabler Android 버전 3.2.1 SDK(최신)와 이전 버전에서 제공하는 SSO(Single Sign-On)가 현재 다음과 같이 작동합니다.
@@ -32,7 +30,6 @@ Adobe Pass 인증 기반 앱 간의 SSO(Single Sign-On)는 Access Enabler Androi
 - 앱 대상 **Android 9(API 수준 28)** 또는 하위 **-\>** SSO(Single Sign-On) **이(가) 작동합니다**
 - 앱 대상은 **Android 10** **(API 수준 29)**&#x200B;이며 앱의 매니페스트 파일 **-\>**&#x200B;에서 **requestLegacyExternalStorage의 값을 true**&#x200B;로 **설정**&#x200B;합니다. SSO(Single Sign-On) **이(가) 작동합니다**
 - 앱 대상 **Android 10** **(API 수준 29)** 및 앱의 매니페스트 파일 **-\>** SSO(Single Sign-On) **에서** requestLegacyExternalStorage의 값을 true **로**&#x200B;설정하지&#x200B;**않습니다**
-
 
 >[!TIP]
 >
