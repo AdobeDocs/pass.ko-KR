@@ -1,7 +1,7 @@
 ---
 title: REST API V2 Cookbook(서버 간)
 description: REST API V2 Cookbook(서버 간)
-source-git-commit: e1e1835d0d523377c48b39170919f7120cc3ef90
+source-git-commit: c17e52dd52fa14c50d59945598d1913f02be2468
 workflow-type: tm+mt
 source-wordcount: '1566'
 ht-degree: 0%
@@ -186,4 +186,4 @@ Adobe Pass 서비스는 미국 전역에 지리적으로 분산된 여러 데이
 
 ## 관련 정보 {#related}
 
-* [REST API V2 참조](/help/authentication/rest-api-v2/rest-api-v2-flows-overview.md)
+* [REST API V2 참조](/help/authentication/rest-api-v2/rest-api-v2-overview.md)
