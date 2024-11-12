@@ -2,9 +2,9 @@
 title: 향상된 오류 코드
 description: 향상된 오류 코드
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
+source-git-commit: ce9659074bfa3fac3ea62a70a6da470f15bad3fe
 workflow-type: tm+mt
-source-wordcount: '2593'
+source-wordcount: '2606'
 ht-degree: 2%
 
 ---
@@ -313,6 +313,7 @@ Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 
 |                              | *invalid_header_pfs_permission_access_not_granted* | 400 | 파트너 프레임워크 상태 헤더의 권한 액세스 상태 값이 부여되지 않았습니다. |
 |                              | *invalid_header_pfs_provider_id_not_determined* | 400 | 파트너 프레임워크 상태 헤더의 공급자 ID 값이 알려진 mvpd와 연결되어 있지 않습니다. |
 |                              | *invalid_header_pfs_provider_id_mismatch* | 400 | 파트너 프레임워크 상태 헤더의 공급자 ID 값이 매개 변수로 전송된 mvpd와 일치하지 않습니다. |
+|                              | *invalid_header_pfs_provider_info_expired* | 400 | 파트너 프레임워크 상태 헤더의 공급자 정보가 만료되었습니다. |
 |                              | *invalid_integration* | 400 | 지정한 서비스 공급자와 mvpd 간의 통합이 없거나 비활성화되었습니다. |
 |                              | *invalid_authentication_session* | 400 | 이 요청과 연결된 인증 세션이 없거나 잘못되었습니다. |
 |                              | *preauthorization_denied_by_mvpd* | 403 | 지정된 리소스에 대한 사전 승인을 요청할 때 MVPD가 &quot;거부&quot; 결정을 반환했습니다. |
