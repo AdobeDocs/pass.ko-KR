@@ -1,23 +1,22 @@
 ---
-title: Amazon SSO Cookbook (REST API V1)
-description: Amazon SSO Cookbook (REST API V1)
-exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
+title: Amazon SSO Cookbook(REST API V2)
+description: Amazon SSO Cookbook(REST API V2)
 source-git-commit: e5ef8c0cba636ac4d2bda1abe0e121d0ecc1b795
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '542'
 ht-degree: 0%
 
 ---
 
-# Amazon SSO Cookbook (REST API V1) {#amazon-sso-cookbook-rest-api-v1}
+# Amazon SSO Cookbook(REST API V2) {#amazon-sso-cookbook-rest-api-v2}
 
 >[!IMPORTANT]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-Adobe Pass 인증 REST API V1은 FireOS에서 실행되는 클라이언트 애플리케이션의 최종 사용자를 위한 Platform SSO(Single Sign-On)를 지원합니다.
+Adobe Pass 인증 REST API V2는 FireOS에서 실행되는 클라이언트 애플리케이션의 최종 사용자를 위한 Platform SSO(Single Sign-On)를 지원합니다.
 
-이 문서는 높은 수준의 보기를 제공하는 기존 [REST API V1 개요](/help/authentication/rest-api-overview.md)의 확장 역할을 합니다.
+이 문서는 높은 수준의 보기를 제공하는 기존 [REST API V2 개요](/help/authentication/rest-api-v2/rest-api-v2-overview.md)에 대한 확장 역할을 하며, [플랫폼 ID 흐름을 사용하여 Single Sign-On을 구현하는 방법](/help/authentication/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md)을 설명하는 문서입니다.
 
 ## platform id 흐름을 사용한 Amazon single sign-on {#cookbook}
 
@@ -139,56 +138,31 @@ Amazon SSO SDK는 SSO 토큰(플랫폼 ID) 페이로드를 얻기 위해 동기 
 
 ### 워크플로 {#workflow}
 
-Amazon SSO 토큰(플랫폼 ID) 페이로드는 Adobe Pass 인증 종단점에 대해 수행된 모든 HTTP 요청에 있어야 합니다.
+Amazon SSO 토큰(플랫폼 ID) 페이로드는 Adobe Pass 인증 REST API V2 끝점에 대해 수행된 모든 HTTP 요청에 있어야 합니다.
 
 ```
-/adobe-services/*
-/reggie/*
-/api/*
+/api/v2/*
 ```
+
+Adobe Pass 인증 REST API V2는 다음 방법을 지원하여 장치 범위 또는 플랫폼 범위 식별자인 SSO 토큰(플랫폼 ID) 페이로드를 받습니다.
+
+* `Adobe-Subject-Token`(이)라는 헤더로
 
 >[!IMPORTANT]
 > 
-> `/regcode` 호출에서 제공되었으므로 스트리밍 응용 프로그램이 `/authenticate` 호출에서 Amazon SSO 토큰(플랫폼 ID) 페이로드의 전송을 건너뛸 수 있습니다.
-
-Adobe Pass 인증은 다음 방법을 지원하여 장치 범위 또는 플랫폼 범위 식별자인 SSO 토큰(플랫폼 ID) 페이로드를 받습니다.
-
-* `Adobe-Subject-Token`(이)라는 헤더로
-* 쿼리 매개 변수 이름: `ast`
-* `ast`(이)라는 post 매개 변수로
-
->[!IMPORTANT]
->
-> 쿼리 매개 변수로 전송되는 경우 전체 URL이 매우 길어져 거부될 수 있습니다.
->
-> 쿼리/게시물 매개 변수로 전송된 경우에는 요청 서명을 생성할 때 포함되어야 합니다.
+> `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-주체-토큰](/help/authentication/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
 
 #### 샘플
 
 **헤더로 보내기**
 
 ```HTTPS
-GET /api/v1/config/{requestorId} HTTP/1.1 
+GET /api/v2/{serviceProvider}/sessions HTTP/1.1 
 Host: sp-preprod.auth.adobe.com
 
 Adobe-Subject-Token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.JlBFhNhNCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA
 ```
 
-**쿼리 매개 변수로 보내기**
-
-```HTTPS
-GET /api/v1/config/{requestorId}?ast=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.JlBFhNhNCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA HTTP/1.1
-Host: sp.auth.adobe.com
-```
-
-**게시물 매개 변수로 보내기**
-
-```HTTPS
-POST /api/v1/config/{requestorId}?ast=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJyb2t1IiwiaWF0IjoxNTExMzY4ODAyLCJleHAiOjE1NDI5MDQ4MDIsImF1ZCI6ImFkb2JlIiwic3ViIjoiNWZjYzMwODctYWJmZi00OGU4LWJhZTgtODQzODViZTFkMzQwIiwiZGlkIjoiY2FmZjQ1ZDAtM2NhMy00MDg3LWI2MjMtNjFkZjNhMmNlOWM4In0.Jl\_BFhN\_h\_NCJCDXLwBjy5tt3PtPcqbMKEIGZ6sr2NA HTTP/1.1
-Host: sp.auth.adobe.com 
-Content-Type: multipart/form-data;
-```
-
 >[!IMPORTANT]
 >
-> `Adobe-Subject-Token` 헤더 또는 `ast` 매개 변수 값이 없거나 잘못된 경우 Adobe Pass 인증은 Single Sign-On을 고려하지 않고 요청을 처리합니다.
+> `Adobe-Subject-Token` 헤더 값이 없거나 잘못된 경우 Adobe Pass 인증은 Single Sign-On을 고려하지 않고 요청을 처리합니다.

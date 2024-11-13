@@ -1,9 +1,10 @@
 ---
 title: Apple SSO Cookbook(REST API V2)
 description: Apple SSO Cookbook(REST API V2)
-source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
+exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
+source-git-commit: e5ef8c0cba636ac4d2bda1abe0e121d0ecc1b795
 workflow-type: tm+mt
-source-wordcount: '3402'
+source-wordcount: '3410'
 ht-degree: 0%
 
 ---
@@ -16,11 +17,11 @@ ht-degree: 0%
 
 Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클라이언트 애플리케이션의 최종 사용자를 위한 Partner SSO(Single Sign-On)를 지원합니다.
 
-이 문서는 [파트너 흐름을 사용하여 Single Sign-On을 구현](/help/authentication/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md)하는 방법을 설명하는 기존 REST API V2 설명서에 대한 확장 역할을 합니다.
+이 문서는 높은 수준의 보기를 제공하는 기존 [REST API V2 개요](/help/authentication/rest-api-v2/rest-api-v2-overview.md)와 파트너 흐름을 사용하여 [Single Sign-On을 구현하는 방법을 설명하는 문서의 확장 역할을 합니다](/help/authentication/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md).
 
-## 파트너 흐름을 사용하는 Apple Single Sign-On {#apple-sso-cookbook-rest-api-v2-cookbook}
+## 파트너 흐름을 사용하는 Apple Single Sign-On {#cookbook}
 
-### 전제 조건 {#apple-sso-cookbook-rest-api-v2-prerequisites}
+### 전제 조건 {#prerequisites}
 
 파트너 흐름을 사용하여 Apple Single Sign-On을 계속 진행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -40,7 +41,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
 >
 > * 스트리밍 응용 프로그램이 프로그래머에게 적용되는 [온보딩 필수 구성 요소](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-overview.md#apple-sso-prerequisites-programmer)를 완료했으며 Apple SSO(Single Sign-On) 사용자 환경을 사용하도록 설정하는 데 필요합니다.
 
-### 워크플로 {#apple-sso-cookbook-rest-api-v2-workflow}
+### 워크플로 {#workflow}
 
 다음 다이어그램과 같이 파트너 흐름을 사용하여 Apple Single Sign-On을 구현하려면 주어진 단계를 수행하십시오.
 
