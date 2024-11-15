@@ -1,9 +1,10 @@
 ---
 title: REST API V2 용어집
 description: REST API V2 용어집
-source-git-commit: dd3451f8761ce6183e9a11099fb3094abae09466
+exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
+source-git-commit: 1370554c66116a357970fb05c046608e261f0ed3
 workflow-type: tm+mt
-source-wordcount: '1872'
+source-wordcount: '1964'
 ht-degree: 0%
 
 ---
@@ -34,6 +35,8 @@ ht-degree: 0%
 
 인증 코드는 [기본(프로그래머) 응용 프로그램](#primary-application) 또는 [보조(프로그래머) 응용 프로그램](#secondary-application)에서 모두 사용하여 [인증](#authentication) 프로세스를 완료하거나 [인증 세션](#session)에 대한 정보를 검색하거나 사용자 [프로필](#profile)에 액세스할 수 있습니다.
 
+등록 코드를 사용한 이전 용어와 동의어입니다.
+
 #### 인증 세션 {#session}
 
 인증 세션은 [프로그래머](#programmer) 응용 프로그램에서 시작(또는 계속)한 사용자 인증 프로세스에 대한 정보를 저장하는 Adobe Pass 인증 개념이며 [인증 코드](#code)에 의해 고유하게 식별됩니다.
@@ -45,6 +48,10 @@ ht-degree: 0%
 권한 부여는 사용자가 [MVPD](#mvpd)에 대한 사용자 권한을 확인한 후 소유한 [MVPD](#mvpd) 구독을 기반으로 [프로그래머](#programmer) 카탈로그에서 보호된 콘텐츠([resource](#resource))에 액세스할 수 있도록 하는 프로세스입니다.
 
 ### C {#c}
+
+#### 클라이언트 자격 증명 {#client-credentials}
+
+클라이언트 자격 증명은 [DCR(Dynamic Client Registration)](#dcr) 프로세스 중에 생성된 고유한 값 집합이며 [액세스 토큰](#access-token)을(를) 얻는 데 사용됩니다.
 
 #### 구성 {#configuration}
 
@@ -114,6 +121,8 @@ ID 공급자는 [TV Everywhere(TVE)](#tve)의 컨텍스트에서 케이블, 위�
 
 미디어 토큰이 [Programmer](#programmer)에 전달되며, 유효성을 검사하여 해당 [resource](#resource)에 대한 액세스 보안을 유지합니다.
 
+단기 인증 토큰을 사용한 이전 용어의 동의어입니다.
+
 #### 미디어 토큰 검증기 {#media-token-verifier}
 
 미디어 토큰 검증기는 [미디어 토큰](#media-token)의 신뢰성을 확인하는 역할을 하는 Adobe Pass 인증에서 배포한 라이브러리입니다.
@@ -138,7 +147,15 @@ MVPD는 MVPD와 Adobe 사이의 온보딩 프로세스 동안 정의된 고유 �
 
 #### 사전 인증 {#preauthorization}
 
-사전 인증은 사용자가 [MVPD](#mvpd)를 사용하여 사용자 권한을 확인한 후 액세스할 권한이 있는 [프로그래머](#programmer) 카탈로그에서 [리소스](#resource) 목록을 미리 볼 수 있도록 하는 프로세스입니다.
+사전 인증은 사용자가 [MVPD](#mvpd)를 사용하여 사용자 권한을 확인한 후 액세스 권한이 있는 [프로그래머](#programmer) 카탈로그에서 [리소스](#resource)의 하위 집합을 미리 볼 수 있는 프로세스입니다.
+
+[Preflight](#preflight)의 동의어입니다.
+
+#### Preflight {#preflight}
+
+Preflight는 사용자가 [MVPD](#mvpd)를 사용하여 사용자 권한을 확인한 후 액세스 권한이 있는 [프로그래머](#programmer) 카탈로그에서 [리소스](#resource)의 하위 집합을 미리 볼 수 있는 프로세스입니다.
+
+[사전 인증](#preauthorization)과 동의어입니다.
 
 #### 기본(프로그래머) 애플리케이션 {#primary-application}
 
@@ -147,6 +164,8 @@ MVPD는 MVPD와 Adobe 사이의 온보딩 프로세스 동안 정의된 고유 �
 #### 프로필 {#profile}
 
 프로필은 사용자의 인증 시작 날짜 및 종료 날짜, [사용자의 메타데이터](#user-metadata)에 대한 정보를 인증 획득 방법을 나타내는 다른 필드(예: &quot;일반&quot;, &quot;성능 저하&quot;, &quot;임시&quot;, &quot;Single Sign-On&quot; 등)와 함께 저장하는 Adobe Pass 인증 개념입니다.
+
+이전에 사용한 인증 토큰의 동의어입니다.
 
 #### 프로그래머 {#programmer}
 
@@ -270,7 +289,7 @@ TV 제공자는 TV 제공자와 Adobe 사이의 온보딩 프로세스 동안 �
 
 #### 사용자 메타데이터 {#user-metadata}
 
-사용자 메타데이터는 사용자 특정 속성(예: 우편 번호, 보호자 등급, 사용자 ID 등)을 나타냅니다. [MVPD](#mvpd)에서 유지 관리되며 [프로필](#profile)의 일부로 Adobe Pass 인증에서 제공합니다.
+사용자 메타데이터는 [MVPD](#mvpd)에 의해 유지되고 [프로필](#profile)의 일부로 Adobe Pass 인증에서 제공하는 사용자별 특성(예: 우편 번호, 보호자 등급, 사용자 ID 등)을 참조합니다.
 
 자세한 내용은 [사용자 메타데이터](/help/authentication/user-metadata-feature.md) 설명서를 참조하세요.
 

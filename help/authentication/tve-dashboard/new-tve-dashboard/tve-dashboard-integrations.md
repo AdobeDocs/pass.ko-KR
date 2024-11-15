@@ -2,7 +2,7 @@
 title: TVE 대시보드 통합
 description: 채널과 MVPD 간의 통합 및 통합 관리 방법에 대해 알아봅니다.
 exl-id: 0add340b-120c-4e82-8e3c-6c190d77cf7e
-source-git-commit: acff285f7db1bdd32d5da3e01a770d9581d3ba75
+source-git-commit: 1370554c66116a357970fb05c046608e261f0ed3
 workflow-type: tm+mt
 source-wordcount: '2093'
 ht-degree: 0%
@@ -328,7 +328,7 @@ MVPD 선택기를 만들지 않고 대신 제공된 구성을 사용하는 프�
 새 통합은 [변경 내용을 검토하고 푸시](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-review-push-changes.md)한 후에만 만들어집니다.
 
 
-## 통합 비활성화 {#disable-integratgion}
+## 통합 비활성화 {#disable-integration}
 
 통합을 비활성화하려면 다음 단계를 따르십시오.
 
