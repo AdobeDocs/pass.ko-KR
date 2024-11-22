@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook(REST API V2)
 description: Apple SSO Cookbook(REST API V2)
 exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
-source-git-commit: e5ef8c0cba636ac4d2bda1abe0e121d0ecc1b795
+source-git-commit: dbf68d75962e3e34f0c569c409f8c98ae6b9e036
 workflow-type: tm+mt
-source-wordcount: '3410'
+source-wordcount: '3442'
 ht-degree: 0%
 
 ---
@@ -509,6 +509,9 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **다음 작업을 나타냅니다.** Adobe Pass Logout 끝점 응답에는 다음 작업에 대해 스트리밍 응용 프로그램을 안내하는 데 필요한 데이터가 포함되어 있습니다.
+   * 로그아웃 흐름을 완료하려면 사용자가 파트너(시스템) 수준과 상호 작용해야 하므로 `url` 특성이 없습니다.
+   * `actionName` 특성이 &quot;partner_logout&quot;으로 설정되어 있습니다.
+   * `actionType` 특성이 &quot;partner_interactive&quot;로 설정되어 있습니다.
 
    >[!IMPORTANT]
    >

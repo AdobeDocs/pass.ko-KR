@@ -2,9 +2,9 @@
 title: 특정 mvpd에 대한 로그아웃 시작
 description: REST API V2 - 특정 mvpd에 대한 로그아웃 시작
 exl-id: 2482de87-b3d4-4ea8-bd4a-25bf10017e01
-source-git-commit: ca8eaff83411daab5f136f01394e1d425e66f393
+source-git-commit: dbf68d75962e3e34f0c569c409f8c98ae6b9e036
 workflow-type: tm+mt
-source-wordcount: '941'
+source-wordcount: '1006'
 ht-degree: 1%
 
 ---
@@ -239,6 +239,7 @@ ht-degree: 1%
                   가능한 값은 다음과 같습니다.
                   <ul>
                     <li><b>로그아웃</b><br/>스트리밍 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 로그아웃 끝점을 사용하여 MVPD에서 로그아웃합니다.</li>
+                    <li><b>partner_logout</b><br/>스트리밍 장치는 사용자에게 파트너(시스템) 수준에서도 로그아웃하도록 알려야 합니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 프로필 유형이 "appleSSO"인 경우 MVPD에서 로그아웃하십시오.</li>
                     <li><b>완료</b><br/>스트리밍 장치는 후속 작업을 수행할 필요가 없습니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 로그아웃 끝점 없이 MVPD에서 로그아웃하고(더미 로그아웃 기능), 액세스 성능이 저하된 동안에는 로그아웃하고, 임시 액세스 중에는 로그아웃합니다.</li>
                     <li><b>잘못됨</b><br/>스트리밍 장치는 후속 작업을 수행할 필요가 없습니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 유효한 프로필이 없으면 MVPD에서 로그아웃합니다.</li>
                   </ul>  
@@ -252,6 +253,7 @@ ht-degree: 1%
                   가능한 값은 다음과 같습니다.
                   <ul>
                     <li><b>대화식</b><br/>이 형식은 'actionName' 특성의 다음 값에 적용됩니다. <b>로그아웃</b>.</li>
+                    <li><b>partner_interactive</b><br/>이 유형은 'actionName' 속성의 다음 값에 적용됩니다. <b>partner_logout</b>.</li>
                     <li><b>없음</b><br/>이 유형은 'actionName' 특성의 다음 값에 적용됩니다. <b>완료</b>, <b>잘못됨</b>.</li>
                   </ul>
                <td><i>필수</i></td>
@@ -476,7 +478,43 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 5. 성능 저하가 적용되는 동안 특정 mvpd에 대한 로그아웃 시작
+### 5. Partner(Apple)를 사용하여 Single Sign-On을 통해 얻은 프로필을 포함한 특정 mvpd에 대한 로그아웃 시작
+
+>[!BEGINTABS]
+
+>[!TAB 요청]
+
+```HTTPS
+GET /api/v2/REF30/logout/Cablevision?redirectUrl=https%3A%2F%2Fadobe.com HTTP/1.1
+
+    Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNGZjM2U3ZS0xMmQ5LTQ5NWQtYjc0Mi02YWVhYzhhNDkwZTciLCJuYmYiOjE3MjQwODc4NjgsImlzcyI6ImF1dGguYWRvYmUuY29tIiwic2NvcGVzIjoiYXBpOmNsaWVudDp2MiIsImV4cCI6MTcyNDEwOTQ2OCwiaWF0IjoxNzI0MDg3ODY4fQ.DJ9GFl_yKAp2Qw-NVcBeRSnxIhqrwxhns5T5jU31N2tiHxCucKLSQ5guBygqkkJx6D0N_93f50meEEyfb7frbHhVHHwmRjHYjkfrWqHCpviwVjVZKKwl8Y3FEMb0bjKIB8p_E3txX9IbzeNGWRufZBRh2sxB5Q9B7XYINpVfh8s_sFvskrbDu5c01neCx5kEagEW5CtE0_EXTgEb5FSr_SfQG3UUu_iwlkOggOh_kOP_5GueElf9jn-bYBMnpObyN5s-FzuHDG5Rtac5rvcWqVW2reEqFTHqLI4rVC7UKQb6DSvPBPV4AgrutAvk30CYgDsOQILVyrjniincp7r9Ww
+    AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
+    X-Device-Info: ewoJInByaW1hcnlIYXJkd2FyZVR5cGUiOiAiU2V0VG9wQm94IiwKCSJtb2RlbCI6ICJUViA1dGggR2VuIiwKCSJtYW51ZmFjdHVyZXIiOiAiQXBwbGUiLAoJIm9zTmFtZSI6ICJ0dk9TIgoJIm9zVmVuZG9yIjogIkFwcGxlIiwKCSJvc1ZlcnNpb24iOiAiMTEuMCIKfQ==
+    Accept: application/json
+    User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 11.0 like Mac OS X; en_US)
+```
+
+>[!TAB 응답]
+
+```HTTPS
+HTTP/1.1 200 OK
+
+Content-Type: application/json;charset=UTF-8
+
+{
+   "logouts": {
+      "Cablevision": {
+         "actionName": "partner_logout",
+         "actionType": "partner_interactive",
+         "mvpd": "Cablevision"
+      }
+   }
+}
+```
+
+>[!ENDTABS]
+
+### 6. 저하가 적용되는 동안 특정 mvpd에 대한 로그아웃 시작
 
 >[!BEGINTABS]
 
@@ -512,7 +550,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 6. 기본 또는 프로모션 TempPass 로그아웃 시작(필수 아님)
+### 7. 기본 또는 프로모션 TempPass 로그아웃 시작(필수 아님)
 
 >[!BEGINTABS]
 
