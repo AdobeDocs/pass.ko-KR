@@ -2,7 +2,7 @@
 title: 표준 메타데이터 속성
 description: 표준 메타데이터 속성
 exl-id: 99ffa98c-213f-47a5-a6e7-fbacb77875d0
-source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 |-------------|---------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------|
 | applicationId | 75b4-431b-adb2-eb6b9e546013 | 인증 헤더 | 통합 시 Zendesk 티켓 |
 | mvpdName | Sample_MVPD | URI 경로 | 사용자가 MVPD를 선택할 때 구성 끝점에서 Adobe Pass 인증 |
-| accountId | 12345 | URI 경로 | 사용자 로그인 후 Adobe Pass 인증 upstreamUserID 메타데이터 [사용자 메타데이터 upstreamUserID - Adobe Pass 인증](/help/authentication/user-metadata-feature.md) |
+| accountId | 12345 | URI 경로 | 사용자 로그인 후 Adobe Pass 인증 upstreamUserID 메타데이터 [사용자 메타데이터 upstreamUserID - Adobe Pass 인증](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md) |
 
 
 ## 메타데이터 속성 {#metadata-attr}

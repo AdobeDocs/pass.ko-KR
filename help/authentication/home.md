@@ -2,7 +2,7 @@
 title: Adobe&reg; 인증 통과!
 description: Adobe&reg; 인증 전달 개요 시작
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: 21b4ad42709351eac1c2089026f84a43deb50f8a
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '331'
 ht-degree: 0%
@@ -26,16 +26,16 @@ Adobe Pass 인증은 TV Everywhere에 대한 권한 부여 솔루션으로, 리�
 ## 자주 사용하는 도움말 및 FAQ {#help-faqs}
 
 | **추천 항목** |
-|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul><li>[iOS용 Single Sign-On](/help/authentication/single-sign-on/partner-single-sign-on/apple-single-sign-on/apple-sso-overview.md)</li><li>[프로모션 임시 패스](/help/authentication/promotional-temp-pass.md)</li><li>[홈 기반 인증(HBA)](/help/authentication/home-based-authn-tve.md)</li><li>[HBA 인포그래픽](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/tve-dashboard/new-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
+|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul><li>[iOS용 Single Sign-On](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)</li><li>[프로모션 임시 패스](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)</li><li>[홈 기반 인증(HBA)](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authn-tve.md)</li><li>[HBA 인포그래픽](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
 
 | 프로그래머용 **1}** | **MVPD용** |
-|------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------|
-| <ul><li>[프로그래머 킥스타트 안내서](/help/authentication/programmer-kickstart-guide.md)</li><li>[사용자 메타데이터](/help/authentication/user-metadata.md)</li></ul> | <ul><li>[MVPD 킥스타트 안내서](/help/authentication/mvpd-kickstart-guide.md)</li><li>[인증](/help/authentication/authn-usecase.md)</li><li>[인증](/help/authentication/authz-usecase.md)</li><li>[로그아웃](/help/authentication/usecase-mvpd-logout.md)</li></ul> |
+|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| <ul><li>[프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)</li><li>[사용자 메타데이터](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)</li></ul> | <ul><li>[MVPD 킥스타트 안내서](/help/authentication/kickstart/mvpd-kickstart-guide.md)</li><li>[인증](/help/authentication/integration-guide-mvpds/authn-usecase.md)</li><li>[인증](/help/authentication/integration-guide-mvpds/authz-usecase.md)</li><li>[로그아웃](/help/authentication/integration-guide-mvpds/usecase-mvpd-logout.md)</li></ul> |
 | **기본 앱 클라이언트의 경우** | **모든 사용자** |
-| <ul><li>[iOS 기술 개요](/help/authentication/iostvos-sdk-overview.md)</li><li>[Android 기술 개요](/help/authentication/android-sdk-overview.md)</li></ul> | <ul><li>[기술 문서](/help/authentication/technical-paper.md)</li><li>[에스컬레이션 프로시저](/help/authentication/escalation-procedures.md)</li><li>[용어집](/help/authentication/glossary.md)</li></ul> |
-| **스마트 장치용** | |
-| <ul><li>[클라이언트 없는 기술 개요](/help/authentication/rest-api-overview.md)</li><li>[클라이언트 없는 API](/help/authentication/rest-api-reference.md)</li></ul> | |
+| <ul><li>[iOS 기술 개요](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[Android 기술 개요](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[기술 문서](/help/authentication/kickstart/technical-paper.md)</li><li>[에스컬레이션 프로시저](/help/authentication/notes-technical/escalation-procedures.md)</li><li>[용어집](/help/authentication/kickstart/glossary.md)</li></ul> |
+| **스마트 장치용** |                                                                                                                                                                                                                                                                                                                                                                       |
+| <ul><li>[클라이언트 없는 기술 개요](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/rest-api-overview.md)</li><li>[클라이언트 없는 API](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)</li></ul> |                                                                                                                                                                                                                                                                                                                                                                       |
 
 >[!IMPORTANT]
 >
@@ -43,7 +43,7 @@ Adobe Pass 인증은 TV Everywhere에 대한 권한 부여 솔루션으로, 리�
 >
 >[지원 팀에 전자 메일 보내기](mailto:tve-support@adobe.com)도 문제 또는 문제 보고서의 첫 단계입니다.
 >
->[SEVERITY 1 LIVE](/help/authentication/escalation-procedures.md) 문제가 있고 이메일을 보냈으며 응답 없이 30분이 지난 경우 전화 번호에 대한 [에스컬레이션 절차](/help/authentication/escalation-procedures.md) 문서를 참조하십시오.
+>[SEVERITY 1 LIVE](/help/authentication/notes-technical/escalation-procedures.md) 문제가 있고 이메일을 보냈으며 응답 없이 30분이 지난 경우 전화 번호에 대한 [에스컬레이션 절차](/help/authentication/notes-technical/escalation-procedures.md) 문서를 참조하십시오.
 >
 
 
