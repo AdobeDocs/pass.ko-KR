@@ -2,9 +2,9 @@
 title: 클라이언트리스 API 구현 - 오류 코드/가능한 이유/원인이 있는 메시지
 description: 클라이언트리스 API 구현 - 오류 코드/가능한 이유/원인이 있는 메시지
 exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '205'
+source-wordcount: '227'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!NOTE]
 >
 >이 페이지 상의 컨텐츠 는 정보 제공의 목적으로만 제공됩니다. 이 API를 사용하려면 Adobe Systems 의 최신 라이센스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+>[!IMPORTANT]
+>
+> 제품 공지](/help/authentication/product-announcements.md) 페이지에 집계된 최신 Adobe Pass Authentication 제품 발표 및 서비스 해제 일정에 [대한 정보를 계속 확인하십시오.
 
 </br>
 
@@ -33,7 +37,7 @@ ht-degree: 0%
 1. 도메인 간 스크립팅 문제가 발생할 수 있습니다
 1. /etc/hosts 파일에 적절한 스푸핑을 추가해야 합니다.
 
-## 오류: 400 잘못된 요청
+## 오류: 400개의 잘못된 요청
 
 ### 원인:
 
@@ -53,7 +57,7 @@ ht-degree: 0%
 
 1. 사용자 이름과 암호가 일치하지 않습니다.
 2. 로그인이 비활성화되었을 수 있습니다.
-3. 로그인이 프로덕션 또는 스테이징용인지 확인
+3. 로그인 이유가 프로덕션용인지 스테이징용인지 확인
 
 
 <!--

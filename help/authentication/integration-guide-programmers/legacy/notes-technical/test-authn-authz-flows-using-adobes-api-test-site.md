@@ -2,9 +2,9 @@
 title: Adobe의 API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법
 description: Adobe의 API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법
 exl-id: 04af4aed-35e4-44cb-98ce-7643165a8869
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '334'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!NOTE]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+>[!IMPORTANT]
+>
+> [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
 
 AuthN 및 AuthZ 흐름을 테스트하기 위해 사용자가 원하는 **API 테스트 사이트**&#x200B;를 준비했습니다. 우리의 지원 팀은 기꺼이 자격 증명을 제공할 것입니다. **support@tve.zendesk.com**(으)로 연락하세요.
 

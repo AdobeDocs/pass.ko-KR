@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '1258'
+source-wordcount: '1260'
 ht-degree: 2%
 
 ---
@@ -15,6 +15,35 @@ ht-degree: 2%
 # Adobe Pass 인증 도움말 {#authentication}
 
 + [Adobe Pass 인증](home.md)
++ [제품 공지](product-announcements.md)
++ 제품 릴리스 {#product-releases}
+   + 2024 {#2024}
+      + [Adobe Pass Authentication 3.0.3 릴리스 노트](notes-releases/auth-rn-303.md)
+      + [Adobe Pass Authentication 3.0 릴리스 노트](notes-releases/auth-rn-300.md)
+      + [Adobe Pass Authentication 2.70 릴리스 노트](notes-releases/auth-rn-270.md)
+      + [Adobe Pass Authentication 2.69 릴리스 노트](notes-releases/auth-rn-269.md)
+      + [Adobe Pass Authentication JavaScript 4.7.0 릴리스 노트](notes-releases/authn-rn-javascript-470.md)
+      + [Adobe Pass 인증 iOS / tvOS 3.9.2 릴리스 노트](notes-releases/authn-rn-ios-tvos-392.md)
+      + [Adobe Pass 인증 iOS / tvOS 3.8.4 릴리스 노트](notes-releases/authn-rn-ios-tvos-384.md)
+   + 2023년 {#2023}
+      + [Adobe Pass Authentication 2.68 릴리스 노트](notes-releases/auth-rn-268.md)
+      + [Adobe Pass Authentication 2.67 릴리스 노트](notes-releases/auth-rn-267.md)
+      + [Adobe Pass Authentication 2.66 릴리스 노트](notes-releases/auth-rn-266.md)
+      + [Adobe Pass Authentication 2.65.1 릴리스 노트](notes-releases/auth-rn-2651.md)
+      + [Adobe Pass Authentication 2.65 릴리스 노트](notes-releases/auth-rn-265.md)
+      + [Adobe Pass Authentication 2.64.1 릴리스 노트](notes-releases/auth-rn-2641.md)
+      + [Adobe Pass 인증 iOS / tvOS 3.8.3 릴리스 노트](notes-releases/authn-rn-ios-tvos-383.md)
+      + [Adobe Pass 인증 iOS / tvOS 3.8.2 릴리스 노트](notes-releases/authn-rn-ios-tvos-382.md)
+      + [Adobe Pass 인증 iOS / tvOS 3.8.1 릴리스 노트](notes-releases/authn-rn-ios-tvos-381.md)
+      + [Adobe Pass Authentication Android 3.7.3 릴리스 노트](notes-releases/authn-rn-android-373.md)
+   + 2022년 {#2022}
+      + [Adobe Pass Authentication 2.64 릴리스 노트](notes-releases/auth-rn-264.md)
+      + [Adobe Pass Authentication 2.63 릴리스 노트](notes-releases/auth-rn-263.md)
+      + [Adobe Pass Authentication 2.62.1 릴리스 노트](notes-releases/auth-rn-2621.md)
+      + [Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트](notes-releases/authn-rn-javascript-460.md)
+   + 2021 {#2021}
+      + [Adobe Pass Authentication JavaScript 4.4.0 릴리스 노트](notes-releases/authn-rn-javascript-440.md)
+      + [Adobe Pass 인증 iOS / tvOS 3.7.0 릴리스 노트](notes-releases/authn-rn-ios-tvos-370.md)
 + 킥스타트 {#kickstart}
    + [기술 문서](kickstart/technical-paper.md)
    + [프로그래머 개요](kickstart/programmer-overview.md)
@@ -119,7 +148,7 @@ ht-degree: 2%
          + [프로모션 임시 패스](integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)
          + [임시 통과 재설정](integration-guide-programmers/features-premium/temporary-access/reset-temp-pass.md)
       + 성능이 저하된 액세스 {#degraded-access}
-         + [성능 저하 API 개요](integration-guide-programmers/features-premium/degraded-access/degradation-api-overview.md)
+         + [저하 API 개요](integration-guide-programmers/features-premium/degraded-access/degradation-api-overview.md)
       + ESM {#esm}
          + [권한 부여 서비스 모니터링 개요](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md)
          + [권한 부여 서비스 모니터링 API](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
@@ -261,34 +290,6 @@ ht-degree: 2%
    + [통합](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md)
    + [보고서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-reports.md)
    + [변경 로그](/help/authentication/user-guide-tve-dashboard/tve-dashboard-changes-log.md)
-+ 릴리스 정보 {#release-notes}
-   + 2024 {#release-notes-2024}
-      + [Adobe Pass Authentication 3.0.3 릴리스 노트](notes-releases/auth-rn-303.md)
-      + [Adobe Pass Authentication 3.0 릴리스 노트](notes-releases/auth-rn-300.md)
-      + [Adobe Pass Authentication 2.70 릴리스 노트](notes-releases/auth-rn-270.md)
-      + [Adobe Pass Authentication 2.69 릴리스 노트](notes-releases/auth-rn-269.md)
-      + [Adobe Pass Authentication JavaScript 4.7.0 릴리스 노트](notes-releases/authn-rn-javascript-470.md)
-      + [Adobe Pass 인증 iOS / tvOS 3.9.2 릴리스 노트](notes-releases/authn-rn-ios-tvos-392.md)
-      + [Adobe Pass 인증 iOS / tvOS 3.8.4 릴리스 노트](notes-releases/authn-rn-ios-tvos-384.md)
-   + 2023년 {#release-notes-2023}
-      + [Adobe Pass Authentication 2.68 릴리스 노트](notes-releases/auth-rn-268.md)
-      + [Adobe Pass Authentication 2.67 릴리스 노트](notes-releases/auth-rn-267.md)
-      + [Adobe Pass Authentication 2.66 릴리스 노트](notes-releases/auth-rn-266.md)
-      + [Adobe Pass Authentication 2.65.1 릴리스 노트](notes-releases/auth-rn-2651.md)
-      + [Adobe Pass Authentication 2.65 릴리스 노트](notes-releases/auth-rn-265.md)
-      + [Adobe Pass Authentication 2.64.1 릴리스 노트](notes-releases/auth-rn-2641.md)
-      + [Adobe Pass 인증 iOS / tvOS 3.8.3 릴리스 노트](notes-releases/authn-rn-ios-tvos-383.md)
-      + [Adobe Pass 인증 iOS / tvOS 3.8.2 릴리스 노트](notes-releases/authn-rn-ios-tvos-382.md)
-      + [Adobe Pass 인증 iOS / tvOS 3.8.1 릴리스 노트](notes-releases/authn-rn-ios-tvos-381.md)
-      + [Adobe Pass Authentication Android 3.7.3 릴리스 노트](notes-releases/authn-rn-android-373.md)
-   + 2022년 {#release-notes-2022}
-      + [Adobe Pass Authentication 2.64 릴리스 노트](notes-releases/auth-rn-264.md)
-      + [Adobe Pass Authentication 2.63 릴리스 노트](notes-releases/auth-rn-263.md)
-      + [Adobe Pass Authentication 2.62.1 릴리스 노트](notes-releases/auth-rn-2621.md)
-      + [Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트](notes-releases/authn-rn-javascript-460.md)
-   + 2021 {#release-notes-2021}
-      + [Adobe Pass Authentication JavaScript 4.4.0 릴리스 노트](notes-releases/authn-rn-javascript-440.md)
-      + [Adobe Pass Authentication iOS / tvOS 3.7.0 릴리스 노트](notes-releases/authn-rn-ios-tvos-370.md)
 + 기술 노트 {#tech-notes}
    + 환경 {#environments}
       + [Adobe 환경 이해](notes-technical/environments/understanding-the-adobe-environments.md)

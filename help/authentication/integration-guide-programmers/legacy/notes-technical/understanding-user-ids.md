@@ -2,9 +2,9 @@
 title: 사용자 ID 이해
 description: 사용자 ID 이해
 exl-id: 813a8501-db72-4850-a387-c8db6120db80
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '603'
+source-wordcount: '625'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,10 @@ ht-degree: 0%
 >[!NOTE]
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+>[!IMPORTANT]
+>
+> [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
 
 개념적으로 자격 흐름을 시작하는 각 사용자는 고유한 단일 사용자 ID와 연결됩니다. 그러나 자격 흐름의 과정을 통해 해당 ID를 가져온 API에 따라 하나의 사용자 ID가 다른 방식으로 표시될 수 있습니다.
 
