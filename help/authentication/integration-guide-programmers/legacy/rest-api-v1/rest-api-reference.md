@@ -2,9 +2,9 @@
 title: REST API 참조
 description: Rest api 참조
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 3e69473bdb9818416e67b03e6c35d24dc3e0f991
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '647'
 ht-degree: 2%
 
 ---
@@ -66,7 +66,7 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 | 10. | [&lt;SP_FQDN>/api/v1/checkauthn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) | 장치에 만료되지 않은 AuthN 토큰이 있는지 여부를 나타냅니다. |                                                                                             | Adobe Pass </br>인증 </br>서비스 | 스마트 장치 |
 | 11. | [&lt;SP_FQDN>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) | 발견되면 AuthN 토큰을 반환합니다. |                                                                                             | Adobe Pass </br>인증 </br>서비스 | 스마트 장치 |
 | 12. | [&lt;SP_FQDN>/api/v1/tokens/authz](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authorization-token.md) | 발견된 경우 AuthZ 토큰을 반환합니다. |                                                                                             | Adobe Pass </br>인증 </br>서비스 | 스마트 장치 |
-| 13. | [&lt;SP_FQDN>/api/v1/tokens/media](/help/authentication/integration-guide-programmer/rest-apis/rest-api-v1/apis/obtain-short-media-token.md | 발견된 경우 짧은 미디어 토큰 반환 - /api/v1/mediatoken과 동일 |                                                                                             | Adobe Pass </br>인증 </br>서비스 | 스마트 장치 |
+| 13. | [&lt;SP_FQDN>/api/v1/토큰/미디어](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md) | 발견된 경우 짧은 미디어 토큰 반환 - /api/v1/mediatoken과 동일 |                                                                                             | Adobe Pass </br>인증 </br>서비스 | 스마트 장치 |
 | 14. | [&lt;SP_FQDN>/api/v1/mediatoken](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/obtain-short-media-token.md) | 짧은 미디어 토큰 가져오기 |                                                                                             | Adobe Pass </br>인증 </br>서비스 | 스마트 장치 |
 | 15. | [&lt;SP_FQDN>/api/v1/사전 승인](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources.md) | 사전 승인된 리소스 목록을 검색합니다. |                                                                                             | Adobe Pass </br>인증 </br>서비스 | 스마트 장치 |
 | 16. | [&lt;SP_FQDN>/api/v1/사전 승인/{code}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-list-of-preauthorized-resources-by-second-screen-web-app.md) | 사전 승인된 리소스 목록을 검색합니다. |                                                                                             | Adobe Pass </br>인증 </br>서비스 | 로그인 웹 앱 |
