@@ -2,14 +2,14 @@
 title: Amazon FireOS 기본 클라이언트 API 참조
 description: Amazon FireOS 기본 클라이언트 API 참조
 exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '3428'
+source-wordcount: '3429'
 ht-degree: 0%
 
 ---
 
-# Amazon FireOS 기본 클라이언트 API 참조 {#amazon-fireos-native-client-api-reference}
+# (기존) Amazon FireOS Native Client API 참조 {#amazon-fireos-native-client-api-reference}
 
 >[!NOTE]
 >
@@ -19,7 +19,7 @@ ht-degree: 0%
 
 ## 소개 {#intro}
 
-이 문서에서는 Adobe Pass 인증에서 지원되는 Adobe Pass 인증용 Amazon FireOS SDK에서 노출하는 메서드 및 콜백에 대해 자세히 설명합니다. 여기에 설명된 메서드와 콜백 함수는 AccessEnabler.h 및 EntitlementDelegate.h 헤더 파일에 정의되어 있습니다.
+이 문서에서는 Adobe Pass 인증에서 지원되는 Adobe Pass 인증용 Amazon FireOS SDK에 의해 노출된 메서드 및 콜백에 대해 자세히 설명합니다. 여기에 설명된 메서드와 콜백 함수는 AccessEnabler.h 및 EntitlementDelegate.h 헤더 파일에 정의되어 있습니다.
 
 최신 Amazon FireOS AccessEnabler SDK에 대해서는 <https://tve.zendesk.com/hc/en-us/articles/115005561623-fire-TV-Native-AccessEnabler-Library>을(를) 참조하십시오.
 
@@ -93,7 +93,7 @@ ht-degree: 0%
 
 *url* 매개 변수를 사용하지 않으면 결과 네트워크 호출은 기본 서비스 공급자 URL(Adobe 릴리스/프로덕션 환경)을 대상으로 합니다.
 
-*url* 매개 변수에 대한 값이 제공되면 결과 네트워크 호출은 *url* 매개 변수에 제공된 모든 URL을 대상으로 합니다. 모든 구성 요청은 별도의 스레드에서 동시에 트리거됩니다. MVPD 목록을 컴파일할 때 첫 번째 응답자가 우선합니다. 목록에 있는 각 MVPD에 대해 Access Enabler는 관련 서비스 공급자의 URL을 기억합니다. 모든 후속 자격 요청은 구성 단계 동안 대상 MVPD와 쌍을 이룬 서비스 공급자와 연결된 URL로 전달됩니다.
+*url* 매개 변수에 대한 값이 제공되면 결과 네트워크 호출은 *url* 매개 변수에 제공된 모든 URL을 대상으로 합니다. 모든 구성 요청은 별도의 스레드에서 동시에 트리거됩니다. MVPD 목록을 컴파일할 때 첫 번째 응답자가 우선합니다. 목록에 있는 각 MVPD에 대해 Access Enabler는 연관된 서비스 공급자의 URL을 기억합니다. 모든 후속 자격 요청은 구성 단계 동안 대상 MVPD과 쌍을 이룬 서비스 공급자와 연결된 URL로 전달됩니다.
 
 | API 호출: 요청자 구성 |
 | --- |
@@ -113,7 +113,7 @@ ht-degree: 0%
 **매개 변수:**
 
 - *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe이 할당한 고유 ID를 사이트에 전달합니다.
-- *url*: 선택적 매개 변수. 기본적으로 Adobe 서비스 공급자가 사용됩니다(http://sp.auth.adobe.com/). 이 배열을 사용하면 Adobe에서 제공하는 인증 및 권한 부여 서비스에 대한 끝점을 지정할 수 있습니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 이 옵션을 사용하여 여러 Adobe Pass 인증 서비스 공급자 인스턴스를 지정할 수 있습니다. 이렇게 하면 MVPD 목록은 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD는 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD를 지원하는 공급자와 연결됩니다.
+- *url*: 선택적 매개 변수. 기본적으로 Adobe 서비스 공급자가 사용됩니다(http://sp.auth.adobe.com/). 이 배열을 사용하면 Adobe에서 제공하는 인증 및 권한 부여 서비스에 대한 끝점을 지정할 수 있습니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 이 옵션을 사용하여 여러 Adobe Pass 인증 서비스 공급자 인스턴스를 지정할 수 있습니다. 이렇게 하면 MVPD 목록이 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD은 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD을 지원하는 공급자와 연결됩니다.
 
 **트리거된 콜백:** `setRequestorComplete()`
 
@@ -169,7 +169,7 @@ ht-degree: 0%
 
 **매개 변수:**
 
-- *options*: 글로벌 SDK 옵션이 포함된 Map\&lt;String, String\>. 현재 다음 옵션을 사용할 수 있습니다.
+- *options*: 글로벌 SDK 옵션이 포함된 맵\&lt;문자열, 문자열\> 현재 다음 옵션을 사용할 수 있습니다.
    - **applicationProfile** - 이 값을 기반으로 서버 구성을 만드는 데 사용할 수 있습니다.
    - **ap\_vi** - Experience Cloud ID 서비스입니다. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
    - **device\_info** - **장치 정보 Cookbook 전달**&#x200B;에 설명된 장치 정보
@@ -180,7 +180,7 @@ ht-degree: 0%
 
 **설명:**&#x200B;에서 인증 상태를 확인합니다. 로컬 토큰 저장 공간에서 유효한 인증 토큰을 검색하여 이를 수행합니다. 이 메서드를 호출하면 네트워크 호출이 수행되지 않습니다. 애플리케이션에서 사용자의 인증 상태를 쿼리하고 그에 따라 UI를 업데이트(즉, 로그인/로그아웃 UI 업데이트)하는 데 사용됩니다. 인증 상태는 [*setAuthenticationStatus()*](#setAuthNStatus) 콜백을 통해 응용 프로그램에 전달됩니다.
 
-MVPD가 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인증 토큰이 장치에 저장될 수 있습니다.
+MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인증 토큰이 장치에 저장될 수 있습니다.
 
 | API 호출: 인증 상태 확인 |
 | --- |
@@ -198,10 +198,10 @@ MVPD가 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 
 **설명:** 전체 인증 워크플로를 시작합니다. 인증 상태를 확인하는 것으로 시작됩니다. 아직 인증되지 않은 경우 인증 흐름 state-machine이 시작됩니다.
 
-- 마지막 인증 시도가 성공하면 MVPD 선택 단계를 건너뛰고 WebView 컨트롤이 사용자에게 MVPD의 로그인 페이지를 제공합니다.
-- 마지막 인증 시도에 실패했거나 사용자가 명시적으로 로그아웃한 경우 [*displayProviderDialog()*](#displayProviderDialog) 콜백이 트리거됩니다. 응용 프로그램은 이 콜백을 사용하여 MVPD 선택 UI를 표시합니다. 또한 앱에서 [setSelectedProvider()](#setSelectedProvider) 메서드를 통해 사용자의 MVPD 선택에 대해 Access Enabler 라이브러리에 알려 인증 흐름을 다시 시작해야 합니다.
+- 마지막 인증 시도가 성공하면 MVPD 선택 단계가 생략되고 WebView 컨트롤이 사용자에게 MVPD의 로그인 페이지를 제공합니다.
+- 마지막 인증 시도에 실패했거나 사용자가 명시적으로 로그아웃한 경우 [*displayProviderDialog()*](#displayProviderDialog) 콜백이 트리거됩니다. 애플리케이션이 이 콜백을 사용하여 MVPD 선택 UI를 표시합니다. 또한 앱에서 [setSelectedProvider()](#setSelectedProvider) 메서드를 통해 사용자의 MVPD 선택에 대해 Access Enabler 라이브러리에 알려 인증 흐름을 다시 시작해야 합니다.
 
-MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인증 토큰이 장치에 저장될 수 있습니다(프로그래머당 하나).
+MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인증 토큰을 장치에 저장할 수 있습니다(프로그래머당 하나).
 
 마지막으로 인증 상태는 *setAuthenticationStatus()* 콜백을 통해 응용 프로그램에 전달됩니다.
 
@@ -220,7 +220,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 **매개 변수:**
 
 - *forceAuthn*: 사용자가 이미 인증되었는지 여부에 관계없이 인증 흐름을 시작해야 하는지 여부를 지정하는 플래그입니다.
-- *data*: Pay-TV Pass 서비스로 보낼 키-값 쌍으로 구성된 맵입니다. Adobe은 이 데이터를 사용하여 SDK를 변경하지 않고 향후 기능을 활성화할 수 있습니다.
+- *data*: Pay-TV Pass 서비스로 보낼 키-값 쌍으로 구성된 맵입니다. Adobe은 이 데이터를 사용하여 SDK을 변경하지 않고 향후 기능을 활성화할 수 있습니다.
 
 **트리거된 콜백:** `setAuthenticationStatus(), displayProviderDialog(), sendTrackingData()`
 
@@ -228,9 +228,9 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 
 ### displayProviderDialog {#displayProviderDialog}
 
-**설명** 사용자가 원하는 MVPD를 선택할 수 있도록 적절한 UI 요소를 인스턴스화해야 함을 응용 프로그램에 알리기 위해 Access Enabler에 의해 트리거된 콜백입니다. 콜백은 MVPD 개체 목록에 선택 UI 패널을 올바르게 구성하는 데 도움이 되는 추가 정보(예: MVPD의 로고, 친숙한 표시 이름 등을 가리키는 URL)를 제공합니다.
+**설명** 사용자가 원하는 MVPD을 선택할 수 있도록 적절한 UI 요소를 인스턴스화해야 함을 응용 프로그램에 알리기 위해 Access Enabler에 의해 트리거된 콜백입니다. 콜백은 MVPD 개체 목록에 선택 UI 패널을 올바르게 빌드하는 데 도움이 되는 추가 정보(예: MVPD 로고를 가리키는 URL, 친숙한 표시 이름 등)를 제공합니다.
 
-사용자가 원하는 MVPD를 선택한 후에는 *setSelectedProvider()*&#x200B;을(를) 호출하고 사용자의 선택에 해당하는 MVPD의 ID를 전달함으로써 인증 흐름을 다시 시작해야 합니다.
+사용자가 원하는 MVPD을 선택한 후에는 *setSelectedProvider()*&#x200B;를 호출하고 사용자의 선택에 해당하는 MVPD의 ID를 전달하여 인증 흐름을 다시 시작하는 데 상위 계층 응용 프로그램이 필요합니다.
 
 
 | **콜백: MVPD 선택 UI를 표시합니다** |
@@ -241,7 +241,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 
 **매개 변수**:
 
-- *mvpds*: 응용 프로그램에서 MVPD 선택 UI 요소를 만드는 데 사용할 수 있는 MVPD 관련 정보를 포함하는 MVPD 개체의 목록입니다.
+- *mvpds*: 응용 프로그램에서 MVPD 선택 UI 요소를 만드는 데 사용할 수 있는 MVPD 관련 정보가 들어 있는 MVPD 개체 목록입니다.
 
 **트리거 대상:** `getAuthentication(), getAuthorization()`
 
@@ -249,7 +249,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 
 ### setSelectedProvider {#setSelectedProvider}
 
-**설명:** 응용 프로그램에서 이 메서드를 호출하여 Access Enabler에 사용자의 MVPD 선택을 알립니다. *null*&#x200B;을(를) 매개 변수로 전달하면 Access Enabler가 현재 MVPD를 null 값으로 다시 설정합니다.
+**설명:** 이 메서드는 사용자의 MVPD 선택을 Access Enabler에 알리기 위해 응용 프로그램에서 호출됩니다. *null*&#x200B;을(를) 매개 변수로 전달하면 Access Enabler가 현재 MVPD을 null 값으로 재설정합니다.
 
 | **API 호출: 현재 선택한 공급자를 설정합니다** |
 | --- |
@@ -265,7 +265,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 
 ### navigateToUrl {#navigagteToUrl}
 
-**설명:** Android SDK에서 Access Enabler에 의해 트리거된 콜백입니다. Amazon FireOS SDK에서는 무시해야 합니다.
+**설명:** Android SDK에서 Access Enabler에 의해 트리거된 콜백입니다. Amazon FireOS SDK에서 무시해야 합니다.
 
 | **콜백: MVPD 로그인 페이지 표시** |
 | --- |
@@ -337,7 +337,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 
 **가용성:** v1.0+
 
-**&lt;매개 변수:** `resources` 매개 변수는 권한 부여를 확인해야 하는 리소스 배열입니다. 목록의 각 요소는 리소스 ID를 나타내는 문자열이어야 합니다. 리소스 ID는 `getAuthorization()` 호출에서 리소스 ID와 동일한 제한을 받습니다. 즉, 프로그래머와 MVPD 간에 설정된 동의 값 또는 미디어 RSS 조각이어야 합니다.
+**&lt;매개 변수:** `resources` 매개 변수는 권한 부여를 확인해야 하는 리소스 배열입니다. 목록의 각 요소는 리소스 ID를 나타내는 문자열이어야 합니다. 리소스 ID는 `getAuthorization()` 호출에서 리소스 ID와 동일한 제한을 받습니다. 즉, 프로그래머와 MVPD 또는 미디어 RSS 조각 간에 설정된 합의된 값이어야 합니다.
 
 **트리거된 콜백:** `preauthorizedResources()`
 
@@ -378,7 +378,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 **매개 변수:**
 
 - *resourceId*: 사용자가 인증을 요청하는 리소스의 ID입니다.
-- *data*: Pay-TV Pass 서비스로 보낼 키-값 쌍으로 구성된 맵입니다. Adobe은 이 데이터를 사용하여 SDK를 변경하지 않고 향후 기능을 활성화할 수 있습니다.
+- *data*: Pay-TV Pass 서비스로 보낼 키-값 쌍으로 구성된 맵입니다. Adobe은 이 데이터를 사용하여 SDK을 변경하지 않고 향후 기능을 활성화할 수 있습니다.
 
 **트리거된 콜백:** `tokenRequestFailed(), setToken(), sendTrackingData(), setAuthenticationStatus()`
 
@@ -403,7 +403,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 **매개 변수:**
 
 - *resourceId*: 사용자가 인증을 요청하는 리소스의 ID입니다.
-- *data*: Pay-TV Pass 서비스로 보낼 키-값 쌍으로 구성된 맵입니다. Adobe은 이 데이터를 사용하여 SDK를 변경하지 않고 향후 기능을 활성화할 수 있습니다.
+- *data*: Pay-TV Pass 서비스로 보낼 키-값 쌍으로 구성된 맵입니다. Adobe은 이 데이터를 사용하여 SDK을 변경하지 않고 향후 기능을 활성화할 수 있습니다.
 
 **트리거된 콜백:** `tokenRequestFailed(), setToken(), sendTrackingData()`
 
@@ -449,7 +449,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 - *resourceId*: 인증을 받은 리소스입니다.
 - *errorCode*: 오류 시나리오와 연결된 오류 코드입니다. 가능한 값:
    - `AccessEnabler.USER_NOT_AUTHORIZED_ERROR` - 사용자가 지정된 리소스에 대해 권한을 부여할 수 없습니다.
-- *errorDescription*: 실패 시나리오에 대한 추가 세부 정보입니다. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증에서 빈 문자열 >**(&quot;)**&#x200B;을(를) 보냅니다.  이 문자열은 MVPD에서 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달하는 데 사용할 수 있습니다. 예를 들어 구독자가 리소스에 대한 권한 부여를 거부하면 MVPD가 다음과 같은 메시지를 보낼 수 있습니다. &quot;현재 패키지의 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 여기를 클릭하십시오.&quot; 이 콜백을 통해 Adobe Pass Authentication에서 메시지를 표시하거나 무시할 수 있는 옵션이 있는 프로그래머에게 전달합니다. Adobe Pass 인증은 이 매개 변수를 사용하여 오류가 발생했을 수 있는 조건에 대한 알림을 제공할 수도 있습니다. 예를 들어 &quot;공급자의 인증 서비스와 통신할 때 네트워크 오류가 발생했습니다.&quot;와 같은 경우입니다.
+- *errorDescription*: 실패 시나리오에 대한 추가 세부 정보입니다. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증에서 빈 문자열 >**(&quot;)**&#x200B;을(를) 보냅니다.  이 문자열은 MVPD에서 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달하는 데 사용할 수 있습니다. 예를 들어 구독자가 리소스에 대한 인증을 거부하면 MVPD에서 다음과 같은 메시지를 보낼 수 있습니다. &quot;현재 패키지에서 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 여기를 클릭하십시오.&quot; 이 콜백을 통해 Adobe Pass Authentication에서 메시지를 표시하거나 무시할 수 있는 옵션이 있는 프로그래머에게 전달합니다. Adobe Pass 인증은 이 매개 변수를 사용하여 오류가 발생했을 수 있는 조건에 대한 알림을 제공할 수도 있습니다. 예를 들어 &quot;공급자의 인증 서비스와 통신할 때 네트워크 오류가 발생했습니다.&quot;와 같은 경우입니다.
 
 **트리거 대상:** `checkAuthorization(), getAuthorization()`
 
@@ -457,7 +457,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 
 ### 로그아웃 {#logout}
 
-**설명:** 로그아웃 흐름을 시작하려면 이 메서드를 사용하십시오. 로그아웃은 사용자가 Adobe Pass 인증 서버와 MVPD의 서버 모두에서 로그아웃해야 하므로 일련의 HTTP 리디렉션 작업의 결과입니다.
+**설명:** 로그아웃 흐름을 시작하려면 이 메서드를 사용하십시오. 로그아웃은 사용자가 Adobe Pass 인증 서버와 MVPD 서버에서 모두 로그아웃해야 하므로 일련의 HTTP 리디렉션 작업의 결과입니다.
 
 | **API 호출: 로그아웃 흐름을 시작합니다** |
 | --- |
@@ -475,7 +475,7 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 
 **설명:** 이 메서드를 사용하여 현재 선택한 공급자를 확인합니다.
 
-| **API 호출: 현재 선택한 MVPD를 확인합니다** |
+| **API 호출: 현재 선택한 MVPD 확인** |
 | --- |
 | ```public void getSelectedProvider()``` |
 
@@ -489,9 +489,9 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
 
 ### selectedProvider {#selectedProvider}
 
-**설명:** 현재 선택한 MVPD에 대한 정보를 응용 프로그램에 전달하는 Access Enabler에서 트리거되는 콜백입니다.
+**설명:** 현재 선택한 MVPD에 대한 정보를 응용 프로그램에 전달하는 Access Enabler에 의해 트리거되는 콜백입니다.
 
-| **콜백: 현재 선택한 MVPD에 대한 정보** |
+| **Callback: 현재 선택한 MVPD에 대한 정보** |
 | --- |
 | ```public void selectedProvider(Mvpd mvpd)``` |
 
@@ -528,12 +528,12 @@ MVPD가 &quot;요청자당 인증&quot; 기능을 지원하는 경우 여러 인
    - 키가 `METADATA_KEY_DEVICE_ID`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며 프로그래머는 사용 권한 및 요금에 대한 정보를 Adobe에 문의해야 합니다.
    - 키가 `METADATA_KEY_USER_META`이고 args에 이름 = `METADATA_KEY_USER_META`, 값 = `[metadata_name]`인 SerializableNameValuePair 개체가 있으면 사용자 메타데이터에 대해 쿼리가 수행됩니다. 사용 가능한 사용자 메타데이터 유형의 현재 목록:
       - `zip` - 우편 번호
-      - `householdID` - 세대 식별자. MVPD가 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다.
+      - `householdID` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다.
       - `maxRating` - 사용자의 최대 자녀 보호 등급
-      - `userID` - 사용자 식별자. MVPD가 하위 계정을 지원하고 사용자가 주 계정이 아닌 경우
+      - `userID` - 사용자 식별자. MVPD이 하위 계정을 지원하고 사용자가 기본 계정이 아닌 경우
       - `channelID` - 사용자가 볼 수 있는 채널 목록
 
-프로그래머가 사용할 수 있는 실제 사용자 메타데이터는 MVPD가 사용할 수 있도록 하는 내용에 따라 다릅니다.  이 목록은 새 메타데이터를 사용할 수 있고 Adobe Pass 인증 시스템에 추가됨에 따라 추가로 확장됩니다.
+프로그래머가 사용할 수 있는 실제 사용자 메타데이터는 MVPD이 사용할 수 있도록 하는 항목에 따라 다릅니다.  이 목록은 새 메타데이터를 사용할 수 있고 Adobe Pass 인증 시스템에 추가됨에 따라 추가로 확장됩니다.
 
 **트리거된 콜백:** [`setMetadataStatus()`](#setMetadaStatus)
 
@@ -649,7 +649,7 @@ Access Enabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거�
 - *event*: 추적 중인 이벤트입니다. 가능한 추적 이벤트 유형에는 세 가지가 있습니다.
    - 인증 토큰 요청이 반환될 때마다 **authorizationDetection:**(이벤트 유형: `EVENT_AUTHZ_DETECTION`)
    - **authenticationDetection:** 인증 확인이 발생할 때마다(이벤트 유형은 `EVENT_AUTHN_DETECTION`)
-   - 사용자가 MVPD 선택 양식(이벤트 유형: `EVENT_MVPD_SELECTION`)에서 MVPD를 선택하는 경우 **mvpdSelection:**
+   - 사용자가 MVPD 선택 양식에서 MVPD을 선택할 때 **mvpdSelection:**(이벤트 유형: `EVENT_MVPD_SELECTION`)
 - *data*: 보고된 이벤트와 연결된 추가 데이터입니다. 이 데이터는 값 목록 형태로 표시됩니다.
 
 다음은 *data* 배열의 값을 해석하는 지침입니다.

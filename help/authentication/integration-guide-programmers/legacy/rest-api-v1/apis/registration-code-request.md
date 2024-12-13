@@ -2,14 +2,14 @@
 title: 등록 페이지
 description: 등록 페이지
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '493'
+source-wordcount: '494'
 ht-degree: 0%
 
 ---
 
-# 등록 페이지 {#registration-page}
+# (기존) 등록 페이지 {#registration-page}
 
 ## REST API 끝점 {#clientless-endpoints}
 
@@ -49,8 +49,8 @@ ht-degree: 0%
 | Accept | 헤더 <br> 값: application/json | 클라이언트가 이해할 수 있는 콘텐츠 유형 표시 |
 | 요청자 | 쿼리 매개 변수 | 이 작업이 유효한 Programmer requestorId입니다. |
 | deviceId | 쿼리 매개 변수 | 장치 ID 바이트입니다. |
-| device_info/<br>X-Device-Info | device_info: 본문 <br> X-Device-Info: 헤더 | 스트리밍 장치 정보입니다.<br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. <br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/passing-client-information-device-connection-and-application.md)을 참조하세요. |
-| mvpd | 쿼리 매개 변수 | 이 작업이 유효한 MVPD ID. |
+| device_info/<br>X-Device-Info | device_info: 본문 <br> X-Device-Info: 헤더 | 스트리밍 장치 정보입니다.<br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. <br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
+| mvpd | 쿼리 매개 변수 | 이 작업이 유효한 MVPD ID입니다. |
 | ttl | 쿼리 매개 변수 | 이 regcode가 유지되어야 하는 시간(초)입니다.<br>**참고**: ttl에 허용되는 최대값은 36000초(10시간)입니다. 값이 높을수록 400 HTTP 응답(잘못된 요청)이 발생합니다. `ttl`을(를) 비워 두면 Adobe Pass 인증은 기본값으로 30분을 설정합니다. |
 | _deviceType_ | 쿼리 매개 변수 | 사용 중단됨. 사용해서는 안 됩니다. |
 | _deviceUser_ | 쿼리 매개 변수 | 사용 중단됨. 사용해서는 안 됩니다. |

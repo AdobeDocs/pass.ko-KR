@@ -2,14 +2,14 @@
 title: iOS/tvOS v3.x 마이그레이션 안내서
 description: iOS/tvOS v3.x 마이그레이션 안내서
 exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '559'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
 
-# iOS/tvOS v3.x 마이그레이션 안내서 {#iostvos-v3x-migration-guide}
+# (기존) iOS/tvOS v3.x 마이그레이션 안내서 {#iostvos-v3x-migration-guide}
 
 >[!NOTE]
 >
@@ -89,7 +89,7 @@ ht-degree: 0%
 
 ## setRequestor 메서드 서명 업데이트 {#update-setreq}
 
-새 SDK는 새 인증 메커니즘을 사용하므로 signedRequestId 매개 변수 또는 공개 키 및 암호(tvOS용)가 필요하지 않습니다. `setRequestor` 메서드는 단순화되었으며 requestorID만 필요합니다.
+새 SDK은 새 인증 메커니즘을 사용하므로 signedRequestId 매개 변수 또는 공개 키 및 암호(tvOS용)가 필요하지 않습니다. `setRequestor` 메서드는 단순화되었으며 requestorID만 필요합니다.
 
 ### iOS
 

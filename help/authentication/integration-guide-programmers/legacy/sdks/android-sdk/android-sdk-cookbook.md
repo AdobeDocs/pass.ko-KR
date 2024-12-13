@@ -2,14 +2,14 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1681'
+source-wordcount: '1682'
 ht-degree: 0%
 
 ---
 
-# Android SDK Cookbook {#android-sdk-cookbook}
+# (기존) Android SDK Cookbook {#android-sdk-cookbook}
 
 >[!NOTE]
 >
@@ -76,7 +76,7 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 
    - [navigateToUrl(url)](#$navigateToUrl)
 
-     사용자가 MVPD를 선택한 후 `getAuthentication()`에 의해 트리거됩니다. `url` 매개 변수는 MVPD의 로그인 페이지 위치를 제공합니다.
+     사용자가 MVPD을 선택한 후 `getAuthentication()`에 의해 트리거됩니다. `url` 매개 변수는 MVPD 로그인 페이지의 위치를 제공합니다.
 
    - [`sendTrackingData(event, data)`](#$sendTrackingData)
 
@@ -148,7 +148,7 @@ Android 라이브러리(AccessEnabler)
 
 1. `displayProviderDialog()`(으)로 보낸 공급자 목록을 사용자에게 표시합니다.
 
-1. 사용자가 공급자를 선택한 후 `navigateToUrl()` 콜백에서 사용자 MVPD의 URL을 가져옵니다.  WebView를 열고 해당 WebView 컨트롤을 URL로 보냅니다.
+1. 사용자가 공급자를 선택한 후 `navigateToUrl()` 콜백에서 사용자의 MVPD URL을 가져옵니다.  WebView를 열고 해당 WebView 컨트롤을 URL로 보냅니다.
 
 1. 이전 단계에서 인스턴스화된 WebView를 통해 사용자는 MVPD의 로그인 페이지에 도달하고 로그인 자격 증명을 입력합니다. WebView 내에서 여러 리디렉션 작업이 수행됩니다.
 
@@ -171,7 +171,7 @@ Android 라이브러리(AccessEnabler)
 1. 인증을 시작하려면 [getAuthorization()](#$getAuthZ)을 호출하십시오
 흐름.
 
-   종속성: 유효한 ResourceID가 MVPD와(과) 합의되었습니다.
+   종속성: MVPD과 동의한 유효한 리소스 ID입니다.
 
    **참고:** ResourceID는 다른 장치나 플랫폼에서 사용되는 ID와 동일해야 하며 MVPD에서 동일합니다.
 
@@ -217,4 +217,4 @@ Android 라이브러리(AccessEnabler)
 
 [여기](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AndroidSSOUserFlows.pdf)에 여러 MVPD를 사용할 때의 동작과 사용자가 응용 프로그램에서 로그아웃할 때 발생하는 상황을 설명하는 문서가 있습니다.
 
-Android SDK 버전 >= 2.0.0을 사용하는 경우 설명된 동작을 사용할 수 있습니다.
+설명된 동작은 Android SDK 버전 >= 2.0.0을 사용할 때 사용할 수 있습니다.

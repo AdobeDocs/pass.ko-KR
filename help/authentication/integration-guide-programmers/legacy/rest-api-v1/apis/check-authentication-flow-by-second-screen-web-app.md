@@ -2,14 +2,14 @@
 title: 두 번째 화면 웹 앱별 인증 흐름 확인
 description: 두 번째 화면 웹 앱별 인증 흐름 확인
 exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '212'
 ht-degree: 0%
 
 ---
 
-# 두 번째 화면 웹 앱별 인증 흐름 확인 {#check-authentication-flow-by-second-screen-web-app}
+# (레거시) 두 번째 화면 웹 앱에서 인증 흐름 확인 {#check-authentication-flow-by-second-screen-web-app}
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## 설명 {#description}
 
-두 번째 화면 로그인 웹 앱에서 이 API를 사용하여 Adobe Pass 인증이 MVPD에서 성공적으로 로그인되었음을 확인해야 합니다. 최종 사용자가 장치 콘솔로 이동하여 워크플로우를 계속하도록 지시하는 성공 메시지를 표시하기 전에 이 API를 호출하는 것이 좋습니다.
+두 번째 화면 로그인 웹 앱에서는 이 API를 사용하여 Adobe Pass 인증이 MVPD에서 성공적으로 로그인되었음을 확인해야 합니다. 최종 사용자가 장치 콘솔로 이동하여 워크플로우를 계속하도록 지시하는 성공 메시지를 표시하기 전에 이 API를 호출하는 것이 좋습니다.
 
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |

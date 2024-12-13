@@ -2,14 +2,14 @@
 title: JavaScript SDK Cookbook
 description: JavaScript SDK Cookbook
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '935'
 ht-degree: 0%
 
 ---
 
-# JavaScript SDK Cookbook {#javascript-sdk-cookbook}
+# (기존) JavaScript SDK Cookbook {#javascript-sdk-cookbook}
 
 >[!NOTE]
 >
@@ -51,7 +51,7 @@ JavaScript 코드 샘플 세트에 대한 링크입니다.
 
 - `displayProviderDialog(mvpds)`
 
-  **트리거:** `getAuthentication(),` 사용자가 공급자(MVPD)를 선택하지 않았으며 아직 인증되지 않은 경우에만
+  **트리거:** `getAuthentication(),` 사용자가 공급자(MVPD)를 선택하지 않았고 아직 인증되지 않은 경우에만
 mvpds 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입니다.
 
 - `setAuthenticationStatus(status, errorcode)`
@@ -152,7 +152,7 @@ AccessEnabler가 `isAuthenticated == 1`을(를) 사용하여 `setAuthenticationS
 **종속성:**
 
 - `setRequestor()`에 대한 호출이 성공했습니다(이 종속성은 이후의 모든 호출에도 적용됨).
-- 유효한 ResourceID가 MVPD와(과) 합의되었습니다. ResourceID는 다른 장치 또는 플랫폼에서 사용되는 ID와 동일해야 하며 MVPD에서 동일합니다.
+- MVPD과 합의된 유효한 ResourceID입니다. ResourceID는 다른 장치 또는 플랫폼에서 사용되는 ID와 동일해야 하며 MVPD에서 동일합니다.
 
 `getAuthorization()`을(를) 호출하고 요청된 미디어에 대한 ResourceID를 전달합니다. 호출이 성공하면 짧은 미디어 토큰이 반환되고, 이 토큰을 사용하면 사용자에게 요청된 미디어를 볼 수 있는 권한이 부여됩니다.
 
@@ -182,12 +182,12 @@ AccessEnabler 라이브러리)
 
 ## 방문자 ID 구성 {#visitorID}
 
-분석 관점에서 [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) 값을 구성하는 것은 매우 중요합니다. EC visitorID 값이 설정되면 SDK는 모든 네트워크 호출과 함께 이 정보를 전송하며 Adobe Pass 인증 서비스는 이 정보를 수집합니다. 이렇게 하면 Adobe Pass 인증 서비스의 분석 데이터를 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. EC visitorID 설정 방법에 대한 정보는 [여기](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en)에서 찾을 수 있습니다.
+분석 관점에서 [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) 값을 구성하는 것은 매우 중요합니다. EC visitorID 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 Adobe Pass 인증 서비스는 이 정보를 수집합니다. 이렇게 하면 Adobe Pass 인증 서비스의 분석 데이터를 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. EC visitorID 설정 방법에 대한 정보는 [여기](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en)에서 찾을 수 있습니다.
 
 
 >[!NOTE]
 >
->이 기능 지원은 JS SDK 버전 3.1.0부터 제공됩니다.
+>이 기능은 JS SDK 버전 3.1.0부터 사용할 수 있습니다.
 
 <!--
 ### Related Information (#related)

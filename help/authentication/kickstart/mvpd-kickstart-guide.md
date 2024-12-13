@@ -2,7 +2,7 @@
 title: MVPD 직접 통합 계획
 description: MVPD 직접 통합 계획
 exl-id: 6423cc9a-a45a-4cde-b562-4cb72c98e505
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
 source-wordcount: '1071'
 ht-degree: 0%
@@ -35,14 +35,14 @@ Zendesk의 Adobe Pass 인증 티켓 시스템을 통해 상시 지원이 가능�
 
 ## 2. 기능 {#features}
 
-Adobe은 통합의 전체 일정, 단계, 타임라인 및 구현 세부 사항을 논의하고 추적하는 주간 상태 호출을 설정합니다. 이 단계에서 Adobe은 MVPD의 사양을 검토합니다. 그 결과는 MVPD에 필요한 모든 기능을 자세히 설명하는 사양 페이지여야 합니다. MVPD는 Adobe에게 MVPD의 인증/권한 부여를 자세히 설명하는 사양 문서를 보냅니다.
+Adobe은 통합의 전체 일정, 단계, 타임라인 및 구현 세부 사항을 논의하고 추적하는 주간 상태 호출을 설정합니다. 이 단계에서 Adobe은 MVPD 사양을 검토합니다. 그 결과는 MVPD에 필요한 모든 기능을 자세히 설명하는 사양 페이지여야 합니다. MVPD에서 Adobe에게 MVPD의 인증/권한 부여 구현을 자세히 설명하는 사양 문서를 보냅니다.
 
 명확히 할 항목은 [MVPD 통합 기능](/help/authentication/integration-guide-mvpds/mvpd-integr-features.md)을 참조하십시오.
 
 이 시점에서 자세히 설명해야 하는 몇 가지 설정이 있습니다.
 
-* **MVPD의 로고 URL** - 크기가 112 x 33픽셀인 파일입니다. 사용자가 &quot;로그인&quot; 버튼을 클릭하여 유료 TV 공급자를 선택하면 프로그래머가 사이트에 로고를 표시합니다.
-* **TTL(time-to-live) 값** - TTL은 일반적으로 인증/권한 부여 프로세스 중에 MVPD에 의해 설정됩니다. 그러나 Adobe은 이러한 TTL 값을 재정의하고 프로그래머와 MVPD 양자가 동의한 것에 따라 다른 값을 제공할 수 있습니다.
+* **MVPD 로고 URL** - 다음 크기의 파일입니다. 112 x 33픽셀. 사용자가 &quot;로그인&quot; 버튼을 클릭하여 유료 TV 공급자를 선택하면 프로그래머가 사이트에 로고를 표시합니다.
+* **TTL(time-to-live) 값** - TTL은 일반적으로 인증/권한 부여 프로세스 동안 MVPD에 의해 설정됩니다. 그러나 Adobe은 이러한 TTL 값을 재정의하고 프로그래머와 MVPD 모두에서 동의한 것에 따라 다른 값을 제공할 수 있습니다.
 * **표시 이름** - 사용자가 &quot;로그인&quot; 단추를 클릭하여 유료 TV 공급자를 선택하면 프로그래머가 사이트에 표시합니다.
 * **테스트 자격 증명** - 두 프로필(스테이징 및 프로덕션) 모두에 테스트 자격 증명 목록이 있어야 합니다.
 
@@ -67,11 +67,11 @@ Adobe은 통합의 전체 일정, 단계, 타임라인 및 구현 세부 사항�
 
 ## 4. IP 목록 허용 {#allow-ip-list}
 
-다음 IP는 MVPD의 방화벽에 허용 목록에 추가해야 합니다. IP 목록은 Adobe에 문의하십시오.
+MVPD 방화벽에서 다음 IP를 화이트리스트에 추가해야 합니다. IP 목록은 Adobe에 문의하십시오.
 
 * Adobe Pass 인증을 사용하려면 제한된 리소스에 액세스할 수 있도록 포트 80 및 443에서 방화벽을 열어야 합니다.
 
-* MVPD는 인증 및 권한 부여 서버에 대한 IP 주소 목록을 추가해야 합니다(이 경우).
+* MVPD은 인증 및 권한 부여 서버에 대한 IP 주소 목록을 추가해야 합니다(이 경우).
 
 ## 5. 개발 {#deve}
 
@@ -88,23 +88,23 @@ Adobe은 개발 프로세스의 각 단계에 대해 서로 다른 환경을 제
 * **PREQUALITION**(PRE-QUAL): PRE-QUAL 환경에 다음 릴리스 후보가 포함됩니다. Adobe은 통합을 릴리스 환경으로 업그레이드하기 전에 처음에 이 환경에서 새 파트너를 통합합니다. 파트너는 2주 동안 PRE-QUAL 환경에서 테스트할 수 있으며 PRE-QUAL 구성에 대한 변경 사항을 명시적으로 요청해야 합니다(변경 요청 프로세스에 대한 자세한 내용은 Adobe 담당자에게 문의). 버그 수정은 이 환경에서 새 배포를 트리거합니다.
 * **릴리스**(릴리스): Adobe의 현재 프로덕션 빌드가 여기에서 라이브 환경에 배포됩니다.
 
-Adobe 환경을 사용하는 방법에 대한 자세한 내용은 [Adobe 환경 이해](/help/authentication/notes-technical/understanding-the-adobe-environments.md)를 참조하십시오
+Adobe 환경을 사용하는 방법에 대한 자세한 내용은 [Adobe 환경 이해](/help/authentication/notes-technical/environments/understanding-the-adobe-environments.md)를 참조하십시오
 
 ## 7. 스테이징 배포 {#stag-env}
 
-Adobe은 MVPD에서 받은 메타데이터를 기반으로 Adobe Pass 인증 시스템에서 새 MVPD를 만들고 구성합니다. 이 은(는) Adobe의 사전 준비 환경에 배포되며 테스트 프로그래머(TestDistributors)로 구성됩니다.
+Adobe은 MVPD에서 받은 메타데이터를 기반으로 Adobe Pass 인증 시스템에서 새 MVPD을 만들고 구성합니다. 이 은(는) Adobe의 사전 준비 환경에 배포되며 테스트 프로그래머(TestDistributors)로 구성됩니다.
 
-MVPD는 QA/스테이징/테스트 환경에서 동일한 배포를 수행해야 합니다.
+MVPD은 QA/스테이징/테스트 환경에서 동일한 배포를 수행해야 합니다.
 
 ## 8. 테스트 및 문제 해결 {#tes-troubleshoot}
 
-이 단계에서는 Adobe 및 MVPD를 테스트하고 통합 문제를 해결합니다. 통합 테스트를 지원하기 위해 Adobe Pass 인증 팀은 Adobe의 API 테스트 사이트를 사용할 수 있습니다. Adobe의 API 테스트 사이트 사용에 대한 자세한 내용은 [Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름 테스트](/help/authentication/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)를 참조하십시오.
+이 단계에서 Adobe 및 MVPD은 통합을 테스트하고 문제를 해결합니다. 통합 테스트를 지원하기 위해 Adobe Pass 인증 팀은 Adobe의 API 테스트 사이트를 사용할 수 있습니다. Adobe의 API 테스트 사이트 사용에 대한 자세한 내용은 [Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름 테스트](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)를 참조하십시오.
 
-테스트 및 문제 해결이 완료되면 Adobe의 릴리스 스테이징 환경에서 통합이 활성화됩니다. 이 시점에서, Adobe은 MVPD를 실제 프로그래머와 통합할 수 있다.
+테스트 및 문제 해결이 완료되면 Adobe의 릴리스 스테이징 환경에서 통합이 활성화됩니다. 이 시점에서 Adobe은 MVPD을 실제 프로그래머와 통합할 수 있습니다.
 
 ## 9. 프로덕션 배포 {#prod-dep}
 
-* 연결을 테스트하려면 프로덕션 프로필에 MVPD를 먼저 배포해야 합니다.
+* 연결을 테스트하려면 MVPD을 프로덕션 프로필에 먼저 배포해야 합니다.
 
 * Adobe이 이전 프로덕션에 배포됩니다.
 

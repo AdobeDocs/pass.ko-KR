@@ -2,9 +2,9 @@
 title: 향상된 오류 코드
 description: 향상된 오류 코드
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '2606'
+source-wordcount: '2610'
 ht-degree: 2%
 
 ---
@@ -18,12 +18,12 @@ ht-degree: 2%
 향상된 오류 코드는 다음과 통합된 클라이언트 애플리케이션에 추가 오류 정보를 제공하는 Adobe Pass 인증 기능을 나타냅니다.
 
 * Adobe Pass 인증 REST API:
-   * [REST API v1](../../legacy/rest-api-v1/apis/rest-api-overview.md)
    * [REST API v2](../../rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
+   * [(기존) REST API v1](../../legacy/rest-api-v1/rest-api-overview.md)
 * Adobe Pass 인증 SDK가 API 사전 권한을 부여합니다.
-   * [JavaScript SDK(API 사전 인증)](../../legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
-   * [iOS/tvOS SDK(API 사전 인증)](../../legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
-   * [Android SDK(API 사전 인증)](../../legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
+   * [(기존) JavaScript SDK(API 사전 인증)](../../legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
+   * [(기존) iOS/tvOS SDK(API 사전 승인)](../../legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
+   * [(기존) Android SDK(API 사전 인증)](../../legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
 
   _(*) 사전 인증 API는 향상된 오류 코드를 지원하는 유일한 Adobe Pass 인증 SDK API입니다._
 
@@ -256,42 +256,6 @@ _(*) 일부 오류의 경우 여러 작업이 가능한 해결 방법일 수 있
 
 ## 목록 {#enhanced-error-codes-lists}
 
-### REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
-
-아래 표에는 Adobe Pass 인증 REST API v1과 통합할 때 클라이언트 애플리케이션에서 발생할 수 있는 향상된 오류 코드가 나와 있습니다.
-
-| 작업 | 코드 | 상태 | 메시지 |
-|--------------------|---------------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| **없음** | *invalid_requestor* | 400 | 요청자 매개변수가 누락되었거나 잘못되었습니다. |
-|                    | *invalid_device_info* | 400 | 디바이스 정보가 누락되었거나 잘못되었습니다. |
-|                    | *invalid_device_id* | 400 | 디바이스 식별자가 없거나 잘못되었습니다. |
-|                    | *missing_resource* | 400, 412 | 리소스 매개 변수가 누락되었습니다. |
-|                    | *잘못된 형식_authz_request* | 400, 412 | 인증 요청이 Null이거나 잘못되었습니다. |
-|                    | *preauthorization_denied_by_mvpd* | 403 | 지정된 리소스에 대한 사전 승인을 요청할 때 MVPD가 &quot;거부&quot; 결정을 반환했습니다. |
-|                    | *authorization_denied_by_mvpd* | 403 | MVPD가 지정된 리소스에 대한 권한 부여를 요청할 때 &quot;거부&quot; 결정을 반환했습니다. |
-|                    | *authorization_denied_by_parental_controls* | 403 | MVPD가 지정된 리소스에 대한 자녀 보호 설정에 따라 &quot;거부&quot; 결정을 반환했습니다. |
-|                    | *internal_error* | 400, 405, 500 | 내부 서버 오류로 인해 요청에 실패했습니다. |
-| **구성** | *unknown_integration* | 400, 412 | 지정한 프로그래머와 ID 공급자 간의 통합이 없습니다. TVE 대시보드 를 사용하여 필요한 통합을 만듭니다. |
-|                    | *too_many_resources* | 403 | 너무 많은 리소스를 쿼리하여 권한 부여 또는 사전 권한 부여 요청에 실패했습니다. 권한 부여 및 사전 권한 부여 제한을 올바르게 구성하려면 지원 팀에 문의하십시오. |
-| **인증** | *authentication_session_issuer_mismatch* | 400 | 인증 플로우에 대해 표시된 MVPD가 인증 세션을 발행한 MVPD와 다르므로 인증 요청이 실패했습니다. 계속하려면 원하는 MVPD로 다시 인증해야 합니다. |
-|                    | *authorization_denied_by_hba_policies* | 403 | MVPD가 홈 기반 인증 정책으로 인해 &quot;거부&quot; 결정을 반환했습니다. 홈 기반 인증 흐름(HBA)을 사용하여 현재 인증을 받았지만 지정한 리소스에 대한 권한 부여를 요청할 때 장치가 더 이상 홈에 있지 않습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-|                    | *authorization_denied_by_session_invalidated* | 403 | ID 공급자에 의해 인증 세션이 무효화되었습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-|                    | *identity_not_recognized_by_mvpd* | 403 | MVPD에서 사용자 ID를 인식하지 못하여 인증 요청이 실패했습니다. |
-|                    | *authentication_session_invalidated* | 403 | ID 공급자에 의해 인증 세션이 무효화되었습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-|                    | *authentication_session_missing* | 403,412 | 이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-|                    | *authentication_session_expired* | 403,412 | 현재 인증 세션이 만료되었습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-|                    | *preauthorization_authentication_session_missing* | 412 | 이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-|                    | *preauthorization_authentication_session_expired* | 412 | 현재 인증 세션이 만료되었습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-| **인증** | *authorization_not_found* | 403,404 | 지정한 리소스에 대한 권한 부여를 찾을 수 없습니다. 계속하려면 사용자가 새 인증을 받아야 합니다. |
-|                    | *authorization_expired* | 410 | 지정한 리소스에 대한 이전 권한 부여가 만료되었습니다. 계속하려면 사용자가 새 인증을 받아야 합니다. |
-| **다시 시도** | *network_received_error* | 403 | 연결된 파트너 서비스에서 응답을 검색하는 도중 읽기 오류가 발생했습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
-|                    | *network_connection_timeout* | 403 | 연결된 파트너 서비스와의 연결 시간 제한이 초과되었습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
-|                    | *maximum_execution_time_exceeded* | 403 | 최대 허용 시간 내에 요청이 완료되지 않았습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
-
-### SDK 사전 인증 API {#enhanced-error-codes-lists-sdks-preauthorize-api}
-
-Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 응용 프로그램에 발생할 수 있는 향상된 오류 코드에 대해 이전 [섹션](#enhanced-error-codes-list-rest-api-v1)을 참조하세요.
-
 ### REST API v2 {#enhanced-error-codes-lists-rest-api-v2}
 
 아래 표에는 Adobe Pass 인증 REST API v2와 통합할 때 클라이언트 애플리케이션에서 발생할 수 있는 향상된 오류 코드가 나와 있습니다.
@@ -316,9 +280,9 @@ Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 
 |                              | *invalid_header_pfs_provider_info_expired* | 400 | 파트너 프레임워크 상태 헤더의 공급자 정보가 만료되었습니다. |
 |                              | *invalid_integration* | 400 | 지정한 서비스 공급자와 mvpd 간의 통합이 없거나 비활성화되었습니다. |
 |                              | *invalid_authentication_session* | 400 | 이 요청과 연결된 인증 세션이 없거나 잘못되었습니다. |
-|                              | *preauthorization_denied_by_mvpd* | 403 | 지정된 리소스에 대한 사전 승인을 요청할 때 MVPD가 &quot;거부&quot; 결정을 반환했습니다. |
-|                              | *authorization_denied_by_mvpd* | 403 | MVPD가 지정된 리소스에 대한 권한 부여를 요청할 때 &quot;거부&quot; 결정을 반환했습니다. |
-|                              | *authorization_denied_by_parental_controls* | 403 | MVPD가 지정된 리소스에 대한 자녀 보호 설정에 따라 &quot;거부&quot; 결정을 반환했습니다. |
+|                              | *preauthorization_denied_by_mvpd* | 403 | MVPD이 지정된 리소스에 대한 사전 승인을 요청할 때 &quot;거부&quot; 결정을 반환했습니다. |
+|                              | *authorization_denied_by_mvpd* | 403 | MVPD이 지정된 리소스에 대한 권한 부여를 요청할 때 &quot;거부&quot; 결정을 반환했습니다. |
+|                              | *authorization_denied_by_parental_controls* | 403 | MVPD이 지정된 리소스에 대한 자녀 보호 설정에 따라 &quot;거부&quot; 결정을 반환했습니다. |
 |                              | *authorization_denied_by_degradation_rule* | 403 | 지정한 서비스 공급자와 mvpd 간의 통합에 요청된 리소스에 대한 인증을 거부하는 성능 저하 규칙이 적용되었습니다. |
 |                              | *internal_server_error* | 500 | 내부 서버 오류로 인해 요청에 실패했습니다. |
 | **구성** | *too_many_resources* | 403 | 너무 많은 리소스를 쿼리하여 권한 부여 또는 사전 권한 부여 요청에 실패했습니다. 권한 부여 및 사전 권한 부여 제한을 올바르게 구성하려면 지원 팀에 문의하십시오. |
@@ -339,12 +303,48 @@ Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 
 |                              | *authenticated_profile_invalidated* | 403 | 이 요청과 연결된 인증된 프로필이 무효화되었습니다. |
 |                              | *temporary_access_duration_limit_exceeded* | 403 | 임시 액세스 기간 제한이 초과되었습니다. |
 |                              | *temporary_access_resources_limit_exceeded* | 403 | 임시 액세스 리소스 제한을 초과했습니다. |
-|                              | *authorization_denied_by_hba_policies* | 403 | MVPD가 홈 기반 인증 정책으로 인해 &quot;거부&quot; 결정을 반환했습니다. 현재 인증은 홈 기반 인증 플로우를 통해 받았지만 지정된 리소스에 대한 권한 부여를 요청할 때 장치가 더 이상 홈에 있지 않습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-|                              | *authorization_denied_by_session_invalidated* | 403 | ID 공급자에 의해 인증 세션이 무효화되었습니다. 계속하려면 지원되는 MVPD로 다시 인증해야 합니다. |
-|                              | *identity_not_recognized_by_mvpd* | 403 | MVPD에서 사용자 ID를 인식하지 못하여 인증 요청이 실패했습니다. |
+|                              | *authorization_denied_by_hba_policies* | 403 | MVPD이 홈 기반 인증 정책으로 인해 &quot;거부&quot; 결정을 반환했습니다. 현재 인증은 홈 기반 인증 플로우를 통해 받았지만 지정된 리소스에 대한 권한 부여를 요청할 때 장치가 더 이상 홈에 있지 않습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                              | *authorization_denied_by_session_invalidated* | 403 | ID 공급자에 의해 인증 세션이 무효화되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                              | *identity_not_recognized_by_mvpd* | 403 | MVPD에서 사용자 ID를 인식하지 못하여 인증 요청에 실패했습니다. |
 | **다시 시도** | *network_received_error* | 403 | 연결된 파트너 서비스에서 응답을 검색하는 도중 읽기 오류가 발생했습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
 |                              | *network_connection_timeout* | 403 | 연결된 파트너 서비스와의 연결 시간 제한이 초과되었습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
 |                              | *maximum_execution_time_exceeded* | 403 | 최대 허용 시간 내에 요청이 완료되지 않았습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
+
+### REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
+
+아래 표에는 Adobe Pass 인증 REST API v1과 통합할 때 클라이언트 애플리케이션에서 발생할 수 있는 향상된 오류 코드가 나와 있습니다.
+
+| 작업 | 코드 | 상태 | 메시지 |
+|--------------------|---------------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **없음** | *invalid_requestor* | 400 | 요청자 매개변수가 누락되었거나 잘못되었습니다. |
+|                    | *invalid_device_info* | 400 | 디바이스 정보가 누락되었거나 잘못되었습니다. |
+|                    | *invalid_device_id* | 400 | 디바이스 식별자가 없거나 잘못되었습니다. |
+|                    | *missing_resource* | 400, 412 | 리소스 매개 변수가 누락되었습니다. |
+|                    | *잘못된 형식_authz_request* | 400, 412 | 인증 요청이 Null이거나 잘못되었습니다. |
+|                    | *preauthorization_denied_by_mvpd* | 403 | MVPD이 지정된 리소스에 대한 사전 승인을 요청할 때 &quot;거부&quot; 결정을 반환했습니다. |
+|                    | *authorization_denied_by_mvpd* | 403 | MVPD이 지정된 리소스에 대한 권한 부여를 요청할 때 &quot;거부&quot; 결정을 반환했습니다. |
+|                    | *authorization_denied_by_parental_controls* | 403 | MVPD이 지정된 리소스에 대한 자녀 보호 설정에 따라 &quot;거부&quot; 결정을 반환했습니다. |
+|                    | *internal_error* | 400, 405, 500 | 내부 서버 오류로 인해 요청에 실패했습니다. |
+| **구성** | *unknown_integration* | 400, 412 | 지정한 프로그래머와 ID 공급자 간의 통합이 없습니다. TVE 대시보드 를 사용하여 필요한 통합을 만듭니다. |
+|                    | *too_many_resources* | 403 | 너무 많은 리소스를 쿼리하여 권한 부여 또는 사전 권한 부여 요청에 실패했습니다. 권한 부여 및 사전 권한 부여 제한을 올바르게 구성하려면 지원 팀에 문의하십시오. |
+| **인증** | *authentication_session_issuer_mismatch* | 400 | 인증 흐름에 대해 표시된 MVPD이 인증 세션을 발급한 사용자와 다르기 때문에 인증 요청에 실패했습니다. 계속하려면 원하는 MVPD으로 다시 인증해야 합니다. |
+|                    | *authorization_denied_by_hba_policies* | 403 | MVPD이 홈 기반 인증 정책으로 인해 &quot;거부&quot; 결정을 반환했습니다. 홈 기반 인증 흐름(HBA)을 사용하여 현재 인증을 받았지만 지정한 리소스에 대한 권한 부여를 요청할 때 장치가 더 이상 홈에 있지 않습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                    | *authorization_denied_by_session_invalidated* | 403 | ID 공급자에 의해 인증 세션이 무효화되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                    | *identity_not_recognized_by_mvpd* | 403 | MVPD에서 사용자 ID를 인식하지 못하여 인증 요청에 실패했습니다. |
+|                    | *authentication_session_invalidated* | 403 | ID 공급자에 의해 인증 세션이 무효화되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                    | *authentication_session_missing* | 403,412 | 이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                    | *authentication_session_expired* | 403,412 | 현재 인증 세션이 만료되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                    | *preauthorization_authentication_session_missing* | 412 | 이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                    | *preauthorization_authentication_session_expired* | 412 | 현재 인증 세션이 만료되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+| **인증** | *authorization_not_found* | 403,404 | 지정한 리소스에 대한 권한 부여를 찾을 수 없습니다. 계속하려면 사용자가 새 인증을 받아야 합니다. |
+|                    | *authorization_expired* | 410 | 지정한 리소스에 대한 이전 권한 부여가 만료되었습니다. 계속하려면 사용자가 새 인증을 받아야 합니다. |
+| **다시 시도** | *network_received_error* | 403 | 연결된 파트너 서비스에서 응답을 검색하는 도중 읽기 오류가 발생했습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
+|                    | *network_connection_timeout* | 403 | 연결된 파트너 서비스와의 연결 시간 제한이 초과되었습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
+|                    | *maximum_execution_time_exceeded* | 403 | 최대 허용 시간 내에 요청이 완료되지 않았습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
+
+### SDK 사전 인증 API {#enhanced-error-codes-lists-sdks-preauthorize-api}
+
+Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 응용 프로그램에 발생할 수 있는 향상된 오류 코드에 대해 이전 [섹션](#enhanced-error-codes-list-rest-api-v1)을 참조하세요.
 
 ## 응답 처리 {#enhanced-error-codes-response-handling}
 
@@ -368,4 +368,4 @@ Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 
 
 1. **인증 및 권한 부여**: 인증 및 권한 부여와 관련된 오류의 경우 사용자에게 다시 인증하거나 필요에 따라 새 권한을 부여하도록 요청해야 합니다.
 
-1. **사용자 피드백**: 사용자가 읽을 수 있는 &quot;메시지&quot; 및 (잠재적인) &quot;세부 정보&quot; 필드를 사용하여 사용자에게 문제에 대해 알립니다(선택 사항). &quot;세부 정보&quot; 텍스트 메시지는 MVPD 사전 권한 부여 또는 권한 부여 종단점 또는 성능 저하 규칙을 적용할 때 프로그래머로부터 전달될 수 있습니다.
+1. **사용자 피드백**: 사용자가 읽을 수 있는 &quot;메시지&quot; 및 (잠재적인) &quot;세부 정보&quot; 필드를 사용하여 사용자에게 문제에 대해 알립니다(선택 사항). &quot;세부 정보&quot; 텍스트 메시지는 MVPD 사전 인증 또는 권한 부여 종단점 또는 성능 저하 규칙을 적용할 때 프로그래머로부터 전달될 수 있습니다.

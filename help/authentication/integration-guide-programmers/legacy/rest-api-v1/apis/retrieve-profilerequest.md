@@ -2,14 +2,14 @@
 title: Platform SSO 프로필 요청 검색
 description: Platform SSO 프로필 요청 검색
 exl-id: 44fd4e26-4d9a-4607-ac2c-b85d848f5fc6
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '189'
+source-wordcount: '190'
 ht-degree: 1%
 
 ---
 
-# Platform SSO 프로필 요청 검색 {#retrieve-platform-sso-profile-request}
+# (레거시) Platform SSO 프로필 요청 검색 {#retrieve-platform-sso-profile-request}
 
 >[!NOTE]
 >
@@ -46,5 +46,5 @@ ht-degree: 1%
 | 입력 매개 변수 | 설명 |
 | --------------- | -------------------------------------------------------------------------------------------------------- |
 | 요청자 | 이 작업이 유효한 Programmer requestorId입니다. |
-| mvpd | 이 작업이 유효한 MVPD ID. |
+| mvpd | 이 작업이 유효한 MVPD ID입니다. |
 | deviceType | 프로필 요청을 가져오려는 Apple 플랫폼입니다.  **iOS** 또는 **tvOS**&#x200B;입니다. |

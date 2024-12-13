@@ -2,14 +2,14 @@
 title: 사전 승인
 description: JavaScript 사전 권한 부여
 exl-id: b7493ca6-1862-4cea-a11e-a634c935c86e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1465'
+source-wordcount: '1466'
 ht-degree: 0%
 
 ---
 
-# 사전 승인 {#js-preauthorize}
+# (기존) 사전 인증 {#js-preauthorize}
 
 >[!NOTE]
 >
@@ -39,7 +39,7 @@ Adobe Pass 인증 서비스에서 사전 승인 API 요청을 처리할 때 예�
 
 * 사전 권한 부여 결정을 받을 리소스 목록을 설정합니다.
 * 사전 권한 부여 API 사용에 대해 설정해야 합니다.
-* 목록의 각 요소는 MVPD와 동의해야 하는 리소스 ID 값 또는 미디어 RSS 조각을 나타내는 문자열이어야 합니다.
+* 목록의 각 요소는 MVPD과 동의해야 하는 리소스 ID 값 또는 미디어 RSS 조각을 나타내는 문자열이어야 합니다.
 * 이 메서드는 이 메서드 호출의 수신자인 현재 `PreauthorizeRequestBuilder` 개체 인스턴스의 컨텍스트에서만 정보를 설정합니다.
 
 * 실제 `PreauthorizeRequest`을(를) 만들려면 `PreauthorizeRequestBuilder`의 메서드를 볼 수 있습니다.
@@ -87,7 +87,7 @@ public func build() -> PreauthorizeRequest
 
 #### onFailure(결과: T); {#on-failure-result}
 
-* 사전 권한 부여 API 요청을 처리할 수 없을 때 SDK에서 호출한 실패 콜백입니다.
+* API 사전 권한 부여 요청을 처리할 수 없을 때 SDK에서 호출한 실패 콜백입니다.
 * 그 결과 상태가 포함된 실패 결과가 됩니다.
 * `@param {T} result`
 
@@ -108,7 +108,7 @@ public func build() -> PreauthorizeRequest
 #### 공개 상태: 숫자; {#public-status-numbr}
 
 * RFC 7231에 설명된 HTTP 응답 상태 코드입니다.
-* `Status`이(가) Adobe Pass 인증 서비스 대신 SDK에서 제공되는 경우 0일 수 있습니다.
+* `Status`이(가) Adobe Pass 인증 서비스 대신 SDK에서 온 경우 0일 수 있습니다.
 
 #### 공개 코드: 숫자; {#public-code-numbr}
 
@@ -117,12 +117,12 @@ public func build() -> PreauthorizeRequest
 
 #### 공개 메시지: 문자열; {#public-msg-string}
 
-* 경우에 따라 MVPD 인증 종단점 또는 프로그래머 저하 규칙에 의해 제공되는 자세한 메시지.
+* 경우에 따라 MVPD 인증 종단점 또는 프로그래머 열화 규칙에서 제공하는 자세한 메시지입니다.
 * 빈 문자열 또는 `null` 값을 포함할 수 있습니다.
 
 #### 공개 세부 정보: 문자열; {#public-details-strng}
 
-* 일부 경우에 MVPD 인증 종단점 또는 프로그래머 저하 규칙에 의해 제공되는 자세한 메시지를 보유합니다.
+* 일부 경우에 MVPD 인증 종단점 또는 프로그래머 열화 규칙에서 제공하는 자세한 메시지를 보유합니다.
 * 빈 문자열 또는 `null` 값을 포함할 수 있습니다.
 
 
@@ -290,10 +290,11 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;error&quot;: {
     &quot;status&quot;: 403,
     &quot;code&quot;: &quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD가 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
+    &quot;message&quot;: &quot;MVPD에서 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;none
-     17},
+    &quot;action&quot;: &quot;none&quot;
+    }
+    ,
     {
     &quot;id&quot;: &quot;RES03&quot;,
     &quot;authorized&quot;: true
@@ -303,7 +304,6 @@ accessEnablerApi.preauthorize(request, callback);
     
     &quot;
 
-    
 </td>
   </tr>
 </tbody>
@@ -361,18 +361,18 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;error&quot;: {
     &quot;status&quot;: 403,
     &quot;code&quot;: &quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD가 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
+    &quot;message&quot;: &quot;MVPD에서 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;none&quot;
     }
     ,
     {
     &quot;id&quot;: &quot;RES02&quot;,
-    &quot;authorized:&quot; 
+    &quot;authorized&quot;: false,
     &quot;error&quot;: {
     &quot;status&quot;: 403,
     &quot;code&quot;: &quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD가 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
+    &quot;message&quot;: &quot;MVPD에서 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;none&quot;
     
@@ -382,7 +382,7 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;authorized&quot;: false,
     &quot;error&quot;: {
     &quot;status&quot;: 403,
-    &quot;code: maximum_execution time_exceeded&quot;,
+    &quot;code: &quot;maximum_execution_time_exceeded&quot;,
     &quot;message&quot;: &quot;최대 허용 시간에 요청이 완료되지 않았습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다.&quot;,
     &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
     &quot;action&quot;: &quot;retry&quot;
@@ -530,7 +530,7 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;status&quot;: {
     &quot;status&quot;: 0,
     &quot;code&quot;: &quot;authentication_session_missing&quot;,
-    &quot;message&quot;: &quot;이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 사용자가 지원되는 MVPD를 사용하여 다시 인증해야 합니다.&quot;,
+    &quot;message&quot;: &quot;이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 사용자가 지원되는 MVPD을 사용하여 다시 인증해야 합니다.&quot;,
     &quot;action&quot;: &quot;authentication&quot;
     },
     &quot;decisions&quot;: []

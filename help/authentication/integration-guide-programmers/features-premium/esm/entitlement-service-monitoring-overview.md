@@ -2,7 +2,7 @@
 title: 권한 부여 서비스 모니터링 개요
 description: 권한 부여 서비스 모니터링 개요
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 0%
@@ -42,7 +42,7 @@ ESM API는 일반적으로 사용할 수 없습니다.  가용성에 대한 질�
 | 작성 성공 | 성공한 승인 수 |
 | 작성 실패 | 응용 프로그램 수준에서 MVPD에 의해 거부된 승인 수 |
 | 작성 거부됨 | Adobe 서비스 공급자가 악의적으로 간주하여 DoS 공격 방지로 인해 거부된 승인 횟수 |
-| 인증 대기 시간 | MVPD의 끝점에서 보낸 총 시간(밀리초) |
+| 인증 대기 시간 | MVPD 엔드포인트에서 보낸 총 시간(밀리초) |
 | 미디어 토큰 | 생성된 짧은 미디어 토큰 수(재생 요청 수와 동종) |
 | 고유 계정 | 선택한 시간 간격에서 권한 부여(AuthN/AuthZ) 작업을 수행한 고유 사용자 수입니다. (이 지표는 일일 값을 요청한 경우에만 표시됩니다.) </br> 개별 데이터 센터에 대해 계산됩니다. &quot;dc&quot; 차원이 요청되지 않으면 이 지표가 표시되지 않습니다. |
 | 고유 세션 | 선택한 시간 간격 내에 Adobe Pass 인증 서비스에 대한 인증 흐름 호출을 수행한 고유 세션 수입니다. (이 지표는 일일 값을 요청한 경우에만 표시됩니다.) </br> 개별 데이터 센터에 대해 계산됩니다. &quot;dc&quot; 차원이 요청되지 않으면 이 지표가 표시되지 않습니다. |
@@ -62,8 +62,8 @@ ESM API는 일반적으로 사용할 수 없습니다.  가용성에 대한 질�
 | 분 | 분(시) |
 | 미디어 회사 | 사용자에 대한 권한 부여 프로세스를 시작한 웹 사이트를 소유한 미디어 회사 |
 | dc | (데이터 센터) 요청을 받은 홈 지역입니다. |
-| 프록시 | 프록시 MVPD(직접 통합을 위해 &quot;직접&quot; 됨) |
-| mvpd | 사용자에게 권한을 부여할 책임이 있는 MVPD |
+| 프록시 | 프록시 MVPD(직접 통합을 위해 &quot;직접&quot; 필요) |
+| mvpd | 사용자에게 자격을 부여할 책임이 있는 MVPD |
 | 요청자-id | 권한 부여 요청을 수행하는 데 사용되는 요청자 ID |
 | channel | 리소스 필드에서 추출된 채널 웹 사이트(제공된 경우 MRSS 페이로드에서 채널/제목으로 추출되거나 RSS 형식이 아닌 경우 리소스 값에 매핑됨). |
 | resource-id | 인증 요청에 포함된 실제 리소스 제목(제공된 경우 MRSS 페이로드에서 항목/제목으로 추출) |
@@ -71,11 +71,11 @@ ESM API는 일반적으로 사용할 수 없습니다.  가용성에 대한 질�
 | eap | 외부 시스템을 통해 인증 흐름이 수행되는 경우 외부 인증 공급자. </br> 값은 다음과 같습니다. </br> - N/A - Adobe Pass에서 제공한 인증 </br> - Apple - 인증을 제공한 외부 시스템: Apple |
 | 제품군 | 장치에서 실행 중인 운영 체제 |
 | browser-family | Adobe Pass 인증 액세스에 사용되는 사용자 에이전트 |
-| cdt | 현재 Clientless에 사용되는 디바이스 플랫폼(대체 요소)입니다. </br> 값은 다음과 같습니다. </br> - 해당 사항 없음 - 이벤트가 클라이언트 없는 SDK에서 발생하지 않음 </br> - 알 수 없음 - 클라이언트 없는 API의 deviceType 매개 변수는 선택 사항이므로 값을 포함하지 않는 호출이 있습니다. </br> - Clientless API를 통해 전송된 다른 값(예: xbox, appletv, roku 등) </br> |
+| cdt | 현재 Clientless에 사용되는 디바이스 플랫폼(대체 요소)입니다. </br> 값은 다음과 같습니다. </br> - 해당 사항 없음 - 이벤트가 Clientless SDK에서 발생하지 않음 </br> - 알 수 없음 - Clientless API의 deviceType 매개 변수는 선택 사항이므로 값이 포함되지 않은 호출이 있습니다. </br> - Clientless API를 통해 전송된 다른 값(예: xbox, appletv, roku 등) </br> |
 | platform-version | 클라이언트 없는 SDK 버전 |
 | os-type | 장치에서 실행 중인 운영 체제, 대안(현재 사용되지 않음) |
 | browser-version | 사용자 에이전트 버전 |
-| nsdk | 사용된 클라이언트 SDK(android, fireTV, js, iOS, tvOS, 비 SDK) |
+| nsdk | 사용된 클라이언트 SDK(android, fireTV, js, iOS, tvOS, 비 sdk) |
 | nsdk-version | Adobe Pass 인증 클라이언트 SDK 버전 |
 | 이벤트 | Adobe Pass 인증 이벤트 이름 |
 | 이유 | Adobe Pass 인증에서 보고된 실패 이유 |
@@ -83,7 +83,7 @@ ESM API는 일반적으로 사용할 수 없습니다.  가용성에 대한 질�
 | platform | 장치가 플랫폼을 확인했습니다. 가능한 값: </br> - Android </br> - FireTV </br> - Roku </br> - iOS </br> - tvOS </br> 등 |
 | application-name | TVE Dashboard에서 사용하도록 구성된 DCR 등록 애플리케이션에 대해 구성된 애플리케이션 이름. |
 | application-version | TVE Dashboard에서 사용하도록 구성된 DCR 등록 애플리케이션에 대해 구성된 애플리케이션 버전. |
-| customer-app | [장치 정보](/help/authentication/integration-guide-programmers/passing-client-information-device-connection-and-application.md)를 통해 전달된 사용자 지정 응용 프로그램 ID입니다. |
+| customer-app | [장치 정보](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)를 통해 전달된 사용자 지정 응용 프로그램 ID입니다. |
 | content-category | 애플리케이션이 요청한 콘텐츠의 범주입니다. |
 
 ## MVPD용 ESM {#esm-for-mvpds}
@@ -100,7 +100,7 @@ ESM API는 일반적으로 사용할 수 없습니다.  가용성에 대한 질�
 | 작성 성공 | 성공한 승인 수 |
 | 작성 실패 | 응용 프로그램 수준에서 MVPD에 의해 거부된 승인 수 |
 | 작성 거부됨 | Adobe 서비스 공급자가 악의적으로 간주하여 DoS 공격 방지로 인해 거부된 승인 횟수 |
-| 인증 대기 시간 | MVPD의 끝점에서 보낸 총 시간(밀리초) |
+| 인증 대기 시간 | MVPD 엔드포인트에서 보낸 총 시간(밀리초) |
 
 ### MVPD는 다음 차원으로 위에 나열된 지표를 필터링할 수 있습니다.
 
@@ -114,17 +114,17 @@ ESM API는 일반적으로 사용할 수 없습니다.  가용성에 대한 질�
 | mvpd | 권한 요청을 수행하는 데 사용되는 mvpd ID |
 | 요청자-id | 권한 부여 요청을 수행하는 데 사용되는 요청자 ID |
 | eap | 외부 시스템을 통해 인증 흐름이 수행되는 경우 외부 인증 공급자. </br> 값은 다음과 같습니다. </br> - N/A - Adobe Pass에서 제공한 인증 </br> - Apple - 인증을 제공한 외부 시스템: Apple |
-| cdt | 현재 Clientless에 사용되는 디바이스 플랫폼(대체 요소)입니다. </br> 값은 다음과 같습니다. </br> - 해당 사항 없음 - 이벤트가 클라이언트 없는 SDK에서 발생하지 않음 </br> - 알 수 없음 - 클라이언트 없는 API의 deviceType 매개 변수는 선택 사항이므로 값을 포함하지 않는 호출이 있습니다. </br> - Clientless API를 통해 전송된 다른 값(예: xbox, appletv, roku 등) </br> |
+| cdt | 현재 Clientless에 사용되는 디바이스 플랫폼(대체 요소)입니다. </br> 값은 다음과 같습니다. </br> - 해당 사항 없음 - 이벤트가 Clientless SDK에서 발생하지 않음 </br> - 알 수 없음 - Clientless API의 deviceType 매개 변수는 선택 사항이므로 값이 포함되지 않은 호출이 있습니다. </br> - Clientless API를 통해 전송된 다른 값(예: xbox, appletv, roku 등) </br> |
 | sdk-type | 사용된 클라이언트 SDK(Flash, HTML5, Android 기본, iOS, Clientless 등) |
 | platform | 장치가 플랫폼을 확인했습니다. 가능한 값: </br> - Android </br> - FireTV </br> - Roku </br> - iOS </br> - tvOS </br> 등 |
-| nsdk | 사용된 클라이언트 SDK(android, fireTV, js, iOS, tvOS, 비 SDK) |
+| nsdk | 사용된 클라이언트 SDK(android, fireTV, js, iOS, tvOS, 비 sdk) |
 | nsdk-version | Adobe Pass 인증 클라이언트 SDK 버전 |
 
 ## 사용 사례 {#use-cases}
 
 다음 사용 사례에 ESM 데이터를 사용할 수 있습니다.
 
-- **모니터링** - 운영 또는 모니터링 팀이 매 분마다 API를 호출하는 대시보드 또는 차트를 만들 수 있습니다. 표시되는 정보를 사용하여 문제가 나타나는 즉시 Adobe Pass 인증 또는 MVPD를 사용하여 문제를 감지할 수 있습니다.
+- **모니터링** - 운영 또는 모니터링 팀이 매 분마다 API를 호출하는 대시보드 또는 차트를 만들 수 있습니다. 표시되는 정보를 사용하여 문제가 나타나는 즉시 (Adobe Pass 인증 사용 또는 MVPD 사용) 문제를 감지할 수 있습니다.
 
 - **디버깅/품질 테스트** - 데이터는 플랫폼, 장치, 브라우저 및 OS별로 분류되므로 사용 패턴을 분석하면 특정 조합(예: OSX의 Safari)에 대한 문제를 정확하게 파악할 수 있습니다.
 

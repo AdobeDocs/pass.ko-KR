@@ -2,15 +2,15 @@
 title: iOS/tvOS 애플리케이션 등록
 description: iOS/tvOS 애플리케이션 등록
 exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '609'
+source-wordcount: '610'
 ht-degree: 0%
 
 ---
 
 
-# iOS/tvOS 애플리케이션 등록 {#iostvos-application-registration}
+# (기존) iOS/tvOS 애플리케이션 등록 {#iostvos-application-registration}
 
 >[!NOTE]
 >
@@ -18,13 +18,13 @@ ht-degree: 0%
 
 ## 소개 {#Intro}
 
-iOS/tvOS AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘을 변경하고 있습니다. 공개 키 및 비밀 시스템을 사용하여 requestorID에 서명하는 대신 SDK가 서버에 대해 수행하는 모든 호출에 나중에 사용되는 액세스 토큰을 얻는 데 사용할 수 있는 소프트웨어 문 문자열 개념을 도입합니다. 소프트웨어 명령문 외에 응용 프로그램에 대한 사용자 지정 URL 체계도 필요합니다.
+iOS/tvOS AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘을 변경하고 있습니다. 공개 키 및 암호 시스템을 사용하여 requestorID에 서명하는 대신 SDK에서 서버에 대해 수행하는 모든 호출에 나중에 사용되는 액세스 토큰을 얻는 데 사용할 수 있는 소프트웨어 문 문자열 개념을 도입합니다. 소프트웨어 명령문 외에 응용 프로그램에 대한 사용자 지정 URL 체계도 필요합니다.
 
 자세한 내용은 [동적 클라이언트 등록 개요](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)를 참조하십시오.
 
 ## 소프트웨어 명령문이란? {#Soft_state}
 
-소프트웨어 명령문은 애플리케이션에 대한 정보가 포함된 JWT 토큰입니다. 모든 애플리케이션에는 Adobe 시스템에서 애플리케이션을 식별하기 위해 서버에서 사용하는 고유한 소프트웨어 명령문이 있어야 합니다. AccessEnabler SDK를 초기화할 때 Software 문을 전달해야 하며 이 문은 Adobe에 응용 프로그램을 등록하는 데 사용됩니다. 등록하면 SDK는 액세스 토큰을 가져오는 데 사용할 클라이언트 ID와 클라이언트 암호를 수신합니다. SDK가 서버에 대해 수행하는 모든 호출에는 유효한 액세스 토큰이 필요합니다. SDK는 애플리케이션 등록, 액세스 토큰 획득 및 새로 고침을 담당합니다.
+소프트웨어 명령문은 애플리케이션에 대한 정보가 포함된 JWT 토큰입니다. 모든 애플리케이션에는 Adobe 시스템에서 애플리케이션을 식별하기 위해 서버에서 사용하는 고유한 소프트웨어 명령문이 있어야 합니다. AccessEnabler SDK을 초기화할 때 Software 문을 전달해야 하며 이 문은 Adobe에 응용 프로그램을 등록하는 데 사용됩니다. 등록하면 SDK은 액세스 토큰을 얻는 데 사용될 클라이언트 ID와 클라이언트 암호를 수신하게 됩니다. SDK이 서버에 대해 수행하는 모든 호출에는 유효한 액세스 토큰이 필요합니다. SDK은 애플리케이션 등록, 액세스 토큰 획득 및 새로 고침을 담당합니다.
 
 **참고:** Software 문은 앱에 따라 다르며 둘 이상의 응용 프로그램에서 동일한 소프트웨어 문을 사용할 수 없습니다. 프로그래머 수준 소프트웨어 명령문도 동일하게 따릅니다. 즉, 단일 채널이든 다중 채널이든 단일 애플리케이션에 대해서만 사용할 수 있습니다. 이 제한은 사용자 지정 구성표에도 적용됩니다.
 

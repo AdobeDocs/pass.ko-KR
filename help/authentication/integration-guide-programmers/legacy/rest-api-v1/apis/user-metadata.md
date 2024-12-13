@@ -2,14 +2,14 @@
 title: 사용자 메타데이터
 description: 사용자 메타데이터
 exl-id: 3d7b6429-972f-4ccb-80fd-a99870a02f65
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '495'
+source-wordcount: '496'
 ht-degree: 0%
 
 ---
 
-# 사용자 메타데이터 {#user-metadata}
+# (기존) 사용자 메타데이터 {#user-metadata}
 
 >[!NOTE]
 >
@@ -35,7 +35,7 @@ ht-degree: 0%
 
 ## 설명 {#description}
 
-MVPD가 인증된 사용자에 대해 공유한 메타데이터를 검색합니다.
+인증된 사용자에 대해 MVPD이 공유한 메타데이터를 검색합니다.
 
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
@@ -47,8 +47,8 @@ MVPD가 인증된 사용자에 대해 공유한 메타데이터를 검색합니�
 |------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 요청자 | 이 작업이 유효한 Programmer requestorId입니다. |
 | deviceId | 장치 ID 바이트입니다. |
-| device_info/<p>X-Device-Info | 스트리밍 장치 정보입니다.</br></br> **참고:** 이 매개 변수는 URL 매개 변수로 device_info에 전달될 수 있지만 이 매개 변수의 잠재적인 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달되어야 합니다. </br></br> 자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/passing-client-information-device-connection-and-application.md)을 참조하세요. |
-| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br> 이 매개 변수가 올바르게 설정된 경우 ESM은 Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#progr-filter-metrics) 지표를 제공하므로 Roku, AppleTV, Xbox 등의 다양한 분석 유형을 수행할 수 있습니다.</br></br> 통과 메트릭에서 클라이언트 없는 장치 형식 매개 변수를 사용할 때의 이점](/help/authentication/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br>을 참조하십시오.[ **참고:** `device_info`이(가) 이 매개 변수를 대체합니다. |
+| device_info/<p>X-Device-Info | 스트리밍 장치 정보입니다.</br></br> **참고:** 이 매개 변수는 URL 매개 변수로 device_info에 전달될 수 있지만 이 매개 변수의 잠재적인 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달되어야 합니다. </br></br> 자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
+| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br> 이 매개 변수가 올바르게 설정된 경우 ESM은 Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#progr-filter-metrics) 지표를 제공하므로 Roku, AppleTV, Xbox 등의 다양한 분석 유형을 수행할 수 있습니다.</br></br> 통과 메트릭에서 클라이언트 없는 장치 형식 매개 변수를 사용할 때의 이점](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md) </br></br>을 참조하십시오.[ **참고:** `device_info`이(가) 이 매개 변수를 대체합니다. |
 | _deviceUser_ | 장치 사용자 식별자입니다.</br></br> **참고:** 사용하는 경우 `deviceUser`은(는) [등록 코드 만들기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) 요청과 동일한 값을 가져야 합니다. |
 | _appId_ | 애플리케이션 ID/이름입니다. </br></br> **참고:** `device_info`이(가) 이 매개 변수를 대체합니다. 사용하는 경우 `appId`은(는) [등록 코드 만들기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) 요청과 동일한 값을 가져야 합니다. |
 

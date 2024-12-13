@@ -2,14 +2,14 @@
 title: 인증 시작
 description: 인증 시작
 exl-id: 2f8a5499-e94f-40dd-9fb0-aac8e080de66
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '423'
+source-wordcount: '424'
 ht-degree: 0%
 
 ---
 
-# 인증 시작 {#initiate-authorization}
+# (레거시) 인증 시작 {#initiate-authorization}
 
 >[!NOTE]
 >
@@ -50,9 +50,9 @@ ht-degree: 0%
 | --- | --- |
 | 요청자 | 이 작업이 유효한 Programmer requestorId입니다. |
 | deviceId | 장치 ID 바이트입니다. |
-| 리소스 | resourceId(또는 MRSS 조각)가 포함된 문자열은 사용자가 요청한 콘텐츠를 식별하며 MVPD 인증 종단점에서 인식됩니다. |
-| device_info/</br></br>X-Device-Info | 스트리밍 장치 정보입니다.</br></br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. </br></br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/passing-client-information-device-connection-and-application.md)을 참조하세요. |
-| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br>이 매개 변수가 올바르게 설정된 경우 ESM은 Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) 지표를 제공하므로 Roku, AppleTV, Xbox 등의 다양한 분석 유형을 수행할 수 있습니다.</br></br>전달 지표에서 클라이언트 없는 장치 유형 매개 변수의 이점[참조&#x200B;](/help/authentication/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
+| 리소스 | resourceId(또는 MRSS 조각)가 포함된 문자열은 사용자가 요청한 콘텐츠를 식별하고 MVPD 인증 종단점에서 인식합니다. |
+| device_info/</br></br>X-Device-Info | 스트리밍 장치 정보입니다.</br></br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. </br></br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
+| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br>이 매개 변수가 올바르게 설정된 경우 ESM은 Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) 지표를 제공하므로 Roku, AppleTV, Xbox 등의 다양한 분석 유형을 수행할 수 있습니다.</br></br>전달 지표에서 클라이언트 없는 장치 유형 매개 변수의 이점[참조&#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
 | _deviceUser_ | 장치 사용자 식별자. |
 | _appId_ | 애플리케이션 ID/이름입니다. </br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
 | 추가 매개 변수 | 호출에는 </br></br>* generic_data - [프로모션 TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)</br></br>와(과) 같은 다른 기능을 활성화하는 선택적 매개 변수도 포함될 수 있습니다. 예: `generic_data=("email":"email@domain.com")` |
@@ -110,7 +110,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->프록시 MVPD에서 응답이 오는 경우 `proxyMvpd`(이)라는 추가 요소가 포함될 수 있습니다.
+>프록시 MVPD에서 응답이 오는 경우 `proxyMvpd`(이)라는 추가 요소를 포함할 수 있습니다.
 
 
 

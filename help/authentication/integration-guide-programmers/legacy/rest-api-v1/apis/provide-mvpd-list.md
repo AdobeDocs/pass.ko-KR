@@ -2,14 +2,14 @@
 title: MVPD 목록 제공
 description: MVPD 목록 제공
 exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '232'
+source-wordcount: '233'
 ht-degree: 2%
 
 ---
 
-# MVPD 목록 제공 {#provide-mvpd-list}
+# (레거시) MVPD 목록 제공 {#provide-mvpd-list}
 
 >[!NOTE]
 >
@@ -57,8 +57,8 @@ ht-degree: 2%
 
 참고: Platform SSO를 사용하도록 구성된 모든 MVPD는 해당 노드(JSON/XML) 내에 다음과 같은 추가 속성을 갖게 됩니다.
 
-* 이 MVPD가 Platform SSO를 통해 통합되었는지 여부를 나타내는 **enablePlatformServices(부울):** 플래그
-* **boardingStatus(문자열):** 플래그는 MVPD가 Platform SSO(지원됨)를 완전히 지원하는지 또는 MVPD가 플랫폼 선택기(PICKER)에만 나타나는지 여부를 나타냅니다.
-* **displayInPlatformPicker(부울):** 이 MVPD가 플랫폼 선택기에 표시되어야 합니다.
+* 이 MVPD이 Platform SSO를 통해 통합되었는지 여부를 나타내는 **enablePlatformServices(부울):** 플래그
+* **boardingStatus(문자열):** MVPD에서 Platform SSO를 완전히 지원하는지(지원됨) 또는 MVPD이 플랫폼 선택기(PICKER)에만 나타나는지 여부를 나타내는 플래그입니다.
+* **displayInPlatformPicker(부울):** 이 MVPD이 플랫폼 선택기에 표시되어야 합니다.
 * **platformMappingId(문자열):** 플랫폼에서 인식하는 이 MVPD의 식별자입니다.
 * **requiredMetadataFields(문자열 배열):** 성공적인 로그인 시 사용할 수 있어야 하는 사용자 메타데이터 필드

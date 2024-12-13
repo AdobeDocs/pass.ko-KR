@@ -2,14 +2,14 @@
 title: iOS/tvOS Cookbook
 description: iOS/tvOS Cookbook
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '2402'
+source-wordcount: '2403'
 ht-degree: 0%
 
 ---
 
-# iOS/tvOS SDK Cookbook {#iostvos-sdk-cookbook}
+# (기존) iOS/tvOS SDK Cookbook {#iostvos-sdk-cookbook}
 
 >[!NOTE]
 >
@@ -44,7 +44,7 @@ AccessEnabler의 네트워크 작업은 자체 스레드에서 수행되므로 U
 
 ## Experience Cloud ID 서비스 구성(방문자 ID) {#visitorIDSetup}
 
-[!DNL Analytics] 관점에서 [Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/home.html) 값을 구성하는 것이 중요합니다. `visitorID` 값이 설정되면 SDK는 모든 네트워크 호출과 함께 이 정보를 전송하며 [!DNL Adobe Pass] 인증 서버는 이 정보를 수집합니다. Adobe Pass 인증 서비스의 분석을 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. visitorID 설정 방법에 대한 정보는 [여기](#setOptions)에서 찾을 수 있습니다.
+[!DNL Analytics] 관점에서 [Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/home.html) 값을 구성하는 것이 중요합니다. `visitorID` 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 [!DNL Adobe Pass] 인증 서버는 이 정보를 수집합니다. Adobe Pass 인증 서비스의 분석을 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. visitorID 설정 방법에 대한 정보는 [여기](#setOptions)에서 찾을 수 있습니다.
 
 ## 권한 흐름 {#entitlement}
 
@@ -76,7 +76,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
       * 반환된 상태는 성공 또는 실패이며, errorcode는 실패 유형을 설명합니다.
 
    * [`navigateToUrl(url)`](#$nav2url) </br>
-      * 사용자가 MVPD를 선택한 후 [`getAuthentication()`](#$getAuthN)에 의해 트리거됩니다. `url` 매개 변수는 MVPD의 로그인 페이지 위치를 제공합니다.
+      * 사용자가 MVPD을 선택한 후 [`getAuthentication()`](#$getAuthN)에 의해 트리거됩니다. `url` 매개 변수는 MVPD 로그인 페이지의 위치를 제공합니다.
 
    * `sendTrackingData(event, data)` </br>
       * `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()`에 의해 트리거됩니다.
@@ -108,7 +108,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 
    * [`presentTvProviderDialog(viewController)`](#presentTvDialog)
 
-      * 현재 요청자가 SSO를 지원하는 MVPD를 적어도 하나 이상 지원하는 경우 [getAuthentication()](#getAuthN)에 의해 트리거됩니다.
+      * 현재 요청자가 SSO를 지원하는 MVPD에서 적어도 를 지원하는 경우 [getAuthentication()](#getAuthN)에 의해 트리거됩니다.
       * viewController 매개 변수는 Apple SSO 대화 상자이며 기본 보기 컨트롤러에 표시되어야 합니다.
 
    * [`dismissTvProviderDialog(viewController)`](#dismissTvDialog)
@@ -165,7 +165,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 1. (으)로 전송된 공급자 목록이 있는 사용자 표시
    [`displayProviderDialog()`](#dispProvDialog).
 
-1. 사용자가 공급자를 선택한 후 `navigateToUrl:` 또는 `navigateToUrl:useSVC:` 콜백에서 사용자 MVPD의 URL을 가져와 `UIWebView/WKWebView` 또는 `SFSafariViewController` 컨트롤러를 열고 해당 컨트롤러를 URL로 보냅니다.
+1. 사용자가 공급자를 선택한 후 `navigateToUrl:` 또는 `navigateToUrl:useSVC:` 콜백에서 사용자 MVPD의 URL을 가져온 다음 `UIWebView/WKWebView` 또는 `SFSafariViewController` 컨트롤러를 열고 해당 컨트롤러를 URL로 보냅니다.
 
 1. 이전 단계에서 인스턴스화된 `UIWebView/WKWebView` 또는 `SFSafariViewController`을(를) 통해 사용자는 MVPD의 로그인 페이지에 도달하고 로그인 자격 증명을 입력합니다. 컨트롤러 내에서 여러 리디렉션 작업이 발생합니다.</br>
 
@@ -177,7 +177,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 
 1. UIWebView/WKWebView 또는 SFSafariViewController 컨트롤러를 닫고 AccessEnabler가 백 엔드 서버에서 인증 토큰을 검색하도록 지시하는 AccessEnabler의 `handleExternalURL:url` API 메서드를 호출합니다.
 
-1. (선택 사항) [`checkPreauthorizedResources(resources)`](#$checkPreauth)을(를) 호출하여 사용자가 볼 수 있는 권한이 있는 리소스를 확인합니다. `resources` 매개 변수는 사용자의 인증 토큰과 연결된 보호된 리소스 배열입니다. 사용자의 MVPD에서 얻은 인증 정보에 대한 한 가지 사용은 UI를 장식하는 것입니다(예: 보호된 콘텐츠 옆에 잠긴/잠금 해제된 기호).
+1. (선택 사항) [`checkPreauthorizedResources(resources)`](#$checkPreauth)을(를) 호출하여 사용자가 볼 수 있는 권한이 있는 리소스를 확인합니다. `resources` 매개 변수는 사용자의 인증 토큰과 연결된 보호된 리소스 배열입니다. 사용자의 MVPD에서 얻은 인증 정보의 한 가지 용도는 UI를 장식하는 것입니다(예: 보호된 콘텐츠 옆에 있는 잠긴/잠금 해제된 기호).
 
    * **트리거:** [`preauthorizedResources()`](#preauthResources) 콜백
    * 완료된 인증 흐름 이후의 **실행 지점:**
@@ -189,13 +189,13 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 1. 인증 흐름을 시작하거나 사용자가 이미 인증되었음을 확인하려면 [`getAuthentication()`](#$getAuthN)을(를) 호출하십시오.
    **트리거:**
 
-   * 사용자가 인증되지 않았고 현재 요청자가 SSO를 지원하는 MVPD를 적어도 하나 이상 보유한 경우 [presentTvProviderDialog()](#presentTvDialog) 콜백입니다. SSO를 지원하는 MVPD가 없는 경우 클래식 인증 흐름이 사용됩니다.
+   * 사용자가 인증되지 않았고 현재 요청자가 SSO를 지원하는 MVPD을 적어도 하나 이상 보유한 경우 [presentTvProviderDialog()](#presentTvDialog) 콜백입니다. SSO를 지원하는 MVPD가 없는 경우 클래식 인증 흐름이 사용됩니다.
 
 1. 사용자가 공급업체를 선택하면 AccessEnabler 라이브러리는 Apple의 VSA 프레임워크에서 제공하는 정보가 포함된 인증 토큰을 받게 됩니다.
 
 1. [setAuthenticatiosStatus()](#setAuthNStatus) 콜백이 트리거됩니다. 이 시점에서 사용자는 Apple SSO로 인증되어야 합니다.
 
-1. [선택 사항] [`checkPreauthorizedResources(resources)`](#$checkPreauth)을(를) 호출하여 사용자가 볼 수 있는 권한이 있는 리소스를 확인합니다. `resources` 매개 변수는 사용자의 인증 토큰과 연결된 보호된 리소스 배열입니다. 사용자의 MVPD에서 얻은 인증 정보에 대한 한 가지 사용은 UI를 장식하는 것입니다(예: 보호된 콘텐츠 옆에 잠긴/잠금 해제된 기호).
+1. [선택 사항] [`checkPreauthorizedResources(resources)`](#$checkPreauth)을(를) 호출하여 사용자가 볼 수 있는 권한이 있는 리소스를 확인합니다. `resources` 매개 변수는 사용자의 인증 토큰과 연결된 보호된 리소스 배열입니다. 사용자의 MVPD에서 얻은 인증 정보의 한 가지 용도는 UI를 장식하는 것입니다(예: 보호된 콘텐츠 옆에 있는 잠긴/잠금 해제된 기호).
 
    * **트리거:** [`preauthorizedResources()`](#preauthResources) 콜백
    * 완료된 인증 흐름 이후의 **실행 지점:**
@@ -208,12 +208,12 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 인증 흐름 또는 사용자가 이미 있다는 확인을 받기 위해
 인증됨.
    **트리거:**
-   * 사용자가 인증되지 않았고 현재 요청자가 SSO를 지원하는 MVPD를 적어도 하나 이상 보유한 경우 [`presentTvProviderDialog()`](#presentTvDialog) 콜백입니다. SSO를 지원하는 MVPD가 없는 경우 클래식 인증 흐름이 사용됩니다.
+   * 사용자가 인증되지 않았고 현재 요청자가 SSO를 지원하는 MVPD을 적어도 하나 이상 보유한 경우 [`presentTvProviderDialog()`](#presentTvDialog) 콜백입니다. SSO를 지원하는 MVPD가 없는 경우 클래식 인증 흐름이 사용됩니다.
 
 1. 사용자가 공급자를 선택하면 [`status()`](#status_callback_implementation) 콜백이 호출됩니다. 등록 코드가 제공되고 AccessEnabler 라이브러리가 두 번째 화면 인증을 위해 서버 폴링을 시작합니다.
 
 1. 제공된 등록 코드가 두 번째 화면에서 성공적으로 인증에 사용된 경우 [`setAuthenticatiosStatus()`](#setAuthNStatus) 콜백이 트리거됩니다. 이 시점에서 사용자는 Apple SSO로 인증되어야 합니다.
-1. [선택 사항] [`checkPreauthorizedResources(resources)`](#$checkPreauth)을(를) 호출하여 사용자가 볼 수 있는 권한이 있는 리소스를 확인합니다. `resources` 매개 변수는 사용자의 인증 토큰과 연결된 보호된 리소스 배열입니다. 사용자의 MVPD에서 얻은 인증 정보에 대한 한 가지 사용은 UI를 장식하는 것입니다(예: 보호된 콘텐츠 옆에 잠긴/잠금 해제된 기호).
+1. [선택 사항] [`checkPreauthorizedResources(resources)`](#$checkPreauth)을(를) 호출하여 사용자가 볼 수 있는 권한이 있는 리소스를 확인합니다. `resources` 매개 변수는 사용자의 인증 토큰과 연결된 보호된 리소스 배열입니다. 사용자의 MVPD에서 얻은 인증 정보의 한 가지 용도는 UI를 장식하는 것입니다(예: 보호된 콘텐츠 옆에 있는 잠긴/잠금 해제된 기호).
 
    * **트리거:** [`preauthorizedResources()`](#preauthResources) 콜백
 
@@ -224,7 +224,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 
 1. 인증 흐름을 시작하려면 [getAuthorization()](#$getAuthZ)을 호출하십시오.
 
-   * **종속성:** 유효한 리소스 ID가 MVPD와(과) 일치합니다.
+   * **종속성:** MVPD과(과) 합의된 올바른 리소스 ID입니다.
    * 리소스 ID는 다른 디바이스 또는 플랫폼에서 사용되는 ID와 동일해야 하며 MVPD에서 동일합니다. 리소스 ID에 대한 자세한 내용은 [보호된 리소스 확인](/help/authentication/integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md)을 참조하세요.
 
 1. 인증 및 권한 부여의 유효성을 검사합니다.

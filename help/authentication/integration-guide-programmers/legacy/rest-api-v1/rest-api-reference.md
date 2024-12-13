@@ -2,14 +2,14 @@
 title: REST API 참조
 description: Rest api 참조
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '653'
+source-wordcount: '654'
 ht-degree: 2%
 
 ---
 
-# REST API 참조 {#rest-api-reference}
+# (기존) REST API 참조 {#rest-api-reference}
 
 >[!NOTE]
 >
@@ -57,7 +57,7 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 | 1. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId}/regcode](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) | 임의로 생성된 등록 코드 및 로그인 페이지 URI를 반환합니다. | 2 | Adobe </br>Reg Code 서비스 | 스마트 장치 |
 | 2. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId}/regcode/ </br> {registrationCode}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/return-registration-record.md) | 등록 코드 UUID, 등록 코드 및 해시된 장치 ID가 포함된 등록 코드 레코드를 반환합니다. | 8 | Adobe </br>Reg Code 서비스 | Adobe Pass 인증 |
 | 3. | [&lt;SP_FQDN>/api/v1/config/ </br> {requestorId}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) | 요청자에 대해 구성된 MVPD 목록을 반환합니다. | 5 | Adobe </br>Adobe Pass </br>인증 </br>서비스 | 로그인 </br>웹 </br>앱 |
-| 4. | [&lt;SP_FQDN>/api/v1/인증](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) | MVPD 선택 이벤트를 알려 AuthN 프로세스를 시작합니다. MVPD로부터 성공적인 응답을 받으면 조정되는 인증 데이터베이스에 레코드를 만듭니다(13단계). | 7 | Adobe </br>Adobe Pass </br>인증 </br>서비스 | 로그인 </br>웹 </br>앱 |
+| 4. | [&lt;SP_FQDN>/api/v1/인증](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) | MVPD 선택 이벤트를 알려 AuthN 프로세스를 시작합니다. MVPD에서 성공적인 응답을 받으면 조정되는 인증 데이터베이스에 레코드를 만듭니다(13단계) | 7 | Adobe </br>Adobe Pass </br>인증 </br>서비스 | 로그인 </br>웹 </br>앱 |
 | 5. | SAML 어설션 소비자 | Adobe Pass 인증과 MVPD 간의 기존 SAML 워크플로 | 13 | Adobe Pass </br>인증 </br>서비스 | Adobe Pass 인증 |
 | 6. | [&lt;SP_FQDN>/api/v1/checkauthn/ </br> {registrationCode}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-flow-by-second-screen-web-app.md) | 로그인 웹 앱은 시도한 로그인 흐름이 성공했는지 확인할 수 있습니다 |                                                                                             | Adobe Pass </br>인증   </br>서비스 | 로그인   </br>웹   </br>앱 |
 | 7. | [&lt;SP_FQDN>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) | AuthN 토큰 관련 메타데이터 가져오기 | 15 | Adobe Pass </br>인증 </br>서비스 | 스마트 장치 |

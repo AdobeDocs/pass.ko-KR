@@ -2,14 +2,14 @@
 title: REST API Cookbook(클라이언트-서버)
 description: 서버에 대한 REST API Cookbook 클라이언트입니다.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '876'
+source-wordcount: '877'
 ht-degree: 0%
 
 ---
 
-# REST API Cookbook(클라이언트-서버) {#rest-api-cookbook-client-to-server}
+# (기존) REST API Cookbook(클라이언트-서버) {#rest-api-cookbook-client-to-server}
 
 >[!NOTE]
 >
@@ -18,7 +18,7 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-이 문서에서는 프로그래머 엔지니어링 팀이 REST API 서비스를 사용하여 &quot;스마트 장치&quot;(게임 콘솔, 스마트 TV 앱, 셋톱 박스 등)를 Adobe Pass 인증과 통합하는 방법에 대한 단계별 지침을 제공합니다. 클라이언트 SDK가 아닌 REST API를 사용하는 이 클라이언트-서버 접근 방식은 상당한 수의 고유 SDK를 개발할 수 없는 다양한 플랫폼에 대한 광범위한 지원을 허용합니다. Clientless 솔루션이 작동하는 방식에 대한 광범위한 기술 개요는 [Clientless 기술 개요](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/rest-api-overview.md)를 참조하십시오.
+이 문서에서는 프로그래머 엔지니어링 팀이 REST API 서비스를 사용하여 &quot;스마트 장치&quot;(게임 콘솔, 스마트 TV 앱, 셋톱 박스 등)를 Adobe Pass 인증과 통합하는 방법에 대한 단계별 지침을 제공합니다. 클라이언트 SDK이 아닌 REST API를 사용하는 이 클라이언트-서버 접근 방식은 상당한 수의 고유한 SDK를 개발할 수 없는 다양한 플랫폼에 대한 광범위한 지원을 허용합니다. Clientless 솔루션이 작동하는 방식에 대한 광범위한 기술 개요는 [Clientless 기술 개요](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)를 참조하십시오.
 
 
 이 접근 방법에서는 필요한 흐름(스트리밍 앱의 시작, 등록, 권한 부여 및 보기 미디어 흐름 및 AuthN 앱의 인증 흐름)을 완료하려면 두 가지 구성 요소(스트리밍 앱 및 AuthN 앱)가 필요합니다.
@@ -36,11 +36,11 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 | 유형 | 구성 요소 | 설명 |
 | --- | --- | --- |
 | 스트리밍 장치 | 스트리밍 앱 | 사용자의 스트리밍 장치에 상주하며 인증된 비디오를 재생하는 프로그래머 애플리케이션. |
-| | \[선택 사항\] AuthN 모듈 | 스트리밍 장치에 사용자 에이전트(즉, 웹 브라우저)가 있는 경우 AuthN 모듈은 MVPD IdP에서 사용자를 인증할 책임이 있습니다. |
+| | \[선택 사항\] AuthN 모듈 | 스트리밍 장치에 사용자 에이전트(즉, 웹 브라우저)가 있는 경우 AuthN 모듈은 MVPD IdP에서 사용자를 인증합니다. |
 | \[선택 사항\] AuthN 장치 | Autn 앱 | 스트리밍 장치에 사용자 에이전트(즉, 웹 브라우저)가 없는 경우 AuthN 애플리케이션은 웹 브라우저를 사용하여 별도의 사용자 장치에서 액세스하는 프로그래머 웹 애플리케이션입니다. |
 | Adobe 인프라 | Adobe Pass 서비스 | MVPD IdP 및 AuthZ 서비스와 통합되고 인증 및 권한 부여 결정을 제공하는 서비스입니다. |
 | MVPD 인프라 | MVPD IdP | 사용자의 ID를 확인하기 위해 자격 증명 기반 인증 서비스를 제공하는 MVPD 종단점입니다. |
-| | MVPD AuthZ 서비스 | 사용자의 구독, 자녀 보호 등을 기반으로 권한 부여 결정을 제공하는 MVPD 엔드포인트. |
+| | MVPD AuthZ 서비스 | 사용자의 구독, 자녀 보호 등에 따라 권한 부여 결정을 제공하는 MVPD 종단점입니다. |
 
 
 
@@ -134,13 +134,13 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 일부 디바이스는 Partner SSO(Single Sign-On)에 대한 전용 지원을 제공합니다.
 
-* [APPLE SSO](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v1.md)
+* [APPLE SSO](/help/authentication/integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-rest-api-v1.md)
 
 ## Platform Single Sign-On {#platform-sso}
 
 일부 장치는 Platform SSO(Single Sign-On)를 전적으로 지원합니다.
 
-* [AMAZON SSO](../../../features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v1.md)
+* [AMAZON SSO](../../sso-access/amazon-sso-cookbook-rest-api-v1.md)
 * [Roku SSO](../../../features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
 
 ## REST API용 TempPass 및 프로모션 TempPass {#temppass}

@@ -2,14 +2,14 @@
 title: iOS/tvOS API 사전 인증
 description: iOS/tvOS API 사전 인증
 exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '391'
+source-wordcount: '392'
 ht-degree: 0%
 
 ---
 
-# 사전 승인 {#preauthorize}
+# (기존) 사전 인증 {#preauthorize}
 
 >[!NOTE]
 >
@@ -273,7 +273,7 @@ Adobe Pass 인증 서비스가 API 사전 인증 요청을 제공하는 동안 �
 
 #### 실패
 
-Adobe Pass 인증 SDK가 사전 인증 API 요청을 제공하는 동안 오류가 발생합니다
+Adobe Pass 인증 SDK이 사전 인증 API 요청을 제공하는 동안 오류가 발생합니다
 
 ```JSON
     {

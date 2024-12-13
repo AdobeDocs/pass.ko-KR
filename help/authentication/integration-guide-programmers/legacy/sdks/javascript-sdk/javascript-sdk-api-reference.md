@@ -2,14 +2,14 @@
 title: JavaScript SDK API 참조
 description: JavaScript SDK API 참조
 exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '2860'
+source-wordcount: '2861'
 ht-degree: 0%
 
 ---
 
-# JavaScript SDK API 참조 {#javascript-sdk-api-reference}
+# (기존) JavaScript SDK API 참조 {#javascript-sdk-api-reference}
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 ## API 참조 {#api-reference}
 
-이러한 기능은 MVPD와의 상호 작용 요청을 시작합니다. 모든 호출은 비동기입니다. 응답을 처리하려면 [콜백](#callbacks)을(를) 구현해야 합니다.
+이러한 함수는 MVPD과의 상호 작용에 대한 요청을 시작합니다. 모든 호출은 비동기입니다. 응답을 처리하려면 [콜백](#callbacks)을(를) 구현해야 합니다.
 
 - [setRequestor()](#setReq)
 - [getAuthorization()](#getAuthZ)
@@ -40,12 +40,12 @@ ht-degree: 0%
 
 - *끝점* - 이 매개 변수는 선택 사항입니다. 다음 값 중 하나일 수 있습니다.
 
-   - Adobe에서 제공하는 인증 및 권한 부여 서비스의 끝점을 지정할 수 있는 배열입니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 여러 개의 URL이 제공되는 경우, MVPD 목록은 모든 서비스 제공자의 엔드포인트로 구성된다. 각 MVPD는 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD를 지원하는 공급자와 연결됩니다. 기본적으로(값이 지정되지 않은 경우) Adobe 서비스 공급자가 사용됩니다(<http://sp.auth.adobe.com/>).
+   - Adobe에서 제공하는 인증 및 권한 부여 서비스의 끝점을 지정할 수 있는 배열입니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 여러 URL이 제공되는 경우 MVPD 목록은 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD은 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD을 지원하는 공급자와 연결됩니다. 기본적으로(값이 지정되지 않은 경우) Adobe 서비스 공급자가 사용됩니다(<http://sp.auth.adobe.com/>).
 
   예:
    - `setRequestor("IFC", ["http://sp.auth-dev.adobe.com/adobe-services"])`
 
-- *options* - 응용 프로그램 ID 값, 방문자 ID 값 새로 고침 불가 설정(백그라운드 로그인 로그아웃) 및 MVPD 설정(iFrame)이 포함된 JSON 개체입니다. 모든 값은 선택 사항입니다.
+- *옵션* - 응용 프로그램 ID 값, 방문자 ID 값 새로 고침 불가 설정(백그라운드 로그인 로그아웃) 및 MVPD 설정(iFrame)이 포함된 JSON 개체입니다. 모든 값은 선택 사항입니다.
    1. 지정하면 라이브러리에서 수행한 모든 네트워크 호출에 대해 Experience Cloud visitorID가 보고됩니다. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
    2. 응용 프로그램의 고유 식별자가 지정된 경우 -`applicationId` - 이 값은 응용 프로그램에서 X-Device-Info HTTP 헤더의 일부로 이후에 호출하는 모든 호출에 추가됩니다. 이 값은 나중에 적절한 쿼리를 사용하여 [ESM](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md) 보고서에서 가져올 수 있습니다.
 
@@ -84,14 +84,14 @@ ht-degree: 0%
 ```
 
 
-위의 템플릿의 모든 최상위 키는 선택 사항이며 기본값이 있습니다(*backgroundLogin*, *backgroundLogut*&#x200B;은(는) 기본적으로 false이며, mvpdConfig가 null입니다. 즉, MVPD 설정이 재정의되지 않습니다.).
+위의 템플릿에 있는 모든 최상위 키는 선택 사항이며 기본값이 있습니다(*backgroundLogin*, *backgroundLogut*&#x200B;은(는) 기본적으로 false이며, mvpdConfig가 null입니다. 즉, MVPD 설정이 재정의되지 않음).
 
 
 - **참고**: 위의 매개 변수에 대해 잘못된 값/형식을 지정하면 정의되지 않은 동작이 발생합니다.
 
 
 
-다음은 새로 고침 없는 로그인 및 로그아웃을 활성화하고, MVPD1을 전체 페이지 리디렉션 로그인(iFrame 아님)으로 변경하고, MVPD2를 iFrame으로 로그인하여 너비=500 및 높이=300인 시나리오에 대한 예제 구성입니다.
+다음은 새로 고침 없는 로그인 및 로그아웃을 활성화하고, MVPD1을 전체 페이지 리디렉션 로그인(iFrame 아님)으로 변경하고, MVPD2를 너비=500 및 높이=300인 iFrame으로 로그인하는 시나리오의 예제 구성입니다.
 
 ```JSON
     {  
@@ -120,14 +120,14 @@ ht-degree: 0%
 
 ## getAuthorization(inResourceID, redirect_url) {#getauthorization(inresourceid,redirect_url)}
 
-**설명:** 지정한 리소스에 대한 권한 부여를 요청합니다. 고객이 승인 가능 리소스에 액세스할 때마다 이 함수를 호출하여 Access Enabler에서 단기 인증 토큰을 얻습니다. 리소스 ID는 인증을 제공하는 MVPD와 동의합니다.
+**설명:** 지정한 리소스에 대한 권한 부여를 요청합니다. 고객이 승인 가능 리소스에 액세스할 때마다 이 함수를 호출하여 Access Enabler에서 단기 인증 토큰을 얻습니다. 리소스 ID는 인증을 제공하는 MVPD과 합의됩니다.
 
 현재 고객에 대해 캐시된 인증 토큰을 사용합니다. 해당 토큰이 없으면 먼저 인증 프로세스를 시작한 다음 권한 부여를 계속합니다.
 
 **매개 변수:**
 
 - `inResourceID` - 사용자가 권한 부여를 요청하는 리소스의 ID입니다.
-- `redirect_url` - 선택적으로 MVPD의 인증 프로세스가 인증을 시작한 페이지가 아닌 해당 페이지로 사용자를 반환하도록 리디렉션 URL을 제공합니다.
+- `redirect_url` - 선택적으로 MVPD의 권한 부여 프로세스가 권한 부여가 시작된 페이지가 아닌 해당 페이지로 사용자를 반환하도록 리디렉션 URL을 제공합니다.
 
 
 **콜백이 트리거됨:** [setToken()](#settokeninrequestedresourceid-intoken-settokeninrequestedresourceidintoken) 성공 시, [tokenRequestFailed](#tokenrequestfailedinrequestedresourceid-inrequesterrorcode-inrequestdetailederrormessage-tokenrequestfailedinrequestedresourceidinrequesterrorcodeinrequestdetailederrormessage) 실패 시
@@ -144,7 +144,7 @@ ht-degree: 0%
 
 ## getAuthentication(redirect_url) {#getauthentication(redirect_url}
 
-**설명:**&#x200B;이(가) 현재 고객에 대한 인증을 요청합니다. 일반적으로 로그인 단추 클릭에 따라 호출됩니다. 현재 고객에 대해 캐시된 인증 토큰을 확인합니다. 해당 토큰이 없으면 가 인증 프로세스를 시작합니다. 기본 또는 사용자 지정 공급자 선택 대화 상자를 호출한 다음 선택한 공급자를 사용하여 MVPD의 로그인 인터페이스로 리디렉션합니다.
+**설명:**&#x200B;이(가) 현재 고객에 대한 인증을 요청합니다. 일반적으로 로그인 단추 클릭에 따라 호출됩니다. 현재 고객에 대해 캐시된 인증 토큰을 확인합니다. 해당 토큰이 없으면 가 인증 프로세스를 시작합니다. 이렇게 하면 기본 또는 사용자 지정 공급자 선택 대화 상자가 호출된 다음 선택한 공급자를 사용하여 MVPD 로그인 인터페이스로 리디렉션됩니다.
 
 성공 시 는 사용자에 대한 인증 토큰을 만들고 저장합니다. 인증이 실패하면 공급자는 [setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode) 콜백에 적절한 오류 메시지를 반환합니다.
 
@@ -197,7 +197,7 @@ ht-degree: 0%
 
 **매개 변수:**
 
-- *리소스*: 리소스 매개 변수는 권한 부여를 확인해야 하는 리소스 배열입니다. 목록의 각 요소는 리소스 ID를 나타내는 문자열이어야 합니다. 리소스 ID는 `getAuthorization()` 호출에서 리소스 ID와 동일한 제한, 즉 프로그래머와 MVPD 간에 설정된 합의된 값 또는 미디어 RSS 조각에 적용됩니다.
+- *리소스*: 리소스 매개 변수는 권한 부여를 확인해야 하는 리소스 배열입니다. 목록의 각 요소는 리소스 ID를 나타내는 문자열이어야 합니다. 리소스 ID에는 `getAuthorization()` 호출의 리소스 ID와 동일한 제한 사항이 적용됩니다. 즉, 프로그래머와 MVPD 간에 설정된 합의된 값 또는 미디어 RSS 조각입니다.
 
 </br>
 
@@ -208,7 +208,7 @@ ht-degree: 0%
 
 **매개 변수:**
 
-- *리소스*: 리소스 매개 변수는 권한 부여를 확인해야 하는 리소스 배열입니다. 목록의 각 요소는 리소스 ID를 나타내는 문자열이어야 합니다. 리소스 ID는 `getAuthorization()` 호출에서 리소스 ID와 동일한 제한, 즉 프로그래머와 MVPD 간에 설정된 합의된 값 또는 미디어 RSS 조각에 적용됩니다.
+- *리소스*: 리소스 매개 변수는 권한 부여를 확인해야 하는 리소스 배열입니다. 목록의 각 요소는 리소스 ID를 나타내는 문자열이어야 합니다. 리소스 ID에는 `getAuthorization()` 호출의 리소스 ID와 동일한 제한 사항이 적용됩니다. 즉, 프로그래머와 MVPD 간에 설정된 합의된 값 또는 미디어 RSS 조각입니다.
 
 - *cache*: 사전 승인된 리소스를 확인할 때 내부 캐시를 사용할지 여부입니다. 선택적 매개 변수입니다. **true**(으)로 기본 설정됩니다. true인 경우 동작은 위의 API와 동일합니다. 즉, 이 함수에 대한 후속 호출은 내부 캐시를 사용하여 사전 승인된 리소스를 확인합니다. 이 매개 변수에 대해 **false**&#x200B;을(를) 전달하면 내부 캐시가 비활성화되어 **checkPreauthorizedResources** API가 호출될 때마다 서버 호출이 발생합니다.
 
@@ -226,7 +226,7 @@ ht-degree: 0%
 메타데이터에는 두 가지 유형이 있습니다.
 
 - **정적**(인증 토큰 TTL, 인증 토큰 TTL 및 장치 ID)
-- **사용자 메타데이터**(여기에는 인증 및/또는 권한 부여 흐름 동안 MVPD에서 사용자의 장치로 전달되는 사용자 특정 정보가 포함됩니다.)
+- **사용자 메타데이터**(인증 및/또는 권한 부여 흐름 동안 MVPD에서 사용자의 장치로 전달되는 사용자 특정 정보 포함)
 
 **추가 정보:** [사용자 메타데이터](#UserMetadata)
 
@@ -245,11 +245,11 @@ ht-degree: 0%
 
    - `"encryptedZip"` - 암호화된 우편 번호
 
-   - `"householdID"` - 세대 식별자. MVPD가 하위 계정을 지원하지 않는 경우에는 이 값이 userID와 동일합니다.
+   - `"householdID"` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우에는 userID와 동일합니다.
 
    - `"maxRating"` - 사용자의 최대 자녀 보호 등급
 
-   - `"userID"` - 사용자 식별자. MVPD가 하위 계정을 지원하고 사용자가 주 계정이 아닌 경우 userID는 householdID와 다릅니다.
+   - `"userID"` - 사용자 식별자. MVPD에서 하위 계정을 지원하고 사용자가 기본 계정이 아닌 경우 userID는 householdID와 다릅니다.
 
    - `"channelID"` - 사용자가 볼 수 있는 채널 목록
 
@@ -267,7 +267,7 @@ ht-degree: 0%
 
    - `"acctParentID"` - 계정 상위 ID
 
-  **참고**: 프로그래머가 사용할 수 있는 실제 사용자 메타데이터는 MVPD가 사용할 수 있는 내용에 따라 다릅니다.  사용 가능한 사용자 메타데이터의 현재 목록을 보려면 [사용자 메타데이터](#UserMetadata)을(를) 참조하십시오.
+  **참고**: 프로그래머가 사용할 수 있는 실제 사용자 메타데이터는 MVPD에서 사용할 수 있는 내용에 따라 다릅니다.  사용 가능한 사용자 메타데이터의 현재 목록을 보려면 [사용자 메타데이터](#UserMetadata)을(를) 참조하십시오.
 
 
 For example:
@@ -302,7 +302,7 @@ For example:
 
 ## setSelectedProvider(providerid) {#setSelectedProvider}
 
-**설명:** 사용자가 공급자 선택 UI에서 공급자 선택 사항을 Access Enabler로 보내기 위해 MVPD를 선택한 경우 이 함수를 호출하거나 사용자가 공급자를 선택하지 않고 공급자 선택 UI를 해제한 경우 null 매개 변수를 사용하여 이 함수를 호출합니다.
+**설명:** 사용자가 공급자 선택 UI에서 공급자 선택을 Access Enabler에 보내기 위해 MVPD을 선택한 경우 이 함수를 호출하거나 사용자가 공급자를 선택하지 않고 공급자 선택 UI를 해제한 경우 null 매개 변수를 사용하여 이 함수를 호출합니다.
 
 **콜백
 트리거됨:**[ setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
@@ -319,7 +319,7 @@ For example:
 
 이 함수는 비동기 함수이며 결과를 `selectedProvider()` 콜백 함수에 반환합니다.
 
-- **MVPD** 현재 선택한 MVPD입니다. MVPD를 선택하지 않으면 null입니다.
+- **MVPD** 현재 선택한 MVPD이거나 MVPD을 선택하지 않은 경우 null입니다.
 - **AE_State** 현재 고객에 대한 &quot;새 사용자&quot;, &quot;사용자가 인증되지 않음&quot; 또는 &quot;사용자가 인증됨&quot; 중 하나의 인증 결과입니다.
 
 **트리거된 콜백:** [selectedProvider()](#getselectedprovider-getselectedprovider)
@@ -409,7 +409,7 @@ For example:
 
 ## createIFrame(inWidth, inHeight) {#createIFrame(inWidth,inHeight)}
 
-**설명:** 사용자가 인증 로그인 페이지 UI를 표시할 iFrame이 필요한 MVPD를 선택한 경우 이 콜백을 구현합니다.
+**설명:** 사용자가 인증 로그인 페이지 UI를 표시할 iFrame이 필요한 MVPD을 선택한 경우 이 콜백을 구현합니다.
 
 **트리거 주체:**[ setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
 
@@ -423,7 +423,7 @@ For example:
 
 >[!NOTE]
 > 
->현재 [고급 오류 보고](/help/authentication/integration-guide-programmers/features-standard/error-reporting/error-reporting.md) 시스템을 사용하는 경우 이 함수로 전송된 errorCode 매개 변수를 무시할 수 있습니다.  하지만 isAuthenticated 플래그는 자격 흐름에서 사용자의 인증 상태를 추적하는 데 여전히 사용됩니다
+>현재 [고급 오류 보고](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md) 시스템을 사용하는 경우 이 함수로 전송된 errorCode 매개 변수를 무시할 수 있습니다.  하지만 isAuthenticated 플래그는 자격 흐름에서 사용자의 인증 상태를 추적하는 데 여전히 사용됩니다
 
 
 **매개 변수:**
@@ -463,7 +463,7 @@ For example:
 
 이벤트 유형 및 관련 정보 배열을 전달합니다. 이벤트 유형은 다음과 같습니다.
 
-| mvpdSelection | 사용자가 공급자 선택 대화 상자에서 MVPD를 선택했습니다. |
+| mvpdSelection | 사용자가 공급자 선택 대화 상자에서 MVPD을 선택했습니다. |
 | ----------------------- | --------------------------------------------------------- |
 | authenticationDiscovery | 인증 확인이 완료되었습니다. |
 | authorizationDetection | 인증 요청이 완료되었습니다. |
@@ -517,7 +517,7 @@ For example:
 
 ## tokenRequestFailed(inRequestedResourceID, inRequestErrorCode, inRequestDetailedErrorMessage) {#token-request-failed-error-msg}
 
-**설명:** 권한 부여 또는 검사 권한 부여 요청이 실패할 때 신호를 받으려면 이 콜백을 구현합니다. 프로그래머가 표시할 사용자 지정 메시지를 제공하기 위해 MVPD가 선택적으로 사용할 수 있습니다.
+**설명:** 권한 부여 또는 검사 권한 부여 요청이 실패할 때 신호를 받으려면 이 콜백을 구현합니다. 선택적으로 MVPD에서 프로그래머가 표시할 사용자 지정 메시지를 제공하는 데 사용할 수 있습니다.
 
 >[!IMPORTANT]
 >
@@ -527,7 +527,7 @@ For example:
 
 - *inRequestedResourceID* - 권한 부여 요청에 사용된 리소스 ID를 제공하는 문자열입니다.
 - *inRequestErrorCode* - 실패 이유를 나타내는 Adobe Pass 인증 오류 코드를 표시하는 문자열. 가능한 값은 &quot;사용자가 인증되지 않음 오류&quot; 및 &quot;사용자가 인증되지 않음 오류&quot;입니다. 자세한 내용은 아래의 &quot;콜백 오류 코드&quot;를 참조하십시오.
-- *inRequestDetailedErrorMessage* - 표시에 적합한 추가 설명 문자열입니다. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증에서 빈 문자열 **(&quot;)**&#x200B;을(를) 보냅니다.  이는 MVPD가 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달하는 데 사용할 수 있습니다. 예를 들어 구독자가 리소스에 대한 권한 부여를 거부하면 MVPD가 `*inRequestDetailedErrorMessage*`(예: **)에게 회신할 수 있습니다. 현재 패키지의 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 \*여기\*를 클릭하십시오.&quot;** 이 콜백을 통해 Adobe Pass 인증에서 프로그래머 사이트로 메시지를 전달합니다. 그러면 프로그래머는 이를 표시하거나 무시할 수 있는 옵션이 있습니다. Adobe Pass 인증은 `*inRequestDetailedErrorMessage*`을(를) 사용하여 프로그래머에게 오류가 발생했을 수 있는 조건을 알릴 수도 있습니다. 예를들어, **&quot;공급자의 인증 서비스와 통신하는 동안 네트워크 오류가 발생했습니다.&quot;**
+- *inRequestDetailedErrorMessage* - 표시에 적합한 추가 설명 문자열입니다. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증에서 빈 문자열 **(&quot;)**&#x200B;을(를) 보냅니다.  MVPD에서 이를 사용하여 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달할 수 있습니다. 예를 들어 구독자가 리소스에 대한 권한 부여를 거부하면 MVPD에서 다음과 같은 `*inRequestDetailedErrorMessage*`(으)로 회신할 수 있습니다. **&quot;현재 패키지의 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 \*여기\*를 클릭하십시오.&quot;** 이 콜백을 통해 Adobe Pass 인증에서 프로그래머 사이트로 메시지를 전달합니다. 그러면 프로그래머는 이를 표시하거나 무시할 수 있는 옵션이 있습니다. Adobe Pass 인증은 `*inRequestDetailedErrorMessage*`을(를) 사용하여 프로그래머에게 오류가 발생했을 수 있는 조건을 알릴 수도 있습니다. 예를들어, **&quot;공급자의 인증 서비스와 통신하는 동안 네트워크 오류가 발생했습니다.&quot;**
 
 
 
@@ -607,9 +607,9 @@ For example:
 
 ## selectedProvider(result) {#selectedProvider(result)}
 
-**설명:** 현재 선택한 MVPD와 `result` 매개 변수에 래핑된 현재 사용자의 인증 결과를 받으려면 이 콜백을 구현합니다. `result` 매개 변수는 다음 속성을 가진 개체입니다.
+**설명:** 현재 선택한 MVPD과 `result` 매개 변수에 래핑된 현재 사용자의 인증 결과를 받으려면 이 콜백을 구현합니다. `result` 매개 변수는 다음 속성을 가진 개체입니다.
 
-- **MVPD** 현재 선택한 MVPD입니다. MVPD를 선택하지 않으면 null입니다.
+- **MVPD** 현재 선택한 MVPD이거나 MVPD을 선택하지 않은 경우 null입니다.
 - **AE\_State** &quot;새 사용자&quot;, &quot;사용자가 인증되지 않음&quot; 또는 &quot;사용자가 인증됨&quot; 중 하나인 현재 사용자에 대한 인증 결과입니다.
 
 **트리거:** [getSelectedProvider()](#getSelProv)

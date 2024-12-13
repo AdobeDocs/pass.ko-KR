@@ -2,14 +2,14 @@
 title: Platform SSO 토큰을 Adobe 토큰으로 교환
 description: Platform SSO 토큰을 Adobe 토큰으로 교환
 exl-id: 5ab60268-8f97-4755-8281-be45e812ed7f
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '228'
+source-wordcount: '229'
 ht-degree: 0%
 
 ---
 
-# Platform SSO 토큰을 Adobe 토큰으로 교환 {#exchange-a-platform-sso-token-for-an-adobe-token}
+# (기존) Adobe 토큰으로 Platform SSO 토큰 교환 {#exchange-a-platform-sso-token-for-an-adobe-token}
 
 >[!NOTE]
 >
@@ -46,7 +46,7 @@ Platform SSO 프로필을 Adobe 토큰으로 &quot;교환&quot;할 수 있습니
 | --- | --- |
 | 요청자 | 이 작업이 유효한 Programmer requestorId입니다. |
 | deviceId | 장치 ID 바이트입니다. |
-| mvpd | 이 작업이 유효한 MVPD ID. |
+| mvpd | 이 작업이 유효한 MVPD ID입니다. |
 | deviceType | 프로필 요청을 가져오려는 Apple 플랫폼입니다.  **iOS** 또는 **tvOS**&#x200B;입니다. |
 | SAMLResponse | Platform SSO에서 반환된 실제 프로필입니다. |
 | _deviceUser_ | 장치 사용자 식별자. |

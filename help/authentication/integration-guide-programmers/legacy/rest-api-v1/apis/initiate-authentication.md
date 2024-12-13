@@ -2,14 +2,14 @@
 title: 인증 시작
 description: 인증 시작
 exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '291'
+source-wordcount: '292'
 ht-degree: 0%
 
 ---
 
-# 인증 시작 {#initiate-authentication}
+# (레거시) 인증 시작 {#initiate-authentication}
 
 >[!NOTE]
 >
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 설명 {#description}
 
-MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. MVPD에서 성공적인 응답을 받으면 조정되는 Adobe Pass 인증 데이터베이스에 레코드를 만듭니다.
+MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. Adobe Pass 인증 데이터베이스에 레코드를 만듭니다. 이 레코드는 MVPD에서 성공적인 응답을 받을 때 조정됩니다.
 
 
 
@@ -50,7 +50,7 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. MVPD에�
 | 입력 매개 변수 | 설명 |
 | --- | --- |
 | requestor_id | 이 작업이 유효한 프로그래머 요청자입니다. |
-| mso_id | 이 작업이 유효한 MVPD ID. |
+| mso_id | 이 작업이 유효한 MVPD ID입니다. |
 | reg_code | Reggie 서비스에서 생성한 등록 코드. |
 | domain_name | 원래 도메인. |
 | redirect_url | 인증 완료 후 로그인 Webapp 리디렉션 URL. |
@@ -93,7 +93,7 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. MVPD에�
 
 * `domain_name` 매개 변수의 값은 Adobe Pass 인증에 등록된 도메인 이름 중 하나로 설정해야 합니다. 자세한 내용은 [등록 및 초기화](/help/authentication/kickstart/programmer-overview.md)를 참조하세요.
 
-* [/authenticate 요청에 &#39;&amp;&#39;reg\_code를 사용하지 마십시오(기술 노트).](/help/authentication/notes-technical/clientless-avoid-using-reg-code-in-authenticate-request.md)
+* [/authenticate 요청에 &#39;&amp;&#39;reg\_code를 사용하지 마십시오(기술 노트).](/help/authentication/integration-guide-programmers/legacy/notes-technical/clientless-avoid-using-reg-code-in-authenticate-request.md)
 
 * `redirect_url` 매개 변수는 순서대로 마지막 매개 변수여야 합니다.
 

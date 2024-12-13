@@ -2,14 +2,14 @@
 title: Amazon FireOS 통합 Cookbook
 description: Amazon FireOS 통합 Cookbook
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1424'
+source-wordcount: '1425'
 ht-degree: 0%
 
 ---
 
-# Amazon FireOS 통합 Cookbook {#amazon-fireos-integration-cookbook}
+# (기존) Amazon FireOS 통합 Cookbook {#amazon-fireos-integration-cookbook}
 
 >[!NOTE]
 >
@@ -70,7 +70,7 @@ Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 �
 
    - [navigateToUrl(url)](#$navigateToUrl)
 
-      - AmazonFireOS SDK에서 무시된 메서드는 사용자가 MVPD를 선택한 후 `getAuthentication()`에 의해 트리거되는 Android 플랫폼에서 사용됩니다.  `url` 매개 변수는 MVPD의 로그인 페이지 위치를 제공합니다.
+      - AmazonFireOS SDK에서 무시된 메서드는 사용자가 MVPD을 선택한 후 `getAuthentication()`에 의해 트리거되는 Android 플랫폼에서 사용됩니다.  `url` 매개 변수는 MVPD 로그인 페이지의 위치를 제공합니다.
 
    - [`sendTrackingData(event, data)`](#$sendTrackingData)
 
@@ -164,7 +164,7 @@ Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 �
 
 1. 인증 흐름을 시작하려면 [`getAuthorization()`](#$getAuthZ)을(를) 호출하십시오.
 
-   종속성: 유효한 ResourceID가 MVPD와(과) 합의되었습니다.
+   종속성: MVPD과 동의한 유효한 리소스 ID입니다.
 
    **참고:** ResourceID는 다른 장치나 플랫폼에서 사용되는 ID와 동일해야 하며 MVPD에서 동일합니다.
 
@@ -194,6 +194,6 @@ Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 �
 
 ### F. 로그아웃 흐름 {#logout_flow}
 
-1. 사용자를 로그아웃하려면 [`logout()`](#$logout)을(를) 호출하십시오. `AccessEnabler`은(는) SSO(Single Sign On)를 통해 로그인을 공유하는 모든 요청자에서 현재 MVPD에 대해 사용자가 얻은 캐시된 값 및 토큰을 모두 지웁니다. 캐시를 지운 후 `AccessEnabler`에서 서버 호출을 수행하여 서버측 세션을 정리합니다.  서버 호출로 인해 IdP로 SAML 리디렉션이 발생할 수 있으므로(IdP측에서 세션 정리가 허용됨) 이 호출은 모든 리디렉션을 따라야 합니다. 따라서 이 호출은 WebView 컨트롤 내에서 처리되며 사용자가 볼 수 없습니다.
+1. 사용자를 로그아웃하려면 [`logout()`](#$logout)을(를) 호출하십시오. `AccessEnabler`은(는) SSO(Single Sign-On)를 통해 로그인을 공유하는 모든 요청자에서 현재 MVPD에 대해 사용자가 얻은 캐시된 값 및 토큰을 모두 지웁니다. 캐시를 지운 후 `AccessEnabler`에서 서버 호출을 수행하여 서버측 세션을 정리합니다.  서버 호출로 인해 IdP로 SAML 리디렉션이 발생할 수 있으므로(IdP측에서 세션 정리가 허용됨) 이 호출은 모든 리디렉션을 따라야 합니다. 따라서 이 호출은 WebView 컨트롤 내에서 처리되며 사용자가 볼 수 없습니다.
 
    **참고:** 로그아웃 흐름은 사용자가 어떤 식으로든 WebView와 상호 작용할 필요가 없다는 점에서 인증 흐름과 다릅니다. 따라서 로그아웃 프로세스 중에 WebView 컨트롤을 보이지 않게(즉, 숨김으로) 만들 수 있습니다(권장).

@@ -2,14 +2,14 @@
 title: 새로 고침 없이 로그인 및 로그아웃
 description: 새로 고침 없이 로그인 및 로그아웃
 exl-id: 3ce8dfec-279a-4d10-93b4-1fbb18276543
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
 workflow-type: tm+mt
-source-wordcount: '1761'
+source-wordcount: '1762'
 ht-degree: 0%
 
 ---
 
-# 새로 고침 없이 로그인 및 로그아웃 {#tefresh-less-login-and-logout}
+# (기존) 새로 고침 없이 로그인 및 로그아웃 {#tefresh-less-login-and-logout}
 
 >[!NOTE]
 >
@@ -17,10 +17,10 @@ ht-degree: 0%
 
 ## 개요 {#overview}
 
-웹 애플리케이션의 경우 사용자 인증 및 로그아웃을 위해 가능한 몇 가지 시나리오를 고려해야 합니다.  MVPD를 인증하려면 사용자가 MVPD의 웹 페이지에 로그인해야 하며, 다음과 같은 추가 요소가 작용합니다.
+웹 애플리케이션의 경우 사용자 인증 및 로그아웃을 위해 가능한 몇 가지 시나리오를 고려해야 합니다.  MVPD를 인증하려면 사용자가 MVPD 웹 페이지에 로그인해야 하며, 다음과 같은 추가 요소가 작용합니다.
 
 - 일부 MVPD는 사이트에서 로그인 페이지로 전체 리디렉션해야 합니다
-- 일부 MVPD에서는 사이트에서 iFrame을 열어 MVPD의 로그인 페이지를 표시해야 합니다
+- 일부 MVPD에서는 사이트에서 iFrame을 열어 MVPD 로그인 페이지를 표시해야 합니다
 - 일부 브라우저에서는 iFrame 시나리오를 잘 처리하지 않으므로 이러한 브라우저에서는 iFrame 대신 팝업 창을 사용하는 것이 더 좋습니다
 
 Adobe Pass 인증 2.7 이전에는 이러한 모든 사용자 인증 시나리오에 프로그래머 페이지의 전체 페이지 새로 고침이 포함되었습니다.2.7 및 이후 릴리스의 경우 Adobe Pass 인증 팀은 이러한 흐름을 개선하여 사용자가 로그인 및 로그아웃 중에 앱에서 페이지 새로 고침을 경험할 필요가 없도록 했습니다.
@@ -44,8 +44,8 @@ Adobe Pass 인증 2.7 이전에는 이러한 모든 사용자 인증 시나리�
 
 Adobe Pass 인증 웹 클라이언트에는 MVPD의 요구 사항에 따라 두 가지 인증 방법이 있습니다.
 
-1. 사용자가 공급자를 선택한 후 **전체 페이지 리디렉션 -**    (전체 페이지 리디렉션으로 구성됨)    AccessEnabler에서 프로그래머의 웹 사이트 `setSelectedProvider(<mvpd>)`을(를) 호출하면 사용자가 MVPD의 로그인 페이지로 리디렉션됩니다. 사용자가 유효한 자격 증명을 제공하면 프로그래머 웹 사이트로 다시 리디렉션됩니다. AccessEnabler가 초기화되고 인증 토큰이 `setRequestor` 동안 Adobe Pass 인증에서 검색됩니다.
-1. **iFrame/팝업 창 -** 사용자가 공급자(iFrame으로 구성)를 선택한 후 AccessEnabler에서 `setSelectedProvider(<mvpd>)`이(가) 호출됩니다. 이 작업은 `createIFrame(width, height)` 콜백을 트리거하여 프로그래머가 이름 `"mvpdframe"` 및 제공된 차원을 사용하여 iFrame(또는 브라우저/환경 설정에 따라 팝업)을 만들도록 알립니다. iFrame/popup이 생성되면 AccessEnabler는 MVPD의 로그인 페이지를 iFrame/popup에 로드합니다. 사용자가 유효한 자격 증명을 제공하고 iFrame/popup이 Adobe Pass 인증으로 리디렉션되며, iFrame/popup을 닫고 상위 페이지(프로그래머 웹 사이트)를 다시 로드하는 JS 코드 조각을 반환합니다. 흐름 1과 마찬가지로 인증 토큰은 `setRequestor` 중에 검색됩니다.
+1. 사용자가 공급자를 선택한 후 **전체 페이지 리디렉션 -**    (전체 페이지 리디렉션으로 구성됨) 을(를) 페이지의 MVPD 선택기에서    AccessEnabler에서 프로그래머의 웹 사이트 `setSelectedProvider(<mvpd>)`을(를) 호출하면 사용자가 MVPD의 로그인 페이지로 리디렉션됩니다. 사용자가 유효한 자격 증명을 제공하면 프로그래머 웹 사이트로 다시 리디렉션됩니다. AccessEnabler가 초기화되고 인증 토큰이 `setRequestor` 동안 Adobe Pass 인증에서 검색됩니다.
+1. **iFrame/팝업 창 -** 사용자가 공급자(iFrame으로 구성)를 선택한 후 AccessEnabler에서 `setSelectedProvider(<mvpd>)`이(가) 호출됩니다. 이 작업은 `createIFrame(width, height)` 콜백을 트리거하여 프로그래머가 이름 `"mvpdframe"` 및 제공된 차원을 사용하여 iFrame(또는 브라우저/환경 설정에 따라 팝업)을 만들도록 알립니다. iFrame/popup이 생성되면 AccessEnabler가 MVPD의 로그인 페이지를 iFrame/popup에 로드합니다. 사용자가 유효한 자격 증명을 제공하고 iFrame/popup이 Adobe Pass 인증으로 리디렉션되며, iFrame/popup을 닫고 상위 페이지(프로그래머 웹 사이트)를 다시 로드하는 JS 코드 조각을 반환합니다. 흐름 1과 마찬가지로 인증 토큰은 `setRequestor` 중에 검색됩니다.
 
 `displayProviderDialog` 콜백(`getAuthentication`/`getAuthorization`에 의해 트리거됨)은 MVPD 목록과 해당 설정을 반환합니다. MVPD의 `iFrameRequired` 속성을 사용하면 프로그래머가 흐름 1을 활성화해야 하는지 흐름 2를 활성화해야 하는지 알 수 있습니다. 프로그래머는 흐름 2에 대해서만 추가 작업(iFrame/팝업 생성)을 수행해야 합니다.
 
@@ -104,7 +104,7 @@ AccessEnabler의 로그아웃 API는 라이브러리의 로컬 상태를 지우�
 
 >[!IMPORTANT]
 > 
->MVPD 로그인 iFrame 또는 팝업 창을 AccessEnabler 인스턴스가 포함된 페이지의 직접 하위로 로드해야 합니다. MVPD 로그인 iFrame 또는 팝업 창이 AccessEnabler 인스턴스가 포함된 페이지 아래에 두 개 이상 중첩된 경우 흐름이 중단될 수 있습니다. 예를 들어, 기본 페이지와 MVPD iFrame(Page =\> iFrame =\> MVPD iFrame) 사이에 iFrame이 있는 경우, 로그인 흐름이 실패할 수 있습니다.
+>MVPD 로그인 iFrame 또는 팝업 창을 AccessEnabler 인스턴스가 포함된 페이지의 직접 하위 페이지로 로드해야 합니다. MVPD 로그인 iFrame 또는 팝업 창이 AccessEnabler 인스턴스가 포함된 페이지 아래 두 개 이상의 레벨에 중첩되면 흐름이 중단될 수 있습니다. 예를 들어, 기본 페이지와 MVPD iFrame(Page =\> iFrame =\> MVPD iFrame) 사이에 iFrame이 있는 경우, 로그인 흐름이 실패할 수 있습니다.
 
 </br>
 
@@ -142,11 +142,11 @@ TempPass 흐름에서는 명시적인 사용자 상호 작용 없이 창을 자�
 
 새로 고침 없는 로그인 및 로그아웃을 위해 TempPass를 구현할 때 프로그래머가 알아야 하는 측면은 다음과 같습니다.
 
-- 인증을 시작하기 전에 비 TempPass MVPD에 대해서만 iFrame 또는 팝업 창을 만들어야 합니다. 프로그래머는 MVPD 개체(`setConfig()` / `displayProviderDialog()`에서 반환됨)의 `tempPass` 속성을 읽어 MVPD가 TempPass인지 여부를 감지할 수 있습니다.
+- 인증을 시작하기 전에 비 TempPass MVPD에 대해서만 iFrame 또는 팝업 창을 만들어야 합니다. 프로그래머는 MVPD 개체(`setConfig()` / `displayProviderDialog()`에서 반환됨)의 `tempPass` 속성을 읽어 MVPD이 TempPass인지 여부를 감지할 수 있습니다.
 
-- `createIFrame()` 콜백은 TempPass에 대한 검사를 포함해야 하며 MVPD가 TempPass가 아닌 경우에만 해당 논리를 실행해야 합니다.
+- `createIFrame()` 콜백은 TempPass에 대한 검사를 포함해야 하며 MVPD이 TempPass가 아닌 경우에만 해당 논리를 실행해야 합니다.
 
-- `destroyIFrame()` 콜백은 TempPass에 대한 검사를 포함해야 하며 MVPD가 TempPass가 아닌 경우에만 해당 논리를 실행해야 합니다.
+- `destroyIFrame()` 콜백은 TempPass에 대한 검사를 포함해야 하며 MVPD이 TempPass가 아닌 경우에만 해당 논리를 실행해야 합니다.
 
 - 인증이 완료된 후 `setAuthenticationStatus()` 및 `sendTrackingData()` 콜백이 호출됩니다(일반 MVPD의 경우 새로 고침이 필요 없는 흐름과 정확히 동일).
 
