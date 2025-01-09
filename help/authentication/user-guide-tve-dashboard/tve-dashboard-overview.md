@@ -2,9 +2,9 @@
 title: TVE 대시보드 개요
 description: TVE 대시보드 및 리소스에 대해 알아보십시오.
 exl-id: 91baeb34-a32a-4dc3-94d8-f6cfca59dc4e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '295'
+source-wordcount: '303'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
    * *데스크톱, 모바일 및 TV 연결 장치*&#x200B;와 같은 플랫폼 범주
    * *iOS, Android™, tvOS, Roku 및 FireTV와 같은 플랫폼*
 
-  보고서는 SSO(Single Sign-On) 지원 및 MVPD 및 플랫폼 수준에서 구독자 인증 또는 권한 부여 세션 기간에 대한 통찰력을 제공합니다.
+  보고서는 MVPD 및 플랫폼 수준에서 SSO(Single Sign-On) 지원 및 구독자 인증 또는 권한 부여 세션 기간에 대한 통찰력을 제공합니다.
 
 * **트래픽 시각화**: 프로그래머 속성의 높은 수준의 인증 및 권한 부여 트래픽 데이터를 시각화합니다.
 
@@ -53,4 +53,5 @@ Adobe은 다음 리소스를 사용하여 흐름과 기능을 철저히 이해�
 * [TVE 기술 문서](/help/authentication/kickstart/technical-paper.md)
 * [프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)
 * [권한 흐름](/help/authentication/integration-guide-programmers/entitlement-flow.md)
-* [용어집](/help/authentication/kickstart/glossary.md)
+* [DCR(Dynamic Client Registration) 용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
+* [REST API v2 용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md)

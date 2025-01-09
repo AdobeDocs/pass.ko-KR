@@ -2,7 +2,7 @@
 title: 프로그래머
 description: TVE 대시보드 내 프로그래머 및 해당 구성에 대해 알아봅니다.
 exl-id: b450d7cc-d5b5-4454-8f95-8047856bfb98
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 [프로그래머](/help/authentication/kickstart/glossary.md#programmer)에 대한 설정을 보고 관리할 수 있습니다. 필요에 따라 [새 프로그래머를 추가](#add-new-programmer)할 수도 있습니다.
+TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 [프로그래머](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#programmer)에 대한 설정을 보고 관리할 수 있습니다. 필요에 따라 [새 프로그래머를 추가](#add-new-programmer)할 수도 있습니다.
 
 왼쪽 패널의 **프로그래머** 탭에는 다음 세부 정보가 포함된 기존 프로그래머 목록이 표시됩니다.
 

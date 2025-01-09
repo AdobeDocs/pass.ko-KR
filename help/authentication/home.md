@@ -2,9 +2,9 @@
 title: Adobe&reg; 인증 통과!
 description: Adobe&reg; 인증 전달 개요 시작
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '296'
+source-wordcount: '295'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Adobe Pass 인증은 TV Everywhere에 대한 권한 부여 솔루션으로, 리�
 |--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | <ul><li>[프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)</li><li>[사용자 메타데이터](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)</li></ul> | <ul><li>[MVPD 킥스타트 안내서](/help/authentication/kickstart/mvpd-kickstart-guide.md)</li><li>[인증](/help/authentication/integration-guide-mvpds/authn-usecase.md)</li><li>[인증](/help/authentication/integration-guide-mvpds/authz-usecase.md)</li><li>[로그아웃](/help/authentication/integration-guide-mvpds/usecase-mvpd-logout.md)</li></ul> |
 | **기본 앱 클라이언트의 경우** | **모든 사용자** |
-| <ul><li>[iOS 기술 개요](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[Android 기술 개요](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[기술 문서](/help/authentication/kickstart/technical-paper.md)</li><li>[에스컬레이션 프로시저](/help/authentication/kickstart/escalation-procedures.md)</li><li>[용어집](/help/authentication/kickstart/glossary.md)</li></ul> |
+| <ul><li>[iOS 기술 개요](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[Android 기술 개요](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[기술 문서](/help/authentication/kickstart/technical-paper.md)</li><li>[에스컬레이션 프로시저](/help/authentication/kickstart/escalation-procedures.md)</li></ul> |
 | **스마트 장치용** |                                                                                                                                                                                                                                                                                                                                                                       |
 | <ul><li>[클라이언트 없는 기술 개요](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)</li><li>[클라이언트 없는 API](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)</li></ul> |                                                                                                                                                                                                                                                                                                                                                                       |
 

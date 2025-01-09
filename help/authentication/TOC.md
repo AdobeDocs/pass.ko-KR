@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '1260'
+source-wordcount: '1267'
 ht-degree: 2%
 
 ---
@@ -51,11 +51,12 @@ ht-degree: 2%
    + [프로그래머 킥스타트 안내서](kickstart/programmer-kickstart-guide.md)
    + [MVPD 킥스타트 안내서](kickstart/mvpd-kickstart-guide.md)
    + [에스컬레이션 절차](kickstart/escalation-procedures.md)
-   + [용어집](kickstart/glossary.md)
 + 프로그래머 {#integration-guide-programmers}을(를) 위한 통합 안내서
    + REST API {#rest-apis}
       + REST API DCR {#rest-api-dcr}
          + [동적 클라이언트 등록 개요](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+         + [동적 클라이언트 등록 용어집](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
+         + [동적 클라이언트 등록 FAQ](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md)
          + API {#rest-api-dcr-apis}
             + [클라이언트 자격 증명 검색](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md)
             + [액세스 토큰 검색](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md)

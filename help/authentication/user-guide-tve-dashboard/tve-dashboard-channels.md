@@ -2,7 +2,7 @@
 title: 채널
 description: TVE 대시보드 내의 채널과 다양한 구성에 대해 알아봅니다.
 exl-id: bbddeccb-6b6f-4a8f-87ab-d4af538eee1d
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 0%
@@ -21,7 +21,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 * **표시 이름**: 상업용으로 사용되는 채널의 브랜드 이름입니다.
 * **채널 ID**: 요청자 ID라고도 하는 고유 식별자입니다.
-* **통합**: [MVPD](/help/authentication/kickstart/glossary.md#mvpd)에 설정된 연결 수
+* **통합**: [MVPD](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#mvpd)에 설정된 연결 수
 
 ![기존 채널 목록](../assets/tve-dashboard/new-tve-dashboard/channels/channels-list-view.png)
 

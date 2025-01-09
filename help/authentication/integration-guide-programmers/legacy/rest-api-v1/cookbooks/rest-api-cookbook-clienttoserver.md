@@ -2,9 +2,9 @@
 title: REST API Cookbook(클라이언트-서버)
 description: 서버에 대한 REST API Cookbook 클라이언트입니다.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
-source-wordcount: '899'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
@@ -44,10 +44,6 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 | Adobe 인프라 | Adobe Pass 서비스 | MVPD IdP 및 AuthZ 서비스와 통합되고 인증 및 권한 부여 결정을 제공하는 서비스입니다. |
 | MVPD 인프라 | MVPD IdP | 사용자의 ID를 확인하기 위해 자격 증명 기반 인증 서비스를 제공하는 MVPD 종단점입니다. |
 | | MVPD AuthZ 서비스 | 사용자의 구독, 자녀 보호 등에 따라 권한 부여 결정을 제공하는 MVPD 종단점입니다. |
-
-
-
-플로우에 사용되는 추가 용어는 [용어집](/help/authentication/kickstart/glossary.md)에 정의되어 있습니다.
 
 ## 플로우{#flows}
 
