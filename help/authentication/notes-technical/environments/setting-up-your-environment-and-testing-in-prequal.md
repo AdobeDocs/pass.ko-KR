@@ -2,9 +2,9 @@
 title: 사전 영업 시 환경 설정 및 테스트
 description: 사전 영업 시 환경 설정 및 테스트
 exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: ca95bc45027410becf8987154c7c9f8bb8c2d5f8
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '478'
 ht-degree: 0%
 
 ---
@@ -41,6 +41,16 @@ ht-degree: 0%
 
 ```Choose any IP from **addresses** section (e.g. `52.13.71.11)```
 
+```cmd
+C:\>nslookup entitlement-prequal.auth.adobe.com 
+...
+Addresses:  52.26.79.43
+            54.190.212.171
+```
+
+```Choose any IP from **addresses** section (e.g. `54.190.212.171)```
+
+
 * **Linux/Mac에서**
 
 ```sh
@@ -53,6 +63,17 @@ ht-degree: 0%
 ```
 
 ```Choose any IP from **A records (**e.g `52.13.71.11)```
+
+```sh
+    $ dig entitlement-prequal.auth.adobe.com
+    
+    ;; ANSWER SECTION:
+    ...
+    ............ 60 IN A      52.26.79.43
+    ............ 60 IN A      54.190.212.171
+```
+
+```Choose any IP from **A records (**e.g `54.190.212.171)```
 
 >[!NOTE]
 >
@@ -68,14 +89,15 @@ ht-degree: 0%
 * c:\\windows\\System32\\drivers\\etc\\hosts *파일(Windows의 경우) 또는*/etc/hosts *파일(Macintosh/Linux/Android)을*&#x200B;편집하고 다음을 추가합니다.
 
 * 스푸핑 프로덕션 프로필
-   * 52.13.71.11 entitlement.auth.adobe.com sp.auth.adobe.com api.auth.adobe.com
+   * 52.13.71.11 sp.auth.adobe.com api.auth.adobe.com
+   * 54.190.212.171 entitlement.auth.adobe.com
 
 **Android에서 스푸핑:** Android에서 스푸핑하려면 Android 에뮬레이터를 사용해야 합니다.
 
 * 스푸핑이 적용되면 프로덕션 및 스테이징 프로필에 대한 일반 URL(즉, `http://sp.auth-staging.adobe.com` 및 `http://entitlement.auth-staging.adobe.com`)만 사용할 수 있으며 실제로 새 빌드의 *사전 검증 환경/ 프로덕션*&#x200B;에 도달하게 됩니다.
 
 
-## 3단계.  올바른 환경을 가리키는지 확인합니다. {#Verify-you-are-pointing-to-the-right-environment}
+## 3단계.  올바른 환경을 가리키고 있는지 확인합니다 {#Verify-you-are-pointing-to-the-right-environment}
 
 **이것은 쉬운 단계입니다.**
 
@@ -86,13 +108,13 @@ ht-degree: 0%
 
 * 이 단계에는 프로그래머의 웹 사이트 주소와 몇 가지 유효한 MVPD 자격 증명(인증 및 권한이 부여된 사용자)이 필요합니다.
 
-## 5 단계.  프로그래머의 웹 사이트를 사용하여 시나리오 테스트를 수행합니다 {#perform-scenario-testing-using-programmer-website}
+## 5 단계.  프로그래머 웹 사이트를 사용하여 시나리오 테스트 수행 {#perform-scenario-testing-using-programmer-website}
 
-* 환경 설정을 완료하고 기본 인증-권한 부여 흐름이 작동하는지 확인한 후 더 복잡한 시나리오의 테스트를 진행할 수 있습니다.
+* 환경 설정을 완료하고 기본 인증-인증 흐름이 작동하는지 확인한 후 보다 복잡한 시나리오의 테스트를 진행할 수 있습니다.
 
 
 ## 6단계.  API 테스트 사이트를 사용하여 테스트 수행 {#perform-testing-using-api-testing-site}
 
 * Adobe Pass 인증 테스트에 더 자세히 알아보려면 [API 테스트 사이트](http://entitlement-prequal.auth.adobe.com/apitest/api.html)를 사용하는 것이 좋습니다.
 
-API 테스트 사이트에 대한 자세한 내용은 [Adobe의 API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)을 참조하십시오.
+API 테스트 사이트에 대한 자세한 내용은 Adobe Systems의 API 테스트 사이트를 사용하여 Authentication 및 권한 부여 흐름을 테스트하는 방법에서 [확인할 수 있습니다](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md).
