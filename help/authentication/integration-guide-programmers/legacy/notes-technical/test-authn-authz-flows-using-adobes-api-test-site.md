@@ -2,9 +2,9 @@
 title: Adobe의 API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법
 description: Adobe의 API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법
 exl-id: 04af4aed-35e4-44cb-98ce-7643165a8869
-source-git-commit: 811feba1f2476bdfacb20e332e33df7f7ae8ac00
+source-git-commit: 65475d6da7a1b25cb2d8ebd6229a7cb360c7ab4a
 workflow-type: tm+mt
-source-wordcount: '380'
+source-wordcount: '368'
 ht-degree: 0%
 
 ---
@@ -33,8 +33,8 @@ Part I를 완료한 후 다음 단계를 수행합니다.
 
 1. 웹 페이지를 엽니다. [스테이징 API 테스트](https://sp.auth-staging.adobe.com/apitest/api.html).
 1. 액세스 Enabler 로드 기준:
-   * 드롭다운 메뉴에서 필요한 AccessEnabler 버전(v3 또는 v4), 액세스하려는 위치(스테이징 또는 프로덕션) 및 디버그 모드 여부 선택
-   * v4를 사용하는 경우 테스트할 소프트웨어 명령문 입력
+   * 드롭다운 메뉴에서 액세스할 위치(스테이징 또는 프로덕션)와 디버그 모드에 있어야 하는지 선택
+   * 테스트할 소프트웨어 명령문 입력
    * 그런 다음 &quot;**액세스 Enabler 로드**&quot; 단추를 클릭합니다.
 1. 이제 요청자 ID 값을 &quot;**requestorID**&quot;(으)로 설정하고 &quot;setRequestor&quot; 단추를 클릭하십시오.
 1. 그런 다음 &quot;getAuthentication&quot; 버튼을 누르고 디스플레이 선택기가 나타날 때까지 기다립니다.
