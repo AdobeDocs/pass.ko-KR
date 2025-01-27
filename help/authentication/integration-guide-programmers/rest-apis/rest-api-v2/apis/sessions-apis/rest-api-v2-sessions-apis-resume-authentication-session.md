@@ -2,9 +2,9 @@
 title: 인증 세션 다시 시작
 description: REST API V2 - 인증 세션 다시 시작
 exl-id: 66c33546-2be0-473f-9623-90499d1c13eb
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5cb14959d6e9af91252316fbdd14ff33d813089b
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '841'
 ht-degree: 1%
 
 ---
@@ -231,6 +231,23 @@ ht-degree: 1%
                <td><i>필수</i></td>
             </tr>
             <tr>
+               <td style="background-color: #DEEBFF;">reasonType</td>
+               <td>
+                  'actionName'을 설명하는 사용된 이유 유형입니다.
+                  <br/><br/>
+                  가능한 값은 다음과 같습니다.
+                  <ul>
+                    <li><b>없음</b></li>
+                    <li><b>인증됨</b></li>
+                    <li><b>임시</b></li>
+                    <li><b>성능 저하</b></li>
+                    <li><b>authenticatedSSO</b></li>
+                    <li><b>pfs_fallback</b></li>
+                    <li><b>configuration_fallback</b></li>
+                  </ul>
+               <td><i>필수</i></td>
+            </tr>
+            <tr>
                <td style="background-color: #DEEBFF;">missingParameters</td>
                <td>기본 인증 흐름을 완료하기 위해 제공해야 하는 누락된 매개 변수입니다.</td>
                <td>선택 사항</td>
@@ -259,6 +276,16 @@ ht-degree: 1%
                <td style="background-color: #DEEBFF;">serviceProvider</td>
                <td>온보딩 프로세스 중 서비스 공급자와 연결된 내부 고유 식별자입니다.</td>
                <td><i>필수</i></td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">notBefore</td>
+               <td>인증 코드가 유효하지 않은 타임스탬프.</td>
+               <td>선택 사항</td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">notAfter</td>
+               <td>인증 코드가 유효하지 않은 타임스탬프.</td>
+               <td>선택 사항</td>
             </tr>
          </table>
       </td>
@@ -330,7 +357,9 @@ Content-Type: application/json;charset=UTF-8
     "code": "8ER640M",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "Cablevision",
-    "serviceProvider": "REF30"
+    "serviceProvider": "REF30",
+    "notBefore": "1733735289035",
+    "notAfter": "1733737089035"
 }
 ```
 
@@ -365,12 +394,15 @@ Content-Type: application/json;charset=UTF-8
 {           
     "actionName": "retry",
     "actionType": "direct",
+    "reasonType": "none",
     "url": "/api/v2/REF30/sessions/8BLW4RW",
     "missingParameters": ["redirectUrl"]
     "code": "8BLW4RW",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "Cablevision",
-    "serviceProvider": "REF30"
+    "serviceProvider": "REF30",
+    "notBefore": "1733735289035",
+    "notAfter": "1733737089035"
 }
 ```
 
@@ -405,6 +437,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authorize",
     "actionType": "direct",
+    "reasonType": "authenticated",
     "url": "/api/v2/REF30/decisions/authorize/Cablevision",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "Cablevision",
@@ -441,6 +474,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authorize",
     "actionType": "direct",
+    "reasonType": "temporary"
     "url": "/api/v2/REF30/decisions/authorize/TempPass_TEST40",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "TempPass_TEST40",
@@ -479,6 +513,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authorize",
     "actionType": "direct",
+    "reasonType": "degraded",
     "url": "/api/v2/REF30/decisions/authorize/Cablevision",
     "sessionId": "1b614390-6610-4d14-9421-6565f6e75958",
     "mvpd": "Cablevision",

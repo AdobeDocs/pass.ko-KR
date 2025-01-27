@@ -2,7 +2,7 @@
 title: 파트너 인증 요청 검색
 description: REST API V2 - 파트너 인증 요청 검색
 exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 5cb14959d6e9af91252316fbdd14ff33d813089b
 workflow-type: tm+mt
 source-wordcount: '1136'
 ht-degree: 1%
@@ -289,7 +289,7 @@ ht-degree: 1%
                     <br/><br/>
                     다음 속성이 있는 JSON 개체:
                     <ul>
-                        <li><b>type</b><br/>MVPD에서 지원하는 프로토콜 형식을 나타냅니다(SAML만 해당).</li>
+                        <li><b>type</b><br/>MVPD에서 지원하는 프로토콜 유형을 나타냅니다(SAML만 해당).</li>
                         <li><b>요청</b><br/>SAML 요청입니다.</li>
                         <li><b>특성</b><br/>SAML 요청 특성입니다.</li>
                     </ul>
@@ -425,6 +425,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authorize",
     "actionType": "direct",
+    "reasonType": "degraded",
     "url": "/api/v2/REF30/decisions/authorize/${degradedMvpd}",
     "sessionId": "14d4f239-e3b1-4a4a-b8b3-6395b968a260",
     "mvpd": "${degradedMvpd}",
@@ -474,11 +475,14 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "authenticate",
     "actionType": "interactive",
+    "reasonType": "none",
     "url": "/api/v2/authenticate/REF30/OKTWW2W",
     "code": "OKTWW2W",
     "sessionId": "748f0b9e-a2ae-46d5-acd9-4b4e6d71add7",
     "mvpd": "Cablevision",
-    "serviceProvider": "REF30"
+    "serviceProvider": "REF30",
+    "notBefore": "1733735289035",
+    "notAfter": "1733737089035"
 }
 ```
 
@@ -524,6 +528,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "resume",
     "actionType": "direct",
+    "reasonType": "none",
     "missingParameters": [
           "redirectUrl"
     ],
@@ -531,7 +536,9 @@ Content-Type: application/json;charset=UTF-8
     "code": "SB7ZRIO",
     "sessionId": "1476173f-5088-43b8-b7c3-8cf3a185de0a",
     "mvpd": "Cablevision",
-    "serviceProvider": "REF30"
+    "serviceProvider": "REF30",
+    "notBefore": "1733735289035",
+    "notAfter": "1733737089035"
 }
 ```
 
