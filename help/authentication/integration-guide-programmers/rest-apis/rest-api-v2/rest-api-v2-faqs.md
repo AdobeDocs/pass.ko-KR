@@ -2,9 +2,9 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
 workflow-type: tm+mt
-source-wordcount: '6668'
+source-wordcount: '6664'
 ht-degree: 0%
 
 ---
@@ -245,7 +245,7 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 * 채널(브랜드)의 고유 식별자와 같은 간단한 문자열 형식입니다.
 * 제목, 등급 및 자녀 보호 메타데이터와 같은 추가 정보가 포함된 미디어 RSS(MRSS) 형식입니다.
 
-자세한 내용은 [보호된 리소스 식별](/help/authentication/integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md) 설명서를 참조하세요.
+자세한 내용은 [보호된 리소스](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers) 설명서를 참조하세요.
 
 #### 6. 클라이언트 애플리케이션이 한 번에 사전 권한 부여 결정을 받을 수 있는 리소스가 몇 개입니까? {#preauthorization-phase-faq6}
 
@@ -294,7 +294,7 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 
 미디어 토큰은 의사 결정 권한 부여 끝점에서 검색할 수 있는 일반 텍스트로 전송된 서명된 문자열로 구성됩니다.
 
-자세한 내용은 [미디어 토큰 검증기 통합](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md) 설명서를 참조하십시오.
+자세한 내용은 [미디어 토큰 검증기](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier) 설명서를 참조하십시오.
 
 미디어 토큰은 문제 발생 시 지정된 제한적이고 짧은 기간에 유효하며, 이는 의사 결정 승인 끝점을 다시 쿼리하기 전에 클라이언트 애플리케이션에서 사용해야 하는 시간을 나타냅니다.
 
@@ -316,7 +316,7 @@ TV 공급자(신뢰할 수 있는) 결정에서 사용자가 액세스할 수 �
 * 채널(브랜드)의 고유 식별자와 같은 간단한 문자열 형식입니다.
 * 제목, 등급 및 자녀 보호 메타데이터와 같은 추가 정보가 포함된 미디어 RSS(MRSS) 형식입니다.
 
-자세한 내용은 [보호된 리소스 식별](/help/authentication/integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md) 설명서를 참조하세요.
+자세한 내용은 [보호된 리소스](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers) 설명서를 참조하세요.
 
 #### 6. 클라이언트 애플리케이션이 한 번에 몇 개의 리소스를 승인할 수 있습니까? {#authorization-phase-faq6}
 

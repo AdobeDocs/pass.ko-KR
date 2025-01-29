@@ -2,7 +2,7 @@
 title: 프로그래머 권한 흐름
 description: 프로그래머 권한 흐름
 exl-id: b1c8623a-55da-4b7b-9827-73a9fe90ebac
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
 workflow-type: tm+mt
 source-wordcount: '1823'
 ht-degree: 0%
@@ -22,11 +22,11 @@ ht-degree: 0%
 Adobe Pass 인증은 양측에 안전하고 일관된 인터페이스를 제공하여 프로그래머와 MVPD 간의 권한 흐름을 중재합니다.  프로그래머 측에서는 Adobe Pass 인증이 두 가지 일반적인 유형의 권한 인터페이스를 제공합니다.
 
 1. AccessEnabler - 웹 페이지를 렌더링할 수 있는 디바이스(예: 웹 앱, 스마트폰/태블릿 앱)의 앱에 대한 API 라이브러리를 제공하는 클라이언트 구성 요소입니다.
-2. Clientless API - 웹 페이지를 렌더링할 수 없는 장치(예: 셋톱 박스, 게임 콘솔, 스마트 TV)에 대한 RESTful 웹 서비스. 웹 페이지를 렌더링하기 위한 요구사항은 사용자가 MVPD의 웹 사이트에서 인증하도록 하는 MVPD의 요구사항에서 비롯됩니다.
+2. Clientless API - 웹 페이지를 렌더링할 수 없는 장치(예: 셋톱 박스, 게임 콘솔, 스마트 TV)에 대한 RESTful 웹 서비스. 웹 페이지를 렌더링하기 위한 요구 사항은 사용자가 MVPD 웹 사이트에서 인증해야 하는 MVPD 요구 사항에서 비롯됩니다.
 
 여기에 제시된 플랫폼 중립적 개요 외에도, Clientless API 설명서인 Clientless API별 개요가 있습니다. AccessEnabler는 기본적으로 지원되는 플랫폼(웹의 AS / JS, iOS의 Objective-C 및 Android의 Java)에서 실행됩니다. AccessEnabler API는 지원되는 플랫폼에서 일관성을 유지합니다. AccessEnabler를 지원하지 않는 모든 플랫폼은 동일한 Clientless API를 사용합니다.
 
-두 유형의 인터페이스에서 Adobe Pass 인증은 프로그래머 앱과 사용자의 MVPD 간의 권한 흐름을 안전하게 중재합니다.
+두 유형의 인터페이스에서 Adobe Pass 인증은 프로그래머 앱과 사용자의 MVPD 간 자격 흐름을 안전하게 중재합니다.
 
 ![](../assets/prog-entitlement-flow.png)
 
@@ -35,7 +35,7 @@ Adobe Pass 인증은 양측에 안전하고 일관된 인터페이스를 제공�
 
 >[!IMPORTANT]
 >
->위의 다이어그램에는 Adobe Pass 인증 서버를 거치지 않는 자격 흐름의 한 부분인 MVPD 로그인이 있습니다. 사용자는 MVPD의 로그인 페이지에 로그온해야 합니다. 이 요구 사항 때문에 웹 페이지를 렌더링할 수 없는 장치에서 프로그래머 앱은 사용자가 MVPD로 로그인할 수 있는 웹 가능 장치로 전환하도록 지시한 후 나머지 권한 흐름 동안 원래 장치로 돌아가야 합니다.
+>위의 다이어그램에는 Adobe Pass 인증 서버를 거치지 않는 권한 흐름 중 하나인 MVPD 로그인이 있다는 점을 참고하십시오. 사용자는 MVPD의 로그인 페이지에 로그인해야 합니다. 이 요구 사항 때문에 웹 페이지를 렌더링할 수 없는 장치에서 프로그래머 앱은 사용자가 MVPD으로 로그인하기 위해 웹 지원 장치로 전환하도록 지시한 후 나머지 권한 흐름 동안 원래 장치로 돌아와야 합니다.
 
 ## 권한 흐름 {#entitlement-flow}
 
@@ -86,26 +86,26 @@ Adobe Pass 인증은 양측에 안전하고 일관된 인터페이스를 제공�
 
 * `<FQDN>/.../checkauthn` - 위의 `checkAuthentication()`의 웹 서비스 버전입니다.
 * `<FQDN>/.../config` - MVPD 목록을 두 번째 화면 앱으로 반환합니다.
-* `<FQDN>/.../authenticate` - 두 번째 화면 앱에서 인증 흐름을 시작하여 로그인을 위해 선택한 MVPD로 사용자를 리디렉션합니다. 성공하면 Adobe Pass 인증이 AuthN 토큰을 생성하여 서버에 저장하고 사용자가 원래 장치로 돌아가서 권한 흐름을 완료합니다.
+* `<FQDN>/.../authenticate` - 두 번째 화면 앱에서 인증 흐름을 시작하여 로그인을 위해 선택한 MVPD으로 사용자를 리디렉션합니다. 성공하면 Adobe Pass 인증이 AuthN 토큰을 생성하여 서버에 저장하고 사용자가 원래 장치로 돌아가서 권한 흐름을 완료합니다.
 
 다음 두 가지 사항이 참인 경우 AuthN 토큰은 유효한 것으로 간주됩니다.
 
 * AuthN 토큰이 만료되지 않음
-* AuthN 토큰과 연결된 MVPD가 현재 요청자 ID에 대해 허용되는 MVPD 목록에 있습니다.
+* AuthN 토큰과 연결된 MVPD이 현재 요청자 ID에 대해 허용되는 MVPD 목록에 있습니다.
 
 #### 일반 AccessEnabler 초기 인증 워크플로 {#generic-ae-initial-authn-flow}
 
 1. 앱에서 `getAuthentication()`을(를) 호출하여 캐시된 올바른 인증 토큰을 확인하는 인증 워크플로를 시작합니다. 이 메서드에는 선택적 `redirectURL` 매개 변수가 있습니다. `redirectURL`에 대한 값을 제공하지 않으면 인증이 성공하면 사용자는 인증이 초기화된 URL로 반환됩니다.
 1. AccessEnabler가 현재 인증 상태를 확인합니다. 사용자가 현재 인증되면 AccessEnabler가 `setAuthenticationStatus()` 콜백 함수를 호출하여 성공을 나타내는 인증 상태를 전달합니다.
-1. 사용자가 인증되지 않은 경우 AccessEnabler는 지정된 MVPD로 사용자의 마지막 인증 시도가 성공했는지 여부를 확인하여 인증 흐름을 계속합니다. MVPD ID가 캐시되고 `canAuthenticate` 플래그가 true이거나 `setSelectedProvider()`을(를) 사용하여 MVPD를 선택한 경우 사용자에게 MVPD 선택 대화 상자가 표시되지 않습니다. 인증 흐름은 MVPD의 캐시된 값(즉, 마지막으로 성공한 인증 중에 사용된 동일한 MVPD)을 사용하여 계속됩니다. 백엔드 서버에 대한 네트워크 호출이 수행되며 사용자가 MVPD 로그인 페이지로 리디렉션됩니다.
+1. 사용자가 인증되지 않은 경우 AccessEnabler는 주어진 MVPD에서 사용자의 마지막 인증 시도가 성공했는지 여부를 확인하여 인증 흐름을 계속합니다. MVPD ID가 캐시되고 `canAuthenticate` 플래그가 true이거나 `setSelectedProvider()`을(를) 사용하여 MVPD을 선택한 경우 사용자에게 MVPD 선택 대화 상자가 표시되지 않습니다. 인증 흐름은 MVPD의 캐시된 값(즉, 마지막으로 성공한 인증 중에 사용된 동일한 MVPD)을 사용하여 계속됩니다. 백엔드 서버에 대한 네트워크 호출이 수행되며 사용자가 MVPD 로그인 페이지로 리디렉션됩니다.
 
-1. 캐시된 MVPD ID가 없고 `setSelectedProvider()`을(를) 사용하여 선택한 MVPD가 없거나 `canAuthenticate` 플래그가 false로 설정되어 있으면 `displayProviderDialog()` 콜백이 호출됩니다. 이 콜백은 앱에서 사용자에게 선택할 MVPD 목록을 제공하는 UI를 만들도록 지시합니다. MVPD 선택기를 만드는 데 필요한 정보가 들어 있는 MVPD 개체 배열이 제공됩니다. 각 MVPD 개체는 MVPD 엔터티를 설명하고 MVPD의 ID 및 MVPD 로고를 찾을 수 있는 URL과 같은 정보를 포함합니다.
+1. 캐시된 MVPD ID가 없고 `setSelectedProvider()`을(를) 사용하여 선택한 MVPD이 없거나 `canAuthenticate` 플래그가 false로 설정된 경우 `displayProviderDialog()` 콜백이 호출됩니다. 이 콜백은 앱에서 사용자에게 선택할 MVPD 목록을 제공하는 UI를 만들도록 지시합니다. MVPD 선택기를 빌드하는 데 필요한 정보가 포함된 MVPD 개체 배열이 제공됩니다. 각 MVPD 개체는 MVPD 개체를 설명하며, MVPD의 ID 및 MVPD 로고를 찾을 수 있는 URL과 같은 정보를 포함합니다.
 
-1. MVPD를 선택한 후에는 앱에서 사용자가 선택한 내용을 AccessEnabler에 알려야 합니다. Flash이 아닌 클라이언트의 경우 사용자가 원하는 MVPD를 선택하면 `setSelectedProvider()` 메서드를 호출하여 AccessEnabler에 사용자 선택을 알립니다. Flash 클라이언트가 대신 &quot;`mvpdSelection`&quot; 유형의 공유 `MVPDEvent`을(를) 디스패치하여 선택한 공급자를 전달합니다.
+1. MVPD을 선택하면 앱에서 사용자가 선택한 사항을 AccessEnabler에 알려야 합니다. Flash이 아닌 클라이언트의 경우, 사용자가 원하는 MVPD을 선택하면 `setSelectedProvider()` 메서드 호출을 통해 AccessEnabler에 사용자 선택을 알립니다. Flash 클라이언트가 대신 &quot;`mvpdSelection`&quot; 유형의 공유 `MVPDEvent`을(를) 디스패치하여 선택한 공급자를 전달합니다.
 
-1. AccessEnabler에서 사용자의 MVPD 선택을 받으면 백엔드 서버에 대한 네트워크 호출이 수행되며 사용자는 MVPD 로그인 페이지로 리디렉션됩니다.
+1. AccessEnabler가 사용자의 MVPD 선택을 수신하면 백엔드 서버에 대한 네트워크 호출이 수행되며 사용자는 MVPD 로그인 페이지로 리디렉션됩니다.
 
-1. 인증 워크플로 내에서 AccessEnabler는 Adobe Pass 인증 및 선택한 MVPD와 통신하여 사용자의 자격 증명(사용자 ID 및 암호)을 요청하고 ID를 확인합니다. 일부 MVPD는 로그인을 위해 자체 사이트로 리디렉션하지만 다른 MVPD에서는 iFrame 내에 로그인 페이지를 표시해야 합니다. 고객이 그러한 MVPD.<!-- For more information on creating a login iFrame, see  [Managing the Login IFrame](https://tve.helpdocsonline.com/managing-the-login-iframe)--> 중 하나를 선택하는 경우 페이지에 iFrame을 만드는 콜백이 포함되어야 합니다.
+1. 인증 워크플로 내에서 AccessEnabler는 Adobe Pass Authentication 및 선택한 MVPD과 통신하여 사용자의 자격 증명(사용자 ID 및 암호)을 요청하고 ID를 확인합니다. 일부 MVPD는 로그인을 위해 자체 사이트로 리디렉션하지만 다른 MVPD에서는 iFrame 내에 로그인 페이지를 표시해야 합니다. 고객이 그러한 MVPD.<!-- For more information on creating a login iFrame, see  [Managing the Login IFrame](https://tve.helpdocsonline.com/managing-the-login-iframe)--> 중 하나를 선택하는 경우 페이지에 iFrame을 만드는 콜백이 포함되어야 합니다.
 
 1. 사용자가 성공적으로 로그인하면 AccessEnabler가 인증 토큰을 검색하여 인증 흐름이 완료되었음을 앱에 알립니다. AccessEnabler가 상태 코드가 1인 `setAuthenticationStatus()` 콜백을 호출하여 성공을 나타냅니다. 이 단계를 실행하는 동안 오류가 발생하면 `setAuthenticationStatus()` 콜백이 인증 실패와 해당 오류 코드를 나타내는 상태 코드 0으로 트리거됩니다.
 
@@ -115,7 +115,7 @@ Adobe Pass 인증은 양측에 안전하고 일관된 인터페이스를 제공�
 
 ### 인증 흐름 {#authorization}
 
-권한이 보호된 콘텐츠를 보기 위한 필수 조건입니다. 인증이 성공하면 보안을 위해 프로그래머 앱에 제공되는 단기 미디어 토큰과 함께 AuthZ 토큰이 생성됩니다. 인증 워크플로를 지원하려면 필요한 요청자 설정을 이전에 수행하고 [미디어 토큰 검증기](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md)를 통합해야 합니다. 이를 완료하면 인증을 시작할 수 있습니다.
+권한이 보호된 콘텐츠를 보기 위한 필수 조건입니다. 인증이 성공하면 보안을 위해 프로그래머 앱에 제공되는 단기 미디어 토큰과 함께 AuthZ 토큰이 생성됩니다. 인증 워크플로를 지원하려면 필요한 요청자 설정을 이전에 수행하고 [미디어 토큰 검증기](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier)를 통합해야 합니다. 이를 완료하면 인증을 시작할 수 있습니다.
 
 사용자가 보호된 리소스에 대한 액세스를 요청하면 앱에서 권한 부여를 시작합니다. 요청한 리소스(예: 채널, 에피소드 등)를 지정하는 리소스 ID를 전달합니다. 앱은 먼저 저장된 인증 토큰을 확인합니다. 하나를 찾을 수 없으면 인증 프로세스를 시작합니다.
 

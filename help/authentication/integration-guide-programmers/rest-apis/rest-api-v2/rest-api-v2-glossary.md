@@ -2,9 +2,9 @@
 title: REST API V2 용어집
 description: REST API V2 용어집
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
 workflow-type: tm+mt
-source-wordcount: '1747'
+source-wordcount: '1744'
 ht-degree: 0%
 
 ---
@@ -115,7 +115,7 @@ ID 공급자는 [TV Everywhere(TVE)](#tve)의 컨텍스트에서 케이블, 위�
 
 미디어 토큰 검증기는 [미디어 토큰](#media-token)의 신뢰성을 확인하는 역할을 하는 Adobe Pass 인증에서 배포한 라이브러리입니다.
 
-자세한 내용은 [미디어 토큰 검증기 통합](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md) 설명서를 참조하십시오.
+자세한 내용은 [미디어 토큰 검증기](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier) 설명서를 참조하십시오.
 
 #### MVPD {#mvpd}
 
@@ -183,7 +183,7 @@ Preflight는 사용자가 [MVPD](#mvpd)을(를) 사용하여 사용자 권한을
 
 리소스는 프로그래머와 MVPD 사이에 합의된 고유한 값으로 식별됩니다.
 
-자세한 내용은 [보호된 리소스 식별](/help/authentication/integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md) 설명서를 참조하세요.
+자세한 내용은 [보호된 리소스](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers) 설명서를 참조하세요.
 
 ### S {#s}
 

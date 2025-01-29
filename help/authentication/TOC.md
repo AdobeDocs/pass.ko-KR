@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
 workflow-type: tm+mt
-source-wordcount: '1262'
+source-wordcount: '1256'
 ht-degree: 2%
 
 ---
@@ -120,9 +120,9 @@ ht-degree: 2%
                + [헤더 - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + 표준 기능 {#standard-features}
       + 권한 {#entitlements}
-         + [보호된 리소스 식별](integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md)
          + [Preflight 인증](integration-guide-programmers/features-standard/entitlements/preflight-authz.md)
-         + [미디어 토큰 검증기를 통합하는 방법](integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md)
+         + [보호된 리소스](integration-guide-programmers/features-standard/entitlements/protected-resources.md)
+         + [미디어 토큰](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
          + [사용자 메타데이터](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
       + 오류 보고 {#error-reporting}
          + [향상된 오류 코드](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
