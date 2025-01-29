@@ -2,7 +2,7 @@
 title: 인증 시작
 description: 인증 시작
 exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -85,7 +85,7 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. Adobe Pa
 >
 >호출에는 다음과 같은 다른 기능을 활성화하는 선택적 매개 변수도 포함될 수 있습니다.
 >
-> * generic\_data - [Promotional TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)를 사용할 수 있도록 설정
+> * generic\_data - [Promotional TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass)를 사용할 수 있도록 설정
 >
 >```JSON
 >Example:

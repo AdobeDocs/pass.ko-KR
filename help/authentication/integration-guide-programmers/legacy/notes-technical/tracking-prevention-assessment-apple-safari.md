@@ -2,7 +2,7 @@
 title: 추적 방지 평가 Apple Safari
 description: 추적 방지 평가 Apple Safari
 exl-id: a3362020-92ff-4232-b923-e462868730d5
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 0%
@@ -133,7 +133,7 @@ AccessEnabler JavaScript SDK v2(버전 2.x)의 경우 라이브러리가 위에�
 
 **임시 통과**
 
-개별화 문제를 완화하고 사용자 상호 작용을 하려면 대화형 방식으로 **[프로모션 임시 패스](/help/authentication/integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)**&#x200B;를 사용하고 사용자에 대한 하나 이상의 추가 정보(예: 이메일 주소)를 제공하는 것이 좋습니다.
+개별화 문제를 완화하고 사용자 상호 작용을 하려면 대화형 방식으로 **[프로모션 임시 패스](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass)**&#x200B;를 사용하고 사용자에 대한 하나 이상의 추가 정보(예: 이메일 주소)를 제공하는 것이 좋습니다.
 
 ## 사파리 13 {#safari13}
 

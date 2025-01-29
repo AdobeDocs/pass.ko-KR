@@ -2,7 +2,7 @@
 title: 동적 클라이언트 등록 개요
 description: 동적 클라이언트 등록 개요
 exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 Adobe Pass은 다음과 같은 보호된 API에 액세스할 수 있도록 하는 동적 클라이언트 등록 서비스를 제공합니다.
 
 * Adobe Pass 인증 관리 API:
-   * [임시 패스 API 재설정](../../features-premium/temporary-access/reset-temp-pass.md)
+   * [임시 패스 API 재설정](../../features-premium/temporary-access/temp-pass-feature.md)
    * [저하 API](../../features-premium/degraded-access/degradation-api-overview.md)
    * [프록시 MVPD API](../../../integration-guide-mvpds/proxy-mvpd-webserv.md)
    * [권한 부여 서비스 모니터링 API](../../features-premium/esm/entitlement-service-monitoring-api.md)

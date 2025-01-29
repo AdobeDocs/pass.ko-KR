@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
-source-wordcount: '1256'
+source-wordcount: '1250'
 ht-degree: 2%
 
 ---
@@ -144,9 +144,7 @@ ht-degree: 2%
          + [개인 정보 보호 요청을 하는 방법](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
    + 프리미엄 기능 {#features-premium}
       + 임시 액세스 {#temporary-access}
-         + [임시 통과](integration-guide-programmers/features-premium/temporary-access/temp-pass.md)
-         + [프로모션 임시 패스](integration-guide-programmers/features-premium/temporary-access/promotional-temp-pass.md)
-         + [임시 통과 재설정](integration-guide-programmers/features-premium/temporary-access/reset-temp-pass.md)
+         + [TempPass 기능](integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
       + 성능이 저하된 액세스 {#degraded-access}
          + [저하 API 개요](integration-guide-programmers/features-premium/degraded-access/degradation-api-overview.md)
       + ESM {#esm}

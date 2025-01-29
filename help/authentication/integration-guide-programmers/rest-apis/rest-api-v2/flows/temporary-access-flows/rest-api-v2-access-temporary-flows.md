@@ -2,7 +2,7 @@
 title: 임시 액세스 흐름
 description: REST API V2 - 임시 액세스 흐름
 exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '3215'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 TempPass를 사용하면 프로그래머가 사용자에게 유효한 MVPD 계정으로 인증하도록 요청하지 않고도 보호된 콘텐츠에 일시적으로 액세스할 수 있습니다.
 
-TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-premium/temporary-access/temp-pass.md) 설명서를 참조하십시오.
+TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-premium/temporary-access/temp-pass-feature.md) 설명서를 참조하십시오.
 
 임시 액세스 흐름을 사용하면 다음 시나리오를 쿼리할 수 있습니다.
 
@@ -351,7 +351,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 
    >[!TIP]
    >
-   > 제안: 스트리밍 애플리케이션은 최대 리소스 수가 초과되었음을 사용자에게 알리고 계속 시청하기 위해 일반 MVPD를 사용하여 기본 인증 흐름을 시작하도록 권장할 수 있습니다.
+   > 제안: 스트리밍 애플리케이션은 최대 리소스 수가 초과되었음을 사용자에게 알리고 계속 시청하려면 일반 MVPD을 사용하여 기본 인증 플로우를 시작하도록 권장할 수 있습니다.
 
 ## 기본 또는 프로모션 TempPass가 만료되면 인증 결정 검색 {#retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires}
 
@@ -431,7 +431,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 
    >[!TIP]
    >
-   > 제안: 스트리밍 애플리케이션은 임시 액세스가 만료되었음을 사용자에게 알리고 일반 MVPD를 사용하여 기본 인증 흐름을 시작하여 계속 시청하도록 권장할 수 있습니다.
+   > 제안: 스트리밍 애플리케이션은 임시 액세스가 만료되었음을 사용자에게 알리고 일반 MVPD을 사용하여 기본 인증 흐름을 시작하여 계속 보도록 권장할 수 있습니다.
 
 ## 기본 TempPass에 대한 프로필 검색 {#retrieve-profile-for-basic-temppass}
 
