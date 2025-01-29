@@ -2,7 +2,7 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '6668'
 ht-degree: 0%
@@ -126,7 +126,7 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 
 #### 3. 클라이언트 애플리케이션은 어떻게 사용자의 메타데이터 정보를 얻을 수 있습니까? {#authentication-phase-faq3}
 
-클라이언트 응용 프로그램은 [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md) 정보를 프로필 정보의 일부로 반환할 수 있는 다음 끝점 중 하나를 쿼리할 수 있습니다.
+클라이언트 응용 프로그램은 [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) 정보를 프로필 정보의 일부로 반환할 수 있는 다음 끝점 중 하나를 쿼리할 수 있습니다.
 
 * [프로필 엔드포인트 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
 * [특정 MVPD API의 프로필 엔드포인트](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)

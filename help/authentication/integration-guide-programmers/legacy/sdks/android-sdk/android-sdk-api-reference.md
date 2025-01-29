@@ -2,7 +2,7 @@
 title: Android SDK API 참조
 description: Android SDK API 참조
 exl-id: f932e9a1-2dbe-4e35-bd60-a4737407942d
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '4560'
 ht-degree: 0%
@@ -614,7 +614,7 @@ getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모�
 
 **트리거된 콜백:** [`setMetadataStatus()`](#setMetadaStatus)
 
-**추가 정보:** [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md)
+**추가 정보:** [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md)
 
 [Android API로 이동...](#api)
 
@@ -676,7 +676,7 @@ getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모�
 
 **트리거 대상:** [`getMetadata()`](#getMetadata)
 
-**추가 정보:** [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md)
+**추가 정보:** [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md)
 
 
 [Android API로 이동...](#api)

@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
-source-wordcount: '1267'
+source-wordcount: '1262'
 ht-degree: 2%
 
 ---
@@ -123,8 +123,7 @@ ht-degree: 2%
          + [보호된 리소스 식별](integration-guide-programmers/features-standard/entitlements/identify-protected-resources.md)
          + [Preflight 인증](integration-guide-programmers/features-standard/entitlements/preflight-authz.md)
          + [미디어 토큰 검증기를 통합하는 방법](integration-guide-programmers/features-standard/entitlements/media-token-verifier-int.md)
-         + [사용자 메타데이터](integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md)
-         + [암호화를 위한 사용자 메타데이터 인증서](integration-guide-programmers/features-standard/entitlements/user-metadata-certificate.md)
+         + [사용자 메타데이터](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
       + 오류 보고 {#error-reporting}
          + [향상된 오류 코드](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
       + SSO(Single Sign-On) 액세스 {#sso-access}

@@ -2,7 +2,7 @@
 title: 표준 메타데이터 속성
 description: 표준 메타데이터 속성
 exl-id: 99ffa98c-213f-47a5-a6e7-fbacb77875d0
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '1053'
 ht-degree: 0%
@@ -21,10 +21,10 @@ ht-degree: 0%
 동시성 모니터링 API는 클라이언트가 유효한 초기화 호출의 일부로 다음 값을 보내도록 강제합니다. [세션 시작 호출](/help/concurrency-monitoring/restrict-concurr-usage-mult-apps.md#api-calls-descr).
 
 | 필드 이름 | 예제 값 | 사용 위치 | 다음에서 획득됨: |
-|-------------|---------------------------|--------------------|------------------------------------------------------------------------------------------------------------------------------------|
+|---------------|-----------------------------|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | applicationId | 75b4-431b-adb2-eb6b9e546013 | 인증 헤더 | 통합 시 Zendesk 티켓 |
-| mvpdName | Sample_MVPD | URI 경로 | 사용자가 MVPD를 선택할 때 구성 끝점에서 Adobe Pass 인증 |
-| accountId | 12345 | URI 경로 | 사용자 로그인 후 Adobe Pass 인증 upstreamUserID 메타데이터 [사용자 메타데이터 upstreamUserID - Adobe Pass 인증](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md) |
+| mvpdName | Sample_MVPD | URI 경로 | 사용자가 MVPD을 선택할 때 구성 끝점에서 Adobe Pass 인증 |
+| accountId | 12345 | URI 경로 | 사용자 로그인 후 Adobe Pass 인증 upstreamUserID 메타데이터 [사용자 메타데이터 upstreamUserID - Adobe Pass 인증](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) |
 
 
 ## 메타데이터 속성 {#metadata-attr}
@@ -40,7 +40,7 @@ ht-degree: 0%
 | 리소스 | channel | 문자열 | 더 TV 채널 |                                                   | ChannelY |                                                                                   |
 |                 | assetId | 문자열 | 이 콘텐츠에 대해 표시할 &quot;친숙한&quot; 또는 소비자가 읽을 수 있는 제목 | [EIDR 2.0 데이터 필드 참조](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/EIDR_2_0_Data_Fields.pdf){target=_blank} | 벤허 |                                                                                   |
 |                 | 유형 | 열거 | TveItem으로 표시되는 콘텐츠의 일반 유형을 설명하는 값입니다. 열거된 값은 다음과 같습니다. movie broadcastEpisode nonBroadcastEpisode musicVideo awardsShow 클립 콘서트 컨퍼런스 뉴스이벤트 sportingEvent trailer | [OATC 메타데이터 피드 권장 방법](https://userfiles-kb.s3.amazonaws.com/userfiles/258/326/ckfinder/files/OATC%20Metadata%20Feed%201_0d_1%20OATC%20BOARD%20APPROVED%20FOR%20RELEASE%20%281%29.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIMM7Q2VAGHGVAOHA%2F20230803%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230803T144225Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=1200&amp;X-Amz-Signature=e61658133a4875ff48757b1a3bafb7627054ba6fc75c134a3dea9fa8022b45fa){target=_blank} | broadcastEpisode | 필드는 열거형의 항목 중 하나에 해당해야 합니다 |
-|                 | contentType | 문자열 | 이 필드는 요청된 콘텐츠가 라이브인지 VOD인지를 결정합니다 | 해당 사항 없음 | 라이브, vod | live 또는 vod |
+|                 | contentType | 문자열 | 이 필드는 요청된 콘텐츠가 라이브인지 VOD인지 여부를 결정합니다. | 해당 사항 없음 | 라이브, vod | live 또는 vod |
 |                 | 장르 | 문자열 | 스트리밍되는 콘텐츠의 장르입니다. 일반 프로그래밍 형식을 설명합니다. | [OATC 메타데이터 피드 권장](https://userfiles-kb.s3.amazonaws.com/userfiles/258/326/ckfinder/files/OATC%20Metadata%20Feed%201_0d_1%20OATC%20BOARD%20APPROVED%20FOR%20RELEASE%20%281%29.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIMM7Q2VAGHGVAOHA%2F20230803%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230803T144225Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=1200&amp;X-Amz-Signature=e61658133a4875ff48757b1a3bafb7627054ba6fc75c134a3dea9fa8022b45fa){target=_blank} 연습 | 코메디 | 유효한 장르 유형 |
 |                 | 지속 시간 | 숫자 | 미디어 항목의 기간(초) | [OATC 메타데이터 피드 권장 방법](https://userfiles-kb.s3.amazonaws.com/userfiles/258/326/ckfinder/files/OATC%20Metadata%20Feed%201_0d_1%20OATC%20BOARD%20APPROVED%20FOR%20RELEASE%20%281%29.pdf?X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&amp;X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAIMM7Q2VAGHGVAOHA%2F20230803%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20230803T144225Z&amp;X-Amz-SignedHeaders=host&amp;X-Amz-Expires=1200&amp;X-Amz-Signature=e61658133a4875ff48757b1a3bafb7627054ba6fc75c134a3dea9fa8022b45fa){target=_blank} | 1800 | 숫자 순서 |
 | 장치/브라우저 | deviceId | 문자열 | 고유 디바이스 식별자. | [Device Atlas 속성](https://deviceatlas.com/device-data/properties){target=_blank} | 2b6f0cc904d137be2e1730235f5664094b831186 |                                                                                   |
@@ -55,7 +55,7 @@ ht-degree: 0%
 |                 | applicationId | 문자열 | 클라이언트 응용 프로그램을 고유하게 식별하는 응용 프로그램 ID입니다. | 해당 사항 없음 | de305d54-75b4-431b-adb2-eb6b9e546013 |                                                                                   |
 |                 | 애플리케이션 플랫폼 | 문자열 | 애플리케이션의 기본 플랫폼 | 해당 사항 없음 | ios, android |                                                                                   |
 |                 | applicationVersion | 문자열 | 이 값은 분석 목적으로 사용할 수 있습니다. | 해당 사항 없음 | 1.0, 2.0 |                                                                                   |
-| 제목 | accountId | 문자열 | 동시성 모니터링 주체(MVPD의 범위 내)의 계정 ID | 해당 사항 없음 | test-account |                                                                                   |
+| 제목 | accountId | 문자열 | 동시 모니터링 제목의 계정 ID(MVPD 범위) | 해당 사항 없음 | test-account |                                                                                   |
 |                 | contractType | 문자열 | 프리미엄, 기본. 고객은 이 메타데이터를 사용자 정의 메타데이터로 추가하고 자신의 영역 내에서 사용할 수 있습니다 | 해당 사항 없음 | premium, 기본 |                                                                                   |
 | 사용자 | 이름 | 문자열 | 일부 MVPD는 콘텐츠를 재생하는 특정 사용자와 관련된 정보를 제공합니다. | 해당 사항 없음 |                                                                                                                                                         |                                                                                   |
 |                 | hba | 부울 | 사용자가 홈 위치에서 스트림을 시작할지 여부를 식별합니다 | 해당 사항 없음 | true, false | true 또는 false |

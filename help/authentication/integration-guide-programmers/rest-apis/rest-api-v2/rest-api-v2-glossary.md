@@ -2,7 +2,7 @@
 title: REST API V2 용어집
 description: REST API V2 용어집
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '1747'
 ht-degree: 0%
@@ -275,7 +275,7 @@ TV 제공자는 TV 제공자와 Adobe 사이의 온보딩 프로세스 동안 �
 
 사용자 메타데이터는 [MVPD](#mvpd)에서 유지 관리되고 Adobe Pass 인증이 [프로필](#profile)의 일부로 제공하는 사용자별 특성(예: 우편 번호, 자녀 보호 등급, 사용자 ID 등)을 참조합니다.
 
-자세한 내용은 [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata-feature.md) 설명서를 참조하세요.
+자세한 내용은 [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) 설명서를 참조하세요.
 
 ### V {#v}
 

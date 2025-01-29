@@ -2,7 +2,7 @@
 title: 인증 토큰 검색
 description: 인증 토큰 검색
 exl-id: 7fb03854-edad-41e7-b218-1858fc071876
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 0%
@@ -49,7 +49,7 @@ ht-degree: 0%
 
 
 | 입력 매개 변수 | 설명 |
-| --- |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| --- | --- |
 | 요청자 | 이 작업이 유효한 Programmer requestorId입니다. |
 | deviceId | 장치 ID 바이트입니다. |
 | device_info/</br></br>X-Device-Info | 스트리밍 장치 정보입니다.</br></br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. </br></br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
