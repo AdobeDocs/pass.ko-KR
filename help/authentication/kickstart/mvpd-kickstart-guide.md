@@ -1,126 +1,144 @@
 ---
-title: MVPD 직접 통합 계획
-description: MVPD 직접 통합 계획
+title: MVPD 킥스타트 안내서
+description: MVPD 킥스타트 안내서
 exl-id: 6423cc9a-a45a-4cde-b562-4cb72c98e505
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 936c1cda465dd3a9fc3f16381edb24a2b3e41779
 workflow-type: tm+mt
-source-wordcount: '1071'
+source-wordcount: '934'
 ht-degree: 0%
 
 ---
 
-# MVPD 킥스타트 안내서: MVPD 직접 통합 계획 {#mvpd-dir-int-plan}
-
->[!NOTE]
->
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
-
-## 소개 {#mvpd-kickstart-intro}
-
-TV Everywhere용 Adobe Pass 인증에 오신 것을 환영합니다.  귀사와 함께 일할 수 있기를 기대합니다.
-
->[!NOTE]
->
->멀티채널 비디오 프로그래밍 디스트리뷰터(MVPD)를 위한 킥스타트 안내서입니다. 프로그래머(콘텐츠 공급자)인 경우 [프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)를 참조하십시오.
-
-Zendesk의 Adobe Pass 인증 티켓 시스템을 통해 상시 지원이 가능합니다. 또한 여기에서 프로세스에 대한 샘플, 설명서 및 비디오 튜토리얼을 찾을 수 있습니다. [Zendesk](https://adobeprimetime.zendesk.com/)을(를) 사용하려면 https://tve.zendesk.com/home에서 등록하고 계정을 만들어야 합니다. 등록할 수 있는 사용자 수와 등록된 티켓에서 보거나 의견을 게시할 수 있는 사용자의 수에는 제한이 없습니다. 모든 지원 질문은 adobe.com에서 tve-support로 문의해야 합니다.
-
-**팀 연락처**:
-
-**지원** - 모든 질문, 인시던트 또는 기능 요청에 대해 **tve-support@adobe.com**.
-
-## 1. 킥오프 미팅 {#kickoff-meetings}
-
-이러한 미팅의 범위는 Adobe과 MVPD 간의 기술적 논의의 시작이다. 이 프로세스의 시점에서 설명서는 양쪽에서 공유되어야 합니다. 후속 조치로서 Adobe은 티켓 시스템(https://tve.zendesk.com/)에서 티켓을 열어 통합 상태를 추적해야 합니다.
-
-## 2. 기능 {#features}
-
-Adobe은 통합의 전체 일정, 단계, 타임라인 및 구현 세부 사항을 논의하고 추적하는 주간 상태 호출을 설정합니다. 이 단계에서 Adobe은 MVPD 사양을 검토합니다. 그 결과는 MVPD에 필요한 모든 기능을 자세히 설명하는 사양 페이지여야 합니다. MVPD에서 Adobe에게 MVPD의 인증/권한 부여 구현을 자세히 설명하는 사양 문서를 보냅니다.
-
-명확히 할 항목은 [MVPD 통합 기능](/help/authentication/integration-guide-mvpds/mvpd-integr-features.md)을 참조하십시오.
-
-이 시점에서 자세히 설명해야 하는 몇 가지 설정이 있습니다.
-
-* **MVPD 로고 URL** - 다음 크기의 파일입니다. 112 x 33픽셀. 사용자가 &quot;로그인&quot; 버튼을 클릭하여 유료 TV 공급자를 선택하면 프로그래머가 사이트에 로고를 표시합니다.
-* **TTL(time-to-live) 값** - TTL은 일반적으로 인증/권한 부여 프로세스 동안 MVPD에 의해 설정됩니다. 그러나 Adobe은 이러한 TTL 값을 재정의하고 프로그래머와 MVPD 모두에서 동의한 것에 따라 다른 값을 제공할 수 있습니다.
-* **표시 이름** - 사용자가 &quot;로그인&quot; 단추를 클릭하여 유료 TV 공급자를 선택하면 프로그래머가 사이트에 표시합니다.
-* **테스트 자격 증명** - 두 프로필(스테이징 및 프로덕션) 모두에 테스트 자격 증명 목록이 있어야 합니다.
+# MVPD 킥스타트 안내서 {#mvpd-kickstart-guide}
 
 >[!IMPORTANT]
 >
->사용자가 권한 흐름을 시작할 때마다 단일 불투명 고유 사용자 ID와 연결됩니다.  사용자 ID는 프로그래머 앱의 사용자를 식별하는 데 사용되지만 MVPD에서 가져옵니다.
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+
+이 킥스타트 안내서는 Adobe® 패스 인증과 통합할 예정인 다채널 비디오 프로그래밍 디스트리뷰터(MVPD)를 위한 것입니다.
+
+이 문서에서는 통합 프로세스를 원활하고 효율적으로 시작하기 위한 주요 초기 단계를 간략하게 설명합니다. 이는 성공적인 통합을 위해 파트너와 협력할 방법에 대한 지침을 제공하고 기대치를 명확히 하는 것을 목표로 합니다.
+
+Adobe은 Adobe Pass 인증과 통합하는 데 도움이 되는 다양한 리소스를 제공합니다. **을(를) 참조하세요.&quot;**&#x200B;을(를) 제공하고 **&quot;Adobe은 아래 각 섹션에서 &quot;**&quot;을(를) 제공합니다.
 
 >[!CAUTION]
 >
->각 MVPD에 대한 중요 공지: 사용자 ID에는 사용자를 식별, 연락 또는 찾기 위해 단독으로 또는 다른 정보와 함께 사용할 수 있는 PII(개인 식별 정보)가 포함되어서는 안 됩니다.
-
-## 2. 메타데이터 교환 {#metadata-ex}
-
-양측은 관련된 모든 환경(프로덕션, 스테이징 등)에 대한 메타데이터를 교환해야 합니다.
-
-* **Adobe**
-   * 스테이징 환경 Adobe의 SP 메타데이터는 [인증 스테이징 SP 메타데이터](https://sp.auth-staging.adobe.com/sp/metadata)에서 검색할 수 있습니다.
-   * 프로덕션 환경 Adobe의 SP 메타데이터는 [인증 프로덕션 SP 메타데이터](https://sp.auth.adobe.com/sp/metadata)에서 검색할 수 있습니다.
-
-* **MVPD**
-   * 메타데이터(스테이징/프로덕션)를 추가합니다.
-
-## 4. IP 목록 허용 {#allow-ip-list}
-
-MVPD 방화벽에서 다음 IP를 화이트리스트에 추가해야 합니다. IP 목록은 Adobe에 문의하십시오.
-
-* Adobe Pass 인증을 사용하려면 제한된 리소스에 액세스할 수 있도록 포트 80 및 443에서 방화벽을 열어야 합니다.
-
-* MVPD은 인증 및 권한 부여 서버에 대한 IP 주소 목록을 추가해야 합니다(이 경우).
-
-## 5. 개발 {#deve}
-
-개발 단계의 기간은 세부 항목을 검토하고 양측이 체결하는 항목을 고려하여 결정될 것입니다. Adobe은 인증 부분에 대한 사용자 지정 코드를 작성해야 합니다.
-
->[!NOTE]
+> 사용자가 권한 흐름을 시작할 때마다 불투명하고 고유한 단일 사용자 ID가 할당됩니다. MVPD에서 가져온 이 ID는 프로그래머 앱 내에서 사용자를 식별하는 데 사용됩니다.
 >
->인증은 리소스별로 수행됩니다. 인증 트랜잭션은 일반적으로 프로그래머 사이트에서 전달된 ID 문자열로 수행되며, 사용자가 인증을 요청하는 채널을 나타냅니다. 이 리소스 ID는 프로그래머와 MVPD 간에 설정되며 필요에 따라 세부적으로 지정할 수 있습니다.
-
-## 6. Adobe 환경 {#adobe-env}
-
-Adobe은 개발 프로세스의 각 단계에 대해 서로 다른 환경을 제공합니다.
-
-* **PREQUALITION**(PRE-QUAL): PRE-QUAL 환경에 다음 릴리스 후보가 포함됩니다. Adobe은 통합을 릴리스 환경으로 업그레이드하기 전에 처음에 이 환경에서 새 파트너를 통합합니다. 파트너는 2주 동안 PRE-QUAL 환경에서 테스트할 수 있으며 PRE-QUAL 구성에 대한 변경 사항을 명시적으로 요청해야 합니다(변경 요청 프로세스에 대한 자세한 내용은 Adobe 담당자에게 문의). 버그 수정은 이 환경에서 새 배포를 트리거합니다.
-* **릴리스**(릴리스): Adobe의 현재 프로덕션 빌드가 여기에서 라이브 환경에 배포됩니다.
-
-Adobe 환경을 사용하는 방법에 대한 자세한 내용은 [Adobe 환경 이해](/help/authentication/notes-technical/environments/understanding-the-adobe-environments.md)를 참조하십시오
-
-## 7. 스테이징 배포 {#stag-env}
-
-Adobe은 MVPD에서 받은 메타데이터를 기반으로 Adobe Pass 인증 시스템에서 새 MVPD을 만들고 구성합니다. 이 은(는) Adobe의 사전 준비 환경에 배포되며 테스트 프로그래머(TestDistributors)로 구성됩니다.
-
-MVPD은 QA/스테이징/테스트 환경에서 동일한 배포를 수행해야 합니다.
-
-## 8. 테스트 및 문제 해결 {#tes-troubleshoot}
-
-이 단계에서 Adobe 및 MVPD은 통합을 테스트하고 문제를 해결합니다. 통합 테스트를 지원하기 위해 Adobe Pass 인증 팀은 Adobe의 API 테스트 사이트를 사용할 수 있습니다. Adobe의 API 테스트 사이트 사용에 대한 자세한 내용은 [Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름 테스트](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)를 참조하십시오.
-
-테스트 및 문제 해결이 완료되면 Adobe의 릴리스 스테이징 환경에서 통합이 활성화됩니다. 이 시점에서 Adobe은 MVPD을 실제 프로그래머와 통합할 수 있습니다.
-
-## 9. 프로덕션 배포 {#prod-dep}
-
-* 연결을 테스트하려면 MVPD을 프로덕션 프로필에 먼저 배포해야 합니다.
-
-* Adobe이 이전 프로덕션에 배포됩니다.
-
-* 이제 모든 파티가 프로덕션 프로필에서 테스트할 수 있습니다.
-
-* 이 시점에서 모든 것이 괜찮으면 Adobe은 모든 사용자가 사용할 수 있는 릴리스 프로덕션 환경(&quot;라이브&quot;)으로 통합을 이동할 수 있습니다.
-
-## 10. 에스컬레이션 절차 {#esc-proc}
-
-통합이 프로덕션에 실행되면 최상의 고객 경험을 제공하는 것이 중요합니다. 서버 작동 중지 문제의 경우 최상의 응답을 보장하기 위해 MVPD는 Adobe의 주의를 끌 수 있는 문제에 대한 에스컬레이션 절차 문서를 제공해야 합니다.
-
-차례로 Adobe은 MVPD에 최신 Adobe Pass 인증 에스컬레이션 프로세스를 제공합니다.
-
-
-<!--- [!RELATEDINFORMATION]
+> <br/>
 >
->* [Programmer Kickstart Guide](/help/authentication/programmer-kickstart-guide.md)
->* [MVPD Integration Guide](/help/authentication/mvpd-integr-features.md)
--->
+> 사용자 ID에는 사용자를 식별, 연락 또는 찾기 위해 단독으로 또는 다른 세부 정보와 함께 사용할 수 있는 PII(개인 식별 정보) 또는 데이터가 포함되어서는 안 됩니다.
+
+## 설정 프로세스 {#setup-process}
+
+설정 프로세스에는 다음 단계가 포함됩니다.
+
+![Adobe® 인증 통합 프로세스 전달](../assets/mvpd-int-lifecycle.png)
+
+*Adobe® 인증 통합 프로세스 전달*
+
+### 개시 {#kickoff}
+
+**킥오프 단계 동안**&#x200B;을(를) 제공합니다.
+
+* **표시 이름**
+
+  사용자가 유료 TV 공급자를 선택하라는 메시지를 표시할 때 프로그래머 웹 사이트 또는 애플리케이션에 표시되는 문자열입니다.
+
+* **로고 URL**
+
+  이 파일은 112 x 33 픽셀로, 사용자에게 유료 TV 공급자를 선택하라는 메시지가 표시될 때 프로그래머 웹 사이트 또는 애플리케이션에 표시되는 로고가 들어 있습니다.
+
+* **TTL(Time-to-Live)**
+
+  TTL은 일반적으로 인증 또는 권한 부여 프로세스의 일부로 MVPD에 의해 설정되는 값입니다. 그러나 Adobe은 이러한 TTL 값을 재정의하고 프로그래머와 MVPD 모두에서 동의한 것에 따라 다른 값을 제공할 수 있습니다.
+
+* **자격 증명 집합**
+
+  MVPD을 사용하여 사용자를 인증 및 승인하거나 단독으로 인증하는 데 사용되는 자격 증명입니다. 일반적으로 이러한 자격 증명은 사용자 이름과 암호로 구성되며, 두 프로필(스테이징 및 프로덕션) 모두에 대해 제공해야 합니다.
+
+### 메타데이터 교환(SAML) {#metadata-exchange-saml}
+
+**Adobe은 메타데이터 교환 단계 중**&#x200B;을(를) 제공합니다.
+
+* **스테이징 환경 메타데이터**
+
+  https://sp.auth-staging.adobe.com/sp/metadata에서 Adobe의 SP 메타데이터를 검색할 수 있습니다.
+
+* **프로덕션 환경 메타데이터**
+
+  https://sp.auth.adobe.com/sp/metadata에서 Adobe의 SP 메타데이터를 검색할 수 있습니다.
+
+**메타데이터 교환 단계에서**&#x200B;을(를) 제공합니다.
+
+* **스테이징 메타데이터**
+
+  스테이징 환경에 대한 MVPD의 메타데이터입니다.
+
+* **프로덕션 메타데이터**
+
+  프로덕션 환경에 대한 MVPD의 메타데이터입니다.
+
+### 연결 {#connectivity}
+
+**Adobe에서 IP를 Adobe Pass하는 방법은 다음과 같습니다. 허용 목록에 추가하다 인증에서는 인증 및 권한 부여 프로세스 동안 제한된 리소스에 대한 액세스를 활성화하기 위해 포트 80 및 443을 통한 트래픽을 허용하는 방화벽이 필요하므로.**
+
+**연결을 테스트하기 위해 스테이징 프로필에 배포를 제공**&#x200B;합니다.
+
+### 개발 {#development}
+
+**Adobe은 기술 통합이 올바르게 설정되었는지 확인하기 위해 MVPD과 긴밀하게 작업할 수 있는 엔지니어링 시간을**&#x200B;제공합니다. 이 프로세스에는 MVPD의 특정 요구 사항에 맞게 사용자 지정 코드를 개발하는 작업이 포함됩니다.
+
+### 스테이징에서 배포 {#deployment-staging}
+
+**Adobe은 QUAL 이전 스테이징 환경에서 먼저 배포되는 필수 코드 업데이트가 포함된 빌드를 제공**&#x200B;합니다. 이 단계에서는 테스트 목적으로 MVPD을 `TestDistributors` 서비스 공급자와 통합하기 위해 필요한 구성 변경도 구현됩니다.
+
+**귀하와 Adobe은 통합 이전 스테이징 환경에서 성공적으로 테스트될 수 있도록 QA(품질 보증) 시간을**&#x200B;제공합니다. 이 단계 후에는 실제 프로그래머와의 추가 테스트를 위해 MVPD이 릴리스 스테이징 환경으로 이동됩니다.
+
+### 프로덕션 배포 {#deployment-production}
+
+**연결을 테스트하기 위해 프로덕션 프로필에 배포를 제공**&#x200B;합니다.
+
+**Adobe은 PRE-QUAL 프로덕션 환경에 배포되는 필수 코드 업데이트가 포함된 빌드를 제공**&#x200B;합니다.
+
+**귀하와 Adobe은 프로덕션 프로필을 사용하여 통합을 성공적으로 테스트할 수 있도록** 품질 보증(QA) 시간을 제공합니다. 이 시점에서 모든 것이 괜찮으면 Adobe은 모든 사용자가 사용할 수 있는 릴리스 프로덕션 환경(&quot;라이브&quot;)으로 통합을 이동할 수 있습니다.
+
+>[!IMPORTANT]
+>
+> 릴리스 프로덕션 환경에서 통합이 실행되면 최적의 고객 경험을 유지하는 것이 무엇보다 중요합니다. 서버 다운 시나리오를 효과적으로 해결하기 위해 MVPD는 이러한 문제를 관리하기 위해 Adobe에게 자세한 에스컬레이션 절차 문서를 제공해야 합니다.
+>
+> 그 대신, Adobe은 MVPD가 최신 버전의 Adobe Pass 인증 에스컬레이션 프로세스를 받아 문제를 간소화할 수 있도록 합니다.
+
+## 환경에 대한 액세스 {#access-environments}
+
+**Adobe은 개발 프로세스의 여러 단계를 위해 환경에 대한** 액세스를 제공합니다.
+
+* **사전 자격(PRE-QUAL)**
+
+  PRE-QUAL 환경은 다음 릴리스 후보를 호스팅하며 새로운 파트너를 위한 초기 통합 플랫폼 역할을 합니다. 릴리스 환경으로 이전하기 전에 파트너에게는 PRE-QUAL에서 통합을 테스트할 시간이 제공됩니다.
+
+* **릴리스(릴리스)**
+
+  RELEASE 환경은 안정적인 현재 프로덕션 빌드를 호스팅합니다.
+
+이러한 환경을 사용하는 방법에 대한 자세한 내용은 [Adobe 환경 이해](/help/authentication/notes-technical/environments/understanding-the-adobe-environments.md) 설명서를 참조하십시오.
+
+>[!IMPORTANT]
+> 
+> 이러한 환경에 대한 구성 변경은 설정된 변경 요청 프로세스에 따라 Adobe 담당자를 통해 명시적으로 요청해야 합니다.
+
+## 고객 지원 액세스 {#access-customer-support}
+
+**Adobe은 [Zendesk](https://tve.zendesk.com/home)을(를) 통해 고객 지원 시스템에** 액세스를 제공합니다. Zendesk에 액세스하려면 https://tve.zendesk.com/home에서 계정을 등록 및 생성해야 합니다.
+
+Adobe Pass 인증 팀은 통합 프로세스 중에 발생할 수 있는 모든 질문이나 기술 문제를 처리할 수 있습니다. [tve-support@adobe.com](mailto:tve-support@adobe.com)(으)로 문의하십시오.
+
+## 설명서 액세스 {#access-documentation}
+
+**Adobe은 [Adobe Experience League](https://experienceleague.adobe.com/en/docs/pass/authentication/home)을 통해 공개 설명서에 대한** 액세스 권한을 제공합니다.
+
+Adobe Pass 인증 팀은 [MVPD에 대한 통합 안내서](/help/authentication/kickstart/mvpd-overview.md) 섹션에서 사용 가능한 기능 및 워크플로에 대한 포괄적인 설명서를 제공합니다. 각 주제에 대한 자세한 정보에 대한 링크는 이 섹션의 목차를 참조하십시오.
+
+## 테스트 도구에 액세스 {#access-testing-tool}
+
+**Adobe은 [Adobe Developer](https://developer.adobe.com/adobe-pass/) 웹 사이트를 통해 API 탐색 도구에 대한** 액세스를 제공합니다.
