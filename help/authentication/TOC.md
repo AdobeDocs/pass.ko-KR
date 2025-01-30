@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 1b9847d8dcb078755fd68a6363972f8973290e52
+source-git-commit: ffedb5db269644c8d9c81480d27dff43bd4eb5d6
 workflow-type: tm+mt
-source-wordcount: '1250'
+source-wordcount: '1240'
 ht-degree: 2%
 
 ---
@@ -120,8 +120,7 @@ ht-degree: 2%
                + [헤더 - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + 표준 기능 {#standard-features}
       + 권한 {#entitlements}
-         + [Preflight 인증](integration-guide-programmers/features-standard/entitlements/preflight-authz.md)
-         + [보호된 리소스](integration-guide-programmers/features-standard/entitlements/protected-resources.md)
+         + [결정](integration-guide-programmers/features-standard/entitlements/decisions.md)
          + [미디어 토큰](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
          + [사용자 메타데이터](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
       + 오류 보고 {#error-reporting}
@@ -137,8 +136,7 @@ ht-degree: 2%
             + Roku Single Sign-On {#roku-sso}
                + [Roku SSO 개요](integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
       + 홈 기반 인증 액세스 {#hba-access}
-         + [TV Everywhere를 위한 홈 기반 인증](integration-guide-programmers/features-standard/hba-access/home-based-authn-tve.md)
-         + [MVPD에 대한 HBA 상태](integration-guide-programmers/features-standard/hba-access/hba-status-mvpds.md)
+         + [홈 기반 인증(HBA)](integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)
       + 개인 정보 보호 지원 {#privacy-support}
          + [개인 정보 지원 개요](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
          + [개인 정보 보호 요청을 하는 방법](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
