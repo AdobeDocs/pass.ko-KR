@@ -2,9 +2,9 @@
 title: Primetime TVE Dashboard 사용 안내서
 description: Primetime TVE Dashboard 사용 안내서
 exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+source-git-commit: 2b9a8ce374f7a73cd815e9735d672e5c9ba285cc
 workflow-type: tm+mt
-source-wordcount: '5524'
+source-wordcount: '5517'
 ht-degree: 0%
 
 ---
@@ -287,7 +287,7 @@ TVE 대시보드를 통해 Adobe Pass 인증 구성을 관리적으로 변경하
 
 기존 통합을 업데이트하려면 통합 섹션 또는 통합 탭이 포함된 채널 섹션에서 해당 특정 통합에 대한 테이블 항목을 클릭합니다.
 
-기본 Workspace 모드를 사용할 때 이 섹션에서는 인증 및 인증 토큰 TTL(time-to-live)과 iFrame 설정 등, 가장 일반적으로 업데이트되는 설정을 보고 편집할 수 있습니다. 동적으로 정의된 토큰 지속성 TTL을 지원하는 MVPD와의 통합에 대해서는 TTL 설정이 누락될 수 있습니다([MVPD 통합 요구 사항](/help/authentication/integration-guide-mvpds/mvpd-integr-features.md)에서 항목 1.19 참조).
+기본 Workspace 모드를 사용할 때 이 섹션에서는 인증 및 인증 토큰 TTL(time-to-live)과 iFrame 설정 등, 가장 일반적으로 업데이트되는 설정을 보고 편집할 수 있습니다. 동적으로 정의된 토큰 지속성 TTL을 지원하는 MVPD와의 통합에 대해서는 TTL 설정이 누락될 수 있습니다.
 
 
 

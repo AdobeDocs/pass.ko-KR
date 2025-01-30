@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+source-git-commit: 2b9a8ce374f7a73cd815e9735d672e5c9ba285cc
 workflow-type: tm+mt
-source-wordcount: '1231'
+source-wordcount: '1230'
 ht-degree: 2%
 
 ---
@@ -48,7 +48,6 @@ ht-degree: 2%
    + [기술 문서](kickstart/technical-paper.md)
    + [프로그래머 킥스타트 안내서](kickstart/programmer-kickstart-guide.md)
    + [MVPD 킥스타트 안내서](kickstart/mvpd-kickstart-guide.md)
-   + [MVPD 개요](kickstart/mvpd-overview.md)
    + [지원 절차 FAQ](kickstart/support-procedures-faqs.md)
 + 프로그래머 {#integration-guide-programmers}을(를) 위한 통합 안내서
    + [프로그래머 통합 안내서](integration-guide-programmers/programmer-integration-guide-overview.md)
@@ -260,7 +259,7 @@ ht-degree: 2%
             + [(기존) Adobe Pass Adobe PayTV Pass 모니터링](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
             + [(레거시) Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
 + MVPD {#integration-guide-mvpds}에 대한 통합 안내서
-   + [통합 기능](integration-guide-mvpds/mvpd-integr-features.md)
+   + [MVPD 통합 안내서](integration-guide-mvpds/mvpd-integration-guide-overview.md)
    + [인증](integration-guide-mvpds/authn-usecase.md)
    + [OAuth 2.0 프로토콜을 사용한 인증](integration-guide-mvpds/authn-oauth2-protocol.md)
    + [인증](integration-guide-mvpds/authz-usecase.md)
