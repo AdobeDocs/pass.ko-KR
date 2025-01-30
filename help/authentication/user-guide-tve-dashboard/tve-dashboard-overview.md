@@ -2,9 +2,9 @@
 title: TVE 대시보드 개요
 description: TVE 대시보드 및 리소스에 대해 알아보십시오.
 exl-id: 91baeb34-a32a-4dc3-94d8-f6cfca59dc4e
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '303'
+source-wordcount: '305'
 ht-degree: 0%
 
 ---
@@ -52,6 +52,6 @@ Adobe은 다음 리소스를 사용하여 흐름과 기능을 철저히 이해�
 
 * [TVE 기술 문서](/help/authentication/kickstart/technical-paper.md)
 * [프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)
-* [권한 흐름](/help/authentication/integration-guide-programmers/entitlement-flow.md)
+* [프로그래머 통합 안내서 개요](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md)
 * [DCR(Dynamic Client Registration) 용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
 * [REST API v2 용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md)

@@ -2,9 +2,9 @@
 title: JavaScript SDK 개요
 description: JavaScript SDK 개요
 exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '533'
+source-wordcount: '510'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ Adobe은 AccessEnabler 라이브러리의 최신 JS v4.x로 마이그레이션�
 
 Adobe Pass 인증 JavaScript 통합은 익숙한 JS 웹 애플리케이션 개발 환경에서 프로그래머에게 TV-Everywhere 솔루션을 제공합니다. 통합의 주요 구성 요소는 &quot;높은 수준의&quot; 애플리케이션(사용자 상호 작용, 비디오 프레젠테이션)과 자격 흐름에 대한 항목을 제공하고 Adobe Pass 인증 서버와의 통신을 처리하는 Adobe 제공 &quot;낮은 수준의&quot; AccessEnabler 라이브러리입니다.
 
-일반 Adobe Pass 인증 권한 흐름은 [프로그래머 권한 흐름](/help/authentication/integration-guide-programmers/entitlement-flow.md)에 포함되어 있으며 JavaScript 통합 Cookbook은 구현을 안내합니다. 다음 섹션에서는 JavaScript AccessEnabler 통합에 대한 설명과 샘플을 제공합니다.
+다음 섹션에서는 JavaScript AccessEnabler 통합에 대한 설명과 샘플을 제공합니다.
 
 >[!IMPORTANT]
 >

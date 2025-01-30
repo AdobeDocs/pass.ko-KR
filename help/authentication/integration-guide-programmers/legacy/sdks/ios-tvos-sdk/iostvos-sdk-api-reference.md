@@ -2,9 +2,9 @@
 title: iOS/tvOS API 참조
 description: iOS/tvOS API 참조
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '6956'
+source-wordcount: '6942'
 ht-degree: 0%
 
 ---
@@ -26,7 +26,6 @@ ht-degree: 0%
 
 관련 설명서:
 
-* 기본 Adobe Pass 인증 권한 흐름에 대한 설명은 [권한 흐름](/help/authentication/integration-guide-programmers/entitlement-flow.md)을 참조하세요.
 * Adobe Pass 구현 방법에 대한 단계별 설명
 이 API를 사용한 인증 권한 흐름은 [iOS 통합 Cookbook](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-cookbook.md)을 참조하십시오.
 * 최신 iOS AccessEnabler SDK에 대해서는 [iOS Native Access Enabler 라이브러리](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)를 참조하십시오.

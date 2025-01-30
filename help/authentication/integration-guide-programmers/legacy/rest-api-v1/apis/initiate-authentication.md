@@ -2,9 +2,9 @@
 title: 인증 시작
 description: 인증 시작
 exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
-source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '314'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -95,7 +95,7 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. Adobe Pa
 
 ### **메모** {#notes}
 
-* `domain_name` 매개 변수의 값은 Adobe Pass 인증에 등록된 도메인 이름 중 하나로 설정해야 합니다. 자세한 내용은 [등록 및 초기화](/help/authentication/kickstart/programmer-overview.md)를 참조하세요.
+* `domain_name` 매개 변수의 값은 Adobe Pass 인증에 등록된 도메인 이름 중 하나로 설정해야 합니다.
 
 * [/authenticate 요청에 &#39;&amp;&#39;reg\_code를 사용하지 마십시오(기술 노트).](/help/authentication/integration-guide-programmers/legacy/notes-technical/clientless-avoid-using-reg-code-in-authenticate-request.md)
 

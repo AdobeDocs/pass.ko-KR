@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: ffedb5db269644c8d9c81480d27dff43bd4eb5d6
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '1240'
+source-wordcount: '1231'
 ht-degree: 2%
 
 ---
@@ -46,12 +46,14 @@ ht-degree: 2%
       + [Adobe Pass 인증 iOS / tvOS 3.7.0 릴리스 노트](notes-releases/authn-rn-ios-tvos-370.md)
 + 킥스타트 {#kickstart}
    + [기술 문서](kickstart/technical-paper.md)
-   + [프로그래머 개요](kickstart/programmer-overview.md)
-   + [MVPD 개요](kickstart/mvpd-overview.md)
    + [프로그래머 킥스타트 안내서](kickstart/programmer-kickstart-guide.md)
    + [MVPD 킥스타트 안내서](kickstart/mvpd-kickstart-guide.md)
+   + [MVPD 개요](kickstart/mvpd-overview.md)
    + [지원 절차 FAQ](kickstart/support-procedures-faqs.md)
 + 프로그래머 {#integration-guide-programmers}을(를) 위한 통합 안내서
+   + [프로그래머 통합 안내서](integration-guide-programmers/programmer-integration-guide-overview.md)
+   + [최소 시스템 요구 사항](integration-guide-programmers/minimum-system-requirements.md)
+   + [조절 메커니즘](integration-guide-programmers/throttling-mechanism.md)
    + REST API {#rest-apis}
       + REST API DCR {#rest-api-dcr}
          + [동적 클라이언트 등록 개요](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
@@ -120,9 +122,9 @@ ht-degree: 2%
                + [헤더 - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + 표준 기능 {#standard-features}
       + 권한 {#entitlements}
+         + [사용자 메타데이터](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
          + [결정](integration-guide-programmers/features-standard/entitlements/decisions.md)
          + [미디어 토큰](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
-         + [사용자 메타데이터](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
       + 오류 보고 {#error-reporting}
          + [향상된 오류 코드](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
       + SSO(Single Sign-On) 액세스 {#sso-access}
@@ -257,11 +259,6 @@ ht-degree: 2%
             + [(기존) Charles Proxy 사용](integration-guide-programmers/legacy/notes-technical/using-charles-proxy.md)
             + [(기존) Adobe Pass Adobe PayTV Pass 모니터링](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
             + [(레거시) Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
-   + [프로그래머 통합 안내서 개요](integration-guide-programmers/programmer-integration-guide-overview.md)
-   + [프로그래머 권한 흐름](integration-guide-programmers/entitlement-flow.md)
-   + [프로그래머 활용 사례](integration-guide-programmers/programmer-use-cases.md)
-   + [조절 메커니즘](integration-guide-programmers/throttling-mechanism.md)
-   + [최소 시스템 요구 사항](integration-guide-programmers/minimum-system-requirements.md)
 + MVPD {#integration-guide-mvpds}에 대한 통합 안내서
    + [통합 기능](integration-guide-mvpds/mvpd-integr-features.md)
    + [인증](integration-guide-mvpds/authn-usecase.md)

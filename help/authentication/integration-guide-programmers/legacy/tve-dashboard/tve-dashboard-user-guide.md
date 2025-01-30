@@ -2,9 +2,9 @@
 title: Primetime TVE Dashboard 사용 안내서
 description: Primetime TVE Dashboard 사용 안내서
 exl-id: 6f7f7901-db3a-4c68-ac6a-27082db9240a
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '5526'
+source-wordcount: '5524'
 ht-degree: 0%
 
 ---
@@ -33,7 +33,6 @@ ht-degree: 0%
 
 * [TVE 기술 문서](/help/authentication/kickstart/technical-paper.md)
 * [프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)
-* [권한 흐름](/help/authentication/integration-guide-programmers/entitlement-flow.md)
 
 이 사용 안내서의 다음 섹션에서는 회사의 채널, 프로그래머 또는 채널과 MVPD(다중 채널 비디오 프로그램 배포자) 간의 통합에 대해 다양한 설정을 관리하는 방법에 대해 알아봅니다.
 
