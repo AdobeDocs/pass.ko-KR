@@ -2,7 +2,7 @@
 title: 동적 클라이언트 등록 개요
 description: 동적 클라이언트 등록 개요
 exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
-source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
 source-wordcount: '813'
 ht-degree: 0%
@@ -20,8 +20,8 @@ ht-degree: 0%
 Adobe Pass은 다음과 같은 보호된 API에 액세스할 수 있도록 하는 동적 클라이언트 등록 서비스를 제공합니다.
 
 * Adobe Pass 인증 관리 API:
-   * [임시 패스 API 재설정](../../features-premium/temporary-access/temp-pass-feature.md)
-   * [저하 API](../../features-premium/degraded-access/degradation-api-overview.md)
+   * [임시 패스 API 재설정](../../features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+   * [저하 API](../../features-premium/degraded-access/degradation-feature.md#degradation-api-access)
    * [프록시 MVPD API](../../../integration-guide-mvpds/proxy-mvpd-webserv.md)
    * [권한 부여 서비스 모니터링 API](../../features-premium/esm/entitlement-service-monitoring-api.md)
 * Adobe Pass 인증 REST API:
@@ -102,7 +102,7 @@ Software 문은 클라이언트 응용 프로그램 소프트웨어에 대한 �
 
 소프트웨어 구문의 정의와 작동 방식에 대한 자세한 설명은 [RFC 7591](https://tools.ietf.org/html/rfc7591) 설명서를 참조하십시오.
 
-## 동적 클라이언트 등록 흐름  {#dynamic-client-registration-flow}
+## 동적 클라이언트 등록 흐름 {#dynamic-client-registration-flow}
 
 요약하면, 동적 클라이언트 등록 인증 메커니즘에는 다음과 같은 몇 가지 단계가 포함됩니다.
 

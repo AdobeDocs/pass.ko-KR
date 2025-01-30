@@ -2,7 +2,7 @@
 title: 권한 부여 서비스 모니터링 개요
 description: 권한 부여 서비스 모니터링 개요
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
 source-wordcount: '1303'
 ht-degree: 0%
@@ -129,11 +129,3 @@ ESM API는 일반적으로 사용할 수 없습니다.  가용성에 대한 질�
 - **디버깅/품질 테스트** - 데이터는 플랫폼, 장치, 브라우저 및 OS별로 분류되므로 사용 패턴을 분석하면 특정 조합(예: OSX의 Safari)에 대한 문제를 정확하게 파악할 수 있습니다.
 
 - **Analytics** - 제공된 데이터는 Adobe Analytics 또는 다른 분석 도구를 통해 수집되는 클라이언트측 데이터를 보완/감사하는 데 사용할 수 있습니다.
-
-<!--
-## Related Information {#related-information}
-
-- [ESM API](/help/authentication/entitlement-service-monitoring-api.md)
-- [Degradation API Overview](/help/authentication/degradation-api-overview.md)
-- [Server-side Metrics](/help/authentication/understanding-serverside-metrics.md)
--->

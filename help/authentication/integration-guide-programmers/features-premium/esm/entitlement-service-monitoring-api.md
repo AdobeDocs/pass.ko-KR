@@ -2,7 +2,7 @@
 title: 권한 부여 서비스 모니터링 API
 description: 권한 부여 서비스 모니터링 API
 exl-id: a9572372-14a6-4caa-9ab6-4a6baababaa1
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
 source-wordcount: '2027'
 ht-degree: 0%
@@ -280,12 +280,3 @@ Adobe은 ESM 보고서를 가져오는 클라이언트에서 gzip 지원을 활�
 클라이언트에서 gzip 압축을 사용하려면 `Accept-Encoding:` 헤더를 다음과 같이 설정합니다.
 
 * Accept-Encoding: gzip, 수축
-
-
-<!--
-## Related Information {#related-information}
-
-- [ESM Overview](/help/authentication/entitlement-service-monitoring-overview.md)
-- [Degradation API Overview](/help/authentication/degradation-api-overview.md)
-- [Understanding Server-side Metrics](/help/authentication/understanding-serverside-metrics.md)
--->

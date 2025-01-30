@@ -2,9 +2,9 @@
 title: Adobe Pass Authentication 2.70 릴리스 노트
 description: Adobe Pass Authentication 2.70 릴리스 노트
 exl-id: 81713f8e-bc51-4057-9b00-6a2d6c83cd02
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
-source-wordcount: '141'
+source-wordcount: '140'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Adobe Pass 인증: adobe-pass-**2.70**
 * 보안 취약점이 패치되었습니다.
 * API 서비스 저하가 개선되었습니다.
    * DCR을 성능 저하 API에 대한 보안 메커니즘으로 사용합니다.
-   * 자세한 내용은 [저하 API 개요](../integration-guide-programmers/features-premium/degraded-access/degradation-api-overview.md)를 참조하십시오.
+   * 자세한 내용은 [성능 저하 기능](../integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)을 참조하세요.
 
 #### REST API {#rest-apis}
 

@@ -2,9 +2,9 @@
 title: REST API V2 용어집
 description: REST API V2 용어집
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
-source-wordcount: '1743'
+source-wordcount: '1742'
 ht-degree: 0%
 
 ---
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 성능 저하는 [Adobe Pass](#mvpd)에서 서비스가 중단되는 경우에도 사용자가 보호된 콘텐츠에 액세스할 수 있는 MVPD 인증 기능입니다.
 
-자세한 내용은 [성능 저하 API 개요](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-api-overview.md) 설명서를 참조하십시오.
+자세한 내용은 [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) 설명서를 참조하세요.
 
 #### 장치 ID {#device-id}
 

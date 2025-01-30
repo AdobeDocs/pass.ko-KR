@@ -2,7 +2,7 @@
 title: 액세스 흐름이 저하됨
 description: REST API V2 - 액세스 흐름 성능 저하
 exl-id: 9276f5d9-8b1a-4282-8458-0c1e1e06bcf5
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
 workflow-type: tm+mt
 source-wordcount: '1605'
 ht-degree: 0%
@@ -19,9 +19,9 @@ ht-degree: 0%
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
 
-성능 저하로 특정 MVPD 인증 및 권한 부여 끝점을 일시적으로 우회할 수 있습니다. 일반적으로 프로그래머는 이 작업을 시작하지만 누가 열화 이벤트를 트리거하는지에 관계없이, 작업은 영향을 받는 MVPD와 함께 만들어진 사전 배열에 따라 달라집니다.
+성능 저하를 통해 특정 MVPD 인증 및 권한 부여 끝점을 일시적으로 우회할 수 있습니다. 일반적으로 프로그래머는 이 작업을 시작하지만 누가 열화 이벤트를 트리거하는지에 관계없이, 작업은 영향을 받는 MVPD와 함께 만들어진 사전 배열에 따라 달라집니다.
 
-성능 저하 기능에 대한 자세한 내용은 [성능 저하](../../../../features-premium/degraded-access/degradation-api-overview.md) 설명서를 참조하십시오.
+성능 저하 기능에 대한 자세한 내용은 [성능 저하](../../../../features-premium/degraded-access/degradation-feature.md) 설명서를 참조하십시오.
 
 액세스 흐름이 저하되면 다음 시나리오를 쿼리할 수 있습니다.
 
@@ -112,7 +112,7 @@ ht-degree: 0%
 > 
 > <br/>
 > 
-> * 스트리밍 응용 프로그램에 해당 특정 MVPD에 대한 유효한 프로필이 없습니다.
+> * 스트리밍 애플리케이션에 해당 특정 MVPD에 대한 유효한 프로필이 없습니다.
 > * 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 AuthZAll 또는 AuthNAll 저하 규칙이 적용되었습니다.
 
 ### 워크플로 {#workflow-retrieve-authorization-decisions-while-degradation-is-applied}
@@ -178,7 +178,7 @@ ht-degree: 0%
 >
 > <br/>
 > 
-> * 스트리밍 응용 프로그램에 해당 특정 MVPD에 대한 유효한 프로필이 없습니다.
+> * 스트리밍 애플리케이션에 해당 특정 MVPD에 대한 유효한 프로필이 없습니다.
 > * 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 AuthZAll 또는 AuthNAll 저하 규칙이 적용되었습니다.
 
 ### 워크플로 {#workflow-retrieve-preauthorization-decisions-while-degradation-is-applied}
@@ -244,7 +244,7 @@ ht-degree: 0%
 
 저하가 적용되는 동안 특정 MVPD에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
-* 선택한 또는 캐시된 `mvpd` 식별자가 있는 스트리밍 응용 프로그램에서 특정 MVPD에 대한 프로필을 검색하려고 합니다.
+* `mvpd` 식별자가 선택되었거나 캐시된 스트리밍 응용 프로그램에서 특정 MVPD에 대한 프로필을 검색하려고 합니다.
 
 >[!IMPORTANT]
 >
@@ -252,7 +252,7 @@ ht-degree: 0%
 >
 > <br/>
 > 
-> * 스트리밍 응용 프로그램에 해당 특정 MVPD에 대한 유효한 프로필이 없습니다.
+> * 스트리밍 애플리케이션에 해당 특정 MVPD에 대한 유효한 프로필이 없습니다.
 > * 입력한 `serviceProvider`과(와) `mvpd` 간의 통합에 AuthNAll 저하 규칙이 적용되었습니다.
 
 ### 워크플로 {#workflow-retrieve-profile-while-degradation-is-applied}
@@ -263,7 +263,7 @@ ht-degree: 0%
 
 *저하가 적용되는 동안 프로필 검색*
 
-1. **특정 mvpd에 대한 프로필 검색:** 스트리밍 응용 프로그램은 프로필 끝점에 요청을 보내 해당 특정 mvpd에 대한 프로필 정보를 검색하는 데 필요한 모든 데이터를 수집합니다.
+1. **특정 mvpd에 대한 프로필 검색:** 스트리밍 응용 프로그램은 프로필 끝점에 요청을 보내 해당 특정 MVPD에 대한 프로필 정보를 검색하는 데 필요한 모든 데이터를 수집합니다.
 
    >[!IMPORTANT]
    >
