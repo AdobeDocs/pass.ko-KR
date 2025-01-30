@@ -1,48 +1,76 @@
 ---
-title: Adobe&reg; 인증 통과!
-description: Adobe&reg; 인증 전달 개요 시작
+title: Adobe&reg; 인증 전달 시작
+description: Adobe&reg; 인증 전달 시작
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: ffedb5db269644c8d9c81480d27dff43bd4eb5d6
+source-git-commit: c9e31a036a0300fabd9f75dd85d472c390d9053e
 workflow-type: tm+mt
-source-wordcount: '293'
+source-wordcount: '419'
 ht-degree: 0%
 
 ---
 
-# Adobe® 인증 전달 시작 {#pt-auth-overview}
+# Adobe® 인증 전달 시작 {#welcome}
 
 >[!IMPORTANT]
 >
 > [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
 
-Adobe Pass 인증은 TV Everywhere에 대한 권한 부여 솔루션으로, 리소스 액세스를 요청하는 사용자에게 권한이 있는지 여부를 결정하는 모듈식 프레임워크를 제공합니다. Adobe Pass 인증 자격 부여 솔루션에 참여하기 위해 콘텐츠 공급자(프로그래머) 및 유료 TV 공급자(MVPD)는 자격 부여 시스템을 Adobe Pass 인증 워크플로와 통합합니다. 이 설명서 사이트에서는 통합 프로세스에 대한 세부 정보와 기존 파트너를 위한 팁을 제공합니다.
+Adobe Pass 인증은 TV Everywhere(TVE)를 위한 강력한 권한 부여 솔루션으로, 시청자가 보호된 콘텐츠에 액세스할 수 있는지 확인하는 프로세스를 간소화하고 보안을 유지하도록 설계되었습니다. 이 모듈식 프레임워크는 컨텐츠 공급자(프로그래머)와 유료 TV 공급자(MVPD)를 연결하여 속도, 일관성 및 안정성을 갖춘 권한 트랜잭션을 용이하게 합니다.
 
-## 자주 사용하는 도움말 및 FAQ {#help-faqs}
+TVE 생태계에서 프로그래머는 콘텐츠를 제공하는 반면 MVPD는 가입자 데이터를 관리한다. 이러한 동력은 특히 수많은 MVPD들의 다양한 시스템들을 탐색할 때 도전이 될 수 있다. Adobe Pass 인증은 두 대상을 더 광범위한 TVE 환경에 연결하는 단일 통합 지점을 제공하여 이러한 복잡성을 제거합니다.
 
-| **추천 항목** |
-|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul><li>[iOS용 Single Sign-On](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)</li><li>[홈 기반 인증(HBA)](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)</li><li>[HBA 인포그래픽](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/files/AdobeNewsletterHBA.pdf)</li><li>[Adobe Pass TVE 대시보드 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)</li></ul> |
+프로그래머의 경우 Adobe Pass 인증을 사용하면 자격 확인의 기술적 부담을 줄이면서 적격 뷰어에 안전하게 액세스할 수 있습니다. MVPD의 경우, 통합 인터페이스를 통해 여러 콘텐츠 공급자와 연결하여 고객 관계를 강화하고 뷰어 경험을 개선할 수 있는 확장 가능한 솔루션을 제공합니다.
 
-| 프로그래머용 **1}** | **MVPD용** |
-|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <ul><li>[프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)</li><li>[사용자 메타데이터](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)</li></ul> | <ul><li>[MVPD 킥스타트 안내서](/help/authentication/kickstart/mvpd-kickstart-guide.md)</li><li>[인증](/help/authentication/integration-guide-mvpds/authn-usecase.md)</li><li>[인증](/help/authentication/integration-guide-mvpds/authz-usecase.md)</li><li>[로그아웃](/help/authentication/integration-guide-mvpds/usecase-mvpd-logout.md)</li></ul> |
-| **기본 앱 클라이언트의 경우** | **모든 사용자** |
-| <ul><li>[iOS 기술 개요](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)</li><li>[Android 기술 개요](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-overview.md)</li></ul> | <ul><li>[기술 문서](/help/authentication/kickstart/technical-paper.md)</li><li>[지원 절차 FAQ](/help/authentication/kickstart/support-procedures-faqs.md)</li></ul> |
-| **스마트 장치용** |                                                                                                                                                                                                                                                                                                                                                                       |
-| <ul><li>[클라이언트 없는 기술 개요](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)</li><li>[클라이언트 없는 API](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)</li></ul> |                                                                                                                                                                                                                                                                                                                                                                       |
+SaaS(Software as a Service) 솔루션인 Adobe Pass 인증은 출시 시간을 단축하고, 사기 위험을 완화하며, 플랫폼 간 컨텐츠 액세스를 원활하게 하여 적합한 뷰어가 원활하게 올바른 컨텐츠를 받을 수 있도록 합니다.
 
->[!IMPORTANT]
->
-> 답변을 찾을 수 없는 경우 [**전자 메일**](mailto:tve-support@adobe.com)&#x200B;을 보내세요.
->
-> [지원 팀에 전자 메일 보내기](mailto:tve-support@adobe.com)도 문제 또는 문제 보고서의 첫 단계입니다.
->
-> [SEVERITY 1 LIVE](/help/authentication/kickstart/support-procedures-faqs.md) 문제가 있고 이메일을 보냈으며 응답 없이 30분이 지난 경우 전화 번호에 대한 [에스컬레이션 절차](/help/authentication/kickstart/support-procedures-faqs.md) 문서를 참조하십시오.
+## ?? 커뮤니티 및 업데이트
 
-## 필요한 항목을 찾으려면 {#how-to-search}
+* [제품 알림](/help/authentication/product-announcements.md)\
+  최신 Adobe Pass 인증 제품 공지 및 서비스 중단 타임라인에 대한 최신 정보를 얻을 수 있습니다.
 
-* Adobe Pass 인증 헬프 데스크의 어디에서나 **검색**하여 이 항목을 포함하는 결과를 얻으십시오.
-설명서를 참조하십시오.
-* 왼쪽 탐색 창의 폴더 계층 구조를 통해 모든 Adobe Pass 인증 설명서를 **탐색**&#x200B;합니다.
-* 탐색 창 상단의 필드에 용어를 입력하여 폴더 계층 구조를 **필터링**&#x200B;합니다.
-* 웹 브라우저를 사용하여 관심 있는 페이지에 대한 **책갈피** &quot;딥링크&quot;를 지정합니다.
+## ❓ 지원 및 문제 해결
+
+* [Zendesk 고객 지원 포털](https://tve.zendesk.com/home)\
+  티켓에 액세스하거나 쿼리를 제출하거나 기술 자료를 보려면 로그인하십시오.
+
+* [지원 절차 FAQ](/help/authentication/kickstart/support-procedures-faqs.md)
+Adobe Pass 인증 지원 절차에 대한 FAQ.
+
+* [DCR(Dynamic Client Registration) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md)\
+  Adobe Pass 인증 DCR(Dynamic Client Registration)에 대해 자주 묻는 질문입니다.
+
+* [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md)\
+  Adobe Pass 인증 REST API V2에 대해 자주 묻는 질문.
+
+## ?? 설명서
+
+**프로그래머용:**
+
+* [프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)\
+  Adobe Pass 인증을 시작합니다.
+
+* 프로그래머를 위한 [통합 안내서](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md)\
+  Adobe Pass 인증을 프로그래머와 통합하는 방법을 알아봅니다.
+
+**MVPD용:**
+
+* [MVPD 킥스타트 안내서](/help/authentication/kickstart/mvpd-kickstart-guide.md)\
+  Adobe Pass 인증을 시작합니다.
+
+* [MVPD용 통합 안내서](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md)\
+  Adobe Pass 인증을 MVPD과 통합하는 방법을 알아봅니다.
+
+*페이지 상단의 검색 창을 사용하여 특정 항목을 검색하거나 왼쪽 메뉴를 탐색합니다.*
+
+## ?? ️ 도구 및 라이브러리
+
+* [Adobe Developer 웹 사이트](https://developer.adobe.com/adobe-pass/)\
+  Adobe Developer 웹 사이트에 액세스하여 Adobe Pass 인증 REST API를 사용해 보십시오.
+
+* [미디어 토큰 검증기](https://tve.zendesk.com/hc/en-us/articles/204963159-Media-Token-Verifier-library)\
+  Adobe Pass 인증으로 생성된 미디어 토큰의 유효성을 검사하는 라이브러리를 통합합니다.
+
+## ?? 연락처
+
+* [Adobe 지원에 문의](mailto:tve-support@adobe.com)\
+  추가 도움말 또는 비즈니스 문의 사항은 Adobe 지원 팀으로 이메일을 보내십시오.
