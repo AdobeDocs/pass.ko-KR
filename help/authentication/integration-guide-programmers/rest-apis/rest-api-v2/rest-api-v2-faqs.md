@@ -2,7 +2,7 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '6664'
 ht-degree: 0%
@@ -245,7 +245,7 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 * 채널(브랜드)의 고유 식별자와 같은 간단한 문자열 형식입니다.
 * 제목, 등급 및 자녀 보호 메타데이터와 같은 추가 정보가 포함된 미디어 RSS(MRSS) 형식입니다.
 
-자세한 내용은 [보호된 리소스](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers) 설명서를 참조하세요.
+자세한 내용은 [보호된 리소스](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#protected-resources) 설명서를 참조하세요.
 
 #### 6. 클라이언트 애플리케이션이 한 번에 사전 권한 부여 결정을 받을 수 있는 리소스가 몇 개입니까? {#preauthorization-phase-faq6}
 
@@ -316,7 +316,7 @@ TV 공급자(신뢰할 수 있는) 결정에서 사용자가 액세스할 수 �
 * 채널(브랜드)의 고유 식별자와 같은 간단한 문자열 형식입니다.
 * 제목, 등급 및 자녀 보호 메타데이터와 같은 추가 정보가 포함된 미디어 RSS(MRSS) 형식입니다.
 
-자세한 내용은 [보호된 리소스](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers) 설명서를 참조하세요.
+자세한 내용은 [보호된 리소스](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#protected-resources) 설명서를 참조하세요.
 
 #### 6. 클라이언트 애플리케이션이 한 번에 몇 개의 리소스를 승인할 수 있습니까? {#authorization-phase-faq6}
 

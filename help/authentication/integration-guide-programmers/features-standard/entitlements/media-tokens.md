@@ -1,9 +1,10 @@
 ---
 title: 미디어 토큰
 description: 미디어 토큰
-source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
+exl-id: 7e486d2c-e078-464d-90b1-14e2cfb4d20a
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
-source-wordcount: '654'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -12,9 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-미디어 토큰은 보호된 콘텐츠(리소스)에 대한 보기 액세스를 제공하기 위한 인증 결정의 결과로 Adobe Pass 인증에 의해 생성된 토큰입니다. 미디어 토큰은 문제 발생 시 지정된 제한되고 짧은 기간(몇 분) 동안 유효하며, 새 클라이언트 애플리케이션을 검색하기 전에 클라이언트 애플리케이션에서 사용해야 하는 시간을 나타냅니다.
+미디어 토큰은 보호된 콘텐츠(리소스)에 대한 보기 액세스를 제공하기 위한 권한 부여 결정의 결과로 Adobe Pass 인증 [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md)에서 생성된 토큰입니다. 미디어 토큰은 문제가 발생한 시점에 지정된 제한되고 짧은 기간(몇 분) 동안 유효하며, 이는 클라이언트 애플리케이션에서 확인하고 사용해야 하는 시간을 나타냅니다.
 
 미디어 토큰은 일반 텍스트로 전송된 PKI(공개 키 인프라)를 기반으로 하는 서명된 문자열로 구성됩니다. PKI 기반 보호를 사용하면 CA(인증 기관)에서 Adobe에 발급한 비대칭 키를 사용하여 토큰에 서명합니다.
 
@@ -49,7 +50,7 @@ Adobe Pass 인증은 프로그래머가 비디오 스트림을 시작하기 전�
 
 `ITokenVerifier` 클래스는 다음 메서드를 정의합니다.
 
-* 미디어 토큰의 유효성을 검사하는 데 사용되는 `isValid()` 메서드입니다. 단일 인수 [리소스 식별자](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md)을(를) 허용합니다. 입력한 리소스 식별자가 `null`인 경우 메서드는 미디어 토큰의 정품 여부 및 유효 기간만 확인합니다.
+* 미디어 토큰의 유효성을 검사하는 데 사용되는 `isValid()` 메서드입니다. 단일 인수 [리소스 식별자](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier)을(를) 허용합니다. 입력한 리소스 식별자가 `null`인 경우 메서드는 미디어 토큰의 정품 여부 및 유효 기간만 확인합니다.
 
   `isValid()` 메서드가 다음 상태 값 중 하나를 반환합니다.
 
@@ -193,7 +194,7 @@ public class EntitlementVerifierTest {
 
 * [특정 mvpd를 사용하여 권한 부여 결정 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
 
-인증 결정 및 미디어 토큰 모델을 이해하려면 위의 API의 **응답** 및 **샘플** 섹션을 참조하십시오.
+인증 결정 및 미디어 토큰의 구조를 이해하려면 위의 API의 **응답** 및 **샘플** 섹션을 참조하십시오.
 
 위의 API를 통합하는 방법 및 시기에 대한 자세한 내용은 다음 문서를 참조하십시오.
 

@@ -2,7 +2,7 @@
 title: REST API 참조
 description: Rest api 참조
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '669'
 ht-degree: 2%
@@ -57,7 +57,7 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 
 
 | Sr | 웹 서비스 끝점 | 설명 | <!--[Diag.  </br>Ref](http://tve.helpdocsonline.com/api-reference-v2-test#illustration)-->. | 호스팅 위치 | 호출자 |
-|-----|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------|
+|-----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------|
 | 1. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId}/regcode](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) | 임의로 생성된 등록 코드 및 로그인 페이지 URI를 반환합니다. | 2 | Adobe </br>Reg Code 서비스 | 스마트 장치 |
 | 2. | [&lt;REGGIE_FQDN>/reggie/v1/ </br> {requestorId}/regcode/ </br> {registrationCode}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/return-registration-record.md) | 등록 코드 UUID, 등록 코드 및 해시된 장치 ID가 포함된 등록 코드 레코드를 반환합니다. | 8 | Adobe </br>Reg Code 서비스 | Adobe Pass 인증 |
 | 3. | [&lt;SP_FQDN>/api/v1/config/ </br> {requestorId}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) | 요청자에 대해 구성된 MVPD 목록을 반환합니다. | 5 | Adobe </br>Adobe Pass </br>인증 </br>서비스 | 로그인 </br>웹 </br>앱 |

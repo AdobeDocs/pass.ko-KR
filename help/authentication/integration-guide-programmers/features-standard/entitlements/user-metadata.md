@@ -2,7 +2,7 @@
 title: 사용자 메타데이터
 description: 사용자 메타데이터
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '1793'
 ht-degree: 0%
@@ -13,7 +13,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 사용자 메타데이터는 MVPD에 의해 유지되고 Adobe Pass 인증 [REST API V2](#apis)을(를) 통해 프로그래머에게 제공되는 사용자별 [특성](#attributes)(예: 우편 번호, 자녀 보호 등급, 사용자 ID 등)을 참조합니다.
 

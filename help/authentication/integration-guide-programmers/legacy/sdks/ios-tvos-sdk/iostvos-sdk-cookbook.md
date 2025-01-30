@@ -2,9 +2,9 @@
 title: iOS/tvOS Cookbook
 description: iOS/tvOS Cookbook
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: dbca6c630fcbfcc5b50ccb34f6193a35888490a3
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
-source-wordcount: '2425'
+source-wordcount: '2424'
 ht-degree: 0%
 
 ---
@@ -229,7 +229,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 1. 인증 흐름을 시작하려면 [getAuthorization()](#$getAuthZ)을 호출하십시오.
 
    * **종속성:** MVPD과(과) 합의된 올바른 리소스 ID입니다.
-   * 리소스 ID는 다른 디바이스 또는 플랫폼에서 사용되는 ID와 동일해야 하며 MVPD에서 동일합니다. 리소스 ID에 대한 자세한 내용은 [보호된 리소스 확인](/help/authentication/integration-guide-programmers/features-standard/entitlements/protected-resources.md#identifiers)을 참조하세요.
+   * 리소스 ID는 다른 디바이스 또는 플랫폼에서 사용되는 ID와 동일해야 하며 MVPD에서 동일합니다. 리소스 ID에 대한 자세한 내용은 [리소스 식별자](/help/authentication/integration-guide-programmers/features-standard/entitlements/decisions.md#resource-identifier)를 참조하세요.
 
 1. 인증 및 권한 부여의 유효성을 검사합니다.
 
