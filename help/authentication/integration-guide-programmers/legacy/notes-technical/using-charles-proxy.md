@@ -2,9 +2,9 @@
 title: Charles Proxy 사용
 description: Charles Proxy 사용
 exl-id: bb38543f-f6bc-4b5a-91b8-41bc51ee4c56
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 175755aa7463257487b29c5f4da989cf34e91bfd
 workflow-type: tm+mt
-source-wordcount: '392'
+source-wordcount: '376'
 ht-degree: 0%
 
 ---
@@ -43,10 +43,9 @@ ht-degree: 0%
 
 &quot;SSL 프록시 활성화&quot; 확인란을 선택하고 모든 HTTPS 위치를 추가합니다.
 
-
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/ProxySettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/SSLSettings.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/AddHttpsLocations.PNG)
-
-
+-->
 
 - SSL 프록시 - <http://www.charlesproxy.com/documentation/proxying/ssl-proxying/>
 - SSL 인증서 - <http://www.charlesproxy.com/documentation/using-charles/ssl-certificates/>
@@ -69,7 +68,9 @@ ht-degree: 0%
 
 DNS 스푸핑은 요청을 다른 IP로 리디렉션하려고 할 때, 특히 모바일 디바이스에서 작업할 때 매우 유용합니다.
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/DNSSpoofing.PNG)
+-->
 
 <http://www.charlesproxy.com/documentation/tools/dns-spoofing/>
 
@@ -82,7 +83,9 @@ DNS 스푸핑은 요청을 다른 IP로 리디렉션하려고 할 때, 특히 �
 
 맵 리모컨을 사용하면 &quot;들어오는&quot; 요청을 다른 끝점으로 리디렉션할 수 있습니다. 이 기능의 가장 일반적인 사용 사례는 `AccessEnabler.swf`을(를) `AccessEnablerDebug.swf:`에 &quot;매핑&quot;하는 것입니다.
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemote.PNG) ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/MapRemoteAdd.PNG)
+-->
 
 <http://www.charlesproxy.com/documentation/tools/map-remote/>
 
@@ -100,7 +103,9 @@ DNS 스푸핑은 요청을 다른 IP로 리디렉션하려고 할 때, 특히 �
 
 iOS 장치에서 <http://charlesproxy.com/charles.crt>(으)로 이동합니다.  이렇게 하면 인증서 설치 대화 상자가 시작됩니다.
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate1\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate2\(1\).PNG)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceSSLCertificate3.PNG)
+-->
 
 </br>
 
@@ -117,15 +122,18 @@ iOS 장치에서 `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWORK)* \]`을(�
 
 </br>
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy1.png)![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy2.PNG)
-
+-->
 
 </br>
 여기서 Charles를 실행하는 시스템의 IP와 포트를 지정해야 합니다. <span style="line-height: 1.6em;">이제 iOS 장치에서 Safari를 열고 웹 페이지를 열려고 하면 Charles를 실행하는 컴퓨터에서 다음 팝업이 표시됩니다.
 
 </br>
 
+<!-- NOTE TO WRITER - THESE IMAGES LINKS ARE BROKEN
 ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/iOSDeviceManualProxy3.PNG)
+-->
 
 </br>
 "허용"을 클릭하여 장치가 Charles를 사용하여 모든 해당 항목을 프록시하도록 허용합니다.
