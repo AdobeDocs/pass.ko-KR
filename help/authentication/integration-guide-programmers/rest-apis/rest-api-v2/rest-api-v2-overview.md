@@ -2,7 +2,7 @@
 title: REST API V2 개요
 description: REST API V2 개요
 exl-id: a5595193-82c4-4033-bd98-596b4908b401
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -13,7 +13,9 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+> [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
+
+<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![라이브 웨비나 시리즈](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 TVE 애플리케이션의 비용 효율성을 개선하시겠습니까?
 
@@ -41,7 +43,7 @@ REST API V2를 사용하면 인증 세션을 다른 장치 간에 안전하게 �
 
 ### 여러 활성 인증 세션
 
-이제 다양한 활성 MVPD 세션이 가능하며, 고객은 필요할 때 TempPass와 일반 MVPD 통합 간을 전환할 수 있습니다.
+이제 다양한 활성 MVPD 세션이 가능하며, 고객은 필요한 경우 TempPass와 일반 MVPD 통합 간을 전환할 수 있습니다.
 
 ### 향상된 보안 메커니즘
 

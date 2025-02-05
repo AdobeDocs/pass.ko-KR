@@ -2,9 +2,9 @@
 title: Adobe&reg; 인증 전달 시작
 description: Adobe&reg; 인증 전달 시작
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: c9e31a036a0300fabd9f75dd85d472c390d9053e
+source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
 workflow-type: tm+mt
-source-wordcount: '419'
+source-wordcount: '423'
 ht-degree: 0%
 
 ---
@@ -14,6 +14,8 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
+
+<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![라이브 웨비나 시리즈](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 Adobe Pass 인증은 TV Everywhere(TVE)를 위한 강력한 권한 부여 솔루션으로, 시청자가 보호된 콘텐츠에 액세스할 수 있는지 확인하는 프로세스를 간소화하고 보안을 유지하도록 설계되었습니다. 이 모듈식 프레임워크는 컨텐츠 공급자(프로그래머)와 유료 TV 공급자(MVPD)를 연결하여 속도, 일관성 및 안정성을 갖춘 권한 트랜잭션을 용이하게 합니다.
 
