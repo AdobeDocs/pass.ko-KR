@@ -2,9 +2,9 @@
 title: Adobe Pass 인증 및 TV Everywhere
 description: Adobe Pass 인증 및 TV Everywhere
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 95e750b5c0efe5850a3ff8130f5b4bb6c5b35f57
 workflow-type: tm+mt
-source-wordcount: '6288'
+source-wordcount: '6287'
 ht-degree: 0%
 
 ---
@@ -112,7 +112,11 @@ Adobe Pass은 프로그래머와 유료 TV 공급자 간의 자격 거래를 안
 
 ## 건축 빌딩 블록 {#arch-building-blocks}
 
-![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/import-pc7mz3dfnv/check.gif) 다음은 인증 및 권한 부여의 중앙 권한 거래에 대해 설명합니다. 인증은 지정된 사용자가 알려진 고객임을 유료 TV 공급자에게 확인하는 프로세스입니다. 인증은 유료 TV 공급자가 인증된 사용자에게 주어진 리소스에 대한 유효한 구독이 있음을 확인하는 프로세스입니다.
+<!-- BROKEN LINK
+![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/import-pc7mz3dfnv/check.gif) 
+-->
+
+다음은 인증 및 권한 부여의 중앙 권한 거래에 대해 설명합니다. 인증은 지정된 사용자가 알려진 고객임을 유료 TV 공급자에게 확인하는 프로세스입니다. 인증은 유료 TV 공급자가 인증된 사용자에게 주어진 리소스에 대한 유효한 구독이 있음을 확인하는 프로세스입니다.
 Adobe Pass 인증은 다음 기본 구성 요소로 구성됩니다.
 
 * 클라이언트 구성 요소(다음 중 하나):
@@ -352,7 +356,7 @@ Adobe Pass 인증과 통합되지 않은 사이트에서 로그아웃이 시작�
 
 * **사용자 메타데이터** - MVPD와 프로그래머 간의 계약에 따라 MVPD는 Zipcode, 최대 등급, 채널 ID 등과 같은 메타데이터를 안전하게 교환할 수 있습니다. 메타데이터를 사용하면 자녀 보호, 스포츠 이벤트의 지역 동결 기간 등 다양한 사용 사례를 사용할 수 있습니다.
 * **임시 무료 액세스** - 프로그래머가 보호된 콘텐츠에 대한 임시 무료 액세스를 제공할 수 있습니다(예: 일별 프로그래밍의 짧은 샘플 또는 대규모 이벤트의 무료 프레젠테이션).
-* **프록시 MVPD** - MVPD는 Adobe Pass 인증과의 자체 통합을 관리하고 연결된 &quot;ProxyedMVPD&quot; 그룹을 대신하여 권한 부여 프로세스도 관리할 수 있습니다.
+* **프록시 MVPD** - MVPD은 Adobe Pass 인증과의 자체 통합을 관리하고 연결된 &quot;ProxyedMVPD&quot; 그룹을 대신하여 권한 부여 프로세스를 관리할 수도 있습니다.
 
 ## 보안 {#security}
 
