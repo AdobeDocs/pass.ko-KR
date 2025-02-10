@@ -2,9 +2,9 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
+source-git-commit: 747c3d9b6de537be5e7e0a0244b2b301603d9b18
 workflow-type: tm+mt
-source-wordcount: '6664'
+source-wordcount: '6460'
 ht-degree: 0%
 
 ---
@@ -19,21 +19,21 @@ ht-degree: 0%
 
 REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md) 설명서를 참조하십시오.
 
->[!MORELIKETHIS]
->
-> * [DCR(Dynamic Client Registration) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md)
-
 ## 일반 FAQ {#general-faqs}
 
 [REST API V1](#migration-rest-api-v1-to-rest-api-v2) 또는 [SDK](#migration-sdk-to-rest-api-v2)에서 마이그레이션하는 기존 응용 프로그램이든 새 응용 프로그램이든 REST API V2를 통합해야 하는 응용 프로그램에서 작업하는 경우 이 섹션으로 시작하십시오.
 
 마이그레이션 세부 정보 및 단계에 대한 자세한 내용은 다음 섹션도 참조하십시오.
 
+>[!MORELIKETHIS]
+>
+> * [DCR(Dynamic Client Registration) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md#general-faqs)
+
 ### 등록 단계 FAQ {#registration-phase-faqs-general}
 
 +++등록 단계 FAQ
 
-[DCR(동적 클라이언트 등록) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md) 설명서를 참조하십시오.
+[DCR(동적 클라이언트 등록) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md#rest-api-v2-access-faqs) 설명서를 참조하십시오.
 
 +++
 
@@ -375,6 +375,10 @@ TV 공급자(신뢰할 수 있는) 결정에서 사용자가 액세스할 수 �
 
 기존 애플리케이션을 REST API V2로 마이그레이션해야 하는 애플리케이션에서 작업하는 경우 이 섹션을 계속합니다.
 
+>[!MORELIKETHIS]
+>
+> * [DCR(Dynamic Client Registration) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md#migration-faqs)
+
 ### 일반 마이그레이션 FAQ {#general-migration-faqs}
 
 +++일반 마이그레이션 FAQ
@@ -405,25 +409,7 @@ REST API V1 또는 SDK을 통합하는 이전 클라이언트 애플리케이션
 
 따라서 REST API V2로 마이그레이션된 새 클라이언트 애플리케이션 내에서 다시 인증해야 합니다.
 
-#### 4. 클라이언트 애플리케이션이 기존의 등록된 애플리케이션(소프트웨어 명령문)을 사용할 수 있습니까? {#migration-faq4}
-
-클라이언트 애플리케이션은 기존 등록 애플리케이션(소프트웨어 명령문)을 다시 사용할 수 없으므로 REST API V2 사용 전용의 새로운 등록 애플리케이션(소프트웨어 명령문)을 생성하고 다운로드해야 합니다.
-
-이 작업은 조직 관리자 중 한 사람이나 사용자를 대신하여 활동하는 Adobe Pass 인증 담당자가 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 완료할 수 있습니다.
-
-자세한 내용은 [TVE 대시보드 채널 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#registered-applications) 또는 [TVE 대시보드 프로그래머 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#registered-applications) 설명서를 참조하십시오.
-
-이 작업의 자체 관리를 허용하도록 Adobe Pass [TVE 대시보드](rest-api-v2-glossary.md#tve-dashboard)가 업데이트될 때까지 Adobe Pass 인증 담당자에게 새 등록된 응용 프로그램(소프트웨어 문)에 대한 REST API V2 사용을 활성화하도록 요청해야 합니다.
-
-REST API V2를 사용하는 클라이언트 응용 프로그램에 사용되는 등록된 응용 프로그램(소프트웨어 문)을 구분하려면 등록된 응용 프로그램 이름에 &quot;RESV2&quot;와 같은 특정 접미사를 추가해야 합니다.
-
-#### 5. 클라이언트 애플리케이션이 기존 사용자 정의 체계를 사용할 수 있습니까? {#migration-faq5}
-
-클라이언트 응용 프로그램은 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 생성된 기존 사용자 지정 구성표를 다시 사용할 수 있습니다.
-
-자세한 내용은 [TVE 대시보드 채널 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#custom-schemes) 또는 [TVE 대시보드 프로그래머 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-programmers.md#custom-schemes) 설명서를 참조하십시오.
-
-#### 6. 향상된 오류 코드가 REST API V2에서 기본적으로 활성화되어 있습니까? {#migration-faq6}
+#### 4. 향상된 오류 코드가 REST API V2에서 기본적으로 활성화되어 있습니까? {#migration-faq4}
 
 예.
 
