@@ -2,9 +2,9 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 79b3856e3ab2755cc95c3fcd34121171912a5273
 workflow-type: tm+mt
-source-wordcount: '1704'
+source-wordcount: '1703'
 ht-degree: 0%
 
 ---
@@ -135,7 +135,9 @@ Android 라이브러리(AccessEnabler)
 
    | 참고 |     |
    | --- | --- |  
-   | ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) | 요청자 ID가 완전히 설정될 때까지 권한 부여 요청을 완료할 수 없습니다. 이는 setRequestor()가 계속 실행 중인 동안 후속 권한 요청(예: `checkAuthentication()`)이 모두 차단되었음을 의미합니다.<br><br>두 가지 구현 옵션이 있습니다. 요청자 식별 정보가 백 엔드 서버로 전송되면 UI 응용 프로그램 레이어가 다음 두 가지 방법 중 하나를 선택할 수 있습니다.<br><br>1.  `setRequestorComplete()` 콜백(AccessEnabler 대리자의 일부)이 트리거될 때까지 기다립니다.  이 옵션을 사용하면 `setRequestor()`이(가) 가장 확실하게 완료되므로 대부분의 구현에 권장됩니다.<br>2.  `setRequestorComplete()` 콜백이 트리거될 때까지 기다리지 않고 계속하고 권한 부여 요청 실행을 시작합니다. 이러한 호출(checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout)은 AccessEnabler 라이브러리에 의해 큐에 추가되어 `setRequestor(). `이(가) 끝난 후 실제 네트워크 호출을 수행합니다. 네트워크 연결이 불안정한 경우 이 옵션이 가끔 중단될 수 있습니다. |
+   |  | 요청자 ID가 완전히 설정될 때까지 권한 부여 요청을 완료할 수 없습니다. 이는 setRequestor()가 계속 실행 중인 동안 후속 권한 요청(예: `checkAuthentication()`)이 모두 차단되었음을 의미합니다.<br><br>두 가지 구현 옵션이 있습니다. 요청자 식별 정보가 백 엔드 서버로 전송되면 UI 응용 프로그램 레이어가 다음 두 가지 방법 중 하나를 선택할 수 있습니다.<br><br>1.  `setRequestorComplete()` 콜백(AccessEnabler 대리자의 일부)이 트리거될 때까지 기다립니다.  이 옵션을 사용하면 `setRequestor()`이(가) 가장 확실하게 완료되므로 대부분의 구현에 권장됩니다.<br>2.  `setRequestorComplete()` 콜백이 트리거될 때까지 기다리지 않고 계속하고 권한 부여 요청 실행을 시작합니다. 이러한 호출(checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout)은 AccessEnabler 라이브러리에 의해 큐에 추가되어 `setRequestor(). `이(가) 끝난 후 실제 네트워크 호출을 수행합니다. 네트워크 연결이 불안정한 경우 이 옵션이 가끔 중단될 수 있습니다. |
+
+   <!--Removed bad image link from first note cell above. ![](https://dzf8vqv24eqhg.cloudfront.net/userfiles/258/326/ckfinder/images/icons/1313859077_lightbulb.png) -->
 
 1. 전체 인증 흐름을 시작하지 않고 기존 인증을 확인하려면 [checkAuthentication()](#$checkAuthN)을 호출하십시오.   이 호출이 성공하면 인증 플로우로 직접 진행할 수 있습니다.  그렇지 않으면 인증 플로우로 이동합니다.
 
