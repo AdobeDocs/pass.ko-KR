@@ -2,9 +2,9 @@
 title: Adobe Pass Authentication 2.68 릴리스 노트
 description: Adobe Pass Authentication 2.68 릴리스 노트
 exl-id: 88628696-448e-4afa-91f0-d3767d68d2f4
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
 workflow-type: tm+mt
-source-wordcount: '148'
+source-wordcount: '146'
 ht-degree: 0%
 
 ---
@@ -20,20 +20,20 @@ ht-degree: 0%
 ## 서버측 및 웹 클라이언트 {#server-side-web-clients-268}
 
 * [빌드 번호](#build-number-268)
-* [새로운 기능](#new-features-268)
-* [버그 수정](#bug-fixes-268)
+* [릴리스 개요](#release-overview-268)
 
 ### 빌드 번호 {#build-number-268}
 
 Adobe Pass 인증: adobe-pass-**2.68.0.5**
+
 릴리스 날짜: **12/05/2023 - 12/07/2023**
 
-### 새로운 기능 {#new-features-268}
+### 릴리스 개요 {#release-overview-268}
 
 * 새로운 REST API로의 지속적인 개발. 새로운 끝점 및 흐름은 향후 전용 릴리스에서 사용할 수 있습니다. 이러한 새 API 사용에 대한 설명서 업데이트가 진행 중입니다.
 * 지속적인 내부 아키텍처 개선.
 * 장치 식별을 개선하기 위해 Device Atlas 라이브러리를 최신 버전으로 업데이트했습니다.
 
-#### 버그 수정 {#bug-fixes-268}
+#### 버그 수정
 
 * 동일한 리소스에 대해 여러 결정을 반환할 수 없도록 Vidgo MVPD 문제를 수정했습니다.

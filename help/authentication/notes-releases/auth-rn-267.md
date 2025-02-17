@@ -2,9 +2,9 @@
 title: Adobe Pass Authentication 2.67 릴리스 노트
 description: Adobe Pass Authentication 2.67 릴리스 노트
 exl-id: d899fe96-a273-4681-90a5-bde54cc2f3b3
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
 workflow-type: tm+mt
-source-wordcount: '131'
+source-wordcount: '127'
 ht-degree: 0%
 
 ---
@@ -20,24 +20,23 @@ ht-degree: 0%
 ## 서버측 및 웹 클라이언트 {#server-side-web-clients-267}
 
 * [빌드 번호](#build-number-267)
-* [새로운 기능](#new-features-267)
-* [MVPD 업데이트](#mvpd-updates-267)
-* [버그 수정](#bug-fixes-267)
+* [릴리스 개요](#release-overview-267)
 
 ### 빌드 번호 {#build-number-267}
 
 Adobe Pass 인증: adobe-pass-**2.67.0.1**
-릴리스 날짜: **2023/12/09 - 2023/09/14**
 
-### 새로운 기능 {#new-features-267}
+릴리스 날짜: **09/12/2023 - 09/14/2023**
+
+### 릴리스 개요 {#release-overview-267}
 
 * 새 REST API에 대한 지속적인 내부 업데이트.
 * 지속적인 내부 아키텍처 개선.
 
-### MVPD 업데이트 {#mvpd-updates-267}
+#### MVPD 업데이트
 
-* Adobe과 **DirecTV 푸에르토리코** 통합에 대한 업데이트입니다. 자세한 내용은 TAM에 문의하십시오.
+* Adobe과의 **DirecTV 푸에르토리코** 통합에 대한 업데이트입니다. 자세한 내용은 TAM에 문의하십시오.
 
-#### 버그 수정 {#bug-fixes-267}
+#### 버그 수정
 
-* REST API와 FireTV SDK를 사용하는 애플리케이션 간에 Adobe-주체-토큰 헤더를 사용하여 얻은 SSO를 차단하는 문제를 해결했습니다.
+* REST API를 사용하는 응용 프로그램과 FireTV SDK 간에 Adobe-Subject-Token 헤더를 사용하여 얻은 SSO를 차단하는 문제를 해결했습니다.

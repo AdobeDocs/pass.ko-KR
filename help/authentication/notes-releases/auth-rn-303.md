@@ -2,14 +2,14 @@
 title: Adobe Pass Authentication 3.0.3 릴리스 노트
 description: Adobe Pass Authentication 3.0.3 릴리스 노트
 exl-id: f54b7c4a-78c5-4536-bed7-3c5f15640dea
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
 workflow-type: tm+mt
 source-wordcount: '152'
 ht-degree: 0%
 
 ---
 
-# Adobe Pass Authentication 3.0.3 릴리스 노트 {#pt-authn-303-rn}
+# Adobe Pass Authentication 3.0.3 릴리스 노트 {#authn-303-rn}
 
 >[!NOTE]
 >
@@ -22,14 +22,15 @@ ht-degree: 0%
 * [빌드 번호](#build-number-303)
 * [릴리스 개요](#release-overview-303)
 
-### 빌드 번호 {#build-number-2651}
+### 빌드 번호 {#build-number-303}
 
 Adobe Pass 인증: adobe-pass-**3.0.3**
-릴리스 날짜: **2024/29/10/31/2024**
 
-### 새로운 기능 {#new-features-303}
+릴리스 날짜: **20/29/10 - 2024/10/31**
 
-#### REST API v2 {#rest-apis}
+### 릴리스 개요 {#release-overview-303}
+
+#### REST API v2
 
 ##### 코드
 

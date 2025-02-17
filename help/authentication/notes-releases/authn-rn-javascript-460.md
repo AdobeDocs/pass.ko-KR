@@ -2,14 +2,14 @@
 title: Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트
 description: Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트
 exl-id: 09b79384-2385-48ce-9ee2-6db93bbce15d
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
 workflow-type: tm+mt
 source-wordcount: '126'
 ht-degree: 0%
 
 ---
 
-# Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트 {#javascript-sdk-460-release-notes}
+# Adobe Pass Authentication JavaScript 4.6.0 릴리스 노트 {#javascript-sdk-460-rn}
 
 >[!NOTE]
 >
@@ -17,20 +17,18 @@ ht-degree: 0%
 
 이 페이지에서는 이 릴리스의 새로운 기능, 변경 사항 및 알려진 문제에 대해 설명합니다.
 
-## 빌드 번호 {#build-no-javascript-sdk-460}
+## 빌드 번호 {#build-number-460}
 
 Adobe Pass 인증: JavaScript 4.6.0
 
 릴리스 날짜: **20/09/20 - 2022/09/22**
 
+## 릴리스 개요 {#release-overview-460}
 
-## 릴리스 개요 {#overview-javascript-sdk-460}
-
-* `eval` 함수 사용을 제거했으므로 SDK가 콘텐츠 보안 정책을 준수하게 되었습니다.
+* `eval` 함수 사용을 제거했으므로 SDK이 콘텐츠 보안 정책을 준수하게 되었습니다.
 * 파트너 애플리케이션에서 브라우저의 로컬 스토리지를 명시적으로 삭제했을 때 인증 흐름이 정상적으로 완료되지 않는 문제를 해결했습니다.
 
-
-## 릴리스 패키지 {#rel-pkg-javascript-sdk-460}
+## 릴리스 패키지 {#release-package-460}
 
 프로덕션 URL은 https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js입니다.
 
