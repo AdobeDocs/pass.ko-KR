@@ -2,18 +2,18 @@
 title: Adobe Pass Authentication Android 3.7.3 릴리스 노트
 description: Adobe Pass Authentication Android 3.7.3 릴리스 노트
 exl-id: f335357e-c209-428d-af2a-2181551447d4
-source-git-commit: 134a9a13373717ff7772a9d765bbd7b3b4943a85
+source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '146'
+source-wordcount: '0'
 ht-degree: 0%
 
 ---
 
 # Adobe Pass Authentication Android 3.7.3 릴리스 노트 {#android-sdk-373-rn}
 
->[!NOTE]
+>[!IMPORTANT]
 >
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
+> [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
 
 이 페이지에서는 이 릴리스의 새로운 기능, 변경 사항 및 알려진 문제에 대해 설명합니다.
 
