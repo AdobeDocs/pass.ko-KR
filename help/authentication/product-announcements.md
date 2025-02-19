@@ -2,9 +2,9 @@
 title: 제품 공지
 description: 제품 공지
 exl-id: 3c9c66e1-d31d-4af3-8ab2-eb32492f42ca
-source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
+source-git-commit: 4ad5ea619f64a78a72f69228c9ae3c83a7b66f24
 workflow-type: tm+mt
-source-wordcount: '859'
+source-wordcount: '883'
 ht-degree: 1%
 
 ---
@@ -52,6 +52,13 @@ Adobe Pass 인증 파트너로서 새로운 REST API에 대해 예정된 라이�
 ## 제품 릴리스 {#product-releases}
 
 이 섹션에서는 Adobe Pass 인증에 대한 릴리스 내역 및 해당 릴리스 정보에 대한 참조를 컴파일합니다.
+
+### 2025 {#product-releases-2025}
+
+| 릴리스 정보 | 날짜 |
+|-----------------------------------------------------------------------------------------------------------|-------------------------|
+| [Adobe Pass 인증 3.1.0 릴리스 노트](notes-releases/auth-rn-310.md) | 2025년 2월 25일 - 2025년 2월 27일 |
+| [Adobe Pass 인증 JavaScript SDK 4.7.1 릴리스 노트](notes-releases/authn-rn-javascript-471.md) | 2025년 2월 25일 - 2025년 2월 27일 |
 
 ### 2024 {#product-releases-2024}
 

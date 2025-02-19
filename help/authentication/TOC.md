@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 2b9a8ce374f7a73cd815e9735d672e5c9ba285cc
+source-git-commit: 4ad5ea619f64a78a72f69228c9ae3c83a7b66f24
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1246'
 ht-degree: 2%
 
 ---
@@ -17,6 +17,9 @@ ht-degree: 2%
 + [Adobe Pass 인증](home.md)
 + [제품 공지](product-announcements.md)
 + 제품 릴리스 {#product-releases}
+   + 2025년 {#2025}
+      + [Adobe Pass Authentication 3.1.0 릴리스 노트](notes-releases/auth-rn-310.md)
+      + [Adobe Pass Authentication JavaScript 4.7.1 릴리스 노트](notes-releases/authn-rn-javascript-471.md)
    + 2024 {#2024}
       + [Adobe Pass Authentication 3.0.3 릴리스 노트](notes-releases/auth-rn-303.md)
       + [Adobe Pass Authentication 3.0 릴리스 노트](notes-releases/auth-rn-300.md)
@@ -116,7 +119,7 @@ ht-degree: 2%
                + [헤더 - AP-Device-Identifier](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md)
                + [헤더 - X-Device-Info](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md)
                + [헤더 - AD-Service-Token](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md)
-               + [헤더 - Adobe-주체-토큰](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
+               + [헤더 - Adobe-Subject-Token](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md)
                + [헤더 - AP-Partner-Framework-Status](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
                + [헤더 - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + 표준 기능 {#standard-features}
@@ -257,7 +260,7 @@ ht-degree: 2%
          + (레거시) {#troubleshooting} 문제 해결
             + [(기존) Charles Proxy 사용](integration-guide-programmers/legacy/notes-technical/using-charles-proxy.md)
             + [(기존) Adobe Pass Adobe PayTV Pass 모니터링](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
-            + [(레거시) Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
+            + [(기존) Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
 + MVPD {#integration-guide-mvpds}에 대한 통합 안내서
    + [MVPD 통합 안내서](integration-guide-mvpds/mvpd-integration-guide-overview.md)
    + [인증](integration-guide-mvpds/authn-usecase.md)
