@@ -2,9 +2,9 @@
 title: 인증 세션 만들기
 description: REST API V2 - 인증 세션 만들기
 exl-id: bb2a6bb4-0778-4748-a674-df9d0e8242c8
-source-git-commit: 5cb14959d6e9af91252316fbdd14ff33d813089b
+source-git-commit: 5e5bb6a52a4629056fd52c7e79a11dba2b9a45db
 workflow-type: tm+mt
-source-wordcount: '1000'
+source-wordcount: '1047'
 ht-degree: 1%
 
 ---
@@ -130,9 +130,9 @@ ht-degree: 1%
       <td>선택 사항</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-주체-토큰</td>
+      <td style="background-color: #DEEBFF;">Adobe-Ject-Token</td>
       <td>
-        플랫폼 ID 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-주체-토큰</a> 헤더 설명서에 설명되어 있습니다.
+        플랫폼 ID 메서드에 대한 SSO(Single Sign-On) 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-Subject-Token</a> 헤더 설명서에 설명되어 있습니다.
         <br/><br/>
         플랫폼 ID를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md">플랫폼 ID 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
@@ -268,17 +268,15 @@ ht-degree: 1%
             <tr>
                <td style="background-color: #DEEBFF;">reasonType</td>
                <td>
-                  'actionName'을 설명하는 사용된 이유 유형입니다.
+                  'actionName'을 설명하는 이유 유형입니다.
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
                   <ul>
-                    <li><b>없음</b></li>
-                    <li><b>인증됨</b></li>
-                    <li><b>임시</b></li>
-                    <li><b>성능 저하</b></li>
-                    <li><b>authenticatedSSO</b></li>
-                    <li><b>pfs_fallback</b></li>
-                    <li><b>configuration_fallback</b></li>
+                    <li><b>없음</b><br/>인증을 계속하려면 클라이언트 응용 프로그램이 필요합니다.</li>
+                    <li><b>인증됨</b><br/>기본 액세스 흐름을 통해 클라이언트 응용 프로그램이 이미 인증되었습니다.</li>
+                    <li><b>임시</b><br/>임시 액세스 흐름을 통해 클라이언트 응용 프로그램이 이미 인증되었습니다.</li>
+                    <li><b>성능이 저하됨</b><br/>성능이 저하된 액세스 흐름을 통해 클라이언트 응용 프로그램이 이미 인증되었습니다.</li>
+                    <li><b>authenticatedSSO</b><br/>클라이언트 응용 프로그램이 SSO(Single Sign-On) 액세스 흐름을 통해 이미 인증되었습니다.</li>
                   </ul>
                <td><i>필수</i></td>
             </tr>
@@ -483,6 +481,8 @@ Content-Type: application/json;charset=UTF-8
     "serviceProvider": "REF30"
 }
 ```
+
+>[!ENDTABS]
 
 ### 4. 기본 또는 프로모션 TempPass를 사용하여 인증 세션 만들기(필요 없음)
 
