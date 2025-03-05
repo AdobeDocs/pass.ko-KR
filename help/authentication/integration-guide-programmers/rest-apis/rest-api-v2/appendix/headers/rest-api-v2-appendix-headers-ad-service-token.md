@@ -2,7 +2,7 @@
 title: 헤더 - AD-Service-Token
 description: REST API V2 - 헤더 - AD-Service-Token
 exl-id: 856f76fc-cde6-4b3f-81f7-deaa0df015dc
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 1%
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 ## 구문 {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <td style="background-color: #DEEBFF;" colspan="2"><b>광고 서비스 토큰</b>: &lt;unique_user_identifier&gt;</td>
    </tr>
@@ -47,7 +47,7 @@ ht-degree: 1%
 
 `JWT`에 다음 특성이 있습니다.
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <th style="background-color: #EFF2F7; width: 15%;">속성</th>
       <th style="background-color: #EFF2F7;">설명</th>
@@ -62,7 +62,7 @@ ht-degree: 1%
    </tr>
    <tr>
       <td>aud</td>
-      <td>Adobe 대상이며, "대상자"여야 합니다.</td>
+      <td>대상. 대상은 "Adobe"이어야 합니다.</td>
    </tr>
    <tr>
       <td>iat</td>

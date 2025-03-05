@@ -2,9 +2,9 @@
 title: 헤더 - X-Device-Info
 description: REST API V2 - 헤더 - X-Device-Info
 exl-id: 0ef25e06-86de-427a-a938-7ba3817f0d5e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
-source-wordcount: '1085'
+source-wordcount: '1122'
 ht-degree: 2%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 2%
 
 ## 구문 {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <td style="background-color: #DEEBFF;" colspan="2"><b>X-Device-Info</b>: &lt;device_information&gt;</td>
    </tr>
@@ -41,7 +41,7 @@ ht-degree: 2%
 
 다음 표에 필요한 것으로 표시된 특성을 적어도 포함하는 JSON 요소의 `Base64-encoded` 값입니다.
 
-<table>
+<table style="table-layout:auto">
     <tr>
         <th style="background-color: #EFF2F7; width: 15%;">현재 상태</th>
         <th style="background-color: #EFF2F7; width: 15%;">키</th>
@@ -721,3 +721,7 @@ private JSONObject computeClientInformation() {
 | 키 | Source | 값(예) |
 |---------------|-----------|-----------------|
 | applicationId | 하드코드 | REF30 |
+
+### 기타 {#others}
+
+설명서에서 다루지 않는 장치 플랫폼의 경우 클라이언트 정보(장치, 연결 및 애플리케이션)는 일반적으로 장치의 하드웨어 및 OS 설명서에 지정된 사용 가능한 하드웨어 및 운영 체제(OS) 속성에 연결되어야 합니다.

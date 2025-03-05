@@ -2,9 +2,9 @@
 title: SSO(Single Sign-On) - 플랫폼 ID - 흐름
 description: REST API V2 - Single Sign-On - 플랫폼 ID - 흐름
 exl-id: 5200e851-84e8-4cb4-b068-63b91a2a8945
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
-source-wordcount: '1830'
+source-wordcount: '1836'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,12 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 
 응용 프로그램은 이 고유한 플랫폼 식별자 페이로드를 지정하는 모든 요청에 대해 `Adobe-Subject-Token` 헤더의 일부로 포함합니다.
 
-`Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
+`Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
+
+>[!MORELIKETHIS]
+> 
+> * [Amazon SSO Cookbook](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+> * [Roku SSO Cookbook](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
 
 ## 플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 수행 {#perform-authentication-through-single-sign-on-using-platform-identity}
 
@@ -34,11 +39,11 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 흐름을 수행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
 * 플랫폼은 동일한 장치 또는 플랫폼의 모든 응용 프로그램에서 일관된 정보를 `JWS` 또는 `JWE` 페이로드로 반환하는 ID 서비스 또는 라이브러리를 제공해야 합니다.
-* 첫 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 `JWS` 또는 `JWE` 페이로드를 포함해야 합니다.
-* 첫 번째 스트리밍 애플리케이션은 MVPD를 선택해야 합니다.
-* 제1 스트리밍 애플리케이션은 선택된 MVPD로 로그인하기 위해 인증 세션을 개시해야 한다.
-* 첫 번째 스트리밍 애플리케이션은 사용자 에이전트에서 선택한 MVPD로 인증해야 합니다.
-* 두 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS` 또는 `JWE` 페이로드를 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 포함해야 합니다.
+* 첫 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 `JWS` 또는 `JWE` 페이로드를 포함해야 합니다.
+* 첫 번째 스트리밍 애플리케이션은 MVPD을 선택해야 합니다.
+* 첫 번째 스트리밍 애플리케이션은 선택한 MVPD으로 로그인하기 위한 인증 세션을 시작해야 합니다.
+* 첫 번째 스트리밍 애플리케이션은 사용자 에이전트에서 선택한 MVPD을 인증해야 합니다.
+* 두 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS` 또는 `JWE` 페이로드를 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 포함해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -46,8 +51,8 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 >
 > <br/>
 > 
-> * 제1 스트리밍 애플리케이션은 MVPD를 선택하는 사용자 상호작용을 지원한다.
-> * 제1 스트리밍 애플리케이션은 사용자 에이전트에서 선택된 MVPD와 인증하기 위한 사용자 상호 작용을 지원한다.
+> * 상기 제1 스트리밍 애플리케이션은 MVPD 선택을 위한 사용자 인터랙션을 지원한다.
+> * 제1 스트리밍 애플리케이션은 사용자 에이전트에서 선택된 MVPD을 인증하기 위한 사용자 상호작용을 지원한다.
 
 ### 워크플로 {#workflow-perform-authentication-through-single-sign-on-using-platform-identity}
 
@@ -79,7 +84,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
    >
    > <br/>
    > 
-   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
+   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
 
 1. **다음 작업을 나타냅니다.** 세션 끝점 응답에는 다음 작업에 대해 첫 번째 스트리밍 응용 프로그램을 안내하는 데 필요한 데이터가 포함됩니다.
 
@@ -103,7 +108,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
    * `actionName` 특성이 &quot;authenticate&quot;로 설정되어 있습니다.
    * `actionType` 특성이 &quot;interactive&quot;로 설정되어 있습니다.
 
-   Adobe Pass 백엔드가 올바른 프로필을 식별하지 않는 경우 첫 번째 스트리밍 애플리케이션은 사용자 에이전트를 열어 제공된 `url`을(를) 로드하고 인증 끝점에 요청합니다. 이 플로우는 여러 리디렉션을 포함할 수 있으며, 궁극적으로 사용자를 MVPD 로그인 페이지로 유도하고 유효한 자격 증명을 제공합니다.
+   Adobe Pass 백엔드가 올바른 프로필을 식별하지 않는 경우 첫 번째 스트리밍 애플리케이션은 사용자 에이전트를 열어 제공된 `url`을(를) 로드하고 인증 끝점에 요청합니다. 이 흐름에는 여러 리디렉션이 포함될 수 있으므로 궁극적으로 사용자를 MVPD 로그인 페이지로 유도하고 유효한 자격 증명을 제공합니다.
 
 1. **MVPD 인증 완료:** 인증 흐름이 성공하면 사용자 에이전트 상호 작용이 Adobe Pass 백엔드에 일반 프로필을 저장하고 제공된 `redirectUrl`에 도달합니다.
 
@@ -147,7 +152,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
    >
    > <br/>
    > 
-   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
+   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
 
 1. **플랫폼 식별자 검색:** 두 번째 스트리밍 애플리케이션은 Adobe Pass 시스템 외부의 ID 서비스 또는 라이브러리를 호출하여 고유한 플랫폼 식별자와 연결된 `JWS` 또는 `JWE` 페이로드를 가져옵니다.
 
@@ -171,7 +176,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
    >
    > <br/>
    > 
-   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
+   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
 
 1. **SSO(Single Sign-On) 프로필 찾기:** Adobe Pass 서버는 수신된 매개 변수 및 헤더를 기반으로 올바른 SSO(Single Sign-On) 프로필을 식별합니다.
 
@@ -199,7 +204,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
    >
    > <br/>
    > 
-   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
+   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
 
 ## 플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통해 인증 결정 검색{#performing-authorization-flow-using-platform-identity-single-sign-on-method}
 
@@ -208,7 +213,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 흐름을 수행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
 * 플랫폼은 동일한 장치 또는 플랫폼의 모든 응용 프로그램에서 일관된 정보를 `JWS` 또는 `JWE` 페이로드로 반환하는 ID 서비스 또는 라이브러리를 제공해야 합니다.
-* 두 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS` 또는 `JWE` 페이로드를 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 포함해야 합니다.
+* 두 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS` 또는 `JWE` 페이로드를 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 포함해야 합니다.
 * 두 번째 스트리밍 애플리케이션은 사용자가 선택한 리소스를 재생하기 전에 인증 결정을 검색해야 합니다.
 
 >[!IMPORTANT]
@@ -217,7 +222,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 > 
 > <br/>
 > 
-> * 첫 번째 스트리밍 응용 프로그램에서 인증을 수행했으며 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 요청 헤더에 올바른 값을 포함했습니다.
+> * 첫 번째 스트리밍 응용 프로그램에서 인증을 수행했으며 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 요청 헤더에 올바른 값을 포함했습니다.
 
 ### 워크플로 {#workflow-scenario-performing-authorization-flow-using-platform-identity-single-sign-on-method}
 
@@ -249,11 +254,11 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
    >
    > <br/>
    > 
-   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-주체-토큰](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
+   > `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-Subject-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
 
 1. **SSO(Single Sign-On) 프로필 찾기:** Adobe Pass 서버는 수신된 매개 변수 및 헤더를 기반으로 올바른 SSO(Single Sign-On) 프로필을 식별합니다.
 
-1. **요청된 리소스에 대한 MVPD 결정 검색:** Adobe Pass 서버가 MVPD 권한 부여 끝점을 호출하여 스트리밍 응용 프로그램에서 받은 특정 리소스에 대한 `Permit` 또는 `Deny` 결정을 가져옵니다.
+1. **요청된 리소스에 대한 MVPD 결정 검색:** Adobe Pass 서버가 MVPD 인증 끝점을 호출하여 스트리밍 응용 프로그램에서 받은 특정 리소스에 대한 `Permit` 또는 `Deny` 결정을 가져옵니다.
 
 1. **미디어 토큰이 있는 `Permit` 결정을 반환합니다.** Decisions Authorize 끝점 응답에 `Permit` 결정 및 미디어 토큰이 포함되어 있습니다.
 

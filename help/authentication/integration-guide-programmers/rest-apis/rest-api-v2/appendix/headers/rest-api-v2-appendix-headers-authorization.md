@@ -2,7 +2,7 @@
 title: 헤더 - 인증
 description: REST API V2 - 헤더 - 인증
 exl-id: 86917d7e-ffd9-4d34-8f9c-5a50083f85e6
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -24,7 +24,7 @@ Adobe Pass으로 보호된 API에 액세스하는 메커니즘에 대한 자세�
 
 ## 구문 {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <td style="background-color: #DEEBFF;" colspan="2"><b>인증</b>: 전달자 &lt;access_token&gt;</td>
    </tr>

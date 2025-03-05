@@ -2,9 +2,9 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 747c3d9b6de537be5e7e0a0244b2b301603d9b18
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
-source-wordcount: '6460'
+source-wordcount: '6744'
 ht-degree: 0%
 
 ---
@@ -24,10 +24,6 @@ REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authenticat
 [REST API V1](#migration-rest-api-v1-to-rest-api-v2) 또는 [SDK](#migration-sdk-to-rest-api-v2)에서 마이그레이션하는 기존 응용 프로그램이든 새 응용 프로그램이든 REST API V2를 통합해야 하는 응용 프로그램에서 작업하는 경우 이 섹션으로 시작하십시오.
 
 마이그레이션 세부 정보 및 단계에 대한 자세한 내용은 다음 섹션도 참조하십시오.
-
->[!MORELIKETHIS]
->
-> * [DCR(Dynamic Client Registration) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md#general-faqs)
 
 ### 등록 단계 FAQ {#registration-phase-faqs-general}
 
@@ -340,6 +336,10 @@ TV 공급자(신뢰할 수 있는) 결정에서 사용자가 액세스할 수 �
 
 #### 1. 인증 헤더의 값을 계산하는 방법 {#headers-faq1}
 
+>[!IMPORTANT]
+>
+> 클라이언트 응용 프로그램이 REST API V1에서 REST API V2로 마이그레이션하는 경우 클라이언트 응용 프로그램은 이전과 동일한 방법을 사용하여 `Bearer` 액세스 토큰 값을 계속 얻을 수 있습니다.
+
 [인증](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) 요청 헤더에 클라이언트 응용 프로그램에서 Adobe Pass으로 보호된 API에 액세스하는 데 필요한 `Bearer` 액세스 토큰이 포함되어 있습니다.
 
 인증 헤더 값은 등록 단계에서 Adobe Pass 인증에서 가져와야 합니다.
@@ -351,23 +351,70 @@ TV 공급자(신뢰할 수 있는) 결정에서 사용자가 액세스할 수 �
 * [액세스 토큰 API 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md)
 * [동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)
 
-클라이언트 응용 프로그램이 REST API V1에서 REST API V2로 마이그레이션하는 경우 클라이언트 응용 프로그램은 이전과 동일한 방법을 사용하여 `Bearer` 액세스 토큰을 가져올 수 있습니다.
-
 #### 2. AP-Device-Identifier 헤더의 값을 계산하는 방법 {#headers-faq2}
+
+>[!IMPORTANT]
+>
+> 클라이언트 애플리케이션이 REST API V1에서 REST API V2로 마이그레이션하는 경우 클라이언트 애플리케이션은 이전과 동일한 방법을 사용하여 디바이스 식별자 값을 계속 계산할 수 있습니다.
 
 [AP-Device-Identifier](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md) 요청 헤더에 클라이언트 응용 프로그램에서 만든 스트리밍 장치 식별자가 포함되어 있습니다.
 
-[AP-Device-Identifier](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md) 헤더 설명서는 다른 플랫폼에 대한 값을 계산하는 방법에 대한 몇 가지 예를 제공하지만, 클라이언트 애플리케이션은 자체 비즈니스 논리 및 요구 사항에 따라 다른 메서드를 사용하도록 선택할 수 있습니다.
-
-클라이언트 애플리케이션이 REST API V1에서 REST API V2로 마이그레이션하는 경우 클라이언트 애플리케이션은 이전과 동일한 방법을 사용하여 디바이스 식별자를 계속 계산할 수 있습니다.
+[AP-Device-Identifier](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md) 헤더 설명서는 값을 계산하는 방법에 대한 주요 플랫폼의 예를 제공하지만, 클라이언트 애플리케이션은 자체 비즈니스 논리 및 요구 사항에 따라 다른 메서드를 사용하도록 선택할 수 있습니다.
 
 #### 3. X-Device-Info 헤더에 대한 값을 계산하는 방법 {#headers-faq3}
 
+>[!IMPORTANT]
+>
+> 클라이언트 애플리케이션이 REST API V1에서 REST API V2로 마이그레이션하는 경우 클라이언트 애플리케이션은 이전과 동일한 방법을 사용하여 디바이스 정보 값을 계속 계산할 수 있습니다.
+
 [X-Device-Info](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) 요청 헤더에 실제 스트리밍 장치와 관련된 클라이언트 정보(장치, 연결 및 응용 프로그램)가 포함되어 있습니다.
 
-[X-Device-Info](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) 헤더 설명서는 다양한 플랫폼에 대한 값을 계산하는 방법에 대한 몇 가지 예를 제공하지만, 클라이언트 애플리케이션은 자체 비즈니스 논리 및 요구 사항에 따라 다른 메서드를 사용하도록 선택할 수 있습니다.
+[X-Device-Info](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) 헤더 설명서는 값을 계산하는 방법에 대한 주요 플랫폼에 대한 예를 제공하지만, 클라이언트 애플리케이션은 자체 비즈니스 논리 및 요구 사항에 따라 다른 메서드를 사용하도록 선택할 수 있습니다.
 
-클라이언트 애플리케이션이 REST API V1에서 REST API V2로 마이그레이션하는 경우 클라이언트 애플리케이션은 이전과 동일한 방법을 사용하여 디바이스 정보를 계속 계산할 수 있습니다.
++++
+
+### 기타 FAQ {#misc-faqs-general}
+
++++기타 FAQ
+
+#### 1. REST API V2 요청 및 응답을 탐색하고 API를 테스트할 수 있습니까? {#misc-faq1}
+
+예.
+
+전용 [Adobe Developer](https://developer.adobe.com/adobe-pass/) 웹 사이트를 통해 REST API V2를 살펴볼 수 있습니다. Adobe Developer 웹 사이트에서는 다음에 대한 무제한 액세스를 제공합니다.
+
+* [DCR API](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
+* [REST API V2](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)
+
+[REST API V2](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)과(와) 상호 작용하려면 [DCR API](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)을(를) 통해 얻은 `Bearer` 액세스 토큰과 함께 [Authorization](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) 헤더를 포함해야 합니다.
+
+[DCR API](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)을(를) 사용하려면 REST API V2 범위가 포함된 소프트웨어 문이 필요합니다. 자세한 내용은 [DCR(동적 클라이언트 등록) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md) 문서를 참조하십시오.
+
+#### 2. OpenAPI 지원을 통한 API 개발 도구를 사용하여 REST API V2 요청 및 응답을 탐색할 수 있습니까? {#misc-faq2}
+
+예.
+
+[Adobe Developer](https://developer.adobe.com/adobe-pass/) 웹 사이트에서 [DCR API](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/) 및 [REST API V2](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)에 대한 OpenAPI 사양 파일을 다운로드할 수 있습니다.
+
+OpenAPI 사양 파일을 다운로드하려면 다운로드 버튼을 클릭하여 다음 파일을 로컬 시스템에 저장합니다.
+
+* [DCR API JSON](https://developer.adobe.com/adobe-pass/dcrApi.json)
+* [REST API V2 JSON](https://developer.adobe.com/adobe-pass/restApiV2.json)
+
+그런 다음 이러한 파일을 기본 API 개발 도구로 가져와서 REST API V2 요청 및 응답을 탐색하고 API를 테스트할 수 있습니다.
+
+#### 3. https://sp.auth-staging.adobe.com/apitest/api.html에 호스팅된 기존 API 테스트 도구를 계속 사용할 수 있습니까? {#misc-faq3}
+
+아니.
+
+REST API V2로 마이그레이션하는 클라이언트 애플리케이션은 https://developer.adobe.com/adobe-pass/에 호스팅된 새 테스트 도구를 사용해야 합니다. Adobe Developer 웹 사이트에서는 다음에 대한 무제한 액세스를 제공합니다.
+
+* [DCR API](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)
+* [REST API V2](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)
+
+[REST API V2](https://developer.adobe.com/adobe-pass/api/rest_api_v2/interactive/)과(와) 상호 작용하려면 [DCR API](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)을(를) 통해 얻은 `Bearer` 액세스 토큰과 함께 [Authorization](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) 헤더를 포함해야 합니다.
+
+[DCR API](https://developer.adobe.com/adobe-pass/api/dcr_api/interactive/)을(를) 사용하려면 REST API V2 범위가 포함된 소프트웨어 문이 필요합니다. 자세한 내용은 [DCR(동적 클라이언트 등록) FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md) 문서를 참조하십시오.
 
 +++
 

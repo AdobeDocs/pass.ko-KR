@@ -2,7 +2,7 @@
 title: 헤더 - AP-Partner-Framework-Status
 description: REST API V2 - 헤더 - AP-Partner-Framework-Status
 exl-id: f589d948-e23e-43d4-81c2-8db0e7a40e93
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '388'
 ht-degree: 0%
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## 구문 {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <td style="background-color: #DEEBFF;" colspan="2"><b>AP-Partner-Framework-Status</b>: &lt;partner_framework_status_information&gt;</td>
    </tr>
@@ -41,7 +41,7 @@ ht-degree: 0%
 
 다음 특성을 포함하는 JSON 요소의 `Base64-encoded` 값:
 
-<table>
+<table style="table-layout:auto">
    <tr>
       <th style="background-color: #EFF2F7; width: 15%;">속성</th>
       <th style="background-color: #EFF2F7;"></th>
@@ -68,10 +68,10 @@ ht-degree: 0%
                   가능한 값은 다음과 같습니다.
                   <br/>
                   <ul>
-                     <li>granted - 사용자가 애플리케이션에서 구독 정보에 액세스할 수 있도록 했습니다.</li>
-                     <li>거부됨 - 사용자가 구독 정보 액세스 신청을 거부했습니다.</li>
-                     <li>보류 중 - 사용자가 응용 프로그램이 구독 정보에 액세스할 수 있도록 허용하지 않았습니다.</li>
-                     <li>notDetermined - 애플리케이션이 구독 정보에 액세스할 수 없습니다.</li>
+                     <li><b>허가됨</b><br/>사용자가 응용 프로그램에서 구독 정보에 액세스하도록 허용했습니다.</li>
+                     <li><b>거부됨</b><br/>사용자가 구독 정보에 액세스하기 위한 응용 프로그램을 거부했습니다.</li>
+                     <li><b>보류 중</b><br/>사용자가 응용 프로그램이 구독 정보에 액세스할 수 있도록 허용하지 않았습니다.</li>
+                     <li><b>notDetermined</b><br/>응용 프로그램에서 구독 정보에 액세스할 수 없습니다.</li>
                   </ul>
                </td>
             </tr>
@@ -122,7 +122,7 @@ ht-degree: 0%
                <td>
                   필수 속성입니다.
                   <br/><br/>
-                  파트너 프레임워크 수준에서 인증 흐름 동안 사용된 MVPD를 식별하는 mappingId입니다.
+                  파트너 프레임워크 수준에서 인증 흐름 동안 사용된 MVPD을 식별하는 mappingId입니다.
                </td>
             </tr>
             <tr>
@@ -130,7 +130,7 @@ ht-degree: 0%
                <td>
                   필수 속성입니다.
                   <br/><br/>
-                  사용자가 파트너 프레임워크 수준에서 지원되는 MVPD를 사용하여 성공적으로 로그인한 경우 이 날짜가 인증된 사용자 프로필의 만료 날짜입니다.
+                  사용자가 파트너 프레임워크 수준에서 지원되는 MVPD을 사용하여 성공적으로 기록한 경우 인증된 사용자 프로필의 만료 날짜입니다.
                </td>
             </tr>
             <tr>

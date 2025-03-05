@@ -1,15 +1,15 @@
 ---
-title: 헤더 - Adobe-주체-토큰
-description: REST API V2 - 헤더 - Adobe-주체-토큰
+title: 헤더 - Adobe-Subject-Token
+description: REST API V2 - 헤더 - Adobe-Subject-Token
 exl-id: 906d88f4-3b8f-491a-ab58-8e63d3b958d8
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 1%
 
 ---
 
-# 헤더 - Adobe-주체-토큰 {#header-adobe-subject-token}
+# 헤더 - Adobe-Subject-Token {#header-adobe-subject-token}
 
 >[!NOTE]
 >
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 ## 개요 {#overview}
 
-<b>Adobe-Subject-Token</b> 요청 헤더에 ID 서비스 또는 Adobe Pass 인증 시스템 외부에서 실행 중인 라이브러리에서 얻은 고유한 플랫폼 식별자 `JWS` 또는 `JWE`이(가) 포함되어 있습니다.
+<b>Adobe-Subject-Token</b> 요청 헤더에 Adobe Pass 인증 시스템 외부에서 실행 중인 ID 서비스 또는 라이브러리에서 얻은 고유한 플랫폼 식별자 `JWS` 또는 `JWE`이(가) 포함되어 있습니다.
 
 이 헤더는 Platform Identity 메서드를 활용하는 SSO(Single Sign-On) 지원 흐름에서 사용하도록 설계되었습니다.
 
@@ -25,9 +25,9 @@ ht-degree: 1%
 
 ## 구문 {#syntax}
 
-<table>
+<table style="table-layout:auto">
    <tr>
-      <td style="background-color: #DEEBFF;" colspan="2"><b>Adobe-주체-토큰</b>: &lt;unique_platform_identifier&gt;</td>
+      <td style="background-color: #DEEBFF;" colspan="2"><b>Adobe-Subject-Token</b>: &lt;unique_platform_identifier&gt;</td>
    </tr>
    <tr>
       <td>헤더 유형</td>
