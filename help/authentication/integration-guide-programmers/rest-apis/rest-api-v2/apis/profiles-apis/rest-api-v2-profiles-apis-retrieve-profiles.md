@@ -2,9 +2,9 @@
 title: 프로필 검색
 description: REST API V2 - 프로필 검색
 exl-id: 72922aa8-95ca-48dc-8523-e335802fc366
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '814'
+source-wordcount: '824'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)도 방문하십시오.
 
 ## 요청 {#request}
 
@@ -87,9 +91,9 @@ ht-degree: 1%
       <td>선택 사항</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-주체-토큰</td>
+      <td style="background-color: #DEEBFF;">Adobe-Ject-Token</td>
       <td>
-        플랫폼 ID 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-주체-토큰</a> 헤더 설명서에 설명되어 있습니다.
+        플랫폼 ID 메서드에 대한 SSO(Single Sign-On) 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-Subject-Token</a> 헤더 설명서에 설명되어 있습니다.
         <br/><br/>
         플랫폼 ID를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md">플랫폼 ID 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>

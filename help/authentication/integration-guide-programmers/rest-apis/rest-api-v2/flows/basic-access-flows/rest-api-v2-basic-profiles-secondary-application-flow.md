@@ -2,9 +2,9 @@
 title: 기본 프로필 - 보조 애플리케이션 - 흐름
 description: REST API V2 - 기본 프로필 - 보조 애플리케이션 - 흐름
 exl-id: 1fcefcfa-7534-4b85-b3b5-df513685d66b
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '408'
+source-wordcount: '418'
 ht-degree: 0%
 
 ---
@@ -19,6 +19,10 @@ ht-degree: 0%
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
 
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)도 방문하십시오.
+
 Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 보조 응용 프로그램에서 활성 사용자 로그인에 대한 정보에 액세스할 수 있습니다.
 
 기본 프로필 흐름을 사용하면 다음 시나리오를 쿼리할 수 있습니다.
@@ -31,7 +35,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 보
 
 특정 인증 코드에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
-* MVPD와 대화형 인증을 수행하는 데 사용되는 `code`이(가) 있는 보조 응용 프로그램에서 특정 인증 코드에 대한 프로필을 검색하려고 합니다.
+* MVPD과의 대화형 인증을 수행하는 데 사용되는 `code`이(가) 있는 보조 응용 프로그램에서 특정 인증 코드에 대한 프로필을 검색하려고 합니다.
 
 ### 워크플로 {#workflow-retrieve-profile-for-specific-code}
 

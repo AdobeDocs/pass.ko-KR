@@ -2,9 +2,9 @@
 title: 특정 코드에 대한 프로필 검색
 description: REST API V2 - 특정 코드에 대한 프로필 검색
 exl-id: d6ead7d5-de5f-4033-8115-980953a370c0
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '701'
+source-wordcount: '711'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)도 방문하십시오.
 
 ## 요청 {#request}
 
@@ -127,7 +131,7 @@ ht-degree: 1%
       <td>403</td>
       <td>금지됨</td>
       <td>
-        임시 액세스 TTL(time-to-live)이 만료되었거나 최대 리소스 수를 초과했습니다. 클라이언트는 일반 MVPD를 사용하여 기본 인증 흐름을 시작하도록 사용자에게 표시해야 합니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        임시 액세스 TTL(time-to-live)이 만료되었거나 최대 리소스 수를 초과했습니다. 클라이언트는 일반 MVPD을 사용하여 기본 인증 흐름을 시작하도록 사용자를 표시해야 합니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr> 
    <tr>

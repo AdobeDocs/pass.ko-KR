@@ -2,9 +2,9 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 871afc4e7ec04d62590dd574bf4e28122afc01b6
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '6963'
+source-wordcount: '8198'
 ht-degree: 0%
 
 ---
@@ -123,7 +123,51 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 
 인증 단계는 클라이언트 응용 프로그램에서 컨텐츠를 재생해야 할 때 사전 인증 단계 또는 인증 단계에 대한 필수 단계 역할을 합니다.
 
-#### 2. 사용자가 이미 인증되었는지 클라이언트 애플리케이션이 어떻게 알 수 있습니까? {#authentication-phase-faq2}
+#### 2. 인증 세션은 무엇이며 얼마나 오래 유효합니까? {#authentication-phase-faq2}
+
+인증 세션은 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#session) 설명서에 정의된 용어입니다.
+
+인증 세션은 세션 끝점에서 검색할 수 있는 시작된 인증 프로세스에 대한 정보를 저장합니다.
+
+인증 세션은 `notAfter` 타임스탬프가 문제 발생 시 지정한 제한적이고 짧은 시간 동안 유효하며, 이는 사용자가 흐름을 다시 시작해야 하기 전에 인증 프로세스를 완료해야 하는 시간을 나타냅니다.
+
+클라이언트 애플리케이션은 인증 프로세스를 진행하는 방법을 알기 위해 인증 세션 응답을 사용할 수 있다. 임시 액세스, 액세스 성능 저하 또는 사용자가 이미 인증된 경우와 같이 사용자를 인증할 필요가 없는 경우가 있습니다.
+
+자세한 내용은 다음 문서를 참조하십시오.
+
+* [인증 세션 API 만들기](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+* [인증 세션 API 다시 시작](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
+* [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
+* [보조 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
+
+#### 3. 인증 코드는 무엇이며 얼마나 오래 유효합니까? {#authentication-phase-faq3}
+
+인증 코드는 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#code) 설명서에 정의된 용어입니다.
+
+인증 코드는 사용자가 인증 프로세스를 시작할 때 생성되는 고유한 값을 저장하며, 프로세스가 완료되거나 인증 세션이 만료될 때까지 사용자의 인증 세션을 고유하게 식별합니다.
+
+인증 코드는 `notAfter` 타임스탬프가 인증 세션을 시작하는 시점에 지정된 제한되고 짧은 시간 동안 유효하며, 이는 사용자가 흐름을 다시 시작해야 하기 전에 인증 프로세스를 완료해야 하는 시간을 나타냅니다.
+
+클라이언트 애플리케이션은 인증 코드를 사용하여 사용자가 성공적으로 인증을 완료했는지 여부를 확인하고 일반적으로 폴링 메커니즘을 통해 사용자의 프로필 정보를 검색할 수 있습니다.
+
+또한 클라이언트 애플리케이션은 인증 세션이 만료되지 않은 것을 고려하여 사용자가 동일한 장치 또는 두 번째(화면) 장치에서 인증 프로세스를 완료하거나 다시 시작할 수 있도록 인증 코드를 사용할 수 있습니다.
+
+자세한 내용은 다음 문서를 참조하십시오.
+
+* [인증 세션 API 만들기](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
+* [인증 세션 API 다시 시작](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
+* [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
+* [보조 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
+
+#### 4. 클라이언트 애플리케이션은 사용자가 유효한 인증 코드를 입력했는지, 인증 세션이 아직 만료되지 않았는지 어떻게 알 수 있습니까? {#authentication-phase-faq4}
+
+클라이언트 애플리케이션은 인증 세션을 재개하거나 인증 코드와 연관된 인증 세션 정보를 검색할 책임이 있는 세션 엔드포인트 중 하나에 요청을 전송하여 보조(화면) 애플리케이션에서 사용자가 입력한 인증 코드의 유효성을 검사할 수 있습니다.
+
+입력한 인증 코드가 잘못되었거나 인증 세션이 만료된 경우 클라이언트 응용 프로그램에서 [오류](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2)을(를) 받습니다.
+
+자세한 내용은 [인증 세션 다시 시작](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md) 및 [인증 세션 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) 문서를 참조하십시오.
+
+#### 5. 사용자가 이미 인증되었는지 클라이언트 애플리케이션이 어떻게 알 수 있습니까? {#authentication-phase-faq5}
 
 클라이언트 애플리케이션은 사용자가 이미 인증되었는지 확인할 수 있는 다음 끝점 중 하나를 쿼리하고 프로필 정보를 반환할 수 있습니다.
 
@@ -136,7 +180,128 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 * [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
 * [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
 
-#### 3. 클라이언트 애플리케이션은 어떻게 사용자의 메타데이터 정보를 얻을 수 있습니까? {#authentication-phase-faq3}
+#### 6. 프로필은 무엇이며 얼마나 오래 유효합니까? {#authentication-phase-faq6}
+
+프로필은 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#profile) 설명서에 정의된 용어입니다.
+
+프로필에는 사용자의 인증 유효성, 메타데이터 정보 및 프로필 끝점에서 검색할 수 있는 더 많은 정보가 저장됩니다.
+
+클라이언트 애플리케이션은 프로파일을 사용하여 사용자의 인증 상태를 알고, 사용자 메타데이터 정보에 액세스하고, 인증에 사용되는 방법 또는 ID를 제공하는 데 사용되는 엔티티를 찾을 수 있습니다.
+
+자세한 내용은 다음 문서를 참조하십시오.
+
+* [프로필 엔드포인트 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
+* [특정 MVPD API의 프로필 엔드포인트](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
+* [특정(인증) 코드 API의 프로필 끝점](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
+* [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
+* [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
+
+`notAfter` 타임스탬프에서 쿼리할 때 지정된 제한된 기간 동안 프로필이 유효합니다. 이는 사용자가 인증 단계를 다시 거치기 전에 유효한 인증을 받는 시간을 나타냅니다.
+
+인증(authN) [TTL](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#ttl)이라고 하는 이 제한된 기간은 조직 관리자 중 한 사람이나 사용자를 대신하는 Adobe Pass 인증 담당자가 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 보고 변경할 수 있습니다.
+
+자세한 내용은 [TVE 대시보드 통합 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) 설명서를 참조하십시오.
+
+#### 7. 클라이언트 애플리케이션이 사용자의 프로필 정보를 영구 저장소에 캐시해야 합니까? {#authentication-phase-faq7}
+
+클라이언트 애플리케이션은 불필요한 요청을 방지하고 다음 측면을 고려하여 사용자 경험을 개선하기 위해 사용자의 프로필 정보를 영구 저장소에 캐시해야 합니다.
+
+| 속성 | 사용자 경험 |
+|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `attributes` | 클라이언트 애플리케이션은 이를 사용하여 다양한 [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) 키(예: `zip`, `maxRating` 등)를 기반으로 사용자 경험을 개인화할 수 있습니다. |
+| `mvpd` | 클라이언트 애플리케이션은 이를 사용하여 사용자의 선택된 TV 공급자를 추적할 수 있다.<br/><br/>현재 사용자 프로필이 만료되면 클라이언트 응용 프로그램에서 기억된 MVPD 선택을 사용하여 사용자에게 확인을 요청할 수 있습니다. |
+| `notAfter` | 클라이언트 애플리케이션은 이를 사용하여 사용자 프로필 만료 날짜를 추적하고 만료되면 재인증 프로세스를 트리거하여 사전 인증 또는 인증 단계 중 오류를 방지할 수 있습니다.<br/><br/>클라이언트 응용 프로그램 오류 처리에서 [authenticated_profile_expired](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) 오류 코드를 처리할 수 있어야 합니다. 이는 클라이언트 응용 프로그램에서 사용자를 다시 인증해야 함을 나타냅니다. |
+
+#### 8. 클라이언트 애플리케이션이 재인증 없이 사용자의 프로필을 확장할 수 있습니까? {#authentication-phase-faq8}
+
+아니.
+
+사용자 프로필의 만료는 MVPD와 함께 설정된 인증 TTL에 의해 결정되므로 사용자 상호 작용 없이 사용자 프로필을 유효성 이상으로 확장할 수 없습니다.
+
+따라서 클라이언트 애플리케이션은 사용자에게 다시 인증하고 MVPD 로그인 페이지와 상호 작용하여 시스템에 대한 프로필을 새로 고치도록 요청해야 합니다.
+
+그러나 HBA([홈 기반 인증](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md))를 지원하는 MVPD의 경우 사용자는 자격 증명을 입력할 필요가 없습니다.
+
+#### 9. 사용 가능한 각 프로필 끝점의 사용 사례는 무엇입니까? {#authentication-phase-faq9}
+
+프로필 엔드포인트는 클라이언트 애플리케이션이 사용자의 인증 상태를 알고, 사용자 메타데이터 정보에 액세스하고, 인증에 사용되는 방법 또는 ID를 제공하는 데 사용되는 엔티티를 찾을 수 있도록 설계되었습니다.
+
+각 끝점은 다음과 같이 특정 사용 사례에 적합합니다.
+
+| API | 설명 | 사용 사례 |
+|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| [프로필 끝점 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) | 모든 사용자 프로필을 검색합니다. | **사용자가 처음으로 클라이언트 응용 프로그램을 엽니다**<br/><br/>&#x200B;이 시나리오에서는 클라이언트 응용 프로그램에 사용자가 선택한 MVPD 식별자가 영구 저장소에 캐시되지 않습니다.<br/><br/>따라서 사용 가능한 모든 사용자 프로필을 검색하도록 단일 요청을 보냅니다. |
+| [특정 MVPD API에 대한 프로필 끝점](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) | 특정 MVPD과 연결된 사용자 프로필을 검색합니다. | **사용자가 이전 방문에서 인증한 후 클라이언트 응용 프로그램으로 돌아갑니다**<br/><br/>&#x200B;이 경우 클라이언트 응용 프로그램에는 이전에 선택한 사용자의 MVPD 식별자가 영구 저장소에 캐시되어 있어야 합니다.<br/><br/>따라서 특정 MVPD에 대한 사용자 프로필을 검색하기 위한 단일 요청을 보냅니다. |
+| [특정(인증) 코드 API에 대한 프로필 끝점](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) | 특정 인증 코드와 연관된 사용자 프로필을 검색합니다. | **사용자가 인증 프로세스를 시작합니다**<br/><br/>&#x200B;이 시나리오에서는 클라이언트 응용 프로그램이 사용자가 인증을 완료했는지 확인하고 프로필 정보를 검색해야 합니다.<br/><br/>따라서 인증 코드와 연결된 사용자 프로필을 검색하는 폴링 메커니즘이 시작됩니다. |
+
+#### 10. 사용자에게 여러 MVPD 프로필이 있는 경우 클라이언트 애플리케이션은 어떻게 해야 합니까? {#authentication-phase-faq10}
+
+사용자에게 여러 MVPD 프로필이 있는 경우 클라이언트 애플리케이션은 이 시나리오를 처리하기 위한 최상의 접근 방식을 결정해야 합니다.
+
+클라이언트 애플리케이션은 원하는 MVPD 프로필을 선택하라는 메시지를 사용자에게 보내거나, 응답에서 첫 번째 사용자 프로필을 선택하거나 유효 기간이 가장 긴 사용자 프로필을 선택하는 것과 같이 자동으로 선택하도록 선택할 수 있다.
+
+#### 11. 사용자 프로필이 만료되면 어떻게 됩니까? {#authentication-phase-faq11}
+
+사용자 프로필이 만료되면 프로필 끝점의 응답에 더 이상 포함되지 않습니다.
+
+Profiles 엔드포인트가 빈 프로필 맵 응답을 반환하는 경우 클라이언트 애플리케이션이 새 인증 세션을 만들고 사용자에게 다시 인증하라는 메시지를 표시해야 합니다.
+
+자세한 내용은 [인증 세션 API 만들기](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 설명서를 참조하세요.
+
+#### 12. 언제 사용자 프로필이 유효하지 않게 됩니까? {#authentication-phase-faq12}
+
+사용자 프로필은 다음 시나리오에서 유효하지 않게 됩니다.
+
+* 프로필 끝점 응답의 `notAfter` 타임스탬프에 표시된 대로 인증 TTL이 만료되는 경우.
+* 클라이언트 응용 프로그램에서 [AP-Device-Identifier](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md) 헤더 값을 변경하는 경우.
+* 클라이언트 응용 프로그램이 [인증](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-authorization.md) 헤더 값을 검색하는 데 사용되는 클라이언트 자격 증명을 업데이트할 때.
+* 클라이언트 응용 프로그램이 클라이언트 자격 증명을 얻는 데 사용되는 소프트웨어 문을 취소하거나 업데이트할 때.
+
+#### 13. 클라이언트 애플리케이션이 언제 폴링 메커니즘을 시작해야 합니까? {#authentication-phase-faq13}
+
+효율성을 보장하고 불필요한 요청을 방지하기 위해 클라이언트 애플리케이션은 다음 조건에서 폴링 메커니즘을 시작해야 합니다.
+
+**기본(화면) 응용 프로그램 내에서 수행된 인증**
+
+브라우저 구성 요소가 [세션](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 끝점 요청에서 `redirectUrl` 매개 변수에 대해 지정된 URL을 로드한 후 사용자가 최종 대상 페이지에 도달하면 기본(스트리밍) 응용 프로그램에서 폴링을 시작해야 합니다.
+
+**보조(화면) 응용 프로그램 내에서 수행된 인증**
+
+기본(스트리밍) 응용 프로그램은 사용자가 인증 프로세스를 시작하는 즉시([세션](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 끝점 응답을 받고 인증 코드를 사용자에게 표시한 후) 폴링을 시작해야 합니다.
+
+#### 14. 클라이언트 애플리케이션이 폴링 메커니즘을 언제 중지해야 합니까? {#authentication-phase-faq14}
+
+효율성을 보장하고 불필요한 요청을 방지하기 위해 클라이언트 애플리케이션은 다음 조건에서 폴링 메커니즘을 중지해야 합니다.
+
+**인증 성공**
+
+사용자의 프로필 정보가 성공적으로 검색되어 인증 상태가 확인됩니다. 이 시점에서는 더 이상 폴링이 필요하지 않습니다.
+
+**인증 세션 및 코드 만료**
+
+인증 세션 및 코드가 [세션](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 끝점 응답의 `notAfter` 타임스탬프에 표시된 대로 만료됩니다. 이 경우 사용자는 인증 프로세스를 다시 시작해야 하며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
+
+**새 인증 코드가 생성됨**
+
+사용자가 기본(화면) 장치에서 새 인증 코드를 요청하면 기존 세션이 더 이상 유효하지 않으며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
+
+#### 15. 클라이언트 애플리케이션이 폴링 메커니즘에 사용해야 하는 호출 사이의 간격은 얼마입니까? {#authentication-phase-faq15}
+
+효율성을 보장하고 불필요한 요청을 방지하기 위해 클라이언트 애플리케이션은 다음 조건에서 폴링 메커니즘 빈도를 구성해야 합니다.
+
+| **기본(화면) 응용 프로그램 내에서 수행된 인증** | **보조(화면) 응용 프로그램 내에서 수행된 인증** |
+|----------------------------------------------------------------------|----------------------------------------------------------------------|
+| 기본(스트리밍) 애플리케이션은 1~5초마다 폴링해야 합니다. | 기본(스트리밍) 애플리케이션은 3~5초마다 폴링해야 합니다. |
+
+#### 16. 클라이언트 응용 프로그램에서 보낼 수 있는 최대 폴링 요청 수는 얼마입니까? {#authentication-phase-faq16}
+
+클라이언트 응용 프로그램은 Adobe Pass 인증 [제한 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md#throttling-mechanism-limits)에 정의된 현재 제한을 준수해야 합니다.
+
+클라이언트 응용 프로그램 오류 처리는 클라이언트 응용 프로그램이 허용된 최대 요청 수를 초과했음을 나타내는 [429 요청이 너무 많음](/help/authentication/integration-guide-programmers/throttling-mechanism.md#throttling-mechanism-response) 오류 코드를 처리할 수 있어야 합니다.
+
+자세한 내용은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서를 참조하십시오.
+
+#### 17. 클라이언트 애플리케이션은 어떻게 사용자의 메타데이터 정보를 얻을 수 있습니까? {#authentication-phase-faq17}
 
 클라이언트 응용 프로그램은 [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) 정보를 프로필 정보의 일부로 반환할 수 있는 다음 끝점 중 하나를 쿼리할 수 있습니다.
 
@@ -144,74 +309,18 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 * [특정 MVPD API의 프로필 엔드포인트](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
 * [특정(인증) 코드 API의 프로필 끝점](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
 
+사용자가 인증되었는지 확인할 때 얻은 프로필 정보에 이미 포함되어 있으므로 클라이언트 애플리케이션은 사용자의 메타데이터 정보를 검색하기 위해 별도의 엔드포인트를 쿼리할 필요가 없습니다.
+
 자세한 내용은 다음 문서를 참조하십시오.
 
 * [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
 * [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
 
-#### 4. 인증 세션은 무엇이며 얼마나 오래 유효합니까? {#authentication-phase-faq4}
+#### 18. 클라이언트 애플리케이션은 성능 저하된 액세스를 어떻게 관리해야 합니까? {#authentication-phase-faq18}
 
-인증 세션은 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#session) 설명서에 정의된 용어입니다.
+조직에서 [degradation](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) 기능을 사용하려는 경우 클라이언트 응용 프로그램은 이러한 시나리오에서 REST API v2 끝점이 작동하는 방식에 대한 개요인 저하된 액세스 흐름을 처리해야 합니다.
 
-인증 세션은 세션 끝점에서 검색할 수 있는 시작된 인증 프로세스에 대한 정보를 저장합니다.
-
-인증 세션은 문제 발생 시점에 지정된 제한적이고 짧은 기간 동안 유효하며, 이는 사용자가 흐름을 다시 시작해야 하기 전에 인증 프로세스를 완료해야 하는 시간을 나타냅니다.
-
-클라이언트 애플리케이션은 인증 프로세스를 진행하는 방법을 알기 위해 인증 세션 응답을 사용할 수 있다. 임시 액세스, 액세스 성능 저하 또는 사용자가 이미 인증된 경우와 같이 사용자를 인증할 필요가 없는 경우가 있습니다.
-
-자세한 내용은 다음 문서를 참조하십시오.
-
-* [인증 세션 API 만들기](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
-* [인증 세션 API 다시 시작](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
-* [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
-* [보조 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
-
-#### 5. 인증 코드는 무엇이며 얼마나 오래 유효합니까? {#authentication-phase-faq5}
-
-인증 코드는 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#code) 설명서에 정의된 용어입니다.
-
-인증 코드는 사용자가 인증 프로세스를 시작할 때 생성되는 고유한 값을 저장하며, 프로세스가 완료되거나 인증 세션이 만료될 때까지 사용자의 인증 세션을 고유하게 식별합니다.
-
-인증 코드는 인증 세션을 시작하는 시점에 지정된 제한되고 짧은 기간 동안 유효하며, 이는 흐름을 다시 시작해야 하기 전에 사용자가 인증 프로세스를 완료해야 하는 시간을 나타냅니다.
-
-클라이언트 애플리케이션은 인증 세션이 만료되지 않은 것을 고려하여 사용자가 동일한 장치에서 또는 두 번째 장치에서 인증 프로세스를 완료하거나 다시 시작할 수 있도록 인증 코드를 사용할 수 있습니다.
-
-자세한 내용은 다음 문서를 참조하십시오.
-
-* [인증 세션 API 만들기](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)
-* [인증 세션 API 다시 시작](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md)
-* [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md)
-* [보조 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
-
-#### 6. 클라이언트 애플리케이션은 사용자가 유효한 인증 코드를 입력했는지, 인증 세션이 아직 만료되지 않았는지 어떻게 알 수 있습니까? {#authentication-phase-faq6}
-
-클라이언트 애플리케이션은 인증 코드와 연관된 인증 세션 정보를 검색할 책임이 있는 세션 엔드포인트에 요청을 전송하여 보조(화면) 애플리케이션에서 사용자가 입력한 인증 코드의 유효성을 검사할 수 있습니다.
-
-입력한 인증 코드가 잘못되었거나 인증 세션이 만료된 경우 클라이언트 응용 프로그램에서 [오류](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)을(를) 받습니다.
-
-자세한 내용은 [인증 세션 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) 설명서를 참조하세요.
-
-#### 7. 프로필은 무엇이며 얼마나 오래 유효합니까? {#authentication-phase-faq7}
-
-프로필은 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#profile) 설명서에 정의된 용어입니다.
-
-프로필에는 사용자의 인증 유효성, 메타데이터 정보 및 프로필 끝점에서 검색할 수 있는 더 많은 정보가 저장됩니다.
-
-클라이언트 애플리케이션은 프로파일을 사용하여 사용자의 인증 상태를 알거나, 사용자 메타데이터 정보에 액세스하거나, 인증에 사용되는 방법을 찾을 수 있다.
-
-자세한 내용은 다음 문서를 참조하십시오.
-
-* [프로필 엔드포인트 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md)
-* [특정 MVPD API의 프로필 엔드포인트](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
-* [특정(인증) 코드 API의 프로필 끝점](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
-* [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
-* [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
-
-프로필은 쿼리할 때 지정된 제한된 기간 동안 유효하며 사용자가 유효한 인증을 받은 후 인증 단계를 다시 수행해야 함을 나타냅니다.
-
-인증(authN) [TTL](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#ttl)이라고 하는 이 제한된 기간은 조직 관리자 중 한 사람이나 사용자를 대신하는 Adobe Pass 인증 담당자가 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 보고 변경할 수 있습니다.
-
-자세한 내용은 [TVE 대시보드 통합 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) 설명서를 참조하십시오.
+자세한 내용은 [액세스 흐름이 저하됨](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/degraded-access-flows/rest-api-v2-access-degraded-flows.md) 설명서를 참조하세요.
 
 +++
 
@@ -476,9 +585,17 @@ REST API V1 또는 SDK을 통합하는 이전 클라이언트 애플리케이션
 
 예.
 
-REST API V2를 통합하는 클라이언트 애플리케이션은 기본적으로 활성화된 향상된 오류 코드 기능을 활용할 수 있습니다.
+REST API V2로 마이그레이션하는 클라이언트 애플리케이션은 기본적으로 이 기능을 통해 보다 상세하고 정확한 오류 정보를 제공합니다.
 
 자세한 내용은 [향상된 오류 코드](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) 설명서를 참조하세요.
+
+#### 5. REST API V2로 마이그레이션할 때 기존 통합에서 구성을 변경해야 합니까? {#migration-faq5}
+
+아니.
+
+REST API V2로 마이그레이션하는 클라이언트 애플리케이션은 기존 MVPD 통합에 대한 구성 변경이 필요하지 않습니다. 또한 기존 [서비스 공급자](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#service-provider) 및 [MVPD](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#mvpd)에 대해 동일한 식별자를 계속 사용합니다.
+
+또한 Adobe Pass 인증에서 MVPD 종단점과 통신하는 데 사용되는 프로토콜은 변경되지 않습니다.
 
 +++
 

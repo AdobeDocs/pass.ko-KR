@@ -2,9 +2,9 @@
 title: SSO(Single Sign-On) - 플랫폼 ID - 흐름
 description: REST API V2 - Single Sign-On - 플랫폼 ID - 흐름
 exl-id: 5200e851-84e8-4cb4-b068-63b91a2a8945
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '1836'
+source-wordcount: '1846'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)도 방문하십시오.
 
 Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여러 애플리케이션에서 고유한 플랫폼 식별자를 사용하여 장치 또는 플랫폼 수준에서 SSO(Single Sign-On)를 수행할 수 있습니다.
 

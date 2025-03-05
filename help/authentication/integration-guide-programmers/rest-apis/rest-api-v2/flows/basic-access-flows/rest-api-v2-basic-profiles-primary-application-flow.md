@@ -2,9 +2,9 @@
 title: 기본 프로필 - 기본 애플리케이션 - 흐름
 description: REST API V2 - 기본 프로필 - 기본 애플리케이션 - 흐름
 exl-id: 19ddf382-9a32-4b94-aa84-7611c0e1780e
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '964'
+source-wordcount: '974'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)도 방문하십시오.
 
 Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스트리밍 응용 프로그램에서 활성 사용자 로그인에 대한 정보에 액세스할 수 있습니다.
 
@@ -81,17 +85,17 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 특정 MVPD에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
-* 선택한 또는 캐시된 `mvpd` 식별자가 있는 스트리밍 응용 프로그램에서 특정 MVPD에 대한 일반 프로필을 검색하려고 합니다.
+* `mvpd` 식별자가 선택되었거나 캐시된 스트리밍 응용 프로그램에서 특정 MVPD에 대한 일반 프로필을 검색하려고 합니다.
 
 ### 워크플로 {#workflow-retrieve-profile-for-specific-mvpd}
 
-다음 다이어그램과 같이 특정 응용 프로그램에서 수행되는 특정 MVPD에 대한 기본 프로필 검색 흐름을 구현하려면 해당 단계를 따르십시오.
+다음 다이어그램에서와 같이 특정 MVPD에 대해 기본 프로필 검색 플로우를 구현하려면 주어진 단계를 따르십시오.
 
 ![특정 mvpd에 대한 프로필 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-mvpd.png)
 
 *특정 mvpd에 대한 프로필 검색*
 
-1. **특정 mvpd에 대한 프로필 검색:** 스트리밍 응용 프로그램은 프로필 끝점에 요청을 보내 해당 특정 mvpd에 대한 프로필 정보를 검색하는 데 필요한 모든 데이터를 수집합니다.
+1. **특정 mvpd에 대한 프로필 검색:** 스트리밍 응용 프로그램은 프로필 끝점에 요청을 보내 해당 특정 MVPD에 대한 프로필 정보를 검색하는 데 필요한 모든 데이터를 수집합니다.
 
    >[!IMPORTANT]
    >
@@ -130,7 +134,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 특정 인증 코드에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
-* MVPD와 대화형 인증을 수행하는 데 사용되는 `code`이(가) 있는 스트리밍 응용 프로그램에서 특정 인증 코드에 대한 프로필을 검색하려고 합니다.
+* MVPD과의 대화형 인증을 수행하는 데 사용되는 `code`이(가) 있는 스트리밍 응용 프로그램에서 특정 인증 코드에 대한 프로필을 검색하려고 합니다.
 
 ### 워크플로 {#workflow-retrieve-profile-for-specific-code}
 

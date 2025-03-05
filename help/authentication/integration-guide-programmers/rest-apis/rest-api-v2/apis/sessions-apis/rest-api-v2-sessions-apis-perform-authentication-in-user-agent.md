@@ -2,10 +2,10 @@
 title: 사용자 에이전트에서 인증 수행
 description: REST API V2 - 사용자 에이전트에서 인증 수행
 exl-id: d615dde0-71a8-4b6c-a12e-1e3b5e20728c
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '230'
-ht-degree: 3%
+source-wordcount: '240'
+ht-degree: 4%
 
 ---
 
@@ -18,6 +18,10 @@ ht-degree: 3%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)도 방문하십시오.
 
 ## 요청 {#request}
 
@@ -104,7 +108,7 @@ ht-degree: 3%
 
 ### 성공 {#success}
 
-성공적인 응답은 MVPD 로그인 페이지에 도달할 때까지 한 번 또는 여러 번 리디렉션되는 것입니다.
+성공적인 응답은 MVPD 로그인 페이지에 도달하기 전까지 한 번 또는 여러 번 리디렉션되는 것입니다.
 
 ### 오류 {#error}
 

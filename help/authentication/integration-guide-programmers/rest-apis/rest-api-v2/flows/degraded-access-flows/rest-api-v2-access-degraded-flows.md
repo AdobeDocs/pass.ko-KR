@@ -2,9 +2,9 @@
 title: 액세스 흐름이 저하됨
 description: REST API V2 - 액세스 흐름 성능 저하
 exl-id: 9276f5d9-8b1a-4282-8458-0c1e1e06bcf5
-source-git-commit: 49a6a75944549dbfb062b1be8a053e6c99c90dc9
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '1605'
+source-wordcount: '1615'
 ht-degree: 0%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)도 방문하십시오.
 
 성능 저하를 통해 특정 MVPD 인증 및 권한 부여 끝점을 일시적으로 우회할 수 있습니다. 일반적으로 프로그래머는 이 작업을 시작하지만 누가 열화 이벤트를 트리거하는지에 관계없이, 작업은 영향을 받는 MVPD와 함께 만들어진 사전 배열에 따라 달라집니다.
 

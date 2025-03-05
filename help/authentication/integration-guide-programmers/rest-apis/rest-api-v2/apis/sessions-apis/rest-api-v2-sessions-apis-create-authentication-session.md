@@ -2,9 +2,9 @@
 title: 인증 세션 만들기
 description: REST API V2 - 인증 세션 만들기
 exl-id: bb2a6bb4-0778-4748-a674-df9d0e8242c8
-source-git-commit: 5e5bb6a52a4629056fd52c7e79a11dba2b9a45db
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1057'
 ht-degree: 1%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 1%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)도 방문하십시오.
 
 ## 요청 {#request}
 
