@@ -1,9 +1,10 @@
 ---
 title: 결정
 description: 결정
-source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
+exl-id: 1efd70af-8c1d-43c4-87fc-14488d42b23d
+source-git-commit: a19f4fd40c9cd851a00f05f82adbabb85edd8422
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '988'
 ht-degree: 0%
 
 ---
@@ -69,6 +70,17 @@ MVPD는 다양한 메커니즘을 통해 사전 인증을 지원할 수 있으�
 >
 > MVPD 및 Adobe Pass 인증 담당자와 합의한 후에만 최대 리소스 수를 늘릴 수 있습니다.
 
+## TTL(Authorization Time-to-Live) 관리 {#authorization-ttl-management}
+
+TTL(Authorization Time-to-Live)은 재승인을 필요로 하기 전까지 리소스가 승인된 상태로 유지되는 기간을 정의합니다. 이 기간은 제한되어 있으며 MVPD 담당자와 합의해야 합니다. TTL 값은 다음에 따라 달라질 수 있습니다.
+
+* 플랫폼 카테고리(예: 데스크탑, 모바일, TV 연결 장치)
+* 특정 플랫폼(예: iOS, Android, tvOS, Roku, FireTV)
+
+인증(authZ) TTL은 조직 관리자 중 한 사람이나 사용자를 대신하여 Adobe Pass 인증 담당자가 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 보고 변경할 수 있습니다.
+
+자세한 내용은 [TVE 대시보드 통합 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md#most-used-flows) 설명서를 참조하십시오.
+
 ## 보호된 리소스 {#protected-resources}
 
 보호된 리소스는 MVPD와 참여 프로그래머 간의 계약을 통해 정의된 고유 값으로 식별되는 스트리밍 가능한 콘텐츠를 나타냅니다.
@@ -133,3 +145,8 @@ MVPD는 다양한 메커니즘을 통해 사전 인증을 지원할 수 있으�
 
 * [기본 애플리케이션 내에서 수행되는 기본 사전 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
 * [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
+
+>[!MORELIKETHIS]
+>
+> [사전 인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general)
+> [인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)
