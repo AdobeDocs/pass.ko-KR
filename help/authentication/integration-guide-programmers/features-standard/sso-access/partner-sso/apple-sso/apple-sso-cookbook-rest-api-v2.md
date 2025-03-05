@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook(REST API V2)
 description: Apple SSO Cookbook(REST API V2)
 exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '3443'
+source-wordcount: '3615'
 ht-degree: 0%
 
 ---
@@ -284,7 +284,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    * [사전 선택된 mvpd로 보조 응용 프로그램 내에서 인증 수행](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
    * [미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)
 
-1. **파트너 인증 응답 흐름을 사용하여 프로필 검색을 계속합니다.** 세션 파트너 끝점 응답에 다음 데이터가 포함되어 있습니다.
+1. **파트너 인증 응답 흐름을 사용하여 프로필 만들기 및 검색을 계속합니다.** 세션 파트너 끝점 응답에 다음 데이터가 포함되어 있습니다.
    * `actionName` 특성이 &quot;partner_profile&quot;로 설정되어 있습니다.
    * `actionType` 특성이 &quot;direct&quot;로 설정되어 있습니다.
    * `authenticationRequest - type` 특성에는 MVPD 로그인을 위해 파트너 프레임워크에서 사용하는 보안 프로토콜이 포함됩니다(현재 SAML로만 설정됨).
@@ -316,11 +316,11 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    * 사용자 공급자 프로필의 만료 날짜(사용 가능한 경우)가 유효합니다.
    * 파트너 인증 응답(SAML 응답)이 있고 유효합니다.
 
-1. **파트너 인증 응답을 사용하여 프로필 검색:** 스트리밍 애플리케이션은 프로필 파트너 끝점을 호출하여 프로필을 만들고 검색하는 데 필요한 모든 데이터를 수집합니다.
+1. **파트너 인증 응답을 사용하여 프로필 만들기 및 검색:** 스트리밍 애플리케이션은 프로필 파트너 끝점을 호출하여 프로필을 만들고 검색하는 데 필요한 모든 데이터를 수집합니다.
 
    >[!IMPORTANT]
    >
-   > 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API 설명서를 참조하십시오.
+   > 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API 설명서를 참조하십시오.
    >
    > * `serviceProvider`, `partner` 및 `SAMLResponse`과(와) 같은 모든 _필수_ 매개 변수
    > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
@@ -338,7 +338,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
 
    >[!IMPORTANT]
    >
-   > 프로필 응답에 제공된 정보에 대한 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Response) API 설명서를 참조하십시오.
+   > 프로필 응답에 제공된 정보에 대한 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Response) API 설명서를 참조하십시오.
    >
    > <br/>
    >
@@ -371,6 +371,10 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
 1. **파트너 프레임워크 상태 검색:** 스트리밍 응용 프로그램이 Apple에서 개발한 [비디오 구독자 계정 프레임워크](https://developer.apple.com/documentation/videosubscriberaccount)를 호출하여 사용자 권한 및 공급자 정보를 얻습니다.
 
    >[!IMPORTANT]
+   > 
+   > 선택한 사용자 프로필 유형이 &quot;appleSSO&quot;가 아닌 경우 스트리밍 애플리케이션은 이 단계를 건너뛸 수 있습니다.
+
+   >[!IMPORTANT]
    >
    > 자세한 내용은 [비디오 구독자 계정 프레임워크](https://developer.apple.com/documentation/videosubscriberaccount) 설명서를 참조하십시오.
    >
@@ -386,13 +390,17 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > 스트리밍 응용 프로그램은 `VSAccountMetadataRequest` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `false`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자를 중단할 수 없음을 나타냅니다.
 
    >[!TIP]
-   > 
-   > 제안: 스트리밍 애플리케이션은 파트너 프레임워크 상태 정보에 캐시된 값을 사용할 수 있습니다. 애플리케이션이 배경에서 전경 상태로 전환할 때 새로 고치는 것이 좋습니다.
+   >
+   > 제안: 스트리밍 애플리케이션은 파트너 프레임워크 상태 정보에 대해 캐시된 값을 대신 사용할 수 있습니다. 따라서 애플리케이션이 배경에서 전경 상태로 전환할 때 새로 고치는 것이 좋습니다. 이 경우 스트리밍 애플리케이션은 &quot;파트너 프레임워크 상태 정보 반환&quot; 단계에서 설명한 대로 파트너 프레임워크 상태에 대해 유효한 값만 캐시하고 사용하도록 해야 합니다.
 
 1. **파트너 프레임워크 상태 정보 반환:** 스트리밍 응용 프로그램에서 응답 데이터의 유효성을 검사하여 기본 조건이 충족되는지 확인합니다.
    * 사용자 권한 액세스 상태가 부여됩니다.
    * 사용자 공급자 매핑 식별자가 존재하며 유효합니다.
-   * 사용자 공급자 프로필의 만료 날짜(사용 가능한 경우)가 유효합니다.
+   * 사용자 공급자 프로필의 만료 날짜가 유효합니다.
+
+   >[!IMPORTANT]
+   >
+   > 선택한 사용자 프로필 유형이 &quot;appleSSO&quot;가 아닌 경우 스트리밍 애플리케이션은 이 단계를 건너뛸 수 있습니다.
 
 1. **사전 권한 부여 결정 검색:** 스트리밍 응용 프로그램은 의사 결정 사전 권한 부여 끝점을 호출하여 리소스 목록에 대한 사전 권한 부여 결정을 얻는 데 필요한 모든 데이터를 수집합니다.
 
@@ -406,7 +414,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > <br/>
    >
-   > 스트리밍 애플리케이션은 선택한 프로필이 &quot;appleSSO&quot; 유형 프로필인 경우 추가적으로 요청하기 전에 파트너 프레임워크 상태에 대한 유효한 값을 포함하는지 확인해야 합니다.
+   > 스트리밍 애플리케이션은 선택한 프로필이 &quot;appleSSO&quot; 유형 프로필인 경우 추가적으로 요청하기 전에 파트너 프레임워크 상태에 대한 유효한 값을 포함하는지 확인해야 합니다. 그러나 선택한 사용자 프로필 유형이 &quot;appleSSO&quot;가 아닌 경우 이 단계를 건너뛸 수 있습니다.
    >
    > <br/>
    >
@@ -435,6 +443,10 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
 
    >[!IMPORTANT]
    >
+   > 선택한 사용자 프로필 유형이 &quot;appleSSO&quot;가 아닌 경우 스트리밍 애플리케이션은 이 단계를 건너뛸 수 있습니다.
+
+   >[!IMPORTANT]
+   >
    > 자세한 내용은 [비디오 구독자 계정 프레임워크](https://developer.apple.com/documentation/videosubscriberaccount) 설명서를 참조하십시오.
    >
    > <br/>
@@ -450,12 +462,16 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
 
    >[!TIP]
    >
-   > 제안: 스트리밍 애플리케이션은 파트너 프레임워크 상태 정보에 캐시된 값을 사용할 수 있습니다. 애플리케이션이 배경에서 전경 상태로 전환할 때 새로 고치는 것이 좋습니다.
+   > 제안: 스트리밍 애플리케이션은 파트너 프레임워크 상태 정보에 대해 캐시된 값을 대신 사용할 수 있습니다. 따라서 애플리케이션이 배경에서 전경 상태로 전환할 때 새로 고치는 것이 좋습니다. 이 경우 스트리밍 애플리케이션은 &quot;파트너 프레임워크 상태 정보 반환&quot; 단계에서 설명한 대로 파트너 프레임워크 상태에 대해 유효한 값만 캐시하고 사용하도록 해야 합니다.
 
 1. **파트너 프레임워크 상태 정보 반환:** 스트리밍 응용 프로그램에서 응답 데이터의 유효성을 검사하여 기본 조건이 충족되는지 확인합니다.
    * 사용자 권한 액세스 상태가 부여됩니다.
    * 사용자 공급자 매핑 식별자가 존재하며 유효합니다.
-   * 사용자 공급자 프로필의 만료 날짜(사용 가능한 경우)가 유효합니다.
+   * 사용자 공급자 프로필의 만료 날짜가 유효합니다.
+
+   >[!IMPORTANT]
+   >
+   > 선택한 사용자 프로필 유형이 &quot;appleSSO&quot;가 아닌 경우 스트리밍 애플리케이션은 이 단계를 건너뛸 수 있습니다.
 
 1. **권한 부여 결정 검색:** 스트리밍 응용 프로그램은 결정 권한 부여 끝점을 호출하여 특정 리소스에 대한 권한 부여 결정을 얻는 데 필요한 모든 데이터를 수집합니다.
 
@@ -469,7 +485,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > <br/>
    >
-   > 스트리밍 애플리케이션은 선택한 프로필이 &quot;appleSSO&quot; 유형 프로필인 경우 추가적으로 요청하기 전에 파트너 프레임워크 상태에 대한 유효한 값을 포함하는지 확인해야 합니다.
+   > 스트리밍 애플리케이션은 선택한 프로필이 &quot;appleSSO&quot; 유형 프로필인 경우 추가적으로 요청하기 전에 파트너 프레임워크 상태에 대한 유효한 값을 포함하는지 확인해야 합니다. 그러나 선택한 사용자 프로필 유형이 &quot;appleSSO&quot;가 아닌 경우 이 단계를 건너뛸 수 있습니다.
    >
    > <br/>
    >
@@ -515,6 +531,10 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
 
    >[!IMPORTANT]
    >
+   > 제거된 사용자 프로필 유형이 &quot;appleSSO&quot;인 경우 스트리밍 애플리케이션은 `actionName` 및 `actionType` 특성에 지정된 대로 파트너 수준에서 로그아웃 프로세스를 완료하라는 메시지를 표시해야 합니다.
+
+   >[!IMPORTANT]
+   >
    > 로그아웃 응답에 제공된 정보에 대한 자세한 내용은 [특정 mvpd에 대한 로그아웃 시작](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md#response) API 설명서를 참조하십시오.
    >
    > <br/>
@@ -527,9 +547,5 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > 유효성 검사가 실패하면 오류 응답이 생성되고 [향상된 오류 코드](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) 설명서를 준수하는 추가 정보가 제공됩니다.
-
-   >[!IMPORTANT]
-   > 
-   > 스트리밍 애플리케이션은 사용자가 파트너 수준에서 계속 로그아웃할 것임을 표시해야 합니다.
 
 +++

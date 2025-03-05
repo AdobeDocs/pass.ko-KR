@@ -2,9 +2,9 @@
 title: SSO(Single Sign-On) - 파트너 - 플로우
 description: REST API V2 - Single Sign-On - 파트너 - 흐름
 exl-id: 5735d67f-a311-4d03-ad48-93c0fcbcace5
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '1454'
+source-wordcount: '1468'
 ht-degree: 0%
 
 ---
@@ -125,7 +125,7 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
 
    Adobe Pass 백엔드가 유효한 프로필을 식별하지 않고 파트너 SSO(Single Sign-On) 유효성 검사가 성공하면 스트리밍 애플리케이션은 MVPD으로 인증 흐름을 시작하기 위해 파트너 프레임워크에 전달할 작업 및 데이터가 포함된 응답을 수신합니다.
 
-   파트너 인증 응답을 사용한 프로필 검색 흐름에 대한 자세한 내용은 [파트너 인증 응답을 사용한 프로필 검색](#retrieve-profile-using-partner-authentication-response) 섹션을 참조하십시오.
+   파트너 인증 응답을 사용한 프로필 검색 흐름에 대한 자세한 내용은 [파트너 인증 응답을 사용한 프로필 만들기 및 검색](#create-and-retrieve-profile-using-partner-authentication-response) 섹션을 참조하십시오.
 
 1. **기본 인증 흐름을 계속 진행합니다.** 세션 파트너 끝점 응답에 다음 데이터가 포함되어 있습니다.
    * `actionName` 특성이 &quot;authenticate&quot; 또는 &quot;resume&quot;으로 설정되어 있습니다.
@@ -152,9 +152,9 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
    > 
    > `AP-Partner-Framework-Status` 헤더에 대한 자세한 내용은 [AP-Partner-Framework-Status](../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md) 설명서를 참조하십시오.
 
-## 파트너 인증 응답을 사용하여 프로필 검색 {#retrieve-profile-using-partner-authentication-response}
+## 파트너 인증 응답을 사용하여 프로필 만들기 및 검색 {#create-and-retrieve-profile-using-partner-authentication-response}
 
-### 전제 조건 {#prerequisites-retrieve-profile-using-partner-authentication-response}
+### 전제 조건 {#prerequisites-create-and-retrieve-profile-using-partner-authentication-response}
 
 파트너 인증 응답을 사용하여 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -169,13 +169,13 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
 > * 파트너 프레임워크는 선택한 MVPD을 인증하기 위한 사용자 상호 작용을 지원합니다.
 > * 파트너 프레임워크는 사용자 권한 및 공급자 정보를 제공합니다.
 
-### 워크플로 {#workflow-retrieve-profile-using-partner-authentication-response}
+### 워크플로 {#workflow-create-and-retrieve-profile-using-partner-authentication-response}
 
 다음 다이어그램과 같이 파트너 인증 응답을 사용하여 프로필 검색 플로우를 구현하려면 해당 단계를 수행하십시오.
 
-![파트너 인증 응답을 사용하여 프로필 검색](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-profile-using-partner-authentication-response-flow.png)
+![파트너 인증 응답을 사용하여 프로필 만들기 및 검색](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-profile-using-partner-authentication-response-flow.png)
 
-*파트너 인증 응답을 사용하여 인증된 프로필 검색*
+*파트너 인증 응답을 사용하여 인증된 프로필 만들기 및 검색*
 
 1. **파트너 프레임워크로 MVPD 인증 완료:** 인증 흐름이 성공하면 MVPD과의 파트너 프레임워크 상호 작용에서 파트너 프레임워크 상태 정보와 함께 반환되는 파트너 인증 응답(SAML 응답)이 생성됩니다.
 
@@ -184,11 +184,11 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
    * 사용자 공급자 매핑 식별자가 존재하며 유효합니다.
    * 사용자 공급자 프로필의 만료 날짜(사용 가능한 경우)가 유효합니다.
 
-1. **파트너 인증 응답을 사용하여 프로필 검색:** 스트리밍 애플리케이션은 프로필 파트너 끝점을 호출하여 프로필을 만들고 검색하는 데 필요한 모든 데이터를 수집합니다.
+1. **파트너 인증 응답을 사용하여 프로필 만들기 및 검색:** 스트리밍 애플리케이션은 프로필 파트너 끝점을 호출하여 프로필을 만들고 검색하는 데 필요한 모든 데이터를 수집합니다.
 
    >[!IMPORTANT]
    >
-   > 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API 설명서를 참조하십시오.
+   > 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API 설명서를 참조하십시오.
    >
    > * `serviceProvider`, `partner` 및 `SAMLResponse`과(와) 같은 모든 _필수_ 매개 변수
    > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
@@ -208,7 +208,7 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
 
    >[!IMPORTANT]
    >
-   > 프로필 응답에 제공된 정보에 대한 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API 설명서를 참조하십시오.
+   > 프로필 응답에 제공된 정보에 대한 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API 설명서를 참조하십시오.
    > 
    > <br/>
    > 

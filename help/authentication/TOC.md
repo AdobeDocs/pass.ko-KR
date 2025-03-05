@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 4ad5ea619f64a78a72f69228c9ae3c83a7b66f24
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '1246'
+source-wordcount: '1248'
 ht-degree: 2%
 
 ---
@@ -90,7 +90,7 @@ ht-degree: 2%
                + [특정 mvpd에 대한 로그아웃 시작](integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
             + 파트너 SSO(Single Sign-On) {#rest-api-v2-partner-single-sign-on-apis}
                + [파트너 인증 요청 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
-               + [파트너 인증 응답을 사용하여 프로필 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
+               + [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
          + 흐름 {#rest-api-v2-flows}
             + [REST API V2 흐름 개요](integration-guide-programmers/rest-apis/rest-api-v2/flows/rest-api-v2-flows-overview.md)
             + 기본 액세스 흐름 {#rest-api-v2-basic-access-flows}

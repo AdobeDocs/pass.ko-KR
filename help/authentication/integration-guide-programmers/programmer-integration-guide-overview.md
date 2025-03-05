@@ -2,9 +2,9 @@
 title: 프로그래머 통합 안내서
 description: 프로그래머 통합 안내서
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '2071'
+source-wordcount: '2073'
 ht-degree: 0%
 
 ---
@@ -210,7 +210,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 **API**
 
 * [파트너 인증 요청 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
-* [파트너 인증 응답을 사용하여 프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
+* [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
 
 **흐름**
 

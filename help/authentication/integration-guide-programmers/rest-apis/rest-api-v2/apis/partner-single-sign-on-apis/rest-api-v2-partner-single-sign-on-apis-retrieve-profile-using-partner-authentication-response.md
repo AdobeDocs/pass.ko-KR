@@ -1,15 +1,15 @@
 ---
-title: 파트너 인증 응답을 사용하여 프로필 검색
-description: REST API V2 - 파트너 인증 응답을 사용하여 프로필 검색
+title: 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
+description: REST API V2 - 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
 exl-id: cae260ff-a229-4df7-bbf9-4cdf300c0f9a
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
 workflow-type: tm+mt
-source-wordcount: '724'
+source-wordcount: '734'
 ht-degree: 1%
 
 ---
 
-# 파트너 인증 응답을 사용하여 프로필 검색 {#retrieve-profile-using-partner-authentication-response}
+# 파트너 인증 응답을 사용하여 프로필 만들기 및 검색 {#create-and-retrieve-profile-using-partner-authentication-response}
 
 >[!IMPORTANT]
 >
@@ -321,7 +321,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 파트너 인증 응답을 사용하여 프로필 검색
+### 1. 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
 
 >[!BEGINTABS]
 
@@ -378,7 +378,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 파트너 인증 응답을 사용하여 프로필을 검색하지만 성능 저하가 적용됩니다.
+### 2. 파트너 인증 응답을 사용하여 프로필을 만들고 검색하지만 성능 저하가 적용됩니다
 
 >[!BEGINTABS]
 
