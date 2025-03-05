@@ -4,7 +4,7 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
+source-git-commit: 7e56c0a3651290376a72752638f463cf9415ec0e
 workflow-type: tm+mt
 source-wordcount: '1248'
 ht-degree: 2%
@@ -142,7 +142,7 @@ ht-degree: 2%
       + 홈 기반 인증 액세스 {#hba-access}
          + [홈 기반 인증(HBA)](integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)
       + 개인 정보 보호 지원 {#privacy-support}
-         + [개인 정보 지원 개요](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
+         + [개인 정보 보호 지원 개요](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
          + [개인 정보 보호 요청을 하는 방법](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
    + 프리미엄 기능 {#features-premium}
       + 임시 액세스 {#temporary-access}

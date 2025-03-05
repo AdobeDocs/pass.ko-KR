@@ -2,7 +2,7 @@
 title: 개인 정보 보호 지원 개요
 description: 개인 정보 보호 지원 개요
 exl-id: 9868a7e7-30f6-420e-a660-7d2f7870374d
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 7e56c0a3651290376a72752638f463cf9415ec0e
 workflow-type: tm+mt
 source-wordcount: '217'
 ht-degree: 0%
@@ -22,11 +22,3 @@ ht-degree: 0%
 **CCPA**-CCPA(California Consumer Privacy Act)는 캘리포니아 거주자들에게 개인 정보에 대한 새로운 권리를 제공하고 캘리포니아에서 비즈니스를 수행하는 특정 엔터티에 데이터 보호 책임을 부과하는 법입니다. CCPA는 개인 정보에 대한 액세스 및 삭제 권한과 같은 GDPR에 이미 알려진 몇 가지 개념을 활용합니다. 그러나 CCPA가 GDPR과 다른 부분이 있습니다.
 
 Adobe Pass 인증 고객은 [Privacy Service UI](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)를 통해 또는 [Privacy Service API](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_api_tutorial.md)를 호출하여 고객 데이터 액세스 및 삭제에 대한 개별 GDPR 또는 CCPA 개인 정보 보호 요청을 제출할 수 있습니다.
-
-<!--
-
->[!MORELIKETHIS]
->
->* [Privacy Services Overview](https://www.adobe.io/apis/experiencecloud/gdpr/docs/alldocs.html#!api-specification/markdown/narrative/technical_overview/privacy_service_overview/privacy_service_overview.md)
->* [Privacy Service API documentation](https://www.adobe.io/apis/experiencecloud/gdpr.html)
--->
