@@ -2,9 +2,9 @@
 title: 특정 서비스 공급자에 대한 구성 검색
 description: REST API V2 - 특정 서비스 공급자에 대한 구성 검색
 exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 871afc4e7ec04d62590dd574bf4e28122afc01b6
 workflow-type: tm+mt
-source-wordcount: '515'
+source-wordcount: '725'
 ht-degree: 2%
 
 ---
@@ -18,6 +18,10 @@ ht-degree: 2%
 >[!IMPORTANT]
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+
+>[!MORELIKETHIS]
+>
+> [REST API V2 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#configuration-phase-faqs-general)도 방문하십시오.
 
 ## 요청 {#request}
 
@@ -210,9 +214,9 @@ ht-degree: 2%
                 <td>
                     다음 속성이 있는 JSON 개체:
                     <ul>
-                        <li><b>id</b></li>
-                        <li><b>이름</b></li>
-                        <li><b>도메인</b></li>
+                        <li><b>id</b><br/>온보딩 프로세스 중 서비스 공급자와 연결된 내부 고유 식별자입니다.</li>
+                        <li><b>이름</b><br/>온보딩 프로세스 중에 서비스 공급자와 연결된 상업용(브랜드) 이름입니다.</li>
+                        <li><b>도메인</b><br/>서비스 공급자를 나타내는 Adobe Pass 인증에 나열된 도메인 이름 목록입니다.</li>
                     </ul>
                 </td>
                 <td><i>필수</i></td>
@@ -222,16 +226,16 @@ ht-degree: 2%
                 <td>
                     다음 속성이 있는 JSON 개체:
                     <ul>
-                        <li><b>id</b></li>
-                        <li><b>displayName</b></li>
-                        <li><b>로고 URL</b></li>
-                        <li><b>isTempPass</b></li>
-                        <li><b>isProxy</b></li>
-                        <li><b>boardingStatus</b></li>
-                        <li><b>플랫폼 매핑 ID</b></li>
-                        <li><b>enablePlatformServices</b></li>
-                        <li><b>displayInPlatformPicker</b></li>
-                        <li><b>enforcePlatformPermissions</b></li>
+                        <li><b>id</b><br/>온보딩 프로세스 중에 ID 공급자와 연결된 내부 고유 식별자입니다.</li>
+                        <li><b>displayName</b><br/>온보딩 프로세스 중에 ID 공급자와 연결된 상업용(브랜드) 이름입니다.</li>
+                        <li><b>logoUrl</b><br>ID 공급자와 연결된 로고를 다운로드할 위치의 URL입니다.</li>
+                        <li><b>isTempPass</b><br/>MVPD이 <a href="../../../../features-premium/temporary-access/temp-pass-feature.md">TempPass</a> 기능 기능을 제공하도록 디자인되었는지 여부를 지정하는 플래그입니다.</li>
+                        <li><b>isProxy</b><br/>MVPD이 프록시 처리된 MVPD인지 여부를 지정하는 플래그입니다.</li>
+                        <li><b>boardingStatus</b><br/>ID 공급자가 Single Sign-On 흐름을 위해 스트리밍 장치 플랫폼에서 온보딩되는지 여부를 지정하는 상태입니다.</li>
+                        <li><b>platformMappingId</b><br/>SSO(Single Sign-On) 흐름을 위해 스트리밍 장치 플랫폼에서 ID 공급자와 연결한 내부 고유 식별자입니다.</li>
+                        <li><b>enablePlatformServices</b><br/>ID 공급자 구성이 SSO(Single Sign-On) 흐름을 위한 스트리밍 장치 플랫폼에 대해 사용되는지 여부를 지정하는 플래그입니다.</li>
+                        <li><b>displayInPlatformPicker</b><br/>ID 공급자를 SSO(Single Sign-On) 흐름을 위해 스트리밍 장치 플랫폼 선택기에 표시할 수 있는지 여부를 지정하는 플래그입니다.</li>
+                        <li><b>enforcePlatformPermissions</b><br/>스트리밍 장치가 SSO(Single Sign-On) 흐름에 대해 플랫폼에서 제공하는 사용자 권한을 적용해야 하는지 여부를 지정하는 플래그입니다.</li>
                     </ul>
                 </td>
                 <td><i>필수</i></td>

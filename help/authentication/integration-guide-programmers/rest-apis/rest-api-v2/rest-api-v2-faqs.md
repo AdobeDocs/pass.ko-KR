@@ -2,9 +2,9 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 871afc4e7ec04d62590dd574bf4e28122afc01b6
 workflow-type: tm+mt
-source-wordcount: '6744'
+source-wordcount: '6963'
 ht-degree: 0%
 
 ---
@@ -39,57 +39,73 @@ REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authenticat
 
 #### 1. 구성 단계의 목적은 무엇입니까? {#configuration-phase-faq1}
 
-구성 단계의 목적은 각 MVPD에 대해 Adobe Pass 인증으로 저장된 구성 세부 정보와 함께 현재 통합되는 MVPD 목록을 클라이언트 애플리케이션에 제공하는 것입니다.
+구성 단계의 목적은 각 MVPD에 대해 Adobe Pass 인증으로 저장된 구성 세부 사항(예: `id`, `displayName`, `logoUrl` 등)과 함께 현재 통합되는 MVPD 목록을 클라이언트 응용 프로그램에 제공하는 것입니다.
 
 구성 단계는 클라이언트 애플리케이션이 사용자에게 TV 공급자를 선택하라고 요청해야 할 때 인증 단계에 대한 필수 단계 역할을 합니다.
 
 #### 2. 구성 단계가 필수입니까? {#configuration-phase-faq2}
 
-구성 단계는 필수가 아닙니다. 클라이언트 애플리케이션은 다음 시나리오에서 이 단계를 건너뛸 수 있습니다.
+구성 단계는 필수가 아니며, 클라이언트 애플리케이션은 사용자가 인증 또는 재인증할 MVPD을 선택해야 하는 경우에만 구성을 검색해야 합니다.
+
+클라이언트 애플리케이션은 다음 시나리오에서 이 단계를 건너뛸 수 있습니다.
 
 * 사용자가 이미 인증되었습니다.
-* 사용자는 기본 또는 프로모션 TempPass 기능을 통해 임시 액세스를 제공합니다.
+* 기본 또는 프로모션 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
 * 사용자 인증이 만료되었지만 클라이언트 애플리케이션이 이전에 선택한 MVPD을 사용자 경험에 동기된 선택으로 캐시했으며 사용자에게 아직 해당 MVPD의 구독자인지 확인하라는 메시지를 표시했습니다.
 
 #### 3. 구성은 무엇이며 얼마나 오래 유효합니까? {#configuration-phase-faq3}
 
 구성은 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#configuration) 설명서에 정의된 용어입니다.
 
-구성은 구성 끝점에서 검색할 수 있는 MVPD 목록으로 구성됩니다.
+구성에 [Configuration](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) 끝점에서 검색할 수 있는 `id`, `displayName`, `logoUrl` 특성 등으로 정의된 MVPD 목록이 포함되어 있습니다.
 
-클라이언트 애플리케이션은 사용자가 자신의 MVPD을 선택해야 하는 경우 이 구성을 사용하여 &quot;선택기&quot;라는 UI 구성 요소를 표시할 수 있습니다.
+사용자가 인증 또는 재인증하기 위해 MVPD을 선택해야 하는 경우에만 클라이언트 애플리케이션이 구성을 검색해야 합니다.
 
-사용자가 인증 단계를 거치기 전에 클라이언트 응용 프로그램에서 구성을 새로 고쳐야 합니다.
+클라이언트 애플리케이션은 사용자가 TV 공급자를 선택해야 할 때마다 구성 응답을 사용하여 사용 가능한 MVPD 옵션이 있는 UI 선택기를 제공할 수 있습니다.
+
+인증, 사전 권한 부여, 권한 부여 또는 로그아웃 단계를 계속하려면 클라이언트 응용 프로그램에서 MVPD의 구성 수준 `id` 특성에 지정된 대로 사용자가 선택한 MVPD 식별자를 저장해야 합니다.
 
 자세한 내용은 [구성 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) 설명서를 참조하세요.
 
-#### 4. 클라이언트 애플리케이션이 자체 MVPD 목록을 관리할 수 있습니까? {#configuration-phase-faq4}
+#### 4. 클라이언트 애플리케이션이 구성 응답 정보를 영구 저장소에 캐시해야 합니까? {#configuration-phase-faq4}
 
-클라이언트 애플리케이션은 자체 MVPD 목록을 관리할 수 있지만, 목록이 최신 상태이고 정확한지 확인하려면 Adobe Pass 인증에서 제공하는 구성을 사용하는 것이 좋습니다.
+사용자가 인증 또는 재인증하기 위해 MVPD을 선택해야 하는 경우에만 클라이언트 애플리케이션이 구성을 검색해야 합니다.
 
-선택한 MVPD에 지정된 [서비스 공급자](rest-api-v2-glossary.md#service-provider)와의 활성 통합이 없는 경우 클라이언트 응용 프로그램이 Adobe Pass 인증 REST API V2에서 [오류](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)을(를) 받습니다.
+클라이언트 애플리케이션은 불필요한 요청을 방지하고 다음과 같은 경우 사용자 경험을 개선하기 위해 구성 응답 정보를 메모리 저장소에 캐시해야 합니다.
 
-#### 5. 클라이언트 애플리케이션이 MVPD 목록을 필터링할 수 있습니까? {#configuration-phase-faq5}
+* 사용자가 이미 인증되었습니다.
+* 기본 또는 프로모션 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
+* 사용자 인증이 만료되었지만 클라이언트 애플리케이션이 이전에 선택한 MVPD을 사용자 경험에 동기된 선택으로 캐시했으며 사용자에게 아직 해당 MVPD의 구독자인지 확인하라는 메시지를 표시했습니다.
+
+#### 5. 클라이언트 애플리케이션이 자체 MVPD 목록을 관리할 수 있습니까? {#configuration-phase-faq5}
+
+클라이언트 애플리케이션은 자체 MVPD 목록을 관리할 수 있지만, MVPD 식별자를 Adobe Pass 인증과 동기화해야 합니다. 따라서 목록이 최신 상태이고 정확한지 확인하려면 Adobe Pass 인증에서 제공하는 구성을 사용하는 것이 좋습니다.
+
+제공된 MVPD 식별자가 잘못되었거나 지정된 [서비스 공급자](rest-api-v2-glossary.md#service-provider)와 활성 통합이 없는 경우 클라이언트 응용 프로그램은 Adobe Pass 인증 REST API V2에서 [오류](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2)을(를) 받습니다.
+
+#### 6. 클라이언트 애플리케이션이 MVPD 목록을 필터링할 수 있습니까? {#configuration-phase-faq6}
 
 클라이언트 애플리케이션은 자신의 비즈니스 로직 및 이전 선택의 사용자 위치 또는 사용자 내역과 같은 요구 사항을 기반으로 사용자 지정 메커니즘을 구현함으로써 구성 응답에 제공된 MVPD의 목록을 필터링할 수 있다.
 
-#### 6. MVPD과의 통합이 비활성화되고 비활성화로 표시되면 어떻게 됩니까? {#configuration-phase-faq6}
+클라이언트 응용 프로그램은 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) MVPD 또는 아직 개발 또는 테스트 중인 통합이 있는 MVPD의 목록을 필터링할 수 있습니다.
+
+#### 7. MVPD과의 통합이 비활성화되고 비활성화로 표시되면 어떻게 됩니까? {#configuration-phase-faq7}
 
 MVPD과의 통합이 비활성화되고 비활성화로 표시되면 추가 구성 응답에 제공된 MVPD 목록에서 MVPD이 제거되며 고려해야 할 두 가지 중요한 결과가 있습니다.
 
 * 해당 MVPD의 인증되지 않은 사용자는 더 이상 해당 MVPD을 사용하여 인증 단계를 완료할 수 없습니다.
 * 해당 MVPD의 인증된 사용자는 더 이상 해당 MVPD을 사용하여 사전 인증, 권한 부여 또는 로그아웃 단계를 완료할 수 없습니다.
 
-선택한 MVPD에 지정된 [서비스 공급자](rest-api-v2-glossary.md#service-provider)와의 활성 통합이 더 이상 없는 경우 클라이언트 응용 프로그램이 Adobe Pass 인증 REST API V2에서 [오류](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)을(를) 받습니다.
+선택한 MVPD에 지정된 [서비스 공급자](rest-api-v2-glossary.md#service-provider)와의 활성 통합이 더 이상 없는 경우 클라이언트 응용 프로그램이 Adobe Pass 인증 REST API V2에서 [오류](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2)을(를) 받습니다.
 
-#### 7. MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 어떻게 됩니까? {#configuration-phase-faq7}
+#### 8. MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 어떻게 됩니까? {#configuration-phase-faq8}
 
 MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 추가 구성 응답에 제공된 MVPD 목록에 다시 포함되며 다음과 같은 두 가지 중요한 결과가 있습니다.
 
 * 해당 MVPD의 인증되지 않은 사용자는 해당 MVPD을 사용하여 인증 단계를 다시 완료할 수 있습니다.
 * 해당 MVPD의 인증된 사용자는 해당 MVPD을 사용하여 사전 인증, 권한 부여 또는 로그아웃 단계를 다시 완료할 수 있습니다.
 
-#### 8. MVPD과의 통합을 활성화하거나 비활성화하는 방법 {#configuration-phase-faq8}
+#### 9. MVPD과의 통합을 활성화하거나 비활성화하는 방법 {#configuration-phase-faq9}
 
 이 작업은 조직 관리자 중 한 사람이나 사용자를 대신하여 활동하는 Adobe Pass 인증 담당자가 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 완료할 수 있습니다.
 
