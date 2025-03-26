@@ -2,9 +2,9 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 1795b4aba2940879f2dcb575048d553db4f0bf35
+source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
 workflow-type: tm+mt
-source-wordcount: '9072'
+source-wordcount: '9113'
 ht-degree: 0%
 
 ---
@@ -321,12 +321,14 @@ Profiles 엔드포인트가 빈 프로필 맵 응답을 반환하는 경우 클�
 * [특정 MVPD API의 프로필 엔드포인트](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md)
 * [특정(인증) 코드 API의 프로필 끝점](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md)
 
-사용자가 인증되었는지 확인할 때 얻은 프로필 정보에 이미 포함되어 있으므로 클라이언트 애플리케이션은 사용자의 메타데이터 정보를 검색하기 위해 별도의 엔드포인트를 쿼리할 필요가 없습니다.
+사용자 메타데이터는 인증 흐름이 완료된 후에 사용할 수 있으므로 [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) 정보를 검색하기 위해 클라이언트 응용 프로그램이 별도의 끝점을 쿼리할 필요가 없습니다. 이미 프로필 정보에 포함되어 있기 때문입니다.
 
 자세한 내용은 다음 문서를 참조하십시오.
 
 * [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
 * [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
+
+특정 메타데이터 속성은 MVPD 및 특정 메타데이터 속성에 따라 인증 흐름 중에 업데이트될 수 있습니다. 그 결과 클라이언트 애플리케이션은 최신 사용자 메타데이터를 검색하기 위해 위의 API를 다시 쿼리해야 할 수 있습니다.
 
 #### 18. 클라이언트 애플리케이션은 성능 저하된 액세스를 어떻게 관리해야 합니까? {#authentication-phase-faq18}
 

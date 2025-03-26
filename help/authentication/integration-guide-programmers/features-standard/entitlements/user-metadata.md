@@ -2,9 +2,9 @@
 title: 사용자 메타데이터
 description: 사용자 메타데이터
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
+source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
 workflow-type: tm+mt
-source-wordcount: '1793'
+source-wordcount: '1902'
 ht-degree: 0%
 
 ---
@@ -16,6 +16,8 @@ ht-degree: 0%
 > 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 사용자 메타데이터는 MVPD에 의해 유지되고 Adobe Pass 인증 [REST API V2](#apis)을(를) 통해 프로그래머에게 제공되는 사용자별 [특성](#attributes)(예: 우편 번호, 자녀 보호 등급, 사용자 ID 등)을 참조합니다.
+
+사용자 메타데이터는 인증 흐름이 완료된 후에 사용할 수 있게 되지만 특정 메타데이터 속성은 MVPD 및 해당 특정 메타데이터 속성에 따라 인증 흐름 중에 업데이트될 수 있습니다.
 
 사용자 메타데이터는 사용자의 개인화를 향상시키는 데 사용할 수 있지만 분석에 사용할 수도 있습니다. 예를 들어 프로그래머는 사용자의 우편 번호를 사용하여 현지화된 뉴스 또는 날씨 업데이트를 제공하거나 자녀 보호를 적용할 수 있습니다.
 
@@ -168,7 +170,17 @@ MVPD에서 사용할 수 있는 사용자 메타데이터 특성을 검토하고
 
 사용자 메타데이터 특성의 구조를 이해하려면 위의 API의 **응답** 및 **샘플** 섹션을 참조하십시오.
 
+>[!IMPORTANT]
+>
+> 사용자 메타데이터는 인증 흐름이 완료된 후에 사용할 수 있으므로 [사용자 메타데이터](/help/authentication/integration-guide-programmers/features-standard/entitlements/user-metadata.md) 정보를 검색하기 위해 클라이언트 응용 프로그램이 별도의 끝점을 쿼리할 필요가 없습니다. 이미 프로필 정보에 포함되어 있기 때문입니다.
+
 위의 API를 통합하는 방법 및 시기에 대한 자세한 내용은 다음 문서를 참조하십시오.
 
 * [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
 * [보조 애플리케이션 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)
+
+특정 메타데이터 속성은 MVPD 및 특정 메타데이터 속성에 따라 인증 흐름 중에 업데이트될 수 있습니다. 그 결과 클라이언트 애플리케이션은 최신 사용자 메타데이터를 검색하기 위해 위의 API를 다시 쿼리해야 할 수 있습니다.
+
+>[!MORELIKETHIS]
+>
+> [인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)

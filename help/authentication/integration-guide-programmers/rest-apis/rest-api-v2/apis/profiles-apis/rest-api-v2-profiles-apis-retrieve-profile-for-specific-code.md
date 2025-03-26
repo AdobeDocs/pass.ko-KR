@@ -2,9 +2,9 @@
 title: 특정 코드에 대한 프로필 검색
 description: REST API V2 - 특정 코드에 대한 프로필 검색
 exl-id: d6ead7d5-de5f-4033-8115-980953a370c0
-source-git-commit: 7fdfd28e2aba0d201f19dc25757bbe37cebd8ffe
+source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '752'
 ht-degree: 1%
 
 ---
@@ -236,9 +236,9 @@ ht-degree: 1%
             <tr>
                <td style="background-color: #DEEBFF;">속성</td>
                <td>
-                    사용자 메타데이터 속성 목록입니다.
+                    키, 값 쌍의 맵이 포함된 JSON.
                     <br/><br/>
-                    이러한 속성은 다음과 같을 수 있습니다.
+                    키 요소는 사용자 메타데이터 특성으로 정의되며 다음과 같은 작업을 수행할 수 있습니다.
                     <ul>
                         <li>필수, 예: 'userID'</li>
                         <li>'zip', 'householdID', 'maxRating' 등과 같이 필수가 아닙니다.</li>
@@ -249,6 +249,7 @@ ht-degree: 1%
                         <li>목록</li>
                         <li>맵</li>
                     </ul>
+                    사용자 메타데이터는 인증 흐름이 완료된 후에 사용할 수 있게 되지만 특정 메타데이터 속성은 MVPD 및 해당 특정 메타데이터 속성에 따라 인증 흐름 중에 업데이트될 수 있습니다.
                </td>
                <td><i>필수</i></td>
             </tr>
