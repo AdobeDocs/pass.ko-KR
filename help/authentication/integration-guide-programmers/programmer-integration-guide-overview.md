@@ -2,9 +2,9 @@
 title: 프로그래머 통합 안내서
 description: 프로그래머 통합 안내서
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
+source-git-commit: 07bb12f7983f39b58e1b9795fdaa1bec4f68e674
 workflow-type: tm+mt
-source-wordcount: '2073'
+source-wordcount: '2119'
 ht-degree: 0%
 
 ---
@@ -48,7 +48,9 @@ Adobe Pass 인증은 프록시 역할을 하며 양측에 안전하고 일관된
 
 * Premium Adobe Pass 인증 API:
    * [임시 패스 API 재설정](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+      * [TempPass 기능](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
    * [저하 API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
+      * [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
    * [권한 부여 서비스 모니터링 API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
 
 ### 사용 사례 {#use-cases}
@@ -323,4 +325,6 @@ Adobe Pass 인증 솔루션은 인증 및 권한 부여 워크플로의 성공�
 
 * **[미디어 토큰](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md)**
 
-  인증에 성공하면 Adobe Pass 인증은 성공적인 재생 요청과 연결된 미디어 토큰(&quot;단기&quot;)을 만듭니다.
+  인증에 성공하면 Adobe Pass 인증은 성공적인 재생 요청과 연결된 미디어 토큰(&quot;단기&quot;)을 만들고 사기(예: 스트림 복사)를 줄이기 위한 업계 모범 사례에 대한 지원을 제공합니다.
+
+프로필 및 의사 결정에 대한 TTL(time-to-live) 값은 프로그래머 및 유료 TV 공급자 간의 합의에 따라 설정되며, 프로그래머는 관련 있는 모든 사람에게 가장 적합한 값에 동의합니다.
