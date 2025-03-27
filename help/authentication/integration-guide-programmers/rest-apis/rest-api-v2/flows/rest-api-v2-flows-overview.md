@@ -2,9 +2,9 @@
 title: REST API V2 흐름 개요
 description: REST API V2 흐름 개요
 exl-id: 84a9ac0f-c26a-4159-82a8-3a31bb31f529
-source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
+source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
 workflow-type: tm+mt
-source-wordcount: '170'
+source-wordcount: '166'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
-
-<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![라이브 웨비나 시리즈](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 시작하려면 아래 목록에 있는 흐름의 공개 설명서를 참조하십시오.
 

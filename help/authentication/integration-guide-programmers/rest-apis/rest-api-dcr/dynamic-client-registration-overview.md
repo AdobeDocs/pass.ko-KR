@@ -2,9 +2,9 @@
 title: 동적 클라이언트 등록 개요
 description: 동적 클라이언트 등록 개요
 exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
-source-git-commit: 9dcc649b4216cccc9be35cd6553308bfc345b5f4
+source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
 workflow-type: tm+mt
-source-wordcount: '813'
+source-wordcount: '809'
 ht-degree: 0%
 
 ---
@@ -14,8 +14,6 @@ ht-degree: 0%
 >[!IMPORTANT]
 >
 > [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
-
-<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![라이브 웨비나 시리즈](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
 
 동적 클라이언트 등록은 [RFC 7591](https://datatracker.ietf.org/doc/html/rfc7591)에서 정의한 인증 메커니즘을 나타내며, [RFC 6749](https://datatracker.ietf.org/doc/html/rfc6749)에서 설명한 OAuth 2.0 인증 프레임워크를 기반으로 합니다.
 

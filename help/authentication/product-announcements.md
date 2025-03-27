@@ -2,39 +2,14 @@
 title: 제품 공지
 description: 제품 공지
 exl-id: 3c9c66e1-d31d-4af3-8ab2-eb32492f42ca
-source-git-commit: 6b309f66bfe1376bd62ad5e99b4f6383194af6c6
+source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
 workflow-type: tm+mt
-source-wordcount: '973'
-ht-degree: 1%
+source-wordcount: '784'
+ht-degree: 2%
 
 ---
 
 # 제품 공지 {#product-announcements}
-
-<a href="https://experienceleague.adobe.com/en/docs/pass/authentication/product-announcements">![라이브 웨비나 시리즈](/help/authentication/assets/rest-api-v2/live-webinar-series-banner.png)</a>
-
-Adobe Pass 인증 파트너로서 새로운 REST API에 대해 예정된 라이브 웨비나에 귀하를 초대하려고 합니다. 새로운 API는 최종 사용자 경험을 개선하고 Adobe Pass 서비스와의 통합을 단순화하기 위해 작년에 출시되었습니다. 
-
-새로운 API로 마이그레이션하여 활성화할 수 있는 새로운 API, 이점 및 추가 사용 사례에 대한 개요를 제공하기 위해 일련의 두 가지 웨비나를 수행할 것입니다.
-
-귀하와 귀하의 팀에 가장 적합한 웨비나에 등록하십시오.
-
-* [웨비나 1 - 2025년 2월 19일](https://events.teams.microsoft.com/event/83c6ec1e-2522-4918-910f-c529b4fb0574@fa7b1b5a-7b34-4387-94ae-d2c178decee1)
-* [웨비나 2 - 2025년 3월 5일](https://events.teams.microsoft.com/event/6f673689-e848-4c00-93d9-4f5d8f108977@fa7b1b5a-7b34-4387-94ae-d2c178decee1)
-
-세션 중에 다음 사항에 대해 알아봅니다.
-
-* REST API v2 개요 및 이점
-* 기본 흐름 연습
-* 타임라인 및 다음 단계
-
-웨비나는 다음과 같은 경우에 유용합니다.
-
-* 새로운 TVE 앱을 시작하려는 새로운 고객 계획
-* 새 API로 마이그레이션해야 하는 기존 고객
-* 고객을 위한 API를 구현하는 구현 파트너
-
-새 API에 대한 기술 설명서는 [여기](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)에서 찾을 수 있습니다. [여기](https://forms.office.com/r/sJea78tUy3) 세션 중에 논의할 질문을 작성해 주십시오.
 
 ## 서비스 종료(EOL) {#eol}
 
