@@ -2,9 +2,9 @@
 title: 헤더 - X-Device-Info
 description: REST API V2 - 헤더 - X-Device-Info
 exl-id: 0ef25e06-86de-427a-a938-7ba3817f0d5e
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 42df16e34783807e1b5eb1a12ca9db92f4e4c161
 workflow-type: tm+mt
-source-wordcount: '1122'
+source-wordcount: '1133'
 ht-degree: 2%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 2%
 
 ## 개요 {#overview}
 
-<b>X-Device-Info</b> 요청 헤더에 실제 스트리밍 장치와 관련된 클라이언트 정보(장치, 연결 및 응용 프로그램)가 포함되어 있습니다.
+<b>X-Device-Info</b> 요청 헤더에는 실제 스트리밍 장치와 관련된 클라이언트 정보(장치, 연결 및 응용 프로그램)가 포함되어 있으며 MVPD가 적용할 수 있는 플랫폼별 규칙을 결정하는 데 사용됩니다.
 
 ## 구문 {#syntax}
 
