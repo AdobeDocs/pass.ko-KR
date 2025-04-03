@@ -2,9 +2,9 @@
 title: 특정 mvpd를 사용하여 권한 부여 결정 검색
 description: REST API V2 - 특정 mvpd를 사용하여 권한 부여 결정 검색
 exl-id: e8889395-4434-4bec-a212-a8341bb9c310
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 27aaa0d3351577e60970a4035b02d814f0a17e2f
 workflow-type: tm+mt
-source-wordcount: '907'
+source-wordcount: '924'
 ht-degree: 1%
 
 ---
@@ -59,7 +59,7 @@ ht-degree: 1%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">리소스</td>
-      <td>재생되기 전에 MVPD 결정이 필요한 리소스 목록입니다.</td>
+      <td>재생하기 전에 MVPD 결정이 필요한 리소스 목록입니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -111,9 +111,9 @@ ht-degree: 1%
       <td>선택 사항</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-주체-토큰</td>
+      <td style="background-color: #DEEBFF;">Adobe-Ject-Token</td>
       <td>
-        플랫폼 ID 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-주체-토큰</a> 헤더 설명서에 설명되어 있습니다.
+        플랫폼 ID 메서드에 대한 SSO(Single Sign-On) 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-Subject-Token</a> 헤더 설명서에 설명되어 있습니다.
         <br/><br/>
         플랫폼 ID를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md">플랫폼 ID 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
@@ -334,7 +334,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 특정 mvpd를 사용하여 권한 부여 결정 검색
+### 1. 결정이 허용되는 동안 특정 mvpd를 사용하여 승인 결정을 검색합니다.
 
 >[!BEGINTABS]
 
@@ -386,7 +386,63 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 성능 저하를 적용하는 동안 특정 mvpd를 사용하여 권한 부여 결정을 검색합니다.
+### 2. 결정이 거부된 동안 특정 mvpd를 사용하여 권한 부여 결정을 검색합니다.
+
+>[!BEGINTABS]
+
+>[!TAB 요청]
+
+```HTTPS
+POST /api/v2/REF30/decisions/authorize/Cablevision HTTP/1.1
+
+    Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJjNGZjM2U3ZS0xMmQ5LTQ5NWQtYjc0Mi02YWVhYzhhNDkwZTciLCJuYmYiOjE3MjQwODc4NjgsImlzcyI6ImF1dGguYWRvYmUuY29tIiwic2NvcGVzIjoiYXBpOmNsaWVudDp2MiIsImV4cCI6MTcyNDEwOTQ2OCwiaWF0IjoxNzI0MDg3ODY4fQ.DJ9GFl_yKAp2Qw-NVcBeRSnxIhqrwxhns5T5jU31N2tiHxCucKLSQ5guBygqkkJx6D0N_93f50meEEyfb7frbHhVHHwmRjHYjkfrWqHCpviwVjVZKKwl8Y3FEMb0bjKIB8p_E3txX9IbzeNGWRufZBRh2sxB5Q9B7XYINpVfh8s_sFvskrbDu5c01neCx5kEagEW5CtE0_EXTgEb5FSr_SfQG3UUu_iwlkOggOh_kOP_5GueElf9jn-bYBMnpObyN5s-FzuHDG5Rtac5rvcWqVW2reEqFTHqLI4rVC7UKQb6DSvPBPV4AgrutAvk30CYgDsOQILVyrjniincp7r9Ww
+    Content-Type: application/json
+    AP-Device-Identifier: fingerprint YmEyM2QxNDEtZDcxNS01NjFjLTk0ZjQtZTllNGM5NjZiMWVi
+    X-Device-Info: ewoJInByaW1hcnlIYXJkd2FyZVR5cGUiOiAiU2V0VG9wQm94IiwKCSJtb2RlbCI6ICJUViA1dGggR2VuIiwKCSJtYW51ZmFjdHVyZXIiOiAiQXBwbGUiLAoJIm9zTmFtZSI6ICJ0dk9TIgoJIm9zVmVuZG9yIjogIkFwcGxlIiwKCSJvc1ZlcnNpb24iOiAiMTEuMCIKfQ==
+    Accept: application/json
+    User-Agent: Mozilla/5.0 (Apple TV; U; CPU AppleTV5,3 OS 11.0 like Mac OS X; en_US)
+        
+Body:
+
+{
+    "resources": ["REF30"]
+}
+```
+
+>[!TAB 응답]
+
+```HTTPS
+HTTP/1.1 200 OK
+
+Content-Type: application/json;charset=UTF-8
+
+{
+    "decisions": [
+        {
+            "resource": "REF30",
+            "serviceProvider": "REF30",
+            "mvpd": "Cablevision",
+            "source": "mvpd",
+            "authorized": false,
+            "error": {
+                "action": "none",
+                "status": 403,
+                "code": "authorization_denied_by_mvpd",
+                "message": "The MVPD has returned a "Deny" decision when requesting authorization for the specified resource",
+                "details": "Your subscription package does not include the "Live" channel",
+                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+                "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
+            },
+            "notBefore": 1697094207324,
+            "notAfter": 1697098802367
+        }
+    ]
+}
+```
+
+>[!ENDTABS]
+
+### 3. 성능 저하를 적용하는 동안 특정 mvpd를 사용하여 권한 부여 결정을 검색합니다.
 
 >[!BEGINTABS]
 
@@ -530,7 +586,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. 기본 TempPass를 사용하여 권한 부여 결정 검색
+### 4. 기본 TempPass를 사용하여 승인 결정 검색
 
 >[!BEGINTABS]
 
@@ -636,7 +692,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. 프로모션 TempPass를 사용하여 승인 결정 검색
+### 5. 프로모션 TempPass를 사용하여 승인 결정 검색
 
 >[!BEGINTABS]
 

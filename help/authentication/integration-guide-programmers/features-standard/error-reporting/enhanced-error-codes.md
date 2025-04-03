@@ -2,10 +2,10 @@
 title: 향상된 오류 코드
 description: 향상된 오류 코드
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: 27aaa0d3351577e60970a4035b02d814f0a17e2f
 workflow-type: tm+mt
-source-wordcount: '2610'
-ht-degree: 2%
+source-wordcount: '2649'
+ht-degree: 3%
 
 ---
 
@@ -45,8 +45,8 @@ ht-degree: 2%
 
 | Adobe Pass 인증 API | JSON | XML |
 |-------------------------------|---------|---------|
-| REST API v1 | &amp;check; | &amp;check; |
 | REST API v2 | &amp;check; |         |
+| REST API v1 | &amp;check; | &amp;check; |
 | SDK 사전 인증 API | &amp;check; |         |
 
 >[!IMPORTANT]
@@ -62,9 +62,105 @@ ht-degree: 2%
 >
 > 각 통합 Adobe Pass 인증 API에 대한 공개 설명서를 확인하여 향상된 오류 코드 표시 세부 사항을 확인하십시오.
 
-`JSON` 또는 `XML`(으)로 표시된 향상된 오류 코드 예제를 포함하는 다음 HTTP 응답을 참조하십시오.
+**REST API v2**
+
+REST API v2에 적용 가능한 향상된 오류 코드 예 `JSON`이(가) 포함된 다음 HTTP 응답을 참조하십시오.
 
 >[!BEGINTABS]
+
+>[!TAB REST API v2 - 항목 수준 오류 정보(JSON)]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "decisions": [
+    {
+      "resource": "REF30",
+      "serviceProvider": "REF30",
+      "mvpd": "Cablevision",
+      "source": "mvpd",
+      "authorized": true,
+      "token": {
+        "issuedAt": 1697094207324,
+        "notBefore": 1697094207324,
+        "notAfter": 1697094802367,
+        "serializedToken": "PHNpZ25hdHVyZUluZm8..."
+      }
+    },
+    {
+      "resource": "REF40",
+      "serviceProvider": "REF40",
+      "mvpd": "Cablevision",
+      "source": "mvpd",
+      "authorized": false,
+      "error" : {
+        "action": "none",
+        "status": 403,
+        "code": "authorization_denied_by_mvpd",
+        "message": "The MVPD has returned a \"Deny\" decision when requesting authorization for the specified resource",
+        "details": "Your subscription package does not include the \"Live\" channel",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+        "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
+      }
+    }
+  ]
+}
+```
+
+>[!TAB REST API v2 - 최상위 JSON(오류 정보)]
+
+```JSON
+HTTP/1.1 400 Bad Request
+Content-Type: application/json
+
+{
+  "action": "none",
+  "status": 400,
+  "code": "invalid_parameter_service_provider",
+  "message": "The service provider parameter value is missing or invalid.",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+  "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
+}
+```
+
+>[!ENDTABS]
+
+**REST API v1**
+
+REST API v1에 적용할 수 있는 향상된 오류 코드 예 `JSON` 또는 `XML`이(가) 포함된 다음 HTTP 응답을 참조하세요.
+
+>[!BEGINTABS]
+
+>[!TAB REST API v1 - 항목 수준 오류 정보(JSON)]
+
+```JSON
+HTTP/1.1 200 OK
+Content-Type: application/json
+
+{
+  "resources": [
+    {
+      "id": "TestStream1",
+      "authorized": true
+    },
+    {
+      "id": "TestStream2",
+      "authorized": false,
+      "error": {
+        "action": "none",
+        "status": 403,
+        "code": "authorization_denied_by_mvpd",
+        "message": "The MVPD has returned a \"Deny\" decision when requesting authorization for the specified resource",
+        "details": "Your subscription package does not include the \"Live\" channel",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+        "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
+      }
+    }
+  ]
+}
+```
 
 >[!TAB REST API v1 - 최상위 JSON(오류 정보)]
 
@@ -98,102 +194,18 @@ Content-Type: application/xml
 </error>
 ```
 
->[!TAB REST API v1 - 항목 수준 오류 정보(JSON)]
-
-```JSON
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "resources": [
-    {
-      "id": "TestStream1",
-      "authorized": true
-    },
-    {
-      "id": "TestStream2",
-      "authorized": false,
-      "error": {
-        "action": "retry",
-        "status": 403,
-        "code": "network_connection_failure",
-        "message": "Unable to contact your TV provider services",
-        "details": "Your subscription package does not include the \"Live\" channel",
-        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-        "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
-      }
-    }
-  ]
-}
-```
-
->[!TAB REST API v2 - 최상위 JSON(오류 정보)]
-
-```JSON
-HTTP/1.1 400 Bad Request
-Content-Type: application/json
-
-{
-  "action": "none",
-  "status": 400,
-  "code": "invalid_parameter_service_provider",
-  "message": "The service provider parameter value is missing or invalid.",
-  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-  "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
-}
-```
-
->[!TAB REST API v2 - 항목 수준 오류 정보(JSON)]
-
-```JSON
-HTTP/1.1 200 OK
-Content-Type: application/json
-
-{
-  "decisions": [
-    {
-      "resource": "REF30",
-      "serviceProvider": "REF30",
-      "mvpd": "Cablevision",
-      "source": "mvpd",
-      "authorized": true,
-      "token": {
-        "issuedAt": 1697094207324,
-        "notBefore": 1697094207324,
-        "notAfter": 1697094802367,
-        "serializedToken": "PHNpZ25hdHVyZUluZm8..."
-      }
-    },
-    {
-      "resource": "REF40",
-      "serviceProvider": "REF40",
-      "mvpd": "Cablevision",
-      "source": "mvpd",
-      "authorized": false,
-      "error" : {
-        "action": "retry",
-        "status": 403,
-        "code": "network_connection_failure",
-        "message": "Unable to contact your TV provider services",
-        "details": "Your subscription package does not include the \"Live\" channel",
-        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
-        "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
-      }
-    }
-  ]
-}
-```
-
 >[!ENDTABS]
 
-향상된 오류 코드에는 다음 `JSON` 필드 또는 `XML` 특성이 포함됩니다.
+### 구조 {#enhanced-error-codes-representation-structure}
+
+향상된 오류 코드에는 다음 `JSON` 필드 또는 예가 있는 `XML` 특성이 포함되어 있습니다.
 
 | 이름 | 유형 | 예 | 제한됨 | 설명 |
 |-----------|-----------|---------------------------------------------------------------------------------------------------------------------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *작업* | *문자열* | *다시 시도* | &amp;check; | 이 문서에 정의된 대로 상황을 수정할 수 있는 Adobe Pass 인증 권장 작업입니다. <br/><br/> 자세한 내용은 [작업](#enhanced-error-codes-action) 섹션을 참조하세요. |
+| *작업* | *문자열* | *없음* | &amp;check; | 이 문서에 정의된 대로 상황을 수정할 수 있는 Adobe Pass 인증 권장 작업입니다. <br/><br/> 자세한 내용은 [작업](#enhanced-error-codes-action) 섹션을 참조하세요. |
 | *상태* | *정수* | *403* | &amp;check; | [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6) 문서에 정의된 HTTP 응답 상태 코드입니다. <br/><br/> 자세한 내용은 [상태](#enhanced-error-codes-status) 섹션을 참조하세요. |
-| *코드* | *문자열* | *network_connection_failure* | &amp;check; | 이 문서에 정의된 대로 오류와 연결된 Adobe Pass 인증 고유 식별자 코드. <br/><br/> 자세한 내용은 [코드](#enhanced-error-codes-code) 섹션을 참조하세요. |
-| *메시지* | *문자열* | *TV 공급자 서비스에 연결할 수 없습니다* |            | 사람이 인식할 수 있는 메시지로서, 경우에 따라 최종 사용자에게 표시될 수 있습니다. <br/><br/> 자세한 내용은 [응답 처리](#enhanced-error-codes-response-handling) 섹션을 참조하십시오. |
+| *코드* | *문자열* | *authorization_denied_by_mvpd* | &amp;check; | 이 문서에 정의된 대로 오류와 연결된 Adobe Pass 인증 고유 식별자 코드. <br/><br/> 자세한 내용은 [코드](#enhanced-error-codes-code) 섹션을 참조하세요. |
+| *메시지* | *문자열* | *지정된 리소스에 대한 권한 부여를 요청할 때 MVPD에서 &quot;거부&quot; 결정을 반환했습니다.* |            | 사람이 인식할 수 있는 메시지로서, 경우에 따라 최종 사용자에게 표시될 수 있습니다. <br/><br/> 자세한 내용은 [응답 처리](#enhanced-error-codes-response-handling) 섹션을 참조하십시오. |
 | *세부 정보* | *문자열* | *구독 패키지에 &quot;Live&quot; 채널이 포함되어 있지 않습니다* |            | 서비스 파트너가 제공할 수 있는 자세한 메시지(경우에 따라 <br/><br/>) 서비스 파트너가 사용자 지정 메시지를 제공하지 않는 경우 이 필드가 없을 수 있습니다. |
 | *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html* |            | 이 오류가 발생한 이유 및 가능한 해결 방법에 대한 자세한 정보로 연결되는 Adobe Pass 인증 공개 설명서 URL. <br/><br/> 이 필드에는 절대 URL이 있으며 다른 URL을 제공할 수 있는 오류 컨텍스트에 따라 오류 코드에서 유추해서는 안 됩니다. |
 | *추적* | *문자열* | *12f6fef9-d2e0-422b-a9d7-60d799abe353* |            | 특정 문제를 해결하기 위해 Adobe Pass 인증 지원에 문의할 때 사용할 수 있는 응답의 고유 식별자입니다. |
