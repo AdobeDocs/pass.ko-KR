@@ -2,9 +2,9 @@
 title: 특정 mvpd에 대한 로그아웃 시작
 description: REST API V2 - 특정 mvpd에 대한 로그아웃 시작
 exl-id: 2482de87-b3d4-4ea8-bd4a-25bf10017e01
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
 workflow-type: tm+mt
-source-wordcount: '1006'
+source-wordcount: '1009'
 ht-degree: 1%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">redirectUrl</td>
       <td>
-        MVPD에 대한 로그아웃 흐름이 완료되면 사용자 에이전트가 탐색하는 최종 리디렉션 URL입니다.
+        MVPD에 대한 로그아웃 흐름이 완료될 때 사용자 에이전트가 탐색하는 최종 리디렉션 URL입니다.
         <br/><br/>
         값은 URL로 인코딩되어야 합니다.
       </td>
@@ -106,9 +106,9 @@ ht-degree: 1%
       <td>선택 사항</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-주체-토큰</td>
+      <td style="background-color: #DEEBFF;">Adobe-Subject-Token<br/>or<br/>X-Roku-Reserved-Roku-Connect-Token</td>
       <td>
-        플랫폼 ID 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-주체-토큰</a> 헤더 설명서에 설명되어 있습니다.
+        플랫폼 ID 메서드에 대한 Single Sign-On 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-Subject-Token</a> / <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md">X-Roku-Reserved-Roku-Connect-Token</a> 헤더 설명서에 설명되어 있습니다.
         <br/><br/>
         플랫폼 ID를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md">플랫폼 ID 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
@@ -238,10 +238,10 @@ ht-degree: 1%
                   <br/><br/>
                   가능한 값은 다음과 같습니다.
                   <ul>
-                    <li><b>로그아웃</b><br/>스트리밍 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 로그아웃 끝점을 사용하여 MVPD에서 로그아웃합니다.</li>
+                    <li><b>로그아웃</b><br/>스트리밍 장치는 사용자 에이전트에서 제공된 URL을 열어야 합니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 로그아웃 끝점을 사용하여 MVPD에서 로그아웃하십시오.</li>
                     <li><b>partner_logout</b><br/>스트리밍 장치는 사용자에게 파트너(시스템) 수준에서도 로그아웃하도록 알려야 합니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 프로필 유형이 "appleSSO"인 경우 MVPD에서 로그아웃하십시오.</li>
-                    <li><b>완료</b><br/>스트리밍 장치는 후속 작업을 수행할 필요가 없습니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 로그아웃 끝점 없이 MVPD에서 로그아웃하고(더미 로그아웃 기능), 액세스 성능이 저하된 동안에는 로그아웃하고, 임시 액세스 중에는 로그아웃합니다.</li>
-                    <li><b>잘못됨</b><br/>스트리밍 장치는 후속 작업을 수행할 필요가 없습니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 유효한 프로필이 없으면 MVPD에서 로그아웃합니다.</li>
+                    <li><b>완료</b><br/>스트리밍 장치는 후속 작업을 수행할 필요가 없습니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 로그아웃 끝점 없이 MVPD에서 로그아웃(더미 로그아웃 기능), 액세스 성능이 저하된 경우 로그아웃, 임시 액세스 중 로그아웃.</li>
+                    <li><b>잘못됨</b><br/>스트리밍 장치는 후속 작업을 수행할 필요가 없습니다.<br/>이 작업은 다음 시나리오에 적용됩니다. 유효한 프로필이 없으면 MVPD에서 로그아웃하십시오.</li>
                   </ul>  
                <td><i>필수</i></td>
             </tr>

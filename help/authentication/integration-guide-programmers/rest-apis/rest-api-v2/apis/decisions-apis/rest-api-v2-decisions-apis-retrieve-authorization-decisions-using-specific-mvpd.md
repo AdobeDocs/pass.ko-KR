@@ -2,9 +2,9 @@
 title: 특정 mvpd를 사용하여 권한 부여 결정 검색
 description: REST API V2 - 특정 mvpd를 사용하여 권한 부여 결정 검색
 exl-id: e8889395-4434-4bec-a212-a8341bb9c310
-source-git-commit: 27aaa0d3351577e60970a4035b02d814f0a17e2f
+source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
 workflow-type: tm+mt
-source-wordcount: '924'
+source-wordcount: '927'
 ht-degree: 1%
 
 ---
@@ -111,9 +111,9 @@ ht-degree: 1%
       <td>선택 사항</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">Adobe-Ject-Token</td>
+      <td style="background-color: #DEEBFF;">Adobe-Subject-Token<br/>or<br/>X-Roku-Reserved-Roku-Connect-Token</td>
       <td>
-        플랫폼 ID 메서드에 대한 SSO(Single Sign-On) 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-Subject-Token</a> 헤더 설명서에 설명되어 있습니다.
+        플랫폼 ID 메서드에 대한 Single Sign-On 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md">Adobe-Subject-Token</a> / <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md">X-Roku-Reserved-Roku-Connect-Token</a> 헤더 설명서에 설명되어 있습니다.
         <br/><br/>
         플랫폼 ID를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md">플랫폼 ID 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
