@@ -2,9 +2,9 @@
 title: Amazon SSO Cookbook(REST API V2)
 description: Amazon SSO Cookbook(REST API V2)
 exl-id: 63e4fa63-8ca3-40eb-b49a-84dd75c2ca1d
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
 workflow-type: tm+mt
-source-wordcount: '542'
+source-wordcount: '567'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,9 @@ Adobe Pass 인증 REST API V2는 FireOS에서 실행되는 클라이언트 애�
 
 ## platform id 흐름을 사용한 Amazon single sign-on {#cookbook}
 
-### 전제 조건 {#prerequisites}
+Adobe Pass 인증은 Amazon과 협력하여 로그인 사용자 경험을 개선하고 TV 구독자를 위한 TV Everywhere 애플리케이션에서 SSO(Single Sign-On)를 용이하게 합니다.
+
+### 사전 요구 사항 {#prerequisites}
 
 플랫폼 ID 흐름을 사용하여 Amazon Single Sign-On을 계속 진행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -29,7 +31,7 @@ Adobe Pass 인증 REST API V2는 FireOS에서 실행되는 클라이언트 애�
 
 스트리밍 애플리케이션은 SSO(Single Sign-On)용 [Amazon SSO SDK](https://tve.zendesk.com/hc/en-us/article_attachments/360064368131/ottSSOTokenLib_v1.jar) 라이브러리를 빌드에 통합해야 합니다.
 
-* 최신 Amazon SSO SDK 라이브러리를 다운로드하여 응용 프로그램의 디렉터리에 평행한 `/SSOEnabler` 폴더에 복사합니다.
+* 최신 Amazon SSO SDK 라이브러리를 다운로드하여 응용 프로그램 디렉터리에 평행한 `/SSOEnabler` 폴더에 복사합니다.
 
 * Amazon SSO SDK 라이브러리를 사용하도록 매니페스트 및 Gradle 파일을 업데이트합니다.
 
@@ -57,9 +59,9 @@ Adobe Pass 인증 REST API V2는 FireOS에서 실행되는 클라이언트 애�
 
 #### Amazon SSO SDK 사용 {#use-amazon-sso-sdk}
 
-스트리밍 애플리케이션은 Amazon SSO SDK를 사용하여 SSO 토큰(플랫폼 ID) 페이로드를 가져와야 합니다.
+스트리밍 애플리케이션은 Amazon SSO SDK을 사용하여 SSO 토큰(플랫폼 ID) 페이로드를 가져와야 합니다.
 
-Amazon SSO SDK는 SSO 토큰(플랫폼 ID) 페이로드를 얻기 위해 동기 및 비동기 API를 모두 제공합니다.
+Amazon SSO SDK은 SSO 토큰(플랫폼 ID) 페이로드를 얻기 위해 동기 및 비동기 API를 모두 제공합니다.
 
 스트리밍 애플리케이션은 아키텍처에 따라 두 가지 옵션 중 하나를 선택할 수 있습니다.
 
@@ -151,7 +153,7 @@ Adobe Pass 인증 REST API V2는 다음 방법을 지원하여 장치 범위 또
 
 >[!IMPORTANT]
 > 
-> `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-주체-토큰](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
+> `Adobe-Subject-Token` 헤더에 대한 자세한 내용은 [Adobe-Subject-Token](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 설명서를 참조하십시오.
 
 #### 샘플
 

@@ -2,9 +2,9 @@
 title: REST API Cookbook(클라이언트-서버)
 description: 서버에 대한 REST API Cookbook 클라이언트입니다.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
 workflow-type: tm+mt
-source-wordcount: '888'
+source-wordcount: '886'
 ht-degree: 0%
 
 ---
@@ -84,7 +84,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 1. 사용자가 두 번째 화면 앱에서 돌아가서 장치의 &quot;계속&quot; 단추를 누릅니다. 또는 폴링 메커니즘을 구현하여 인증 상태를 확인할 수 있지만, Adobe Pass 인증에서는 폴링보다 계속 단추 방법을 권장합니다. <!--(For information on employing a "Continue" button versus polling the Adobe Pass Authentication backend server, see the Clientless Technical Overview: Managing 2nd-Screen Workflow Transition.)--> 예: [\&lt;SP\_FQDN\>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md)
 
-2. 인증을 시작하려면 Adobe Pass 인증 권한 부여 서비스에 GET 요청을 보냅니다. 예: `<SP_FQDN>/api/v1/authorize [device ID, Requestor ID, Resource ID]`
+2. 인증을 시작하려면 GET 요청을 Adobe Pass 인증 권한 부여 서비스로 보냅니다. 예: `<SP_FQDN>/api/v1/authorize [device ID, Requestor ID, Resource ID]`
 
 <!-- end list -->
 
@@ -140,7 +140,6 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 일부 장치는 Platform SSO(Single Sign-On)를 전적으로 지원합니다.
 
 * [AMAZON SSO](../../sso-access/amazon-sso-cookbook-rest-api-v1.md)
-* [Roku SSO](../../../features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-overview.md)
 
 ## REST API용 TempPass 및 프로모션 TempPass {#temppass}
 

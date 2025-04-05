@@ -2,9 +2,9 @@
 title: 파트너 인증 요청 검색
 description: REST API V2 - 파트너 인증 요청 검색
 exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
-source-git-commit: 5e5bb6a52a4629056fd52c7e79a11dba2b9a45db
+source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
 workflow-type: tm+mt
-source-wordcount: '1230'
+source-wordcount: '1219'
 ht-degree: 1%
 
 ---
@@ -266,7 +266,6 @@ ht-degree: 1%
                   <ul>
                     <li><b>없음</b><br/>인증을 계속하려면 클라이언트 응용 프로그램이 필요합니다.</li>
                     <li><b>인증됨</b><br/>기본 액세스 흐름을 통해 클라이언트 응용 프로그램이 이미 인증되었습니다.</li>
-                    <li><b>임시</b><br/>임시 액세스 흐름을 통해 클라이언트 응용 프로그램이 이미 인증되었습니다.</li>
                     <li><b>성능이 저하됨</b><br/>성능이 저하된 액세스 흐름을 통해 클라이언트 응용 프로그램이 이미 인증되었습니다.</li>
                     <li><b>authenticatedSSO</b><br/>클라이언트 응용 프로그램이 SSO(Single Sign-On) 액세스 흐름을 통해 이미 인증되었습니다.</li>
                     <li><b>pfs_fallback</b><br/>누락되었거나 잘못된 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md">AP-Partner-Framework-Status</a> 헤더 값으로 인해 클라이언트 응용 프로그램을 기본 인증 흐름으로 전환해야 합니다.</li>
