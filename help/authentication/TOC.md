@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+source-git-commit: f054da9a4c35fa0715039e8e06e2d10737b91b57
 workflow-type: tm+mt
-source-wordcount: '1257'
+source-wordcount: '1251'
 ht-degree: 2%
 
 ---
@@ -251,7 +251,6 @@ ht-degree: 2%
                + [(기존) iOS SDK 3.2+에서 SFSafariViewController 지원](integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)
                + [(레거시) Adobe Pass 인증 액세스 Enabler 사용 시 iOS에서 SSO](integration-guide-programmers/legacy/notes-technical/sso-on-ios-when-using-the-primetime-authentication-access-enabler.md)
                + [(기존) iOS 인증 오류 - adobepass.ios.app을 찾을 수 없음](integration-guide-programmers/legacy/notes-technical/ios-authentication-error-adobepassiosapp-cannot-be-found.md)
-               + [(레거시) iOS에서 임시 패스 재설정](integration-guide-programmers/legacy/notes-technical/reset-temp-pass-on-ios.md)
                + [(레거시) 콘솔 앱 로그를 사용하여 AccessEnabler iOS/tvOS SDK 디버깅](integration-guide-programmers/legacy/notes-technical/debugging-the-accessenabler-iostvos-sdk-using-console-app-logs.md)
                + [(기존) AccessEnabler iOS/tvOS 3.7.0 업그레이드 경로](integration-guide-programmers/legacy/notes-technical/accessenabler-iostvos-370-upgrade-path.md)
          + (레거시) 사용자 경험 {#user-experience}
