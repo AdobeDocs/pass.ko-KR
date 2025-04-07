@@ -2,7 +2,7 @@
 title: 프로그래머 통합 안내서
 description: 프로그래머 통합 안내서
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: 07bb12f7983f39b58e1b9795fdaa1bec4f68e674
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%
@@ -201,7 +201,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 
 **FAQ**
 
-* [인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general).
+* [인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authentication-phase-faqs-general)
 
 >[!TIP]
 >
@@ -236,7 +236,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 
 **FAQ**
 
-* [사전 인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general).
+* [사전 인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general)
 
 >[!TIP]
 >
@@ -277,7 +277,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 
 **FAQ**
 
-* [인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general).
+* [인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)
 
 >[!TIP]
 >
@@ -297,7 +297,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 
 **FAQ**
 
-* [로그아웃 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#logout-phase-faqs-general).
+* [로그아웃 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#logout-phase-faqs-general)
 
 #### SLO(단일 로그아웃) {#single-logout}
 

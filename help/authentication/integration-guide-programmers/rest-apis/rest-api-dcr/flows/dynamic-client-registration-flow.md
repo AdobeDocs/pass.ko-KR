@@ -2,9 +2,9 @@
 title: 동적 클라이언트 등록 흐름
 description: 동적 클라이언트 등록 흐름
 exl-id: d881cf0a-de09-4b1d-a094-d5490f944796
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '568'
+source-wordcount: '564'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 ## Adobe Pass으로 보호된 API 액세스 {#access-adobe-pass-protected-apis}
 
-### 전제 조건 {#prerequisites-access-adobe-pass-protected-apis}
+### 사전 요구 사항 {#prerequisites-access-adobe-pass-protected-apis}
 
 Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -70,7 +70,7 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
 
    >[!TIP]
    >
-   > 제안: 클라이언트 자격 증명은 캐시되어야 하며 무기한 사용될 수 있습니다.
+   > 클라이언트 자격 증명은 캐시되어 무기한으로 사용되어야 합니다.
 
 1. **액세스 토큰 검색:** 클라이언트 응용 프로그램은 클라이언트 토큰 끝점을 호출하여 액세스 토큰을 검색하는 데 필요한 모든 데이터를 수집합니다.
 
@@ -100,7 +100,7 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
 
    >[!TIP]
    >
-   > 제안: 액세스 토큰은 지정된 기간(예: 24시간 TTL(Time-to-Live)) 내에서만 캐시되고 사용되어야 합니다. 만료되면 클라이언트 애플리케이션이 새 액세스 토큰을 요청해야 합니다.
+   > 액세스 토큰은 지정된 기간(예: 24시간 TTL(Time-to-Live)) 내에서만 캐시되고 사용되어야 합니다. 만료되면 클라이언트 애플리케이션이 새 액세스 토큰을 요청해야 합니다.
 
 1. **보호된 API 액세스 계속:** 클라이언트 응용 프로그램은 액세스 토큰을 사용하여 다른 Adobe Pass의 보호된 API에 액세스합니다. 클라이언트 응용 프로그램은 `Bearer` 인증 체계(예: `Authorization: Bearer <access_token>`)를 사용하여 `Authorization` 요청 헤더에 액세스 토큰을 포함해야 합니다.
 

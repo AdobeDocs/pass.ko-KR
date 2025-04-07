@@ -2,9 +2,9 @@
 title: 임시 액세스 흐름
 description: REST API V2 - 임시 액세스 흐름
 exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '3225'
+source-wordcount: '3223'
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 
 ## 기본 TempPass를 사용하여 인증 결정 검색 {#retrieve-authorization-decisions-using-basic-temppass}
 
-### 전제 조건 {#prerequisites-retrieve-authorization-decisions-using-basic-temppass}
+### 사전 요구 사항 {#prerequisites-retrieve-authorization-decisions-using-basic-temppass}
 
 기본 TempPass를 사용하여 인증 결정을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -105,7 +105,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 
 ## 프로모션 TempPass를 사용하여 인증 결정 검색 {#retrieve-authorization-decisions-using-promotional-temppass}
 
-### 전제 조건 {#prerequisites-retrieve-authorization-decisions-using-promotional-temppass}
+### 사전 요구 사항 {#prerequisites-retrieve-authorization-decisions-using-promotional-temppass}
 
 프로모션 TempPass를 사용하여 인증 결정을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -183,7 +183,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 
 ## 프로모션 TempPass를 사용하여 최대 리소스 수 소비 {#consume-maximum-number-of-resources-using-promotional-temppass}
 
-### 전제 조건 {#prerequisites-consume-maximum-number-of-resources-using-promotional-temppass}
+### 사전 요구 사항 {#prerequisites-consume-maximum-number-of-resources-using-promotional-temppass}
 
 프로모션 TempPass를 사용하여 최대 수의 리소스를 소비하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -355,11 +355,11 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 
    >[!TIP]
    >
-   > 제안: 스트리밍 애플리케이션은 최대 리소스 수가 초과되었음을 사용자에게 알리고 계속 시청하려면 일반 MVPD을 사용하여 기본 인증 플로우를 시작하도록 권장할 수 있습니다.
+   > 스트리밍 애플리케이션은 최대 리소스 수가 초과되었음을 사용자에게 알리고 계속 시청하기 위해 일반 MVPD을 사용하여 기본 인증 플로우를 시작하도록 조언할 수 있습니다.
 
 ## 기본 또는 프로모션 TempPass가 만료되면 인증 결정 검색 {#retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires}
 
-### 전제 조건 {#prerequisites-retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires}
+### 사전 요구 사항 {#prerequisites-retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires}
 
 기본 또는 프로모션 TempPass가 만료되는 경우 인증 결정을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -435,7 +435,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 
    >[!TIP]
    >
-   > 제안: 스트리밍 애플리케이션은 임시 액세스가 만료되었음을 사용자에게 알리고 일반 MVPD을 사용하여 기본 인증 흐름을 시작하여 계속 보도록 권장할 수 있습니다.
+   > 스트리밍 애플리케이션은 임시 액세스가 만료되었음을 사용자에게 알리고 시청을 계속할 일반 MVPD을 사용하여 기본 인증 흐름을 시작하도록 권고할 수 있습니다.
 
 ## 기본 TempPass에 대한 프로필 검색 {#retrieve-profile-for-basic-temppass}
 
@@ -443,7 +443,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 >
 > 프로필 끝점 쿼리는 기본 TempPass에 대해 선택 사항입니다.
 
-### 전제 조건 {#prerequisites-retrieve-profile-for-basic-temppass}
+### 사전 요구 사항 {#prerequisites-retrieve-profile-for-basic-temppass}
 
 기본 TempPass에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -513,7 +513,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
 >
 > 프로필 끝점 쿼리는 프로모션 TempPass에 대해 선택 사항입니다.
 
-### 전제 조건 {#prerequisites-retrieve-profile-for-promotional-temppass}
+### 사전 요구 사항 {#prerequisites-retrieve-profile-for-promotional-temppass}
 
 프로모션 TempPass에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 

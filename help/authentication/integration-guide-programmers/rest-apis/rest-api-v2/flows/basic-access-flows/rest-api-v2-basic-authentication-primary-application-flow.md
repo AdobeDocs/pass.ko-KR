@@ -2,9 +2,9 @@
 title: 기본 인증 - 기본 애플리케이션 - 흐름
 description: REST API V2 - 기본 인증 - 기본 애플리케이션 - 흐름
 exl-id: 8122108d-e9da-43c5-9abb-ab177cb21eb6
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '904'
+source-wordcount: '903'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
 ## 기본 응용 프로그램 내에서 인증 수행 {#perform-authentication-within-primary-application}
 
-### 전제 조건 {#prerequisites-perform-authentication-within-primary-application}
+### 사전 요구 사항 {#prerequisites-perform-authentication-within-primary-application}
 
 기본 애플리케이션 내에서 사용자 상호 작용을 통해 인증을 수행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -127,7 +127,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
    >[!TIP]
    >
-   > 제안: 스트리밍 응용 프로그램은 사용자 에이전트가 제공된 `redirectUrl`에 도달할 때까지 기다렸다가 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
+   > 스트리밍 응용 프로그램은 사용자 에이전트가 제공된 `redirectUrl`에 도달할 때까지 기다렸다가 일반 프로필이 정상적으로 생성 및 저장되었는지 확인해야 합니다.
 
 1. **일반 프로필에 대한 정보를 반환합니다.** Profiles 끝점 응답에는 받은 매개 변수 및 헤더와 연결된 일반 프로필에 대한 정보가 포함되어 있습니다.
 

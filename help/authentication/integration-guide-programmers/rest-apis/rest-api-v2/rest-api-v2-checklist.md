@@ -1,9 +1,10 @@
 ---
 title: REST API V2 검사 목록
 description: REST API V2 검사 목록
-source-git-commit: f0001d86f595040f4be74f357c95bd2919dadf15
+exl-id: 9095d1dd-a90c-4431-9c58-9a900bfba1cf
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '2535'
+source-wordcount: '2545'
 ht-degree: 0%
 
 ---
@@ -40,7 +41,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>액세스 토큰 캐싱</i></td>
-      <td>액세스 토큰을 영구 저장소에 저장하고 만료될 때까지 재사용합니다. 모든 REST API v2 호출에 대해 새 토큰을 요청하지 마십시오.</td>
+      <td>액세스 토큰을 영구 저장소에 저장하고 만료될 때까지 재사용합니다.<br/><br/>모든 REST API v2 호출에 대해 새 토큰을 요청하지 말고 액세스 토큰이 만료될 때만 새로 고치십시오.</td>
       <td>시스템 리소스를 오버로드하고, 지연을 늘리며, HTTP 429 "요청이 너무 많음" 오류 응답을 트리거할 수 있습니다.</td>
    </tr>
 </table>
@@ -85,7 +86,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>폴링 메커니즘 구성</i></td>
-      <td>다음 조건에서 폴링 메커니즘 빈도를 구성합니다.<br/><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md">기본(화면) 응용 프로그램 내에서 수행되는 인증</a></b><ul><li>기본(스트리밍) 애플리케이션은 3~5초마다 폴링해야 합니다.</li></ul><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md">보조(화면) 응용 프로그램 내에서 수행된 인증</a></b><ul><li>기본(스트리밍) 애플리케이션은 3~5초마다 폴링해야 합니다.</li></ul></td>
+      <td>다음 조건에서 폴링 메커니즘 빈도를 구성합니다.<br/><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md">기본(화면) 응용 프로그램 내에서 수행되는 인증</a></b><ul><li>기본(스트리밍) 애플리케이션은 3~5초 이상 간격으로 폴링해야 합니다.</li></ul><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md">보조(화면) 응용 프로그램 내에서 수행된 인증</a></b><ul><li>기본(스트리밍) 애플리케이션은 3~5초마다 폴링해야 합니다.</li></ul></td>
       <td>시스템 리소스를 오버로드하고, 지연을 늘리며, HTTP 429 "요청이 너무 많음" 오류 응답을 트리거할 수 있습니다.</td>
    </tr>
    <tr>
@@ -237,7 +238,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>액세스 토큰 유효성 검사</i></td>
-      <td>액세스 토큰 유효성을 미리 확인하고 만료되면 새로 고칩니다.<br/><br/>HTTP 401 "승인되지 않음" 오류를 처리하기 위한 다시 시도 메커니즘이 원래 요청을 다시 시도하기 전에 먼저 액세스 토큰을 새로 고치는지 확인하십시오.</td>
+      <td>액세스 토큰 유효성을 미리 확인하여 만료되면 새로 고칩니다.<br/><br/>HTTP 401 "승인되지 않음" 오류를 처리하기 위한 다시 시도 메커니즘이 원래 요청을 다시 시도하기 전에 먼저 액세스 토큰을 새로 고치는지 확인하십시오.</td>
       <td>HTTP 401 "승인되지 않은" 오류 응답을 트리거하여 시스템 리소스를 오버로드하고 지연을 증가시킬 수 있습니다.</td>
    </tr>
 </table>

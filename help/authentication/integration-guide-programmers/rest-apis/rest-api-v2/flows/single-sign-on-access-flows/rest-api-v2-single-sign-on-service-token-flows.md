@@ -2,9 +2,9 @@
 title: SSO(Single Sign-On) - 서비스 토큰 - 흐름
 description: REST API V2 - Single Sign-On - 서비스 토큰 - 흐름
 exl-id: b0082d2a-e491-4cb5-bb40-35ba10db6b1a
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '1858'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행 {#performing-authentication-flow-using-service-token-single-sign-on-method}
 
-### 전제 조건 {#prerequisites-scenario-performing-authentication-flow-using-service-token-single-sign-on-method}
+### 사전 요구 사항 {#prerequisites-scenario-performing-authentication-flow-using-service-token-single-sign-on-method}
 
 서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 흐름을 수행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -126,7 +126,7 @@ ht-degree: 0%
 
    >[!TIP]
    >
-   > 제안: 스트리밍 응용 프로그램은 사용자 에이전트가 제공된 `redirectUrl`에 도달할 때까지 기다렸다가 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
+   > 스트리밍 응용 프로그램은 사용자 에이전트가 제공된 `redirectUrl`에 도달할 때까지 기다렸다가 일반 프로필이 정상적으로 생성 및 저장되었는지 확인해야 합니다.
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.
 
@@ -210,7 +210,7 @@ ht-degree: 0%
 
 ## 서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 결정 검색 {#performing-authorization-flow-using-service-token-single-sign-on-method}
 
-### 전제 조건 {#prerequisites-scenario-performing-authorization-flow-using-service-token-single-sign-on-method}
+### 사전 요구 사항 {#prerequisites-scenario-performing-authorization-flow-using-service-token-single-sign-on-method}
 
 서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 흐름을 수행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 

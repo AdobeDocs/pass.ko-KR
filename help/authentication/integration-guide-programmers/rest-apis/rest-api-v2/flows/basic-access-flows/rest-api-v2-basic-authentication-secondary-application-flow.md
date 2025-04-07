@@ -2,9 +2,9 @@
 title: 기본 인증 - 보조 애플리케이션 - 흐름
 description: REST API V2 - 기본 인증 - 보조 애플리케이션 - 흐름
 exl-id: 83bf592e-c679-4cfe-984d-710a9598c620
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
-source-wordcount: '2010'
+source-wordcount: '2006'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
 ## 사전 선택된 mvpd로 보조 응용 프로그램 내에서 인증 수행 {#perform-authentication-within-secondary-application-with-preselected-mvpd}
 
-### 전제 조건 {#prerequisites-perform-authentication-within-secondary-application-with-preselected-mvpd}
+### 사전 요구 사항 {#prerequisites-perform-authentication-within-secondary-application-with-preselected-mvpd}
 
 기본 애플리케이션 내에서 인증 흐름을 시작하고 보조 애플리케이션 내에서 사용자 상호 작용을 통해 완료하기 전에 다음 전제 조건을 충족하는지 확인하십시오.
 
@@ -143,7 +143,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
    >[!TIP]
    >
-   > 제안: 보조 응용 프로그램은 누락된 인증 세션을 나타내는 오류 응답 이벤트에서 사용된 `code`이(가) 잘못되었음을 사용자에게 알리고 새 세션을 사용하여 다시 시도하도록 사용자에게 알릴 수 있습니다.
+   > 보조 응용 프로그램에서는 누락된 인증 세션을 나타내는 오류 응답 이벤트에서 사용된 `code`이(가) 잘못되었음을 사용자에게 알리고 새 인증 세션을 사용하여 다시 시도하도록 사용자에게 알릴 수 있습니다.
 
 1. **사용자 에이전트에서 URL 열기:** 보조 응용 프로그램에서 사용자 에이전트를 열어 자체 계산된 `url`을(를) 로드하고 인증 끝점에 요청합니다. 이 흐름에는 여러 리디렉션이 포함될 수 있으므로 궁극적으로 사용자를 MVPD 로그인 페이지로 유도하고 유효한 자격 증명을 제공합니다.
 
@@ -168,7 +168,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
    >[!TIP]
    >
-   > 제안: 스트리밍 응용 프로그램에서 `code`을(를) 사용하여 폴링 메커니즘을 구현하여 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
+   > 스트리밍 응용 프로그램에서 일반 프로필이 성공적으로 생성 및 저장되었는지 확인하려면 `code`을(를) 사용하여 폴링 메커니즘을 구현해야 합니다.
 
 1. **일반 프로필에 대한 정보를 반환합니다.** Profiles 끝점 응답에는 받은 매개 변수 및 헤더와 연결된 일반 프로필에 대한 정보가 포함되어 있습니다.
 
@@ -188,7 +188,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
 ## 미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행 {#perform-authentication-within-secondary-application-without-preselected-mvpd}
 
-### 전제 조건 {#prerequisites-perform-authentication-within-secondary-application-without-preselected-mvpd}
+### 사전 요구 사항 {#prerequisites-perform-authentication-within-secondary-application-without-preselected-mvpd}
 
 기본 애플리케이션 내에서 인증 흐름을 시작하고 보조 애플리케이션 내에서 사용자 상호 작용을 통해 완료하기 전에 다음 전제 조건을 충족하는지 확인하십시오.
 
@@ -277,7 +277,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
    >[!TIP]
    >
-   > 제안: 보조 응용 프로그램은 누락된 인증 세션을 나타내는 오류 응답 이벤트에서 사용된 `code`이(가) 잘못되었음을 사용자에게 알리고 새 세션을 사용하여 다시 시도하도록 사용자에게 알릴 수 있습니다.
+   > 보조 응용 프로그램에서는 누락된 인증 세션을 나타내는 오류 응답 이벤트에서 사용된 `code`이(가) 잘못되었음을 사용자에게 알리고 새 인증 세션을 사용하여 다시 시도하도록 사용자에게 알릴 수 있습니다.
 
 1. **기존 프로필 표시:** 세션 끝점 응답에 다음 데이터가 포함되어 있습니다.
    * `actionName` 특성이 &quot;authorize&quot;로 설정되어 있습니다.
@@ -306,7 +306,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
    >[!TIP]
    >
-   > 제안: 스트리밍 응용 프로그램에서 `code`을(를) 사용하여 폴링 메커니즘을 구현하여 일반 프로필이 정상적으로 생성 및 저장되었는지 확인할 수 있습니다.
+   > 스트리밍 응용 프로그램에서 일반 프로필이 성공적으로 생성 및 저장되었는지 확인하려면 `code`을(를) 사용하여 폴링 메커니즘을 구현해야 합니다.
 
 1. **일반 프로필에 대한 정보를 반환합니다.** Profiles 끝점 응답에는 받은 매개 변수 및 헤더와 연결된 일반 프로필에 대한 정보가 포함되어 있습니다.
 
