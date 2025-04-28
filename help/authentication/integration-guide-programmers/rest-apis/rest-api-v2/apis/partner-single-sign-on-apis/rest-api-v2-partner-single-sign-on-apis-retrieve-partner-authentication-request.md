@@ -2,7 +2,7 @@
 title: 파트너 인증 요청 검색
 description: REST API V2 - 파트너 인증 요청 검색
 exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+source-git-commit: e8836c76aec10607717c0a67434b2ba5a78a8954
 workflow-type: tm+mt
 source-wordcount: '1219'
 ht-degree: 1%
@@ -307,7 +307,7 @@ ht-degree: 1%
                     <ul>
                         <li><b>type</b><br/>MVPD에서 지원하는 프로토콜 유형을 나타냅니다(SAML만 해당).</li>
                         <li><b>요청</b><br/>SAML 요청입니다.</li>
-                        <li><b>특성</b><br/>SAML 요청 특성입니다.</li>
+                        <li><b>attributesNames</b><br/>SAML 요청 특성입니다.</li>
                     </ul>
                </td>
                <td>선택 사항</td>
