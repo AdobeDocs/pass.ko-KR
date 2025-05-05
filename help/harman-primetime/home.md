@@ -21,7 +21,7 @@ Adobe Harman은 Primetime 광고 및 게시 제품을 유지 관리하는 한편
 
 | 안내서 | 설명 |
 |--- |--- |
-| [Primetime 동적 Ad Insertion](https://experienceleague.adobe.com/docs/primetime/ad-insertion/home.html) | Adobe Pass Ad Insertion 도움말 |
+| [Primetime 동적 Ad Insertion](https://experienceleague.adobe.com/docs/primetime/ad-insertion/home.html?lang=ko) | Adobe Pass Ad Insertion 도움말 |
 
 ## Adobe Pass 안내서
 

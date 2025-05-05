@@ -21,7 +21,7 @@ Experience Cloud ID(줄여서 ECID)는 애플리케이션/웹 사이트의 각 �
 
 방문자 ID를 제공하는 시스템이 이미 있는 경우 이 문서의 범위에 동일한 ID를 사용해야 합니다.
 
-ECID를 얻는 한 가지 방법은 Experience Cloud ID 서비스를 사용하는 것입니다. TDM, JS 라이브러리, 서버측, 직접 통합 또는 모바일 플랫폼용 기본 라이브러리를 기반으로 원하는 구현 유형을 사용할 수 있습니다. 사용 가능한 서비스, 라이브러리, SDK 및 구현 안내서를 종합적으로 보려면 <https://experienceleague.adobe.com/docs/id-service/using/implementation/implementation-guides.html>을(를) 참조하십시오.
+ECID를 얻는 한 가지 방법은 Experience Cloud ID 서비스를 사용하는 것입니다. TDM, JS 라이브러리, 서버측, 직접 통합 또는 모바일 플랫폼용 기본 라이브러리를 기반으로 원하는 구현 유형을 사용할 수 있습니다. 사용 가능한 서비스, 라이브러리, SDK 및 구현 안내서를 종합적으로 보려면 <https://experienceleague.adobe.com/docs/id-service/using/implementation/implementation-guides.html?lang=ko>을(를) 참조하십시오.
 
 ## Adobe Pass 인증에서 Experience Cloud ID를 사용하면 어떤 이점이 있습니까? {#benefit-ex-cloud-id}
 

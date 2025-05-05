@@ -29,7 +29,7 @@ ht-degree: 0%
 1. &quot;이 콘텐츠가 도움이 되었습니까?&quot;에서 브라우저 창의 아래쪽에 표시되는 배너 클릭 **자세한 피드백 옵션**.
 1. 클릭 **편집 제안** 및 GitHub UI의 변경 사항과 함께 가져오기 요청(PR)을 제출합니다.
 
-   일반 참조 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) 추가 정보.
+   일반 참조 [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ko) 추가 정보.
 
 이 저장소의 설명서 및 코드 샘플에 대해 사용자가 제출하는 부분 수정 또는 설명은 Adobe 사용 약관의 적용을 받습니다.
 
@@ -43,7 +43,7 @@ Adobe 커뮤니티에 소속되어 있고 새 주제를 만들거나 주요 변�
 
 커뮤니티 기여자는 기본 편집에 GitHub UI를 사용하거나 리포지토리를 포크하여 크게 기여할 수 있습니다.
 
-다음을 참조하십시오. [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html) 을 참조하십시오.
+다음을 참조하십시오. [Adobe 문서 기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ko) 을 참조하십시오.
 
 ## 내부 기여자
 
