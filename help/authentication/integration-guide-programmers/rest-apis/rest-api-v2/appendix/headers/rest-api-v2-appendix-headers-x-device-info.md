@@ -53,7 +53,7 @@ ht-degree: 2%
         <td></td>
         <td>기본 하드웨어 유형</td>
         <td>장치의 기본 하드웨어 유형입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -110,7 +110,7 @@ ht-degree: 2%
         <td><i>필수</i></td>
         <td>osName</td>
         <td>장치의 운영 체제(OS) 이름.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -132,7 +132,7 @@ ht-degree: 2%
         <td></td>
         <td>osFamily</td>
         <td>장치의 운영 체제(OS) 그룹 이름입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -155,7 +155,7 @@ ht-degree: 2%
         <td></td>
         <td>osVendor</td>
         <td>장치의 운영 체제(OS) 공급업체.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -185,7 +185,7 @@ ht-degree: 2%
         <td></td>
         <td>browserName</td>
         <td>브라우저의 이름입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -205,7 +205,7 @@ ht-degree: 2%
         <td></td>
         <td>browserVendor</td>
         <td>브라우저의 빌드 회사/조직입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -290,7 +290,7 @@ ht-degree: 2%
         <td></td>
         <td>connectionSecure</td>
         <td>네트워크 연결 보안 상태입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>

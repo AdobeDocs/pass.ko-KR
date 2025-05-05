@@ -45,9 +45,9 @@ ht-degree: 3%
 
 | Adobe Pass 인증 API | JSON | XML |
 |-------------------------------|---------|---------|
-| REST API v2 | &amp;check; |         |
-| REST API v1 | &amp;check; | &amp;check; |
-| SDK 사전 인증 API | &amp;check; |         |
+| REST API v2 | &check; |         |
+| REST API v1 | &check; | &check; |
+| SDK 사전 인증 API | &check; |         |
 
 >[!IMPORTANT]
 >
@@ -202,9 +202,9 @@ Content-Type: application/xml
 
 | 이름 | 유형 | 예 | 제한됨 | 설명 |
 |-----------|-----------|---------------------------------------------------------------------------------------------------------------------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *작업* | *문자열* | *없음* | &amp;check; | 이 문서에 정의된 대로 상황을 수정할 수 있는 Adobe Pass 인증 권장 작업입니다. <br/><br/> 자세한 내용은 [작업](#enhanced-error-codes-action) 섹션을 참조하세요. |
-| *상태* | *정수* | *403* | &amp;check; | [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6) 문서에 정의된 HTTP 응답 상태 코드입니다. <br/><br/> 자세한 내용은 [상태](#enhanced-error-codes-status) 섹션을 참조하세요. |
-| *코드* | *문자열* | *authorization_denied_by_mvpd* | &amp;check; | 이 문서에 정의된 대로 오류와 연결된 Adobe Pass 인증 고유 식별자 코드. <br/><br/> 자세한 내용은 [코드](#enhanced-error-codes-code) 섹션을 참조하세요. |
+| *작업* | *문자열* | *없음* | &check; | 이 문서에 정의된 대로 상황을 수정할 수 있는 Adobe Pass 인증 권장 작업입니다. <br/><br/> 자세한 내용은 [작업](#enhanced-error-codes-action) 섹션을 참조하세요. |
+| *상태* | *정수* | *403* | &check; | [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6) 문서에 정의된 HTTP 응답 상태 코드입니다. <br/><br/> 자세한 내용은 [상태](#enhanced-error-codes-status) 섹션을 참조하세요. |
+| *코드* | *문자열* | *authorization_denied_by_mvpd* | &check; | 이 문서에 정의된 대로 오류와 연결된 Adobe Pass 인증 고유 식별자 코드. <br/><br/> 자세한 내용은 [코드](#enhanced-error-codes-code) 섹션을 참조하세요. |
 | *메시지* | *문자열* | *지정된 리소스에 대한 권한 부여를 요청할 때 MVPD에서 &quot;거부&quot; 결정을 반환했습니다.* |            | 사람이 인식할 수 있는 메시지로서, 경우에 따라 최종 사용자에게 표시될 수 있습니다. <br/><br/> 자세한 내용은 [응답 처리](#enhanced-error-codes-response-handling) 섹션을 참조하십시오. |
 | *세부 정보* | *문자열* | *구독 패키지에 &quot;Live&quot; 채널이 포함되어 있지 않습니다* |            | 서비스 파트너가 제공할 수 있는 자세한 메시지(경우에 따라 <br/><br/>) 서비스 파트너가 사용자 지정 메시지를 제공하지 않는 경우 이 필드가 없을 수 있습니다. |
 | *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html* |            | 이 오류가 발생한 이유 및 가능한 해결 방법에 대한 자세한 정보로 연결되는 Adobe Pass 인증 공개 설명서 URL. <br/><br/> 이 필드에는 절대 URL이 있으며 다른 URL을 제공할 수 있는 오류 컨텍스트에 따라 오류 코드에서 유추해서는 안 됩니다. |

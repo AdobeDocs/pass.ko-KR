@@ -136,6 +136,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 관리자(이 항목을 정렬합니다).
 
    * **트리거:**
+
      [setRequestorComplete()](#$setReqComplete) 콜백.
 
    >[!NOTE]

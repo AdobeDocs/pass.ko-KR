@@ -86,7 +86,7 @@ AccessEnabler JavaScript SDK v2(버전 2.x)의 경우 라이브러리가 위에�
 >AccessEnabler JavaScript SDK 버전 2.x와 AccessEnabler JavaScript SDK 버전 3.x의 경우 둘 다 인증 프로세스에 타사 쿠키를 사용하며, Safari 11부터 시작되는 ITP 및 타사 쿠키 정책으로 인해 로그인 불능에서 예상 인증 기간보다 짧은 시간에 이르기까지 사용자의 인증 환경이 예기치 않고 정의되지 않을 수 있다는 점을 염두에 두십시오.
 
 
-### Safari 12 {#certified-functionality-of-accessenabler-javacscript=sdk-v4}에서 AccessEnabler JavaScript SDK v4(버전 4.x)의 인증된 기능
+### Safari 12에서 AccessEnabler JavaScript SDK v4(버전 4.x)의 인증된 기능 {#certified-functionality-of-accessenabler-javacscript=sdk-v4}
 
 버전 4.0부터 AccessEnabler JavaScript SDK은 인증 프로세스에 더 이상 타사 쿠키를 사용하지 않으므로 사용자의 브라우저에서 타사 쿠키가 비활성화되어 있더라도 사용자 상호 작용을 사용하는 **인증** 흐름이 항상 작동합니다.
 

@@ -86,7 +86,7 @@ mvpds 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입�
 
 - `selectedProvider(mvpd)`
 
-  **트리거:** [`getSelectedProvider()`](#$getSelProv `mvpd` 매개 변수는 다음에서 선택한 공급자에 대한 정보를 제공합니다.
+  **트리거:** [`getSelectedProvider()`] (#$getSelProv `mvpd` 매개 변수는 다음에서 선택한 공급자에 대한 정보를 제공합니다.
 사용자.
 
 - `setMetadataStatus(metadata, key, arguments)`

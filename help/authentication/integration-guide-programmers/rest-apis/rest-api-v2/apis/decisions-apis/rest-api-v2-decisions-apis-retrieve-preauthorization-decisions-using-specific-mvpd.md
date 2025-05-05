@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> REST API V2 구현 제한 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 [의해 제한됩니다.
+> REST API V2 구현 제한 메커니즘[&#128279;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
 
 ## 요청 {#request}
 

@@ -52,7 +52,7 @@ ht-degree: 2%
    + [프로그래머 킥스타트 안내서](kickstart/programmer-kickstart-guide.md)
    + [MVPD 킥스타트 안내서](kickstart/mvpd-kickstart-guide.md)
    + [지원 절차 FAQ](kickstart/support-procedures-faqs.md)
-+ 프로그래머 {#integration-guide-programmers}을(를) 위한 통합 안내서
++ 프로그래머을(를) 위한 통합 안내서 {#integration-guide-programmers}
    + [프로그래머 통합 안내서](integration-guide-programmers/programmer-integration-guide-overview.md)
    + [최소 시스템 요구 사항](integration-guide-programmers/minimum-system-requirements.md)
    + [조절 메커니즘](integration-guide-programmers/throttling-mechanism.md)
@@ -87,7 +87,7 @@ ht-degree: 2%
             + 결정 {#rest-api-v2-decisions-apis}
                + [특정 mvpd를 사용하여 권한 부여 결정 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
                + [특정 mvpd를 사용하여 사전 인증 결정 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
-            + {#rest-api-v2-logout-apis} 로그아웃
+            + 로그아웃{#rest-api-v2-logout-apis}
                + [특정 mvpd에 대한 로그아웃 시작](integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
             + 파트너 SSO(Single Sign-On) {#rest-api-v2-partner-single-sign-on-apis}
                + [파트너 인증 요청 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
@@ -102,7 +102,7 @@ ht-degree: 2%
                + [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
                + [기본 애플리케이션 내에서 수행되는 기본 사전 인증 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
                + [기본 애플리케이션 내에서 수행되는 기본 로그아웃 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-logout-primary-application-flow.md)
-            + 액세스 흐름 {#rest-api-v2-degraded-access-flows} 성능 저하
+            + 액세스 흐름 성능 저하 {#rest-api-v2-degraded-access-flows}
                + [액세스 흐름 성능 저하](integration-guide-programmers/rest-apis/rest-api-v2/flows/degraded-access-flows/rest-api-v2-access-degraded-flows.md)
             + 임시 액세스 흐름 {#rest-api-v2-temporary-access-flows}
                + [임시 액세스 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md)
@@ -258,11 +258,11 @@ ht-degree: 2%
             + [(기존) Preflight 기능: 문제를 활성화, 문제 해결 또는 확인하는 방법](integration-guide-programmers/legacy/notes-technical/preflight-feature.md)
             + [(레거시) 선택 대화 상자에서 MVPD 허용](integration-guide-programmers/legacy/notes-technical/allow-mvpd-selectn-dialog.md)
             + [(레거시) MVPD가 선택 대화 상자를 표시하지 않도록 방지](integration-guide-programmers/legacy/notes-technical/prevent-mvpd-selectn-dialog.md)
-         + (레거시) {#troubleshooting} 문제 해결
+         + (레거시) 문제 해결 {#troubleshooting}
             + [(기존) Charles Proxy 사용](integration-guide-programmers/legacy/notes-technical/using-charles-proxy.md)
             + [(기존) Adobe Pass Adobe PayTV Pass 모니터링](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
             + [(기존) Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
-+ MVPD {#integration-guide-mvpds}에 대한 통합 안내서
++ MVPD에 대한 통합 안내서 {#integration-guide-mvpds}
    + [MVPD 통합 안내서](integration-guide-mvpds/mvpd-integration-guide-overview.md)
    + [인증](integration-guide-mvpds/authn-usecase.md)
    + [OAuth 2.0 프로토콜을 사용한 인증](integration-guide-mvpds/authn-oauth2-protocol.md)
@@ -275,7 +275,7 @@ ht-degree: 2%
    + [프록시 MVPD SAML 통합](integration-guide-mvpds/proxy-mvpd-saml-int.md)
    + [서비스 공급자 범위 지정](integration-guide-mvpds/serv-provider-scoping.md)
    + [MVPD 허용 IP 주소](integration-guide-mvpds/mvpd-listing-ip-addres.md)
-+ TVE 대시보드 {#user-guide-tve-dashboard}에 대한 사용 안내서
++ TVE 대시보드에 대한 사용 안내서 {#user-guide-tve-dashboard}
    + [TVE 대시보드 개요](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)
    + [환경](/help/authentication/user-guide-tve-dashboard/tve-dashboard-environments.md)
    + [변경 사항 검토 및 푸시](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)

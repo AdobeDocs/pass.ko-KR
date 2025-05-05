@@ -47,7 +47,7 @@ ht-degree: 0%
 
 * [`setOptions:options:`](#setOptions) - 프로필 또는 visitorID와 같은 글로벌 SDK 옵션을 구성합니다.
 
-* [`setRequestor:`](#setReqV3)[`requestorID`](#setReqV3),[`setRequestor:requestorID:serviceProviders:`](#setReqV3) - 프로그래머의 ID를 설정합니다.
+* [`setRequestor:`](#setReqV3) [`requestorID`](#setReqV3),[`setRequestor:requestorID:serviceProviders:`](#setReqV3) - 프로그래머의 ID를 설정합니다.
 
 * **[사용되지 않음]** [`setRequestor:signedRequestorId:`](#setReq),[`setRequestor:signedRequestorId:serviceProviders:`](#setReq) - 프로그래머의 ID를 설정합니다.
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 * [`getAuthentication`](#getAuthN), [`getAuthentication:withData:`](#getAuthN) - 전체 인증 워크플로를 시작합니다.
 
-* [`getAuthentication:filter`](#getAuthN_filter),[`getAuthentication:withData:`](#getAuthN)[andFilter](#getAuthN_filter) - 전체 인증 워크플로를 시작합니다.
+* [`getAuthentication:filter`](#getAuthN_filter),[`getAuthentication:withData:`](#getAuthN) [andFilter](#getAuthN_filter) - 전체 인증 워크플로를 시작합니다.
 
 * [`displayProviderDialog:`](#dispProvDialog) - 사용자가 MVPD을 선택할 수 있는 적절한 UI 요소를 인스턴스화하도록 애플리케이션에 알립니다.
 
@@ -716,7 +716,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 `navigateToUrl:` 콜백과 마찬가지로 AccessEnabler가 `navigateToUrl:useSVC:`을(를) 트리거하여 응용 프로그램에 `SFSafariViewController` 컨트롤러를 인스턴스화하고 콜백의 **`url`** 매개 변수에 제공된 URL을 로드하도록 요청합니다. 콜백은 인증 끝점의 URL 또는 로그아웃 끝점의 URL을 나타내는 **`url`** 매개 변수와 응용 프로그램에서 `SFSafariViewController`을(를) 사용해야 함을 지정하는 **`useSVC`** 매개 변수를 전달합니다.
 
-`SFSafariViewController` 컨트롤러가 여러 리디렉션을 거치는 동안 응용 프로그램은 컨트롤러의 활동을 모니터링하고 `application's custom scheme`에 의해 정의된 특정 사용자 지정 URL을 로드하는 순간을 감지해야 합니다(예: ** `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`**. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 인증 또는 로그아웃 흐름이 완료되었으며 컨트롤러를 닫는 것이 안전하다는 신호로 응용 프로그램에서 해석해야 합니다. 컨트롤러가 이 특정 사용자 지정 URL을 로드하면 응용 프로그램에서 `SFSafariViewController`을(를) 닫고 AccessEnabler의 `handleExternalURL:url `API 메서드를 호출해야 합니다.
+`SFSafariViewController` 컨트롤러가 여러 리디렉션을 거치는 동안 응용 프로그램은 컨트롤러의 활동을 모니터링하고 `application's custom scheme`에 의해 정의된 특정 사용자 지정 URL을 로드하는 순간을 감지해야 합니다(예: **&#x200B; `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`**. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 인증 또는 로그아웃 흐름이 완료되었으며 컨트롤러를 닫는 것이 안전하다는 신호로 응용 프로그램에서 해석해야 합니다. 컨트롤러가 이 특정 사용자 지정 URL을 로드하면 응용 프로그램에서 `SFSafariViewController`을(를) 닫고 AccessEnabler의 `handleExternalURL:url `API 메서드를 호출해야 합니다.
 
 **참고:** 인증 흐름의 경우 사용자가 &quot;뒤로&quot; 단추를 누를 수 있는 지점이며, 이는 인증 흐름을 중단하는 것과 같습니다. 이러한 경우 응용 프로그램에서 매개 변수로 **`nil`**&#x200B;을(를) 전달하고 AccessEnabler에 인증 상태 컴퓨터를 다시 설정할 수 있는 기회를 제공하는 [setSelectedProvider:](#setSelProv) 메서드를 호출해야 합니다.
 
@@ -732,19 +732,19 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 <tbody>
 <tr class="odd">
 <td><pre><code>@optional
-- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
+&#x200B;- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
 </tr>
 </tbody>
 </table>
 
-**가용성:**v 3.2+
+**가용성:**&#x200B;v 3.2+
 
 **매개 변수**:
 
 * *url:* MVPD의 로그인 페이지를 가리키는 URL
 * *useSVC:* SFSafariViewController에 URL을 로드할지 여부를 지정합니다.
 
-[setSelectedProvider:](#setSelProv) 전에 **트리거:**[ setOptions:](#setOptions)
+[setSelectedProvider:](#setSelProv) 전에 **트리거:**&#x200B;[ setOptions:](#setOptions)
 
 [맨 위로...](#apis)
 
@@ -1438,7 +1438,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 **매개 변수**:
 
-* *메타데이터*: 요청한 메타데이터입니다. 이 값은 정적 메타데이터(인증 TTL, 권한 부여 TTL, 장치 ID)의 경우 `NSString`입니다.  사용자별 메타데이터를 요청할 때 복잡한 개체입니다. 일반적으로 이 복합 개체는 JSON 페이로드의 Objective-C 표현입니다(예: &#39;{&quot;street&quot;: &quot;Main Avenue&quot;, &quot;buildings&quot;: [&quot;150&quot;, &quot;320&quot;]&#39;)는 Objective-C에서 NSDictionary(&quot;street&quot; -> &quot;Main Avenue&quot;, &quot;buildings&quot; -> NSArray(&quot;150&quot;, &quot;320&quot;))로 변환됨).   샘플 메타데이터 JSON 개체:
+* *메타데이터*: 요청한 메타데이터입니다. 이 값은 정적 메타데이터(인증 TTL, 권한 부여 TTL, 장치 ID)의 경우 `NSString`입니다.  사용자별 메타데이터를 요청할 때 복잡한 개체입니다. 일반적으로 이 복합 개체는 JSON 페이로드의 Objective-C 표현입니다(예: &#39;&lbrace;&quot;street&quot;: &quot;Main Avenue&quot;, &quot;buildings&quot;: [&quot;150&quot;, &quot;320&quot;]&#39;)는 Objective-C에서 NSDictionary(&quot;street&quot; -> &quot;Main Avenue&quot;, &quot;buildings&quot; -> NSArray(&quot;150&quot;, &quot;320&quot;))로 변환됨).   샘플 메타데이터 JSON 개체:
 
 ```JSON
         {

@@ -164,7 +164,7 @@ AccessEnabler iOS/tvOS SDK은 [setOptions](/help/authentication/integration-guid
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
+>장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
 
 **샘플 코드**
 
@@ -243,8 +243,8 @@ private JSONObject computeClientInformation() {
 
 >[!NOTE]
 >
-**리소스:**
-* Java 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}.
+>**리소스:**
+>* Java 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}.
 
 ### 파이어TV {#fire-tv}
 
@@ -276,13 +276,13 @@ private JSONObject computeClientInformation() {
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
+>장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
 
 >[!NOTE]
 >
-**리소스:**
-* Android 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}.
-* [FireTV 장치 식별](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html){target=_blank}
+>**리소스:**
+>* Android 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}.
+>* [FireTV 장치 식별](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html){target=_blank}
 
 ### iOS/tvOS {#ios-tvos}
 
@@ -315,7 +315,7 @@ private JSONObject computeClientInformation() {
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체가 Base64로 인코딩되어야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 URL로 인코딩되어야 합니다.
+>장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체가 Base64로 인코딩되어야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 URL로 인코딩되어야 합니다.
 
 **샘플 코드**
 
@@ -387,10 +387,10 @@ private JSONObject computeClientInformation() {
 
 >[!NOTE]
 >
-**리소스:**
-* [UIDevice](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice){target=_blank}
-* [uname](https://man7.org/linux/man-pages/man2/uname.2.html){target=_blank}
-* [연결 정보](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html){target=_blank}
+>**리소스:**
+>* [UIDevice](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice){target=_blank}
+>* [uname](https://man7.org/linux/man-pages/man2/uname.2.html){target=_blank}
+>* [연결 정보](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html){target=_blank}
 
 ### Roku {#roku}
 
@@ -422,11 +422,11 @@ private JSONObject computeClientInformation() {
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 URL로 인코딩되어야 합니다.
+>장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 URL로 인코딩되어야 합니다.
 
 >[!NOTE]
 >
-자세한 내용은 [ifDeviceInfo](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)을(를) 참조하십시오
+>자세한 내용은 [ifDeviceInfo](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)을(를) 참조하십시오
 
 ### 엑스박스 {#xbox}
 
@@ -458,7 +458,7 @@ private JSONObject computeClientInformation() {
 
 >[!IMPORTANT]
 >
-장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
+>장치, 연결 및 애플리케이션 정보를 동일한 JSON 개체에 추가해야 합니다. 그런 다음 결과 개체는 **Base64로 인코딩**&#x200B;해야 합니다. 또한 Adobe Pass 인증 REST API의 경우 값은 **URL로 인코딩됨**&#x200B;이어야 합니다.
 
 **리소스**
 

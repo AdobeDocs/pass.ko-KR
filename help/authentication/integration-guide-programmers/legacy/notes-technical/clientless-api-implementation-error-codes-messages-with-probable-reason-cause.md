@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 제품 공지](/help/authentication/product-announcements.md) 페이지에 집계된 최신 Adobe Pass Authentication 제품 발표 및 서비스 해제 일정에 [대한 정보를 계속 확인하십시오.
+> 제품 공지[&#128279;](/help/authentication/product-announcements.md) 페이지에 집계된 최신 Adobe Pass Authentication 제품 발표 및 서비스 해제 일정에 대한 정보를 계속 확인하십시오.
 
 </br>
 

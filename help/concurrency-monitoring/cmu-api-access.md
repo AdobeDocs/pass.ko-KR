@@ -34,6 +34,7 @@ OAuth 2.0 Dynamic Client Registration Protocol과 호환되도록 CMU 보고서 
    3. *등록된 응용 프로그램* 탭으로 이동
    4. 애플리케이션 선택
    5. 소프트웨어 명령문을 가져올 등록된 응용 프로그램 행에서 다운로드를 클릭하고 로컬 컴퓨터에 파일로 저장합니다
+
       <figure>
           <img src="assets/programmer-download-software-statement-button.png"
                alt="소프트웨어 구문 다운로드">
@@ -46,6 +47,7 @@ OAuth 2.0 Dynamic Client Registration Protocol과 호환되도록 CMU 보고서 
 
 3. 액세스 토큰 가져오기
    1. 위에서 얻은 소프트웨어 문을 사용하고 아래 호출을 수행하여 클라이언트 자격 증명을 가져옵니다. 이러한 방식으로 액세스 토큰을 가져오는 데 사용할 수 있는 client_id - client_secret 쌍을 얻습니다.
+
       *이 단계는 항상 수행해서는 안 됩니다. 자격 증명이 만료될 때만 다시 수행해야 합니다.*
       <figure>
           <img src="assets/dcr_request_1_get_client_credentials.png"
@@ -53,6 +55,7 @@ OAuth 2.0 Dynamic Client Registration Protocol과 호환되도록 CMU 보고서 
        </figure>
 
    2. 아래 호출을 사용하여 액세스 토큰을 가져옵니다. 토큰이 만료될 때까지 이 액세스 토큰을 사용하여 CMU API를 호출하십시오.
+
       *이 단계는 마지막으로 생성된 토큰이 만료된 경우에만 수행해야 합니다.*
       <figure>
           <img src="assets/dcr_get_access_token_call.png"

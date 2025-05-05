@@ -178,7 +178,7 @@ ht-degree: 0%
 
 ## checkAuthorization(inResourceID) {#checkauthorization(inresourceid)}
 
-**설명:** 응용 프로그램에서 이 메서드를 사용하여 현재 고객 및 지정된 리소스에 대한 인증 상태를 확인합니다. 먼저 인증 상태를 확인하는 것으로 시작됩니다. 인증되지 않은 경우 tokenRequestFailed() 콜백이 트리거되고 메서드가 종료됩니다. 사용자가 인증되면 권한 부여 플로우도 트리거됩니다. [getAuthorization()](#getAuthZ 메서드에 대한 자세한 내용을 참조하십시오.
+**설명:** 응용 프로그램에서 이 메서드를 사용하여 현재 고객 및 지정된 리소스에 대한 인증 상태를 확인합니다. 먼저 인증 상태를 확인하는 것으로 시작됩니다. 인증되지 않은 경우 tokenRequestFailed() 콜백이 트리거되고 메서드가 종료됩니다. 사용자가 인증되면 권한 부여 플로우도 트리거됩니다. [getAuthorization()] (#getAuthZ 메서드에 대한 자세한 내용을 참조하십시오.
 
 >[!TIP]
 >
@@ -415,7 +415,7 @@ For example:
 
 **설명:** 사용자가 인증 로그인 페이지 UI를 표시할 iFrame이 필요한 MVPD을 선택한 경우 이 콜백을 구현합니다.
 
-**트리거 주체:**[ setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
+**트리거 주체:**&#x200B;[ setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
 
 </br> [맨 위로 돌아가기](#top)
 
