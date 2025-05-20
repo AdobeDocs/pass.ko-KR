@@ -2,9 +2,9 @@
 title: 파트너 인증 요청 검색
 description: REST API V2 - 파트너 인증 요청 검색
 exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
-source-git-commit: e8836c76aec10607717c0a67434b2ba5a78a8954
+source-git-commit: 9f872ad94e0aaa0546c8fcac9f88c50f47e10f6e
 workflow-type: tm+mt
-source-wordcount: '1219'
+source-wordcount: '1236'
 ht-degree: 1%
 
 ---
@@ -270,6 +270,7 @@ ht-degree: 1%
                     <li><b>authenticatedSSO</b><br/>클라이언트 응용 프로그램이 SSO(Single Sign-On) 액세스 흐름을 통해 이미 인증되었습니다.</li>
                     <li><b>pfs_fallback</b><br/>누락되었거나 잘못된 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md">AP-Partner-Framework-Status</a> 헤더 값으로 인해 클라이언트 응용 프로그램을 기본 인증 흐름으로 전환해야 합니다.</li>
                     <li><b>configuration_fallback</b><br/>Adobe Pass 백엔드의 파트너 SSO(Single Sign-On) 구성으로 인해 클라이언트 응용 프로그램을 기본 인증 흐름으로 폴백해야 합니다.</li>
+                    <li><b>missing_parameters_fallback</b><br />누락되었거나 잘못된 매개 변수로 인해 클라이언트 응용 프로그램이 다시 시작 흐름으로 되돌려야 합니다.</li>
                   </ul>
                <td><i>필수</i></td>
             </tr>
@@ -574,7 +575,7 @@ Content-Type: application/json;charset=UTF-8
 {
     "actionName": "resume",
     "actionType": "direct",
-    "reasonType": "none",
+    "reasonType": "missing_parameters_fallback",
     "missingParameters": [
           "redirectUrl"
     ],
