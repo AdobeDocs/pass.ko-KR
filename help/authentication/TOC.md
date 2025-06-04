@@ -4,10 +4,10 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
+source-git-commit: 13b0bb640aa599109e8c2f68d1e16fbdc3840951
 workflow-type: tm+mt
-source-wordcount: '1251'
-ht-degree: 2%
+source-wordcount: '1258'
+ht-degree: 3%
 
 ---
 
@@ -17,7 +17,8 @@ ht-degree: 2%
 + [Adobe Pass 인증](home.md)
 + [제품 공지](product-announcements.md)
 + 제품 릴리스 {#product-releases}
-   + 2025년 {#2025}
+   + 2025 {#2025}
+      + [Adobe Pass Authentication 3.2.0 릴리스 노트](notes-releases/auth-rn-320.md)
       + [Adobe Pass Authentication 3.1.0 릴리스 노트](notes-releases/auth-rn-310.md)
       + [Adobe Pass Authentication JavaScript 4.7.1 릴리스 노트](notes-releases/authn-rn-javascript-471.md)
    + 2024 {#2024}
@@ -28,7 +29,7 @@ ht-degree: 2%
       + [Adobe Pass Authentication JavaScript 4.7.0 릴리스 노트](notes-releases/authn-rn-javascript-470.md)
       + [Adobe Pass 인증 iOS / tvOS 3.9.2 릴리스 노트](notes-releases/authn-rn-ios-tvos-392.md)
       + [Adobe Pass 인증 iOS / tvOS 3.8.4 릴리스 노트](notes-releases/authn-rn-ios-tvos-384.md)
-   + 2023년 {#2023}
+   + 2023 {#2023}
       + [Adobe Pass Authentication 2.68 릴리스 노트](notes-releases/auth-rn-268.md)
       + [Adobe Pass Authentication 2.67 릴리스 노트](notes-releases/auth-rn-267.md)
       + [Adobe Pass Authentication 2.66 릴리스 노트](notes-releases/auth-rn-266.md)
@@ -39,7 +40,7 @@ ht-degree: 2%
       + [Adobe Pass 인증 iOS / tvOS 3.8.2 릴리스 노트](notes-releases/authn-rn-ios-tvos-382.md)
       + [Adobe Pass 인증 iOS / tvOS 3.8.1 릴리스 노트](notes-releases/authn-rn-ios-tvos-381.md)
       + [Adobe Pass Authentication Android 3.7.3 릴리스 노트](notes-releases/authn-rn-android-373.md)
-   + 2022년 {#2022}
+   + 2022 {#2022}
       + [Adobe Pass Authentication 2.64 릴리스 노트](notes-releases/auth-rn-264.md)
       + [Adobe Pass Authentication 2.63 릴리스 노트](notes-releases/auth-rn-263.md)
       + [Adobe Pass Authentication 2.62.1 릴리스 노트](notes-releases/auth-rn-2621.md)
@@ -52,7 +53,7 @@ ht-degree: 2%
    + [프로그래머 킥스타트 안내서](kickstart/programmer-kickstart-guide.md)
    + [MVPD 킥스타트 안내서](kickstart/mvpd-kickstart-guide.md)
    + [지원 절차 FAQ](kickstart/support-procedures-faqs.md)
-+ 프로그래머을(를) 위한 통합 안내서 {#integration-guide-programmers}
++ 프로그래머를 위한 통합 안내서 {#integration-guide-programmers}
    + [프로그래머 통합 안내서](integration-guide-programmers/programmer-integration-guide-overview.md)
    + [최소 시스템 요구 사항](integration-guide-programmers/minimum-system-requirements.md)
    + [조절 메커니즘](integration-guide-programmers/throttling-mechanism.md)
@@ -64,7 +65,7 @@ ht-degree: 2%
          + API {#rest-api-dcr-apis}
             + [클라이언트 자격 증명 검색](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md)
             + [액세스 토큰 검색](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md)
-         + 흐름 {#rest-api-dcr-flows}
+         + 플로우 {#rest-api-dcr-flows}
             + [동적 클라이언트 등록 흐름](integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)
       + REST API V2 {#rest-api-v2}
          + [REST API V2 개요](integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md)
@@ -87,12 +88,12 @@ ht-degree: 2%
             + 결정 {#rest-api-v2-decisions-apis}
                + [특정 mvpd를 사용하여 권한 부여 결정 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md)
                + [특정 mvpd를 사용하여 사전 인증 결정 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)
-            + 로그아웃{#rest-api-v2-logout-apis}
+            + 로그아웃 {#rest-api-v2-logout-apis}
                + [특정 mvpd에 대한 로그아웃 시작](integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
-            + 파트너 SSO(Single Sign-On) {#rest-api-v2-partner-single-sign-on-apis}
+            + Partner Single Sign-On {#rest-api-v2-partner-single-sign-on-apis}
                + [파트너 인증 요청 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md)
                + [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md)
-         + 흐름 {#rest-api-v2-flows}
+         + 플로우 {#rest-api-v2-flows}
             + [REST API V2 흐름 개요](integration-guide-programmers/rest-apis/rest-api-v2/flows/rest-api-v2-flows-overview.md)
             + 기본 액세스 흐름 {#rest-api-v2-basic-access-flows}
                + [기본 애플리케이션 내에서 수행되는 기본 프로필 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)
@@ -102,7 +103,7 @@ ht-degree: 2%
                + [기본 애플리케이션 내에서 수행되는 기본 인증 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authorization-primary-application-flow.md)
                + [기본 애플리케이션 내에서 수행되는 기본 사전 인증 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-preauthorization-primary-application-flow.md)
                + [기본 애플리케이션 내에서 수행되는 기본 로그아웃 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-logout-primary-application-flow.md)
-            + 액세스 흐름 성능 저하 {#rest-api-v2-degraded-access-flows}
+            + 액세스 흐름이 저하됨 {#rest-api-v2-degraded-access-flows}
                + [액세스 흐름 성능 저하](integration-guide-programmers/rest-apis/rest-api-v2/flows/degraded-access-flows/rest-api-v2-access-degraded-flows.md)
             + 임시 액세스 흐름 {#rest-api-v2-temporary-access-flows}
                + [임시 액세스 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md)
@@ -111,7 +112,7 @@ ht-degree: 2%
                + [플랫폼 ID 흐름을 사용한 SSO(Single Sign-On)](integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-platform-identity-flows.md)
                + [서비스 토큰 흐름을 사용한 SSO(Single Sign-On)](integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md)
                + [단일 로그아웃 흐름](integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-logout-flow.md)
-         + Cookbook {#rest-api-v2-cookbooks}
+         + 요리책 {#rest-api-v2-cookbooks}
             + [REST API V2 Cookbook(클라이언트-서버)](integration-guide-programmers/rest-apis/rest-api-v2/cookbooks/rest-api-v2-cookbook-client-server.md)
             + [REST API V2 Cookbook(서버 간)](integration-guide-programmers/rest-apis/rest-api-v2/cookbooks/rest-api-v2-cookbook-server-server.md)
          + 부록 {#rest-api-v2-appendix}
@@ -125,41 +126,41 @@ ht-degree: 2%
                + [헤더 - AP-Partner-Framework-Status](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md)
                + [헤더 - AP-TempPass-Identity](integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-ap-temppass-identity.md)
    + 표준 기능 {#standard-features}
-      + 권한 {#entitlements}
+      + 권한 부여 {#entitlements}
          + [사용자 메타데이터](integration-guide-programmers/features-standard/entitlements/user-metadata.md)
          + [결정](integration-guide-programmers/features-standard/entitlements/decisions.md)
          + [미디어 토큰](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
       + 오류 보고 {#error-reporting}
          + [향상된 오류 코드](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
-      + SSO(Single Sign-On) 액세스 {#sso-access}
-         + 파트너 SSO(Single Sign-On) {#partner-sso}
+      + 단일 사인온 액세스 {#sso-access}
+         + Partner Single Sign-On {#partner-sso}
             + Apple Single Sign-On {#apple-sso}
                + [Apple SSO 개요](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)
                + [Apple SSO Cookbook(REST API V2)](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md)
          + Platform Single Sign-On {#platform-sso}
             + Amazon Single Sign-On {#amazon-sso}
                + [Amazon SSO Cookbook(REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
-            + Roku Single Sign-On {#roku-sso}
+            + Roku 단일 사인온 {#roku-sso}
                + [Roku SSO Cookbook(REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
       + 홈 기반 인증 액세스 {#hba-access}
          + [홈 기반 인증(HBA)](integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)
       + 개인 정보 보호 지원 {#privacy-support}
          + [개인 정보 보호 지원 개요](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
          + [개인 정보 보호 요청을 하는 방법](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
-   + 프리미엄 기능 {#features-premium}
+   + Premium 기능 {#features-premium}
       + 임시 액세스 {#temporary-access}
          + [TempPass 기능](integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
-      + 성능이 저하된 액세스 {#degraded-access}
+      + 액세스 성능 저하 {#degraded-access}
          + [성능 저하 기능](integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
       + ESM {#esm}
          + [권한 부여 서비스 모니터링 개요](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md)
          + [권한 부여 서비스 모니터링 API](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
          + [서버측 지표](integration-guide-programmers/features-premium/esm/understanding-serverside-metrics.md)
-      + Analytics {#analytics}
+      + 분석 {#analytics}
          + [Adobe Pass 인증 서버측 데이터를 Adobe Analytics에 통합](integration-guide-programmers/features-premium/analytics/integrate-authn-servr-data-analytics.md)
          + [Adobe Pass 인증에서 Experience Cloud ID 사용](integration-guide-programmers/features-premium/analytics/exp-cloud-id-authn.md)
    + 레거시 {#legacy}
-      + (레거시) REST API V1 {#rest-api-v1}
+      + (기존) REST API V1 {#rest-api-v1}
          + [(기존) REST API V1 개요](integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)
          + [(기존) REST API V1 참조](integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
          + (기존) API {#rest-api-v1-apis}
@@ -181,23 +182,23 @@ ht-degree: 2%
             + [(레거시) 프로필 요청 검색](integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-profilerequest.md)
             + [(기존) 토큰 교환](integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md)
             + [(레거시) 임시 패스 및 프로모션 임시 패스에 대한 무료 미리보기](integration-guide-programmers/legacy/rest-api-v1/apis/free-preview-for-temp-pass-and-promotional-temp-pass.md)
-         + (레거시) Cookbook {#rest-api-v1-cookbooks}
+         + (기존) Cookbook {#rest-api-v1-cookbooks}
             + [(기존) REST API V1 Cookbook(클라이언트-서버)](integration-guide-programmers/legacy/rest-api-v1/cookbooks/rest-api-cookbook-clienttoserver.md)
             + [(기존) REST API V1 Cookbook(서버 간)](integration-guide-programmers/legacy/rest-api-v1/cookbooks/rest-api-cookbook-servertoserver.md)
-      + (레거시) SDK {#sdks}
+      + (기존) SDK {#sdks}
          + (기존) JavaScript SDK {#javascript-sdk}
             + [(기존) JavaScript SDK 개요](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-overview.md)
             + [(기존) JavaScript SDK Cookbook](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-cookbook.md)
             + [(기존) JavaScript SDK API 참조](integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md)
             + [(기존) JavaScript SDK API 사전 인증](integration-guide-programmers/legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
-            + (레거시) 지침 {#javascript-sdk-guidelines}
+            + (기존) 지침 {#javascript-sdk-guidelines}
                + [(기존) 새로 고침 없이 로그인 및 로그아웃](integration-guide-programmers/legacy/sdks/javascript-sdk/refreshless-login-and-logout.md)
          + (기존) iOS/tvOS SDK {#ios-tvos-sdk}
             + [(기존) iOS/tvOS SDK 개요](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-overview.md)
             + [(기존) iOS/tvOS SDK Cookbook](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-cookbook.md)
             + [(기존) iOS/tvOS SDK API 참조](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
             + [(기존) iOS/tvOS SDK API 사전 인증](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
-            + (레거시) 지침 {#ios-tvos-sdk-guidelines}
+            + (기존) 지침 {#ios-tvos-sdk-guidelines}
                + [(기존) iOS/tvOS 애플리케이션 등록](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md)
                + [(기존) iOS/tvOS v3.x 마이그레이션 안내서](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-v3x-migration-guide.md)
                + [(기존) iOS/tvOS 스토리지 무결성 검사](integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-storage-integrity-checks.md)
@@ -206,7 +207,7 @@ ht-degree: 2%
             + [(기존) Android SDK Cookbook](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-cookbook.md)
             + [(기존) Android SDK API 참조](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md)
             + [(기존) Android SDK API 사전 인증](integration-guide-programmers/legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
-            + (레거시) 지침 {#android-sdk-guidelines}
+            + (기존) 지침 {#android-sdk-guidelines}
                + [(기존) Android 애플리케이션 등록](integration-guide-programmers/legacy/sdks/android-sdk/android-application-registration.md)
                + [(기존) Android SDK(동적 클라이언트 등록 기능 포함)](integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-with-dynamic-client-registration.md)
          + (레거시) FireOS SDK {#fireos-sdk}
@@ -216,26 +217,26 @@ ht-degree: 2%
             + [(기존) Amazon FireOS 애플리케이션 등록](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-application-registration.md)
             + [(기존) Dynamic Client Registration이 포함된 FireOS SDK](integration-guide-programmers/legacy/sdks/fireos-sdk/fireos-sdk-with-dynamic-client-registration.md)
             + [(레거시) Amazon FireOS SSO - 프로그래머 시작 안내서](integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-firetv-sso-programmer-kickoff-guide.md)
-      + (레거시) 클라이언트 정보 {#client-information}
+      + (기존) 클라이언트 정보 {#client-information}
          + [(기존) 클라이언트 정보(장치, 연결 및 애플리케이션) 전달](integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)
-      + (레거시) 오류 보고 {#error-reporting}
+      + (기존) 오류 보고 {#error-reporting}
          + [(기존) 오류 보고](integration-guide-programmers/legacy/error-reporting/error-reporting.md)
-      + (기존) SSO(Single Sign-On) 액세스 {#sso-access}
+      + (기존) 단일 사인온 액세스 {#sso-access}
          + [(기존) 단일 사인온 지원](integration-guide-programmers/legacy/sso-access/sso-support.md)
          + [(기존) 수동 인증을 통한 SSO](integration-guide-programmers/legacy/sso-access/sso-passive-authn.md)
          + [(기존) Amazon SSO Cookbook(REST API V1)](integration-guide-programmers/legacy/sso-access/amazon-sso-cookbook-rest-api-v1.md)
          + [(기존) Apple SSO Cookbook(REST API V1)](integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-rest-api-v1.md)
          + [(기존) Apple SSO Cookbook(iOS/tvOS SDK)](integration-guide-programmers/legacy/sso-access/apple-sso-cookbook-iostvos-sdk.md)
-      + (레거시) TVE 대시보드 {#tve-dashboard}
+      + (기존) TVE 대시보드 {#tve-dashboard}
          + [(기존) TVE 대시보드 사용 안내서](integration-guide-programmers/legacy/tve-dashboard/tve-dashboard-user-guide.md)
       + (레거시) 기술 노트 {#tech-notes}
-         + (레거시) REST API V1 {#rest-api-v1}
+         + (기존) REST API V1 {#rest-api-v1}
             + [(기존) 클라이언트 없는 API 구현 - 가능한 이유/원인이 있는 오류 코드/메시지](integration-guide-programmers/legacy/notes-technical/clientless-api-implementation-error-codes-messages-with-probable-reason-cause.md)
             + [(기존) 장치 ID가 없는 클라이언트 없는 API 흐름](integration-guide-programmers/legacy/notes-technical/clientless-api-flow-in-the-absence-of-device-id.md)
             + [(기존) 클라이언트 없음: /authenticate 요청에서 &#39;&amp;&#39;reg_code를 사용하지 마십시오.](integration-guide-programmers/legacy/notes-technical/clientless-avoid-using-reg-code-in-authenticate-request.md)
             + [(레거시) Xbox 360 및 XboxOne Clientless에서 프로그래머를 위해 Adobe Pass Entitlement Services 활성화](integration-guide-programmers/legacy/notes-technical/enabling-primetime-entitlement-services-for-a-programmer-on-xbox-360-and-xboxone-clientless-solution.md)
             + [(기존) 클라이언트 없는 장치 유형 및 지표](integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)
-         + (레거시) SDK {#sdks}
+         + (기존) SDK {#sdks}
             + [(기존) 인증서 Q&amp;A](integration-guide-programmers/legacy/notes-technical/certificates-qa.md)
             + [(기존) 사용자 ID 이해](integration-guide-programmers/legacy/notes-technical/understanding-user-ids.md)
             + (기존) JavaScript SDK {#javascript-sdk}
@@ -253,16 +254,16 @@ ht-degree: 2%
                + [(기존) iOS 인증 오류 - adobepass.ios.app을 찾을 수 없음](integration-guide-programmers/legacy/notes-technical/ios-authentication-error-adobepassiosapp-cannot-be-found.md)
                + [(레거시) 콘솔 앱 로그를 사용하여 AccessEnabler iOS/tvOS SDK 디버깅](integration-guide-programmers/legacy/notes-technical/debugging-the-accessenabler-iostvos-sdk-using-console-app-logs.md)
                + [(기존) AccessEnabler iOS/tvOS 3.7.0 업그레이드 경로](integration-guide-programmers/legacy/notes-technical/accessenabler-iostvos-370-upgrade-path.md)
-         + (레거시) 사용자 경험 {#user-experience}
+         + (기존) 사용자 경험 {#user-experience}
             + [(기존) iFrame에서 팝업으로 MVPD 로그인 페이지를 마이그레이션하는 방법](integration-guide-programmers/legacy/notes-technical/migr-mvpd-login-iframe-popup.md)
             + [(기존) Preflight 기능: 문제를 활성화, 문제 해결 또는 확인하는 방법](integration-guide-programmers/legacy/notes-technical/preflight-feature.md)
             + [(레거시) 선택 대화 상자에서 MVPD 허용](integration-guide-programmers/legacy/notes-technical/allow-mvpd-selectn-dialog.md)
             + [(레거시) MVPD가 선택 대화 상자를 표시하지 않도록 방지](integration-guide-programmers/legacy/notes-technical/prevent-mvpd-selectn-dialog.md)
-         + (레거시) 문제 해결 {#troubleshooting}
+         + (기존) 문제 해결 {#troubleshooting}
             + [(기존) Charles Proxy 사용](integration-guide-programmers/legacy/notes-technical/using-charles-proxy.md)
             + [(기존) Adobe Pass Adobe PayTV Pass 모니터링](integration-guide-programmers/legacy/notes-technical/monitoring-adobe-pay-tv-pass.md)
             + [(기존) Adobe API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)
-+ MVPD에 대한 통합 안내서 {#integration-guide-mvpds}
++ MVPD용 통합 안내서 {#integration-guide-mvpds}
    + [MVPD 통합 안내서](integration-guide-mvpds/mvpd-integration-guide-overview.md)
    + [인증](integration-guide-mvpds/authn-usecase.md)
    + [OAuth 2.0 프로토콜을 사용한 인증](integration-guide-mvpds/authn-oauth2-protocol.md)
@@ -275,7 +276,7 @@ ht-degree: 2%
    + [프록시 MVPD SAML 통합](integration-guide-mvpds/proxy-mvpd-saml-int.md)
    + [서비스 공급자 범위 지정](integration-guide-mvpds/serv-provider-scoping.md)
    + [MVPD 허용 IP 주소](integration-guide-mvpds/mvpd-listing-ip-addres.md)
-+ TVE 대시보드에 대한 사용 안내서 {#user-guide-tve-dashboard}
++ TVE 대시보드용 사용 안내서 {#user-guide-tve-dashboard}
    + [TVE 대시보드 개요](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md)
    + [환경](/help/authentication/user-guide-tve-dashboard/tve-dashboard-environments.md)
    + [변경 사항 검토 및 푸시](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)
