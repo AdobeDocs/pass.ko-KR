@@ -2,9 +2,9 @@
 title: 인증 세션 만들기
 description: REST API V2 - 인증 세션 만들기
 exl-id: bb2a6bb4-0778-4748-a674-df9d0e8242c8
-source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
+source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1064'
 ht-degree: 1%
 
 ---
@@ -316,12 +316,12 @@ ht-degree: 1%
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
-               <td>인증 코드가 유효하지 않은 타임스탬프.</td>
+               <td>인증 코드가 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td>선택 사항</td>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notAfter</td>
-               <td>인증 코드가 유효하지 않은 타임스탬프.</td>
+               <td>인증 코드가 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td>선택 사항</td>
             </tr>
 </table>
@@ -361,7 +361,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 매개 변수 누락 없이 인증 세션 만들기
+### &#x200B;1. 매개 변수 누락 없이 인증 세션 만들기
 
 >[!BEGINTABS]
 
@@ -405,7 +405,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 매개 변수가 누락된 인증 세션 만들기
+### &#x200B;2. 매개 변수가 누락된 인증 세션 만들기
 
 >[!BEGINTABS]
 
@@ -447,7 +447,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. 유효한 프로필이 이미 있는 동안 인증 세션 만들기
+### &#x200B;3. 유효한 프로필이 이미 있는 동안 인증 세션 만들기
 
 >[!BEGINTABS]
 
@@ -488,7 +488,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. 기본 또는 프로모션 TempPass를 사용하여 인증 세션 만들기(필요 없음)
+### &#x200B;4. 기본 또는 프로모션 TempPass를 사용하여 인증 세션 만들기(필요 없음)
 
 >[!BEGINTABS]
 
@@ -529,7 +529,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 5. 저하가 적용되는 동안 인증 세션 만들기
+### &#x200B;5. 저하가 적용되는 동안 인증 세션 만들기
 
 >[!BEGINTABS]
 

@@ -2,9 +2,9 @@
 title: 프로필 검색
 description: REST API V2 - 프로필 검색
 exl-id: 72922aa8-95ca-48dc-8523-e335802fc366
-source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
+source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
 workflow-type: tm+mt
-source-wordcount: '868'
+source-wordcount: '872'
 ht-degree: 1%
 
 ---
@@ -227,12 +227,12 @@ ht-degree: 1%
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
-               <td>프로필이 유효하지 않은 타임스탬프.</td>
+               <td>프로필이 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td><i>필수</i></td>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notAfter</td>
-               <td>프로필이 유효하지 않은 타임스탬프.</td>
+               <td>프로필이 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -319,7 +319,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 기본 인증을 통해 얻은 프로필 검색
+### &#x200B;1. 기본 인증을 통해 얻은 프로필 검색
 
 >[!BEGINTABS]
 
@@ -382,7 +382,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 서비스 토큰 방법을 사용하여 기본 인증 또는 SSO(Single Sign-On)를 통해 얻은 프로필 검색
+### &#x200B;2. 서비스 토큰 방법을 사용하여 기본 인증 또는 SSO(Single Sign-On)를 통해 얻은 프로필 검색
 
 >[!BEGINTABS]
 
@@ -446,7 +446,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. 플랫폼 ID 방법을 사용하여 기본 인증 또는 SSO(Single Sign-On)를 통해 얻은 프로필 검색
+### &#x200B;3. 플랫폼 ID 방법을 사용하여 기본 인증 또는 SSO(Single Sign-On)를 통해 얻은 프로필 검색
 
 >[!BEGINTABS]
 

@@ -2,9 +2,9 @@
 title: 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
 description: REST API V2 - 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
 exl-id: cae260ff-a229-4df7-bbf9-4cdf300c0f9a
-source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
+source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
 workflow-type: tm+mt
-source-wordcount: '775'
+source-wordcount: '779'
 ht-degree: 1%
 
 ---
@@ -233,12 +233,12 @@ ht-degree: 1%
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
-               <td>프로필이 유효하지 않은 타임스탬프.</td>
+               <td>프로필이 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td><i>필수</i></td>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notAfter</td>
-               <td>프로필이 유효하지 않은 타임스탬프.</td>
+               <td>프로필이 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -322,7 +322,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
+### &#x200B;1. 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
 
 >[!BEGINTABS]
 
@@ -379,7 +379,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 파트너 인증 응답을 사용하여 프로필을 만들고 검색하지만 성능 저하가 적용됩니다
+### &#x200B;2. 파트너 인증 응답을 사용하여 프로필을 만들고 검색하지만 성능 저하가 적용됩니다
 
 >[!BEGINTABS]
 

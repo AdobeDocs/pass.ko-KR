@@ -2,9 +2,9 @@
 title: 특정 mvpd에 대한 프로필 검색
 description: REST API V2 - 특정 mvpd에 대한 프로필 검색
 exl-id: ed1abc33-c279-4465-b5a0-b4e5b892076e
-source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
+source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
 workflow-type: tm+mt
-source-wordcount: '1060'
+source-wordcount: '1064'
 ht-degree: 1%
 
 ---
@@ -244,12 +244,12 @@ ht-degree: 1%
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
-               <td>프로필이 유효하지 않은 타임스탬프.</td>
+               <td>프로필이 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td><i>필수</i></td>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notAfter</td>
-               <td>프로필이 유효하지 않은 타임스탬프.</td>
+               <td>프로필이 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td><i>필수</i></td>
             </tr>
             <tr>
@@ -338,7 +338,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 기본 인증을 통해 얻은 특정 mvpd에 대한 프로필 검색
+### &#x200B;1. 기본 인증을 통해 얻은 특정 mvpd에 대한 프로필 검색
 
 >[!BEGINTABS]
 
@@ -389,7 +389,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 서비스 토큰 방법을 사용하여 기본 인증 또는 SSO(Single Sign-On)를 통해 얻은 특정 mvpd에 대한 프로필 검색
+### &#x200B;2. 서비스 토큰 방법을 사용하여 기본 인증 또는 SSO(Single Sign-On)를 통해 얻은 특정 mvpd에 대한 프로필 검색
 
 >[!BEGINTABS]
 
@@ -441,7 +441,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. 플랫폼 ID 방법을 사용하여 기본 인증 또는 단일 사인온을 통해 얻은 특정 mvpd에 대한 프로필 검색
+### &#x200B;3. 플랫폼 ID 방법을 사용하여 기본 인증 또는 단일 사인온을 통해 얻은 특정 mvpd에 대한 프로필 검색
 
 >[!BEGINTABS]
 
@@ -493,7 +493,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. 기본 TempPass에 대한 프로필 검색
+### &#x200B;4. 기본 TempPass에 대한 프로필 검색
 
 >[!BEGINTABS]
 
@@ -549,7 +549,7 @@ Content-Type: application/json;charset=UTF-8
     "status": 403,
     "code": "temporary_access_duration_limit_exceeded",
     "message": "The temporary access duration limit has been exceeded.",
-    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
     "action": "authentication"
 }
 ```
@@ -565,14 +565,14 @@ Content-Type: application/json;charset=UTF-8
     "status": 500,
     "code": "invalid_configuration_temporary_access",
     "message": "The temporary access configuration is invalid.",
-    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
     "action": "configuration"
 }
 ```
 
 >[!ENDTABS]
 
-### 5. 프로모션 TempPass에 대한 프로필 검색
+### &#x200B;5. 프로모션 TempPass에 대한 프로필 검색
 
 >[!BEGINTABS]
 
@@ -642,7 +642,7 @@ Content-Type: application/json;charset=UTF-8
     "status": 403,
     "code": "temporary_access_duration_limit_exceeded",
     "message": "The temporary access duration limit has been exceeded.",
-    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
     "action": "none"
 }
 ```
@@ -658,7 +658,7 @@ Content-Type: application/json;charset=UTF-8
     "status": 403,
     "code": "temporary_access_resources_limit_exceeded",
     "message": "The temporary access resources limit has been exceeded.",
-    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
     "action": "authentication"
 }
 ```
@@ -674,7 +674,7 @@ Content-Type: application/json;charset=UTF-8
     "status": 500,
     "code": "invalid_configuration_temporary_access",
     "message": "The temporary access configuration is invalid.",
-    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
     "action": "none"
 }
 ```
@@ -690,14 +690,14 @@ Content-Type: application/json;charset=UTF-8
     "status": 400,
     "code": "invalid_header_identity_for_temporary_access",
     "message": "The identity for temporary access header value is missing or invalid.",
-    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
     "action": "none"
 }
 ```
 
 >[!ENDTABS]
 
-### 6. 저하가 적용되는 동안 특정 mvpd에 대한 프로필 검색
+### &#x200B;6. 저하가 적용되는 동안 특정 mvpd에 대한 프로필 검색
 
 >[!BEGINTABS]
 

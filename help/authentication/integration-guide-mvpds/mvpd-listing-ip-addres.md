@@ -2,7 +2,7 @@
 title: MVPD IP 주소 목록
 description: MVPD IP 주소 목록
 exl-id: be18084c-22f5-47b5-b088-d9032681113d
-source-git-commit: 0fd11dbcc9072fd14fb06e76f60c15d7729c3876
+source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
 workflow-type: tm+mt
 source-wordcount: '139'
 ht-degree: 0%
@@ -12,10 +12,9 @@ ht-degree: 0%
 
 # MVPD IP 주소 목록
 
-&#x200B;> [!NOTE]
+>[!IMPORTANT]
 >
->이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 다음 위치의 현재 라이선스가 필요합니다.
->&#x200B;> Adobe. 허가되지 않은 사용은 허용되지 않습니다.
+> 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
 MVPD/Adobe Pass 인증 통합의 경우 MVPD 방화벽에서 특정 IP를 허용해야 합니다. 다음 항목이
 이그레스 IP:

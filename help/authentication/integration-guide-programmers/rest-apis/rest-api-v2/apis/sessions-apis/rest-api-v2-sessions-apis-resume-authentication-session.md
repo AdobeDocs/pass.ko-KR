@@ -2,9 +2,9 @@
 title: 인증 세션 다시 시작
 description: REST API V2 - 인증 세션 다시 시작
 exl-id: 66c33546-2be0-473f-9623-90499d1c13eb
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
 workflow-type: tm+mt
-source-wordcount: '886'
+source-wordcount: '890'
 ht-degree: 1%
 
 ---
@@ -280,12 +280,12 @@ ht-degree: 1%
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notBefore</td>
-               <td>인증 코드가 유효하지 않은 타임스탬프.</td>
+               <td>인증 코드가 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td>선택 사항</td>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">notAfter</td>
-               <td>인증 코드가 유효하지 않은 타임스탬프.</td>
+               <td>인증 코드가 유효하지 않은 타임스탬프(밀리초)입니다.</td>
                <td>선택 사항</td>
             </tr>
          </table>
@@ -325,7 +325,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 매개 변수 누락 없이 인증 세션 다시 시작
+### &#x200B;1. 매개 변수 누락 없이 인증 세션 다시 시작
 
 >[!BEGINTABS]
 
@@ -367,7 +367,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 매개 변수가 없는 인증 세션 다시 시작
+### &#x200B;2. 매개 변수가 없는 인증 세션 다시 시작
 
 >[!BEGINTABS]
 
@@ -410,7 +410,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. 유효한 프로필이 있는 동안 인증 세션 다시 시작
+### &#x200B;3. 유효한 프로필이 있는 동안 인증 세션 다시 시작
 
 >[!BEGINTABS]
 
@@ -449,7 +449,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. 기본 또는 프로모션 TempPass를 사용하여 인증 세션 다시 시작(필요 없음)
+### &#x200B;4. 기본 또는 프로모션 TempPass를 사용하여 인증 세션 다시 시작(필요 없음)
 
 >[!BEGINTABS]
 
@@ -488,7 +488,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 5. 저하가 적용되는 동안 인증 세션 다시 시작
+### &#x200B;5. 저하가 적용되는 동안 인증 세션 다시 시작
 
 >[!BEGINTABS]
 
