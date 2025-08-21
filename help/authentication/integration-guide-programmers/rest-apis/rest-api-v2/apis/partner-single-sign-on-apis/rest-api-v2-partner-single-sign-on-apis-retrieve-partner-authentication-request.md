@@ -2,9 +2,9 @@
 title: 파트너 인증 요청 검색
 description: REST API V2 - 파트너 인증 요청 검색
 exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
-source-git-commit: 9f872ad94e0aaa0546c8fcac9f88c50f47e10f6e
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '1236'
+source-wordcount: '1252'
 ht-degree: 1%
 
 ---
@@ -135,6 +135,12 @@ ht-degree: 1%
          <br/><br/>
          클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.
       </td>
+      <td>선택 사항</td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">AP-Visitor-Identifier</td>
+      <td>
+        방문자 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md">AP-Visitor-Identifier</a> 헤더 문서에 설명되어 있습니다.
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -364,7 +370,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 파트너 인증 요청 검색
+### &#x200B;1. 파트너 인증 요청 검색
 
 >[!BEGINTABS]
 
@@ -411,7 +417,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 파트너 인증 요청을 검색하지만 성능 저하가 적용됩니다.
+### &#x200B;2. 파트너 인증 요청을 검색하지만 성능 저하가 적용됩니다.
 
 >[!BEGINTABS]
 
@@ -453,7 +459,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. 파트너 인증 요청을 검색하지만 누락되었거나 잘못된 AP-Partner-Framework-Status 헤더 값으로 인해 기본 인증 플로우로 폴백됩니다.
+### &#x200B;3. 파트너 인증 요청을 검색하지만 누락되었거나 잘못된 AP-Partner-Framework-Status 헤더 값으로 인해 기본 인증 플로우로 폴백됩니다.
 
 >[!BEGINTABS]
 
@@ -498,7 +504,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. 파트너 인증 요청을 검색하지만 Adobe Pass 백엔드의 파트너 SSO(Single Sign-On) 구성으로 인해 기본 인증 플로우에 폴백됩니다.
+### &#x200B;4. 파트너 인증 요청을 검색하지만 Adobe Pass 백엔드의 파트너 SSO(Single Sign-On) 구성으로 인해 기본 인증 플로우에 폴백됩니다.
 
 >[!BEGINTABS]
 
@@ -543,7 +549,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 5. 파트너 인증 요청을 검색하지만 매개변수 누락으로 인해 기본 인증 플로우로 대체됩니다.
+### &#x200B;5. 파트너 인증 요청을 검색하지만 매개변수 누락으로 인해 기본 인증 플로우로 대체됩니다.
 
 >[!BEGINTABS]
 

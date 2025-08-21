@@ -2,9 +2,9 @@
 title: 인증 세션 만들기
 description: REST API V2 - 인증 세션 만들기
 exl-id: bb2a6bb4-0778-4748-a674-df9d0e8242c8
-source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '1064'
+source-wordcount: '1080'
 ht-degree: 1%
 
 ---
@@ -148,6 +148,12 @@ ht-degree: 1%
         서비스 토큰 메서드에 대한 Single Sign-On 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ad-service-token.md">AD-Service-Token</a> 헤더 설명서에 설명되어 있습니다.
         <br/><br/>
         서비스 토큰을 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md">서비스 토큰 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
+      <td>선택 사항</td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">AP-Visitor-Identifier</td>
+      <td>
+        방문자 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md">AP-Visitor-Identifier</a> 헤더 문서에 설명되어 있습니다.
       <td>선택 사항</td>
    </tr>
    <tr>

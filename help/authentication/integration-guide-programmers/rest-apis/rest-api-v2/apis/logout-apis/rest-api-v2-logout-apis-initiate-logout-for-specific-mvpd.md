@@ -2,9 +2,9 @@
 title: 특정 mvpd에 대한 로그아웃 시작
 description: REST API V2 - 특정 mvpd에 대한 로그아웃 시작
 exl-id: 2482de87-b3d4-4ea8-bd4a-25bf10017e01
-source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '1009'
+source-wordcount: '1025'
 ht-degree: 1%
 
 ---
@@ -121,6 +121,12 @@ ht-degree: 1%
         <br/><br/>
         서비스 토큰을 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows.md">서비스 토큰 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.
       </td>
+      <td>선택 사항</td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">AP-Visitor-Identifier</td>
+      <td>
+        방문자 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md">AP-Visitor-Identifier</a> 헤더 문서에 설명되어 있습니다.
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -313,7 +319,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 로그아웃 끝점이 있는 특정 mvpd에 대한 로그아웃 시작
+### &#x200B;1. 로그아웃 끝점이 있는 특정 mvpd에 대한 로그아웃 시작
 
 >[!BEGINTABS]
 
@@ -350,7 +356,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 로그아웃 끝점이 없는 특정 mvpd에 대한 로그아웃 시작
+### &#x200B;2. 로그아웃 끝점이 없는 특정 mvpd에 대한 로그아웃 시작
 
 >[!BEGINTABS]
 
@@ -386,7 +392,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 3. 서비스 토큰 방법을 사용하여 단일 사인온을 통해 얻은 프로필을 포함하는 특정 mvpd에 대한 단일 로그아웃 시작
+### &#x200B;3. 서비스 토큰 방법을 사용하여 단일 사인온을 통해 얻은 프로필을 포함하는 특정 mvpd에 대한 단일 로그아웃 시작
 
 >[!IMPORTANT]
 >
@@ -432,7 +438,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 4. 플랫폼 ID 방법을 사용하여 단일 사인온을 통해 얻은 프로필을 포함하는 특정 mvpd에 대한 단일 로그아웃 시작
+### &#x200B;4. 플랫폼 ID 방법을 사용하여 단일 사인온을 통해 얻은 프로필을 포함하는 특정 mvpd에 대한 단일 로그아웃 시작
 
 >[!IMPORTANT]
 >
@@ -478,7 +484,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 5. Partner(Apple)를 사용하여 Single Sign-On을 통해 얻은 프로필을 포함한 특정 mvpd에 대한 로그아웃 시작
+### &#x200B;5. Partner(Apple)를 사용하여 Single Sign-On을 통해 얻은 프로필을 포함한 특정 mvpd에 대한 로그아웃 시작
 
 >[!BEGINTABS]
 
@@ -514,7 +520,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 6. 저하가 적용되는 동안 특정 mvpd에 대한 로그아웃 시작
+### &#x200B;6. 저하가 적용되는 동안 특정 mvpd에 대한 로그아웃 시작
 
 >[!BEGINTABS]
 
@@ -550,7 +556,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 7. 기본 또는 프로모션 TempPass 로그아웃 시작(필수 아님)
+### &#x200B;7. 기본 또는 프로모션 TempPass 로그아웃 시작(필수 아님)
 
 >[!BEGINTABS]
 

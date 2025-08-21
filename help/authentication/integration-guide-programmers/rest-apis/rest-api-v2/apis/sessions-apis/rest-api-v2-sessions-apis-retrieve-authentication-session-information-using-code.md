@@ -2,10 +2,10 @@
 title: 코드를 사용하여 인증 세션 검색
 description: REST API V2 - 코드를 사용하여 인증 세션 검색
 exl-id: 5cc209eb-ee6b-4bb9-9c04-3444408844b7
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '425'
-ht-degree: 3%
+source-wordcount: '441'
+ht-degree: 2%
 
 ---
 
@@ -75,6 +75,12 @@ ht-degree: 3%
          <br/><br/>
          클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.
       </td> 
+      <td>선택 사항</td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">AP-Visitor-Identifier</td>
+      <td>
+        방문자 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md">AP-Visitor-Identifier</a> 헤더 문서에 설명되어 있습니다.
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -200,7 +206,7 @@ ht-degree: 3%
 
 ## 샘플 {#samples}
 
-### 1. 매개 변수 누락 없이 인증 세션 검색
+### &#x200B;1. 매개 변수 누락 없이 인증 세션 검색
 
 >[!BEGINTABS]
 
@@ -233,7 +239,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 1. 매개 변수가 누락된 인증 세션 검색
+### &#x200B;1. 매개 변수가 누락된 인증 세션 검색
 
 >[!BEGINTABS]
 

@@ -2,9 +2,9 @@
 title: 특정 mvpd를 사용하여 사전 인증 결정 검색
 description: REST API V2 - 특정 mvpd를 사용하여 사전 인증 결정 검색
 exl-id: 8647e4fb-00b6-45cd-b81b-d00618b2e08b
-source-git-commit: 32c3176fb4633acb60deb1db8fb5397bbf18e2d0
+source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
 workflow-type: tm+mt
-source-wordcount: '792'
+source-wordcount: '808'
 ht-degree: 1%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 1%
 
 >[!IMPORTANT]
 >
-> REST API V2 구현 제한 메커니즘[&#128279;](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
+> REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
 
 ## 요청 {#request}
 
@@ -87,10 +87,15 @@ ht-degree: 1%
       <td><i>필수</i></td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">X-장치 정보</td>
+      <td style="background-color: #DEEBFF;">X-Device-Info</td>
       <td>
-         디바이스 정보 페이로드의 생성은 X-Device-Info</a> 헤더 설명서에 <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md">설명되어 있습니다.
-         <br/><br/>애플리케이션 디바이스 플랫폼에서 유효한 값을 명시적으로 제공할 수 있는 경우 항상 사용하는 것이 좋습니다.         <br/><br/>제공되는 경우 Adobe Pass Authentication 백엔드는 명시적으로 설정된 값을 암시적으로(기본적으로) 추출된 값과 병합합니다.         <br/><br/>제공되지 않으면 Adobe Pass Authentication 백엔드에서 추출된 값을 암시적으로(기본적으로) 사용합니다.
+         장치 정보 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md">X-Device-Info</a> 헤더 설명서에 설명되어 있습니다.
+         <br/><br/>
+         응용 프로그램의 장치 플랫폼에서 유효한 값의 명시적 제공을 허용하는 경우 항상 사용하는 것이 좋습니다.
+         <br/><br/>
+         제공되면 Adobe Pass 인증 백엔드는 명시적으로 설정된 값을 추출된 값과 묵시적으로(기본적으로) 병합합니다.
+         <br/><br/>
+         제공하지 않으면 Adobe Pass 인증 백엔드는 추출된 값을 묵시적으로(기본적으로) 사용합니다.
       </td>
       <td><i>필수</i></td>
    </tr>
@@ -126,14 +131,22 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">AP-Partner-Framework-Status</td>
       <td>
-        Partner 메서드에 대한 Single Sign-On 페이로드 생성은 AP-Partner-Framework-상태</a> 헤더 설명서에 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md">설명되어 있습니다.
-        <br/><br/>파트너를 사용하는 Single Sign-On 사용 흐름에 대한 자세한 내용은 파트너 흐름을</a> 사용한 Single Sign-On 설명서를 참조하세요<a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md">.</td>
-      <td>선택적</td>
+        Partner 메서드에 대한 SSO(Single Sign-On) 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-partner-framework-status.md">AP-Partner-Framework-Status</a> 헤더 문서에 설명되어 있습니다.
+        <br/><br/>
+        파트너를 사용한 Single Sign-On 사용 흐름에 대한 자세한 내용은 <a href="../../flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md">파트너 흐름을 사용한 Single Sign-On</a> 설명서를 참조하십시오.</td>
+      <td>선택 사항</td>
    </tr>
    <tr>
-      <td style="background-color: #DEEBFF;">받아들이다</td>
+      <td style="background-color: #DEEBFF;">AP-Visitor-Identifier</td>
       <td>
-         클라이언트 애플리케이션 프로그램에서 허용하는 미디어 유형입니다.         <br/><br/>
+        방문자 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-visitor-identifier.md">AP-Visitor-Identifier</a> 헤더 문서에 설명되어 있습니다.
+      <td>선택 사항</td>
+   </tr>
+   <tr>
+      <td style="background-color: #DEEBFF;">Accept</td>
+      <td>
+         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
+         <br/><br/>
          지정하면 application/json이어야 합니다.
       </td>
       <td>선택 사항</td>
@@ -157,7 +170,7 @@ ht-degree: 1%
       <td>200</td>
       <td>확인</td>
       <td>
-        응답 본문에는 추가 정보가 포함된 결정 목록이 포함되어 있습니다.
+        응답 본문에는 추가 정보가 있는 결정 목록이 포함되어 있습니다.
       </td>
    </tr>
       <tr>
@@ -229,8 +242,8 @@ ht-degree: 1%
                 <td><i>필수</i></td>
             </tr>
             <tr>
-                <td style="background-color: #DEEBFF;">서비스 제공자</td>
-                <td>온보딩 프로세스 중에 서비스 공급자와 연결된 내부 고유 식별자입니다.</td>
+                <td style="background-color: #DEEBFF;">serviceProvider</td>
+                <td>온보딩 프로세스 중 서비스 공급자와 연결된 내부 고유 식별자입니다.</td>
                 <td><i>필수</i></td>
             </tr>
             <tr>
@@ -253,14 +266,14 @@ ht-degree: 1%
                     <li>MVPD 사전 인증 끝점에서 <b>mvpd</b><br/>결정을 내렸습니다.</li>
                     <li>액세스 성능이 저하되어 <b>성능 저하</b><br/>결정이 내려졌습니다.</li>
                     <li><b>temppass</b><br/>임시 액세스의 결과로 결정이 내려졌습니다.</li>
-                    <li><b></b><br/>더미 결정은 더미 사전 승인 기능의 결과로 발행됩니다.</li>
+                    <li><b>dummy</b><br/>더미 사전 인증 기능의 결과로 결정이 내려졌습니다.</li>
                   </ul>
                <td><i>필수</i></td>
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">오류</td>
-               <td>이 오류는 향상된 오류 코드</a> 설명서를 준수<a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">하는 '거부' 결정에 대한 추가 정보를 제공합니다.</td>
-               <td>선택적</td>
+               <td>오류는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 '거부' 결정에 대한 추가 정보를 제공합니다.</td>
+               <td>선택 사항</td>
             </tr>
          </table>
       </td>
@@ -299,7 +312,7 @@ ht-degree: 1%
 
 ## 샘플 {#samples}
 
-### 1. 특정 mvpd를 사용하여 사전 인증 결정 검색
+### &#x200B;1. 특정 mvpd를 사용하여 사전 인증 결정 검색
 
 >[!BEGINTABS]
 
@@ -355,7 +368,7 @@ Content-Type: application/json;charset=UTF-8
             "status": 403,
             "code": "preauthorization_denied_by_mvpd",
             "message": "The MVPD has returned a \"Deny\" decision when requesting pre-authorization for the specified resource.",
-            "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+            "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
             "action": "none"
          }
       }
@@ -365,7 +378,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### 2. 성능 저하를 적용하는 동안 특정 mvpd를 사용하여 사전 인증 결정을 검색합니다.
+### &#x200B;2. 성능 저하를 적용하는 동안 특정 mvpd를 사용하여 사전 인증 결정을 검색합니다.
 
 >[!BEGINTABS]
 
@@ -461,7 +474,7 @@ Content-Type: application/json;charset=UTF-8
                 "status": 403,
                 "code": "authorization_denied_by_degradation_rule",
                 "message": "The integration has an AuthZNone rule applied for the requested resources",
-                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
                 "action": "none"
             }
         }
@@ -475,7 +488,7 @@ Content-Type: application/json;charset=UTF-8
                 "status": 403,
                 "code": "authorization_denied_by_degradation_rule",
                 "message": "The integration has an AuthZNone rule applied for the requested resources",
-                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+                "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
                 "action": "none"
             }
         }
