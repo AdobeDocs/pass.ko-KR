@@ -2,9 +2,9 @@
 title: 향상된 오류 코드
 description: 향상된 오류 코드
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 27aaa0d3351577e60970a4035b02d814f0a17e2f
+source-git-commit: 7ac04991289c95ebb803d1fd804e9b497f821cda
 workflow-type: tm+mt
-source-wordcount: '2649'
+source-wordcount: '2696'
 ht-degree: 3%
 
 ---
@@ -41,13 +41,13 @@ ht-degree: 3%
 
 ## 표시 {#enhanced-error-codes-representation}
 
-향상된 오류 코드는 통합 Adobe Pass 인증 API 및 사용된 &quot;Accept&quot; 헤더 값(예: `application/json` 또는 `application/xml`)에 따라 `JSON` 또는 `XML` 형식으로 나타낼 수 있습니다.
+향상된 오류 코드는 통합 Adobe Pass 인증 API 및 사용된 &quot;Accept&quot; 헤더 값(예: `JSON` 또는 `XML`)에 따라 `application/json` 또는 `application/xml` 형식으로 나타낼 수 있습니다.
 
 | Adobe Pass 인증 API | JSON | XML |
 |-------------------------------|---------|---------|
-| REST API v2 | &check; |         |
-| REST API v1 | &check; | &check; |
-| SDK 사전 인증 API | &check; |         |
+| REST API v2 | &amp;check; |         |
+| REST API v1 | &amp;check; | &amp;check; |
+| SDK 사전 인증 API | &amp;check; |         |
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ Content-Type: application/json
         "code": "authorization_denied_by_mvpd",
         "message": "The MVPD has returned a \"Deny\" decision when requesting authorization for the specified resource",
         "details": "Your subscription package does not include the \"Live\" channel",
-        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
         "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
       }
     }
@@ -120,7 +120,7 @@ Content-Type: application/json
   "status": 400,
   "code": "invalid_parameter_service_provider",
   "message": "The service provider parameter value is missing or invalid.",
-  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
   "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
 }
 ```
@@ -154,7 +154,7 @@ Content-Type: application/json
         "code": "authorization_denied_by_mvpd",
         "message": "The MVPD has returned a \"Deny\" decision when requesting authorization for the specified resource",
         "details": "Your subscription package does not include the \"Live\" channel",
-        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
         "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
       }
     }
@@ -173,7 +173,7 @@ Content-Type: application/json
   "status": 400,
   "code": "invalid_requestor",
   "message": "The requestor parameter is missing or invalid.",
-  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
   "trace": "8bcb17f9-b172-47d2-86d9-3eb146eba85e"
 }
 ```
@@ -189,7 +189,7 @@ Content-Type: application/xml
   <status>400</status>
   <code>invalid_requestor</code>
   <message>The requestor parameter is missing or invalid.</message>
-  <helpUrl>https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko</helpUrl>
+  <helpUrl>https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html</helpUrl>
   <trace>8bcb17f9-b172-47d2-86d9-3eb146eba85e</trace>
 </error>
 ```
@@ -202,12 +202,12 @@ Content-Type: application/xml
 
 | 이름 | 유형 | 예 | 제한됨 | 설명 |
 |-----------|-----------|---------------------------------------------------------------------------------------------------------------------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *작업* | *문자열* | *없음* | &check; | 이 문서에 정의된 대로 상황을 수정할 수 있는 Adobe Pass 인증 권장 작업입니다. <br/><br/> 자세한 내용은 [작업](#enhanced-error-codes-action) 섹션을 참조하세요. |
-| *상태* | *정수* | *403* | &check; | [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6) 문서에 정의된 HTTP 응답 상태 코드입니다. <br/><br/> 자세한 내용은 [상태](#enhanced-error-codes-status) 섹션을 참조하세요. |
-| *코드* | *문자열* | *authorization_denied_by_mvpd* | &check; | 이 문서에 정의된 대로 오류와 연결된 Adobe Pass 인증 고유 식별자 코드. <br/><br/> 자세한 내용은 [코드](#enhanced-error-codes-code) 섹션을 참조하세요. |
+| *작업* | *문자열* | *없음* | &amp;check; | 이 문서에 정의된 대로 상황을 수정할 수 있는 Adobe Pass 인증 권장 작업입니다. <br/><br/> 자세한 내용은 [작업](#enhanced-error-codes-action) 섹션을 참조하세요. |
+| *상태* | *정수* | *403* | &amp;check; | [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6) 문서에 정의된 HTTP 응답 상태 코드입니다. <br/><br/> 자세한 내용은 [상태](#enhanced-error-codes-status) 섹션을 참조하세요. |
+| *코드* | *문자열* | *authorization_denied_by_mvpd* | &amp;check; | 이 문서에 정의된 대로 오류와 연결된 Adobe Pass 인증 고유 식별자 코드. <br/><br/> 자세한 내용은 [코드](#enhanced-error-codes-code) 섹션을 참조하세요. |
 | *메시지* | *문자열* | *지정된 리소스에 대한 권한 부여를 요청할 때 MVPD에서 &quot;거부&quot; 결정을 반환했습니다.* |            | 사람이 인식할 수 있는 메시지로서, 경우에 따라 최종 사용자에게 표시될 수 있습니다. <br/><br/> 자세한 내용은 [응답 처리](#enhanced-error-codes-response-handling) 섹션을 참조하십시오. |
 | *세부 정보* | *문자열* | *구독 패키지에 &quot;Live&quot; 채널이 포함되어 있지 않습니다* |            | 서비스 파트너가 제공할 수 있는 자세한 메시지(경우에 따라 <br/><br/>) 서비스 파트너가 사용자 지정 메시지를 제공하지 않는 경우 이 필드가 없을 수 있습니다. |
-| *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko* |            | 이 오류가 발생한 이유 및 가능한 해결 방법에 대한 자세한 정보로 연결되는 Adobe Pass 인증 공개 설명서 URL. <br/><br/> 이 필드에는 절대 URL이 있으며 다른 URL을 제공할 수 있는 오류 컨텍스트에 따라 오류 코드에서 유추해서는 안 됩니다. |
+| *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html* |            | 이 오류가 발생한 이유 및 가능한 해결 방법에 대한 자세한 정보로 연결되는 Adobe Pass 인증 공개 설명서 URL. <br/><br/> 이 필드에는 절대 URL이 있으며 다른 URL을 제공할 수 있는 오류 컨텍스트에 따라 오류 코드에서 유추해서는 안 됩니다. |
 | *추적* | *문자열* | *12f6fef9-d2e0-422b-a9d7-60d799abe353* |            | 특정 문제를 해결하기 위해 Adobe Pass 인증 지원에 문의할 때 사용할 수 있는 응답의 고유 식별자입니다. |
 
 >[!IMPORTANT]
@@ -218,13 +218,13 @@ Content-Type: application/xml
 >
 > 이 문서에 대한 향후 업데이트는 유한 집합에 값을 추가할 수 있지만 기존 집합을 제거하거나 변경하지 않습니다.
 
-### 작업 {#enhanced-error-codes-representation-action}
+### 액션 {#enhanced-error-codes-representation-action}
 
 향상된 오류 코드에는 상황을 수정할 수 있는 권장 작업을 제공하는 &quot;작업&quot; 필드가 포함되어 있습니다.
 
 &quot;작업&quot; 필드에 사용할 수 있는 값은 다음과 같습니다.
 
-| 작업 | 설명 | 범주 |
+| 액션 | 설명 | 범주 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
 | 없음 | 이 문제를 해결하기 위한 사전 정의된 작업이 없지만, 경우에 따라 API의 부적절한 호출을 나타낼 수 있습니다. | 요청 컨텍스트를 수정합니다. |
 | 구성 | 클라이언트 애플리케이션은 대부분의 경우 Adobe Pass TVE Dashboard를 통해 수행되는 구성 변경이 필요합니다. | 통합 구성 컨텍스트를 수정합니다. |
@@ -272,7 +272,7 @@ _(*) 일부 오류의 경우 여러 작업이 가능한 해결 방법일 수 있
 
 아래 표에는 Adobe Pass 인증 REST API v2와 통합할 때 클라이언트 애플리케이션에서 발생할 수 있는 향상된 오류 코드가 나와 있습니다.
 
-| 작업 | 코드 | 상태 | 메시지 |
+| 액션 | 코드 | 상태 | 메시지 |
 |------------------------------|--------------------------------------------------------|--------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **없음** | *invalid_parameter_service_provider* | 400 | 서비스 공급자 매개 변수 값이 없거나 잘못되었습니다. |
 |                              | *invalid_parameter_mvpd* | 400 | mvpd 매개 변수 값이 없거나 잘못되었습니다. |
@@ -322,11 +322,11 @@ _(*) 일부 오류의 경우 여러 작업이 가능한 해결 방법일 수 있
 |                              | *network_connection_timeout* | 403 | 연결된 파트너 서비스와의 연결 시간 제한이 초과되었습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
 |                              | *maximum_execution_time_exceeded* | 403 | 최대 허용 시간 내에 요청이 완료되지 않았습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
 
-### REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
+### (기존) REST API v1 {#enhanced-error-codes-lists-rest-api-v1}
 
 아래 표에는 Adobe Pass 인증 REST API v1과 통합할 때 클라이언트 애플리케이션에서 발생할 수 있는 향상된 오류 코드가 나와 있습니다.
 
-| 작업 | 코드 | 상태 | 메시지 |
+| 액션 | 코드 | 상태 | 메시지 |
 |--------------------|---------------------------------------------------|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **없음** | *invalid_requestor* | 400 | 요청자 매개변수가 누락되었거나 잘못되었습니다. |
 |                    | *invalid_device_info* | 400 | 디바이스 정보가 누락되었거나 잘못되었습니다. |
@@ -354,7 +354,7 @@ _(*) 일부 오류의 경우 여러 작업이 가능한 해결 방법일 수 있
 |                    | *network_connection_timeout* | 403 | 연결된 파트너 서비스와의 연결 시간 제한이 초과되었습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
 |                    | *maximum_execution_time_exceeded* | 403 | 최대 허용 시간 내에 요청이 완료되지 않았습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
 
-### SDK 사전 인증 API {#enhanced-error-codes-lists-sdks-preauthorize-api}
+### (기존) SDK가 API 사전 인증 {#enhanced-error-codes-lists-sdks-preauthorize-api}
 
 Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 응용 프로그램에 발생할 수 있는 향상된 오류 코드에 대해 이전 [섹션](#enhanced-error-codes-list-rest-api-v1)을 참조하세요.
 
@@ -370,11 +370,13 @@ Adobe Pass 인증 SDK 사전 권한 부여 API와 통합할 때 클라이언트 
 
 요약하면 향상된 오류 코드가 포함된 응답을 처리할 때는 다음 사항을 고려해야 합니다.
 
-1. **상태 값을 모두 확인**: 항상 HTTP 응답 상태 코드와 향상된 오류 코드 &quot;상태&quot; 필드를 모두 확인합니다. 둘 다 중요한 정보를 제공하므로 서로 다를 수 있습니다.
+1. **오류를 반환하는 API에 대해 불가지론적**: API에서 생성되는 오류 코드에 관계없이 향상된 오류 코드의 전체 카탈로그를 지원하는 중앙 집중식 오류 처리 논리를 구현합니다. 여러 향상된 오류 코드는 API에서 공유되며 일관되게 처리되어야 합니다.
 
 1. **최상위 오류 정보와 항목 수준 오류 정보 불가지론자**: 전달되는 방식에 따라 최상위 및 항목 수준 오류 정보를 불가지론자로 처리하고 향상된 오류 코드를 전송하는 두 가지 형식을 모두 처리할 수 있습니다.
 
-1. **다시 시도 논리**: 다시 시도해야 하는 오류의 경우 서버를 압도하지 않도록 지수 백오프를 사용하여 다시 시도해야 합니다. 또한 여러 항목을 한 번에 처리하는 Adobe Pass 인증 API(예: 사전 인증 API)의 경우, 전체 목록이 아니라 &quot;다시 시도&quot;로 표시된 항목만 반복된 요청에 포함해야 합니다.
+1. **상태 값을 모두 확인**: 항상 HTTP 응답 상태 코드와 향상된 오류 코드 &quot;상태&quot; 필드를 모두 확인합니다. 둘 다 중요한 정보를 제공하므로 서로 다를 수 있습니다.
+
+1. **다시 시도 논리**: 다시 시도해야 하는 오류의 경우 다시 시도가 제한되어 있는지(예: 2-3) 또는 서버를 압도하지 않도록 지수 백오프를 통해 수행되는지 확인하십시오. 또한 여러 항목을 한 번에 처리하는 Adobe Pass 인증 API(예: 사전 인증 API)의 경우, 전체 목록이 아니라 &quot;다시 시도&quot;로 표시된 항목만 반복된 요청에 포함해야 합니다.
 
 1. **구성 변경**: 구성을 변경해야 하는 오류의 경우 새 응용 프로그램이나 새 기능을 시작하기 전에 필요한 변경이 수행되었는지 확인하십시오.
 

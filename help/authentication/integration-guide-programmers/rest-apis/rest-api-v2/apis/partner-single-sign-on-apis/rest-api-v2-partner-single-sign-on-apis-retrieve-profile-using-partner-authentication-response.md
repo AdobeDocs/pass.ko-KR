@@ -2,9 +2,9 @@
 title: 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
 description: REST API V2 - 파트너 인증 응답을 사용하여 프로필 만들기 및 검색
 exl-id: cae260ff-a229-4df7-bbf9-4cdf300c0f9a
-source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
+source-git-commit: 7ac04991289c95ebb803d1fd804e9b497f821cda
 workflow-type: tm+mt
-source-wordcount: '795'
+source-wordcount: '847'
 ht-degree: 1%
 
 ---
@@ -321,7 +321,22 @@ ht-degree: 1%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>응답 본문은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
+      <td>
+            응답 본문은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.
+            <br/><br/>
+            클라이언트 애플리케이션은 이 API에서 가장 일반적으로 반환되는 오류 코드를 제대로 처리할 수 있는 오류 처리 메커니즘을 구현해야 합니다.
+            <ul>
+                <li>invalid_header_pfs_permission_access_not_present</li>
+                <li>invalid_header_pfs_permission_access_not_determined</li>
+                <li>invalid_header_pfs_permission_access_not_granted</li>
+                <li>invalid_header_pfs_provider_id_not_determined</li>
+                <li>invalid_header_pfs_provider_id_mismatch</li>
+                <li>invalid_header_pfs_provider_info_expired</li>
+                <li>invalid_parameter_saml_response</li>
+                <li>등</li>
+            </ul>
+            위의 목록은 완전하지 않습니다. 클라이언트 응용 프로그램은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">공개 설명서</a>에 정의된 모든 향상된 오류 코드를 처리할 수 있어야 합니다.
+      </td>
       <td><i>필수</i></td>
    </tr>
 </table>
