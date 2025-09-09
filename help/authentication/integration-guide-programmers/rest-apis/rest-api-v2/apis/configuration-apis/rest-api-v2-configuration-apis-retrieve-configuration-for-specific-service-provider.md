@@ -2,7 +2,7 @@
 title: 특정 서비스 공급자에 대한 구성 검색
 description: REST API V2 - 특정 서비스 공급자에 대한 구성 검색
 exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
-source-git-commit: 871afc4e7ec04d62590dd574bf4e28122afc01b6
+source-git-commit: 8952283ccce38f70f4f504f07714c583fcb7e272
 workflow-type: tm+mt
 source-wordcount: '725'
 ht-degree: 2%
@@ -74,7 +74,7 @@ ht-degree: 2%
    <tr>
       <td style="background-color: #DEEBFF;">AP-Device-Identifier</td>
       <td>장치 식별자 페이로드 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-ap-device-identifier.md">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.</td>
-      <td><i>필수</i></td>
+      <td>선택 사항</td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Device-Info</td>
@@ -87,7 +87,7 @@ ht-degree: 2%
          <br/><br/>
          제공하지 않으면 Adobe Pass 인증 백엔드는 추출된 값을 묵시적으로(기본적으로) 사용합니다.
       </td>
-      <td><i>필수</i></td>
+      <td>선택 사항</td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Forwarded-For</td>
@@ -282,7 +282,7 @@ ht-degree: 2%
 
 ## 샘플 {#samples}
 
-### 1. 특정 서비스 공급자에 대한 구성 검색
+### &#x200B;1. 특정 서비스 공급자에 대한 구성 검색
 
 >[!BEGINTABS]
 
