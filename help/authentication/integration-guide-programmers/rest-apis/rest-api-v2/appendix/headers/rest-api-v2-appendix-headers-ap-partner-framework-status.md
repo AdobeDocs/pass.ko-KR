@@ -2,9 +2,9 @@
 title: 헤더 - AP-Partner-Framework-Status
 description: REST API V2 - 헤더 - AP-Partner-Framework-Status
 exl-id: f589d948-e23e-43d4-81c2-8db0e7a40e93
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 5c912bbbe97fff65d38dbade32cd4554ad8c2fac
 workflow-type: tm+mt
-source-wordcount: '388'
+source-wordcount: '404'
 ht-degree: 0%
 
 ---
@@ -131,6 +131,8 @@ ht-degree: 0%
                   필수 속성입니다.
                   <br/><br/>
                   사용자가 파트너 프레임워크 수준에서 지원되는 MVPD을 사용하여 성공적으로 기록한 경우 인증된 사용자 프로필의 만료 날짜입니다.
+                  <br/><br/>
+                  Unix Epoch(예: "1735689600000") 이후 문자열로 표현된 타임스탬프(밀리초)여야 합니다.
                </td>
             </tr>
             <tr>
@@ -163,7 +165,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-## 예시 {#examples}
+## 예 {#examples}
 
 ```JSON
 // Partner framework status information
