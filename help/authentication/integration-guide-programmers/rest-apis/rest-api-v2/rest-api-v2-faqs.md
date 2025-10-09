@@ -2,9 +2,9 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: ebe0a53e3ba54c2effdef45c1143deea0e6e57d3
+source-git-commit: 0b8ef6c6b326d1a9de52b24823886c708c2aad33
 workflow-type: tm+mt
-source-wordcount: '9566'
+source-wordcount: '9682'
 ht-degree: 0%
 
 ---
@@ -67,7 +67,21 @@ REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authenticat
 
 자세한 내용은 [구성 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) 설명서를 참조하세요.
 
-#### &#x200B;4. 클라이언트 애플리케이션이 구성 응답 정보를 영구 저장소에 캐시해야 합니까? {#configuration-phase-faq4}
+#### &#x200B;4. 구성이 서비스 공급자, 플랫폼 또는 사용자에게만 적용됩니까? {#configuration-phase-faq4}
+
+구성은 [서비스 공급자](rest-api-v2-glossary.md#service-provider)에만 적용됩니다.
+
+구성은 플랫폼 유형에 따라 다릅니다.
+
+사용자별로 구성이 다릅니다.
+
+서버 간 아키텍처를 사용하는 클라이언트 애플리케이션의 경우 서버측 메모리 스토리지에 각 플랫폼 유형에 대한 구성 응답(예: 2분 TTL 포함)을 캐시하는 것이 좋습니다. 이렇게 하면 각 사용자에 대한 불필요한 요청이 줄어들고 전반적인 사용자 경험이 향상됩니다.
+
+#### &#x200B;5. 클라이언트 애플리케이션이 구성 응답 정보를 영구 저장소에 캐시해야 합니까? {#configuration-phase-faq5}
+
+>[!IMPORTANT]
+> 
+> 서버 간 아키텍처를 사용하는 클라이언트 애플리케이션의 경우 서버측 메모리 스토리지에 각 플랫폼 유형에 대한 구성 응답(예: 2분 TTL 포함)을 캐시하는 것이 좋습니다. 이렇게 하면 각 사용자에 대한 불필요한 요청이 줄어들고 전반적인 사용자 경험이 향상됩니다.
 
 사용자가 인증 또는 재인증하기 위해 MVPD을 선택해야 하는 경우에만 클라이언트 애플리케이션이 구성을 검색해야 합니다.
 
@@ -77,19 +91,19 @@ REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authenticat
 * 기본 또는 프로모션 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
 * 사용자 인증이 만료되었지만 클라이언트 애플리케이션이 이전에 선택한 MVPD을 사용자 경험에 동기된 선택으로 캐시했으며 사용자에게 아직 해당 MVPD의 구독자인지 확인하라는 메시지를 표시했습니다.
 
-#### &#x200B;5. 클라이언트 애플리케이션이 자체 MVPD 목록을 관리할 수 있습니까? {#configuration-phase-faq5}
+#### &#x200B;6. 클라이언트 애플리케이션이 자체 MVPD 목록을 관리할 수 있습니까? {#configuration-phase-faq6}
 
 클라이언트 애플리케이션은 자체 MVPD 목록을 관리할 수 있지만, MVPD 식별자를 Adobe Pass 인증과 동기화해야 합니다. 따라서 목록이 최신 상태이고 정확한지 확인하려면 Adobe Pass 인증에서 제공하는 구성을 사용하는 것이 좋습니다.
 
 제공된 MVPD 식별자가 잘못되었거나 지정된 [서비스 공급자](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2)와 활성 통합이 없는 경우 클라이언트 응용 프로그램은 Adobe Pass 인증 REST API V2에서 [오류](rest-api-v2-glossary.md#service-provider)을(를) 받습니다.
 
-#### &#x200B;6. 클라이언트 애플리케이션이 MVPD 목록을 필터링할 수 있습니까? {#configuration-phase-faq6}
+#### &#x200B;7. 클라이언트 애플리케이션이 MVPD 목록을 필터링할 수 있습니까? {#configuration-phase-faq7}
 
 클라이언트 애플리케이션은 자신의 비즈니스 로직 및 이전 선택의 사용자 위치 또는 사용자 내역과 같은 요구 사항을 기반으로 사용자 지정 메커니즘을 구현함으로써 구성 응답에 제공된 MVPD의 목록을 필터링할 수 있다.
 
 클라이언트 응용 프로그램은 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) MVPD 또는 아직 개발 또는 테스트 중인 통합이 있는 MVPD의 목록을 필터링할 수 있습니다.
 
-#### &#x200B;7. MVPD과의 통합이 비활성화되고 비활성화로 표시되면 어떻게 됩니까? {#configuration-phase-faq7}
+#### &#x200B;8. MVPD과의 통합이 비활성화되고 비활성화로 표시되면 어떻게 됩니까? {#configuration-phase-faq8}
 
 MVPD과의 통합이 비활성화되고 비활성화로 표시되면 추가 구성 응답에 제공된 MVPD 목록에서 MVPD이 제거되며 고려해야 할 두 가지 중요한 결과가 있습니다.
 
@@ -98,14 +112,14 @@ MVPD과의 통합이 비활성화되고 비활성화로 표시되면 추가 구�
 
 선택한 MVPD에 지정된 [서비스 공급자](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2)와의 활성 통합이 더 이상 없는 경우 클라이언트 응용 프로그램이 Adobe Pass 인증 REST API V2에서 [오류](rest-api-v2-glossary.md#service-provider)을(를) 받습니다.
 
-#### &#x200B;8. MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 어떻게 됩니까? {#configuration-phase-faq8}
+#### &#x200B;9. MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 어떻게 됩니까? {#configuration-phase-faq9}
 
 MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 추가 구성 응답에 제공된 MVPD 목록에 다시 포함되며 다음과 같은 두 가지 중요한 결과가 있습니다.
 
 * 해당 MVPD의 인증되지 않은 사용자는 해당 MVPD을 사용하여 인증 단계를 다시 완료할 수 있습니다.
 * 해당 MVPD의 인증된 사용자는 해당 MVPD을 사용하여 사전 인증, 권한 부여 또는 로그아웃 단계를 다시 완료할 수 있습니다.
 
-#### &#x200B;9. MVPD과의 통합을 활성화하거나 비활성화하는 방법 {#configuration-phase-faq9}
+#### &#x200B;10. MVPD과의 통합을 활성화하거나 비활성화하는 방법 {#configuration-phase-faq10}
 
 이 작업은 조직 관리자 중 한 사람이나 사용자를 대신하여 활동하는 Adobe Pass 인증 담당자가 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 완료할 수 있습니다.
 
@@ -571,7 +585,7 @@ TV 공급자(신뢰할 수 있는) 결정에서 사용자가 액세스할 수 �
 
 ### 로그아웃 단계 FAQ {#logout-phase-faqs-general}
 
-+++으로그아웃 단계 FAQ
++++로그아웃 단계 FAQ
 
 #### &#x200B;1. 로그아웃 단계의 목적은 무엇입니까? {#logout-phase-faq1}
 
@@ -822,7 +836,7 @@ REST API V1에서 REST API V2로 마이그레이션할 때 다음 표에 나타�
 
 #### 로그아웃 단계 FAQ {#logout-phase-faqs-migration-rest-api-v1-to-rest-api-v2}
 
-+++으로그아웃 단계 FAQ
++++로그아웃 단계 FAQ
 
 ##### &#x200B;1. 로그아웃 단계에서 필요한 높은 수준의 API 마이그레이션은 무엇입니까? {#logout-phase-v1-to-v2-faq1}
 
@@ -1030,7 +1044,7 @@ SDK에서 REST API V2로 마이그레이션할 때 다음 표에 고려해야 �
 
 #### 로그아웃 단계 FAQ {#logout-phase-faqs-migration-sdk-to-rest-api-v2}
 
-+++으로그아웃 단계 FAQ
++++로그아웃 단계 FAQ
 
 ##### &#x200B;1. 로그아웃 단계에서 필요한 높은 수준의 API 마이그레이션은 무엇입니까? {#logout-phase-sdk-to-v2-faq1}
 
