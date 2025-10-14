@@ -29,7 +29,7 @@ ht-degree: 0%
 
 위의 단계에 제시된 바와 같이, AuthN 흐름 동안 MVPD는 SAML 기반 AuthN 요청을 수락하고 SAML AuthN 응답을 전송해야 한다.
 
-[OLCA(온라인 콘텐츠 액세스) 인증 및 권한 부여 인터페이스 사양](https://www.cablelabs.com/specifications/search?query=&amp;category=&amp;subcat=&amp;doctype=&amp;content=false&amp;archives=false){target=_blanck}은(는) 표준 AuthN 요청 및 응답을 제공합니다. Adobe Pass 인증에서는 이 표준을 기반으로 자격 메시지를 작성하는 데 MVPD가 필요하지 않지만, 사양을 보면 AuthN 트랜잭션에 필요한 주요 속성에 대한 통찰력을 얻을 수 있습니다.
+[OLCA(온라인 콘텐츠 액세스) 인증 및 권한 부여 인터페이스 사양](https://www.cablelabs.com/specifications/search?query=&category=&subcat=&doctype=&content=false&archives=false){target=_blanck}은(는) 표준 AuthN 요청 및 응답을 제공합니다. Adobe Pass 인증에서는 이 표준을 기반으로 자격 메시지를 작성하는 데 MVPD가 필요하지 않지만, 사양을 보면 AuthN 트랜잭션에 필요한 주요 속성에 대한 통찰력을 얻을 수 있습니다.
 
 >[!NOTE]
 >

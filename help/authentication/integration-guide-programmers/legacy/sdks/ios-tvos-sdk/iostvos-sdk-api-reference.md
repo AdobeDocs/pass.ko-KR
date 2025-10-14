@@ -744,7 +744,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 * *url:* MVPD의 로그인 페이지를 가리키는 URL
 * *useSVC:* SFSafariViewController에 URL을 로드할지 여부를 지정합니다.
 
-[setSelectedProvider:](#setSelProv) 전에 **트리거:**&#x200B;[ setOptions:](#setOptions)
+[setSelectedProvider:](#setSelProv) 전에 **트리거:**&#x200B;[&#x200B; setOptions:](#setOptions)
 
 [맨 위로...](#apis)
 
