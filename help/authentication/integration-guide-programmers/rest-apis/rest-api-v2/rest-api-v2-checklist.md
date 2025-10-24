@@ -2,9 +2,9 @@
 title: REST API V2 검사 목록
 description: REST API V2 검사 목록
 exl-id: 9095d1dd-a90c-4431-9c58-9a900bfba1cf
-source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
+source-git-commit: 63dc9636f74f8eee1af6205c4d31a01df4503050
 workflow-type: tm+mt
-source-wordcount: '2545'
+source-wordcount: '2563'
 ht-degree: 0%
 
 ---
@@ -19,9 +19,13 @@ ht-degree: 0%
 
 이 문서에 따라 REST API V2를 구현할 때는 허용 기준의 일부로 간주해야 하며 성공적인 통합을 위해 필요한 모든 단계를 수행했는지 확인하는 검사 목록으로 사용해야 합니다.
 
+>[!TIP]
+>
+> AI 지원 개발의 경우 이러한 요구 사항을 AI 코딩 도우미에 대한 구조화된 규칙으로 변환하는 [AI 규칙](rest-api-v2-ai-rules.md)을 참조하십시오.
+
 ## 필수 요구 사항 {#mandatory-requirements}
 
-### 1. 등록 단계 {#mandatory-requirements-registration-phase}
+### &#x200B;1. 등록 단계 {#mandatory-requirements-registration-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -46,7 +50,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 2. 구성 단계 {#mandatory-requirements-configuration-phase}
+### &#x200B;2. 구성 단계 {#mandatory-requirements-configuration-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -66,7 +70,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 3. 인증 단계 {#mandatory-requirements-authentication-phase}
+### &#x200B;3. 인증 단계 {#mandatory-requirements-authentication-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -96,7 +100,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 4. (선택 사항) 사전 인증 단계 {#mandatory-requirements-preauthorization-phase}
+### &#x200B;4. (선택 사항) 사전 인증 단계 {#mandatory-requirements-preauthorization-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -121,7 +125,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 5. 인증 단계 {#mandatory-requirements-authorization-phase}
+### &#x200B;5. 인증 단계 {#mandatory-requirements-authorization-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -141,7 +145,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 6. 로그아웃 단계 {#mandatory-requirements-logout-phase}
+### &#x200B;6. 로그아웃 단계 {#mandatory-requirements-logout-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -156,7 +160,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 7. 매개변수 및 헤더 {#mandatory-requirements-parameters-headers}
+### &#x200B;7. 매개변수 및 헤더 {#mandatory-requirements-parameters-headers}
 
 <table style="table-layout:auto">
    <tr>
@@ -191,7 +195,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 8. 오류 처리 {#mandatory-requirements-error-handling}
+### &#x200B;8. 오류 처리 {#mandatory-requirements-error-handling}
 
 <table style="table-layout:auto">
    <tr>
@@ -211,7 +215,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 9. 테스트 {#mandatory-requirements-testing}
+### &#x200B;9. 테스트 {#mandatory-requirements-testing}
 
 <table style="table-layout:auto">
    <tr>
@@ -228,7 +232,7 @@ ht-degree: 0%
 
 ## 권장 사례 {#recommended-practices}
 
-### 1. 등록 단계 {#recommended-practices-registration-phase}
+### &#x200B;1. 등록 단계 {#recommended-practices-registration-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -243,7 +247,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 2. 구성 단계 {#recommended-practices-configuration-phase}
+### &#x200B;2. 구성 단계 {#recommended-practices-configuration-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -258,7 +262,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 3. 인증 단계 {#recommended-practices-authentication-phase}
+### &#x200B;3. 인증 단계 {#recommended-practices-authentication-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -283,7 +287,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 4. (선택 사항) 사전 인증 단계 {#recommended-practices-preauthorization-phase}
+### &#x200B;4. (선택 사항) 사전 인증 단계 {#recommended-practices-preauthorization-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -298,7 +302,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 5. 인증 단계 {#recommended-practices-authorization-phase}
+### &#x200B;5. 인증 단계 {#recommended-practices-authorization-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -318,7 +322,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 6. 로그아웃 단계 {#recommended-practices-logout-phase}
+### &#x200B;6. 로그아웃 단계 {#recommended-practices-logout-phase}
 
 <table style="table-layout:auto">
    <tr>
@@ -333,7 +337,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 7. 매개변수 및 헤더 {#recommended-practices-parameters-headers}
+### &#x200B;7. 매개변수 및 헤더 {#recommended-practices-parameters-headers}
 
 <table style="table-layout:auto">
    <tr>
@@ -348,7 +352,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### 8. 테스트 {#recommended-practices-testing}
+### &#x200B;8. 테스트 {#recommended-practices-testing}
 
 <table style="table-layout:auto">
    <tr>
