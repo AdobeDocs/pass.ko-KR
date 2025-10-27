@@ -2,9 +2,9 @@
 title: 액세스 토큰 검색
 description: Dynamic Client Registration API - 액세스 토큰 검색
 exl-id: 23287acf-5d56-46f0-b65e-79bf7d667708
-source-git-commit: be2b75d3dcde92c0b83700705892403291dcab2e
+source-git-commit: f0969a692380af3d20df37c49c37f7d1e85c7cfd
 workflow-type: tm+mt
-source-wordcount: '456'
+source-wordcount: '474'
 ht-degree: 1%
 
 ---
@@ -230,7 +230,11 @@ ht-degree: 1%
             </tr>
             <tr>
                <td style="background-color: #DEEBFF;">unauthorized_client</td>
-               <td>사용된 부여 유형이 잘못되었습니다.</td>
+               <td>클라이언트 응용 프로그램에 이 권한 부여 유형을 사용할 수 있는 권한이 없습니다.</td>
+            </tr>
+            <tr>
+               <td style="background-color: #DEEBFF;">unsupported_grant_type</td>
+               <td>인증 서버에서 권한 부여 유형을 지원하지 않습니다.</td>
             </tr>
          </table>
       </td>
