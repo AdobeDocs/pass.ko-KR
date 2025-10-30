@@ -2,9 +2,9 @@
 title: 인증 세션 다시 시작
 description: REST API V2 - 인증 세션 다시 시작
 exl-id: 66c33546-2be0-473f-9623-90499d1c13eb
-source-git-commit: 7ac04991289c95ebb803d1fd804e9b497f821cda
+source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '953'
+source-wordcount: '956'
 ht-degree: 1%
 
 ---
@@ -131,7 +131,7 @@ ht-degree: 1%
       <td>
          클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
          <br/><br/>
-         지정하면 application/json이어야 합니다.
+         지정하면 application/json;charset=utf-8이어야 합니다.
       </td>
       <td>선택 사항</td>
    </tr>

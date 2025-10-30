@@ -2,9 +2,9 @@
 title: 특정 서비스 공급자에 대한 구성 검색
 description: REST API V2 - 특정 서비스 공급자에 대한 구성 검색
 exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
-source-git-commit: 8952283ccce38f70f4f504f07714c583fcb7e272
+source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '725'
+source-wordcount: '728'
 ht-degree: 2%
 
 ---
@@ -105,7 +105,7 @@ ht-degree: 2%
       <td>
          클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
          <br/><br/>
-         지정하면 application/json이어야 합니다.
+         지정하면 application/json;charset=utf-8이어야 합니다.
       </td>
       <td>선택 사항</td>
    </tr>

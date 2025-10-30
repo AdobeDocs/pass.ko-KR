@@ -2,9 +2,9 @@
 title: 클라이언트 자격 증명 검색
 description: Dynamic Client Registration API - 클라이언트 자격 증명 검색
 exl-id: 0b39768b-25b8-47b9-8080-59c56fb829fb
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '431'
+source-wordcount: '437'
 ht-degree: 1%
 
 ---
@@ -66,7 +66,7 @@ ht-degree: 1%
       <td>
          전송 중인 리소스에 대해 허용되는 미디어 유형입니다.
          <br/><br/>
-         application/json이어야 합니다.
+         application/json;charset=utf-8이어야 합니다.
       </td>
       <td><i>필수</i></td>
    </tr>
@@ -88,7 +88,7 @@ ht-degree: 1%
       <td>
          클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
          <br/><br/>
-         지정하면 application/json이어야 합니다.
+         지정하면 application/json;charset=utf-8이어야 합니다.
       </td>
       <td>선택 사항</td>
    </tr>

@@ -2,9 +2,9 @@
 title: 파트너 인증 요청 검색
 description: REST API V2 - 파트너 인증 요청 검색
 exl-id: 52d8a8e9-c176-410f-92bc-e83449278943
-source-git-commit: 3efe25ddde7dfd2562932f623a2c440d4a059672
+source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '1280'
+source-wordcount: '1283'
 ht-degree: 1%
 
 ---
@@ -148,7 +148,7 @@ ht-degree: 1%
       <td>
          클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
          <br/><br/>
-         지정하면 application/json이어야 합니다.
+         지정하면 application/json;charset=utf-8이어야 합니다.
       </td>
       <td>선택 사항</td>
    </tr>

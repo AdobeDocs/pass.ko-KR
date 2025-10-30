@@ -2,9 +2,9 @@
 title: 액세스 토큰 검색
 description: Dynamic Client Registration API - 액세스 토큰 검색
 exl-id: 23287acf-5d56-46f0-b65e-79bf7d667708
-source-git-commit: f0969a692380af3d20df37c49c37f7d1e85c7cfd
+source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '474'
+source-wordcount: '477'
 ht-degree: 1%
 
 ---
@@ -101,7 +101,7 @@ ht-degree: 1%
       <td>
          클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
          <br/><br/>
-         지정하면 application/json이어야 합니다.
+         지정하면 application/json;charset=utf-8이어야 합니다.
       </td>
       <td>선택 사항</td>
    </tr>
