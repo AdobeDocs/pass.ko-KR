@@ -2,7 +2,7 @@
 title: JavaScript SDK API 참조
 description: JavaScript SDK API 참조
 exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '2883'
 ht-degree: 0%
@@ -34,7 +34,7 @@ ht-degree: 0%
 - [logout()](#logout)
 
 
-## setRequestor(inRequestorID, endpoints, options){#setrequestor(inRequestorID,endpoints,options)}
+## setRequestor (inRequestorID, endpoints, options){#setrequestor(inRequestorID,endpoints,options)}
 
 **설명:** 요청이 시작된 사이트를 식별합니다.  통신 세션에서 다른 API 호출 전에 이 호출을 수행해야 합니다.
 
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 - *옵션* - 응용 프로그램 ID 값, 방문자 ID 값 새로 고침 불가 설정(백그라운드 로그인 로그아웃) 및 MVPD 설정(iFrame)이 포함된 JSON 개체입니다. 모든 값은 선택 사항입니다.
    1. 지정하면 라이브러리에서 수행한 모든 네트워크 호출에 대해 Experience Cloud visitorID가 보고됩니다. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
-   2. 응용 프로그램의 고유 식별자가 지정된 경우 -`applicationId` - 이 값은 응용 프로그램에서 X-Device-Info HTTP 헤더의 일부로 이후에 호출하는 모든 호출에 추가됩니다. 이 값은 나중에 적절한 쿼리를 사용하여 [ESM](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md) 보고서에서 가져올 수 있습니다.
+   2. 응용 프로그램의 고유 식별자가 지정된 경우 -`applicationId` - 이 값은 응용 프로그램에서 X-Device-Info HTTP 헤더의 일부로 이후에 호출하는 모든 호출에 추가됩니다. 이 값은 나중에 적절한 쿼리를 사용하여 [ESM](/help/premium-workflow/esm/entitlement-service-monitoring-overview.md) 보고서에서 가져올 수 있습니다.
 
   **참고:** 모든 JSON 키는 대/소문자를 구분합니다.
 
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 ## checkAuthorization(inResourceID) {#checkauthorization(inresourceid)}
 
-**설명:** 응용 프로그램에서 이 메서드를 사용하여 현재 고객 및 지정된 리소스에 대한 인증 상태를 확인합니다. 먼저 인증 상태를 확인하는 것으로 시작됩니다. 인증되지 않은 경우 tokenRequestFailed() 콜백이 트리거되고 메서드가 종료됩니다. 사용자가 인증되면 권한 부여 플로우도 트리거됩니다. [getAuthorization()] (#getAuthZ 메서드에 대한 자세한 내용을 참조하십시오.
+**설명:** 응용 프로그램에서 이 메서드를 사용하여 현재 고객 및 지정된 리소스에 대한 인증 상태를 확인합니다. 먼저 인증 상태를 확인하는 것으로 시작됩니다. 인증되지 않은 경우 tokenRequestFailed() 콜백이 트리거되고 메서드가 종료됩니다. 사용자가 인증되면 권한 부여 플로우도 트리거됩니다. [getAuthorization()]&#x200B;(#getAuthZ 메서드에 대한 자세한 내용을 참조하십시오.
 
 >[!TIP]
 >
@@ -241,7 +241,7 @@ ht-degree: 0%
 
    - 키가 `"TTL_AUTHZ"`이고 params가 리소스 ID를 문자열로 포함하는 배열인 경우 지정된 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
 
-   - 키가 `"DEVICEID"`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며 프로그래머는 사용 권한 및 요금에 대한 정보를 Adobe에 문의해야 합니다.
+   - 키가 `"DEVICEID"`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
 
    - 키가 다음 사용자 메타데이터 형식 목록에 있는 경우 해당 사용자 메타데이터가 포함된 JSON 개체가 [`setMetadataStatus()`](#setmetadatastatuskey-encrypted-data-setmetadatastatuskeyencrypteddata) 콜백 함수로 전송됩니다.
 
@@ -309,7 +309,7 @@ For example:
 **설명:** 사용자가 공급자 선택 UI에서 공급자 선택을 Access Enabler에 보내기 위해 MVPD을 선택한 경우 이 함수를 호출하거나 사용자가 공급자를 선택하지 않고 공급자 선택 UI를 해제한 경우 null 매개 변수를 사용하여 이 함수를 호출합니다.
 
 **콜백
-트리거됨:**[&#x200B; setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
+트리거됨:**[ setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
 
 </br>
 
@@ -415,7 +415,7 @@ For example:
 
 **설명:** 사용자가 인증 로그인 페이지 UI를 표시할 iFrame이 필요한 MVPD을 선택한 경우 이 콜백을 구현합니다.
 
-**트리거 주체:**&#x200B;[&#x200B; setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
+**트리거 주체:**[ setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
 
 </br> [맨 위로 돌아가기](#top)
 
@@ -448,7 +448,7 @@ For example:
 
 >[!CAUTION]
 >
->장치 유형 및 운영 체제는 공용 Java 라이브러리(<http://java.net/projects/user-agent-utils>) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, 잘못된 결과에 대해서는 Adobe이 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
+>장치 유형 및 운영 체제는 공용 Java 라이브러리(<http://java.net/projects/user-agent-utils>) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, Adobe은 잘못된 결과에 대한 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
 
 **설명:** 특정 이벤트가 발생할 때 추적 데이터를 받으려면 이 콜백을 구현합니다. 예를 들어 동일한 자격 증명으로 로그인한 사용자가 몇 명인지 추적할 수 있습니다. 추적은 현재 구성할 수 없습니다. `sendTrackingData()`은(는) Adobe Pass 인증 1.6을 사용하여 장치, Access Enabler 클라이언트 및 운영 체제 유형에 대한 정보도 보고합니다. `sendTrackingData()` 콜백은 이전 버전과 호환되는 상태로 유지됩니다.
 
@@ -558,7 +558,7 @@ For example:
 
 </br>
 
-## setMetadataStatus(key, encrypted, data) {#setMetadataStatus(key,encrypted,data)}
+## setMetadataStatus(키, 암호화, 데이터) {#setMetadataStatus(key,encrypted,data)}
 
 **설명:** `getMetadata()` 호출을 통해 요청된 메타데이터를 전달하는 Access Enabler에 의해 트리거된 콜백입니다.
 

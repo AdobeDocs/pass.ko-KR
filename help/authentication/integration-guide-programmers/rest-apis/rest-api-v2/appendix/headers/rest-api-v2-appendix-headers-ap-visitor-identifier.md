@@ -1,14 +1,13 @@
 ---
 title: 헤더 - AP-Visitor-Identifier
 description: REST API V2 - 헤더 - AP-Visitor-Identifier
-exl-id: b4f8e2a1-9c7d-4e3a-8f5b-2d1c6e9a4b7f
-source-git-commit: 26245e019afac2c0844ed64b222208cc821f9c6c
+exl-id: 216f398b-1cfa-4453-a81d-963675b33ec2
+source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
 workflow-type: tm+mt
 source-wordcount: '91'
 ht-degree: 2%
 
 ---
-
 
 # 헤더 - AP-Visitor-Identifier {#header-ap-visitor-identifier}
 
@@ -20,7 +19,7 @@ ht-degree: 2%
 
 <b>AP-Visitor-Identifier</b> 요청 헤더에 Adobe Experience Cloud 솔루션에서 방문자를 고유하게 식별하는 데 클라이언트 응용 프로그램에 필요한 `ECID`이(가) 포함되어 있습니다.
 
-Adobe Pass 인증에서 ECID를 사용하는 방법에 대한 자세한 내용은 [Adobe Pass 인증에서 Experience Cloud ID 사용](../../../../features-premium/analytics/exp-cloud-id-authn.md) 설명서를 참조하십시오.
+Adobe Pass 인증에서 ECID를 사용하는 방법에 대한 자세한 내용은 [Adobe Pass 인증에서 Experience Cloud ID 사용](/help/authentication/integration-guide-programmers/features-standard/analytics/exp-cloud-id-authn.md) 설명서를 참조하십시오.
 
 ## 구문 {#syntax}
 

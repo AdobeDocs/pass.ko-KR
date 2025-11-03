@@ -2,7 +2,7 @@
 title: 프록시 MVPD 웹 서비스
 description: 프록시 MVPD 웹 서비스
 exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '1027'
 ht-degree: 0%
@@ -18,34 +18,34 @@ ht-degree: 0%
 
 >[!IMPORTANT]
 >
-> 프록시 MVPD 웹 서비스를 사용하기 전에 다음 전제 조건이 충족되었는지 확인하십시오.
+> 프록시 MVPD 웹 서비스를 사용하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 >
 > * [클라이언트 자격 증명 검색](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API 설명서에 설명된 대로 클라이언트 자격 증명을 가져옵니다.
-> * [액세스 토큰 검색](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 액세스 토큰을 가져옵니다.
+> * [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 액세스 토큰을 가져옵니다.
 >
-> 등록된 응용 프로그램을 만들고 소프트웨어 문을 다운로드하는 방법에 대한 자세한 내용은 [동적 클라이언트 등록 개요](../integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
+> 등록된 응용 프로그램을 만들고 소프트웨어 문을 다운로드하는 방법에 대한 자세한 내용은 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
 ## 개요 {#overview-proxy-mvpd-webserv}
 
-&quot;프록시 MVPD&quot;는 Adobe Pass 인증과의 자체 통합을 관리하는 것 외에도 연결된 &quot;프록시화된 MVPD&quot; 그룹을 대신하여 권한 부여 프로세스를 관리하는 MVPD입니다. 이러한 배열은 프로그래머에게는 투명합니다.
+프록시 MVPD은 Adobe Pass 인증과의 자체 통합을 관리하는 것 외에도 연결된 &quot;프록시화된 MVPD&quot; 그룹을 대신하여 권한 부여 프로세스를 관리하는 MVPD입니다. 이러한 배열은 프로그래머에게는 투명합니다.
 
 ProxyMVPD 기능을 구현하기 위해 Adobe Pass 인증은 ProxyMVPD가 ProxyedMVPD 목록을 제출하고 검색할 수 있는 RESTful 웹 서비스를 제공합니다. 이 공개 API에 사용되는 프로토콜은 다음 가정과 함께 REST HTTP입니다.
 
-&#x200B;- 프록시 MVPD는 HTTP GET 메서드를 사용하여 현재 통합된 MVPD 목록을 검색합니다.
-&#x200B;- 프록시 MVPD는 HTTP POST 메서드를 사용하여 지원되는 MVPD 목록을 업데이트합니다.
+- Proxy MVPD은 HTTP GET 메서드를 사용하여 현재 통합된 MVPD 목록을 검색합니다.
+- 프록시 MVPD은 HTTP POST 메서드를 사용하여 지원되는 MVPD 목록을 업데이트합니다.
 
 ## 프록시 MVPD 서비스 {#proxy-mvpd-services}
 
-&#x200B;- [프록시화된 MVPD 검색](#retriev-proxied-mvpds)
-&#x200B;- [프록시화된 MVPD 제출](#submit-proxied-mvpds)
+- [프록시화된 MVPD 검색](#retriev-proxied-mvpds)
+- [프록시화된 MVPD 제출](#submit-proxied-mvpds)
 
 ### 프록시화된 MVPD 검색 {#retriev-proxied-mvpds}
 
-식별된 프록시 MVPD와 통합된 프록시화된 MVPD의 현재 목록을 검색합니다.
+식별된 프록시 MVPD과 통합된 프록시화된 MVPD의 현재 목록을 검색합니다.
 
 | 엔드포인트 | 호출자 | 요청 매개 변수 | 요청 헤더 | HTTP 메서드 | HTTP 응답 |
 |--------------------------------------------------------------------------|-----------|-----------------------|---------------------------|-------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| &lt;FQDN>/control/v3/mvpd-proxyes/&lt;proxy-mvpd-identifier>/mvpds | ProxyMVPD | proxy-mvpd-identifier | 인증(필수) | GET | <ul><li> 200(ok) - 요청이 성공적으로 처리되었으며 응답에 XML 형식의 ProxyedMVPD 목록이 포함되어 있습니다.</li><li>401(권한 없음) - 다음 중 하나를 나타냅니다.<ul><li>클라이언트가 새 access_token을 요청해야 함</li><li>허용 목록에 없는 IP 주소에서 요청을 가져옵니다.</li><li>토큰이 잘못되었습니다.</li></ul></li><li>403(사용할 수 없음) - 제공된 매개 변수에 대해 작업이 지원되지 않거나 프록시 MVPD가 프록시로 설정되지 않았거나 누락되었음을 나타냅니다.</li><li>405(메서드가 허용되지 않음) - GET 또는 POST 이외의 HTTP 메서드가 사용되었습니다. HTTP 메서드는 일반적으로 지원되지 않거나 이 특정 끝점에 대해 지원되지 않습니다.</li><li>500(내부 서버 오류) - 요청 프로세스 중에 서버 측에서 오류가 발생했습니다.</li></ul> |
+| &lt;FQDN>/control/v3/mvpd-proxyes/&lt;proxy-mvpd-identifier>/mvpds | ProxyMVPD | proxy-mvpd-identifier | 인증(필수) | GET | <ul><li> 200(ok) - 요청이 성공적으로 처리되었으며 응답에 XML 형식의 ProxyedMVPD 목록이 포함되어 있습니다.</li><li>401(권한 없음) - 다음 중 하나를 나타냅니다.<ul><li>클라이언트가 새 access_token을 요청해야 함</li><li>허용 목록에 없는 IP 주소에서 요청을 가져옵니다.</li><li>토큰이 잘못되었습니다.</li></ul></li><li>403(사용할 수 없음) - 제공된 매개 변수에 대해 작업이 지원되지 않거나 프록시 MVPD이 프록시로 설정되지 않았거나 누락되었음을 나타냅니다.</li><li>405(메서드가 허용되지 않음) - GET 또는 POST 이외의 HTTP 메서드가 사용되었습니다. HTTP 메서드는 일반적으로 지원되지 않거나 이 특정 끝점에 대해 지원되지 않습니다.</li><li>500(내부 서버 오류) - 요청 프로세스 중에 서버 측에서 오류가 발생했습니다.</li></ul> |
 
 Curl 예:
 
@@ -88,11 +88,11 @@ XML 응답 예:
 
 ### 프록시화된 MVPD 제출 {#submit-proxied-mvpds}
 
-식별된 프록시 MVPD와 통합된 MVPD 배열을 푸시합니다.
+식별된 프록시 MVPD과 통합된 MVPD 배열을 푸시합니다.
 
 | 엔드포인트 | 호출자 | 요청 매개 변수 | 요청 헤더 | HTTP 메서드 | HTTP 응답 |
 |:------------------------------------------------------------------------:|:---------:|-----------------------|:---------------------------------------------------:|:-----------:|:---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------:|
-| &lt;FQDN>/control/v3/mvpd-proxyes/&lt;proxy-mvpd-identifier>/mvpds | ProxyMVPD | proxy-mvpd-identifier | 인증(필수) proxyed-mvpds(필수) | POST | <ul><li>201(생성됨) - 푸시가 정상적으로 처리되었습니다.</li><li>400(잘못된 요청) - 서버가 요청을 처리하는 방법을 모릅니다.<ul><li>들어오는 XML이 이 사양에 게시된 스키마를 따르지 않음</li><li>프록시화된 mvpd에 고유 ID가 없습니다.</li><li>푸시된 requestorIds가 존재하지 않음 400 응답 코드에 대한 다른 서블릿 컨테이너 이유</li></ul><li>401(권한 없음) - 다음 중 하나를 나타냅니다.<ul><li>클라이언트가 새 access_token을 요청해야 함</li><li>허용 목록에 없는 IP 주소에서 요청을 가져옵니다.</li><li>토큰이 잘못되었습니다.</li></ul></li><li>403(사용할 수 없음) - 제공된 매개 변수에 대해 작업이 지원되지 않거나 프록시 MVPD가 프록시로 설정되지 않았거나 누락되었음을 나타냅니다.</li><li>405(메서드가 허용되지 않음) - GET 또는 POST 이외의 HTTP 메서드가 사용되었습니다. HTTP 메서드는 일반적으로 지원되지 않거나 이 특정 끝점에 대해 지원되지 않습니다.</li><li>500(내부 서버 오류) - 요청 프로세스 중에 서버 측에서 오류가 발생했습니다.</li></ul> |
+| &lt;FQDN>/control/v3/mvpd-proxyes/&lt;proxy-mvpd-identifier>/mvpds | ProxyMVPD | proxy-mvpd-identifier | 인증(필수) proxyed-mvpds(필수) | POST | <ul><li>201(생성됨) - 푸시가 정상적으로 처리되었습니다.</li><li>400(잘못된 요청) - 서버가 요청을 처리하는 방법을 모릅니다.<ul><li>들어오는 XML이 이 사양에 게시된 스키마를 따르지 않음</li><li>프록시화된 mvpd에 고유 ID가 없습니다.</li><li>푸시된 requestorIds가 존재하지 않음 400 응답 코드에 대한 다른 서블릿 컨테이너 이유</li></ul><li>401(권한 없음) - 다음 중 하나를 나타냅니다.<ul><li>클라이언트가 새 access_token을 요청해야 함</li><li>허용 목록에 없는 IP 주소에서 요청을 가져옵니다.</li><li>토큰이 잘못되었습니다.</li></ul></li><li>403(사용할 수 없음) - 제공된 매개 변수에 대해 작업이 지원되지 않거나 프록시 MVPD이 프록시로 설정되지 않았거나 누락되었음을 나타냅니다.</li><li>405(메서드가 허용되지 않음) - GET 또는 POST 이외의 HTTP 메서드가 사용되었습니다. HTTP 메서드는 일반적으로 지원되지 않거나 이 특정 끝점에 대해 지원되지 않습니다.</li><li>500(내부 서버 오류) - 요청 프로세스 중에 서버 측에서 오류가 발생했습니다.</li></ul> |
 
 Curl 예:
 
@@ -147,7 +147,7 @@ ProxyMVPD가 빈 ProxyedMVPD 목록이 있는 XML 레코드를 푸시하면 해�
 
 ## XSD 형식 {#xsd-format}
 
-Adobe은 당사의 공개 웹 서비스에서/로 프록시화된 MVPD를 게시/검색하기 위해 다음과 같은 허용 형식을 정의했습니다.
+Adobe은 당사의 공개 웹 서비스에 프록시 MVPD를 게시/검색하기 위해 다음과 같은 허용 형식을 정의했습니다.
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -216,24 +216,24 @@ Adobe은 당사의 공개 웹 서비스에서/로 프록시화된 MVPD를 게시
 
 **요소에 대한 참고 사항:**
 
-&#x200B;- `id`(필수) - 프록시화된 MVPD ID는 다음 문자 중 하나를 사용하여 MVPD의 이름과 관련된 문자열이어야 합니다(추적 목적으로 프로그래머에게 노출됨).
-&#x200B;- 모든 영숫자, 밑줄(&quot;_&quot;) 및 하이픈(&quot;-&quot;).
-&#x200B;- idID는 다음 정규 표현식을 준수해야 합니다.
+-   `id`(필수) - 프록시화된 MVPD ID는 다음 문자 중 하나를 사용하여 MVPD 이름과 관련된 문자열이어야 합니다(추적 목적으로 프로그래머에게 노출됨).
+-   모든 영숫자, 밑줄(&quot;_&quot;) 및 하이픈(&quot;-&quot;).
+-   idID는 다음 정규 표현식을 준수해야 합니다.
 `(a-zA-Z0-9((-)|_)*)`
 
     하나 이상의 문자가 있어야 하며 문자로 시작하고 모든 문자, 숫자, 대시 또는 밑줄을 사용하여 계속해야 합니다.
 
-&#x200B;- `iframeSize` (선택 사항) - iframeSize 요소는 선택 사항이며 MVPD 인증 페이지가 iFrame에 있어야 하는 경우 iFrame의 크기를 정의합니다. 그렇지 않으면 iframeSize 요소가 없으면 전체 브라우저 리디렉션 페이지에서 인증이 발생합니다.
-&#x200B;- `requestorIds`(선택 사항) - requestorIds 값은 Adobe에서 제공합니다. 프록시화된 MVPD를 하나 이상의 requestorId와 통합해야 합니다. 프록시화된 MVPD 요소에 &quot;requestorIds&quot; 태그가 없으면 프록시화된 MVPD는 프록시 MVPD 아래에 통합된 사용 가능한 모든 요청자와 통합됩니다.
-&#x200B;- `ProviderID` (선택 사항) - ProviderID 특성이 id 요소에 있으면 SAML 인증 요청 시 ProviderID 값이 프록시 MVPD에 ID 값 대신 프록시 MVPD/SubMVPD ID로 전송됩니다. 이 경우 id 값은 프로그래머 페이지에 표시된 MVPD 선택기에서만 사용되며 내부적으로 Adobe Pass 인증에 의해 사용됩니다. ProviderID 특성의 길이는 1자에서 128자 사이여야 합니다.
+-   `iframeSize` (선택 사항) - iframeSize 요소는 선택 사항이며, MVPD 인증 페이지가 iFrame에 있어야 하는 경우 iFrame의 크기를 정의합니다. 그렇지 않으면 iframeSize 요소가 없으면 전체 브라우저 리디렉션 페이지에서 인증이 발생합니다.
+-   `requestorIds`(선택 사항) - Adobe에서 requestorIds 값을 제공합니다. 프록시화된 MVPD을 하나 이상의 requestorId와 통합해야 합니다. 프록시가 활성화된 MVPD 요소에 &quot;requestorIds&quot; 태그가 없으면 프록시가 활성화된 MVPD이 프록시 MVPD 아래에 통합된 사용 가능한 모든 요청자와 통합됩니다.
+-   `ProviderID` (선택 사항) - ProviderID 특성이 id 요소에 있으면 SAML 인증 요청 시 ProviderID 값이 프록시 MVPD에 ID 값 대신 프록시화된 MVPD/SubMVPD ID로 전송됩니다. 이 경우 id 값은 프로그래머 페이지에 표시된 MVPD 선택기에서만 사용되며 내부적으로 Adobe Pass 인증에 의해 사용됩니다. ProviderID 특성의 길이는 1자에서 128자 사이여야 합니다.
 
 ## 보안 {#security}
 
 요청이 유효한 것으로 간주되려면 다음 규칙을 준수해야 합니다.
 
-&#x200B;- 요청 헤더에는 [액세스 토큰 검색](../integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 가져온 보안 Oauth2 액세스 토큰이 포함되어야 합니다.
-&#x200B;- 허용된 특정 IP 주소에서 요청을 가져와야 합니다.
-&#x200B;- SSL 프로토콜을 통해 요청을 전송해야 합니다.
+- 요청 헤더에는 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 가져온 보안 Oauth2 액세스 토큰이 포함되어야 합니다.
+- 허용된 특정 IP 주소에서 요청을 가져와야 합니다.
+- SSL 프로토콜을 통해 요청을 전송해야 합니다.
 
 위에 나열되지 않은 요청 헤더에 있는 모든 매개 변수는 무시됩니다.
 
@@ -241,12 +241,12 @@ Curl 예:
 
 `curl -X GET -H "Authorization: Bearer <access_token_here>" "https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/<proxy-mvpd-identifier>/mvpds"`
 
-## Adobe Pass 인증 환경에 대한 프록시 MVPD 웹 서비스 끝점 {#proxy-mvpd-wevserv-endpoints}
+## Adobe Pass 인증 환경에 대한 프록시 MVPD 웹 서비스 엔드포인트 {#proxy-mvpd-wevserv-endpoints}
 
-&#x200B;- **프로덕션 URL:** https://mgmt.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
-&#x200B;- **스테이징 URL:** https://mgmt.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
-&#x200B;- **PreQual-Production URL:** https://mgmt-prequal.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
-&#x200B;- **PreQual-Staging URL:** https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **프로덕션 URL:** https://mgmt.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **스테이징 URL:** https://mgmt.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **PreQual-Production URL:** https://mgmt-prequal.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **PreQual-Staging URL:** https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
 
 <!--
 >[!RELATEDINFORMATION]

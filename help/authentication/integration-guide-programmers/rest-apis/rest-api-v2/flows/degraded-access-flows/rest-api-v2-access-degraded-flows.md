@@ -2,7 +2,7 @@
 title: 액세스 흐름이 저하됨
 description: REST API V2 - 액세스 흐름 성능 저하
 exl-id: 9276f5d9-8b1a-4282-8458-0c1e1e06bcf5
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 성능 저하를 통해 특정 MVPD 인증 및 권한 부여 끝점을 일시적으로 우회할 수 있습니다. 일반적으로 프로그래머는 이 작업을 시작하지만 누가 열화 이벤트를 트리거하는지에 관계없이, 작업은 영향을 받는 MVPD와 함께 만들어진 사전 배열에 따라 달라집니다.
 
-성능 저하 기능에 대한 자세한 내용은 [성능 저하](../../../../features-premium/degraded-access/degradation-feature.md) 설명서를 참조하십시오.
+성능 저하 기능에 대한 자세한 내용은 [성능 저하](/help/premium-workflow/degraded-access/degradation-feature.md) 설명서를 참조하십시오.
 
 액세스 흐름이 저하되면 다음 시나리오를 쿼리할 수 있습니다.
 
@@ -36,7 +36,7 @@ ht-degree: 0%
 
 ## 저하가 적용되는 동안 인증 수행 {#perform-authentication-while-degradation-is-applied}
 
-### 전제 조건 {#prerequisites-perform-authentication-while-degradation-is-applied}
+### 사전 요구 사항 {#prerequisites-perform-authentication-while-degradation-is-applied}
 
 저하가 적용되는 동안 인증 흐름을 수행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 다음 다이어그램에 표시된 대로 성능 저하가 적용되는 동안 인증 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![저하가 적용되는 동안 인증 수행](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-perform-authentication-while-degradation-is-applied-flow.png)
+![저하가 적용되는 동안 인증 수행](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-perform-authentication-while-degradation-is-applied-flow.png)
 
 *저하가 적용되는 동안 인증 수행*
 
@@ -65,8 +65,8 @@ ht-degree: 0%
    >
    > 자세한 내용은 [인증 세션 만들기](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API 설명서를 참조하십시오.
    > 
-   > * `serviceProvider`, `mvpd`, `domainName` 및 `redirectUrl`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_, `serviceProvider` 및 `mvpd`과(와) 같은 모든 `domainName`필수`redirectUrl` 매개 변수
+   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **성능 저하 규칙 확인:** Adobe Pass 서버는 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 적용된 AuthNaLl 성능 저하 규칙이 있는지 확인합니다.
@@ -104,7 +104,7 @@ ht-degree: 0%
 
 ## 저하가 적용되는 동안 인증 결정 검색 {#retrieve-authorization-decisions-while-degradation-is-applied}
 
-### 전제 조건 {#prerequisites-retrieve-authorization-decisions-while-degradation-is-applied}
+### 사전 요구 사항 {#prerequisites-retrieve-authorization-decisions-while-degradation-is-applied}
 
 저하가 적용되는 동안 인증 결정을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 성능 저하가 적용되는 동안 인증 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![저하가 적용되는 동안 권한 부여 결정 검색](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-authorization-decisions-while-degradation-is-applied-flow.png)
+![저하가 적용되는 동안 권한 부여 결정 검색](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-authorization-decisions-while-degradation-is-applied-flow.png)
 
 *저하가 적용되는 동안 권한 부여 결정 검색*
 
@@ -133,8 +133,8 @@ ht-degree: 0%
    > 
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
+   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **성능 저하 규칙 확인:** Adobe Pass 서버는 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 AuthZAll 또는 AuthNAll 성능 저하 규칙이 적용되었는지 확인합니다.
@@ -170,7 +170,7 @@ ht-degree: 0%
 
 ## 저하가 적용되는 동안 사전 인증 결정 검색 {#retrieve-preauthorization-decisions-while-degradation-is-applied}
 
-### 전제 조건 {#prerequisites-retrieve-preauthorization-decisions-while-degradation-is-applied}
+### 사전 요구 사항 {#prerequisites-retrieve-preauthorization-decisions-while-degradation-is-applied}
 
 저하가 적용되는 동안 사전 인증 결정을 검색하기 전에 다음 사전 요구 사항이 충족되는지 확인하십시오.
 
@@ -189,7 +189,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 성능 저하가 적용되는 동안 사전 인증 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![저하가 적용되는 동안 사전 인증 결정을 검색합니다](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-preauthorization-decisions-while-degradation-is-applied-flow.png)
+![저하가 적용되는 동안 사전 인증 결정을 검색합니다](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-preauthorization-decisions-while-degradation-is-applied-flow.png)
 
 *저하가 적용되는 동안 사전 인증 결정을 검색합니다*
 
@@ -199,8 +199,8 @@ ht-degree: 0%
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 사전 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
+   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **성능 저하 규칙 확인:** Adobe Pass 서버는 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 AuthZAll 또는 AuthNAll 성능 저하 규칙이 적용되었는지 확인합니다.
@@ -244,7 +244,7 @@ ht-degree: 0%
 > 
 > 세션 끝점 응답은 성능 저하가 적용되는 동안 애플리케이션이 의사 결정 흐름을 진행하도록 지시합니다. 자세한 내용은 [저하가 적용되는 동안 인증 수행](#perform-authentication-while-degradation-is-applied) 섹션을 참조하십시오.
 
-### 전제 조건 {#prerequisites-retrieve-profile-while-degradation-is-applied}
+### 사전 요구 사항 {#prerequisites-retrieve-profile-while-degradation-is-applied}
 
 저하가 적용되는 동안 특정 MVPD에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -263,7 +263,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 저하가 적용되는 동안 특정 MVPD에 대한 프로필 검색 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![저하가 적용되는 동안 프로필 검색](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-profile-while-degradation-is-applied-flow.png)
+![저하가 적용되는 동안 프로필 검색](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-profile-while-degradation-is-applied-flow.png)
 
 *저하가 적용되는 동안 프로필 검색*
 
@@ -273,8 +273,8 @@ ht-degree: 0%
    >
    > 자세한 내용은 [특정 mvpd에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider` 및 `mvpd`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`mvpd` 매개 변수
+   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **성능 저하 규칙 확인:** Adobe Pass 서버는 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 적용된 AuthNaLl 성능 저하 규칙이 있는지 확인합니다.

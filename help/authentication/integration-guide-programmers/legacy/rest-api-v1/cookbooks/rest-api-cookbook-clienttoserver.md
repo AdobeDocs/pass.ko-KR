@@ -2,7 +2,7 @@
 title: REST API Cookbook(클라이언트-서버)
 description: 서버에 대한 REST API Cookbook 클라이언트입니다.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '886'
 ht-degree: 0%
@@ -49,12 +49,12 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 
 ### DCR(Dynamic Client Registration)
 
-Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서버와 Adobe Pass 서비스 간의 클라이언트 통신을 보호합니다. DCR 플로우는 서로 별개이며 [동적 클라이언트 등록 개요](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서에 설명되어 있습니다.
+Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서버와 Adobe Pass 서비스 간의 클라이언트 통신을 보호합니다. DCR 플로우는 서로 별개이며 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서에 설명되어 있습니다.
 
 
 ### 스트리밍(스마트 장치) 앱 흐름
 
-![](../../../../assets/smart-device-app-flow.png)
+![](/help//authentication/assets/smart-device-app-flow.png)
 
 #### 시작 흐름
 
@@ -119,7 +119,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 ### AuthN(두 번째 화면) 앱 흐름
 
-![](../../../../assets/secnd-screen-authn-flow.png)
+![](/help//authentication/assets/secnd-screen-authn-flow.png)
 
 1. 이 사용자의 MVPD 목록을 가져옵니다. 예: [`<SP_FQDN>/api/v1/config/[requestorID]`](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md)
 
@@ -148,4 +148,4 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 **이 API를 사용하려면 스트리밍 앱에서 장치 ID가 토큰과 추가 데이터(선택 사항)를 식별하는 데 사용되고 있으므로 장치 ID의 고유성을 확인해야 합니다.**
 
 
-![](../../../../assets/temp-pass-promo-temppass.png)
+![](/help//authentication/assets/temp-pass-promo-temppass.png)

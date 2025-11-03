@@ -2,7 +2,7 @@
 title: SSO(Single Sign-On) - 서비스 토큰 - 흐름
 description: REST API V2 - Single Sign-On - 서비스 토큰 - 흐름
 exl-id: b0082d2a-e491-4cb5-bb40-35ba10db6b1a
-source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '1857'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 흐름을 구현하려면 주어진 단계를 수행하십시오.
 
-![서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-service-token-flow.png)
+![서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-service-token-flow.png)
 
 *서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행*
 
@@ -76,8 +76,8 @@ ht-degree: 0%
    >
    > 자세한 내용은 [인증 세션 만들기](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`, `mvpd`, `domainName` 및 `redirectUrl`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_, `serviceProvider` 및 `mvpd`과(와) 같은 모든 `domainName`필수`redirectUrl` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -120,8 +120,8 @@ ht-degree: 0%
    >
    > 다음에 대한 자세한 내용은 [특정 코드에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API 설명서를 참조하십시오.
    > 
-   > * `serviceProvider`, `code`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_&#x200B;과(와) 같은 모든 `serviceProvider`필수`code` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
    >[!TIP]
@@ -168,8 +168,8 @@ ht-degree: 0%
    >
    > 자세한 내용은 [프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _과(와) 같은 모든_&#x200B;필수`serviceProvider` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -230,7 +230,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 서비스 토큰을 사용하여 단일 사인온을 통해 인증 흐름을 구현하려면 주어진 단계를 수행하십시오.
 
-![서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-service-token-flow.png)
+![서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-service-token-flow.png)
 
 *서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다*
 
@@ -246,8 +246,8 @@ ht-degree: 0%
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
+   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>

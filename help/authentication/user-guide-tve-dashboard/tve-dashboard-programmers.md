@@ -2,7 +2,7 @@
 title: 프로그래머
 description: TVE 대시보드 내 프로그래머 및 해당 구성에 대해 알아봅니다.
 exl-id: b450d7cc-d5b5-4454-8f95-8047856bfb98
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '1139'
 ht-degree: 0%
@@ -22,7 +22,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 * **프로그래머 ID**: 시스템 내의 미디어 회사 식별자입니다.
 * **채널**: 프로그래머와 연결된 채널 수입니다.
 
-![기존 프로그래머 목록](../assets/tve-dashboard/new-tve-dashboard/programmers/programmers-list-view.png)
+![기존 프로그래머 목록](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmers-list-view.png)
 
 *기존 프로그래머 목록*
 
@@ -41,7 +41,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
    * [등록된 응용 프로그램](#registered-applications)
    * [사용자 지정 체계](#custom-schemes)
 
-   ![프로그래머 설정](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-tabs-view.png)
+   ![프로그래머 설정](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmer-tabs-view.png)
 
    *프로그래머 설정*
 
@@ -55,7 +55,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 선택한 프로그래머에 대한 새 채널을 추가하려면 **사용 가능한 채널** 섹션의 오른쪽 상단에서 **새 채널 추가**&#x200B;를 선택하십시오. [새 채널을 추가하는 방법](/help/authentication/user-guide-tve-dashboard/tve-dashboard-channels.md#add-new-channel)을 알아보세요.
 
-![새 채널 추가](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-channel-button.png)
+![새 채널 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-channel-button.png)
 
 *새 채널 추가*
 
@@ -86,7 +86,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 1. **사용 가능한 인증서** 섹션의 오른쪽 상단 모서리에서 **새 인증서 추가**&#x200B;를 선택합니다.
 
-   ![새 인증서 추가](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-certificate-button.png)
+   ![새 인증서 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-certificate-button.png)
 
    *새 인증서 추가*
 
@@ -112,17 +112,17 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 1. **제거**&#x200B;를 선택합니다.
 
-   ![선택한 인증서 제거](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-remove-certificate-button.png)
+   ![선택한 인증서 제거](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmer-remove-certificate-button.png)
 
    *선택한 인증서 제거*
 
 1. **인증서 삭제** 대화 상자에서 **삭제**&#x200B;을 선택합니다.
 
-새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. [변경 내용 검토 및 푸시](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)한 후에만 **사용 가능한 인증서** 섹션에서 인증서가 삭제됩니다.
+새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. **변경 내용 검토 및 푸시**&#x200B;한 후에만 [사용 가능한 인증서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) 섹션에서 인증서가 삭제됩니다.
 
 ### 등록된 응용 프로그램 {#registered-applications}
 
-이 탭에는 등록된 응용 프로그램 목록이 표시됩니다. 등록된 응용 프로그램 사용과 관련된 자세한 내용은 [동적 클라이언트 등록 개요](../integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
+이 탭에는 등록된 응용 프로그램 목록이 표시됩니다. 등록된 응용 프로그램 사용과 관련된 자세한 내용은 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
 등록된 응용 프로그램을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -135,7 +135,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 1. **등록된 응용 프로그램** 섹션의 오른쪽 상단 모서리에서 **새 응용 프로그램 추가**&#x200B;를 선택합니다.
 
-   ![새 응용 프로그램 추가](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-application-button.png)
+   ![새 응용 프로그램 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-application-button.png)
 
    *새 응용 프로그램 추가*
 
@@ -179,7 +179,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 1. **다운로드**&#x200B;를 선택합니다.
 
-   ![소프트웨어 문 다운로드](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-download-software-statement-button.png)
+   ![소프트웨어 문 다운로드](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmer-download-software-statement-button.png)
 
    *소프트웨어 문 다운로드*
 
@@ -198,7 +198,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 1. **새 사용자 지정 구성표 생성**&#x200B;을 선택합니다.
 
-   ![새 사용자 지정 구성표 생성](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-custom-scheme-button.png)
+   ![새 사용자 지정 구성표 생성](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-custom-scheme-button.png)
 
    *새 사용자 지정 구성표 생성*
 
@@ -212,7 +212,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 1. **프로그래머** 섹션의 오른쪽 상단에서 **새 프로그래머 추가**&#x200B;를 선택합니다.
 
-   ![새 프로그래머 추가](../assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-programmer-button.png)
+   ![새 프로그래머 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/programmers/programmer-add-new-programmer-button.png)
 
    *새 프로그래머 추가*
 

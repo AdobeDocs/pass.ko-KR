@@ -2,9 +2,9 @@
 title: Adobe Pass Authentication 2.69 릴리스 노트
 description: Adobe Pass Authentication 2.69 릴리스 노트
 exl-id: d031c4c5-dbd5-4a77-b298-a53b992cc4c5
-source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
+source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -34,7 +34,7 @@ Adobe Pass 인증: adobe-pass-**2.69**
 
 * 보안 취약점이 패치되었습니다.
 * DCR(Dynamic Client Registration)을 사용하여 임시 패스 보안 계층을 재설정하도록 개선되었습니다.
-   * 자세한 내용은 다음을 참조하십시오. [TempPass 기능](../integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
+   * 자세한 내용은 다음을 참조하십시오. [TempPass 기능](/help/premium-workflow/temporary-access/temp-pass-feature.md)
 * 플랫폼 식별 보고 기능이 개선되었습니다.
 
 #### REST API

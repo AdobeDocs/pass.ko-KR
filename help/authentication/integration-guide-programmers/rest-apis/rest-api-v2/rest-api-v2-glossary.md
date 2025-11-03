@@ -2,7 +2,7 @@
 title: REST API V2 용어집
 description: REST API V2 용어집
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
+source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 0%
@@ -23,11 +23,11 @@ ht-degree: 0%
 
 ## 용어집 용어 {#glossary-terms}
 
-### {#a}
+### A {#a}
 
 #### 인증 {#authentication}
 
-인증은 사용자가 [MVPD](#mvpd)을(를) 사용하여 사용자 구독을 확인한 후 [프로그래머](#programmer)에게 ID를 증명하고 보호된 콘텐츠([resource](#resource))에 대한 액세스 권한을 얻을 수 있는 프로세스입니다.
+인증은 사용자가 [MVPD](#programmer)을(를) 사용하여 사용자 구독을 확인한 후 [프로그래머](#resource)에게 ID를 증명하고 보호된 콘텐츠([resource](#mvpd))에 대한 액세스 권한을 얻을 수 있는 프로세스입니다.
 
 #### 인증 코드 {#code}
 
@@ -41,35 +41,35 @@ ht-degree: 0%
 
 인증 세션은 [프로그래머](#programmer) 응용 프로그램에서 시작(또는 계속)한 사용자 인증 프로세스에 대한 정보를 저장하는 Adobe Pass 인증 개념이며 [인증 코드](#code)에 의해 고유하게 식별됩니다.
 
-사용자가 이미 인증된 경우 인증 세션에서 [프로그래머](#programmer) 응용 프로그램이 [권한 부여](#entitlement) 흐름의 다음 단계로 [권한 부여](#authorization) 프로세스를 진행하도록 지정할 수도 있습니다.
+사용자가 이미 인증된 경우 인증 세션에서 [프로그래머](#programmer) 응용 프로그램이 [권한 부여](#authorization) 흐름의 다음 단계로 [권한 부여](#entitlement) 프로세스를 진행하도록 지정할 수도 있습니다.
 
 #### 인증 {#authorization}
 
-권한 부여는 사용자가 [MVPD](#mvpd)에서 사용자 권한을 확인한 후 소유한 [MVPD](#mvpd) 구독을 기반으로 [프로그래머](#programmer) 카탈로그의 보호된 콘텐츠([resource](#resource))에 액세스할 수 있도록 하는 프로세스입니다.
+권한 부여는 사용자가 [MVPD](#resource)에서 사용자 권한을 확인한 후 소유한 [MVPD](#programmer) 구독을 기반으로 [프로그래머](#mvpd) 카탈로그의 보호된 콘텐츠([resource](#mvpd))에 액세스할 수 있도록 하는 프로세스입니다.
 
 ### C {#c}
 
 #### 구성 {#configuration}
 
-구성은 [프로그래머](#programmer) 및 [MVPD](#mvpd) 통합 설정에 대한 정보를 저장하는 Adobe Pass 인증 개념으로, 사용자에게 활성 통합 목록에서 [TV 공급자](#tv-provider)를 선택하도록 요청할 때 [인증](#authentication) 프로세스 중에 사용할 수 있습니다.
+구성은 [프로그래머](#programmer) 및 [MVPD](#mvpd) 통합 설정에 대한 정보를 저장하는 Adobe Pass 인증 개념으로, 사용자에게 활성 통합 목록에서 [TV 공급자](#authentication)를 선택하도록 요청할 때 [인증](#tv-provider) 프로세스 중에 사용할 수 있습니다.
 
 ### D {#d}
 
 #### 결정 {#decision}
 
-이 결정은 [프로그래머](#programmer) 보호된 콘텐츠에 대한 사용자 액세스를 허용하거나 거부하기 위한 [MVPD](#mvpd) [권한 부여](#authorization) 또는 [사전 권한 부여](#preauthorization) 프로세스 조회에 대한 정보를 저장하는 Adobe Pass 인증 개념입니다.
+이 결정은 [프로그래머](#mvpd) 보호된 콘텐츠에 대한 사용자 액세스를 허용하거나 거부하기 위한 [MVPD](#authorization) [권한 부여](#preauthorization) 또는 [사전 권한 부여](#programmer) 프로세스 조회에 대한 정보를 저장하는 Adobe Pass 인증 개념입니다.
 
 #### 저하 {#degradation}
 
 성능 저하는 [Adobe Pass](#mvpd)에서 서비스가 중단되는 경우에도 사용자가 보호된 콘텐츠에 액세스할 수 있는 MVPD 인증 기능입니다.
 
-자세한 내용은 [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) 설명서를 참조하세요.
+자세한 내용은 [성능 저하 기능](/help/premium-workflow/degraded-access/degradation-feature.md) 설명서를 참조하세요.
 
 #### 장치 ID {#device-id}
 
-장치 ID는 사용자의 장치에 바인딩된 고유 식별자이며 [자격](#entitlement) 흐름의 모든 단계에서 [프로그래머](#programmer) 응용 프로그램에서 제공해야 합니다.
+장치 ID는 사용자의 장치에 바인딩된 고유 식별자이며 [자격](#programmer) 흐름의 모든 단계에서 [프로그래머](#entitlement) 응용 프로그램에서 제공해야 합니다.
 
-### 전자 {#e}
+### E {#e}
 
 #### 권한 부여 {#entitlement}
 
@@ -81,13 +81,13 @@ ht-degree: 0%
 
 자세한 내용은 [향상된 오류 코드](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md) 설명서를 참조하세요.
 
-### 시간 {#h}
+### H {#h}
 
 #### HBA {#hba}
 
 홈 기반 인증(HBA)은 소비자가 홈 네트워크에 연결된 일부 장치의 [TV Everywhere(TVE)](#tve) 콘텐츠에 대한 액세스 권한을 자동으로 부여받는 프로세스입니다. 이 프로세스는 구독 계약 내 위치의 일부입니다.
 
-### 내가 {#i}
+### I {#i}
 
 #### ID 공급자 {#identity-provider}
 
@@ -135,19 +135,19 @@ MVPD은 MVPD과 Adobe 간 온보딩 프로세스 중에 정의된 고유한 값�
 
 #### 사전 인증 {#preauthorization}
 
-사전 인증은 사용자가 [MVPD](#mvpd)을(를) 사용하여 사용자 권한을 확인한 후 액세스 권한이 있는 [프로그래머](#programmer) 카탈로그에서 [리소스](#resource)의 하위 집합을 미리 볼 수 있도록 하는 프로세스입니다.
+사전 인증은 사용자가 [MVPD](#resource)을(를) 사용하여 사용자 권한을 확인한 후 액세스 권한이 있는 [프로그래머](#programmer) 카탈로그에서 [리소스](#mvpd)의 하위 집합을 미리 볼 수 있도록 하는 프로세스입니다.
 
 [Preflight](#preflight)의 동의어입니다.
 
 #### Preflight {#preflight}
 
-Preflight는 사용자가 [MVPD](#mvpd)을(를) 사용하여 사용자 권한을 확인한 후 액세스할 권한이 있는 [프로그래머](#programmer) 카탈로그에서 [resources](#resource)의 하위 집합을 미리 볼 수 있는 프로세스입니다.
+Preflight는 사용자가 [MVPD](#resource)을(를) 사용하여 사용자 권한을 확인한 후 액세스할 권한이 있는 [프로그래머](#programmer) 카탈로그에서 [resources](#mvpd)의 하위 집합을 미리 볼 수 있는 프로세스입니다.
 
 [사전 인증](#preauthorization)과 동의어입니다.
 
 #### 기본(프로그래머) 애플리케이션 {#primary-application}
 
-기본 응용 프로그램이 [인증](#authentication)을 시작하는 [프로그래머](#programmer) 응용 프로그램을 참조하지만 [사용자 에이전트](#user-agent)를 사용하여 [MVPD](#mvpd) 로그인 페이지로 이동하여 프로세스를 완료할 수 없습니다.
+기본 응용 프로그램이 [인증](#programmer)을 시작하는 [프로그래머](#authentication) 응용 프로그램을 참조하지만 [사용자 에이전트](#user-agent)를 사용하여 [MVPD](#mvpd) 로그인 페이지로 이동하여 프로세스를 완료할 수 없습니다.
 
 #### 프로필 {#profile}
 
@@ -193,7 +193,7 @@ SAML(Security Assertion Markup Language)은 당사자 간에, 특히 [ID 공급�
 
 #### 보조(프로그래머) 애플리케이션 {#secondary-application}
 
-보조 응용 프로그램은 [사용자 에이전트](#user-agent)를 사용하여 [MVPD](#mvpd) 로그인 페이지로 이동하여 [인증](#authentication) 프로세스를 완료할 수 있는 [프로그래머](#programmer) 응용 프로그램을 참조합니다.
+보조 응용 프로그램은 [사용자 에이전트](#programmer)를 사용하여 [MVPD](#authentication) 로그인 페이지로 이동하여 [인증](#user-agent) 프로세스를 완료할 수 있는 [프로그래머](#mvpd) 응용 프로그램을 참조합니다.
 
 보조 애플리케이션은 기본 애플리케이션과 동일한 디바이스 또는 다른 (보조) 디바이스에서 실행될 수 있으며, 이 경우 로그인 경험을 &#39;제2 화면 인증&#39; 사용자 경험이라고 합니다.
 
@@ -207,7 +207,7 @@ SAML(Security Assertion Markup Language)은 당사자 간에, 특히 [ID 공급�
 
 서비스 공급자가 [프로그래머](#programmer)가 소유한 채널(브랜드)입니다.
 
-서비스 공급자는 프로그래머와 Adobe 간 온보딩 프로세스 동안 정의된 고유 값에 의해 식별된다.
+서비스 공급자는 프로그래머와 Adobe 간 온보딩 프로세스 중에 정의된 고유 값으로 식별됩니다.
 
 이전에 사용된 요청자 ID 용어와 동의어입니다.
 
@@ -217,7 +217,7 @@ SLO(Single Logout)는 사용자가 [SSO(Single Sign-On)](#sso)에 포함된 모�
 
 #### SP {#sp}
 
-SP(서비스 공급자)는 [MVPD](#mvpd)과의 통합에서 [프로그래머](#programmer)을(를) 대신하여 Adobe Pass 인증이 수행하는 역할을 참조합니다.
+SP(서비스 공급자)는 [MVPD](#programmer)과의 통합에서 [프로그래머](#mvpd)을(를) 대신하여 Adobe Pass 인증이 수행하는 역할을 참조합니다.
 
 #### SSO {#sso}
 
@@ -229,13 +229,13 @@ SSO(Single Sign-On)는 사용자가 한 번 인증하고 각 응용 프로그램
 
 기본 TempPass는 사용자가 [Adobe Pass](#mvpd)(으)로 인증할 필요 없이 제한된 시간 동안 보호된 콘텐츠에 액세스할 수 있는 MVPD 인증 기능입니다.
 
-자세한 내용은 [기본 TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#basic-temp-pass) 설명서를 참조하세요.
+자세한 내용은 [기본 TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md#basic-temp-pass) 설명서를 참조하세요.
 
 #### TempPass 프로모션 {#temp-pass-promotional}
 
 프로모션 TempPass는 사용자가 [MVPD](#mvpd)을(를) 인증할 필요 없이 최대 리소스 수와 제한된 시간 동안 보호된 콘텐츠에 액세스할 수 있는 Adobe Pass 인증 기능입니다.
 
-자세한 내용은 [프로모션 TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass) 설명서를 참조하십시오.
+자세한 내용은 [프로모션 TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md#promotional-temp-pass) 설명서를 참조하십시오.
 
 #### TL {#ttl}
 
@@ -257,7 +257,7 @@ TV Everywhere(TVE) 대시보드는 [프로그래머](#programmer)에게 구성 �
 
 TV 제공자는 케이블, 위성 또는 인터넷 기반 서비스를 통해 소비자에게 TV 서비스를 제공하는 회사이다.
 
-TV 제공자는 TV 제공자와 Adobe 사이의 온보딩 프로세스 동안 정의된 고유 값에 의해 식별된다.
+TV 공급자는 TV 공급자와 Adobe 간의 온보딩 프로세스 동안 정의된 고유 값에 의해 식별됩니다.
 
 [MVPD](#mvpd) 및 [ID 공급자](#identity-provider)와 동의어입니다.
 

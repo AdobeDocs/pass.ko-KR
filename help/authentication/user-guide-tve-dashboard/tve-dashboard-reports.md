@@ -2,7 +2,7 @@
 title: 보고서
 description: TVE 대시보드 보고서에서 데이터가 집계되는 방식을 알아봅니다.
 exl-id: d8ba48de-d743-4dc2-866c-7d6e3ff94773
-source-git-commit: b0d6c94148b2f9cb8a139685420a970671fce1f5
+source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
 workflow-type: tm+mt
 source-wordcount: '976'
 ht-degree: 0%
@@ -29,7 +29,7 @@ TVE 대시보드의 **보고서** 섹션에서는 AuthN TTL, AuthZ TTL 및 SSO �
    * [AuthZ TTL 보고서](#authz-ttl-reports)
    * [SSO 보고서](#sso-reports)
 
-   ![보고서 유형](../assets/tve-dashboard/new-tve-dashboard/reports/reports-tabs-view.png)
+   ![보고서 유형](/help/authentication/assets/tve-dashboard/new-tve-dashboard/reports/reports-tabs-view.png)
 
    *보고서 유형*
 
@@ -39,7 +39,7 @@ TTL(Authentication Time-To-Live)이라고도 하는 AuthN TTL 보고서에는 �
 
 [특정 채널 또는 MVPD](#selecting-specific-channels-mvpds)에 대한 데이터를 보고 다운로드할 수도 있습니다.
 
-![AuthN TTL 보고서 내보내기](../assets/tve-dashboard/new-tve-dashboard/reports/reports-authn-ttl-export-button.png)
+![AuthN TTL 보고서 내보내기](/help/authentication/assets/tve-dashboard/new-tve-dashboard/reports/reports-authn-ttl-export-button.png)
 
 *AuthN TTL 보고서 내보내기*
 
@@ -55,7 +55,7 @@ AuthZ TTL 보고서(Authorization Time-To-Live(TTL)라고도 함)는 모든 [플
 
 [특정 채널 또는 MVPD](#selecting-specific-channels-mvpds)에 대한 데이터를 보고 다운로드할 수도 있습니다.
 
-![AuthZ TTL 보고서 내보내기](../assets/tve-dashboard/new-tve-dashboard/reports/reports-authz-ttl-export-button.png)
+![AuthZ TTL 보고서 내보내기](/help/authentication/assets/tve-dashboard/new-tve-dashboard/reports/reports-authz-ttl-export-button.png)
 
 *AuthZ TTL 보고서 내보내기*
 
@@ -71,7 +71,7 @@ SSO 보고서(Single Sign-On)는 모든 [플랫폼](#platforms)에서 다양한 
 
 [특정 채널 또는 MVPD](#selecting-specific-channels-mvpds)에 대한 데이터를 보고 다운로드할 수도 있습니다.
 
-![SSO 보고서 내보내기](../assets/tve-dashboard/new-tve-dashboard/reports/reports-sso-export-button.png)
+![SSO 보고서 내보내기](/help/authentication/assets/tve-dashboard/new-tve-dashboard/reports/reports-sso-export-button.png)
 
 *SSO 보고서 내보내기*
 
@@ -129,7 +129,7 @@ SSO 보고서(Single Sign-On)는 모든 [플랫폼](#platforms)에서 다양한 
 
 1. 선택한 보고서 상단에서 **포함된 채널** 드롭다운 메뉴를 선택합니다.
 
-   ![포함된 채널 드롭다운 메뉴](../assets/tve-dashboard/new-tve-dashboard/reports/reports-included-channels-menu.png)
+   ![포함된 채널 드롭다운 메뉴](/help/authentication/assets/tve-dashboard/new-tve-dashboard/reports/reports-included-channels-menu.png)
 
    *포함된 채널 드롭다운 메뉴*
 
@@ -145,7 +145,7 @@ SSO 보고서(Single Sign-On)는 모든 [플랫폼](#platforms)에서 다양한 
 
 1. 선택한 보고서 상단에서 **포함된 MVPD** 드롭다운 메뉴를 선택합니다.
 
-   ![포함된 MVPD 드롭다운 메뉴](../assets/tve-dashboard/new-tve-dashboard/reports/reports-included-mvpds-menu.png)
+   ![포함된 MVPD 드롭다운 메뉴](/help/authentication/assets/tve-dashboard/new-tve-dashboard/reports/reports-included-mvpds-menu.png)
 
    *포함된 MVPD 드롭다운 메뉴*
 

@@ -2,7 +2,7 @@
 title: Amazon FireOS 통합 Cookbook
 description: Amazon FireOS 통합 Cookbook
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '1447'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 �
 
 ## 권한 흐름 {#entitlement}
 
-1. [전제 조건](#prereqs)
+1. [사전 요구 사항](#prereqs)
 1. [시작 흐름](#startup_flow)
 1. [인증 흐름](#authn_flow)
 1. [인증 흐름](#authz_flow)
@@ -107,7 +107,7 @@ Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 �
       - `authorizedResources` 매개 변수는 사용자가 볼 수 있는 권한을 가진 리소스를 제공합니다.
 
 
-![](../../../../assets/android-entitlement-flows.png)
+![](/help//authentication/assets/android-entitlement-flows.png)
 
 
 ### B. 시작 흐름 {#startup_flow}
@@ -130,7 +130,7 @@ Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 �
    두 가지 구현 옵션이 있습니다. 요청자 식별 정보가 백엔드 서버로 전송되면 UI 애플리케이션 레이어가 다음 두 가지 접근 방식 중 하나를 선택할 수 있습니다.</p>
 
    1. `setRequestorComplete()` 콜백(`AccessEnabler` 대리자의 일부)이 트리거될 때까지 기다립니다.  이 옵션을 사용하면 `setRequestor()`이(가) 가장 확실하게 완료되므로 대부분의 구현에 권장됩니다.
-   1. `setRequestorComplete()` 콜백이 트리거될 때까지 기다리지 않고 계속하고 권한 부여 요청 실행을 시작합니다. 이러한 호출(checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout)은 `setRequestor()` 이후에 실제 네트워크 호출을 수행하는 `AccessEnabler` 라이브러리에 의해 큐에 있습니다. 네트워크 연결이 불안정한 경우 이 옵션이 중단되는 경우가 있습니다.
+   1. `setRequestorComplete()` 콜백이 트리거될 때까지 기다리지 않고 계속하고 권한 부여 요청 실행을 시작합니다. 이러한 호출(checkAuthentication, checkAuthorization, getAuthentication, getAuthorization, checkPreauthorizedResource, getMetadata, logout)은 `AccessEnabler` 이후에 실제 네트워크 호출을 수행하는 `setRequestor()` 라이브러리에 의해 큐에 있습니다. 네트워크 연결이 불안정한 경우 이 옵션이 중단되는 경우가 있습니다.
 
 1. 전체 인증 흐름을 시작하지 않고 기존 인증을 확인하려면 [checkAuthentication()](#$checkAuthN)을 호출하십시오.  이 호출이 성공하면 인증 플로우로 직접 진행할 수 있습니다.  그렇지 않으면 인증 플로우로 이동합니다.
 
@@ -155,7 +155,7 @@ Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 �
    >이 시점에서 사용자는 인증 흐름을 취소할 수 있습니다. 이 경우 `AccessEnabler`이(가) 내부 상태를 정리하고 인증 흐름을 다시 설정합니다.
 
 1. 사용자가 성공적으로 로그인하면 WebView 가 닫힙니다.
-1. `AccessEnabler`이(가) 백 엔드 서버에서 인증 토큰을 검색하도록 지시하는 `getAuthenticationToken(),`을 호출합니다.
+1. `getAuthenticationToken(),`이(가) 백 엔드 서버에서 인증 토큰을 검색하도록 지시하는 `AccessEnabler`을 호출합니다.
 1. [선택 사항] [`checkPreauthorizedResources(resources)`](#$checkPreauth)을(를) 호출하여 사용자가 볼 수 있는 권한이 있는 리소스를 확인합니다. `resources` 매개 변수는 사용자의 인증 토큰과 연결된 보호된 리소스 배열입니다.
 
    **트리거:** `preAuthorizedResources()` 콜백\

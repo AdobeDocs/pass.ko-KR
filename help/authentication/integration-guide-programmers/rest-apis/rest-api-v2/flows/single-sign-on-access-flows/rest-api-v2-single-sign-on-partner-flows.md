@@ -2,7 +2,7 @@
 title: SSO(Single Sign-On) - 파트너 - 플로우
 description: REST API V2 - Single Sign-On - 파트너 - 흐름
 exl-id: 5735d67f-a311-4d03-ad48-93c0fcbcace5
-source-git-commit: d8097b8419aa36140e6ff550714730059555fd14
+source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
 workflow-type: tm+mt
 source-wordcount: '1468'
 ht-degree: 0%
@@ -33,11 +33,11 @@ Partner 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여러 �
 
 Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클라이언트 애플리케이션의 최종 사용자를 위한 Partner SSO(Single Sign-On)를 지원합니다.
 
-Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO Cookbook(REST API V2)](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md) 설명서를 참조하십시오.
+Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO Cookbook(REST API V2)](/help/premium-workflow/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md) 설명서를 참조하십시오.
 
 ## 파트너 인증 요청 검색 {#retrieve-partner-authentication-request}
 
-### 전제 조건 {#prerequisites-retrieve-partner-authentication-request}
+### 사전 요구 사항 {#prerequisites-retrieve-partner-authentication-request}
 
 파트너 인증 요청을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -59,7 +59,7 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
 
 다음 다이어그램과 같이 파트너 인증 요청을 검색하려면 해당 단계를 수행하십시오.
 
-![파트너 인증 요청 검색](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-partner-authentication-request-flow.png)
+![파트너 인증 요청 검색](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-partner-authentication-request-flow.png)
 
 *파트너 인증 요청 검색*
 
@@ -76,8 +76,8 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
    >
    > 자세한 내용은 [파트너 인증 요청 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider` 및 `partner`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
+   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`partner` 매개 변수
+   > * _,_, `Authorization`, `AP-Device-Identifier` 및 `Content-Type`과(와) 같은 모든 `X-Device-Info`필수`AP-Partner-Framework-Status` 헤더
    > * 모든 _선택적_ 헤더 및 매개 변수
    >
    > <br/>
@@ -154,7 +154,7 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
 
 ## 파트너 인증 응답을 사용하여 프로필 만들기 및 검색 {#create-and-retrieve-profile-using-partner-authentication-response}
 
-### 전제 조건 {#prerequisites-create-and-retrieve-profile-using-partner-authentication-response}
+### 사전 요구 사항 {#prerequisites-create-and-retrieve-profile-using-partner-authentication-response}
 
 파트너 인증 응답을 사용하여 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -173,7 +173,7 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
 
 다음 다이어그램과 같이 파트너 인증 응답을 사용하여 프로필 검색 플로우를 구현하려면 해당 단계를 수행하십시오.
 
-![파트너 인증 응답을 사용하여 프로필 만들기 및 검색](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-profile-using-partner-authentication-response-flow.png)
+![파트너 인증 응답을 사용하여 프로필 만들기 및 검색](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-profile-using-partner-authentication-response-flow.png)
 
 *파트너 인증 응답을 사용하여 인증된 프로필 만들기 및 검색*
 
@@ -190,8 +190,8 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
    >
    > 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`, `partner` 및 `SAMLResponse`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
+   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `partner`필수`SAMLResponse` 매개 변수
+   > * _,_, `Authorization`, `AP-Device-Identifier` 및 `Content-Type`과(와) 같은 모든 `X-Device-Info`필수`AP-Partner-Framework-Status` 헤더
    > * 모든 _선택적_ 헤더 및 매개 변수
    >
    > <br/>

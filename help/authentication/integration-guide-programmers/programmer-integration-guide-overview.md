@@ -2,7 +2,7 @@
 title: 프로그래머 통합 안내서
 description: 프로그래머 통합 안내서
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
+source-git-commit: 7ca9d8996756086a6b963c0b6d5b0bb64608ecbc
 workflow-type: tm+mt
 source-wordcount: '2119'
 ht-degree: 0%
@@ -28,13 +28,13 @@ ht-degree: 0%
 
 프로그래머들에게 자격을 결정하는 것이 항상 간단한 것은 아니다. MVPD는 고객의 식별 데이터 및 액세스 권한을 관리하는 관리자입니다. 더욱 복잡한 문제는 프로그래머 뷰어가 각각 고유한 시스템으로 작동하는 매우 다양한 MVPD에 가입할 수 있다는 것입니다. 이러한 복잡성으로 인해 자격 검증은 기술적으로 어렵고 리소스 집약적입니다.
 
-![프로그래머가 직접 결정한 사용자 권한](../assets/user-ent-by-progr.png){align="center"}
+![프로그래머가 직접 결정한 사용자 권한](/help/authentication/assets/user-ent-by-progr.png){align="center"}
 
 *프로그래머가 직접 결정한 사용자 권한*
 
 Adobe Pass 인증은 프로그래머와 MVPD 간의 권한 거래를 안전하게 지원하므로 적합한 뷰어에게 보호된 콘텐츠를 빠르고 쉽고 안전하게 제공할 수 있습니다.
 
-![Adobe Pass 인증에 의해 중재된 사용자 권한](../assets/user-ent-mediatedby-authn.png){align="center"}
+![Adobe Pass 인증에 의해 중재된 사용자 권한](/help/authentication/assets/user-ent-mediatedby-authn.png){align="center"}
 
 *Adobe Pass 인증에 의해 중재된 사용자 권한*
 
@@ -47,11 +47,11 @@ Adobe Pass 인증은 프록시 역할을 하며 양측에 안전하고 일관된
    * [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
 
 * Premium Adobe Pass 인증 API:
-   * [임시 패스 API 재설정](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
-      * [TempPass 기능](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
-   * [저하 API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
-      * [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
-   * [권한 부여 서비스 모니터링 API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
+   * [임시 패스 API 재설정](/help/premium-workflow/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+      * [TempPass 기능](/help/premium-workflow/temporary-access/temp-pass-feature.md)
+   * [저하 API](/help/premium-workflow/degraded-access/degradation-feature.md#degradation-api-access)
+      * [성능 저하 기능](/help/premium-workflow/degraded-access/degradation-feature.md)
+   * [권한 부여 서비스 모니터링 API](/help/premium-workflow/esm/entitlement-service-monitoring-api.md)
 
 ### 사용 사례 {#use-cases}
 
@@ -72,7 +72,7 @@ Adobe Pass 인증은 프록시 역할을 하며 양측에 안전하고 일관된
 | **단계** | **우선 순위** | **사용 사례** | **문서** |
 |----------------------|--------------|-------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | **인증** | **높음** | 인증 | 자세한 내용은 [인증 단계](#authentication-phase) 섹션에서 집계된 문서를 참조하십시오. |
-|                      | **높음** | 홈 기반 인증(HBA) | 자세한 내용은 [홈 기반 인증](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)을 참조하세요. |
+|                      | **높음** | 홈 기반 인증(HBA) | 자세한 내용은 [홈 기반 인증](/help/premium-workflow/hba-access/home-based-authentication.md)을 참조하세요. |
 |                      | **높음** | SSO(단일 인증) | 자세한 내용은 [SSO(Single Sign-On)](#sso) 섹션에서 집계된 문서를 참조하십시오. |
 |                      | **높음** | MVPD 선택 | 자세한 내용은 [구성 단계](#configuration-phase) 섹션에서 집계된 문서를 참조하십시오. |
 |                      | **Medium** | 브랜드 MVPD 로그인 페이지 | MVPD가 기본 언어 환경 설정 지원을 포함하여 프로그래머 또는 서비스 공급자와 관련된 브랜딩을 로그인 페이지에 제공할 수 있습니다. |

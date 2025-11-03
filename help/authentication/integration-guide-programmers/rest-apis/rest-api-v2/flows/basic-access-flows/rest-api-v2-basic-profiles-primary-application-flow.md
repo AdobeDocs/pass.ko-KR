@@ -2,7 +2,7 @@
 title: 기본 프로필 - 기본 애플리케이션 - 흐름
 description: REST API V2 - 기본 프로필 - 기본 애플리케이션 - 흐름
 exl-id: 19ddf382-9a32-4b94-aa84-7611c0e1780e
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 0%
@@ -33,7 +33,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 ## 프로필 검색 {#retrieve-profiles}
 
-### 전제 조건 {#prerequisites-retrieve-profiles}
+### 사전 요구 사항 {#prerequisites-retrieve-profiles}
 
 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -43,7 +43,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 다음 다이어그램과 같이 기본 응용 프로그램 내에서 수행되는 기본 프로필 검색 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![프로필 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profiles-within-primary-application.png)
+![프로필 검색](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profiles-within-primary-application.png)
 
 *프로필 검색*
 
@@ -53,8 +53,8 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
    >
    > 자세한 내용은 [프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _과(와) 같은 모든_&#x200B;필수`serviceProvider` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 수신된 매개 변수와 헤더를 기반으로 모든 유효한 프로필을 식별합니다.
@@ -81,7 +81,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 ## 특정 mvpd에 대한 프로필 검색 {#retrieve-profile-for-specific-mvpd}
 
-### 전제 조건 {#prerequisites-retrieve-profile-for-specific-mvpd}
+### 사전 요구 사항 {#prerequisites-retrieve-profile-for-specific-mvpd}
 
 특정 MVPD에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -91,7 +91,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 다음 다이어그램에서와 같이 특정 MVPD에 대해 기본 프로필 검색 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![특정 mvpd에 대한 프로필 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-mvpd.png)
+![특정 mvpd에 대한 프로필 검색](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-mvpd.png)
 
 *특정 mvpd에 대한 프로필 검색*
 
@@ -101,8 +101,8 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
    >
    > 자세한 내용은 [특정 mvpd에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider` 및 `mvpd`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`mvpd` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.
@@ -130,7 +130,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 ## 특정 코드에 대한 프로필 검색 {#retrieve-profile-for-specific-code}
 
-### 전제 조건 {#prerequisites-retrieve-profile-for-specific-code}
+### 사전 요구 사항 {#prerequisites-retrieve-profile-for-specific-code}
 
 특정 인증 코드에 대한 프로필을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -140,7 +140,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 다음 다이어그램과 같이 기본 애플리케이션 내에서 수행되는 특정 인증 코드에 대한 기본 프로필 검색 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![특정 코드에 대한 프로필 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-code.png)
+![특정 코드에 대한 프로필 검색](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-code.png)
 
 *특정 코드에 대한 프로필 검색*
 
@@ -150,8 +150,8 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
    >
    > 다음에 대한 자세한 내용은 [특정 코드에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`과(와) 같은 모든 _required_ 헤더
+   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`code` 매개 변수
+   > * _과(와) 같은 모든_ required`Authorization` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.

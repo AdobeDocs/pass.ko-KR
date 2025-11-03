@@ -2,7 +2,7 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: 79b3856e3ab2755cc95c3fcd34121171912a5273
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '1703'
 ht-degree: 0%
@@ -51,7 +51,7 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
 
 ## 권한 흐름 {#entitlement}
 
-1. [전제 조건](#prereqs)
+1. [사전 요구 사항](#prereqs)
 1. [시작 흐름](#startup_flow)
 1. [인증 흐름](#authn_flow)
 1. [인증 흐름](#authz_flow)
@@ -113,7 +113,7 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
      `authorizedResources` 매개 변수는 사용자가 볼 수 있는 권한을 가진 리소스를 제공합니다.
 
 
-![](../../../../assets/android-entitlement-flows.png)
+![](/help//authentication/assets/android-entitlement-flows.png)
 
 
 ### B. 시작 흐름 {#startup_flow}
@@ -158,7 +158,7 @@ Android 라이브러리(AccessEnabler)
 
 1. 이전 단계에서 인스턴스화된 WebView를 통해 사용자는 MVPD의 로그인 페이지에 도달하고 로그인 자격 증명을 입력합니다. WebView 내에서 여러 리디렉션 작업이 수행됩니다.
 
-   **참고:** 이 시점에서는 사용자가 인증 흐름을 취소할 수 있습니다. 이 경우 UI 계층은 `null`을(를) 매개 변수로 사용하여 `setSelectedProvider()`을(를) 호출하여 이 이벤트에 대해 AccessEnabler에 알립니다. 이렇게 하면 AccessEnabler가 내부 상태를 정리하고 인증 흐름을 재설정할 수 있습니다.
+   **참고:** 이 시점에서는 사용자가 인증 흐름을 취소할 수 있습니다. 이 경우 UI 계층은 `setSelectedProvider()`을(를) 매개 변수로 사용하여 `null`을(를) 호출하여 이 이벤트에 대해 AccessEnabler에 알립니다. 이렇게 하면 AccessEnabler가 내부 상태를 정리하고 인증 흐름을 재설정할 수 있습니다.
 
 1. 사용자가 성공적으로 로그인하면 응용 프로그램 레이어에서 &quot;사용자 지정 리디렉션 URL&quot;(예: `http://adobepass.android.app`)의 로드를 감지합니다. 이 사용자 지정 URL은 실제로 WebView에서 로드하기 위한 것이 아닌 잘못된 URL입니다. 인증 흐름이 완료되었으며 WebView를 닫아야 한다는 신호입니다.
 

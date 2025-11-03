@@ -2,7 +2,7 @@
 title: 인증 시작
 description: 인증 시작
 exl-id: 55dddd29-68d6-4aae-8744-307fea285e29
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
@@ -46,7 +46,7 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. Adobe Pa
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/인증 | AuthN 모듈 | 1. requestor_id(필수)</br>2.  mso_id(필수)</br>3.  reg_code(필수)</br>4.  domain_name(필수)</br>5.  noflash=true - </br>    (필수, 잔여 매개 변수)</br>6.  no_iframe=true (필수, 잔차 매개 변수)</br>7.  추가 매개 변수(선택 사항)</br>8.  redirect_url(필수) | GET | 로그인 웹 앱은 MVPD 로그인 페이지로 리디렉션됩니다. | 전체 리디렉션 구현의 경우 302 |
+| &lt;SP_FQDN>/api/v1/인증 | AuthN 모듈 | &#x200B;1. requestor_id(필수)</br>2.  mso_id(필수)</br>3.  reg_code(필수)</br>4.  domain_name(필수)</br>5.  noflash=true - </br>    (필수, 잔여 매개 변수)</br>6.  no_iframe=true (필수, 잔차 매개 변수)</br>7.  추가 매개 변수(선택 사항)</br>8.  redirect_url(필수) | GET | 로그인 웹 앱은 MVPD 로그인 페이지로 리디렉션됩니다. | 전체 리디렉션 구현의 경우 302 |
 
 {style="table-layout:auto"}
 
@@ -85,7 +85,7 @@ MVPD 선택 이벤트를 알려 인증 프로세스를 시작합니다. Adobe Pa
 >
 >호출에는 다음과 같은 다른 기능을 활성화하는 선택적 매개 변수도 포함될 수 있습니다.
 >
-> * generic\_data - [Promotional TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass)를 사용할 수 있도록 설정
+> * generic\_data - [Promotional TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md#promotional-temp-pass)를 사용할 수 있도록 설정
 >
 >```JSON
 >Example:

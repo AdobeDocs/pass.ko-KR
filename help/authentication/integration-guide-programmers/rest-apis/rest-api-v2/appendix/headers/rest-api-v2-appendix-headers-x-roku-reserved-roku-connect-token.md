@@ -1,7 +1,8 @@
 ---
 title: 헤더 - X-Roku-Reserved-Roku-Connect-Token
 description: REST API V2 - 헤더 - X-Roku-Reserved-Roku-Connect-Token
-source-git-commit: 640ba7073f7f4639f980f17f1a59c4468bfebcf4
+exl-id: 21016d5b-4d10-4018-a82c-f2797b2d9fb9
+source-git-commit: 2afe9ea2a814817757f1ab28484a84466da68d62
 workflow-type: tm+mt
 source-wordcount: '149'
 ht-degree: 0%
@@ -42,8 +43,8 @@ ht-degree: 0%
 
 <b>unique_platform_identifier</b>
 
-고유한 플랫폼 식별자 정보를 포함하는 서명되거나 암호화된 JSON 웹 토큰(`JWT`)인 JSON 웹 서명(`JWS`) 또는 JSON 웹 암호화(`JWE`)입니다.
+고유한 플랫폼 식별자 정보를 포함하는 서명되거나 암호화된 JSON 웹 토큰(`JWS`)인 JSON 웹 서명(`JWE`) 또는 JSON 웹 암호화(`JWT`)입니다.
 
 이 기능은 다음 플랫폼에 사용할 수 있습니다.
 
-* [Roku SSO Cookbook(REST API V2)](../../../../features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
+* [Roku SSO Cookbook(REST API V2)](/help/premium-workflow/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)

@@ -2,7 +2,7 @@
 title: 기본 인증 - 기본 애플리케이션 - 플로우
 description: REST API V2 - 기본 권한 부여 - 기본 애플리케이션 - 흐름
 exl-id: 46bc9326-966e-44fc-8546-2f58be01b7bc
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -19,15 +19,15 @@ ht-degree: 0%
 >
 > REST API V2 구현은 [조절 메커니즘](/help/authentication/integration-guide-programmers/throttling-mechanism.md) 설명서에 의해 제한됩니다.
 
-Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트리밍 응용 프로그램에서 MVPD가 사용자의 콘텐츠 스트리밍 요청을 허용할지 또는 거부할지 여부를 확인할 수 있습니다. 결정이 `Permit`인 경우 응답에 미디어 토큰이 포함됩니다. Adobe Pass 서버는 미디어 토큰에 서명하고 스트리밍 애플리케이션이 미디어 토큰 검증기 라이브러리를 사용하여 스트림이 릴리스되기 전에 그 진위를 확인할 수 있도록 합니다.
+Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트리밍 응용 프로그램에서 MVPD이 사용자의 콘텐츠 스트리밍 요청을 허용할지 또는 거부할지 여부를 결정할 수 있습니다. 결정이 `Permit`인 경우 응답에 미디어 토큰이 포함됩니다. Adobe Pass 서버는 미디어 토큰에 서명하고 스트리밍 애플리케이션이 미디어 토큰 검증기 라이브러리를 사용하여 스트림이 릴리스되기 전에 그 진위를 확인할 수 있도록 합니다.
 
 미디어 토큰 검증자 라이브러리를 사용한 확인은 CDN에서 스트림을 릴리스하기 위해 권한 체인에 연결된 스트리밍 애플리케이션 백엔드 서비스에서 수행해야 합니다.
 
 ## 특정 mvpd를 사용하여 권한 부여 결정 검색 {#retrieve-authorization-decisions-using-specific-mvpd}
 
-### 전제 조건 {#prerequisites-retrieve-authorization-decisions-using-specific-mvpd}
+### 사전 요구 사항 {#prerequisites-retrieve-authorization-decisions-using-specific-mvpd}
 
-특정 MVPD를 사용하여 권한 부여 결정을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
+특정 MVPD을 사용하여 권한 부여 결정을 검색하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
 * 스트리밍 애플리케이션에는 기본 인증 흐름 중 하나를 사용하여 MVPD에 대해 성공적으로 생성된 올바른 일반 프로필이 있어야 합니다.
    * [기본 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-primary-application-flow.md)
@@ -37,9 +37,9 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
 ### 워크플로 {#workflow-retrieve-authorization-decisions-using-specific-mvpd}
 
-다음 다이어그램과 같이 기본 애플리케이션 내에서 수행된 특정 MVPD를 사용하여 기본 권한 흐름을 구현하려면 주어진 단계를 따르십시오.
+다음 다이어그램과 같이 기본 애플리케이션 내에서 수행된 특정 MVPD을 사용하여 기본 권한 부여 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![특정 mvpd를 사용하여 권한 부여 결정 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-authorization-decisions-within-primary-application-using-specific-mvpd.png)
+![특정 mvpd를 사용하여 권한 부여 결정 검색](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-authorization-decisions-within-primary-application-using-specific-mvpd.png)
 
 *특정 mvpd를 사용하여 권한 부여 결정 검색*
 
@@ -49,13 +49,13 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
+   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.
 
-1. **요청된 리소스에 대한 MVPD 결정 검색:** Adobe Pass 서버가 MVPD 권한 부여 끝점을 호출하여 스트리밍 응용 프로그램에서 받은 특정 리소스에 대한 `Permit` 또는 `Deny` 결정을 가져옵니다.
+1. **요청된 리소스에 대한 MVPD 결정 검색:** Adobe Pass 서버가 MVPD 인증 끝점을 호출하여 스트리밍 응용 프로그램에서 받은 특정 리소스에 대한 `Permit` 또는 `Deny` 결정을 가져옵니다.
 
 1. **미디어 토큰이 있는 `Permit` 결정을 반환합니다.** Decisions Authorize 끝점 응답에 `Permit` 결정 및 미디어 토큰이 포함되어 있습니다.
 

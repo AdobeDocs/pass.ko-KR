@@ -2,7 +2,7 @@
 title: 기본 인증 - 보조 애플리케이션 - 흐름
 description: REST API V2 - 기본 인증 - 보조 애플리케이션 - 흐름
 exl-id: 83bf592e-c679-4cfe-984d-710a9598c620
-source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '2006'
 ht-degree: 0%
@@ -65,7 +65,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
 다음 다이어그램과 같이 사전 선택된 MVPD을 사용하여 보조 애플리케이션 내에서 수행되는 기본 인증 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![미리 선택된 mvpd를 사용하여 보조 응용 프로그램 내에서 인증을 수행합니다](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-secondary-application-with-preselected-mvpd.png)
+![미리 선택된 mvpd를 사용하여 보조 응용 프로그램 내에서 인증을 수행합니다](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-secondary-application-with-preselected-mvpd.png)
 
 *미리 선택된 mvpd를 사용하여 보조 응용 프로그램 내에서 인증을 수행합니다*
 
@@ -75,8 +75,8 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 자세한 내용은 [인증 세션 만들기](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API 설명서를 참조하십시오.
    > 
-   > * `serviceProvider`, `mvpd`, `domainName` 및 `redirectUrl`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_, `serviceProvider` 및 `mvpd`과(와) 같은 모든 `domainName`필수`redirectUrl` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -119,8 +119,8 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 자세한 내용은 [인증 세션 정보 가져오기](../../apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`과(와) 같은 모든 _required_ 헤더
+   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`code` 매개 변수
+   > * _과(와) 같은 모든_ required`Authorization` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **인증 세션에 대한 정보를 반환합니다.** 세션 끝점 응답에 다음 데이터가 포함되어 있습니다.
@@ -151,7 +151,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 자세한 내용은 [사용자 에이전트에서 인증 수행](../../apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
+   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`code` 매개 변수
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **MVPD 인증 완료:** 인증 흐름이 성공하면 사용자 에이전트 상호 작용이 Adobe Pass 백엔드에 일반 프로필을 저장하고 제공된 `redirectUrl`에 도달합니다.
@@ -162,8 +162,8 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 다음에 대한 자세한 내용은 [특정 코드에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API 설명서를 참조하십시오.
    > 
-   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`code` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
    >[!TIP]
@@ -209,7 +209,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
 다음 다이어그램과 같이 사전 선택된 MVPD 없이 보조 애플리케이션 내에서 수행되는 기본 인증 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-secondary-application-without-preselected-mvpd.png)
+![미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-secondary-application-without-preselected-mvpd.png)
 
 *미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행*
 
@@ -219,8 +219,8 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 자세한 내용은 [인증 세션 만들기](../../apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _과(와) 같은 모든_&#x200B;필수`serviceProvider` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -254,8 +254,8 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 자세한 내용은 [인증 세션 다시 시작](../../apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`, `mvpd`, `domainName` 및 `redirectUrl`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_, `serviceProvider` 및 `mvpd`과(와) 같은 모든 `domainName`필수`redirectUrl` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **다음 작업을 나타냅니다.** 세션 끝점 응답에는 스트리밍 응용 프로그램에서 다음 작업에 대해 안내하는 데 필요한 데이터가 포함되어 있습니다.
@@ -300,8 +300,8 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
    >
    > 다음에 대한 자세한 내용은 [특정 코드에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`code` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
    >[!TIP]

@@ -2,7 +2,7 @@
 title: 단일 로그아웃 - 흐름
 description: REST API V2 - 단일 로그아웃 - 흐름
 exl-id: d7092ca7-ea7b-4e92-b45f-e373a6d673d6
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 ## 특정 mvpd에 대한 단일 로그아웃 시작 {#initiate-single-logout-for-specific-mvpd}
 
-### 전제 조건 {#prerequisites-initiate-single-logout-for-specific-mvpd}
+### 사전 요구 사항 {#prerequisites-initiate-single-logout-for-specific-mvpd}
 
 특정 MVPD에 대한 단일 로그아웃을 시작하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 특정 MVPD에 대한 단일 로그아웃 플로우를 구현하려면 주어진 단계를 수행하십시오.
 
-![특정 mvpd에 대한 단일 로그아웃 시작](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-initiate-single-logout-for-specific-mvpd-flow.png)
+![특정 mvpd에 대한 단일 로그아웃 시작](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-initiate-single-logout-for-specific-mvpd-flow.png)
 
 *특정 mvpd에 대한 단일 로그아웃 시작*
 
@@ -56,8 +56,8 @@ ht-degree: 0%
    >
    > 자세한 내용은 [특정 mvpd에 대한 로그아웃 시작](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * `serviceProvider`, `mvpd` 및 `redirectUrl`과(와) 같은 모든 _필수_ 매개 변수
-   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
+   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`redirectUrl` 매개 변수
+   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>

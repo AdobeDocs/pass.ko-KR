@@ -2,7 +2,7 @@
 title: 헤더 - 인증
 description: REST API V2 - 헤더 - 인증
 exl-id: 86917d7e-ffd9-4d34-8f9c-5a50083f85e6
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '118'
 ht-degree: 1%
@@ -20,7 +20,7 @@ ht-degree: 1%
 
 <b>인증</b> 요청 헤더에 클라이언트 응용 프로그램에서 Adobe Pass으로 보호된 API에 액세스하는 데 필요한 `Bearer` 액세스 토큰이 포함되어 있습니다.
 
-Adobe Pass으로 보호된 API에 액세스하는 메커니즘에 대한 자세한 내용은 [동적 클라이언트 등록 개요](../../../rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
+Adobe Pass으로 보호된 API에 액세스하는 메커니즘에 대한 자세한 내용은 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
 ## 구문 {#syntax}
 
@@ -42,9 +42,9 @@ Adobe Pass으로 보호된 API에 액세스하는 메커니즘에 대한 자세�
 
 <b>&lt;access_token></b>
 
-액세스 토큰 값은 [액세스 토큰 검색](../../../rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 Adobe Pass에서 가져와야 하는 제한된 TTL(예: 24시간)을 갖는 불투명 값입니다.
+액세스 토큰 값은 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 Adobe Pass에서 가져와야 하는 제한된 TTL(예: 24시간)을 갖는 불투명 값입니다.
 
-## 예시 {#examples}
+## 예 {#examples}
 
 ```JSON
 Authorization: Bearer eyJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI0NmY0MGZiMy01NmJkLTQyYTktOTExYS02YmZmNmEyZmY0

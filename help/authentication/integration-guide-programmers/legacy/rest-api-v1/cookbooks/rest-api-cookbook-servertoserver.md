@@ -2,7 +2,7 @@
 title: REST API Cookbook(서버 간)
 description: 서버에 대한 REST API Cookbook 서버입니다.
 exl-id: 36ad4a64-dde8-4a5f-b0fe-64b6c0ddcbee
-source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
+source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
 workflow-type: tm+mt
 source-wordcount: '1856'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 ### DCR(Dynamic Client Registration)
 
 
-Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서버와 Adobe Pass 서비스 간의 클라이언트 통신을 보호합니다. DCR 플로우는 별도로 구성되며 [동적 클라이언트 등록 개요](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서에 설명되어 있습니다.
+Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서버와 Adobe Pass 서비스 간의 클라이언트 통신을 보호합니다. DCR 플로우는 별도로 구성되며 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서에 설명되어 있습니다.
 
 
 ### 인증(authN)
@@ -73,7 +73,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 다음 다이어그램은 인증 플로우를 보여 줍니다.
 
-![](../../../../assets/authn-flow.png)
+![](/help//authentication/assets/authn-flow.png)
 
 ### 인증(authZ)
 
@@ -86,7 +86,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 다음 다이어그램은 인증 플로우를 보여 줍니다.
 
-![](../../../../assets/authz-flow.png)
+![](/help//authentication/assets/authz-flow.png)
 
 ### 로그아웃
 
@@ -98,7 +98,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 다음 다이어그램은 로그아웃 플로우를 보여 줍니다.
 
-![](../../../../assets/logout-flow.png)
+![](/help//authentication/assets/logout-flow.png)
 
 ### \[선택 사항\] 사전 인증(사전 실행)입니다.
 
@@ -114,7 +114,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 다음 다이어그램은 사전 인증 플로우를 보여 줍니다.
 
-![](../../../../assets/preauthz-flow.png)
+![](/help//authentication/assets/preauthz-flow.png)
 
 
 ### \[선택 사항\] 메타데이터
@@ -130,7 +130,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 
 
-![](../../../../assets/user-metadata-api-preauthz.png)
+![](/help//authentication/assets/user-metadata-api-preauthz.png)
 
 
 
@@ -152,14 +152,14 @@ Adobe Pass 서비스는 미국 전역에 지리적으로 분산된 여러 데이
 인프라.
 
 
-프로그래머 서비스는 Adobe이 트래픽을 다시 라우팅해야 하는 경우 DNS 캐시를 최대 30초로 제한해야 합니다. 이 문제는 데이터 센터를 사용할 수 없는 경우 발생할 수 있습니다.
+Adobe에서 트래픽 경로를 변경해야 하는 경우 프로그래머 서비스는 DNS 캐시를 최대 30초로 제한해야 합니다. 이 문제는 데이터 센터를 사용할 수 없는 경우 발생할 수 있습니다.
 
 
-프로그래머는 프로덕션 환경의 공용 IP 범위를 제공해야 합니다. 이러한 IP는 Adobe Pass 인프라의 허용 목록에 입력되어 액세스하고 Adobe의 API 페어 사용 정책에 의해 관리됩니다.
+프로그래머는 프로덕션 환경의 공용 IP 범위를 제공해야 합니다. 이러한 IP는 Adobe Pass 인프라의 허용 목록에 입력되어 Adobe의 Fair API 사용 정책에 의해 액세스 및 관리됩니다.
 
 ### 스테이징
 
-스테이징 환경은 최소한일 수 있지만 모든 시스템 구성 요소와 비즈니스 논리를 포함해야 합니다. 프로덕션과 유사하게 작동하고 프로덕션 외부에서 릴리스를 테스트할 수 있도록 해야 합니다. 이상적으로 스테이징 환경은 프로그래머가 사용하기 위해 Adobe Pass 테스트 환경에 연결할 수 있고 필요한 경우 Adobe을 통해 테스트와 문제 해결을 지원할 수 있습니다.
+스테이징 환경은 최소한일 수 있지만 모든 시스템 구성 요소와 비즈니스 논리를 포함해야 합니다. 프로덕션과 유사하게 작동하고 프로덕션 외부에서 릴리스를 테스트할 수 있도록 해야 합니다. 이상적으로 스테이징 환경은 프로그래머가 사용할 Adobe Pass 테스트 환경 및 필요한 경우 Adobe에 의해 연결할 수 있으므로 테스트 및 문제 해결을 지원할 수 있습니다.
 
 ### 기능 요구 사항
 
@@ -183,7 +183,7 @@ Adobe Pass 서비스는 미국 전역에 지리적으로 분산된 여러 데이
     
     GET /api/v1/authorize HTTP/1.1
     
-    X-Forwarded-For:203.45.101.20
+    X-Forwarded-For:203.45.10.20
 
 
 

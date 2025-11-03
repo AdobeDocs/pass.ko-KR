@@ -2,7 +2,7 @@
 title: JavaScript SDK Cookbook
 description: JavaScript SDK Cookbook
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
 workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 0%
@@ -28,7 +28,7 @@ JavaScript 코드 샘플 세트에 대한 링크입니다.
 
 ## 권한 흐름 {#entitlement}
 
-1. [전제 조건](#prereq)
+1. [사전 요구 사항](#prereq)
 2. [시작 흐름](#startup)
 3. [인증 흐름](#authn)
 4. [인증 흐름](#authz)
@@ -36,10 +36,10 @@ JavaScript 코드 샘플 세트에 대한 링크입니다.
 
 </br>
 
-![](../../../../assets/javascript-flows.png)
+![](/help//authentication/assets/javascript-flows.png)
 
 
-## 전제 조건 {#prereq}
+## 사전 요구 사항 {#prereq}
 
 **종속성:**
 
@@ -86,7 +86,7 @@ mvpds 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입�
 
 - `selectedProvider(mvpd)`
 
-  **트리거:** [`getSelectedProvider()`] (#$getSelProv `mvpd` 매개 변수는 다음에서 선택한 공급자에 대한 정보를 제공합니다.
+  **트리거:** [`getSelectedProvider()`]&#x200B;(#$getSelProv `mvpd` 매개 변수는 다음에서 선택한 공급자에 대한 정보를 제공합니다.
 사용자.
 
 - `setMetadataStatus(metadata, key, arguments)`
@@ -95,7 +95,7 @@ mvpds 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입�
   `metadata` 매개 변수는 요청한 특정 데이터를 제공합니다. 키 매개 변수는 `getMetadata()`요청에 사용된 키이고 `arguments` 매개 변수는 `getMetadata()`에 전달된 것과 동일한 사전입니다.
 
 
-## 2. 시작 흐름
+## &#x200B;2. 시작 흐름
 
 **I. AccessEnabler JavaScript 로드:**
 
@@ -128,7 +128,7 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 **트리거:**&#x200B;이(가) 없지만 필요한 경우 `displayProviderDialog()`을(를) 호출할 수 있습니다.
 
 
-**III.** 전체 [인증 흐름]을 시작하지 않고 기존 인증을 확인하려면 `checkAuthentication()`을(를) 호출하십시오.  이 호출이 성공하면 `authorization flow`(으)로 바로 진행할 수 있습니다.  그렇지 않으면 `authentication flow`(으)로 진행합니다.
+**III.** 전체 `checkAuthentication()`인증 흐름[을 시작하지 않고 기존 인증을 확인하려면 ]을(를) 호출하십시오.  이 호출이 성공하면 `authorization flow`(으)로 바로 진행할 수 있습니다.  그렇지 않으면 `authentication flow`(으)로 진행합니다.
 
 **종속성:** `setRequestor()`에 대한 호출이 성공했습니다(이 종속성은 모든 후속 호출에도 적용됨).
 
@@ -136,7 +136,7 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 
 </br>
 
-## 3. 인증 흐름</span>
+## &#x200B;3. 인증 흐름</span>
 
 
 **종속성:** `setRequestor()`에 대한 호출이 성공했습니다(이 종속성은 모든 후속 호출에도 적용됨).
@@ -149,9 +149,9 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 - `displayProviderDialog()`사용자가 아직 인증되지 않은 경우
 - 인증이 이미 발생한 경우 `setAuthenticationStatus()`
 
-AccessEnabler가 `isAuthenticated == 1`을(를) 사용하여 `setAuthenticationStatus()`을(를) 호출하면 인증 흐름이 완료됩니다.
+AccessEnabler가 `setAuthenticationStatus()`을(를) 사용하여 `isAuthenticated == 1`을(를) 호출하면 인증 흐름이 완료됩니다.
 
-## 4. 인증 흐름 {#authz}
+## &#x200B;4. 인증 흐름 {#authz}
 
 **종속성:**
 
@@ -175,7 +175,7 @@ AccessEnabler 라이브러리)
 - 유효성 검사가 성공하는 경우: 사용자에 대해 요청된 미디어를 표시/재생합니다.
 - 실패하면: AuthZ 토큰이 올바르지 않고 미디어 요청이 거부되어야 하며 사용자에게 오류 메시지가 표시되어야 합니다.
 
-## 5. 미디어 흐름 보기 {#logout}
+## &#x200B;5. 미디어 흐름 보기 {#logout}
 
 - 사용자가 보려는 미디어를 선택합니다.
    - 미디어가 보호됩니까?
@@ -186,7 +186,7 @@ AccessEnabler 라이브러리)
 
 ## 방문자 ID 구성 {#visitorID}
 
-분석 관점에서 [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko) 값을 구성하는 것은 매우 중요합니다. EC visitorID 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 Adobe Pass 인증 서비스는 이 정보를 수집합니다. 이렇게 하면 Adobe Pass 인증 서비스의 분석 데이터를 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. EC visitorID 설정 방법에 대한 정보는 [여기](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko)에서 찾을 수 있습니다.
+분석 관점에서 [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) 값을 구성하는 것은 매우 중요합니다. EC visitorID 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 Adobe Pass 인증 서비스는 이 정보를 수집합니다. 이렇게 하면 Adobe Pass 인증 서비스의 분석 데이터를 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. EC visitorID 설정 방법에 대한 정보는 [여기](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en)에서 찾을 수 있습니다.
 
 
 >[!NOTE]
