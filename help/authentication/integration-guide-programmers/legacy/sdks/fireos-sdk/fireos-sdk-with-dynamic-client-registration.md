@@ -152,7 +152,7 @@ FireOS AccessEnabler SDK for FireTV가 세션 쿠키를 사용하지 않고 인�
    - 로그인 취소됨 : MVPD 선택 재설정
    - 인증이 완료되면 캡처하기 위해 URL 체계가 &quot;adobepass://android.app&quot;로 설정됩니다.
 
-- e. get/checkAuthorization : SDK은 **access\_token **in 헤더를 Authorization: Bearer **access\_token**(으)로 포함합니다.
+- e. get/checkAuthorization : SDK은 **access\_token &#x200B;** in 헤더를 Authorization: Bearer **access\_token**(으)로 포함합니다.
 
 - 인증이 성공하면 미디어 토큰을 얻기 위한 호출이 수행됩니다
 
