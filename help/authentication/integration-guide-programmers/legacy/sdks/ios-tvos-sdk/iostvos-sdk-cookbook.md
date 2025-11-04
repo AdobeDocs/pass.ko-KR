@@ -48,7 +48,7 @@ AccessEnabler의 네트워크 작업은 자체 스레드에서 수행되므로 U
 
 ## Experience Cloud ID 서비스 구성(방문자 ID) {#visitorIDSetup}
 
-[&#x200B; 관점에서 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html)Experience Cloud ID[!DNL Analytics] 값을 구성하는 것이 중요합니다. `visitorID` 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 [!DNL Adobe Pass] 인증 서버는 이 정보를 수집합니다. Adobe Pass 인증 서비스의 분석을 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. visitorID 설정 방법에 대한 정보는 [여기](#setOptions)에서 찾을 수 있습니다.
+[&#x200B; 관점에서 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko)Experience Cloud ID[!DNL Analytics] 값을 구성하는 것이 중요합니다. `visitorID` 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 [!DNL Adobe Pass] 인증 서버는 이 정보를 수집합니다. Adobe Pass 인증 서비스의 분석을 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. visitorID 설정 방법에 대한 정보는 [여기](#setOptions)에서 찾을 수 있습니다.
 
 ## 권한 흐름 {#entitlement}
 
