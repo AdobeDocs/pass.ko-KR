@@ -124,7 +124,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
@@ -208,7 +208,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
@@ -302,7 +302,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 하며 이전 단계에서 얻은 파트너 인증 요청(SAML 요청)을 포함해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
@@ -381,7 +381,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
@@ -452,7 +452,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 ](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
