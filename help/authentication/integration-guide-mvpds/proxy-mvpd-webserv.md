@@ -31,13 +31,13 @@ ht-degree: 0%
 
 ProxyMVPD 기능을 구현하기 위해 Adobe Pass 인증은 ProxyMVPD가 ProxyedMVPD 목록을 제출하고 검색할 수 있는 RESTful 웹 서비스를 제공합니다. 이 공개 API에 사용되는 프로토콜은 다음 가정과 함께 REST HTTP입니다.
 
-&#x200B;- Proxy MVPD은 HTTP GET 메서드를 사용하여 현재 통합된 MVPD 목록을 검색합니다.
-&#x200B;- 프록시 MVPD은 HTTP POST 메서드를 사용하여 지원되는 MVPD 목록을 업데이트합니다.
+- Proxy MVPD은 HTTP GET 메서드를 사용하여 현재 통합된 MVPD 목록을 검색합니다.
+- 프록시 MVPD은 HTTP POST 메서드를 사용하여 지원되는 MVPD 목록을 업데이트합니다.
 
 ## 프록시 MVPD 서비스 {#proxy-mvpd-services}
 
-&#x200B;- [프록시화된 MVPD 검색](#retriev-proxied-mvpds)
-&#x200B;- [프록시화된 MVPD 제출](#submit-proxied-mvpds)
+- [프록시화된 MVPD 검색](#retriev-proxied-mvpds)
+- [프록시화된 MVPD 제출](#submit-proxied-mvpds)
 
 ### 프록시화된 MVPD 검색 {#retriev-proxied-mvpds}
 
@@ -216,24 +216,24 @@ Adobe은 당사의 공개 웹 서비스에 프록시 MVPD를 게시/검색하기
 
 **요소에 대한 참고 사항:**
 
-&#x200B;- `id`(필수) - 프록시화된 MVPD ID는 다음 문자 중 하나를 사용하여 MVPD 이름과 관련된 문자열이어야 합니다(추적 목적으로 프로그래머에게 노출됨).
-&#x200B;- 모든 영숫자, 밑줄(&quot;_&quot;) 및 하이픈(&quot;-&quot;).
-&#x200B;- idID는 다음 정규 표현식을 준수해야 합니다.
+-   `id`(필수) - 프록시화된 MVPD ID는 다음 문자 중 하나를 사용하여 MVPD 이름과 관련된 문자열이어야 합니다(추적 목적으로 프로그래머에게 노출됨).
+-   모든 영숫자, 밑줄(&quot;_&quot;) 및 하이픈(&quot;-&quot;).
+-   idID는 다음 정규 표현식을 준수해야 합니다.
 `(a-zA-Z0-9((-)|_)*)`
 
     하나 이상의 문자가 있어야 하며 문자로 시작하고 모든 문자, 숫자, 대시 또는 밑줄을 사용하여 계속해야 합니다.
 
-&#x200B;- `iframeSize` (선택 사항) - iframeSize 요소는 선택 사항이며, MVPD 인증 페이지가 iFrame에 있어야 하는 경우 iFrame의 크기를 정의합니다. 그렇지 않으면 iframeSize 요소가 없으면 전체 브라우저 리디렉션 페이지에서 인증이 발생합니다.
-&#x200B;- `requestorIds`(선택 사항) - Adobe에서 requestorIds 값을 제공합니다. 프록시화된 MVPD을 하나 이상의 requestorId와 통합해야 합니다. 프록시가 활성화된 MVPD 요소에 &quot;requestorIds&quot; 태그가 없으면 프록시가 활성화된 MVPD이 프록시 MVPD 아래에 통합된 사용 가능한 모든 요청자와 통합됩니다.
-&#x200B;- `ProviderID` (선택 사항) - ProviderID 특성이 id 요소에 있으면 SAML 인증 요청 시 ProviderID 값이 프록시 MVPD에 ID 값 대신 프록시화된 MVPD/SubMVPD ID로 전송됩니다. 이 경우 id 값은 프로그래머 페이지에 표시된 MVPD 선택기에서만 사용되며 내부적으로 Adobe Pass 인증에 의해 사용됩니다. ProviderID 특성의 길이는 1자에서 128자 사이여야 합니다.
+-   `iframeSize` (선택 사항) - iframeSize 요소는 선택 사항이며, MVPD 인증 페이지가 iFrame에 있어야 하는 경우 iFrame의 크기를 정의합니다. 그렇지 않으면 iframeSize 요소가 없으면 전체 브라우저 리디렉션 페이지에서 인증이 발생합니다.
+-   `requestorIds`(선택 사항) - Adobe에서 requestorIds 값을 제공합니다. 프록시화된 MVPD을 하나 이상의 requestorId와 통합해야 합니다. 프록시가 활성화된 MVPD 요소에 &quot;requestorIds&quot; 태그가 없으면 프록시가 활성화된 MVPD이 프록시 MVPD 아래에 통합된 사용 가능한 모든 요청자와 통합됩니다.
+-   `ProviderID` (선택 사항) - ProviderID 특성이 id 요소에 있으면 SAML 인증 요청 시 ProviderID 값이 프록시 MVPD에 ID 값 대신 프록시화된 MVPD/SubMVPD ID로 전송됩니다. 이 경우 id 값은 프로그래머 페이지에 표시된 MVPD 선택기에서만 사용되며 내부적으로 Adobe Pass 인증에 의해 사용됩니다. ProviderID 특성의 길이는 1자에서 128자 사이여야 합니다.
 
 ## 보안 {#security}
 
 요청이 유효한 것으로 간주되려면 다음 규칙을 준수해야 합니다.
 
-&#x200B;- 요청 헤더에는 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 가져온 보안 Oauth2 액세스 토큰이 포함되어야 합니다.
-&#x200B;- 허용된 특정 IP 주소에서 요청을 가져와야 합니다.
-&#x200B;- SSL 프로토콜을 통해 요청을 전송해야 합니다.
+- 요청 헤더에는 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 가져온 보안 Oauth2 액세스 토큰이 포함되어야 합니다.
+- 허용된 특정 IP 주소에서 요청을 가져와야 합니다.
+- SSL 프로토콜을 통해 요청을 전송해야 합니다.
 
 위에 나열되지 않은 요청 헤더에 있는 모든 매개 변수는 무시됩니다.
 
@@ -243,10 +243,10 @@ Curl 예:
 
 ## Adobe Pass 인증 환경에 대한 프록시 MVPD 웹 서비스 엔드포인트 {#proxy-mvpd-wevserv-endpoints}
 
-&#x200B;- **프로덕션 URL:** https://mgmt.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
-&#x200B;- **스테이징 URL:** https://mgmt.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
-&#x200B;- **PreQual-Production URL:** https://mgmt-prequal.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
-&#x200B;- **PreQual-Staging URL:** https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **프로덕션 URL:** https://mgmt.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **스테이징 URL:** https://mgmt.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **PreQual-Production URL:** https://mgmt-prequal.auth.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
+- **PreQual-Staging URL:** https://mgmt-prequal.auth-staging.adobe.com/control/v3/mvpd-proxies/&lt;proxy-mvpd-identifier>/mvpds
 
 <!--
 >[!RELATEDINFORMATION]

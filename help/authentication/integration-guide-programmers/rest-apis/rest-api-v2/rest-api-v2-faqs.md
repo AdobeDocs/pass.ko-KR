@@ -57,7 +57,7 @@ REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authenticat
 
 구성은 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#configuration) 설명서에 정의된 용어입니다.
 
-구성에 `id`Configuration`displayName` 끝점에서 검색할 수 있는 `logoUrl`, [, &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) 특성 등으로 정의된 MVPD 목록이 포함되어 있습니다.
+구성에 `id`Configuration`displayName` 끝점에서 검색할 수 있는 `logoUrl`, [, ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) 특성 등으로 정의된 MVPD 목록이 포함되어 있습니다.
 
 사용자가 인증 또는 재인증하기 위해 MVPD을 선택해야 하는 경우에만 클라이언트 애플리케이션이 구성을 검색해야 합니다.
 
@@ -309,7 +309,7 @@ Profiles 엔드포인트가 빈 프로필 맵 응답을 반환하는 경우 클�
 
 **기본(화면) 응용 프로그램 내에서 수행된 인증**
 
-브라우저 구성 요소가 `redirectUrl`세션[&#x200B; 끝점 요청에서 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 매개 변수에 대해 지정된 URL을 로드한 후 사용자가 최종 대상 페이지에 도달하면 기본(스트리밍) 응용 프로그램에서 폴링을 시작해야 합니다.
+브라우저 구성 요소가 `redirectUrl`세션[ 끝점 요청에서 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 매개 변수에 대해 지정된 URL을 로드한 후 사용자가 최종 대상 페이지에 도달하면 기본(스트리밍) 응용 프로그램에서 폴링을 시작해야 합니다.
 
 **보조(화면) 응용 프로그램 내에서 수행된 인증**
 
@@ -325,7 +325,7 @@ Profiles 엔드포인트가 빈 프로필 맵 응답을 반환하는 경우 클�
 
 **인증 세션 및 코드 만료**
 
-`notAfter`세션[&#x200B; 끝점 응답에서 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 타임스탬프(예: 30분)에 표시된 대로 인증 세션 및 코드가 만료됩니다. 이 경우 사용자는 인증 프로세스를 다시 시작해야 하며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
+`notAfter`세션[ 끝점 응답에서 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 타임스탬프(예: 30분)에 표시된 대로 인증 세션 및 코드가 만료됩니다. 이 경우 사용자는 인증 프로세스를 다시 시작해야 하며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
 
 **새 인증 코드가 생성됨**
 

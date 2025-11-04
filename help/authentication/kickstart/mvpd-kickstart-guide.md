@@ -129,16 +129,16 @@ Adobe은 Adobe Pass 인증과 통합하는 데 도움이 되는 다양한 리소
 
 ## 고객 지원 액세스 {#access-customer-support}
 
-**Adobe은** Zendesk[을(를) 통해 고객 지원 시스템에 &#x200B;](https://tve.zendesk.com/home) 액세스를 제공합니다. Zendesk에 액세스하려면 https://tve.zendesk.com/home에서 계정을 등록 및 생성해야 합니다.
+**Adobe은** Zendesk[을(를) 통해 고객 지원 시스템에 ](https://tve.zendesk.com/home) 액세스를 제공합니다. Zendesk에 액세스하려면 https://tve.zendesk.com/home에서 계정을 등록 및 생성해야 합니다.
 
 Adobe Pass 인증 팀은 통합 프로세스 중에 발생할 수 있는 모든 질문이나 기술 문제를 처리할 수 있습니다. [tve-support@adobe.com](mailto:tve-support@adobe.com)(으)로 문의하십시오.
 
 ## 설명서 액세스 {#access-documentation}
 
-**Adobe은** Adobe Experience League[를 통해 &#x200B;](https://experienceleague.adobe.com/ko/docs/pass/authentication/home) 공개 설명서에 대한 액세스 권한을 제공합니다.
+**Adobe은** Adobe Experience League[를 통해 ](https://experienceleague.adobe.com/en/docs/pass/authentication/home) 공개 설명서에 대한 액세스 권한을 제공합니다.
 
 Adobe Pass 인증 팀은 [MVPD에 대한 통합 안내서](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) 섹션에서 사용 가능한 기능 및 워크플로에 대한 포괄적인 설명서를 제공합니다. 각 주제에 대한 자세한 정보에 대한 링크는 이 섹션의 목차를 참조하십시오.
 
 ## 테스트 도구에 액세스 {#access-testing-tool}
 
-**Adobe은** Adobe Developer[&#x200B; 웹 사이트를 통해 API 탐색 도구에 대한 &#x200B;](https://developer.adobe.com/adobe-pass/) 액세스를 제공합니다.
+**Adobe은** Adobe Developer[ 웹 사이트를 통해 API 탐색 도구에 대한 ](https://developer.adobe.com/adobe-pass/) 액세스를 제공합니다.
