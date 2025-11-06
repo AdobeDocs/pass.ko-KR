@@ -2,7 +2,7 @@
 title: iOS/tvOS Cookbook
 description: iOS/tvOS Cookbook
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '2424'
 ht-degree: 0%
@@ -48,7 +48,7 @@ AccessEnabler의 네트워크 작업은 자체 스레드에서 수행되므로 U
 
 ## Experience Cloud ID 서비스 구성(방문자 ID) {#visitorIDSetup}
 
-[&#x200B; 관점에서 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko)Experience Cloud ID[!DNL Analytics] 값을 구성하는 것이 중요합니다. `visitorID` 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 [!DNL Adobe Pass] 인증 서버는 이 정보를 수집합니다. Adobe Pass 인증 서비스의 분석을 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. visitorID 설정 방법에 대한 정보는 [여기](#setOptions)에서 찾을 수 있습니다.
+[ 관점에서 ](https://experienceleague.adobe.com/docs/id-service/using/home.html)Experience Cloud ID[!DNL Analytics] 값을 구성하는 것이 중요합니다. `visitorID` 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 [!DNL Adobe Pass] 인증 서버는 이 정보를 수집합니다. Adobe Pass 인증 서비스의 분석을 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. visitorID 설정 방법에 대한 정보는 [여기](#setOptions)에서 찾을 수 있습니다.
 
 ## 권한 흐름 {#entitlement}
 
@@ -120,7 +120,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
       * 사용자 작업에 의해 트리거됩니다(Apple SSO 대화 상자에서 &quot;취소&quot; 또는 &quot;기타 TV 공급자&quot;를 선택하여).
       * viewController 매개 변수는 Apple SSO 대화 상자로 기본 보기 컨트롤러에서 해제해야 합니다.
 
-![](/help//authentication/assets/iOS-flows.png)
+![](../../../../assets/iOS-flows.png)
 
 ### B. 시작 흐름 {#startup_flow}
 
@@ -175,7 +175,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 
 >[!NOTE]
 >
->이 시점에서 사용자는 인증 흐름을 취소할 수 있습니다. 이 경우 UI 계층은 [을(를) 매개 변수로 사용하여 &#x200B;](#setSelProv)setSelectedProvider()`null`을(를) 호출하여 이 이벤트에 대해 AccessEnabler에 알립니다. 이렇게 하면 AccessEnabler가 내부 상태를 정리하고 인증 흐름을 재설정할 수 있습니다.
+>이 시점에서 사용자는 인증 흐름을 취소할 수 있습니다. 이 경우 UI 계층은 [을(를) 매개 변수로 사용하여 ](#setSelProv)setSelectedProvider()`null`을(를) 호출하여 이 이벤트에 대해 AccessEnabler에 알립니다. 이렇게 하면 AccessEnabler가 내부 상태를 정리하고 인증 흐름을 재설정할 수 있습니다.
 
 1. 사용자가 성공적으로 로그인하면 애플리케이션 레이어가 특정 사용자 지정 URL의 로드를 감지합니다. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 응용 프로그램에서 인증 흐름이 완료되었으며 `UIWebView/WKWebView` 또는 `SFSafariViewController` 컨트롤러를 닫아도 안전하다는 신호로만 해석해야 합니다. `SFSafariViewController`컨트롤러를 사용해야 하는 경우 특정 사용자 지정 URL이 **`application's custom scheme`**(예: `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`)에 의해 정의되며, 그렇지 않으면 이 특정 사용자 지정 URL이 **`ADOBEPASS_REDIRECT_URL`** 상수(즉, `adobepass://ios.app`)에 의해 정의됩니다.
 

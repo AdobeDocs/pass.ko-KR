@@ -2,7 +2,7 @@
 title: 변경 사항 검토 및 푸시
 description: TVE 대시보드에서 변경 사항을 검토하고 푸시하는 방법을 알아봅니다.
 exl-id: 2f29712e-7b3f-472a-a36f-32780bec1508
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '250'
 ht-degree: 0%
@@ -21,7 +21,7 @@ TVE Dashboard를 사용하면 현재 구성에 대한 변경 사항을 검토한
 
 1. 화면 하단에서 검토 및 변경 사항 푸시 알림을 찾습니다.
 
-   ![변경 내용 검토 및 푸시 알림](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-banner-view.png)
+   ![변경 내용 검토 및 푸시 알림](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-banner-view.png)
 
    *변경 내용 검토 및 푸시 알림 상자*
 
@@ -29,7 +29,7 @@ TVE Dashboard를 사용하면 현재 구성에 대한 변경 사항을 검토한
 
 1. 각 변경 내용을 효과적으로 추적하고 이해하려면 **구성 설명**&#x200B;에 변경 내용에 대한 간단한 설명을 입력하십시오.
 
-   ![구성 설명 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-configuration-details-panel-view.png)
+   ![구성 설명 추가](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-configuration-details-panel-view.png)
 
    *구성 설명 추가*
 
@@ -39,7 +39,7 @@ TVE Dashboard를 사용하면 현재 구성에 대한 변경 사항을 검토한
 
 1. 구성 변경과 관련된 이전 값과 새 값을 검토하려면 **보기**&#x200B;를 선택하십시오.
 
-   ![구성 변경 내용 보기](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-view-button.png)
+   ![구성 변경 내용 보기](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-changes-view-button.png)
 
    *구성 변경 내용 보기*
 
@@ -49,7 +49,7 @@ TVE Dashboard를 사용하면 현재 구성에 대한 변경 사항을 검토한
    >
    >**구성 설명**&#x200B;을 추가한 후에만 **변경 사항 푸시** 단추가 활성화됩니다.
 
-   ![변경 내용 푸시](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-and-push-push-changes-button.png)
+   ![변경 내용 푸시](../assets/tve-dashboard/new-tve-dashboard/review/review-and-push-push-changes-button.png)
 
    *변경 내용 푸시*
 

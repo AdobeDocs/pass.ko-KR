@@ -4,7 +4,7 @@ description: Adobe Pass Authentication 2.63 릴리스 노트
 exl-id: 40987328-6d41-4948-aa4a-bab31f98a18a
 source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '300'
 ht-degree: 0%
 
 ---

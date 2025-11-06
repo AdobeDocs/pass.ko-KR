@@ -4,7 +4,7 @@ description: Adobe Pass Authentication 3.0 릴리스 노트
 exl-id: 9284151a-8458-44a3-937b-35f379ca0e4e
 source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '195'
 ht-degree: 0%
 
 ---

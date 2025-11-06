@@ -91,7 +91,7 @@ ht-degree: 0%
 
 ### setRequestor {#setRequestor}
 
-**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대한 Adobe 등록 시 고유 ID가 지정됩니다. 이 설정은 응용 프로그램 수명 주기 동안 한 번만 수행해야 합니다.
+**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대해 Adobe에 등록할 때 고유 ID가 지정됩니다. 이 설정은 응용 프로그램 수명 주기 동안 한 번만 수행해야 합니다.
 
 서버 응답에는 프로그래머의 ID에 첨부된 일부 구성 정보와 함께 MVPD 목록이 포함됩니다. 서버 응답은 Access Enabler에서 내부적으로 사용됩니다. 작업의 상태(즉, SUCCESS/FAIL)만 setRequestorComplete() 콜백을 통해 응용 프로그램에 표시됩니다.
 
@@ -116,7 +116,7 @@ ht-degree: 0%
 
 **매개 변수:**
 
-- *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe이 할당한 고유 ID를 사이트에 전달합니다.
+- *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe에서 할당한 고유 ID를 사이트에 전달합니다.
 - *url*: 선택적 매개 변수. 기본적으로 Adobe 서비스 공급자가 사용됩니다(http://sp.auth.adobe.com/). 이 배열을 사용하면 Adobe에서 제공하는 인증 및 권한 부여 서비스에 대한 끝점을 지정할 수 있습니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 이 옵션을 사용하여 여러 Adobe Pass 인증 서비스 공급자 인스턴스를 지정할 수 있습니다. 이렇게 하면 MVPD 목록이 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD은 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD을 지원하는 공급자와 연결됩니다.
 
 **트리거된 콜백:** `setRequestorComplete()`
@@ -175,7 +175,7 @@ ht-degree: 0%
 
 - *options*: 글로벌 SDK 옵션이 포함된 맵\&lt;문자열, 문자열\> 현재 다음 옵션을 사용할 수 있습니다.
    - **applicationProfile** - 이 값을 기반으로 서버 구성을 만드는 데 사용할 수 있습니다.
-   - **ap\_vi** - Experience Cloud ID 서비스입니다. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
+   - **ap\_vi** - Experience Cloud ID 서비스. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
    - **device\_info** - **장치 정보 Cookbook 전달**&#x200B;에 설명된 장치 정보
 
 </br>
@@ -260,7 +260,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | ```public void setSelectedProvider(String mvpdId)``` |
 
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:** 없음
 
@@ -355,7 +355,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | --- |
 | ```public void checkPreauthorizedResources(ArrayList<String> resources)``` |
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:** `resources` 매개 변수는 사용자가 이미 볼 수 있는 리소스 배열입니다.
 
@@ -427,7 +427,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | --- |
 | ```public void setToken(String token, String resourceId)``` |
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:**
 
@@ -529,7 +529,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 - *metadataKey*: 키 및 args 변수를 캡슐화하는 데이터 구조입니다. 다음 의미가 있습니다.
    - 키가 `METADATA_KEY_TTL_AUTHN`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
    - 키가 `METADATA_KEY_TTL_AUTHZ`이고 인수에 이름 = `METADATA_ARG_RESOURCE_ID`, 값 = `[resource_id]`인 SerializableNameValuePair 개체가 포함된 경우 지정한 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
-   - 키가 `METADATA_KEY_DEVICE_ID`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며 프로그래머는 사용 권한 및 요금에 대한 정보를 Adobe에 문의해야 합니다.
+   - 키가 `METADATA_KEY_DEVICE_ID`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
    - 키가 `METADATA_KEY_USER_META`이고 args에 이름 = `METADATA_KEY_USER_META`, 값 = `[metadata_name]`인 SerializableNameValuePair 개체가 있으면 사용자 메타데이터에 대해 쿼리가 수행됩니다. 사용 가능한 사용자 메타데이터 유형의 현재 목록:
       - `zip` - 우편 번호
       - `householdID` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다.
@@ -625,7 +625,7 @@ Access Enabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거�
 
 >[!WARNING]
 >
-> 장치 유형 및 운영 체제는 공개 Java 라이브러리(http://java.net/projects/user-agent-utils) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, 잘못된 결과에 대해서는 Adobe이 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
+> 장치 유형 및 운영 체제는 공개 Java 라이브러리(http://java.net/projects/user-agent-utils) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, Adobe은 잘못된 결과에 대한 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
 
 - 장치 유형에 가능한 값:
    - `computer`

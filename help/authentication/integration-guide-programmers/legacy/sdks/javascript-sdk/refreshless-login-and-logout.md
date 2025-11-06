@@ -79,7 +79,7 @@ AccessEnabler의 로그아웃 API는 라이브러리의 로컬 상태를 지우�
 >
 >향상된 새로 고침 없는 로그인 및 로그아웃 흐름을 사용하려면 브라우저가 웹 메시지를 포함한 최신 HTML5 기술을 지원해야 합니다.
 
-위에서 설명한 인증(로그인) 및 로그아웃 흐름 모두 각 흐름이 완료된 후 기본 페이지를 다시 로드하여 유사한 사용자 경험을 제공합니다.  현재 기능은 새로 고침 없는(백그라운드) 로그인 및 로그아웃을 제공하여 사용자 경험을 개선하는 것을 목표로 합니다. 프로그래머는 두 개의 부울 플래그(`backgroundLogin` 및 `backgroundLogout`)를 `setRequestor` API의 `configInfo` 매개 변수에 전달하여 백그라운드 로그인 및 로그아웃을 활성화/비활성화할 수 있습니다. 기본적으로 백그라운드 로그인/로그아웃은 비활성화됩니다(이전 구현과의 호환성을 제공).
+위에서 설명한 인증(로그인) 및 로그아웃 흐름 모두 각 흐름이 완료된 후 기본 페이지를 다시 로드하여 유사한 사용자 경험을 제공합니다.  현재 기능은 새로 고침 없는(백그라운드) 로그인 및 로그아웃을 제공하여 사용자 경험을 개선하는 것을 목표로 합니다. 프로그래머는 두 개의 부울 플래그(`backgroundLogin` 및 `backgroundLogout`)를 `configInfo` API의 `setRequestor` 매개 변수에 전달하여 백그라운드 로그인 및 로그아웃을 활성화/비활성화할 수 있습니다. 기본적으로 백그라운드 로그인/로그아웃은 비활성화됩니다(이전 구현과의 호환성을 제공).
 
 **예:**
 
@@ -96,7 +96,7 @@ AccessEnabler의 로그아웃 API는 라이브러리의 로컬 상태를 지우�
 
 다음은 원래 인증 흐름과 향상된 흐름 간의 전환을 설명하는 지점입니다.
 
-1. 전체 페이지 리디렉션은 MVPD 로그인이 수행되는 새 브라우저 탭으로 대체됩니다. 사용자가 MVPD(`iFrameRequired = false` 포함)를 선택할 때 프로그래머는 `window.open`을(를) 통해 이름이 `mvpdwindow`인 새 탭을 만들어야 합니다. 그런 다음 프로그래머는 `setSelectedProvider(<mvpd>)`을(를) 실행하여 AccessEnabler가 새 탭에서 MVPD 로그인 URL을 로드할 수 있도록 합니다. 사용자가 유효한 자격 증명을 제공한 후 Adobe Pass Authentication에서 탭을 닫고 AccessEnabler에 인증 흐름이 완료되었음을 알리는 window.postMessage를 프로그래머 웹 사이트로 보냅니다. 다음 콜백이 트리거됩니다.
+1. 전체 페이지 리디렉션은 MVPD 로그인이 수행되는 새 브라우저 탭으로 대체됩니다. 사용자가 MVPD(`window.open` 포함)를 선택할 때 프로그래머는 `mvpdwindow`을(를) 통해 이름이 `iFrameRequired = false`인 새 탭을 만들어야 합니다. 그런 다음 프로그래머는 `setSelectedProvider(<mvpd>)`을(를) 실행하여 AccessEnabler가 새 탭에서 MVPD 로그인 URL을 로드할 수 있도록 합니다. 사용자가 유효한 자격 증명을 제공한 후 Adobe Pass Authentication에서 탭을 닫고 AccessEnabler에 인증 흐름이 완료되었음을 알리는 window.postMessage를 프로그래머 웹 사이트로 보냅니다. 다음 콜백이 트리거됩니다.
 
    - `getAuthentication`에 의해 흐름이 시작된 경우 `setAuthenticationStatus` 및 `sendTrackingData(AUTHENTICATION_DETECTION...)`이(가) 인증 성공/실패 신호를 보내도록 트리거됩니다.
 
@@ -118,7 +118,7 @@ AccessEnabler의 로그아웃 API는 라이브러리의 로컬 상태를 지우�
 
 1. **브라우저 탭 -** 탭은 기본적으로 새 창이므로 닫기 이벤트를 캡처하는 것은 이전 인증 흐름에서 시나리오 3에 설명된 것과 동일한 제한 사항을 가집니다. 또한, 사용자가 수동으로 닫은 탭과 로그인 흐름 종료 시 자동으로 닫은 탭을 구별할 방법이 없기 때문에 여기서는 타이머 접근 방식이 가능하지 않다. 여기서 해결 방법은 사용자가 흐름을 취소할 때 AccessEnabler가 &#39;자동&#39;으로 유지되기 위한 것입니다(콜백이 트리거되지 않음). 또한 프로그래머는 특정 작업을 수행할 필요가 없습니다. 사용자는 &quot;다중 인증 요청 오류&quot; 오류를 수신하지 않고 다른 인증 흐름을 시작할 수 있습니다(이 오류는 백그라운드 로그인을 위해 AccessEnabler에서 비활성화됨).
 
-1. **iFrame -** 프로그래머는 이전 인증 흐름(iFrame에서 래퍼 UI 만들기 및 `setSelectedProvider(null)`을(를) 트리거하는 연결된 닫기 단추)에서 시나리오 2에 설명된 접근 방식을 사용할 수 있습니다. 이 접근 방식은 더 이상 강력한 요구 사항이 아니지만(위의 시나리오 1에서 설명한 대로 백그라운드 로그인에 대해 여러 인증 흐름이 허용됨) Adobe은 여전히 이 방식을 권장합니다.
+1. **iFrame -** 프로그래머는 이전 인증 흐름(iFrame에서 래퍼 UI 만들기 및 `setSelectedProvider(null)`을(를) 트리거하는 연결된 닫기 단추)에서 시나리오 2에 설명된 접근 방식을 사용할 수 있습니다. 이 접근 방식은 더 이상 강력한 요구 사항이 아니지만(위의 시나리오 1에서 설명한 대로 백그라운드 로그인에 대해 여러 인증 흐름이 허용됨) Adobe에서는 여전히 이 방식을 권장합니다.
 
 1. **팝업 -** 위의 브라우저 탭 흐름과 동일합니다.
 
@@ -146,7 +146,7 @@ TempPass 흐름에서는 명시적인 사용자 상호 작용 없이 창을 자�
 
 새로 고침 없는 로그인 및 로그아웃을 위해 TempPass를 구현할 때 프로그래머가 알아야 하는 측면은 다음과 같습니다.
 
-- 인증을 시작하기 전에 비 TempPass MVPD에 대해서만 iFrame 또는 팝업 창을 만들어야 합니다. 프로그래머는 MVPD 개체(`setConfig()` / `displayProviderDialog()`에서 반환됨)의 `tempPass` 속성을 읽어 MVPD이 TempPass인지 여부를 감지할 수 있습니다.
+- 인증을 시작하기 전에 비 TempPass MVPD에 대해서만 iFrame 또는 팝업 창을 만들어야 합니다. 프로그래머는 MVPD 개체(`tempPass` / `setConfig()`에서 반환됨)의 `displayProviderDialog()` 속성을 읽어 MVPD이 TempPass인지 여부를 감지할 수 있습니다.
 
 - `createIFrame()` 콜백은 TempPass에 대한 검사를 포함해야 하며 MVPD이 TempPass가 아닌 경우에만 해당 논리를 실행해야 합니다.
 

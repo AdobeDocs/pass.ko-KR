@@ -76,7 +76,7 @@ Chrome 118부터 [DevTools 문제](https://developer.chrome.com/docs/devtools/is
 
 ### 파손 검사
 
-`--test-third-party-cookie-phaseout` 명령줄 플래그를 사용하여 Chrome을 시작하거나 Chrome 118에서 `chrome://flags/`의 `#test-third-party-cookie-phaseout`을(를) 활성화하십시오.
+`--test-third-party-cookie-phaseout` 명령줄 플래그를 사용하여 Chrome을 시작하거나 Chrome 118에서 `#test-third-party-cookie-phaseout`의 `chrome://flags/`을(를) 활성화하십시오.
 
 이렇게 하면 Google Chrome이 타사 쿠키를 차단하도록 설정되며, 종료 후 상태를 가장 잘 시뮬레이션할 수 있도록 향후 기능이 활성화되어 있는지 확인합니다.
 

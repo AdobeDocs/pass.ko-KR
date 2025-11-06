@@ -2,7 +2,7 @@
 title: 대시보드
 description: TVE Dashboard의 홈 페이지에 대해 알아봅니다.
 exl-id: 3073cd86-89f8-4c65-996b-24edda24f25b
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
@@ -31,7 +31,7 @@ ht-degree: 0%
 * **데이터베이스 업데이트**: 현재 환경에 대한 구성 변경 횟수입니다. **변경 로그** 섹션의 자세한 정보에 액세스하려면 [변경 로그 섹션에서 자세히 보기](tve-dashboard-changes-log.md)를 선택하십시오.
 * **ESM 대시보드**: 현재 환경에서의 속성 사용에 대한 심층적인 지표를 제공하는 다가오는 ESM 대시보드를 주시하십시오. 이 기능은 향후 업데이트에서 액세스할 수 있습니다.
 
-![시작 화면](/help/authentication/assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-welcome-panel-view.png)
+![시작 화면](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-welcome-panel-view.png)
 
 *시작 화면*
 
@@ -43,7 +43,7 @@ ht-degree: 0%
 * **푸시한 사람**: 변경을 담당하는 계정입니다.
 * **푸시 날짜**: 변경된 날짜입니다.
 
-![변경 로그의 구성 상태](/help/authentication/assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-configuration-status-panel-view.png)
+![변경 로그의 구성 상태](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-configuration-status-panel-view.png)
 
 *변경 로그의 구성 상태*
 

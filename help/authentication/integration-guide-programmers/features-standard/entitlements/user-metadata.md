@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 > 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-사용자 메타데이터는 MVPD에 의해 유지되고 Adobe Pass 인증 [REST API V2](#apis)을(를) 통해 프로그래머에게 제공되는 사용자별 [특성](#attributes)(예: 우편 번호, 자녀 보호 등급, 사용자 ID 등)을 참조합니다.
+사용자 메타데이터는 MVPD에 의해 유지되고 Adobe Pass 인증 [REST API V2](#attributes)을(를) 통해 프로그래머에게 제공되는 사용자별 [특성](#apis)(예: 우편 번호, 자녀 보호 등급, 사용자 ID 등)을 참조합니다.
 
 사용자 메타데이터는 인증 흐름이 완료된 후에 사용할 수 있게 되지만 특정 메타데이터 속성은 MVPD 및 해당 특정 메타데이터 속성에 따라 인증 흐름 중에 업데이트될 수 있습니다.
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Adobe Pass 인증은 MVPD가 데이터를 다양한 형식으로 제공할 때 사용자 메타데이터 값을 표준화합니다. 또한 특정 특성(예: 우편 번호)의 경우 프로그래머 인증서를 사용하여 값을 [암호화](#encryption)할 수 있습니다.
 
-Adobe Pass 인증을 사용하면 프로그래머가 MVPD 통합에서 사용할 수 있는 사용자 메타데이터를 검토하고 [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)를 통해 [관리](#management)할 수 있습니다.
+Adobe Pass 인증을 사용하면 프로그래머가 MVPD 통합에서 사용할 수 있는 사용자 메타데이터를 검토하고 [Adobe Pass TVE 대시보드](#management)를 통해 [관리](https://experience.adobe.com/#/pass/authentication)할 수 있습니다.
 
 ## 사용자 메타데이터 속성 {#attributes}
 
@@ -34,12 +34,12 @@ Adobe Pass 인증을 사용하면 프로그래머가 MVPD 통합에서 사용할
 | `userID` | 문자열 | &quot;1o7241p&quot; | 아니요 | 계정 식별자. | 속성 값은 가정용 식별자 또는 하위 계정 식별자일 수 있습니다. MVPD이 하위 계정을 지원하고 현재 사용자가 기본 계정 소유자가 아닌 경우 `userID` 값이 `householdID`과(와) 다릅니다. |
 | `upstreamUserID` | 문자열 | &quot;1o7241p&quot; | 아니요 | 동시 모니터링을 위한 계정 식별자. | 속성 값을 사용하여 MVPD 및 프로그래머 사이트 및 앱에서 동시 실행 제한을 적용할 수 있습니다. `upstreamUserID` 값은 대부분의 MVPD에 대한 `userID` 값과 동일합니다. |
 | `householdID` | 문자열 | &quot;1o7241p&quot; | 아니요 | 자녀 보호 계정 식별자. | 속성 값은 가계 사용과 하위 계정 사용을 구분하는 데 사용할 수 있습니다. 경우에 따라 true 등급을 사용할 수 없는 경우 보호자 통제 대용품으로 사용할 수 있으며, 사용자가 가구 계정으로 로그인한 경우 시청할 수 있습니다. 그렇지 않으면 등급이 지정된 콘텐츠가 표시되지 않습니다. MVPD의 표시 방법에 대한 다양한 변형이 있습니다(예: 가구 사용자 ID, 가구 주 ID, 가구 주 플래그 등). MVPD에서 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다. |
-| `primaryOID` | 문자열 | &quot;uuidd1e19ec9-012c-124f-b520-acaf118d16a0&quot; | 아니요 | 계정 식별자. | 속성은 AT&amp;T에만 적용됩니다. `typeID` 값이 &quot;기본&quot;으로 설정된 경우 `primaryOID` 값은 `userID` 값과 동일합니다. |
-| `typeID` | 문자열 | &quot;기본&quot; | 아니요 | 현재 사용자가 기본 또는 보조 계정 소유자인지 여부를 나타내는 속성입니다. | 속성은 AT&amp;T에만 적용됩니다. `typeID` 값이 &quot;기본&quot;으로 설정된 경우 `primaryOID` 값은 `userID` 값과 동일합니다. |
+| `primaryOID` | 문자열 | &quot;uuidd1e19ec9-012c-124f-b520-acaf118d16a0&quot; | 아니요 | 계정 식별자. | 속성은 AT&amp;T에만 적용됩니다. `primaryOID` 값이 &quot;기본&quot;으로 설정된 경우 `userID` 값은 `typeID` 값과 동일합니다. |
+| `typeID` | 문자열 | &quot;기본&quot; | 아니요 | 현재 사용자가 기본 또는 보조 계정 소유자인지 여부를 나타내는 속성입니다. | 속성은 AT&amp;T에만 적용됩니다. `primaryOID` 값이 &quot;기본&quot;으로 설정된 경우 `userID` 값은 `typeID` 값과 동일합니다. |
 | `is_hoh` | 문자열 | &quot;1&quot; | 아니요 | 현재 사용자가 세대주인지 여부를 나타내는 속성. | 속성은 Synacor에 따라 다릅니다. |
 | `hba_status` | 부울 | &quot;true&quot; | 아니요 | 현재 사용자가 HBA를 통해 인증되었는지 여부를 나타내는 속성입니다. |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
 | `allowMirroring` | 부울 | &quot;true&quot; | 아니요 | 현재 디바이스가 화면을 미러링할 수 있는지 여부를 나타내는 속성입니다. | 속성은 스펙트럼에 따라 다릅니다. |
-| `zip` | 배열 | \[&quot;77754&quot;, &quot;12345&quot;\] | 예 | 사용자의 우편 번호입니다. | 속성 값을 사용하여 현지화된 뉴스, 날씨 업데이트 또는 스포츠 이벤트를 전달할 수 있습니다. `zip` 값은 MVPD과 법적 합의가 필요한 중요한 데이터를 나타냅니다. 암호화되면 `zip` 키의 표현은 `Array`이(가) 아닌 `String`이(가) 됩니다. |
+| `zip` | 배열 | \[&quot;77754&quot;, &quot;12345&quot;\] | 예 | 사용자의 우편 번호입니다. | 속성 값을 사용하여 현지화된 뉴스, 날씨 업데이트 또는 스포츠 이벤트를 전달할 수 있습니다. `zip` 값은 MVPD과 법적 합의가 필요한 중요한 데이터를 나타냅니다. 암호화되면 `zip` 키의 표현은 `String`이(가) 아닌 `Array`이(가) 됩니다. |
 | `encryptedZip` | 문자열 | &quot;&quot; | 예 | 사용자의 암호화된 우편 번호입니다. | 속성은 Comcast에만 적용됩니다. |
 | `channelID` | 배열 | \[&quot;channel-1&quot;, &quot;channel-2&quot;\] | 아니요 | 사용자가 볼 수 있는 채널 목록입니다. | 속성 값을 사용하여 여러 네트워크를 집계하는 포털에서 다양한 채널을 필터링할 수 있습니다. 이 사용자 메타데이터 특성 대신 [사전 권한 부여 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md)를 사용하여 사용자가 사용할 수 없는 채널을 필터링하는 것이 좋습니다. |
 | `maxRating` | 오브젝트 | { MPAA: &quot;NR&quot;, VCHIP: &quot;X&quot;, URL: &quot;http://manage.my/parental&quot; } | 아니요 | 현재 사용자의 최대 자녀 보호 등급입니다. | 속성 값을 사용하여 &quot;MPAA&quot; 또는 &quot;VCHIP&quot; 등급을 기반으로 현재 사용자에게 적합하지 않은 콘텐츠를 필터링할 수 있습니다. |
@@ -68,7 +68,7 @@ Adobe Pass 인증을 사용하면 프로그래머가 MVPD 통합에서 사용할
 | RCN | **예** | **예** | **예** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **예(AuthN만 해당)** | **아니요** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** |                                                                                                                                           |
 | 이스트링크 | **아니요** | **예** | **예** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **예(AuthN만 해당)** | **예** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** |                                                                                                                                           |
 | 코게코 | **아니요** | **예** | **예** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** |                                                                                                                                           |
-| 비디오트론 | **아니요** | **예** | **예** | **예*** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | `userID`과(와) 동일한 값으로 `householdID`을(를) 노출합니다. |
+| 비디오트론 | **아니요** | **예** | **예** | **예*** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | `householdID`과(와) 동일한 값으로 `userID`을(를) 노출합니다. |
 | 프록시 Massilon | **예** | **예** | **예** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | 법률 협정에 서명했습니다. |
 | 프록시 Clearleap | **예** | **예** | **예** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **예(AuthN만 해당)** | **아니요** | **예(AuthZ만 해당)** | **예** | **아니요** | **아니요** | 법률 협정에 서명했습니다. |
 | 프록시 GLDS | **아니요** | **예** | **예** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** | **예(AuthN만 해당)** | **아니요** | **아니요** | **아니요** | **아니요** | **아니요** |                                                                                                                                           |
@@ -80,7 +80,7 @@ Adobe Pass 인증을 사용하면 프로그래머가 MVPD 통합에서 사용할
 
 ## 사용자 메타데이터 암호화 {#encryption}
 
-사용자 메타데이터 특성을 암호화하고 해독하려면 프로그래머가 인증서(공개/개인 키 쌍)를 생성하고 [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)를 통해 인증서를 [자체 구성](#management)하거나 Adobe Pass 인증 담당자와 공개 키를 공유해야 합니다.
+사용자 메타데이터 특성을 암호화하고 해독하려면 프로그래머가 인증서(공개/개인 키 쌍)를 생성하고 [Adobe Pass TVE 대시보드](#management)를 통해 인증서를 [자체 구성](https://experience.adobe.com/#/pass/authentication)하거나 Adobe Pass 인증 담당자와 공개 키를 공유해야 합니다.
 
 인증서가 올바르게 생성 및 구성되었는지 확인하려면 아래 단계를 따르십시오.
 
@@ -142,7 +142,7 @@ Adobe Pass 인증을 사용하면 프로그래머가 MVPD 통합에서 사용할
      openssl x509 -in mycompany-license-temp.pem -inform PEM -out mycompany-license.pem -outform PEM
      ```
 
-1. PEM 파일을 사용하여 [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)를 통해 인증서를 [구성](#management)하거나 Adobe Pass 인증 담당자에게 PEM 파일을 보냅니다.
+1. PEM 파일을 사용하여 [Adobe Pass TVE 대시보드](#management)를 통해 인증서를 [구성](https://experience.adobe.com/#/pass/authentication)하거나 Adobe Pass 인증 담당자에게 PEM 파일을 보냅니다.
 
    * [Adobe Pass TVE 대시보드](https://experience.adobe.com/#/pass/authentication)를 통해 인증서를 관리하는 방법에 대한 자세한 내용은 다음 섹션을 참조하십시오.
 

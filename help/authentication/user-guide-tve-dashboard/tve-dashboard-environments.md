@@ -2,7 +2,7 @@
 title: TVE 대시보드 환경
 description: TVE Dashboard에서 다양한 환경의 사용 및 작업을 이해합니다.
 exl-id: 591becb8-2f6c-46e0-b108-c64e6df69f89
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%
@@ -60,7 +60,7 @@ Adobe Pass 인증 TVE 대시보드 환경 간에 전환하는 단계를 따릅�
 
 1. 왼쪽 패널 상단의 **환경** 드롭다운 메뉴에서 필요한 스테이징 또는 프로덕션 환경을 선택합니다.
 
-   ![TVE 대시보드 환경 드롭다운](/help/authentication/assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-environment-menu.png)
+   ![TVE 대시보드 환경 드롭다운](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-environment-menu.png)
 
    *Adobe Pass 인증 TVE 대시보드 환경 드롭다운 메뉴*
 

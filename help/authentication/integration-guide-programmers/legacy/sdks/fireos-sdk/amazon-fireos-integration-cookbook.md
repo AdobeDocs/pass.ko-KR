@@ -2,7 +2,7 @@
 title: Amazon FireOS 통합 Cookbook
 description: Amazon FireOS 통합 Cookbook
 exl-id: 1982c485-f0ed-4df3-9a20-9c6a928500c2
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '1447'
 ht-degree: 0%
@@ -107,7 +107,7 @@ Amazon FireOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 �
       - `authorizedResources` 매개 변수는 사용자가 볼 수 있는 권한을 가진 리소스를 제공합니다.
 
 
-![](/help//authentication/assets/android-entitlement-flows.png)
+![](../../../../assets/android-entitlement-flows.png)
 
 
 ### B. 시작 흐름 {#startup_flow}

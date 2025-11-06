@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 63dc9636f74f8eee1af6205c4d31a01df4503050
 workflow-type: tm+mt
-source-wordcount: '1212'
+source-wordcount: '1279'
 ht-degree: 3%
 
 ---
@@ -57,17 +57,17 @@ ht-degree: 3%
    - [MVPD 킥스타트 안내서](kickstart/mvpd-kickstart-guide.md)
    - [지원 절차 FAQ](kickstart/support-procedures-faqs.md)
 - 프로그래머를 위한 통합 안내서 {#integration-guide-programmers}
-   - [프로그래머 통합 안내서](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md)
+   - [프로그래머 통합 안내서](integration-guide-programmers/programmer-integration-guide-overview.md)
    - [최소 시스템 요구 사항](integration-guide-programmers/minimum-system-requirements.md)
    - [조절 메커니즘](integration-guide-programmers/throttling-mechanism.md)
    - REST API {#rest-apis}
       - REST API DCR {#rest-api-dcr}
-         - [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+         - [동적 클라이언트 등록 개요](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
          - [동적 클라이언트 등록 용어집](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-glossary.md)
          - [동적 클라이언트 등록 FAQ](integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-faqs.md)
          - API {#rest-api-dcr-apis}
             - [클라이언트 자격 증명 검색](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md)
-            - [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md)
+            - [액세스 토큰 검색](integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md)
          - 플로우 {#rest-api-dcr-flows}
             - [동적 클라이언트 등록 흐름](integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)
       - REST API V2 {#rest-api-v2}
@@ -137,12 +137,33 @@ ht-degree: 3%
          - [미디어 토큰](integration-guide-programmers/features-standard/entitlements/media-tokens.md)
       - 오류 보고 {#error-reporting}
          - [향상된 오류 코드](integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md)
+      - 단일 사인온 액세스 {#sso-access}
+         - Partner Single Sign-On {#partner-sso}
+            - Apple Single Sign-On {#apple-sso}
+               - [Apple SSO 개요](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-overview.md)
+               - [Apple SSO Cookbook(REST API V2)](integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md)
+         - Platform Single Sign-On {#platform-sso}
+            - Amazon Single Sign-On {#amazon-sso}
+               - [Amazon SSO Cookbook(REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+            - Roku 단일 사인온 {#roku-sso}
+               - [Roku SSO Cookbook(REST API V2)](integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
+      - 홈 기반 인증 액세스 {#hba-access}
+         - [홈 기반 인증(HBA)](integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)
       - 개인 정보 보호 지원 {#privacy-support}
-         - [개인 정보 보호 지원 개요](integration-guide-programmers/features-standard/privacy-support/privacy-supp-overview.md)
-         - [개인 정보 보호 요청을 하는 방법](integration-guide-programmers/features-standard/privacy-support/make-privacy-req.md)
+         - [개인 정보 보호 지원 개요](integration-guide-programmers/features-premium/privacy-support/privacy-supp-overview.md)
+         - [개인 정보 보호 요청을 하는 방법](integration-guide-programmers/features-premium/privacy-support/make-privacy-req.md)
+   - Premium 기능 {#features-premium}
+      - 임시 액세스 {#temporary-access}
+         - [TempPass 기능](integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
+      - 액세스 성능 저하 {#degraded-access}
+         - [성능 저하 기능](integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
+      - ESM {#esm}
+         - [권한 부여 서비스 모니터링 개요](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md)
+         - [권한 부여 서비스 모니터링 API](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
+         - [서버측 지표](integration-guide-programmers/features-premium/esm/understanding-serverside-metrics.md)
       - 분석 {#analytics}
-         - [Adobe Pass 인증 서버측 데이터를 Adobe Analytics에 통합](integration-guide-programmers/features-standard/analytics/integrate-authn-servr-data-analytics.md)
-         - [Adobe Pass 인증에서 Experience Cloud ID 사용](/help/authentication/integration-guide-programmers/features-standard/analytics/exp-cloud-id-authn.md)
+         - [Adobe Pass 인증 서버측 데이터를 Adobe Analytics에 통합](integration-guide-programmers/features-premium/analytics/integrate-authn-servr-data-analytics.md)
+         - [Adobe Pass 인증에서 Experience Cloud ID 사용](integration-guide-programmers/features-premium/analytics/exp-cloud-id-authn.md)
    - 레거시 {#legacy}
       - (기존) REST API V1 {#rest-api-v1}
          - [(기존) REST API V1 개요](integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)

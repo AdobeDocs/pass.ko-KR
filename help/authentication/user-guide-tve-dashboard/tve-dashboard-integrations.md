@@ -2,7 +2,7 @@
 title: TVE 대시보드 통합
 description: 채널과 MVPD 간의 통합 및 통합 관리 방법에 대해 알아봅니다.
 exl-id: 0add340b-120c-4e82-8e3c-6c190d77cf7e
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '2093'
 ht-degree: 0%
@@ -24,7 +24,7 @@ TVE 대시보드의 **통합** 섹션에서 채널과 MVPD 간의 통합에 대�
 * 채널 ID가 있는 채널 이름
 * MVPD 표시 이름 및 MVPD ID
 
-![기존 통합 목록](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integrations-list.png)
+![기존 통합 목록](../assets/tve-dashboard/new-tve-dashboard/integrations/integrations-list.png)
 
 *기존 통합 목록*
 
@@ -49,7 +49,7 @@ TVE 대시보드의 **통합** 섹션에서 채널과 MVPD 간의 통합에 대�
 
 이 섹션에서는 각 드롭다운 메뉴에서 인증, 권한 부여 및 로그아웃 흐름에 사용되는 MVPD의 끝점을 선택할 수 있습니다.
 
-![인증, 권한 부여 및 로그아웃 흐름을 위한 끝점](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-endpoint-selection-panel-view.png)
+![인증, 권한 부여 및 로그아웃 흐름을 위한 끝점](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-endpoint-selection-panel-view.png)
 
 *인증, 권한 부여 및 로그아웃 흐름을 위한 끝점*
 
@@ -87,11 +87,11 @@ TVE 대시보드의 **통합** 섹션에서 채널과 MVPD 간의 통합에 대�
 
 * **알 수 없는 장치**: 현재 메커니즘이 플랫폼을 정확하게 식별할 수 없는 모든 장치에 적용할 수 있는 속성의 값을 설정합니다. 이러한 경우 MVPD에서 정의한 가장 제한적인 규칙을 적용합니다.
 
-  ![플랫폼 및 해당 장치의 범주](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-menu.png)
+  ![플랫폼 및 해당 장치의 범주](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-menu.png)
 
   *플랫폼 및 해당 장치의 범주*
 
-선택 위에서 설명한 각 상속 수준에 사용되는 속성을 살펴보기 위해 각 속성의 오른쪽에 있는 <img alt= "상속 체인 아이콘" src="/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-inheritance-chain-icon.svg" width="25"> 아이콘
+선택 위에서 설명한 각 상속 수준에 사용되는 속성을 살펴보기 위해 각 속성의 오른쪽에 있는 <img alt= "상속 체인 아이콘" src="../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-inheritance-chain-icon.svg" width="25"> 아이콘
 
 #### 가장 많이 사용되는 비즈니스 플로우 {#most-used-flows}
 
@@ -117,7 +117,7 @@ TVE 대시보드의 **통합** 섹션에서 채널과 MVPD 간의 통합에 대�
    >
    >플랫폼 범주 또는 특정 플랫폼에 대한 **AuthN TTL** 및 **AuthZ TTL**&#x200B;의 기간을 변경하려면 그에 따라 플랫폼을 선택하십시오.
 
-   ![모든 플랫폼에서 AuthN TTL AuthZ TTL 기간 변경](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-authn-ttl-authz-ttl-properties.png)
+   ![모든 플랫폼에서 AuthN TTL AuthZ TTL 기간 변경](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-authn-ttl-authz-ttl-properties.png)
 
    *모든 플랫폼에서 AuthN TTL AuthZ TTL 기간 변경*
 
@@ -143,7 +143,7 @@ TVE 대시보드의 **통합** 섹션에서 채널과 MVPD 간의 통합에 대�
 
 1. **플랫폼 설정**&#x200B;에서 SSO(Single Sign-On)를 활성화할 특정 플랫폼 또는 플랫폼 범주를 선택하십시오.
 
-   ![특정 플랫폼에 대해 SSO(Single Sign-On) 사용](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-single-sign-on-properties.png)
+   ![특정 플랫폼에 대해 SSO(Single Sign-On) 사용](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-single-sign-on-properties.png)
 
    *특정 플랫폼에 대해 SSO(Single Sign-On) 사용*
 
@@ -171,7 +171,7 @@ OAuth2 기반 MVPD에 대한 홈 기반 인증을 활성화하거나 비활성�
 
 1. **플랫폼 설정**&#x200B;에서 홈 기반 인증을 사용할 특정 플랫폼 또는 플랫폼 범주를 선택하십시오.
 
-   ![특정 플랫폼에 대해 홈 기반 인증 사용](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-attempt-hba-properties.png)
+   ![특정 플랫폼에 대해 홈 기반 인증 사용](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-attempt-hba-properties.png)
 
    *특정 플랫폼에 대해 홈 기반 인증 사용*
 
@@ -204,7 +204,7 @@ OAuth2 기반 MVPD에 대한 홈 기반 인증을 활성화하거나 비활성�
 
 **Preflight 최대 리소스**&#x200B;에서 MVPD에 대해 동의한 제한을 지정할 수 있는 새 특성을 추가합니다.
 
-![Preflight 최대 리소스 속성 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-preflight-max-resources-properties.png)
+![Preflight 최대 리소스 속성 추가](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-preflight-max-resources-properties.png)
 
 *Preflight 최대 리소스 속성 추가*
 
@@ -216,7 +216,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
 
 이러한 속성에 대한 다른 값은 장치 플랫폼 및 원하는 사용자 경험에 따라 동일한 MVPD에 사용할 수 있습니다.
 
-![표시 이름 또는 로고 URL 속성 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-display-name-logo-url-properties.png)
+![표시 이름 또는 로고 URL 속성 추가](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-display-name-logo-url-properties.png)
 
 *표시 이름 또는 로고 URL 속성 추가*
 
@@ -228,7 +228,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
 
 **집계당 인증**&#x200B;을 추가하면 각 채널에 대한 SSO(Single Sign-On)가 효과적으로 중단됩니다.
 
-![집계 속성별 인증 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-auth-per-aggregator-properties.png)
+![집계 속성별 인증 추가](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-auth-per-aggregator-properties.png)
 
 *집계 속성별 인증 추가*
 
@@ -238,7 +238,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
 
 #### 속성 삭제 {#delete-properties}
 
-선택 더 이상 필요하지 않은 속성을 삭제하려면 각 속성의 오른쪽에 있는 <img alt= "속성 삭제 단추" src="/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-delete-property-icon.svg" width="25"> 아이콘을 클릭합니다.
+선택 더 이상 필요하지 않은 속성을 삭제하려면 각 속성의 오른쪽에 있는 <img alt= "속성 삭제 단추" src="../assets/tve-dashboard/new-tve-dashboard/integrations/integration-platform-settings-delete-property-icon.svg" width="25"> 아이콘을 클릭합니다.
 
 >[!NOTE]
 >
@@ -271,7 +271,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
 
 **활성화됨**: 이 열에서 드롭다운 메뉴에서 각각 **예** 또는 **아니요**&#x200B;를 선택하여 API에서 매개 변수를 활성화하거나 비활성화할 수 있습니다.
 
-![사용자 메타데이터에 사용할 수 있는 매개 변수](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-user-metadata-panel-view.png)
+![사용자 메타데이터에 사용할 수 있는 매개 변수](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-user-metadata-panel-view.png)
 
 *사용자 메타데이터에 사용할 수 있는 매개 변수*
 
@@ -283,7 +283,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
 
 1. **통합** 섹션의 오른쪽 상단에서 **새 통합 만들기**&#x200B;를 선택합니다.
 
-   ![새 통합 만들기](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-create-new-integration-button.png)
+   ![새 통합 만들기](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-create-new-integration-button.png)
 
    *새 통합 만들기*
 
@@ -293,7 +293,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
 
    **채널 선택** 드롭다운 메뉴에서 **채널**&#x200B;을(를) 선택하여 새 통합을 추가하십시오. 채널을 선택한 후에는 **MVPD 선택** 드롭다운 메뉴에서 필요한 **MVPD**&#x200B;을(를) 선택하여 선택한 채널과 통합합니다.
 
-   ![채널 및 MVPD 선택](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-channel-and-mvpd-panel-view.png)
+   ![채널 및 MVPD 선택](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-channel-and-mvpd-panel-view.png)
 
    *채널 및 MVPD 선택*
 
@@ -305,7 +305,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
    >
    >MVPD에서 명시적으로 지정하지 않는 한 모든 흐름에서 기본 끝점을 변경하지 마십시오.
 
-   ![끝점 &#x200B;](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-endpoints-panel-view.png) 선택
+   ![끝점 ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-endpoints-panel-view.png) 선택
 
    *끝점 선택*
 
@@ -319,7 +319,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
 
    예를 들어 다음 이미지의 MVPD 로그인 페이지에서 공동 브랜딩을 위해 **AuthN TTL** 또는 **파트너 ID**(채널 ID)를 편집할 수 있습니다.
 
-   ![추가 정보 편집](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-additional-information-panel-view.png)
+   ![추가 정보 편집](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-additional-information-panel-view.png)
 
    *추가 정보 편집*
 
@@ -338,7 +338,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
 
 1. 선택한 통합의 오른쪽 상단에서 사용할 수 있는 토글을 비활성화합니다.
 
-   ![통합 비활성화](/help/authentication/assets/tve-dashboard/new-tve-dashboard/integrations/integration-enabled-disabled-button.png)
+   ![통합 비활성화](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-enabled-disabled-button.png)
 
    *통합 비활성화*
 

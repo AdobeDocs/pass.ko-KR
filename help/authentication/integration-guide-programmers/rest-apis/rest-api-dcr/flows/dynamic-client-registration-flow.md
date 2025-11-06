@@ -2,7 +2,7 @@
 title: 동적 클라이언트 등록 흐름
 description: 동적 클라이언트 등록 흐름
 exl-id: d881cf0a-de09-4b1d-a094-d5490f944796
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
 source-wordcount: '564'
 ht-degree: 0%
@@ -25,8 +25,8 @@ ht-degree: 0%
 
 Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충족되는지 확인하십시오.
 
-* 클라이언트 담당자는 [등록된 응용 프로그램 관리](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#manage-registered-applications) 섹션에 설명된 대로 등록된 응용 프로그램을 만들어야 합니다.
-* 클라이언트 담당자는 [소프트웨어 문 관리](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#manage-software-statements) 섹션에 설명된 대로 소프트웨어 문을 다운로드하여 포함해야 합니다.
+* 클라이언트 담당자는 [등록된 응용 프로그램 관리](../dynamic-client-registration-overview.md#manage-registered-applications) 섹션에 설명된 대로 등록된 응용 프로그램을 만들어야 합니다.
+* 클라이언트 담당자는 [소프트웨어 문 관리](../dynamic-client-registration-overview.md#manage-software-statements) 섹션에 설명된 대로 소프트웨어 문을 다운로드하여 포함해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -38,7 +38,7 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
 
 다음 다이어그램에 표시된 대로 지정된 단계에 따라 Adobe Pass으로 보호된 API에 액세스합니다.
 
-![Adobe Pass으로 보호된 API에 액세스](/help//authentication/assets/dcr-api/dcr-api-access-adobe-pass-protected-apis.png)
+![Adobe Pass으로 보호된 API에 액세스](../../../../assets/dcr-api/dcr-api-access-adobe-pass-protected-apis.png)
 
 *Adobe Pass으로 보호된 API에 액세스*
 
@@ -76,7 +76,7 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
 
    >[!IMPORTANT]
    >
-   > 자세한 내용은 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#request) API 설명서를 참조하십시오.
+   > 자세한 내용은 [액세스 토큰 검색](../apis/dynamic-client-registration-apis-retrieve-access-token.md#request) API 설명서를 참조하십시오.
    >
    > * _,_ 및 `client_id`과(와) 같은 모든 `client_secret`필수`grant_type` 매개 변수
    > * _,_&#x200B;과(와) 같은 모든 `Content-Type`required`X-Device-Info` 헤더
@@ -86,7 +86,7 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
 
    >[!IMPORTANT]
    >
-   > 액세스 토큰 응답에 제공된 정보에 대한 자세한 내용은 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#success) API 설명서를 참조하십시오.
+   > 액세스 토큰 응답에 제공된 정보에 대한 자세한 내용은 [액세스 토큰 검색](../apis/dynamic-client-registration-apis-retrieve-access-token.md#success) API 설명서를 참조하십시오.
    >
    > <br/>
    >
@@ -96,7 +96,7 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
    >
    > <br/>
    >
-   > 유효성 검사가 실패하면 오류 응답이 생성되고 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#error) API 설명서를 준수하는 추가 정보가 제공됩니다.
+   > 유효성 검사가 실패하면 오류 응답이 생성되고 [액세스 토큰 검색](../apis/dynamic-client-registration-apis-retrieve-access-token.md#error) API 설명서를 준수하는 추가 정보가 제공됩니다.
 
    >[!TIP]
    >

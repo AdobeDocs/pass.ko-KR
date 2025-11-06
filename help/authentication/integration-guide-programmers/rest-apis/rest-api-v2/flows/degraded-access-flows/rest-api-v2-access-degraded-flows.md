@@ -2,7 +2,7 @@
 title: 액세스 흐름이 저하됨
 description: REST API V2 - 액세스 흐름 성능 저하
 exl-id: 9276f5d9-8b1a-4282-8458-0c1e1e06bcf5
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
 source-wordcount: '1615'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 성능 저하를 통해 특정 MVPD 인증 및 권한 부여 끝점을 일시적으로 우회할 수 있습니다. 일반적으로 프로그래머는 이 작업을 시작하지만 누가 열화 이벤트를 트리거하는지에 관계없이, 작업은 영향을 받는 MVPD와 함께 만들어진 사전 배열에 따라 달라집니다.
 
-성능 저하 기능에 대한 자세한 내용은 [성능 저하](/help/premium-workflow/degraded-access/degradation-feature.md) 설명서를 참조하십시오.
+성능 저하 기능에 대한 자세한 내용은 [성능 저하](../../../../features-premium/degraded-access/degradation-feature.md) 설명서를 참조하십시오.
 
 액세스 흐름이 저하되면 다음 시나리오를 쿼리할 수 있습니다.
 
@@ -55,7 +55,7 @@ ht-degree: 0%
 
 다음 다이어그램에 표시된 대로 성능 저하가 적용되는 동안 인증 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![저하가 적용되는 동안 인증 수행](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-perform-authentication-while-degradation-is-applied-flow.png)
+![저하가 적용되는 동안 인증 수행](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-perform-authentication-while-degradation-is-applied-flow.png)
 
 *저하가 적용되는 동안 인증 수행*
 
@@ -123,7 +123,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 성능 저하가 적용되는 동안 인증 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![저하가 적용되는 동안 권한 부여 결정 검색](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-authorization-decisions-while-degradation-is-applied-flow.png)
+![저하가 적용되는 동안 권한 부여 결정 검색](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-authorization-decisions-while-degradation-is-applied-flow.png)
 
 *저하가 적용되는 동안 권한 부여 결정 검색*
 
@@ -189,7 +189,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 성능 저하가 적용되는 동안 사전 인증 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![저하가 적용되는 동안 사전 인증 결정을 검색합니다](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-preauthorization-decisions-while-degradation-is-applied-flow.png)
+![저하가 적용되는 동안 사전 인증 결정을 검색합니다](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-preauthorization-decisions-while-degradation-is-applied-flow.png)
 
 *저하가 적용되는 동안 사전 인증 결정을 검색합니다*
 
@@ -263,7 +263,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 저하가 적용되는 동안 특정 MVPD에 대한 프로필 검색 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![저하가 적용되는 동안 프로필 검색](/help/authentication/assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-profile-while-degradation-is-applied-flow.png)
+![저하가 적용되는 동안 프로필 검색](../../../../../assets/rest-api-v2/flows/degraded-access-flows/rest-api-v2-retrieve-profile-while-degradation-is-applied-flow.png)
 
 *저하가 적용되는 동안 프로필 검색*
 

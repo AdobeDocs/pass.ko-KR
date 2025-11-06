@@ -2,7 +2,7 @@
 title: 추적 방지 평가 Apple Safari
 description: 추적 방지 평가 Apple Safari
 exl-id: a3362020-92ff-4232-b923-e462868730d5
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
 workflow-type: tm+mt
 source-wordcount: '1849'
 ht-degree: 0%
@@ -33,7 +33,7 @@ AccessEnabler JavaScript SDK v2(버전 2.x), v3(버전 3.x), v4(버전 4.x)의 �
 
 이러한 제한을 완화하려면 사용자에게 Safari 10 브라우저 개인 정보 설정을 변경하고, 아래 이미지에 표시된 대로 기본 설정에서 브라우저의 개인 정보 탭에 있는 &quot;**쿠키 및 웹 사이트 데이터**&quot; 항목에 대해 &quot;**항상 허용**&quot; 옵션을 사용할 수 있습니다.
 
-![](/help/authentication/assets/always-allow-safari10.png)
+![](../../../assets/always-allow-safari10.png)
 
 
 ## Safar 11 {#safari11}
@@ -64,12 +64,12 @@ AccessEnabler JavaScript SDK v2(버전 2.x)의 경우 라이브러리가 위에�
 
 * Mac OS X High Sierra 이상의 경우: 아래 이미지에 표시된 대로 기본 설정에서 브라우저의 개인 정보 탭에서 &quot;**웹 사이트 추적**&quot; 항목에 대한 &quot;**사이트 간 추적 방지**&quot; 옵션의 선택을 취소합니다.
 
-  ![](/help/authentication/assets/uncheck-prvnt-cr-st-tr-safari11.png)
+  ![](../../../assets/uncheck-prvnt-cr-st-tr-safari11.png)
 
 
 * Mac OS X Sierra 및 이전 버전의 경우: 아래 이미지에 표시된 대로 환경 설정에서 브라우저의 개인 정보 탭에서 &quot;**쿠키 및 웹 사이트 데이터**&quot; 항목에 대한 &quot;**항상 허용**&quot; 옵션을 선택합니다.
 
-  ![](/help/authentication/assets/always-allow-safari11.png)
+  ![](../../../assets/always-allow-safari11.png)
 
 ## 사파리 12 {#safari12}
 
@@ -126,14 +126,14 @@ AccessEnabler JavaScript SDK v2(버전 2.x)의 경우 라이브러리가 위에�
 
 이 글을 쓰는 순간에 이용 가능하거나 가능한 알려진 완화는 없다. Apple은 Safari 12(`https://webkit.org/blog/8124/introducing-storage-access-api`)에 &quot;저장소 액세스 API&quot;를 도입했지만 현재 구현은 localStorage에 적용되지 않고 쿠키에만 적용됩니다. 또한 API를 사용하려면 사용자 상호 작용이 필요하며, API를 사용하면 아래 대화 상자와 유사한 권한 대화 상자가 표시됩니다.
 
-![](/help/authentication/assets/permission-dialog-apple.png)
+![](../../../assets/permission-dialog-apple.png)
 
 
 이 시점에서는 이러한 Safari 요구 사항/프롬프트가 UX 요구 사항과 일치하지 않으며, 다른 브라우저에서와 같이 일관된 비헤이비어가 없습니다. 여기서 SSO는 일단 공통 도메인 localStorage에 토큰을 저장하면 &quot;작동&quot;합니다.
 
 **임시 통과**
 
-개별화 문제를 완화하고 사용자 상호 작용을 하려면 대화형 방식으로 **[프로모션 임시 패스](/help/premium-workflow/temporary-access/temp-pass-feature.md#promotional-temp-pass)**&#x200B;를 사용하고 사용자에 대한 하나 이상의 추가 정보(예: 이메일 주소)를 제공하는 것이 좋습니다.
+개별화 문제를 완화하고 사용자 상호 작용을 하려면 대화형 방식으로 **[프로모션 임시 패스](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass)**&#x200B;를 사용하고 사용자에 대한 하나 이상의 추가 정보(예: 이메일 주소)를 제공하는 것이 좋습니다.
 
 ## 사파리 13 {#safari13}
 
@@ -164,8 +164,8 @@ AccessEnabler JavaScript SDK v2(버전 2.x)의 경우 라이브러리가 위에�
 
 * Mac OS X High Sierra 이상의 경우: 아래 이미지에 표시된 대로 기본 설정에서 브라우저의 개인 정보 탭에서 &quot;**웹 사이트 추적**&quot; 항목에 대한 &quot;**사이트 간 추적 방지**&quot; 옵션의 선택을 취소합니다.
 
-  ![](/help/authentication/assets/prvnt-cross-site-tr-safari13.png)
+  ![](../../../assets/prvnt-cross-site-tr-safari13.png)
 
 * Mac OS X Sierra 및 이전 버전의 경우: 아래 이미지에 표시된 대로 기본 설정에서 브라우저의 개인 정보 탭에 있는 &quot;</span>쿠키 및 웹 사이트 데이터&#x200B;**&quot; 항목에 대한 &quot;**&#x200B;항상 허용&#x200B;**&quot; 옵션을 선택합니다.**
 
-  ![](/help/authentication/assets/always-allow-safari13.png)
+  ![](../../../assets/always-allow-safari13.png)

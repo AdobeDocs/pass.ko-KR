@@ -2,7 +2,7 @@
 title: REST API V2 Cookbook(클라이언트-서버)
 description: REST API V2 Cookbook(클라이언트-서버)
 exl-id: 6a5a89d2-ea54-4f9c-9505-e575ced4301c
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
 source-wordcount: '1833'
 ht-degree: 0%
@@ -107,7 +107,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 스트리밍 �
 * **시나리오 2:** 기존 프로필이 없습니다. 스트리밍 응용 프로그램은 [사용자 인증](#step-3-authenticate-the-user)을 위해 다음 단계로 진행할 수 있습니다.
 
 
-* **시나리오 3:** 기존 프로필이 없습니다. 스트리밍 응용 프로그램에서 [TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한을 제공할 수 있습니다.
+* **시나리오 3:** 기존 프로필이 없습니다. 스트리밍 응용 프로그램에서 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한을 제공할 수 있습니다.
 
    * 이 시나리오는 이 문서의 범위를 벗어납니다. 자세한 내용은 [임시 액세스 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/temporary-access-flows/rest-api-v2-access-temporary-flows.md) 설명서를 참조하세요.
 
@@ -136,7 +136,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 스트리밍 �
 
    * 스트리밍 응용 프로그램은 다음 조건에서 **폴링을 시작** 메커니즘을 시작해야 합니다.
 
-      * **기본(화면) 응용 프로그램 내에서 수행되는 인증:** 브라우저 구성 요소가 `redirectUrl`세션[&#x200B; 끝점 요청에서 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 매개 변수에 대해 지정된 URL을 로드한 후 사용자가 최종 대상 페이지에 도달하면 기본(스트리밍) 응용 프로그램에서 폴링을 시작해야 합니다.
+      * **기본(화면) 응용 프로그램 내에서 수행되는 인증:** 브라우저 구성 요소가 `redirectUrl`세션[ 끝점 요청에서 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 매개 변수에 대해 지정된 URL을 로드한 후 사용자가 최종 대상 페이지에 도달하면 기본(스트리밍) 응용 프로그램에서 폴링을 시작해야 합니다.
 
       * **보조(화면) 응용 프로그램 내에서 수행되는 인증:** 기본(스트리밍) 응용 프로그램은 사용자가 인증 프로세스를 시작하는 즉시([세션](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 끝점 응답을 받고 인증 코드를 사용자에게 표시한 후) 폴링을 시작해야 합니다.
 
@@ -144,7 +144,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 스트리밍 �
 
       * **인증 성공:** 사용자의 프로필 정보를 성공적으로 검색하여 인증 상태를 확인합니다. 이 시점에서는 더 이상 폴링이 필요하지 않습니다.
 
-      * **인증 세션 및 코드 만료:** `notAfter`세션[&#x200B; 끝점 응답에서 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 타임스탬프(예: 30분)에 표시된 대로 인증 세션 및 코드가 만료됩니다. 이 경우 사용자는 인증 프로세스를 다시 시작해야 하며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
+      * **인증 세션 및 코드 만료:** `notAfter`세션[ 끝점 응답에서 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 타임스탬프(예: 30분)에 표시된 대로 인증 세션 및 코드가 만료됩니다. 이 경우 사용자는 인증 프로세스를 다시 시작해야 하며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
 
       * **새 인증 코드 생성됨:** 사용자가 기본(화면) 장치에서 새 인증 코드를 요청하면 기존 세션이 더 이상 유효하지 않으며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
 

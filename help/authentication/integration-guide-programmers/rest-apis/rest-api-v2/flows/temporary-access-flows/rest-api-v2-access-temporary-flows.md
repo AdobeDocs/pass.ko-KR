@@ -2,7 +2,7 @@
 title: 임시 액세스 흐름
 description: REST API V2 - 임시 액세스 흐름
 exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
 source-wordcount: '3223'
 ht-degree: 0%
@@ -25,7 +25,7 @@ ht-degree: 0%
 
 TempPass를 사용하면 프로그래머가 사용자에게 유효한 MVPD 계정으로 인증하도록 요청하지 않고도 보호된 콘텐츠에 일시적으로 액세스할 수 있습니다.
 
-TempPass 기능에 대한 자세한 내용은 [TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md) 설명서를 참조하십시오.
+TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-premium/temporary-access/temp-pass-feature.md) 설명서를 참조하십시오.
 
 임시 액세스 흐름을 사용하면 다음 시나리오를 쿼리할 수 있습니다.
 
@@ -58,7 +58,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](/help/premium-workflow/
 
 다음 다이어그램과 같이 기본 TempPass를 사용하여 인증 플로우를 구현하려면 지정된 단계를 따르십시오.
 
-![기본 TempPass를 사용하여 인증 결정 검색](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-using-basic-temppass-flow.png)
+![기본 TempPass를 사용하여 인증 결정 검색](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-using-basic-temppass-flow.png)
 
 *기본 TempPass를 사용하여 인증 결정 검색*
 
@@ -127,7 +127,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](/help/premium-workflow/
 
 다음 다이어그램과 같이 프로모션 TempPass를 사용하여 인증 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![프로모션 TempPass를 사용하여 인증 결정 검색](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-using-promotional-temppass-flow.png)
+![프로모션 TempPass를 사용하여 인증 결정 검색](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-using-promotional-temppass-flow.png)
 
 *프로모션 TempPass를 사용하여 인증 결정 검색*
 
@@ -205,7 +205,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](/help/premium-workflow/
 
 다음 다이어그램과 같이 프로모션 TempPass를 사용하여 최대 수의 리소스를 사용할 때 인증 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![프로모션 TempPass를 사용하여 최대 리소스 수를 사용합니다](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-consume-maximum-number-of-resources-using-promotional-temppass-flow.png)
+![프로모션 TempPass를 사용하여 최대 리소스 수를 사용합니다](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-consume-maximum-number-of-resources-using-promotional-temppass-flow.png)
 
 *프로모션 TempPass를 사용하여 최대 리소스 수를 사용합니다*
 
@@ -379,7 +379,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](/help/premium-workflow/
 
 다음 다이어그램과 같이 기본 또는 프로모션 TempPass가 만료되는 경우 지정된 단계에 따라 인증 플로우를 구현합니다.
 
-![기본 또는 프로모션 TempPass가 만료되면 인증 결정 검색](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires-flow.png)
+![기본 또는 프로모션 TempPass가 만료되면 인증 결정 검색](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-authorization-decisions-when-basic-or-promotional-temppass-expires-flow.png)
 
 *기본 또는 프로모션 TempPass가 만료되면 인증 결정 검색*
 
@@ -462,7 +462,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](/help/premium-workflow/
 
 지정된 단계에 따라 다음 다이어그램과 같이 기본 TempPass에 대한 프로필 검색 플로우를 구현합니다.
 
-![기본 TempPass에 대한 프로필 검색](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-profile-for-basic-temppass-flow.png)
+![기본 TempPass에 대한 프로필 검색](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-profile-for-basic-temppass-flow.png)
 
 *기본 TempPass에 대한 프로필 검색*
 
@@ -533,7 +533,7 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](/help/premium-workflow/
 
 다음 다이어그램과 같이 프로모션 TempPass에 대한 프로필 검색 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![프로모션 TempPass에 대한 프로필 검색](/help/authentication/assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-profile-for-promotional-temppass-flow.png)
+![프로모션 TempPass에 대한 프로필 검색](../../../../../assets/rest-api-v2/flows/temporary-access-flows/rest-api-v2-retrieve-profile-for-promotional-temppass-flow.png)
 
 *프로모션 TempPass에 대한 프로필 검색*
 

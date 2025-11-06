@@ -2,7 +2,7 @@
 title: 기본 인증 - 기본 애플리케이션 - 플로우
 description: REST API V2 - 기본 권한 부여 - 기본 애플리케이션 - 흐름
 exl-id: 46bc9326-966e-44fc-8546-2f58be01b7bc
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
@@ -39,7 +39,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
 다음 다이어그램과 같이 기본 애플리케이션 내에서 수행된 특정 MVPD을 사용하여 기본 권한 부여 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![특정 mvpd를 사용하여 권한 부여 결정 검색](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-authorization-decisions-within-primary-application-using-specific-mvpd.png)
+![특정 mvpd를 사용하여 권한 부여 결정 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-authorization-decisions-within-primary-application-using-specific-mvpd.png)
 
 *특정 mvpd를 사용하여 권한 부여 결정 검색*
 

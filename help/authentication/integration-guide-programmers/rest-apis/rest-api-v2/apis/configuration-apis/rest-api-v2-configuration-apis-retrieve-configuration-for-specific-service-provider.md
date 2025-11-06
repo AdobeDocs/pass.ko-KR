@@ -2,7 +2,7 @@
 title: 특정 서비스 공급자에 대한 구성 검색
 description: REST API V2 - 특정 서비스 공급자에 대한 구성 검색
 exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
-source-git-commit: 1c96904f67507ad127c29628963d74a9fb010e99
+source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
 source-wordcount: '728'
 ht-degree: 2%
@@ -229,7 +229,7 @@ ht-degree: 2%
                         <li><b>id</b><br/>온보딩 프로세스 중에 ID 공급자와 연결된 내부 고유 식별자입니다.</li>
                         <li><b>displayName</b><br/>온보딩 프로세스 중에 ID 공급자와 연결된 상업용(브랜드) 이름입니다.</li>
                         <li><b>logoUrl</b><br>ID 공급자와 연결된 로고를 다운로드할 위치의 URL입니다.</li>
-                        <li><b>isTempPass</b><br/>MVPD이 <a href="/help/premium-workflow/temporary-access/temp-pass-feature.md">TempPass</a> 기능 기능을 제공하도록 디자인되었는지 여부를 지정하는 플래그입니다.</li>
+                        <li><b>isTempPass</b><br/>MVPD이 <a href="../../../../features-premium/temporary-access/temp-pass-feature.md">TempPass</a> 기능 기능을 제공하도록 디자인되었는지 여부를 지정하는 플래그입니다.</li>
                         <li><b>isProxy</b><br/>MVPD이 프록시 처리된 MVPD인지 여부를 지정하는 플래그입니다.</li>
                         <li><b>boardingStatus</b><br/>ID 공급자가 Single Sign-On 흐름을 위해 스트리밍 장치 플랫폼에서 온보딩되는지 여부를 지정하는 상태입니다.</li>
                         <li><b>platformMappingId</b><br/>SSO(Single Sign-On) 흐름을 위해 스트리밍 장치 플랫폼에서 ID 공급자와 연결한 내부 고유 식별자입니다.</li>

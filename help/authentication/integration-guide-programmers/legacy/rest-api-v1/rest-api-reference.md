@@ -2,7 +2,7 @@
 title: REST API 참조
 description: Rest api 참조
 exl-id: 67e4639e-db0b-4400-bb81-e214263e8395
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '661'
 ht-degree: 2%
@@ -81,4 +81,4 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 
 ## REST API 보안 {#security}
 
-모든 Adobe Pass 인증 REST API는 보안 통신을 위해 HTTPS 프로토콜을 사용하여 호출해야 합니다. 또한 호출된 API의 대부분은 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 가져온 액세스 토큰을 포함해야 합니다.
+모든 Adobe Pass 인증 REST API는 보안 통신을 위해 HTTPS 프로토콜을 사용하여 호출해야 합니다. 또한 호출된 API의 대부분은 [액세스 토큰 검색](../../rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 가져온 액세스 토큰을 포함해야 합니다.

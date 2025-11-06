@@ -1,6 +1,6 @@
 ---
-title: Adobe 동시 모니터링 서비스 3.1 릴리스 노트
-description: Adobe 동시 모니터링 서비스 3.1 릴리스 노트
+title: Adobe Concurrency Monitoring Services 3.1 릴리스 정보
+description: Adobe Concurrency Monitoring Services 3.1 릴리스 정보
 exl-id: 2c43d6fd-812b-438c-bebf-28b32e5f1935
 source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 1%
 
 ---
 
-# Adobe 동시 모니터링 서비스 3.1 릴리스 노트 {#cm-services-rns}
+# Adobe Concurrency Monitoring Services 3.1 릴리스 정보 {#cm-services-rns}
 
 이 페이지에서는 이 릴리스의 새로운 기능, 변경 사항 및 알려진 문제에 대해 설명합니다.
 

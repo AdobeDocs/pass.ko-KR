@@ -2,7 +2,7 @@
 title: SSO(Single Sign-On) - 서비스 토큰 - 흐름
 description: REST API V2 - Single Sign-On - 서비스 토큰 - 흐름
 exl-id: b0082d2a-e491-4cb5-bb40-35ba10db6b1a
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
 source-wordcount: '1857'
 ht-degree: 0%
@@ -60,7 +60,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 흐름을 구현하려면 주어진 단계를 수행하십시오.
 
-![서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-service-token-flow.png)
+![서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-service-token-flow.png)
 
 *서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행*
 
@@ -230,7 +230,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 서비스 토큰을 사용하여 단일 사인온을 통해 인증 흐름을 구현하려면 주어진 단계를 수행하십시오.
 
-![서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-service-token-flow.png)
+![서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-service-token-flow.png)
 
 *서비스 토큰을 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다*
 

@@ -48,7 +48,7 @@ Adobe Pass 인증은 TVE 대시보드에 다음 섹션을 제공합니다.
 
 ## 리소스 {#resources-tve-dashboard}
 
-Adobe은 다음 리소스를 사용하여 흐름과 기능을 철저히 이해함으로써 이 안내서에 사용된 용어를 숙지할 수 있도록 하는 것을 제안합니다.
+Adobe에서는 다음 리소스를 사용하여 흐름과 기능을 철저히 이해함으로써 이 안내서에 사용된 용어를 숙지할 수 있도록 권장합니다.
 
 * [TVE 기술 문서](/help/authentication/kickstart/technical-paper.md)
 * [프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md)

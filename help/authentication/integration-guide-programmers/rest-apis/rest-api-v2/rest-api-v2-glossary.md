@@ -2,7 +2,7 @@
 title: REST API V2 용어집
 description: REST API V2 용어집
 exl-id: 8b3bd2de-1ff8-4c57-b18d-27ecdf2b0de2
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: e448427ae4a36c4c6cb9f9c1cb4d0cc5c6d564ed
 workflow-type: tm+mt
 source-wordcount: '1742'
 ht-degree: 0%
@@ -63,7 +63,7 @@ ht-degree: 0%
 
 성능 저하는 [Adobe Pass](#mvpd)에서 서비스가 중단되는 경우에도 사용자가 보호된 콘텐츠에 액세스할 수 있는 MVPD 인증 기능입니다.
 
-자세한 내용은 [성능 저하 기능](/help/premium-workflow/degraded-access/degradation-feature.md) 설명서를 참조하세요.
+자세한 내용은 [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md) 설명서를 참조하세요.
 
 #### 장치 ID {#device-id}
 
@@ -229,13 +229,13 @@ SSO(Single Sign-On)는 사용자가 한 번 인증하고 각 응용 프로그램
 
 기본 TempPass는 사용자가 [Adobe Pass](#mvpd)(으)로 인증할 필요 없이 제한된 시간 동안 보호된 콘텐츠에 액세스할 수 있는 MVPD 인증 기능입니다.
 
-자세한 내용은 [기본 TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md#basic-temp-pass) 설명서를 참조하세요.
+자세한 내용은 [기본 TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#basic-temp-pass) 설명서를 참조하세요.
 
 #### TempPass 프로모션 {#temp-pass-promotional}
 
 프로모션 TempPass는 사용자가 [MVPD](#mvpd)을(를) 인증할 필요 없이 최대 리소스 수와 제한된 시간 동안 보호된 콘텐츠에 액세스할 수 있는 Adobe Pass 인증 기능입니다.
 
-자세한 내용은 [프로모션 TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md#promotional-temp-pass) 설명서를 참조하십시오.
+자세한 내용은 [프로모션 TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#promotional-temp-pass) 설명서를 참조하십시오.
 
 #### TL {#ttl}
 

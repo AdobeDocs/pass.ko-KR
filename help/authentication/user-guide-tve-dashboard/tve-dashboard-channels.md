@@ -2,7 +2,7 @@
 title: 채널
 description: TVE 대시보드 내의 채널과 다양한 구성에 대해 알아봅니다.
 exl-id: bbddeccb-6b6f-4a8f-87ab-d4af538eee1d
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
 source-wordcount: '1556'
 ht-degree: 0%
@@ -23,7 +23,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 * **채널 ID**: 요청자 ID라고도 하는 고유 식별자입니다.
 * **통합**: [MVPD](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#mvpd)에 설정된 연결 수
 
-![기존 채널 목록](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channels-list-view.png)
+![기존 채널 목록](../assets/tve-dashboard/new-tve-dashboard/channels/channels-list-view.png)
 
 *기존 채널 목록*
 
@@ -46,7 +46,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
    * [등록된 응용 프로그램](#registered-applications)
    * [사용자 지정 체계](#custom-schemes)
 
-   ![채널 설정](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-tabs-view.png)
+   ![채널 설정](../assets/tve-dashboard/new-tve-dashboard/channels/channel-tabs-view.png)
 
    *채널 설정*
 
@@ -68,7 +68,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 * **오류 보고**: **예**&#x200B;를 선택하면 Adobe Pass SDK에서 분석을 위해 Adobe Pass 백엔드로 오류 보고서를 보냅니다.
 
-![채널 정보 편집](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-general-settings-tab-view.png)
+![채널 정보 편집](../assets/tve-dashboard/new-tve-dashboard/channels/channel-general-settings-tab-view.png)
 
 *채널 정보 편집*
 
@@ -78,7 +78,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 **Analytics 구성**&#x200B;을(를) 사용하려면 RSID(보고서 세트 ID) 설정에 대한 자세한 내용을 기술 계정 관리자(TAM)에게 문의하십시오.
 
-![Analytics 구성 사용](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-analytics-configuration-button.png)
+![Analytics 구성 사용](../assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-analytics-configuration-button.png)
 
 *Analytics 구성 사용*
 
@@ -90,7 +90,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 이 탭에는 현재 선택한 채널과 MVPD 간의 사용 가능한 통합 목록이 표시됩니다. 이 목록에는 각 통합이 활성화 여부를 나타내는 상태와 함께 표시됩니다. [통합](tve-dashboard-integrations.md) 섹션의 자세한 정보에 액세스하려면 이 목록에서 특정 통합을 선택하십시오.
 
-![사용 가능한 통합 목록](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-integrations-tab-view.png)
+![사용 가능한 통합 목록](../assets/tve-dashboard/new-tve-dashboard/channels/channel-integrations-tab-view.png)
 
 *사용 가능한 통합 목록*
 
@@ -120,7 +120,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **사용 가능한 인증서** 섹션 맨 위에서 **새 인증서 추가**&#x200B;를 선택합니다.
 
-   ![새 인증서 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-certificate-button.png)
+   ![새 인증서 추가](../assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-certificate-button.png)
 
    *새 인증서 추가*
 
@@ -146,7 +146,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **제거**&#x200B;를 선택합니다.
 
-   ![선택한 인증서 제거](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-delete-certificate-button.png)
+   ![선택한 인증서 제거](../assets/tve-dashboard/new-tve-dashboard/channels/channel-delete-certificate-button.png)
 
    *선택한 인증서 제거*
 
@@ -158,7 +158,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 미디어 회사들은 이러한 인증서를 자체 수준에서 정의합니다. 동일한 미디어 회사와 연결된 모든 채널은 이 인증서를 사용할 수 있습니다.
 
-![상속된 사용 가능한 인증서](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-inherited-available-certificates-panel-view.png)
+![상속된 사용 가능한 인증서](../assets/tve-dashboard/new-tve-dashboard/channels/channel-inherited-available-certificates-panel-view.png)
 
 *상속된 사용 가능한 인증서*
 
@@ -181,7 +181,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **사용 가능한 도메인** 섹션의 오른쪽 상단 모서리에서 **새 도메인 추가**&#x200B;를 선택합니다.
 
-   ![새 도메인 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-domain-button.png)
+   ![새 도메인 추가](../assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-domain-button.png)
 
    *새 도메인 추가*
 
@@ -199,7 +199,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **제거**&#x200B;를 선택합니다.
 
-   ![선택한 도메인 제거](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-remove-domain-button.png)
+   ![선택한 도메인 제거](../assets/tve-dashboard/new-tve-dashboard/channels/channel-remove-domain-button.png)
 
    *선택한 도메인 제거*
 
@@ -211,7 +211,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 ### 등록된 응용 프로그램 {#registered-applications}
 
-이 탭에는 등록된 응용 프로그램 목록이 표시됩니다. 등록된 응용 프로그램 사용과 관련된 자세한 내용은 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
+이 탭에는 등록된 응용 프로그램 목록이 표시됩니다. 등록된 응용 프로그램 사용과 관련된 자세한 내용은 [동적 클라이언트 등록 개요](../integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
 등록된 응용 프로그램을 사용하여 다음과 같은 작업을 수행할 수 있습니다.
 
@@ -224,7 +224,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **등록된 응용 프로그램** 섹션의 오른쪽 상단 모서리에서 **새 응용 프로그램 추가**&#x200B;를 선택합니다.
 
-   ![새 응용 프로그램 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-application-button.png)
+   ![새 응용 프로그램 추가](../assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-application-button.png)
 
    *새 응용 프로그램 추가*
 
@@ -262,7 +262,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **다운로드**&#x200B;를 선택합니다.
 
-   ![소프트웨어 문 다운로드](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-download-software-statement-button.png)
+   ![소프트웨어 문 다운로드](../assets/tve-dashboard/new-tve-dashboard/channels/channel-download-software-statement-button.png)
 
    *소프트웨어 문 다운로드*
 
@@ -280,7 +280,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **새 사용자 지정 구성표 생성**&#x200B;을 선택합니다.
 
-   ![새 사용자 지정 구성표 생성](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-custom-scheme-button.png)
+   ![새 사용자 지정 구성표 생성](../assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-custom-scheme-button.png)
 
    *새 사용자 지정 구성표 생성*
 
@@ -290,7 +290,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 미디어 회사들은 이러한 맞춤 제도를 그들 자신의 수준에서 정의한다. 동일한 미디어 회사와 연결된 모든 채널은 이러한 사용자 지정 체계를 사용할 수 있습니다.
 
-![상속된 사용자 지정 구성표](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-inherited-custom-schemes-panel-view.png)
+![상속된 사용자 지정 구성표](../assets/tve-dashboard/new-tve-dashboard/channels/channel-inherited-custom-schemes-panel-view.png)
 
 *상속된 사용자 지정 구성표*
 
@@ -302,7 +302,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **채널** 섹션의 오른쪽 상단 모서리에서 **새 채널 추가**&#x200B;를 선택합니다.
 
-   ![새 채널 추가](/help/authentication/assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-channel-button.png)
+   ![새 채널 추가](../assets/tve-dashboard/new-tve-dashboard/channels/channel-add-new-channel-button.png)
 
    *새 채널 추가*
 

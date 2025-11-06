@@ -4,7 +4,7 @@ description: 클라이언트 정보 전달(장치, 연결 및 애플리케이션
 exl-id: 0b21ef0e-c169-48ff-ac01-25411cfece1e
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '1666'
+source-wordcount: '1665'
 ht-degree: 1%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 1%
 >
 >다음 **키**&#x200B;은(는) 클라이언트 정보 JSON 개체에서 보낼 **필수**&#x200B;입니다. **모델**, **osName**.
 >
->`primaryHardwareType`, `osName`, `osFamily`, `browserName`, `browserVendor`, `connectionSecure` 키에 **restricted** 값이 있습니다.
+>**,**, `primaryHardwareType`, `osName`, `osFamily`, `browserName` 키에 `browserVendor`restricted`connectionSecure` 값이 있습니다.
 
 |   | 키 | 제한됨 | 설명 | 가능한 값 |
 |---|---|---|---|---|
@@ -93,7 +93,7 @@ Adobe Pass 인증 서비스는 다음과 같은 방법으로 클라이언트 정
 
 AccessEnabler JavaScript SDK은 기본적으로 클라이언트 정보 JSON 개체를 빌드하며, 이 개체는 재정의되지 않는 한 Adobe Pass 인증 서비스로 전달됩니다.
 
-AccessEnabler JavaScript SDK은 [setRequestor](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#setrequestor(inRequestorID,endpoints,options))의 *applicationId* 옵션 매개 변수를 통해 클라이언트 정보 JSON 개체에서 &quot;applicationId&quot; 키를 **재정의만**&#x200B;할 수 있습니다.
+AccessEnabler JavaScript SDK은 **setRequestor**&#x200B;의 [applicationId](/help/authentication/integration-guide-programmers/legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md#setrequestor(inRequestorID,endpoints,options)) 옵션 매개 변수를 통해 클라이언트 정보 JSON 개체에서 &quot;applicationId&quot; 키를 *재정의만*&#x200B;할 수 있습니다.
 
 >[!CAUTION]
 >
@@ -104,7 +104,7 @@ AccessEnabler JavaScript SDK은 [setRequestor](/help/authentication/integration-
 
 AccessEnabler iOS/tvOS SDK은 기본적으로 클라이언트 정보 JSON 개체를 빌드하며, 재정의되지 않는 한 Adobe Pass 인증 서비스로 전달됩니다.
 
-AccessEnabler iOS/tvOS SDK은 [setOptions](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setoptions)의 device_info 매개 변수를 통해 **전체** 클라이언트 정보 JSON 개체를 재정의합니다.
+AccessEnabler iOS/tvOS SDK은 **setOptions**&#x200B;의 device_info 매개 변수를 통해 [전체](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#setoptions) 클라이언트 정보 JSON 개체를 재정의합니다.
 
 >[!CAUTION]
 >
@@ -116,7 +116,7 @@ AccessEnabler iOS/tvOS SDK은 [setOptions](/help/authentication/integration-guid
 
 `AccessEnabler` Android/FireOS SDK은 기본적으로 클라이언트 정보 JSON 개체를 빌드하며, 재정의되지 않는 한 Adobe Pass 인증 서비스로 전달됩니다.
 
-`AccessEnabler` Android/FireOS SDK은 [setOptions](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setOptions)의/[setOptions](/help/authentication/integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md#fire_setOption)의 `device_info` 매개 변수를 통해 **전체** 클라이언트 정보 JSON 개체를 재정의합니다.
+`AccessEnabler` Android/FireOS SDK은 **setOptions**&#x200B;의/[setOptions](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setOptions)의 [ 매개 변수를 통해 ](/help/authentication/integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md#fire_setOption)전체`device_info` 클라이언트 정보 JSON 개체를 재정의합니다.
 
 >[!NOTE]
 >
@@ -244,7 +244,7 @@ private JSONObject computeClientInformation() {
 >[!NOTE]
 >
 >**리소스:**
->* Java 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}.
+>* Java 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}를 참조하십시오.
 
 ### 파이어TV {#fire-tv}
 
@@ -281,7 +281,7 @@ private JSONObject computeClientInformation() {
 >[!NOTE]
 >
 >**리소스:**
->* Android 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}.
+>* Android 개발자 설명서에서 공용 클래스 [빌드](https://developer.android.com/reference/android/os/Build.html){target=_blank}를 참조하십시오.
 >* [FireTV 장치 식별](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html){target=_blank}
 
 ### iOS/tvOS {#ios-tvos}

@@ -2,7 +2,7 @@
 title: 기본 인증 - 기본 애플리케이션 - 흐름
 description: REST API V2 - 기본 인증 - 기본 애플리케이션 - 흐름
 exl-id: 8122108d-e9da-43c5-9abb-ab177cb21eb6
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
 source-wordcount: '903'
 ht-degree: 0%
@@ -65,7 +65,7 @@ Adobe Pass 인증 권한 내의 **인증 흐름**&#x200B;을 사용하면 스트
 
 다음 다이어그램과 같이 기본 애플리케이션 내에서 수행되는 기본 인증 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![기본 응용 프로그램 내에서 인증 수행](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-primary-application.png)
+![기본 응용 프로그램 내에서 인증 수행](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-perform-authentication-within-primary-application.png)
 
 *기본 응용 프로그램 내에서 인증 수행*
 

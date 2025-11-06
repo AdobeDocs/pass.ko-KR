@@ -27,21 +27,21 @@ Exchange에서 사용할 수 있는 사용자 메타데이터 유형은 현재 �
 * 세대 ID
 * 채널 ID
 
-이 기능을 사용하여 MVPD와 프로그래머는 자녀 보호와 같은 특수 사용 사례를 구현할 수 있습니다. 예를 들어 MVPD는 자녀 보호 등급 데이터를 프로그래머에게 전달하고 프로그래머는 해당 데이터를 사용하여 사용자에 대한 사용 가능한 보기 선택 사항을 필터링할 수 있습니다.
+이 기능을 사용하여 MVPD와 프로그래머는 자녀 보호와 같은 특수 사용 사례를 구현할 수 있습니다. 예를 들어 MVPD은 자녀 보호 등급 데이터를 프로그래머에게 전달한 다음 해당 데이터를 사용하여 사용자에 대해 사용 가능한 보기 선택 사항을 필터링할 수 있습니다.
 
 사용자 메타데이터 핵심 사항:
 
-* MVPD는 인증 및 권한 부여 흐름 동안 프로그래머의 애플리케이션에 사용자 메타데이터를 전달합니다
+* MVPD은 인증 및 권한 부여 흐름 동안 프로그래머 애플리케이션에 사용자 메타데이터를 전달합니다
 * Adobe Pass 인증은 AuthN 및 AuthZ 토큰에 메타데이터 값을 저장합니다
 * Adobe Pass 인증은 다양한 형식으로 사용자 메타데이터를 제공하는 MVPD의 값을 정규화할 수 있습니다
 * 일부 매개 변수는 프로그래머 키를 사용하여 암호화할 수 있습니다
-* 특정 값은 구성 변경을 통해 Adobe에서 사용할 수 있습니다
+* 구성 변경을 통해 Adobe에서 특정 값을 사용할 수 있습니다
 
 >[!NOTE]
 >
 >사용자 메타데이터는 이전에 Adobe Pass 인증에서 사용할 수 있었던 정적 메타데이터(인증 토큰 TTL, 인증 토큰 TTL 및 장치 ID)의 확장입니다.
 
-## 예시 {#example-mvpd-user-metadata-exch}
+## 예 {#example-mvpd-user-metadata-exch}
 
 ### 자녀 보호 {#example-parental-control}
 
@@ -49,13 +49,13 @@ Exchange에서 사용할 수 있는 사용자 메타데이터 유형은 현재 �
 
 * [프로그래머에서 MVPD 메타데이터 교환으로](#progr-mvpd-metadata-exch)
 
-* [MVPD에서 프로그래머 메타데이터로의 교환 흐름](#mvpd-progr-exchange-flow)
+* [MVPD-프로그래머 메타데이터 교환 흐름](#mvpd-progr-exchange-flow)
 
 ### 프로그래머에서 MVPD 메타데이터 교환으로 {#progr-mvpd-metadata-exch}
 
-현재 프로그래머 API, Adobe Pass 인증 및 MVPD 권한 부여자는 모두 채널 수준 권한 부여만 지원합니다. 채널은 Programmer의 getAuthorization() API 호출에서 일반 텍스트 문자열로 지정됩니다. 이 문자열은 MVPD의 인증 백엔드로 전파됩니다.
+현재 프로그래머 API, Adobe Pass 인증 및 MVPD 권한 부여자는 모두 채널 수준 권한 부여만 지원합니다. 채널은 Programmer의 getAuthorization() API 호출에서 일반 텍스트 문자열로 지정됩니다. 이 문자열은 MVPD의 인증 백엔드에 전파됩니다.
 
-프로그래머 앱 또는 사이트에서 사용자는 XACML 가능 MVPD(이 예에서는 &quot;TNT&quot;)를 선택합니다. XACML에 대한 자세한 내용은 [Xtensible 액세스 제어 마크업 언어](https://en.wikipedia.org/wiki/XACML){target=_blank}를 참조하십시오.
+프로그래머 앱 또는 사이트에서 사용자는 XACML 가능 MVPD(이 예에서는 &quot;TNT&quot;)를 선택합니다. XACML에 대한 자세한 내용은 [Xtensible Access Control Markup Language](https://en.wikipedia.org/wiki/XACML){target=_blank}를 참조하십시오.
 프로그래머 앱은 리소스와 해당 메타데이터를 포함하는 AuthZ 요청을 형성한다.  이 예에는 &quot;pg&quot;의 MPAA 등급이 채널 요소의 미디어 속성에 포함됩니다.
 
 ```XML
@@ -68,17 +68,17 @@ var resource = '<rss version="2.0" xmlns:media="http://video.search.yahoo.com/mr
 getAuthorization(resource);
 ```
 
-Adobe Pass 인증은 MVPD와 프로그래머 모두에서 지원하는 경우 자산 수준까지 보다 세분화된 인증을 실제로 지원합니다. 리소스 및 해당 메타데이터는 Adobe에 불투명합니다. 목적은 리소스 ID 및 메타데이터를 표준화된 방식으로 지정하기 위한 표준 포맷을 설정하여 리소스 ID를 다른 MVPD로 전송하는 것입니다.
+Adobe Pass 인증은 MVPD과 프로그래머 모두에서 지원하는 경우 자산 수준까지 보다 세분화된 인증을 실제로 지원합니다. 리소스 및 해당 메타데이터는 Adobe에서 불투명합니다. 목적은 리소스 ID와 메타데이터를 표준화된 방식으로 지정하기 위한 표준 형식을 설정하여 리소스 ID를 다른 MVPD로 전송하는 것입니다.
 
 >[!NOTE]
 >
->사용자가 채널 전용 가능 MVPD를 선택하면 Adobe Pass 인증이 채널 제목(위 예에서 &quot;TNT&quot;)만 추출하고 제목만 MVPD에 전달합니다.
+>사용자가 채널 전용 가능 MVPD을 선택하면 Adobe Pass 인증은 채널 제목(위의 예에서 &quot;TNT&quot;)만 추출하고 제목만 MVPD에 전달합니다.
 
-### MVPD에서 프로그래머 메타데이터로의 교환 흐름 {#mvpd-progr-exchange-flow}
+### MVPD-프로그래머 메타데이터 교환 흐름 {#mvpd-progr-exchange-flow}
 
 Adobe Pass 인증은 다음과 같은 가정을 합니다.
 
-* MVPD가 SAML 응답의 일부로 최대 등급을 보냅니다.
+* MVPD은 SAML 응답의 일부로 최대 등급을 보냅니다.
 * 이 정보는 인증 토큰의 일부로 저장됩니다.
 * 프로그래머가 이 정보를 검색할 수 있도록 Adobe Pass 인증에서 API를 제공합니다
 * 프로그래머는 사이트 또는 앱에서 이 기능을 구현합니다(예를 들어, 사용자의 최대 등급 이상인 비디오를 숨기기 위해)
@@ -105,13 +105,13 @@ Adobe Pass 인증은 다음과 같은 가정을 합니다.
 
 ### 메모 {#notes-mvpd-progr-metadata-exch-flow}
 
-**리소스 정규화 및 유효성 검사입니다.**&#x200B;개의 리소스 ID를 일반 문자열 또는 MRSS 문자열로 전달할 수 있습니다. 프로그래머는 일반 문자열 형식 또는 MRSS를 사용할 수 있지만 MVPD가 해당 리소스를 처리하는 방법을 알 수 있도록 MVPD와의 사전 합의가 필요합니다.
+**리소스 정규화 및 유효성 검사입니다.**&#x200B;개의 리소스 ID를 일반 문자열 또는 MRSS 문자열로 전달할 수 있습니다. 프로그래머는 일반 문자열 형식 또는 MRSS를 사용하기로 결정할 수 있지만 MVPD이 해당 리소스를 처리하는 방법을 알 수 있도록 MVPD과의 사전 계약이 필요합니다.
 
 **리소스 ID 및 메타데이터 사양.** Adobe Pass 인증은 미디어 RSS 확장과 함께 RSS 표준을 사용하여 리소스와 해당 메타데이터를 지정합니다. Adobe Pass 인증은 Media RSS 확장과 함께 자녀 보호(`<media:rating>`을 통해) 또는 지리적 위치(`<media:location>`)와 같은 다양한 메타데이터를 지원합니다.
 
 Adobe Pass 인증은 또한 레거시 채널 문자열에서 RSS가 필요한 MVPD에 대한 해당 RSS 리소스로의 투명한 전환을 지원할 수 있습니다. 다른 방향으로, Adobe Pass 인증은 채널 전용 MVPD에 대해 RSS+MRSS에서 일반 채널 제목으로의 전환을 지원합니다.
 
-**Adobe Pass 인증은 기존 통합과 완벽하게 이전 버전과의 호환성을 보장합니다.** 즉, 채널 수준 인증을 사용하는 프로그래머의 경우 Adobe Pass 인증은 채널 ID를 해당 형식을 이해하는 MVPD로 보내기 전에 필요한 형식으로 패키징합니다. 역도 적용됩니다. 프로그래머가 모든 리소스를 새 형식으로 지정하는 경우 Adobe Pass 인증은 채널 수준 인증만 수행하는 MVPD에 대해 인증할 경우 새 형식을 간단한 채널 문자열로 변환합니다.
+**Adobe Pass 인증은 기존 통합과 완벽하게 이전 버전과의 호환성을 보장합니다.** 즉, 채널 수준 인증을 사용하는 프로그래머의 경우 Adobe Pass 인증은 채널 ID를 해당 형식을 이해하는 MVPD으로 보내기 전에 필요한 형식으로 패키지하는 데 주의합니다. 또한 반대도 적용됩니다. 프로그래머가 모든 리소스를 새 형식으로 지정하는 경우 Adobe Pass 인증은 채널 수준 인증만 수행하는 MVPD에 대해 인증하면 새 형식을 간단한 채널 문자열로 변환합니다.
 
 ## 사용자 메타데이터 사용 사례 {#user-metadata-use-cases}
 
@@ -125,8 +125,8 @@ Adobe Pass 인증은 또한 레거시 채널 문자열에서 RSS가 필요한 MV
 
 ### MVPD 사용자 ID {#mvpd-user-id}
 
-* MVPD에서 제공한 대로
-* MVPD에 의해 해시되므로 사용자의 실제 로그인 정보가 아님
+* MVPD 제공
+* MVPD에서 해시하므로 사용자의 실제 로그인 정보가 아님
 * 또는 특정 사용자에 대한 문제를 표시하는 데 사용할 수 있습니다.
 * 암호화됨
 * MVPD 지원: 모든 MVPD

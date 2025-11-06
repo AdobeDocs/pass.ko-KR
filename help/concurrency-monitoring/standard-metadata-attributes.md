@@ -48,7 +48,7 @@ ht-degree: 0%
 |                 | 마케팅 이름 | 문자열 | 장치의 마케팅 이름(또는 고객에게 친숙한 이름) | [Device Atlas 속성](https://deviceatlas.com/device-data/properties){target=_blank} | IPHONE 6 | 유효한 마케팅 이름 |
 |                 | mobileDevice | 부울 | 이동 시 디바이스를 사용하는 경우 True입니다. | [Device Atlas 속성](https://deviceatlas.com/device-data/properties){target=_blank} | true, false | true, false |
 |                 | deviceModel | 문자열 | 디바이스, 브라우저 또는 기타 구성 요소의 모델 이름 | [Device Atlas 속성](https://deviceatlas.com/device-data/properties){target=_blank} | 태블릿, 휴대폰, xbox. 셋톱 박스 | 유효한 장치 모델 이름 |
-|                 | osName | 문자열 | 장치가 실행 중인 운영 체제 | [Device Atlas - OS 사전 정의된 속성 값](https://deviceatlas.com/device-data/explorer/#defined_property_values/877430/4121272){target=_blank} | Android, Windows 10, OS X, Linux, 기타 참고: 속성 값을 보려면 Device Atlas에서 사용자 이름과 암호로 로그인해야 합니다 | 예상 값은 Device Atlas 사전 정의된 속성에 있는 값 중 하나입니다 |
+|                 | osName | 문자열 | 장치가 실행 중인 운영 체제 | [장치 Atlas - OS 사전 정의된 속성 값](https://deviceatlas.com/device-data/explorer/#defined_property_values/877430/4121272){target=_blank} | Android, Windows 10, OS X, Linux, 기타 참고: 속성 값을 보려면 Device Atlas에서 사용자 이름과 암호로 로그인해야 합니다 | 예상 값은 Device Atlas 사전 정의된 속성에 있는 값 중 하나입니다 |
 |                 | browserName | 문자열 | 장치의 브라우저 이름 또는 유형 | [Device Atlas - 브라우저에서 미리 정의된 속성 값](https://deviceatlas.com/device-data/explorer/#defined_property_values/7/2705619){target=_blank} | 디바이스에 있는 브라우저의 이름 또는 유형입니다.  참고: 속성 값을 보려면 장치 아틀라스에 사용자 이름과 암호로 로그인해야 합니다 | 예상 값은 Device Atlas 사전 정의된 속성에 있는 값 중 하나입니다 |
 |                 | browserVersion | 문자열 | 장치의 브라우저 버전 | [Device Atlas 속성](https://deviceatlas.com/device-data/properties){target=_blank} | 장치의 브라우저 버전 |                                                                                   |
 | 애플리케이션 | applicationName | 문자열 | 애플리케이션에 대한 &quot;사용자에게 친숙한&quot; 이름 또는 사용자가 읽을 수 있는 이름 | 해당 사항 없음 | Sample_Application |                                                                                   |
@@ -84,4 +84,4 @@ ht-degree: 0%
 정책 및 통합 Cookbook의 더 많은 예는 다음에서 찾을 수 있습니다.
 
 * [정책 결정 지점](/help/concurrency-monitoring/cm-policy-decision-point.md)
-* [API 콘솔 - 동시 Adobe 모니터링](http://docs.adobeptime.io/cm-api-v2/)
+* [API 콘솔 - Adobe 동시 모니터링](http://docs.adobeptime.io/cm-api-v2/)

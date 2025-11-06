@@ -4,7 +4,7 @@ description: 인증 iOS / tvOS 3.7.0 릴리스 노트
 exl-id: 19c1179e-16b1-4608-954f-25b0980d7ad9
 source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '122'
 ht-degree: 0%
 
 ---

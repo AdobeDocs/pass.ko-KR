@@ -60,7 +60,7 @@ ID가 **demo-app**&#x200B;인 응용 프로그램에 대해 &quot;사용해 보�
 
 다른 활성 스트림이 없으므로 첫 번째 호출에 종료 코드를 제공할 필요가 없습니다. 메타데이터 검색 호출에서 아무 것도 반환되지 않았으므로 메타데이터 속성이 없습니다.
 
-**subject** 및 **idp** 매개 변수는 필수 항목이며 URI 경로 변수로 지정됩니다. Adobe Pass 인증에서 **mvpd** 및 **upstreamUserID** 메타데이터 필드를 호출하여 **subject** 및 **idp** 매개 변수를 가져올 수 있습니다. 메타데이터 API의 [개요](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=ko#)도 참조하세요. 이 예제에서는 값 &quot;12345&quot;을 제목으로 제공하고 &quot;adobe&quot;를 idp로 제공합니다.
+**subject** 및 **idp** 매개 변수는 필수 항목이며 URI 경로 변수로 지정됩니다. Adobe Pass 인증에서 **mvpd** 및 **upstreamUserID** 메타데이터 필드를 호출하여 **subject** 및 **idp** 매개 변수를 가져올 수 있습니다. 메타데이터 API의 [개요](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=en#)도 참조하세요. 이 예제에서는 값 &quot;12345&quot;을 제목으로 제공하고 &quot;adobe&quot;를 idp로 제공합니다.
 
 
 ![](assets/session-init-params-frstapp.png)

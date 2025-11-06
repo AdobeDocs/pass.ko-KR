@@ -2,7 +2,7 @@
 title: 기본 로그아웃 - 기본 애플리케이션 - 플로우
 description: REST API V2 - 기본 로그아웃 - 기본 애플리케이션 - 흐름
 exl-id: 21dbff4a-0d69-4f81-b04f-e99d743c35b3
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
@@ -53,7 +53,7 @@ Adobe Pass 인증 권한 내의 **로그아웃 흐름**&#x200B;을(를) 사용�
 
 다음 다이어그램과 같이 기본 애플리케이션 내에서 수행된 로그아웃 끝점을 사용하여 특정 MVPD에 대한 기본 로그아웃 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![로그아웃 끝점이 있는 특정 mvpd에 대한 로그아웃 시작](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-initiate-logout-within-primary-application-for-specific-mvpd-with-logout-endpoint.png)
+![로그아웃 끝점이 있는 특정 mvpd에 대한 로그아웃 시작](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-initiate-logout-within-primary-application-for-specific-mvpd-with-logout-endpoint.png)
 
 *로그아웃 끝점이 있는 특정 mvpd에 대한 로그아웃 시작*
 
@@ -119,7 +119,7 @@ Adobe Pass 인증 권한 내의 **로그아웃 흐름**&#x200B;을(를) 사용�
 
 다음 다이어그램에서와 같이 기본 애플리케이션 내에서 로그아웃 끝점을 수행하지 않고 특정 MVPD에 대한 기본 로그아웃 흐름을 구현하려면 주어진 단계를 따르십시오.
 
-![로그아웃 끝점이 없는 특정 mvpd에 대한 로그아웃 시작](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-initiate-logout-within-primary-application-for-specific-mvpd-without-logout-endpoint.png)
+![로그아웃 끝점이 없는 특정 mvpd에 대한 로그아웃 시작](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-initiate-logout-within-primary-application-for-specific-mvpd-without-logout-endpoint.png)
 
 *로그아웃 끝점이 없는 특정 mvpd에 대한 로그아웃 시작*
 

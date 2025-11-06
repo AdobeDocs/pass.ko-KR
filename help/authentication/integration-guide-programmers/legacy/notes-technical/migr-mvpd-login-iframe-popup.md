@@ -4,7 +4,7 @@ description: MVPD 로그인 페이지를 iFrame에서 Popup으로 마이그레�
 exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '709'
+source-wordcount: '708'
 ht-degree: 0%
 
 ---
@@ -183,7 +183,7 @@ function displayProviderDialog(providers) {
 }
 ```
 
-사용자가 선택기에서 MVPD을 선택한 후 팝업을 만들어야 합니다. 팝업이 about:blank로 작성되거나 다른 도메인에 있는 페이지로 작성된 경우 일부 브라우저에서 팝업을 차단할 수 있으므로 AccessEnabler가 로드되는 위치의 호스트 이름으로 여는 것이 좋습니다.
+사용자가 선택기에서 MVPD을 선택한 후 팝업을 만들어야 합니다. 팝업이 약 :blank개 또는 다른 도메인에 있는 페이지로 만들어진 경우 일부 브라우저에서 팝업을 차단할 수 있습니다. 따라서 AccessEnabler가 로드되는 위치의 호스트 이름으로 여는 것이 좋습니다.
 
 iFrame 구현에서는 btnCloseIframe 버튼과 JavaScript 함수 closeIframeAction()에 의해 인증 흐름 재설정이 수행되었지만 이제 iFrame을 데코레이트할 수 없습니다. 따라서 팝업이 닫힐 때를 관찰하거나(사용자가 또는 인증 흐름을 완료하여) 동일한 동작을 수행합니다. 사용자가 팝업의 포커스를 잃는 경우에도 도움이 되는 코드 조각이 추가되었습니다.
 

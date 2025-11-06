@@ -4,7 +4,7 @@ description: Platform SSO 프로필 요청 검색
 exl-id: 44fd4e26-4d9a-4607-ac2c-b85d848f5fc6
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '212'
+source-wordcount: '210'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/{requestor}/profile-requests/{mvpd} | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자(경로 매개 변수)</br>2. mvpd(경로 매개 변수)</br>3. deviceType(필수) | GET | 클라이언트 애플리케이션에 대한 실제 페이로드가 불투명하기 때문에 응답 Content-Type은 application/octet-stream이 됩니다.</br></br>프로필 SSO를 가져오려면 응용 프로그램에서 </br></br>SSO 엔진에 응답을 전달해야 합니다. | 200 - 성공   </br>400 - 잘못된 요청 |
+| &lt;SP_FQDN>/api/v1/{requestor}/profile-requests/{mvpd} | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1. 요청자(경로 매개 변수)</br>2. mvpd(경로 매개 변수)</br>3. deviceType(필수) | GET | 클라이언트 애플리케이션에 대한 실제 페이로드가 불투명하기 때문에 응답 Content-Type은 application/octet-stream이 됩니다.</br></br>프로필 SSO를 가져오려면 응용 프로그램에서 </br></br>SSO 엔진에 응답을 전달해야 합니다. | 200 - 성공   </br>400 - 잘못된 요청 |
 
 
 | 입력 매개 변수 | 설명 |

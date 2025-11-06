@@ -4,7 +4,7 @@ description: MVPD 인증
 exl-id: 9ff4a46e-a37b-414c-a163-9e586252a9c3
 source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
-source-wordcount: '1882'
+source-wordcount: '1851'
 ht-degree: 0%
 
 ---
@@ -22,18 +22,18 @@ ht-degree: 0%
 아래 단계에서는 프로그래머가 SAML을 지원하는 MVPD에서 인증을 요청할 때 Adobe Pass 인증을 사용하여 이벤트 시퀀스를 설명합니다. Adobe Pass Authentication Access Enabler 구성 요소는 사용자/구독자의 클라이언트에서 활성화됩니다. 여기에서 Access Enabler를 사용하면 모든 인증 절차를 간편하게 수행할 수 있습니다.
 
 1. 사용자가 보호된 콘텐츠에 대한 액세스를 요청하면 액세스 Enabler가 SP(프로그래머)를 대신하여 인증(AuthN)을 시작합니다.
-1. SP의 앱은 MVPD(유료 TV 공급자)를 얻기 위해 사용자에게 &quot;MVPD 선택기&quot;를 제공합니다. 그러면 SP는 사용자의 브라우저를 선택한 MVPD의 ID 공급자(IdP) 서비스로 리디렉션합니다.  &quot;**프로그래머 시작 로그인**&quot;입니다.  MVPD는 IdP의 응답을 Adobe의 SAML 어설션 소비자 서비스로 보내고, 여기서 이 서비스가 처리됩니다.
+1. SP의 앱은 Pay TV 공급자(MVPD)를 확보하기 위해 사용자에게 &quot;MVPD 선택기&quot;를 제공합니다. 그러면 SP에서 사용자의 브라우저를 선택한 MVPD의 ID 공급자(IdP) 서비스로 리디렉션합니다.  &quot;**프로그래머 시작 로그인**&quot;입니다.  MVPD은 IdP의 응답을 Adobe의 SAML assertion 소비자 서비스로 보내고, 여기서 처리됩니다.
 1. 마지막으로 Access Enabler는 브라우저를 SP 사이트로 다시 리디렉션하여 SP에 AuthN 요청 상태(성공/실패)를 알립니다.
 
 ## 인증 요청 {#authn-req}
 
-위의 단계에 제시된 바와 같이, AuthN 흐름 동안 MVPD는 SAML 기반 AuthN 요청을 수락하고 SAML AuthN 응답을 전송해야 한다.
+위의 단계에 표시된 대로 AuthN 흐름 동안 MVPD은 SAML 기반 AuthN 요청을 수락하고 SAML AuthN 응답을 전송해야 합니다.
 
-[OLCA(온라인 콘텐츠 액세스) 인증 및 권한 부여 인터페이스 사양](https://www.cablelabs.com/specifications/search?query=&category=&subcat=&doctype=&content=false&archives=false){target=_blanck}은(는) 표준 AuthN 요청 및 응답을 제공합니다. Adobe Pass 인증에서는 이 표준을 기반으로 자격 메시지를 작성하는 데 MVPD가 필요하지 않지만, 사양을 보면 AuthN 트랜잭션에 필요한 주요 속성에 대한 통찰력을 얻을 수 있습니다.
+[OLCA(온라인 콘텐츠 액세스) 인증 및 권한 부여 인터페이스 사양](https://www.cablelabs.com/specifications/search?query=&category=&subcat=&doctype=&content=false&archives=false){target=_blanck}은(는) 표준 AuthN 요청 및 응답을 제공합니다. Adobe Pass 인증에서는 이 표준을 기반으로 자격 메시지를 제공하는 데 MVPD가 필요하지 않지만, 사양을 살펴보면 insight에 AuthN 트랜잭션에 필요한 주요 속성을 제공할 수 있습니다.
 
 >[!NOTE]
 >
->MVPD가 Adobe Pass 인증과 함께 받은 AuthN 요청에는 디지털 서명이 포함되어 있습니다. 그러나 아래 예제에서는 간결성을 위해 서명이 표시되지 않습니다. 디지털 서명을 표시하는 예제는 다음 섹션에서 [인증 응답](#authn-response)의 예제를 참조하십시오.
+>MVPD이 Adobe Pass 인증과 함께 수신하는 AuthN 요청에는 디지털 서명이 포함되어 있습니다. 그러나 아래 예제에서는 간결성을 위해 서명이 표시되지 않습니다. 디지털 서명을 표시하는 예제는 다음 섹션에서 [인증 응답](#authn-response)의 예제를 참조하십시오.
 
 샘플 SAML 인증 요청:
 
@@ -67,13 +67,13 @@ ht-degree: 0%
 
 | samlp:AuthnRequest | 서비스 공급자가 ID 공급자에 대해 &lt;AuthnRequest>를 발행했습니다. |
 |-----------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| AssertionConsumerServiceURL | 이는 후속 응답에서 사용할 Adobe 종단점입니다. 기본값: **http://sp.auth.adobe.com/sp/saml/SAMLAssertionConsumer** |
+| AssertionConsumerServiceURL | 이는 후속 응답에 사용할 Adobe 종단점입니다. 기본값: **http://sp.auth.adobe.com/sp/saml/SAMLAssertionConsumer** |
 | 대상 | 이 요청이 전송된 주소를 나타내는 URI 참조입니다. 이 기능은 일부 프로토콜 바인딩에 필요한 보호인 의도하지 않은 수신자에게 요청을 악의적으로 전달하는 것을 방지하는 데 유용합니다. 존재하는 경우, 실제 수신자는 URI 참조가 메시지가 수신된 위치를 식별하는지 확인해야 합니다. 그렇지 않으면 요청을 취소해야 합니다. 일부 프로토콜 바인딩에는 이 특성을 사용해야 할 수도 있습니다. |
 | 강제 작성 | ForceAuthn 특성이 true 값으로 존재하는 경우 ID 공급자는 주체와 가질 수 있는 기존 세션에 의존하지 않고 이 ID를 새로 설정해야 합니다. |
 | ID | 요청에 대한 식별자. 자세한 내용은 [SAML 코어 2.0-os](http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf){target=_blank} 섹션 1.3.4를 참조하십시오. |
 | IsPassive | 부울 값. &quot;true&quot;인 경우 ID 공급자와 사용자 에이전트 자체는 요청자로부터 사용자 인터페이스를 시각적으로 제어해서는 안 되며 발표자와 눈에 띄는 방식으로 상호 작용해야 합니다. 값을 제공하지 않은 경우 기본값은 &quot;false&quot;입니다. |
 | 문제 인스턴트 | 응답의 문제 발생 시간. [SAML 코어 2.0-os](http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf){target=_blank} 섹션 1.3.3에 설명된 대로 시간 값이 UTC로 인코딩됩니다. |
-| 프로토콜 바인딩 | &lt;Response> 메시지를 반환할 때 사용할 SAML 프로토콜 바인딩을 식별하는 URI 참조입니다. 프로토콜 바인딩 및 URI 참조에 대한 자세한 내용은 [SAMLBind]을(를) 참조하십시오. 기본값 : urn:oasis:이름:tc:SAML:2.0:bindings:HTTP POST |
+| 프로토콜 바인딩 | &lt;Response> 메시지를 반환할 때 사용할 SAML 프로토콜 바인딩을 식별하는 URI 참조입니다. 프로토콜 바인딩 및 URI 참조에 대한 자세한 내용은 [SAMLBind]을(를) 참조하십시오. 기본값 : urn:oasis:이름:tc:SAML:2.0:bindings:HTTP-POST |
 | 버전 | 이 요청의 버전입니다. |
 | saml:Issuer | 응답 메시지를 생성한 엔티티를 식별합니다. (이 요소에 대한 자세한 내용은 SAML core 2.0-os Section 2.2.5) |
 | ds:Signature | SAML 코어 2.0-os의 섹션 5에 설명된 대로 어설션 무결성을 보호하고 어설션 발급자를 인증하는 XML 서명 |
@@ -84,7 +84,7 @@ ht-degree: 0%
 
 ## 인증 응답 {#authn-response}
 
-인증 요청을 수신하고 처리했으면 이제 MVPD가 인증 응답을 보내야 합니다.
+인증 요청을 수신하고 처리했으므로 이제 MVPD에서 인증 응답을 보내야 합니다.
 
 **샘플 SAML 인증 응답**
 
@@ -168,7 +168,7 @@ ht-degree: 0%
 ```
 
 
-위의 샘플에서 Adobe SP 는 Subject/NameId에서 사용자 ID 를 가져올 것으로 예상됩니다. Adobe SP는 사용자 정의 속성에서 사용자 ID를 가져오도록 구성할 수 있습니다. 응답에는 다음과 같은 요소가 포함되어야 합니다.
+위의 샘플에서 Adobe SP는 주체/NameId에서 사용자 ID를 가져올 것으로 예상됩니다. 사용자 정의 속성에서 사용자 ID를 가져오도록 Adobe SP를 구성할 수 있습니다. 응답에는 다음과 같은 요소가 포함되어야 합니다.
 
 ```XML
 <saml:AttributeStatement>
@@ -185,7 +185,7 @@ ht-degree: 0%
 | samlp:Response | Adobe Pass 인증에서 받은 응답입니다. |
 |------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 대상 | 이 요청이 전송된 주소를 나타내는 URI 참조입니다. 이 기능은 일부 프로토콜 바인딩에 필요한 보호인 의도하지 않은 수신자에게 요청을 악의적으로 전달하는 것을 방지하는 데 유용합니다. 존재하는 경우, 실제 수신자는 URI 참조가 메시지가 수신된 위치를 식별하는지 확인해야 합니다. 그렇지 않으면 요청을 취소해야 합니다. 일부 프로토콜 바인딩에는 이 특성을 사용해야 할 수도 있습니다. |
-| ID | 요청에 대한 식별자. 이 ID는 xs:ID 형식이며 식별자 고유성을 위해 [SAML 코어 2.0-os](http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf){target=_blank}의 섹션 1.3.4에 지정된 요구 사항을 준수해야 합니다. 요청의 ID 속성과 해당 응답의 InResponseTo 속성 값이 일치해야 합니다. |
+| ID | 요청에 대한 식별자. 이 형식은 xs:ID 형식이며 식별자 고유성을 위해 [SAML core 2.0-os](http://docs.oasis-open.org/security/saml/v2.0/saml-core-2.0-os.pdf){target=_blank}의 섹션 1.3.4에 지정된 요구 사항을 준수해야 합니다. 요청의 ID 속성과 해당 응답의 InResponseTo 속성 값이 일치해야 합니다. |
 | 응답: | 증명 엔티티가 어설션을 표시할 수 있는 응답 SAML 프로토콜 메시지의 ID입니다. 이 값은 인증 요청에서 전송된 ID 속성의 값과 같아야 합니다. SAML 코어 2.0-os 참조 |
 | 문제 인스턴트 | 요청 문제의 시간 인스턴스. |
 | 버전 | 요청의 버전입니다. |
@@ -201,7 +201,7 @@ ht-degree: 0%
 | ds:CanonicalizationMethod | CanonicalizationMethod는 서명 계산을 수행하기 전에 SignedInfo 요소에 적용되는 정규화 알고리즘을 지정하는 필수 요소입니다. XML 서명 구문 및 처리 를 참조하십시오. |
 | ds:SignatureMethod | SignatureMethod는 서명 생성 및 유효성 검사에 사용되는 알고리즘을 지정하는 필수 요소입니다. 이 알고리즘은 서명 작업에 포함된 모든 암호화 함수(예: 해싱, 공개 키 알고리즘, MAC, 패딩 등)를 식별합니다. XML 서명 구문 및 처리 를 참조하십시오. |
 | ds:Reference | 참조는 한 번 이상 발생할 수 있는 요소입니다. 다이제스트 알고리즘 및 다이제스트 값, 선택적으로 서명되는 오브젝트의 식별자, 오브젝트 유형 및/또는 다이제스트 전에 적용할 변형 목록을 지정합니다. XML 서명 구문 및 처리 를 참조하십시오. |
-| ds:변형 | 선택적 Transforms 요소에는 정렬된 Transform 요소 목록이 포함되어 있습니다. 이는 서명자가 요약된 데이터 개체를 얻는 방법을 설명합니다. 각 변형의 출력은 다음 변형에 대한 입력 역할을 합니다. 첫 번째 Transform에 대한 입력은 참조 요소의 URI 특성을 역참조한 결과입니다. 마지막 변형의 출력은 DigestMethod 알고리즘에 대한 입력입니다. XML 서명 구문 및 처리 를 참조하십시오. |
+| ds:Transforms | 선택적 Transforms 요소에는 정렬된 Transform 요소 목록이 포함되어 있습니다. 이는 서명자가 요약된 데이터 개체를 얻는 방법을 설명합니다. 각 변형의 출력은 다음 변형에 대한 입력 역할을 합니다. 첫 번째 Transform에 대한 입력은 참조 요소의 URI 특성을 역참조한 결과입니다. 마지막 변형의 출력은 DigestMethod 알고리즘에 대한 입력입니다. XML 서명 구문 및 처리 를 참조하십시오. |
 | ds:DigestMethod | DigestMethod는 서명된 개체에 적용할 다이제스트 알고리즘을 식별하는 필수 요소입니다. XML 서명 구문 및 처리 를 참조하십시오. |
 | ds:DigestValue | DigestValue는 다이제스트의 인코딩된 값을 포함하는 요소입니다. 다이제스트는 항상 base64를 사용하여 인코딩됩니다. XML 서명 구문 및 처리 를 참조하십시오. |
 | ds:SignatureValue | SignatureValue 요소에는 디지털 서명의 실제 값이 포함됩니다. 이 요소는 항상 base64를 사용하여 인코딩됩니다. XML 서명 구문 및 처리 를 참조하십시오. |

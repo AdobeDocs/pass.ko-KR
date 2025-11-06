@@ -49,4 +49,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->XSTS 토큰의 길이가 크기 때문에 XBox 콘솔에는 기술적인 제한이 있습니다. 토큰을 HTTP GET 매개 변수로 Adobe Pass 유료 TV 인증 API에 전송할 수 없습니다. 이를 처리하기 위해 Adobe Pass pay-TV 인증을 사용하면 API를 호출할 때 HTTP 헤더 &quot;인증&quot;의 일부로 XSTS 토큰을 전송할 수 있습니다. XSTS 토큰은 Adobe Pass pay-TV 인증에서 프로그래머에게 발급된 X.509 인증서의 공개 키를 사용하여 암호화해야 합니다. Adobe Pass pay-TV 인증은 연결된 개인 키를 저장하고 이를 사용하여 XSTS 토큰을 해독하고 여기에서 deviceId를 추출합니다.
+>XSTS 토큰의 길이가 크기 때문에 XBox 콘솔에는 기술적인 제한이 있습니다. 토큰을 HTTP GET 매개 변수로 Adobe Pass 유료 TV 인증 API에 보낼 수 없습니다. 이를 처리하기 위해 Adobe Pass pay-TV 인증을 사용하면 API를 호출할 때 HTTP 헤더 &quot;인증&quot;의 일부로 XSTS 토큰을 전송할 수 있습니다. XSTS 토큰은 Adobe Pass pay-TV 인증에서 프로그래머에게 발급된 X.509 인증서의 공개 키를 사용하여 암호화해야 합니다. Adobe Pass pay-TV 인증은 연결된 개인 키를 저장하고 이를 사용하여 XSTS 토큰을 해독하고 여기에서 deviceId를 추출합니다.

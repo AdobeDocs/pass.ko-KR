@@ -2,7 +2,7 @@
 title: 헤더 - Adobe-Subject-Token
 description: REST API V2 - 헤더 - Adobe-Subject-Token
 exl-id: 906d88f4-3b8f-491a-ab58-8e63d3b958d8
-source-git-commit: af867cb5e41843ffa297a31c2185d6e4b4ad1914
+source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
 workflow-type: tm+mt
 source-wordcount: '166'
 ht-degree: 1%
@@ -47,10 +47,10 @@ ht-degree: 1%
 
 이 기능은 다음 플랫폼에 사용할 수 있습니다.
 
-* [Amazon SSO Cookbook(REST API V2)](/help/premium-workflow/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+* [Amazon SSO Cookbook(REST API V2)](../../../../features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
 
 ## 예 {#examples}
 
 다음 플랫폼에 대해 설명된 예를 참조하십시오.
 
-* [Amazon SSO Cookbook(REST API V2)](/help/premium-workflow/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+* [Amazon SSO Cookbook(REST API V2)](../../../../features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)

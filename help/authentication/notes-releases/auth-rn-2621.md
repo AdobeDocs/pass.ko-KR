@@ -4,7 +4,7 @@ description: Adobe Pass Authentication 2.62.1 릴리스 노트
 exl-id: 5c173a0e-512f-40ca-85ce-10ea1ddbe8c6
 source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '85'
 ht-degree: 0%
 
 ---

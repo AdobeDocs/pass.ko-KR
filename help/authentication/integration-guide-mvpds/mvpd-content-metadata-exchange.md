@@ -1,6 +1,6 @@
 ---
-title: MVPD 콘텐츠 메타데이터 교환
-description: MVPD 콘텐츠 메타데이터 교환
+title: MVPD 컨텐츠 메타데이터 교환
+description: MVPD 컨텐츠 메타데이터 교환
 exl-id: d17e60dc-6c61-4ca2-bad8-1840c95261e0
 source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# MVPD 콘텐츠 메타데이터 교환
+# MVPD 컨텐츠 메타데이터 교환
 
 >[!NOTE]
 >
@@ -31,10 +31,10 @@ ht-degree: 0%
 
 Adobe Pass 인증은 MRSS를 MVPD에서 지원하는 형식으로 변환하는 두 가지 방법을 지원합니다.
 
-* **XACML**.  첫 번째 접근 방식은 OLCA 표준을 따릅니다.  MRSS 값을 추출하는 XACML을 사용하여 MRSS 요소에 매핑되는 특성이 있는 XACMLResource를 작성합니다.  그런 다음 MVPD로 전달됩니다.
+* **XACML**.  첫 번째 접근 방식은 OLCA 표준을 따릅니다.  MRSS 값을 추출하는 XACML을 사용하여 MRSS 요소에 매핑되는 특성이 있는 XACMLResource를 작성합니다.  그런 다음 MVPD으로 전달됩니다.
 * **나머지**.  두 번째 방법은 REST 기반입니다.  MRSS는 base64로 인코딩되고 REST 호출에서 URL 매개 변수로 전달됩니다.
 
-두 접근법들에서, MVPD는 그 자신의 논리 플로우 내에 추출된 값들을 포함시키고 인가 응답을 반환함으로써 인가 요청을 처리한다.
+두 가지 접근 방식 모두에서 MVPD은 자체 논리 플로우 내에 추출된 값을 포함하고 인증 응답을 반환하여 인증 요청을 처리합니다.
 
 ## 통합 세부 정보 {#integration-details}
 

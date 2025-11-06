@@ -82,7 +82,7 @@ ht-degree: 0%
 
 ### setRequestor {#setRequestor}
 
-**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대한 Adobe 등록 시 고유 ID가 지정됩니다. SSO 및 원격 토큰을 처리할 때 애플리케이션이 백그라운드에 있을 때 인증 상태가 변경될 수 있으며, 시스템 상태와 동기화하기 위해 애플리케이션이 전경으로 전환될 때 setRequestor를 다시 호출할 수 있습니다(SSO가 활성화된 경우 원격 토큰을 가져오고 그 사이에 로그아웃이 발생한 경우 로컬 토큰을 삭제).
+**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대해 Adobe에 등록할 때 고유 ID가 지정됩니다. SSO 및 원격 토큰을 처리할 때 애플리케이션이 백그라운드에 있을 때 인증 상태가 변경될 수 있으며, 시스템 상태와 동기화하기 위해 애플리케이션이 전경으로 전환될 때 setRequestor를 다시 호출할 수 있습니다(SSO가 활성화된 경우 원격 토큰을 가져오고 그 사이에 로그아웃이 발생한 경우 로컬 토큰을 삭제).
 
 서버 응답에는 프로그래머의 ID에 첨부된 일부 구성 정보와 함께 MVPD 목록이 포함됩니다. 서버 응답은 Access Enabler에서 내부적으로 사용됩니다. 작업의 상태(즉, SUCCESS/FAIL)만 setRequestorComplete() 콜백을 통해 응용 프로그램에 표시됩니다.
 
@@ -105,7 +105,7 @@ ht-degree: 0%
 
 **매개 변수:**
 
-- *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe이 할당한 고유 ID를 사이트에 전달합니다.
+- *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe에서 할당한 고유 ID를 사이트에 전달합니다.
 
 - *signedRequestorID*: 개인 키로 디지털 서명된 요청자 ID의 사본입니다. <!--For more details. see [Registering Native Clients](http://tve.helpdocsonline.com/registering-native-clients)-->.
 
@@ -259,7 +259,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 
 getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모션 임시 패스에는 이 작업이 가능하지 않습니다.
 
-*null*&#x200B;을(를) 매개 변수로 전달할 때 Access Enabler는 사용자가 인증 흐름을 취소했다고 가정하고(즉, &quot;뒤로&quot; 단추를 누름) 인증 상태 컴퓨터를 재설정하고 `AccessEnablerConstants.PROVIDER_NOT_SELECTED_ERROR` 오류 코드와 함께 *setAuthenticationStatus()* 콜백을 호출하여 응답합니다.
+*null*&#x200B;을(를) 매개 변수로 전달할 때 Access Enabler는 사용자가 인증 흐름을 취소했다고 가정하고(즉, &quot;뒤로&quot; 단추를 누름) 인증 상태 컴퓨터를 재설정하고 *오류 코드와 함께* setAuthenticationStatus()`AccessEnablerConstants.PROVIDER_NOT_SELECTED_ERROR` 콜백을 호출하여 응답합니다.
 
 | API 호출: 현재 선택한 공급자를 설정합니다. |
 | --- |
@@ -596,7 +596,7 @@ getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모�
       - `userID` - 사용자 식별자. MVPD에서 하위 계정을 지원하고 사용자가 기본 계정이 아닌 경우 `userID`은(는) `householdID`과(와) 달라집니다.
 
       - `channelID` - 사용자가 볼 수 있는 채널 목록
-   - 키가 `METADATA_KEY_DEVICE_ID`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며 프로그래머는 사용 권한 및 요금에 대한 정보를 Adobe에 문의해야 합니다.
+   - 키가 `METADATA_KEY_DEVICE_ID`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
    - 키가 `METADATA_KEY_TTL_AUTHZ`이고 인수에 이름 = `METADATA_ARG_RESOURCE_ID`, 값 = `[resource_id]`인 SerializableNameValuePair 개체가 포함된 경우 지정한 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
    - 키가 `METADATA_KEY_TTL_AUTHN`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
 
@@ -706,7 +706,7 @@ Access Enabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거�
 
 >[!WARNING]
 >
-> 장치 유형 및 운영 체제는 공용 Java 라이브러리([http://java.net/projects/user-agent-utils](http://java.net/projects/user-agent-utils)) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, 잘못된 결과에 대해서는 Adobe이 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
+> 장치 유형 및 운영 체제는 공용 Java 라이브러리([http://java.net/projects/user-agent-utils](http://java.net/projects/user-agent-utils)) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, Adobe은 잘못된 결과에 대한 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
 
 
 - 장치 유형에 가능한 값:

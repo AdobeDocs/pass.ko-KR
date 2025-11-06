@@ -2,7 +2,7 @@
 title: 콘솔 앱 로그를 사용하여 AccessEnabler iOS/tvOS SDK 디버깅
 description: 콘솔 앱 로그를 사용하여 AccessEnabler iOS/tvOS SDK 디버깅
 exl-id: 0dad325e-db15-4ea0-a87a-75409eaf8d46
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '576'
 ht-degree: 0%
@@ -50,19 +50,19 @@ AccessEnabler iOS/tvOS 3.5.0 버전부터 로깅 메커니즘은 다음과 같�
 
 먼저 **해야**&#x200B;하는 AccessEnabler 프레임워크에서 보내는 로깅 메시지를 보려면 아래 이미지에 표시된 대로 콘솔 앱의 작업 섹션에서 &quot;정보 메시지 포함&quot; 및 &quot;디버그 메시지 포함&quot;을 선택하십시오.
 
-![](/help/authentication/assets/include-info-debug-msg.png)
+![](../../../assets/include-info-debug-msg.png)
 
 
 AccessEnabler iOS/tvOS SDK의 기능을 디버깅하고 AccessEnabler 프레임워크 로그를 **참조**&#x200B;하려면 다음을 수행할 수 있습니다.
 
 * 아래 이미지와 같은 com.adobe.pass.AccessEnabler 값과 같은 **하위 시스템** 옵션을 사용하여 콘솔 앱에서 검색합니다.
 
-![](/help/authentication/assets/subsys-console-app.png)
+![](../../../assets/subsys-console-app.png)
 
 * 다음을 포함하는 **모두** 옵션을 사용하여 콘솔 앱에서 검색
   아래 이미지와 같은 [AccessEnabler] 값입니다.
 
-![](/help/authentication/assets/any-optn-console-app.png)
+![](../../../assets/any-optn-console-app.png)
 
 위의 두 가지 기준과 함께 **하위 시스템** 또는 **모두(접두사)**&#x200B;와 함께 **범주** 옵션을 사용하여 AccessEnabler iOS/tvOS SDK에서 내보내는 **디버그** 또는 **오류** 수준 메시지를 명시적으로 검색할 수도 있습니다.
 

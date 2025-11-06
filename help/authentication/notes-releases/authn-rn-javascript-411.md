@@ -4,7 +4,7 @@ description: Adobe Pass Authentication JavaScript 4.1.1 릴리스 노트
 exl-id: 00d017b3-700d-48b6-a43f-c0d7b8b67c3d
 source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '106'
 ht-degree: 0%
 
 ---

@@ -2,9 +2,9 @@
 title: Adobe Pass 인증 기본 정보
 description: Adobe Pass 인증 기본 정보
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: 7ca9d8996756086a6b963c0b6d5b0bb64608ecbc
+source-git-commit: 07bb12f7983f39b58e1b9795fdaa1bec4f68e674
 workflow-type: tm+mt
-source-wordcount: '1828'
+source-wordcount: '1832'
 ht-degree: 0%
 
 ---
@@ -72,7 +72,7 @@ TV Everywhere의 기회와 함께, 권리 자격이 가장 중요한 중요한 �
 
 Adobe Pass 인증은 프로그래머와 유료 TV 공급자 간의 자격 거래를 안전하게 중개하여 적합한 고객이 편리하게 적합한 콘텐츠에 액세스할 수 있도록 합니다.
 
-![](/help/authentication/assets/programmers-connect-authn.png)
+![](../assets/programmers-connect-authn.png)
 
 *Adobe Pass 인증을 통해 연결하는 프로그래머 및 유료 TV 공급자 중 일부*
 
@@ -132,7 +132,7 @@ Adobe Pass 인증은 프로그래머와 유료 TV 공급자 간의 자격 거래
 * Adobe Pass 인증 [미디어 토큰 검증기](/help/authentication/integration-guide-programmers/features-standard/entitlements/media-tokens.md#media-token-verifier)를 통합합니다.
 * 인증, 권한 부여 및 로그아웃 워크플로우를 위한 사용자 인터페이스를 개발합니다.
 
-프로그래머 통합 프로세스에 대한 자세한 내용은 [프로그래머 킥스타트 안내서](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md) 문서를 참조하십시오.
+프로그래머 통합 프로세스에 대한 자세한 내용은 [프로그래머 킥스타트 안내서](/help/authentication/kickstart/programmer-kickstart-guide.md) 및 [프로그래머 통합 안내서](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md) 문서를 참조하십시오.
 
 #### 유료 TV 공급자 통합 프로세스 {#pay-tv-provider-integration-process}
 
@@ -169,11 +169,11 @@ Adobe Pass 인증은 프록시 역할을 하며 양측에 안전하고 일관된
    * [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
 
 * Premium Adobe Pass 인증 API:
-   * [임시 패스 API 재설정](/help/premium-workflow/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
-      * [TempPass 기능](/help/premium-workflow/temporary-access/temp-pass-feature.md)
-   * [저하 API](/help/premium-workflow/degraded-access/degradation-feature.md#degradation-api-access)
-      * [성능 저하 기능](/help/premium-workflow/degraded-access/degradation-feature.md)
-   * [권한 부여 서비스 모니터링 API](/help/premium-workflow/esm/entitlement-service-monitoring-api.md)
+   * [임시 패스 API 재설정](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+      * [TempPass 기능](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
+   * [저하 API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
+      * [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
+   * [권한 부여 서비스 모니터링 API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
 
 권한 흐름에 대한 자세한 내용은 [프로그래머 통합 안내서](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md#entitlement-flow) 설명서를 참조하십시오.
 
@@ -241,11 +241,11 @@ Adobe Pass 인증은 대체 솔루션에 비해 몇 가지 이점을 제공합�
 
 * **원활한 SSO(Single Sign-On)** - 개별 공급자와의 직접 통합과 달리 Adobe Pass 인증은 사용자가 다른 웹 사이트와 앱 사이를 이동할 때 지속적인 로그인 환경을 제공합니다.
 * **광범위한 시장 침투** - 프로그래머가 Adobe Pass 인증과 통합되면 미국 가정의 90% 이상을 다루는 유료 TV 운영자에 즉시 액세스할 수 있습니다.
-* **Adobe 에코시스템과 통합** - Adobe Analytics을 비롯한 콘텐츠 전달, 보호 및 수익 창출에 대한 다른 Adobe 솔루션과 원활하게 작동합니다.
+* **Adobe의 에코시스템과 통합** - Adobe Analytics을 비롯한 콘텐츠 전달, 보호 및 수익 창출에 대한 다른 Adobe 솔루션과 원활하게 작동합니다.
 
 **Adobe Pass 인증은 얼마나 안전합니까?**
 
-보안이 최우선 과제입니다. Adobe Pass 인증을 사용하면 권한이 있는 사용자만 사용자 장치에 대한 액세스 권한을 바인딩하여 프리미엄 콘텐츠에 액세스할 수 있습니다. 또한 세대당 동시 스트림, 세션 또는 장치 수를 제한하는 옵션을 제공합니다.
+보안이 최우선 과제입니다. Adobe Pass 인증을 사용하면 권한이 있는 사용자만 사용자 장치에 대한 액세스를 바인딩하여 프리미엄 콘텐츠에 액세스할 수 있습니다. 또한 세대당 동시 스트림, 세션 또는 장치 수를 제한하는 옵션을 제공합니다.
 
 **Adobe Pass 인증이 어떤 장치를 지원합니까?**
 

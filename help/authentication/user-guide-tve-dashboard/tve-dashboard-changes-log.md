@@ -2,7 +2,7 @@
 title: 변경 로그
 description: 관리자가 TVE 대시보드에서 구성 변경 사항을 모니터링하는 방법을 알아봅니다.
 exl-id: 9b53a61b-679f-491e-90f3-5d827e21b32c
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%
@@ -30,7 +30,7 @@ TVE 대시보드의 **변경 로그** 섹션에서 TVE 대시보드를 통해 Ad
 
 1. 비교하려는 목록에서 두 가지 구성 변경 사항을 선택합니다.
 
-   ![구성 변경 내용 비교](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-changes-compare-button.png)
+   ![구성 변경 내용 비교](../assets/tve-dashboard/new-tve-dashboard/review/review-changes-compare-button.png)
 
    *구성 변경 내용 비교*
 
@@ -42,12 +42,12 @@ TVE 대시보드의 **변경 로그** 섹션에서 TVE 대시보드를 통해 Ad
 
 1. 변경된 값에 액세스하려면 **보기**&#x200B;를 선택하십시오.
 
-   ![구성 변경 내용 보기](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-changes-view-button.png)
+   ![구성 변경 내용 보기](../assets/tve-dashboard/new-tve-dashboard/review/review-changes-view-button.png)
 
    *구성 변경 내용 보기*
 
 다음은 선택한 구성에서 수행된 변경 내용의 예입니다. 변경 사항 내에서 이전 값과 새 값의 차이를 볼 수 있습니다.
 
-![이전 값과 새 값](/help/authentication/assets/tve-dashboard/new-tve-dashboard/review/review-change-modal-view.png)
+![이전 값과 새 값](../assets/tve-dashboard/new-tve-dashboard/review/review-change-modal-view.png)
 
 *이전 값과 새 값*

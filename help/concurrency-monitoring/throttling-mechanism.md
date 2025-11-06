@@ -4,7 +4,7 @@ description: 조절 메커니즘
 exl-id: 15236570-1a75-42fb-9bba-0e2d7a59c9f6
 source-git-commit: 8552a62f4d6d80ba91543390bf0689d942b3a6f4
 workflow-type: tm+mt
-source-wordcount: '624'
+source-wordcount: '614'
 ht-degree: 1%
 
 ---
@@ -13,7 +13,7 @@ ht-degree: 1%
 
 ## 소개 {#introduction}
 
-Adobe은 데이터 프로세서로서의 역할에서 고객의 사용자가 리소스를 균등하게 사용하고 서비스가 불필요한 API 요청으로 쇄도하지 않도록 적절한 조치를 취해야 합니다. 이를 위해 조절 메커니즘을 마련했습니다.
+Adobe은 데이터 프로세서로서 고객의 사용자가 리소스를 균등하게 사용하고 서비스가 불필요한 API 요청으로 쇄도하지 않도록 적절한 조치를 취해야 합니다. 이를 위해 조절 메커니즘을 마련했습니다.
 하나의 동시 모니터링 응용 프로그램을 여러 사용자가 사용할 수 있으며 한 사용자가 여러 세션을 가질 수 있습니다. 따라서 서비스에는 특정 시간 간격 내의 사용자/세션당 허용되는 호출 수에 대해 구성된 제한이 있습니다.
 제한에 도달하면 요청이 특정 응답 상태(HTTP 429 요청이 너무 많음)로 표시됩니다. &quot;429 Too Many Requests&quot; 응답이 수신된 후 수행된 모든 후속 호출은 유효한 비즈니스 응답을 얻을 수 있도록 최소 1분 냉각 기간으로 수행되어야 합니다.
 
@@ -28,8 +28,8 @@ Adobe은 데이터 프로세서로서의 역할에서 고객의 사용자가 리
 3. 세션 종료: DELETE /sessions/{idp}/{subject}/{sessionId}
 
 조절은 다음 두 가지 수준에서 구성됩니다.
-1. 세션: `Heartbeat` 호출 및 `Terminate a session` 호출에서 전송된 동일한 고유 {sessionId} 매개 변수와 같습니다.
-2. 사용자: `Create a new session` 호출 시 전송된 동일한 고유한 {subject} 매개 변수입니다.
+1. 세션: {sessionId} 호출 및 `Heartbeat` 호출에서 전송된 동일한 고유 `Terminate a session` 매개 변수와 같습니다.
+2. 사용자: {subject} 호출 시 전송된 동일한 고유한 `Create a new session` 매개 변수입니다.
 
 세션 수준 조절에 대한 제한은 1분 이내에 200개의 요청으로 설정됩니다.\
 사용자 수준 조절에 대한 제한은 1분 이내에 200개의 요청으로 설정됩니다.\
@@ -73,4 +73,4 @@ x-content-type-options: nosniff
 ## 고객 통합 권장 사항 {#customer-integration-recommendations}
 
 올바른 구현을 통해 고객은 &quot;429 Too Many Requests&quot; 응답을 받지 못합니다.
-여전히 Adobe은 각 고객이 위에 제시된 기술 세부 사항을 사용하여 &quot;429 너무 많은 요청&quot; 응답을 적절하게 처리할 것을 권장합니다. 응답을 처리할 때 &quot;만료&quot; 헤더를 사용하여 다음 유효한 요청을 보낼 시기를 결정해야 합니다.
+여전히 Adobe에서는 각 고객이 위에 제시된 기술 세부 정보를 사용하여 &quot;429 너무 많은 요청&quot; 응답을 적절하게 처리할 것을 권장합니다. 응답을 처리할 때 &quot;만료&quot; 헤더를 사용하여 다음 유효한 요청을 보낼 시기를 결정해야 합니다.

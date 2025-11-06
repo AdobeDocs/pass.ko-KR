@@ -2,7 +2,7 @@
 title: JavaScript SDK Cookbook
 description: JavaScript SDK Cookbook
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '957'
 ht-degree: 0%
@@ -36,7 +36,7 @@ JavaScript 코드 샘플 세트에 대한 링크입니다.
 
 </br>
 
-![](/help//authentication/assets/javascript-flows.png)
+![](../../../../assets/javascript-flows.png)
 
 
 ## 사전 요구 사항 {#prereq}
@@ -186,7 +186,7 @@ AccessEnabler 라이브러리)
 
 ## 방문자 ID 구성 {#visitorID}
 
-분석 관점에서 [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko) 값을 구성하는 것은 매우 중요합니다. EC visitorID 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 Adobe Pass 인증 서비스는 이 정보를 수집합니다. 이렇게 하면 Adobe Pass 인증 서비스의 분석 데이터를 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. EC visitorID 설정 방법에 대한 정보는 [여기](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko)에서 찾을 수 있습니다.
+분석 관점에서 [Experience Cloud visitorID](https://experienceleague.adobe.com/docs/id-service/using/home.html) 값을 구성하는 것은 매우 중요합니다. EC visitorID 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 Adobe Pass 인증 서비스는 이 정보를 수집합니다. 이렇게 하면 Adobe Pass 인증 서비스의 분석 데이터를 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. EC visitorID 설정 방법에 대한 정보는 [여기](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=en)에서 찾을 수 있습니다.
 
 
 >[!NOTE]

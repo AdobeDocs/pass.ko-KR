@@ -4,7 +4,7 @@ description: iOS/tvOS API 참조
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
 source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '6942'
+source-wordcount: '6935'
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Adobe은 Adobe Pass 인증 *공개* API만 사용할 것을 권장합니다.
+>Adobe에서는 Adobe Pass 인증 *공용* API만 사용할 것을 권장합니다.
 >
 >* 공개 API는 지원되는 모든 클라이언트 유형에서 사용할 수 있으며 완전히 테스트되었습니다. 모든 공개 기능의 경우 각 클라이언트 유형에 연결된 메서드의 해당 버전이 있는지 확인합니다.
 >* 공개 API는 이전 버전과의 호환성을 지원하고 파트너 통합이 중단되지 않도록 최대한 안정적이어야 합니다. 그러나 비공개 API의 경우, 향후 언제든지 서명을 변경할 수 있는 권한이 있습니다. 현재 공개 Adobe Pass 인증 API 호출의 조합을 통해 지원되지 않는 특정 흐름이 발생하는 경우 가장 좋은 접근 방법은 알려 주는 것입니다. 귀사의 요구를 고려하여 공개 API를 수정하고 안정적인 솔루션을 제공할 수 있습니다.
@@ -47,7 +47,7 @@ ht-degree: 0%
 
 * [`setOptions:options:`](#setOptions) - 프로필 또는 visitorID와 같은 글로벌 SDK 옵션을 구성합니다.
 
-* [`setRequestor:`](#setReqV3) [`requestorID`](#setReqV3),[`setRequestor:requestorID:serviceProviders:`](#setReqV3) - 프로그래머의 ID를 설정합니다.
+* [`setRequestor:`](#setReqV3)[`requestorID`](#setReqV3),[`setRequestor:requestorID:serviceProviders:`](#setReqV3) - 프로그래머의 ID를 설정합니다.
 
 * **[사용되지 않음]** [`setRequestor:signedRequestorId:`](#setReq),[`setRequestor:signedRequestorId:serviceProviders:`](#setReq) - 프로그래머의 ID를 설정합니다.
 
@@ -59,7 +59,7 @@ ht-degree: 0%
 
 * [`getAuthentication`](#getAuthN), [`getAuthentication:withData:`](#getAuthN) - 전체 인증 워크플로를 시작합니다.
 
-* [`getAuthentication:filter`](#getAuthN_filter),[`getAuthentication:withData:`](#getAuthN) [andFilter](#getAuthN_filter) - 전체 인증 워크플로를 시작합니다.
+* [`getAuthentication:filter`](#getAuthN_filter),[`getAuthentication:withData:`](#getAuthN)[andFilter](#getAuthN_filter) - 전체 인증 워크플로를 시작합니다.
 
 * [`displayProviderDialog:`](#dispProvDialog) - 사용자가 MVPD을 선택할 수 있는 적절한 UI 요소를 인스턴스화하도록 애플리케이션에 알립니다.
 
@@ -165,7 +165,7 @@ ht-degree: 0%
 
 * *options*: 전역 SDK 옵션이 포함된 NSDictionary입니다. 현재 다음 옵션을 사용할 수 있습니다.
    * **applicationProfile** - 이 값을 기반으로 서버 구성을 만드는 데 사용할 수 있습니다.
-   * **visitorID** - Experience Cloud ID 서비스입니다. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
+   * **visitorID** - Experience Cloud ID 서비스. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
    * **handleSVC** - 프로그래머가 SFSafariViewControllers를 처리할지 여부를 나타내는 부울. 자세한 내용은 iOS SDK 3.2 이상에서 [SFSafaariViewController 지원](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)을 참조하십시오.
       * **false,**(으)로 설정하면 SDK에서 최종 사용자에게 SFSafariViewController가 자동으로 표시됩니다. SDK은 MVPD 로그인 페이지 URL로 이동합니다.
       * **true,**(으)로 설정하면 SDK에서 최종 사용자에게 SFSafariViewController를 자동으로 **NOT**&#x200B;합니다. SDK이 **navigate(toUrl:{url}, useSVC:YES)**&#x200B;을(를) 추가로 트리거합니다.
@@ -178,7 +178,7 @@ ht-degree: 0%
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
-**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대한 Adobe 등록 시 고유 ID가 지정됩니다. SSO 및 원격 토큰을 처리할 때, 애플리케이션이 백그라운드에 있을 때 인증 상태가 변경될 수 있고, 시스템 상태와 동기화하기 위해 애플리케이션이 전경으로 전환될 때 setRequestor를 다시 호출할 수 있습니다(SSO가 활성화된 경우 원격 토큰을 가져오고, 그 사이에 로그아웃이 발생한 경우 로컬 토큰을 삭제).
+**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대해 Adobe에 등록할 때 고유 ID가 지정됩니다. SSO 및 원격 토큰을 처리할 때, 애플리케이션이 백그라운드에 있을 때 인증 상태가 변경될 수 있고, 시스템 상태와 동기화하기 위해 애플리케이션이 전경으로 전환될 때 setRequestor를 다시 호출할 수 있습니다(SSO가 활성화된 경우 원격 토큰을 가져오고, 그 사이에 로그아웃이 발생한 경우 로컬 토큰을 삭제).
 
 서버 응답에는 프로그래머의 ID에 첨부된 일부 구성 정보와 함께 MVPD 목록이 포함됩니다. 서버 응답은 AccessEnabler 코드에서 내부적으로 사용됩니다. 작업의 상태(즉, SUCCESS/FAIL)만 `setRequestorComplete:` 콜백을 통해 응용 프로그램에 표시됩니다.
 
@@ -203,7 +203,7 @@ ht-degree: 0%
 
 **매개 변수:**
 
-* *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe이 할당한 고유 ID를 사이트에 전달합니다.
+* *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe에서 할당한 고유 ID를 사이트에 전달합니다.
 * *url*: 선택적 매개 변수. 기본적으로 Adobe 서비스 공급자가 사용됩니다(http://sp.auth.adobe.com/). 이 배열을 사용하면 Adobe에서 제공하는 인증 및 권한 부여 서비스에 대한 끝점을 지정할 수 있습니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 이 옵션을 사용하여 여러 Adobe Pass 인증 서비스 공급자 인스턴스를 지정할 수 있습니다. 이렇게 하면 MVPD 목록이 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD은 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD을 지원하는 공급자와 연결됩니다.
 
 >[!NOTE]
@@ -220,7 +220,7 @@ ht-degree: 0%
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
-**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대한 Adobe 등록 시 고유 ID가 지정됩니다. SSO 및 원격 토큰을 처리할 때 애플리케이션이 백그라운드에 있을 때 인증 상태가 변경될 수 있으며, 시스템 상태와 동기화하기 위해 애플리케이션이 전경으로 전환될 때 setRequestor를 다시 호출할 수 있습니다(SSO가 활성화된 경우 원격 토큰을 가져오고 그 사이에 로그아웃이 발생한 경우 로컬 토큰을 삭제).
+**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대해 Adobe에 등록할 때 고유 ID가 지정됩니다. SSO 및 원격 토큰을 처리할 때 애플리케이션이 백그라운드에 있을 때 인증 상태가 변경될 수 있으며, 시스템 상태와 동기화하기 위해 애플리케이션이 전경으로 전환될 때 setRequestor를 다시 호출할 수 있습니다(SSO가 활성화된 경우 원격 토큰을 가져오고 그 사이에 로그아웃이 발생한 경우 로컬 토큰을 삭제).
 
 서버 응답에는 프로그래머의 ID에 첨부된 일부 구성 정보와 함께 MVPD 목록이 포함됩니다. 서버 응답은 AccessEnabler 코드에서 내부적으로 사용됩니다. 작업의 상태(즉, SUCCESS/FAIL)만 `setRequestorComplete:` 콜백을 통해 응용 프로그램에 표시됩니다.
 
@@ -242,7 +242,7 @@ ht-degree: 0%
 
 **매개 변수:**
 
-* *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe이 할당한 고유 ID를 사이트에 전달합니다.
+* *requestorID*: 프로그래머와 연결된 고유 ID입니다. Adobe Pass 인증 서비스에 처음 등록할 때 Adobe에서 할당한 고유 ID를 사이트에 전달합니다.
 * *signedRequestorID*: **이 매개 변수는 iOS AccessEnabler 버전 1.2 이상에 있습니다.** 개인 키로 디지털 서명된 요청자 ID의 복사본입니다. <!--For more details, see [Registering Native Clients](https://tve.helpdocsonline.com/registering-native-clients)-->.
 * *url*: 선택적 매개 변수. 기본적으로 Adobe 서비스 공급자가 사용됩니다(http://sp.auth.adobe.com/). 이 배열을 사용하면 Adobe에서 제공하는 인증 및 권한 부여 서비스에 대한 끝점을 지정할 수 있습니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 이 옵션을 사용하여 여러 Adobe Pass 인증 서비스 공급자 인스턴스를 지정할 수 있습니다. 이렇게 하면 MVPD 목록이 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD은 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD을 지원하는 공급자와 연결됩니다.
 
@@ -257,7 +257,7 @@ ht-degree: 0%
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
-**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대한 Adobe 등록 시 고유 ID가 지정됩니다. 이 설정은 응용 프로그램 수명 주기 동안 한 번만 수행해야 합니다.
+**설명:** 프로그래머의 ID를 설정합니다. 각 프로그래머는 Adobe Pass 인증 시스템에 대해 Adobe에 등록할 때 고유 ID가 지정됩니다. 이 설정은 응용 프로그램 수명 주기 동안 한 번만 수행해야 합니다.
 
 서버 응답에는 프로그래머의 ID에 첨부된 일부 구성 정보와 함께 MVPD 목록이 포함됩니다. 서버 응답은 AccessEnabler 코드에서 내부적으로 사용됩니다. 작업의 상태(즉, SUCCESS/FAIL)만 `setRequestorComplete:` 콜백을 통해 응용 프로그램에 표시됩니다.
 
@@ -313,7 +313,7 @@ ht-degree: 0%
 
 **매개 변수:**
 
-* *requestorID*: 프로그래머와 연결된 고유 ID입니다. 처음 시작할 때 Adobe에서 할당한 고유 ID를 사이트에 전달합니다   Adobe Pass 인증 서비스에 등록되었습니다.
+* *requestorID*: 프로그래머와 연결된 고유 ID입니다. 처음에 Adobe에서 할당한 고유 ID를 사이트에 전달합니다   Adobe Pass 인증 서비스에 등록되었습니다.
 * *signedRequestorID*: **이 매개 변수는 iOS AccessEnabler에 있습니다.   버전 1.2 이상** 개인 키로 디지털 서명된 요청자 ID의 복사본입니다. <!--For more details, see [Registering Native Clients](https://tve.helpdocsonline.com/registering-native-clients)-->.
 * *url*: 선택적 매개 변수, 기본적으로 Adobe 서비스 공급자   가 사용됩니다(http://sp.auth.adobe.com/). 이 배열을 사용하면 Adobe에서 제공하는 인증 및 권한 부여 서비스에 대한 끝점을 지정할 수 있습니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 이 옵션을 사용하여 여러 Adobe Pass 인증 서비스 공급자 인스턴스를 지정할 수 있습니다. 이렇게 하면 MVPD 목록이 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD은 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD을 지원하는 공급자와 연결됩니다.
 * secret and publicKey: 두 번째 화면 호출에 서명하는 데 사용되는 비밀 및 공개 키입니다. 자세한 내용은 [클라이언트 없는 설명서](#create_dev)를 참조하세요.
@@ -640,7 +640,7 @@ MVPD 로그인 페이지에서 사용자의 자격 증명이 확인됨에 따라
 
 getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모션 임시 패스에는 이 작업이 가능하지 않습니다.
 
-*null*&#x200B;을(를) 매개 변수로 전달할 때 Access Enabler는 사용자가 인증 흐름을 취소했다고 가정하고(즉, &quot;뒤로&quot; 단추를 누름) 인증 상태 컴퓨터를 다시 설정하고 `AccessEnabler.PROVIDER_NOT_SELECTED_ERROR` 오류 코드로 [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) 콜백을 호출하여 응답합니다.
+*null*&#x200B;을(를) 매개 변수로 전달할 때 Access Enabler는 사용자가 인증 흐름을 취소했다고 가정하고(즉, &quot;뒤로&quot; 단추를 누름) 인증 상태 컴퓨터를 다시 설정하고 [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) 오류 코드로 `AccessEnabler.PROVIDER_NOT_SELECTED_ERROR` 콜백을 호출하여 응답합니다.
 
 <table class="pass_api_table">
 <colgroup>
@@ -676,7 +676,7 @@ getAuthentication() 메서드에 추가 매개 변수가 제공되는 프로모�
 
 UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용 프로그램에서 컨트롤러의 활동을 모니터링하고 `ADOBEPASS_REDIRECT_URL `상수로 정의된 특정 사용자 지정 URL을 로드하는 순간을 감지해야 합니다(예: `adobepass://ios.app`). 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 인증 또는 로그아웃 흐름이 완료되었으며 컨트롤러를 닫는 것이 안전하다는 신호로 응용 프로그램에서 해석해야 합니다. 컨트롤러가 이 특정 사용자 지정 URL을 로드하면 응용 프로그램에서 UIWebView/WKWebView를 닫고 AccessEnabler의 `handleExternalURL:url `API 메서드를 호출해야 합니다.
 
-**참고:** 인증 흐름의 경우 사용자가 &quot;뒤로&quot; 단추를 누를 수 있는 지점이며, 이는 인증 흐름을 중단하는 것과 같습니다. 이러한 경우 응용 프로그램에서 매개 변수로 **`nil`**&#x200B;을(를) 전달하고 AccessEnabler에 인증 상태 컴퓨터를 다시 설정할 수 있는 기회를 제공하는 [setSelectedProvider:](#setSelProv) 메서드를 호출해야 합니다.
+**참고:** 인증 흐름의 경우 사용자가 &quot;뒤로&quot; 단추를 누를 수 있는 지점이며, 이는 인증 흐름을 중단하는 것과 같습니다. 이러한 경우 응용 프로그램에서 매개 변수로 [을(를) 전달하고 AccessEnabler에 인증 상태 컴퓨터를 다시 설정할 수 있는 기회를 제공하는 ](#setSelProv)setSelectedProvider:**`nil`** 메서드를 호출해야 합니다.
 
 <table class="pass_api_table">
 <colgroup>
@@ -712,13 +712,13 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 **파일:** AccessEnabler/headers/EntitlementDelegate.h
 
-**설명:** 이전에 응용 프로그램에서 [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](#setOptions) 호출을 통해 수동 Safari View Controller(SVC) 처리를 사용하도록 설정한 경우 및 Safari View Controller(SVC)가 필요한 MVPD의 경우에만 `navigateToUrl:` 콜백 대신 AccessEnabler에서 트리거된 콜백입니다. 다른 모든 MVPD에 대해 `navigateToUrl:` 콜백이 호출됩니다. SVC(Safari View Controller)를 관리하는 방법에 대한 자세한 내용은 [iOS SDK 3.2 이상에서 SFSafariViewController 지원](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)을 참조하십시오.
+**설명:** 이전에 응용 프로그램에서 `navigateToUrl:`setOptions(\[&quot;handleSVC&quot;[&quot;\]):true 호출을 통해 수동 Safari View Controller(SVC) 처리를 사용하도록 설정한 경우 및 Safari View Controller(SVC)가 필요한 MVPD의 경우에만 ](#setOptions) 콜백 대신 AccessEnabler에서 트리거된 콜백입니다. 다른 모든 MVPD에 대해 `navigateToUrl:` 콜백이 호출됩니다. SVC(Safari View Controller)를 관리하는 방법에 대한 자세한 내용은 [iOS SDK 3.2 이상에서 SFSafariViewController 지원](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)을 참조하십시오.
 
-`navigateToUrl:` 콜백과 마찬가지로 AccessEnabler가 `navigateToUrl:useSVC:`을(를) 트리거하여 응용 프로그램에 `SFSafariViewController` 컨트롤러를 인스턴스화하고 콜백의 **`url`** 매개 변수에 제공된 URL을 로드하도록 요청합니다. 콜백은 인증 끝점의 URL 또는 로그아웃 끝점의 URL을 나타내는 **`url`** 매개 변수와 응용 프로그램에서 `SFSafariViewController`을(를) 사용해야 함을 지정하는 **`useSVC`** 매개 변수를 전달합니다.
+`navigateToUrl:` 콜백과 마찬가지로 AccessEnabler가 `navigateToUrl:useSVC:`을(를) 트리거하여 응용 프로그램에 `SFSafariViewController` 컨트롤러를 인스턴스화하고 콜백의 **`url`** 매개 변수에 제공된 URL을 로드하도록 요청합니다. 콜백은 인증 끝점의 URL 또는 로그아웃 끝점의 URL을 나타내는 **`url`** 매개 변수와 응용 프로그램에서 **`useSVC`**&#x200B;을(를) 사용해야 함을 지정하는 `SFSafariViewController` 매개 변수를 전달합니다.
 
-`SFSafariViewController` 컨트롤러가 여러 리디렉션을 거치는 동안 응용 프로그램은 컨트롤러의 활동을 모니터링하고 `application's custom scheme`에 의해 정의된 특정 사용자 지정 URL을 로드하는 순간을 감지해야 합니다(예: **&#x200B; `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`**. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 인증 또는 로그아웃 흐름이 완료되었으며 컨트롤러를 닫는 것이 안전하다는 신호로 응용 프로그램에서 해석해야 합니다. 컨트롤러가 이 특정 사용자 지정 URL을 로드하면 응용 프로그램에서 `SFSafariViewController`을(를) 닫고 AccessEnabler의 `handleExternalURL:url `API 메서드를 호출해야 합니다.
+`SFSafariViewController` 컨트롤러가 여러 리디렉션을 거치는 동안 응용 프로그램은 컨트롤러의 활동을 모니터링하고 `application's custom scheme`에 의해 정의된 특정 사용자 지정 URL을 로드하는 순간을 감지해야 합니다(예: ** `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`**. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 인증 또는 로그아웃 흐름이 완료되었으며 컨트롤러를 닫는 것이 안전하다는 신호로 응용 프로그램에서 해석해야 합니다. 컨트롤러가 이 특정 사용자 지정 URL을 로드하면 응용 프로그램에서 `SFSafariViewController`을(를) 닫고 AccessEnabler의 `handleExternalURL:url `API 메서드를 호출해야 합니다.
 
-**참고:** 인증 흐름의 경우 사용자가 &quot;뒤로&quot; 단추를 누를 수 있는 지점이며, 이는 인증 흐름을 중단하는 것과 같습니다. 이러한 경우 응용 프로그램에서 매개 변수로 **`nil`**&#x200B;을(를) 전달하고 AccessEnabler에 인증 상태 컴퓨터를 다시 설정할 수 있는 기회를 제공하는 [setSelectedProvider:](#setSelProv) 메서드를 호출해야 합니다.
+**참고:** 인증 흐름의 경우 사용자가 &quot;뒤로&quot; 단추를 누를 수 있는 지점이며, 이는 인증 흐름을 중단하는 것과 같습니다. 이러한 경우 응용 프로그램에서 매개 변수로 [을(를) 전달하고 AccessEnabler에 인증 상태 컴퓨터를 다시 설정할 수 있는 기회를 제공하는 ](#setSelProv)setSelectedProvider:**`nil`** 메서드를 호출해야 합니다.
 
 <table class="pass_api_table">
 <colgroup>
@@ -732,19 +732,19 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 <tbody>
 <tr class="odd">
 <td><pre><code>@optional
-&#x200B;- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
+- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
 </tr>
 </tbody>
 </table>
 
-**가용성:**&#x200B;v 3.2+
+**가용성:**v 3.2+
 
 **매개 변수**:
 
 * *url:* MVPD의 로그인 페이지를 가리키는 URL
 * *useSVC:* SFSafariViewController에 URL을 로드할지 여부를 지정합니다.
 
-[setSelectedProvider:](#setSelProv) 전에 **트리거:**&#x200B;[&#x200B; setOptions:](#setOptions)
+**setSelectedProvider:**[ 전에 ](#setOptions)트리거:[setOptions:](#setSelProv)
 
 [맨 위로...](#apis)
 
@@ -1086,7 +1086,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 >[!NOTE]
 >
->가능하면 `getAuthorization:` / `getAuthorization:withData:` 대신 `checkAuthorization:` / `checkAuthorization:withData:`을(를) 사용하십시오. `getAuthorization:` / `getAuthorization:withData:` 메서드가 전체 인증 흐름을 시작하며(사용자가 인증되지 않은 경우) 이로 인해 프로그래머측의 복잡한 구현이 발생할 수 있습니다.
+>가능하면 `checkAuthorization:` / `checkAuthorization:withData:` 대신 `getAuthorization:` / `getAuthorization:withData:`을(를) 사용하십시오. `getAuthorization:` / `getAuthorization:withData:` 메서드가 전체 인증 흐름을 시작하며(사용자가 인증되지 않은 경우) 이로 인해 프로그래머측의 복잡한 구현이 발생할 수 있습니다.
 
 [맨 위로...](#apis)
 
@@ -1176,7 +1176,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 **설명:** 로그아웃 흐름을 시작하기 위해 응용 프로그램에서 이 메서드를 호출합니다. 로그아웃은 사용자가 Adobe Pass 인증 서버와 MVPD 서버에서 모두 로그아웃해야 하므로 일련의 HTTP 리디렉션 작업의 결과입니다. AccessEnabler 라이브러리에서 발급한 간단한 HTTP 요청으로는 이 흐름을 완료할 수 없으므로 HTTP 리디렉션 작업을 수행하려면 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러를 인스턴스화해야 합니다.
 
-로그아웃 흐름은 사용자가 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러와 어떤 식으로든 상호 작용할 필요가 없다는 점에서 인증 흐름과 다릅니다. 따라서 Adobe은 로그아웃 프로세스 중에 컨트롤을 보이지 않게(즉, 숨겨지도록) 만들 것을 권장합니다.
+로그아웃 흐름은 사용자가 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러와 어떤 식으로든 상호 작용할 필요가 없다는 점에서 인증 흐름과 다릅니다. 따라서 Adobe에서는 로그아웃 프로세스 중에 컨트롤을 보이지 않게(즉, 숨김으로) 만드는 것이 좋습니다.
 
 인증 흐름과 유사한 패턴이 사용됩니다. iOS AccessEnabler가 `navigateToUrl:` 콜백 또는 `navigateToUrl:useSVC:`을(를) 트리거하여 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러를 만들고 콜백의 `url` 매개 변수에 제공된 URL을 로드합니다. 백엔드 서버에 있는 로그아웃 끝점의 URL입니다. tvOS AccessEnabler의 경우 `navigateToUrl:` 콜백이나 `navigateToUrl:useSVC:` 콜백이 호출되지 않습니다.
 
@@ -1317,7 +1317,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
    * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_AUTHENTICATION`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
    * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_AUTHORIZATION` **및**&#x200B;인 경우\
      키가 `METADATA_RESOURCE_ID_KEY`이고 값이 특정 리소스 ID인 경우 지정된 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
-   * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_DEVICE_ID`인 경우 현재 장치 ID를 얻기 위해 쿼리가 수행됩니다. 이 기능은 기본적으로 비활성화되어 있으며 프로그래머는 사용 권한 및 요금에 대한 정보를 Adobe에 문의해야 합니다.
+   * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_DEVICE_ID`인 경우 현재 장치 ID를 얻기 위해 쿼리가 수행됩니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
    * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_USER_META` **이고** 키가 `METADATA_USER_META_KEY`이고 값이 메타데이터 이름인 경우 사용자 메타데이터에 대한 쿼리가 수행됩니다. 사용 가능한 사용자 메타데이터 유형 목록:
       * `zip` - 우편 번호 목록
       * `householdID` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다.
@@ -1413,7 +1413,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 **파일:** AccessEnabler/headers/EntitlementDelegate.h
 
-[`getMetadata:`](#getMeta) 호출을 통해 요청된 메타데이터를 전달하는 AccessEnabler에 의해 트리거된 **설명** 콜백입니다.
+**호출을 통해 요청된 메타데이터를 전달하는 AccessEnabler에 의해 트리거된**&#x200B;설명[`getMetadata:`](#getMeta) 콜백입니다.
 
 <table class="pass_api_table">
 <colgroup>
@@ -1438,7 +1438,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 **매개 변수**:
 
-* *메타데이터*: 요청한 메타데이터입니다. 이 값은 정적 메타데이터(인증 TTL, 권한 부여 TTL, 장치 ID)의 경우 `NSString`입니다.  사용자별 메타데이터를 요청할 때 복잡한 개체입니다. 일반적으로 이 복합 개체는 JSON 페이로드의 Objective-C 표현입니다(예: &#39;&lbrace;&quot;street&quot;: &quot;Main Avenue&quot;, &quot;buildings&quot;: [&quot;150&quot;, &quot;320&quot;]&#39;)는 Objective-C에서 NSDictionary(&quot;street&quot; -> &quot;Main Avenue&quot;, &quot;buildings&quot; -> NSArray(&quot;150&quot;, &quot;320&quot;))로 변환됨).   샘플 메타데이터 JSON 개체:
+* *메타데이터*: 요청한 메타데이터입니다. 이 값은 정적 메타데이터(인증 TTL, 권한 부여 TTL, 장치 ID)의 경우 `NSString`입니다.  사용자별 메타데이터를 요청할 때 복잡한 개체입니다. 일반적으로 이 복합 개체는 JSON 페이로드의 Objective-C 표현입니다(예: &#39;{&quot;street&quot;: &quot;Main Avenue&quot;, &quot;buildings&quot;: [&quot;150&quot;, &quot;320&quot;]&#39;)는 Objective-C에서 NSDictionary(&quot;street&quot; -> &quot;Main Avenue&quot;, &quot;buildings&quot; -> NSArray(&quot;150&quot;, &quot;320&quot;))로 변환됨).   샘플 메타데이터 JSON 개체:
 
 ```JSON
         {
@@ -1514,7 +1514,7 @@ AccessEnabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거합
 
 **가용성:** v1.0+
 
-**참고:** 장치 형식 및 운영 체제는 공용 Java 라이브러리(<http://java.net/projects/user-agent-utils>) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, 잘못된 결과에 대해서는 Adobe이 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
+**참고:** 장치 형식 및 운영 체제는 공용 Java 라이브러리(<http://java.net/projects/user-agent-utils>) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, Adobe은 잘못된 결과에 대한 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
 
 * 장치 유형에 가능한 값:
    * `computer`

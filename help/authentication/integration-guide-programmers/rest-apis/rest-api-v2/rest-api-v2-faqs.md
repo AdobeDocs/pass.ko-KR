@@ -2,9 +2,9 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 0b8ef6c6b326d1a9de52b24823886c708c2aad33
 workflow-type: tm+mt
-source-wordcount: '9611'
+source-wordcount: '9682'
 ht-degree: 0%
 
 ---
@@ -50,14 +50,14 @@ REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authenticat
 클라이언트 애플리케이션은 다음 시나리오에서 이 단계를 건너뛸 수 있습니다.
 
 * 사용자가 이미 인증되었습니다.
-* 기본 또는 프로모션 [TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
+* 기본 또는 프로모션 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
 * 사용자 인증이 만료되었지만 클라이언트 애플리케이션이 이전에 선택한 MVPD을 사용자 경험에 동기된 선택으로 캐시했으며 사용자에게 아직 해당 MVPD의 구독자인지 확인하라는 메시지를 표시했습니다.
 
 #### &#x200B;3. 구성은 무엇이며 얼마나 오래 유효합니까? {#configuration-phase-faq3}
 
 구성은 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#configuration) 설명서에 정의된 용어입니다.
 
-구성에 `id`Configuration`displayName` 끝점에서 검색할 수 있는 `logoUrl`, [, &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) 특성 등으로 정의된 MVPD 목록이 포함되어 있습니다.
+구성에 `id`Configuration`displayName` 끝점에서 검색할 수 있는 `logoUrl`, [, ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md) 특성 등으로 정의된 MVPD 목록이 포함되어 있습니다.
 
 사용자가 인증 또는 재인증하기 위해 MVPD을 선택해야 하는 경우에만 클라이언트 애플리케이션이 구성을 검색해야 합니다.
 
@@ -88,7 +88,7 @@ REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authenticat
 클라이언트 애플리케이션은 불필요한 요청을 방지하고 다음과 같은 경우 사용자 경험을 개선하기 위해 구성 응답 정보를 메모리 저장소에 캐시해야 합니다.
 
 * 사용자가 이미 인증되었습니다.
-* 기본 또는 프로모션 [TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
+* 기본 또는 프로모션 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
 * 사용자 인증이 만료되었지만 클라이언트 애플리케이션이 이전에 선택한 MVPD을 사용자 경험에 동기된 선택으로 캐시했으며 사용자에게 아직 해당 MVPD의 구독자인지 확인하라는 메시지를 표시했습니다.
 
 #### &#x200B;6. 클라이언트 애플리케이션이 자체 MVPD 목록을 관리할 수 있습니까? {#configuration-phase-faq6}
@@ -101,7 +101,7 @@ REST API V2에 대한 자세한 내용은 [REST API V2 개요](/help/authenticat
 
 클라이언트 애플리케이션은 자신의 비즈니스 로직 및 이전 선택의 사용자 위치 또는 사용자 내역과 같은 요구 사항을 기반으로 사용자 지정 메커니즘을 구현함으로써 구성 응답에 제공된 MVPD의 목록을 필터링할 수 있다.
 
-클라이언트 응용 프로그램은 [TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md) MVPD 또는 아직 개발 또는 테스트 중인 통합이 있는 MVPD의 목록을 필터링할 수 있습니다.
+클라이언트 응용 프로그램은 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) MVPD 또는 아직 개발 또는 테스트 중인 통합이 있는 MVPD의 목록을 필터링할 수 있습니다.
 
 #### &#x200B;8. MVPD과의 통합이 비활성화되고 비활성화로 표시되면 어떻게 됩니까? {#configuration-phase-faq8}
 
@@ -144,7 +144,7 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 클라이언트 애플리케이션은 다음 시나리오에서 이 단계를 건너뛸 수 있습니다.
 
 * 사용자가 이미 인증되었으며 프로필이 여전히 유효합니다.
-* 기본 또는 프로모션 [TempPass](/help/premium-workflow/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
+* 기본 또는 프로모션 [TempPass](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md) 기능을 통해 사용자에게 임시 액세스 권한이 제공됩니다.
 
 클라이언트 응용 프로그램 오류를 처리하려면 클라이언트 응용 프로그램에서 사용자를 인증해야 함을 나타내는 [error](/help/authentication/integration-guide-programmers/features-standard/error-reporting/enhanced-error-codes.md#enhanced-error-codes-lists-rest-api-v2) 코드(예: `authenticated_profile_missing`, `authenticated_profile_expired`, `authenticated_profile_invalidated` 등)를 처리해야 합니다.
 
@@ -245,7 +245,7 @@ MVPD과의 통합이 다시 활성화되어 활성으로 표시되면 MVPD은 �
 
 따라서 클라이언트 애플리케이션은 사용자에게 다시 인증하고 MVPD 로그인 페이지와 상호 작용하여 시스템에 대한 프로필을 새로 고치도록 요청해야 합니다.
 
-그러나 HBA([홈 기반 인증](/help/premium-workflow/hba-access/home-based-authentication.md))를 지원하는 MVPD의 경우 사용자는 자격 증명을 입력할 필요가 없습니다.
+그러나 HBA([홈 기반 인증](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md))를 지원하는 MVPD의 경우 사용자는 자격 증명을 입력할 필요가 없습니다.
 
 #### &#x200B;10. 사용 가능한 각 프로필 끝점의 사용 사례는 무엇입니까? {#authentication-phase-faq10}
 
@@ -269,7 +269,7 @@ Profiles SSO 끝점은 다른 용도로 사용되며 클라이언트 애플리�
 
 이후 쿼리의 경우 기본 프로필 끝점을 사용하여 사용자의 인증 상태를 결정하고, 사용자 메타데이터 정보에 액세스하고, 인증에 사용되는 방법 또는 ID를 제공하는 데 사용되는 엔티티를 찾아야 합니다.
 
-자세한 내용은 [파트너 흐름을 사용하여 Single Sign-On](/help/premium-workflow/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md) 문서를 참조하세요.
+자세한 내용은 [파트너 흐름을 사용한 Single Sign-On](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-single-sign-on-partner-flows.md) 및 [Apple SSO Cookbook(REST API V2)](/help/authentication/integration-guide-programmers/features-standard/sso-access/partner-sso/apple-sso/apple-sso-cookbook-rest-api-v2.md) 문서를 참조하십시오.
 
 #### &#x200B;11. 사용자에게 여러 MVPD 프로필이 있는 경우 클라이언트 애플리케이션은 어떻게 해야 합니까? {#authentication-phase-faq11}
 
@@ -309,7 +309,7 @@ Profiles 엔드포인트가 빈 프로필 맵 응답을 반환하는 경우 클�
 
 **기본(화면) 응용 프로그램 내에서 수행된 인증**
 
-브라우저 구성 요소가 `redirectUrl`세션[&#x200B; 끝점 요청에서 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 매개 변수에 대해 지정된 URL을 로드한 후 사용자가 최종 대상 페이지에 도달하면 기본(스트리밍) 응용 프로그램에서 폴링을 시작해야 합니다.
+브라우저 구성 요소가 `redirectUrl`세션[ 끝점 요청에서 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 매개 변수에 대해 지정된 URL을 로드한 후 사용자가 최종 대상 페이지에 도달하면 기본(스트리밍) 응용 프로그램에서 폴링을 시작해야 합니다.
 
 **보조(화면) 응용 프로그램 내에서 수행된 인증**
 
@@ -325,7 +325,7 @@ Profiles 엔드포인트가 빈 프로필 맵 응답을 반환하는 경우 클�
 
 **인증 세션 및 코드 만료**
 
-`notAfter`세션[&#x200B; 끝점 응답에서 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 타임스탬프(예: 30분)에 표시된 대로 인증 세션 및 코드가 만료됩니다. 이 경우 사용자는 인증 프로세스를 다시 시작해야 하며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
+`notAfter`세션[ 끝점 응답에서 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 타임스탬프(예: 30분)에 표시된 대로 인증 세션 및 코드가 만료됩니다. 이 경우 사용자는 인증 프로세스를 다시 시작해야 하며 이전 인증 코드를 사용한 폴링을 즉시 중지해야 합니다.
 
 **새 인증 코드가 생성됨**
 
@@ -366,7 +366,7 @@ Profiles 엔드포인트가 빈 프로필 맵 응답을 반환하는 경우 클�
 
 #### &#x200B;19. 클라이언트 애플리케이션은 성능 저하된 액세스를 어떻게 관리해야 합니까? {#authentication-phase-faq19}
 
-[성능 저하 기능](/help/premium-workflow/degraded-access/degradation-feature.md)을 사용하면 MVPD의 인증 또는 권한 부여 서비스에 문제가 발생하는 경우에도 클라이언트 응용 프로그램에서 사용자를 위한 원활한 스트리밍 환경을 유지할 수 있습니다.
+[성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)을 사용하면 MVPD의 인증 또는 권한 부여 서비스에 문제가 발생하는 경우에도 클라이언트 응용 프로그램에서 사용자를 위한 원활한 스트리밍 환경을 유지할 수 있습니다.
 
 요약하면, MVPD의 일시적인 서비스 중단에도 불구하고 콘텐츠에 중단 없이 액세스할 수 있습니다.
 
@@ -376,7 +376,7 @@ Profiles 엔드포인트가 빈 프로필 맵 응답을 반환하는 경우 클�
 
 #### &#x200B;20. 클라이언트 애플리케이션은 임시 액세스를 어떻게 관리해야 합니까? {#authentication-phase-faq20}
 
-[TempPass 기능](/help/premium-workflow/temporary-access/temp-pass-feature.md)을 사용하면 클라이언트 응용 프로그램에서 사용자에게 임시 액세스를 제공할 수 있습니다.
+[TempPass 기능](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)을 사용하면 클라이언트 응용 프로그램에서 사용자에게 임시 액세스를 제공할 수 있습니다.
 
 요약하면, 지정된 기간 동안 콘텐츠 또는 사전 정의된 VOD 제목 수에 대한 제한 시간 액세스를 제공하여 사용자를 참여시킬 수 있습니다.
 
@@ -640,7 +640,7 @@ TV 공급자(신뢰할 수 있는) 결정에서 사용자가 액세스할 수 �
 
 [X-Device-Info](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) 헤더가 없거나 잘못된 값을 포함하는 경우 요청이 `unknown` 플랫폼에서 시작된 것으로 분류될 수 있습니다.
 
-이로 인해 요청이 안전하지 않은 것으로 처리되고 인증 TTL의 단축과 같은 보다 제한적인 규칙이 적용될 수 있습니다. 또한 스트리밍 장치 `connectionIp` 및 `connectionPort`과(와) 같은 일부 필드는 Spectrum의 [홈 기본 인증](/help/premium-workflow/hba-access/home-based-authentication.md)과(와) 같은 기능에 필수입니다.
+이로 인해 요청이 안전하지 않은 것으로 처리되고 인증 TTL의 단축과 같은 보다 제한적인 규칙이 적용될 수 있습니다. 또한 스트리밍 장치 `connectionIp` 및 `connectionPort`과(와) 같은 일부 필드는 Spectrum의 [홈 기본 인증](/help/authentication/integration-guide-programmers/features-standard/hba-access/home-based-authentication.md)과(와) 같은 기능에 필수입니다.
 
 요청을 장치 대신 서버에서 보내는 경우에도 [X-Device-Info](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md) 헤더 값은 실제 스트리밍 장치 정보를 반영해야 합니다.
 
@@ -864,25 +864,25 @@ SDK에서 REST API V2로 마이그레이션할 때 다음 표에 고려해야 �
 
 | 범위 | SDK | REST API V2 | 관찰 |
 |--------------------------------------------|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DCR(Dynamic Client Registration) 완료 | 생성자에 소프트웨어 구문 제공 | [POST <br/> /o/client/register](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)</li><li>[동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)</li></ul> |
+| DCR(Dynamic Client Registration) 완료 | 생성자에 소프트웨어 구문 제공 | [POST <br/> /o/client/register](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) <br/> [GET <br/> /o/client/token](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) | 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)</li><li>[동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)</li></ul> |
 
 ###### AccessEnabler iOS/tvOS SDK
 
 | 범위 | SDK | REST API V2 | 관찰 |
 |--------------------------------------------|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DCR(Dynamic Client Registration) 완료 | 생성자에 소프트웨어 구문 제공 | [POST <br/> /o/client/register](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)</li><li>[동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)</li></ul> |
+| DCR(Dynamic Client Registration) 완료 | 생성자에 소프트웨어 구문 제공 | [POST <br/> /o/client/register](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) <br/> [GET <br/> /o/client/token](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) | 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)</li><li>[동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)</li></ul> |
 
 ###### AccessEnabler Android SDK
 
 | 범위 | SDK | REST API V2 | 관찰 |
 |--------------------------------------------|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DCR(Dynamic Client Registration) 완료 | 생성자에 소프트웨어 구문 제공 | [POST <br/> /o/client/register](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)</li><li>[동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)</li></ul> |
+| DCR(Dynamic Client Registration) 완료 | 생성자에 소프트웨어 구문 제공 | [POST <br/> /o/client/register](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) <br/> [GET <br/> /o/client/token](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) | 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)</li><li>[동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)</li></ul> |
 
 ###### AccessEnabler FireOS SDK
 
 | 범위 | SDK | REST API V2 | 관찰 |
 |--------------------------------------------|---------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| DCR(Dynamic Client Registration) 완료 | 생성자에 소프트웨어 구문 제공 | [POST <br/> /o/client/register](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)</li><li>[동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)</li></ul> |
+| DCR(Dynamic Client Registration) 완료 | 생성자에 소프트웨어 구문 제공 | [POST <br/> /o/client/register](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md) <br/> [GET <br/> /o/client/token](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) | 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)</li><li>[동적 클라이언트 등록 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/flows/dynamic-client-registration-flow.md)</li></ul> |
 
 +++
 

@@ -15,7 +15,7 @@ ht-degree: 0%
 >
 > 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-[보호된 콘텐츠](#protected-resources)에 대한 액세스 권한 부여 또는 거부 여부를 결정하는 사용자의 MVPD 권한 부여 또는 사전 권한 부여 조회를 기반으로 Adobe Pass 인증 [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md)에 의해 결정이 생성됩니다.
+[보호된 콘텐츠](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-overview.md)에 대한 액세스 권한 부여 또는 거부 여부를 결정하는 사용자의 MVPD 권한 부여 또는 사전 권한 부여 조회를 기반으로 Adobe Pass 인증 [REST API V2](#protected-resources)에 의해 결정이 생성됩니다.
 
 제공되는 의사 결정에는 호출된 API에 따라 두 가지 유형이 있습니다.
 

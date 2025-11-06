@@ -2,7 +2,7 @@
 title: 기본 프로필 - 기본 애플리케이션 - 흐름
 description: REST API V2 - 기본 프로필 - 기본 애플리케이션 - 흐름
 exl-id: 19ddf382-9a32-4b94-aa84-7611c0e1780e
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 다음 다이어그램과 같이 기본 응용 프로그램 내에서 수행되는 기본 프로필 검색 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![프로필 검색](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profiles-within-primary-application.png)
+![프로필 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profiles-within-primary-application.png)
 
 *프로필 검색*
 
@@ -91,7 +91,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 다음 다이어그램에서와 같이 특정 MVPD에 대해 기본 프로필 검색 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![특정 mvpd에 대한 프로필 검색](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-mvpd.png)
+![특정 mvpd에 대한 프로필 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-mvpd.png)
 
 *특정 mvpd에 대한 프로필 검색*
 
@@ -140,7 +140,7 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
 
 다음 다이어그램과 같이 기본 애플리케이션 내에서 수행되는 특정 인증 코드에 대한 기본 프로필 검색 플로우를 구현하려면 주어진 단계를 따르십시오.
 
-![특정 코드에 대한 프로필 검색](/help/authentication/assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-code.png)
+![특정 코드에 대한 프로필 검색](../../../../../assets/rest-api-v2/flows/basic-access-flows/rest-api-v2-retrieve-profile-within-primary-application-for-specific-code.png)
 
 *특정 코드에 대한 프로필 검색*
 

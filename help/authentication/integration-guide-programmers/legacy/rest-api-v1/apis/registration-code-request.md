@@ -4,7 +4,7 @@ description: 등록 페이지
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '516'
+source-wordcount: '509'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 | 엔드포인트 | 호출자: <br>명 | 입력   <br>매개 변수 | HTTP <br>메서드 | 응답 | HTTP <br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;REGGIE_FQDN>/reggie/v1/{requestor}/regcode<br>예:<br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | 스트리밍 앱<br>또는<br>프로그래머 서비스 | 1. 요청자 <br>    (경로 구성 요소)<br>2.  deviceId(해시됨)   <br>    (필수)<br>3.  device_info/X-Device-Info(필수)<br>4.  mvpd(선택 사항)<br>5.  ttl(선택 사항)<br> | POST | 실패한 경우 등록 코드 및 정보 또는 오류 세부 정보가 포함된 XML 또는 JSON. 아래 샘플을 참조하십시오. | 201 |
+| &lt;REGGIE_FQDN>/reggie/v1/{requestor}/regcode<br>예:<br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | 스트리밍 앱<br>또는<br>프로그래머 서비스 | &#x200B;1. 요청자 <br>    (경로 구성 요소)<br>2.  deviceId(해시됨)   <br>    (필수)<br>3.  device_info/X-Device-Info(필수)<br>4.  mvpd(선택 사항)<br>5.  ttl(선택 사항)<br> | POST | 실패한 경우 등록 코드 및 정보 또는 오류 세부 정보가 포함된 XML 또는 JSON. 아래 샘플을 참조하십시오. | 201 |
 
 {style="table-layout:auto"}
 
@@ -81,7 +81,7 @@ ht-degree: 0%
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1<br>X-Forwarded-For:203.45.101.20
 >```
 >
-><br>
+<br>
 
 ### 응답 JSON
 
@@ -122,12 +122,12 @@ ht-degree: 0%
 | 생성됨 | 등록 코드 생성 타임스탬프(1970년 1월 1일 GMT 이후 밀리초) |
 | 만료 | 등록 코드가 만료되는 타임스탬프(1970년 1월 1일 GMT 이후 밀리초) |
 | deviceId | Base64 고유 장치 ID |
-| info:deviceId | Base64 장치 유형 |
-| info:deviceInfo | Base64 User-Agent, X-Device-Info 또는 device_info에서 받은 정보를 기반으로 표준화된 장치 정보 작성 |
-| info:userAgent | 애플리케이션에서 보낸 사용자 에이전트 |
-| info:originalUserAgent | 애플리케이션에서 보낸 사용자 에이전트 |
-| info:authorizationType | DCR을 사용한 호출에 대한 OAUTH2 |
-| info:sourceApplicationInformation | DCR에 구성된 애플리케이션 정보 |
+| 정보:deviceId | Base64 장치 유형 |
+| 정보:deviceInfo | Base64 User-Agent, X-Device-Info 또는 device_info에서 받은 정보를 기반으로 표준화된 장치 정보 작성 |
+| 정보:userAgent | 애플리케이션에서 보낸 사용자 에이전트 |
+| 정보:originalUserAgent | 애플리케이션에서 보낸 사용자 에이전트 |
+| 정보:authorizationType | DCR을 사용한 호출에 대한 OAUTH2 |
+| 정보:sourceApplicationInformation | DCR에 구성된 애플리케이션 정보 |
 
 {style="table-layout:auto"}
 

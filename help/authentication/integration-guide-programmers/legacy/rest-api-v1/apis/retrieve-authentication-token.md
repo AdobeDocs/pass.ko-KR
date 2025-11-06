@@ -43,7 +43,7 @@ ht-degree: 0%
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/tokens/authn</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/tokens/authn | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자(필수)</br>2.  deviceId(필수)</br>3.  device_info/X-Device-Info(필수)</br>4.  _deviceType_(사용하지 않음)</br>5.  _deviceUser_(사용하지 않음)</br>6.  _appId_(더 이상 사용되지 않음) | GET | 실패한 경우 인증 정보 또는 오류 세부 정보가 포함된 XML 또는 JSON. | 200 - 성공  </br>404 - 토큰을 찾을 수 없음 </br>410 - 토큰이 만료됨 |
+| &lt;SP_FQDN>/api/v1/tokens/authn</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/tokens/authn | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1. 요청자(필수)</br>2.  deviceId(필수)</br>3.  device_info/X-Device-Info(필수)</br>4.  _deviceType_(사용하지 않음)</br>5.  _deviceUser_(사용하지 않음)</br>6.  _appId_(더 이상 사용되지 않음) | GET | 실패한 경우 인증 정보 또는 오류 세부 정보가 포함된 XML 또는 JSON. | 200 - 성공  </br>404 - 토큰을 찾을 수 없음 </br>410 - 토큰이 만료됨 |
 
 {style="table-layout:auto"}
 

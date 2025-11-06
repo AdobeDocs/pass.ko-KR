@@ -2,7 +2,7 @@
 title: SSO(Single Sign-On) - 플랫폼 ID - 흐름
 description: REST API V2 - Single Sign-On - 플랫폼 ID - 흐름
 exl-id: 5200e851-84e8-4cb4-b068-63b91a2a8945
-source-git-commit: 2afe9ea2a814817757f1ab28484a84466da68d62
+source-git-commit: b753c6a6bdfd8767e86cbe27327752620158cdbb
 workflow-type: tm+mt
 source-wordcount: '1855'
 ht-degree: 0%
@@ -33,8 +33,8 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 
 >[!MORELIKETHIS]
 > 
-> * [Amazon SSO Cookbook](/help/premium-workflow/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
-> * [Roku SSO Cookbook](/help/premium-workflow/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
+> * [Amazon SSO Cookbook](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/amazon-single-sign-on/amazon-sso-cookbook-rest-api-v2.md)
+> * [Roku SSO Cookbook](/help/authentication/integration-guide-programmers/features-standard/sso-access/platform-sso/roku-single-sign-on/roku-sso-cookbook-rest-api-v2.md)
 
 ## 플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 수행 {#perform-authentication-through-single-sign-on-using-platform-identity}
 
@@ -43,11 +43,11 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 흐름을 수행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
 * 플랫폼은 동일한 장치 또는 플랫폼의 모든 응용 프로그램에서 일관된 정보를 `JWS` 또는 `JWE` 페이로드로 반환하는 ID 서비스 또는 라이브러리를 제공해야 합니다.
-* 첫 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS`Adobe-Subject-Token`JWE` / [X-Roku-Reserved-Roku-Connect-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 [&#x200B; 또는 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) 페이로드를 포함해야 합니다.
+* 첫 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS`Adobe-Subject-Token`JWE` / [X-Roku-Reserved-Roku-Connect-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 [ 또는 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) 페이로드를 포함해야 합니다.
 * 첫 번째 스트리밍 애플리케이션은 MVPD을 선택해야 합니다.
 * 첫 번째 스트리밍 애플리케이션은 선택한 MVPD으로 로그인하기 위한 인증 세션을 시작해야 합니다.
 * 첫 번째 스트리밍 애플리케이션은 사용자 에이전트에서 선택한 MVPD을 인증해야 합니다.
-* 두 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS`Adobe-Subject-Token`JWE` / [X-Roku-Reserved-Roku-Connect-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 [&#x200B; 또는 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) 페이로드를 포함해야 합니다.
+* 두 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS`Adobe-Subject-Token`JWE` / [X-Roku-Reserved-Roku-Connect-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 [ 또는 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) 페이로드를 포함해야 합니다.
 
 >[!IMPORTANT]
 >
@@ -62,7 +62,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 
 다음 다이어그램과 같이 플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 흐름을 구현하려면 주어진 단계를 수행하십시오.
 
-![플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 수행](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-platform-identity-flow.png)
+![플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 수행](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-perform-authentication-through-single-sign-on-using-platform-identity-flow.png)
 
 *플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 수행*
 
@@ -217,7 +217,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 흐름을 수행하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
 * 플랫폼은 동일한 장치 또는 플랫폼의 모든 응용 프로그램에서 일관된 정보를 `JWS` 또는 `JWE` 페이로드로 반환하는 ID 서비스 또는 라이브러리를 제공해야 합니다.
-* 두 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS`Adobe-Subject-Token`JWE` / [X-Roku-Reserved-Roku-Connect-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 [&#x200B; 또는 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) 페이로드를 포함해야 합니다.
+* 두 번째 스트리밍 애플리케이션은 고유한 플랫폼 식별자를 검색하고 이를 지정하는 모든 요청에 대해 `JWS`Adobe-Subject-Token`JWE` / [X-Roku-Reserved-Roku-Connect-Token](../../appendix/headers/rest-api-v2-appendix-headers-adobe-subject-token.md) 헤더의 일부로 [ 또는 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-roku-reserved-roku-connect-token.md) 페이로드를 포함해야 합니다.
 * 두 번째 스트리밍 애플리케이션은 사용자가 선택한 리소스를 재생하기 전에 인증 결정을 검색해야 합니다.
 
 >[!IMPORTANT]
@@ -232,7 +232,7 @@ Platform ID 메서드를 사용하면 Adobe Pass 서비스를 사용할 때 여�
 
 다음 다이어그램과 같이 플랫폼 ID를 사용하여 단일 사인온을 통해 인증 흐름을 구현하려면 주어진 단계를 수행하십시오.
 
-![플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-platform-identity-flow.png)
+![플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-retrieve-authorization-decisions-through-single-sign-on-using-platform-identity-flow.png)
 
 *플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통해 인증 결정을 검색합니다*
 

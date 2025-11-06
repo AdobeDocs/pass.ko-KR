@@ -4,7 +4,7 @@ description: Adobe Pass 인증 iOS / tvOS 3.9.2 릴리스 노트
 exl-id: 5c3f6138-f727-499b-bc73-816444849c1b
 source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '0'
+source-wordcount: '132'
 ht-degree: 0%
 
 ---
@@ -27,7 +27,7 @@ Adobe Pass 인증: iOS / tvOS 3.9.2
 
 * iOS 17 개인 정보 보호 요구 사항을 준수하여 SDK 개인 정보 보호 매니페스트를 업데이트합니다.
 * 일부 상황에서 사용자가 인증 흐름 중에 빈 화면에 표시되는 문제를 해결했습니다.
-* 장치 로깅 및 서버 로깅을 추가하여 키체인 상태에 대한 통찰력 정보를 얻습니다.
+* 장치 로깅 및 서버 로깅을 추가하여 키체인 상태에 대한 insight 정보를 얻습니다.
 
 ## 릴리스 패키지 {#release-package-392}
 

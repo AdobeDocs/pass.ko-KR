@@ -27,7 +27,7 @@ ht-degree: 0%
 
 ## 높은 수준의 아키텍처 및 OS 수준의 통합 {#high}
 
-Amazon fireTV 플랫폼에서 TV Everywhere 응용 프로그램 간 단일 사인온을 달성하고 이 플랫폼에서 전반적인 환경을 개선하기 위해 fireTV OS 수준에서 핵심 SDK을 통합하기로 결정했습니다. 프로그래머는 Adobe에서 제공하는 스텁 라이브러리에 대해 컴파일해야 할 것이다. 실제 기능은 Amazon의 fireTV OS에 있는 Adobe 라이브러리에서 제공됩니다.
+Amazon fireTV 플랫폼에서 TV Everywhere 응용 프로그램 간 단일 사인온을 달성하고 이 플랫폼에서 전반적인 환경을 개선하기 위해 fireTV OS 수준에서 핵심 SDK을 통합하기로 결정했습니다. 프로그래머는 Adobe에서 제공하는 스텁 라이브러리에 대해 컴파일해야 합니다. 실제 기능은 Amazon의 fireTV OS에 있는 Adobe 라이브러리에서 제공됩니다.
 
 Amazon이 OS 레벨에서 라이브러리를 통합하는 fireTV 시뮬레이터를 제공할 때까지 실제 fireTV 디바이스를 사용해야 개발이 가능합니다.
 
@@ -83,6 +83,6 @@ fireTV의 일반, HBA 및 SSO 시나리오를 설명하는 사용자 흐름의 �
 
    * TempPass 흐름은 단일 화면이며 다른 모든 기본 디바이스에서와 같이 동작합니다.
 
-1. 다른 Adobe 기능이 이전처럼 작동합니까?
+1. 다른 Adobe 기능도 이전처럼 작동합니까?
 
    * 모든 Adobe Pass 인증 기능은 Android 장치에서처럼 fireTV에서 작동합니다.

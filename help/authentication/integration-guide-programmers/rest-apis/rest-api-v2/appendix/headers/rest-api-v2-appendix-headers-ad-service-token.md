@@ -43,7 +43,7 @@ ht-degree: 1%
 
 <b>unique_user_identifier</b>
 
-고유 사용자 식별자 정보를 포함하는 서명된 JSON 웹 토큰(`JWT`)인 JSON 웹 서명(`JWS`)입니다.
+고유 사용자 식별자 정보를 포함하는 서명된 JSON 웹 토큰(`JWS`)인 JSON 웹 서명(`JWT`)입니다.
 
 `JWT`에 다음 특성이 있습니다.
 
@@ -80,7 +80,7 @@ ht-degree: 1%
 
 앞서 설명한 개인 키로 서명된 `JWT`개의 토큰을 인식하려면 해당 쌍의 공개 키를 Adobe Pass 인증에 전달해야 합니다.
 
-## 예시 {#examples}
+## 예 {#examples}
 
 ```JSON
 // JWT

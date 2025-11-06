@@ -97,7 +97,7 @@ DNS 스푸핑은 요청을 다른 IP로 리디렉션하려고 할 때, 특히 �
 
 ## 모바일 {#mobile}
 
-### iOS 장치(iPhone/iPad)에서 Charles 사용 {#use-charles-on-an-ios-device-(iphone-/-ipad)}
+### iOS 장치에서 Charles 사용(iPhone/iPad) {#use-charles-on-an-ios-device-(iphone-/-ipad)}
 
 #### iPhone의 SSL 연결 {#ssl-connection-from-iphone}
 
@@ -156,4 +156,4 @@ iOS 장치에서 `\[ *Settings* -\> *Wi-FI* -\> (*YOUR\_WIFI\_NETWORK)* \]`을(�
 <http://www.charlesproxy.com/documentation/configuration/browser-and-system-configuration>
 
 
-Android 장치에서 [Charles 프록시](http://charlesproxy.com/charles.crt)(으)로 이동합니다.
+Android 장치에서 [Charles 프록시](http://charlesproxy.com/charles.crt)&#x200B;(으)로 이동합니다.

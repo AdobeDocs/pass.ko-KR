@@ -1,6 +1,6 @@
 ---
-title: Adobe 동시 모니터링 2.9 릴리스 노트
-description: Adobe 동시 모니터링 2.9 릴리스 노트
+title: Adobe Concurrency Monitoring 2.9 릴리스 정보
+description: Adobe Concurrency Monitoring 2.9 릴리스 정보
 exl-id: fd793b1f-b704-492b-850c-dae6478b575a
 source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
 workflow-type: tm+mt

@@ -41,7 +41,7 @@ ht-degree: 2%
 
 프로모션 임시 액세스 권한을 부여해야 하는 최종 사용자와 연결된 사용자 ID 정보에 대한 `Base64-encoded` 값입니다.
 
-## 예시 {#examples}
+## 예 {#examples}
 
 ```JSON
 // Identity

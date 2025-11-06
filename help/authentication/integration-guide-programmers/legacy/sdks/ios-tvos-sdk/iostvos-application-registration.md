@@ -2,7 +2,7 @@
 title: iOS/tvOS 애플리케이션 등록
 description: iOS/tvOS 애플리케이션 등록
 exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '632'
 ht-degree: 0%
@@ -24,7 +24,7 @@ ht-degree: 0%
 
 iOS/tvOS AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘을 변경하고 있습니다. 공개 키 및 암호 시스템을 사용하여 requestorID에 서명하는 대신 SDK에서 서버에 대해 수행하는 모든 호출에 나중에 사용되는 액세스 토큰을 얻는 데 사용할 수 있는 소프트웨어 문 문자열 개념을 도입합니다. 소프트웨어 명령문 외에 응용 프로그램에 대한 사용자 지정 URL 체계도 필요합니다.
 
-자세한 내용은 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)를 참조하십시오.
+자세한 내용은 [동적 클라이언트 등록 개요](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)를 참조하십시오.
 
 ## 소프트웨어 명령문이란? {#Soft_state}
 
@@ -45,7 +45,7 @@ iOS/tvOS AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘�
 - 등록된 모든 지원서가 있는 목록이 표시됩니다. 다음을 클릭합니다.   방금 만든 응용 프로그램의 `Download` 단추입니다. 소프트웨어 명령문을 다운로드할 준비가 되기 전에 몇 분 정도 기다려야 할 수 있습니다.
 - 텍스트 파일이 다운로드됩니다. 내용을 소프트웨어 선언으로 사용하십시오.
 
-자세한 내용은 [Dynamic Client Registration Management](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management)를 참조하십시오.
+자세한 내용은 [Dynamic Client Registration Management](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management)를 참조하십시오.
 
 ### Adobe의 TVE 대시보드에 액세스할 수 없는 경우:
 

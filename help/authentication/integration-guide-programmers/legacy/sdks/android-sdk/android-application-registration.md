@@ -2,7 +2,7 @@
 title: Android 애플리케이션 등록
 description: Android 애플리케이션 등록
 exl-id: 6238bd87-ac97-4a5c-9d92-3631f7b2d46a
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '609'
 ht-degree: 0%
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Android AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘을 변경하고 있습니다. 공개 키 및 암호 시스템을 사용하여 requestorID에 서명하는 대신 SDK에서 서버에 대해 수행하는 모든 호출에 나중에 사용되는 액세스 토큰을 얻는 데 사용할 수 있는 소프트웨어 문 문자열 개념을 도입합니다. 소프트웨어 선언문 외에도 응용 프로그램에 대한 딥링크를 만들어야 합니다.
 
-자세한 내용은 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)를 참조하십시오.
+자세한 내용은 [동적 클라이언트 등록 개요](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)를 참조하십시오.
 
 ## 소프트웨어 명령문이란? {#what}
 
@@ -61,7 +61,7 @@ Android AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘�
 
    텍스트 파일을 다운로드합니다. 해당 내용을 소프트웨어 선언으로 사용합니다.
 
-자세한 내용은 [Dynamic Client Registration Management](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management)를 참조하십시오.
+자세한 내용은 [Dynamic Client Registration Management](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management)를 참조하십시오.
 
 ### Adobe의 TVE 대시보드에 액세스할 수 없는 경우
 

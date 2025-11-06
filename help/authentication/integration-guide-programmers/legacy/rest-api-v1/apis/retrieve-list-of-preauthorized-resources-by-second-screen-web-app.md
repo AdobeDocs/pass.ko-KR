@@ -4,7 +4,7 @@ description: 두 번째 화면 웹 앱으로 사전 승인된 리소스 목록 �
 exl-id: 78eeaf24-4cc1-4523-8298-999c9effdb7a
 source-git-commit: 1c357b918fa4f6d4b92a9055de018c55ee5861e0
 workflow-type: tm+mt
-source-wordcount: '275'
+source-wordcount: '273'
 ht-degree: 0%
 
 ---
@@ -46,7 +46,7 @@ API에는 스트리밍 앱 또는 프로그래머 서비스용 세트와 두 번
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/사전 승인/{registration code} | AuthN 모듈 | 1. 등록 코드 </br>    (경로 구성 요소)</br>2.  요청자(필수)</br>3.  리소스(필수) | GET | 개별 사전 인증 결정 또는 오류 세부 정보가 포함된 XML 또는 JSON입니다. 아래 샘플을 참조하십시오. | 200 - 성공</br></br>400 - 잘못된 요청</br></br>401 - 권한 없음</br></br>405 - 메서드가 허용되지 않음 </br></br>412 - 사전 조건 실패</br></br>500 - 내부 서버 오류 |
+| &lt;SP_FQDN>/api/v1/사전 승인/{registration code} | AuthN 모듈 | &#x200B;1. 등록 코드 </br>    (경로 구성 요소)</br>2.  요청자(필수)</br>3.  리소스(필수) | GET | 개별 사전 인증 결정 또는 오류 세부 정보가 포함된 XML 또는 JSON입니다. 아래 샘플을 참조하십시오. | 200 - 성공</br></br>400 - 잘못된 요청</br></br>401 - 권한 없음</br></br>405 - 메서드가 허용되지 않음 </br></br>412 - 사전 조건 실패</br></br>500 - 내부 서버 오류 |
 
 
 

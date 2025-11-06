@@ -2,7 +2,7 @@
 title: 프로그래머 킥스타트 안내서
 description: 프로그래머 킥스타트 안내서
 exl-id: 0aecdb81-9b97-4475-b0b0-654d916b2374
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: 37858fa83aecbdf443a4a6058c78e4f9246eee42
 workflow-type: tm+mt
 source-wordcount: '758'
 ht-degree: 0%
@@ -25,7 +25,7 @@ Adobe은 Adobe Pass 인증을 웹 사이트 또는 애플리케이션에 통합�
 
 설정 프로세스에는 다음 단계가 포함됩니다.
 
-![Adobe® 인증 통합 프로세스 통과](/help/authentication/assets/progr-flow-int-lifecycle.png)
+![Adobe® 인증 통합 프로세스 통과](../assets/progr-flow-int-lifecycle.png)
 
 *Adobe® 인증 통합 프로세스 통과*
 
@@ -69,22 +69,22 @@ Adobe은 Adobe Pass 인증을 웹 사이트 또는 애플리케이션에 통합�
 
 ## 고객 지원 액세스 {#access-customer-support}
 
-**Adobe은** Zendesk[을(를) 통해 고객 지원 시스템에 &#x200B;](https://tve.zendesk.com/home) 액세스를 제공합니다. Zendesk에 액세스하려면 https://tve.zendesk.com/home에서 계정을 등록 및 생성해야 합니다. 등록할 수 있는 사용자 수에는 제한이 없습니다. 등록되면 제출된 티켓에 대한 의견을 보고 공유할 수 있습니다.
+**Adobe은** Zendesk[을(를) 통해 고객 지원 시스템에 ](https://tve.zendesk.com/home) 액세스를 제공합니다. Zendesk에 액세스하려면 https://tve.zendesk.com/home에서 계정을 등록 및 생성해야 합니다. 등록할 수 있는 사용자 수에는 제한이 없습니다. 등록되면 제출된 티켓에 대한 의견을 보고 공유할 수 있습니다.
 
 통합 프로세스 중에 발생할 수 있는 질문이나 기술 문제에 대해 Adobe Pass 인증 팀이 도움을 줄 수 있습니다. [tve-support@adobe.com](mailto:tve-support@adobe.com)(으)로 문의하십시오.
 
 ## 설명서 액세스 {#access-documentation}
 
-**Adobe은** Adobe Experience League[를 통해 &#x200B;](https://experienceleague.adobe.com/ko/docs/pass/authentication/home) 공개 설명서에 대한 액세스 권한을 제공합니다.
+**Adobe은** Adobe Experience League[를 통해 ](https://experienceleague.adobe.com/en/docs/pass/authentication/home) 공개 설명서에 대한 액세스 권한을 제공합니다.
 
 Adobe Pass 인증 팀은 [프로그래머를 위한 통합 안내서](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md) 섹션에서 사용 가능한 기능 및 API에 대한 포괄적인 설명서를 제공합니다. 각 주제에 대한 자세한 정보에 대한 링크는 이 섹션의 목차를 참조하십시오.
 
 ## 테스트 도구에 액세스 {#access-testing-tool}
 
-**Adobe은** Adobe Developer[&#x200B; 웹 사이트를 통해 API 탐색 도구에 대한 &#x200B;](https://developer.adobe.com/adobe-pass/) 액세스를 제공합니다.
+**Adobe은** Adobe Developer[ 웹 사이트를 통해 API 탐색 도구에 대한 ](https://developer.adobe.com/adobe-pass/) 액세스를 제공합니다.
 
 ## 구성 관리 도구에 액세스 {#access-configuration-management-tool}
 
-**Adobe은** Adobe Pass TVE 대시보드[를 통해 구성 및 데이터를 관리하기 위한 셀프서비스 도구에 대한 액세스 권한을 &#x200B;](https://experience.adobe.com/pass/authentication)제공합니다.
+**Adobe은** Adobe Pass TVE 대시보드[를 통해 구성 및 데이터를 관리하기 위한 셀프서비스 도구에 대한 액세스 권한을 ](https://experience.adobe.com/pass/authentication)제공합니다.
 
 Adobe Pass 인증 팀은 [TVE 대시보드의 사용 안내서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-overview.md) 섹션 아래에 TVE 대시보드 사용에 대한 포괄적인 설명서를 제공합니다. 각 주제에 대한 자세한 정보에 대한 링크는 이 섹션의 목차를 참조하십시오.

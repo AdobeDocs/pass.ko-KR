@@ -60,7 +60,7 @@ AccessEnabler에서 지원하는 모든 자격 부여 워크플로에서는 ID�
 1. AccessEnabler가 현재 인증 상태를 확인합니다. 사용자가 현재 인증되면 AccessEnabler가 `setAuthenticationStatus()` 콜백 함수를 호출하여 성공을 나타내는 인증 상태를 전달합니다(아래 7단계).
 1. 사용자가 인증되지 않은 경우 AccessEnabler는 주어진 MVPD에서 사용자의 마지막 인증 시도가 성공했는지 여부를 확인하여 인증 흐름을 계속합니다. MVPD ID가 캐시되고 `canAuthenticate` 플래그가 true이거나 [`setSelectedProvider()`](#setSelectedProvider)을(를) 사용하여 MVPD을 선택한 경우 사용자에게 MVPD 선택 대화 상자가 표시되지 않습니다. 인증 흐름은 MVPD의 캐시된 값(즉, 마지막으로 성공한 인증 중에 사용된 동일한 MVPD)을 사용하여 계속됩니다. 백엔드 서버에 대한 네트워크 호출이 수행되고 사용자가 MVPD 로그인 페이지(아래 6단계)로 리디렉션됩니다.
 1. 캐시된 MVPD ID가 없고 [`setSelectedProvider()`](#setSelectedProvider)을(를) 사용하여 선택한 MVPD이 없거나 `canAuthenticate` 플래그가 false로 설정된 경우 [`displayProviderDialog()`](#displayProviderDialog) 콜백이 호출됩니다. 이 콜백은 페이지나 플레이어가 선택할 MVPD 목록을 사용자에게 제공하는 UI를 만들도록 지시합니다. MVPD 선택기를 빌드하는 데 필요한 정보가 포함된 MVPD 개체 배열이 제공됩니다. 각 MVPD 개체는 MVPD 엔터티를 설명하고 MVPD의 ID(예: XFINITY, AT\&amp;T 등) 및 MVPD 로고를 찾을 수 있는 URL과 같은 정보를 포함합니다.
-1. 특정 MVPD을 선택한 후에는 페이지나 플레이어에서 사용자가 선택한 사항을 AccessEnabler에 알려야 합니다. Flash이 아닌 클라이언트의 경우, 사용자가 원하는 MVPD을 선택하면 [`setSelectedProvider()`](#setSelectedProvider) 메서드 호출을 통해 AccessEnabler에 사용자 선택을 알립니다. Flash 클라이언트가 대신 &quot;`mvpdSelection`&quot; 유형의 공유 `MVPDEvent`을(를) 디스패치하여 선택한 공급자를 전달합니다.
+1. 특정 MVPD을 선택한 후에는 페이지나 플레이어에서 사용자가 선택한 사항을 AccessEnabler에 알려야 합니다. 비 Flash 클라이언트의 경우, 사용자가 원하는 MVPD을 선택하면 [`setSelectedProvider()`](#setSelectedProvider) 메서드 호출을 통해 AccessEnabler에 사용자 선택을 알립니다. 대신 Flash 클라이언트에서 &quot;`MVPDEvent`&quot; 유형의 공유 `mvpdSelection`을(를) 디스패치하여 선택한 공급자를 전달합니다.
 1. Android 애플리케이션의 경우 com.android.chrome을 사용할 수 있으면 인증 URL이 Chrome 사용자 지정 탭에 로드됩니다.
 1. Chrome 사용자 지정 탭을 통해 사용자는 MVPD의 로그인 페이지에 도달하고 자격 증명을 입력합니다. 이 전송 중에 여러 리디렉션 작업이 발생합니다.
 1. Chrome 사용자 지정 탭에서 URL이 스키마(adobepass://)와 리소스 &quot;redirect\_uri&quot;의 딥링크(즉, adobepass://com.adobepass )와 일치하는지 감지하면 AccessEnabler가 백엔드 서버에서 실제 인증 토큰을 검색합니다. 최종 리디렉션 URL은 실제로 유효하지 않으며 Chrome 사용자 정의 탭에서 실제로 로드하기 위한 것이 아닙니다. SDK은 인증 흐름이 완료되었다는 신호로 해석해야 합니다.
@@ -259,7 +259,7 @@ AccessEnabler 1.7에 포함된 또 다른 스토리지 관련 기능을 사용�
 
 
 
-이는 명백히 보안 관련 기능이므로 이 정보는 보안 관점에서 본질적으로 &quot;민감합니다&quot;. 결과적으로 이러한 정보는 변조 및 도청으로부터 보호될 필요가 있다. 도청 문제는 HTTPS 프로토콜을 통해 인증/권한 부여 요청을 전송하여 해결됩니다. 변조 방지는 기기 식별 정보에 디지털 서명을 함으로써 처리된다. AccessEnabler 라이브러리는 디바이스에서 제공하는 정보에서 디바이스 ID를 계산한 다음, 디바이스 ID를 &quot;in the clear&quot;를 요청 매개 변수로 Adobe Pass 인증 서버에 보냅니다.  Adobe Pass 인증 서버는 Adobe의 개인 키로 장치 ID를 디지털 서명하고 AccessEnabler에 반환되는 인증 토큰에 추가합니다. 따라서 장치 ID가 인증 토큰과 바인딩됩니다.  인증 흐름 중에 AccessEnabler는 인증 토큰과 함께 디바이스 ID를 지우고 다시 전송합니다.  유효성 검사 프로세스가 실패하면 자동으로 인증/권한 부여 워크플로가 실패합니다.  Adobe Pass 인증 서버는 개인 키를 장치 ID에 적용하고 인증 토큰의 값과 비교합니다.  일치하지 않으면 해당 권한 흐름이 실패합니다.
+이는 명백히 보안 관련 기능이므로 이 정보는 보안 관점에서 본질적으로 &quot;민감합니다&quot;. 결과적으로 이러한 정보는 변조 및 도청으로부터 보호될 필요가 있다. 도청 문제는 HTTPS 프로토콜을 통해 인증/권한 부여 요청을 전송하여 해결됩니다. 변조 방지는 기기 식별 정보에 디지털 서명을 함으로써 처리된다. AccessEnabler 라이브러리는 디바이스에서 제공하는 정보에서 디바이스 ID를 계산한 다음, 디바이스 ID를 &quot;in the clear&quot;를 요청 매개 변수로 Adobe Pass 인증 서버에 보냅니다.  Adobe Pass 인증 서버는 Adobe의 개인 키로 장치 ID를 디지털 서명하고 AccessEnabler로 반환되는 인증 토큰에 추가합니다. 따라서 장치 ID가 인증 토큰과 바인딩됩니다.  인증 흐름 중에 AccessEnabler는 인증 토큰과 함께 디바이스 ID를 지우고 다시 전송합니다.  유효성 검사 프로세스가 실패하면 자동으로 인증/권한 부여 워크플로가 실패합니다.  Adobe Pass 인증 서버는 개인 키를 장치 ID에 적용하고 인증 토큰의 값과 비교합니다.  일치하지 않으면 해당 권한 흐름이 실패합니다.
 
 
 <!--

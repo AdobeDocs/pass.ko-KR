@@ -4,7 +4,7 @@ description: iOS/tvOS v3.x 마이그레이션 안내서
 exl-id: 4c43013c-40af-48b7-af26-0bd7f8df2bdb
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '582'
+source-wordcount: '581'
 ht-degree: 0%
 
 ---
@@ -24,7 +24,7 @@ ht-degree: 0%
 > **메모:**
 >
 > - iOS sdk 버전 3.1부터 구현자는 이제 WKWebView 또는 UIWebView를 서로 교환하여 사용할 수 있습니다. UIWebView는 더 이상 사용되지 않으므로 향후 iOS 버전과 관련된 문제를 방지하려면 앱을 WKWebView로 마이그레이션해야 합니다.
-> - 마이그레이션은 단순히 UIWebView 클래스를 WKWebView로 전환한다는 것을 의미하므로 Adobe의 AccessEnabler에 대해서는 수행할 작업이 없습니다.
+> - 마이그레이션은 단순히 UIWebView 클래스를 WKWebView로 전환하는 것을 의미하므로 Adobe의 AccessEnabler에 대해서는 수행할 작업이 없습니다.
 
 </br>
 
@@ -72,7 +72,7 @@ ht-degree: 0%
 
 ## 사용자 지정 URL 체계에서 호출 가로채기 {#intercept}
 
-이는 애플리케이션이 이전에 [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md) 호출을 통해 수동 Safari 보기 컨트롤러(SVC) 처리를 활성화한 경우에만 적용되며 Safari 보기 컨트롤러(SVC)가 필요한 특정 MVPD에 대해 적용되므로 UIWebView/WKWebView 컨트롤러 대신 SFSafariViewController를 통해 인증 및 로그아웃 끝점의 URL을 로드해야 합니다.
+이는 이전에 응용 프로그램에서 [setOptions(\[&quot;handleSVC&quot;:true&quot;\])](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md) 호출을 통해 수동 Safari View Controller(SVC) 처리를 사용하도록 설정한 경우 및 Safari View Controller(SVC)가 필요한 특정 MVPD에 대해 적용되므로 UIWebView/WKWebView 컨트롤러 대신 SFSafariViewController를 통해 인증 및 로그아웃 끝점의 URL을 로드해야 하는 경우에만 적용됩니다.
 
 인증 및 로그아웃 흐름 동안 응용 프로그램이 여러 리디렉션을 거치는 동안 `SFSafariViewController `컨트롤러의 활동을 모니터링해야 합니다. 응용 프로그램에서 `application's custom URL scheme`(예: `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com)`)에 의해 정의된 특정 사용자 지정 URL을 로드하는 순간을 검색해야 합니다. 컨트롤러가 이 특정 사용자 지정 URL을 로드하면 응용 프로그램에서 `SFSafariViewController`을(를) 닫고 AccessEnabler의 `handleExternalURL:url `API 메서드를 호출해야 합니다.
 

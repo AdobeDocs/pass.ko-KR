@@ -48,7 +48,7 @@ iOS 네이티브 클라이언트를 사용하면 [`setRequestor()`](#setReq)에 
 
 - 권한 부여 호출을 즉시 시작하고 필요한 경우 자동으로 큐에 대기시킬 수 있습니다.
 
-- [`setRequestorComplete()`](#setReqComplete) 콜백을 구현하면 [`setRequestor()`](#setReq)의 성공/실패에 대한 확인을 받을 수 있습니다.
+- [`setRequestor()`](#setReq) 콜백을 구현하면 [`setRequestorComplete()`](#setReqComplete)의 성공/실패에 대한 확인을 받을 수 있습니다.
 
 - 위의 두 가지 작업을 모두 수행할 수 있습니다.
 
@@ -67,7 +67,7 @@ iOS 네이티브 클라이언트를 사용하면 [`setRequestor()`](#setReq)에 
 1. 사용자가 현재 인증되지 않은 경우 AccessEnabler는 지정된 MVPD에서 사용자의 마지막 인증 시도가 성공했는지 여부를 확인하여 인증 흐름을 계속합니다. MVPD ID가 캐시되고 `canAuthenticate` 플래그가 true이거나 [`setSelectedProvider()`](#setSelProv)을(를) 사용하여 MVPD을 선택한 경우 사용자에게 MVPD 선택 대화 상자가 표시되지 않습니다. 인증 흐름은 MVPD의 캐시된 값(즉, 마지막으로 성공한 인증 중에 사용된 동일한 MVPD)을 사용하여 계속됩니다. 백엔드 서버에 대한 네트워크 호출이 수행되고 사용자가 MVPD 로그인 페이지(아래 6단계)로 리디렉션됩니다.
 1. 캐시된 MVPD ID가 없고 [`setSelectedProvider()`](#setSelProv)을(를) 사용하여 선택한 MVPD이 없거나 `canAuthenticate` 플래그가 false로 설정된 경우 [`displayProviderDialog()`](#dispProvDialog) 콜백이 호출됩니다. 이 콜백은 응용 프로그램에 지시하여 사용자에게 선택할 MVPD 목록을 제공하는 UI를 만듭니다. MVPD 선택기를 빌드하는 데 필요한 정보가 포함된 MVPD 개체 배열이 제공됩니다. 각 MVPD 개체는 MVPD 엔터티를 설명하며, MVPD의 ID(예: XFINITY, AT\&amp;T 등) 및 MVPD 로고를 찾을 수 있는 URL과 같은 정보를 포함합니다.
 1. 특정 MVPD을 선택한 후에는 사용자가 선택한 내용을 애플리케이션이 AccessEnabler에 알려야 합니다. 사용자가 원하는 MVPD을 선택하면 [`setSelectedProvider()`](#setSelProv) 메서드 호출을 통해 AccessEnabler에 사용자 선택을 알립니다.
-1. iOS AccessEnabler가 `navigateToUrl:` 콜백 또는 `navigateToUrl:useSVC:` 콜백을 호출하여 사용자를 MVPD 로그인 페이지로 리디렉션합니다. 둘 중 하나를 트리거하면 AccessEnabler가 응용 프로그램에 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러를 만들고 콜백의 `url` 매개 변수에 제공된 URL을 로드하도록 요청합니다. 백엔드 서버에 있는 인증 끝점의 URL입니다. tvOS AccessEnabler의 경우 `statusDictionary` 매개 변수를 사용하여 [status()](#status_callback_implementation) 콜백이 호출되고 두 번째 화면 인증에 대한 폴링이 즉시 시작됩니다. `statusDictionary`에 두 번째 화면 인증에 사용해야 하는 `registration code`이(가) 포함되어 있습니다.
+1. iOS AccessEnabler가 `navigateToUrl:` 콜백 또는 `navigateToUrl:useSVC:` 콜백을 호출하여 사용자를 MVPD 로그인 페이지로 리디렉션합니다. 둘 중 하나를 트리거하면 AccessEnabler가 응용 프로그램에 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러를 만들고 콜백의 `url` 매개 변수에 제공된 URL을 로드하도록 요청합니다. 백엔드 서버에 있는 인증 끝점의 URL입니다. tvOS AccessEnabler의 경우 [ 매개 변수를 사용하여 ](#status_callback_implementation)status()`statusDictionary` 콜백이 호출되고 두 번째 화면 인증에 대한 폴링이 즉시 시작됩니다. `statusDictionary`에 두 번째 화면 인증에 사용해야 하는 `registration code`이(가) 포함되어 있습니다.
 1. iOS AccessEnabler의 경우 사용자가 MVPD의 로그인 페이지에 도달하여 애플리케이션 `UIWebView/WKWebView or SFSafariViewController `컨트롤러의 미디어를 통해 자격 증명을 입력합니다. 이 전송 중에는 여러 리디렉션 작업이 발생하며, 여러 리디렉션 작업 중에 컨트롤러가 로드하는 URL을 응용 프로그램에서 모니터링해야 합니다.
 1. iOS AccessEnabler의 경우 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러가 특정 사용자 지정 URL을 로드하면 애플리케이션이 컨트롤러를 닫고 AccessEnabler의 `handleExternalURL:url `API 메서드를 호출해야 합니다. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 응용 프로그램에서 인증 흐름이 완료되었으며 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러를 닫아도 안전하다는 신호로만 해석해야 합니다. 응용 프로그램에서 `SFSafariViewController `컨트롤러를 사용해야 하는 경우 특정 사용자 지정 URL은 `application's custom scheme`(예: `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`)에 의해 정의되며, 그렇지 않으면 이 특정 사용자 지정 URL은 `ADOBEPASS_REDIRECT_URL` 상수(예: `adobepass://ios.app`)에 의해 정의됩니다.
 1. 애플리케이션이 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러를 닫고 AccessEnabler의 `handleExternalURL:url `API 메서드를 호출하면 AccessEnabler가 백엔드 서버에서 인증 토큰을 검색하여 인증 흐름이 완료되었음을 애플리케이션에 알립니다. AccessEnabler가 상태 코드가 1인 [`setAuthenticationStatus()`](#setAuthNStatus) 콜백을 호출하여 성공을 나타냅니다. 이 단계를 실행하는 동안 오류가 발생하면 [`setAuthenticationStatus()`](#setAuthNStatus) 콜백이 인증 실패와 해당 오류 코드를 나타내는 상태 코드 0으로 트리거됩니다.
@@ -90,7 +90,7 @@ iOS 네이티브 클라이언트를 사용하면 [`setRequestor()`](#setReq)에 
 
 1. 결국 AccessEnabler가 상태 코드가 0인 [`setAuthenticationStatus()`](#setAuthNStatus) 콜백을 호출하여 로그아웃 흐름이 성공했음을 나타냅니다.
 
-로그아웃 흐름은 사용자가 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러와 어떤 식으로든 상호 작용할 필요가 없다는 점에서 인증 흐름과 다릅니다. 따라서 Adobe은 로그아웃 프로세스 중에 컨트롤을 보이지 않게(즉, 숨겨지도록) 만들 것을 권장합니다.
+로그아웃 흐름은 사용자가 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러와 어떤 식으로든 상호 작용할 필요가 없다는 점에서 인증 흐름과 다릅니다. 따라서 Adobe에서는 로그아웃 프로세스 중에 컨트롤을 보이지 않게(즉, 숨김으로) 만드는 것이 좋습니다.
 
 ## 토큰 {#tokens}
 
@@ -317,7 +317,7 @@ AuthN 및 AuthZ 토큰의 형식은 백그라운드 정보용으로만 여기에
 
 
 
-이는 명백히 보안 관련 기능이므로 이 정보는 보안 관점에서 본질적으로 &quot;민감합니다&quot;. 결과적으로 이러한 정보는 변조 및 도청으로부터 보호될 필요가 있다. 도청 문제는 HTTPS 프로토콜을 통해 인증/권한 부여 요청을 전송하여 해결됩니다. 변조 방지는 기기 식별 정보에 디지털 서명을 함으로써 처리된다. AccessEnabler 라이브러리는 디바이스에서 제공하는 정보에서 디바이스 ID를 계산한 다음, 디바이스 ID를 &quot;in the clear&quot;를 요청 매개 변수로 Adobe Pass 인증 서버에 보냅니다. Adobe Pass 인증 서버는 Adobe의 개인 키로 장치 ID를 디지털 서명하고 AccessEnabler에 반환되는 인증 토큰에 추가합니다. 따라서 장치 ID가 인증 토큰과 바인딩됩니다. 인증 흐름 중에 AccessEnabler는 인증 토큰과 함께 디바이스 ID를 지우고 다시 전송합니다. 유효성 검사 프로세스가 실패하면 자동으로 인증/권한 부여 워크플로가 실패합니다. Adobe Pass 인증 서버는 개인 키를 장치 ID에 적용하고 인증 토큰의 값과 비교합니다. 일치하지 않으면 해당 권한 흐름이 실패합니다.
+이는 명백히 보안 관련 기능이므로 이 정보는 보안 관점에서 본질적으로 &quot;민감합니다&quot;. 결과적으로 이러한 정보는 변조 및 도청으로부터 보호될 필요가 있다. 도청 문제는 HTTPS 프로토콜을 통해 인증/권한 부여 요청을 전송하여 해결됩니다. 변조 방지는 기기 식별 정보에 디지털 서명을 함으로써 처리된다. AccessEnabler 라이브러리는 디바이스에서 제공하는 정보에서 디바이스 ID를 계산한 다음, 디바이스 ID를 &quot;in the clear&quot;를 요청 매개 변수로 Adobe Pass 인증 서버에 보냅니다. Adobe Pass 인증 서버는 Adobe의 개인 키로 장치 ID를 디지털 서명하고 AccessEnabler로 반환되는 인증 토큰에 추가합니다. 따라서 장치 ID가 인증 토큰과 바인딩됩니다. 인증 흐름 중에 AccessEnabler는 인증 토큰과 함께 디바이스 ID를 지우고 다시 전송합니다. 유효성 검사 프로세스가 실패하면 자동으로 인증/권한 부여 워크플로가 실패합니다. Adobe Pass 인증 서버는 개인 키를 장치 ID에 적용하고 인증 토큰의 값과 비교합니다. 일치하지 않으면 해당 권한 흐름이 실패합니다.
 
 
 

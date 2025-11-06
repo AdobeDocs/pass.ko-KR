@@ -2,7 +2,7 @@
 title: Adobe Pass 인증 및 Android 6 "Marshmallow" 새 권한 모델
 description: Adobe Pass 인증 및 Android 6 "Marshmallow" 새 권한 모델
 exl-id: 3c96769e-b25b-48ab-bb74-40f13d4e5a84
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '503'
 ht-degree: 0%
@@ -77,7 +77,7 @@ if (ContextCompat.checkSelfPermission(thisActivity,
 >Adobe Pass 인증 SDK 1.9에는 현재 스토리지 복원력을 도입하는 기능이 개발 중입니다. 새 SDK은 **10월 마지막 주**&#x200B;에 릴리스됩니다. 응용 프로그램은 일반 저장소를 사용할 수 없을 때마다 응용 프로그램의 샌드박스 저장소에 쓰는 것으로 대체됩니다. API 레벨 23에서 개발된 애플리케이션의 경우 사용자가 글로벌 스토리지에서 읽기/쓰기 권한을 수락하지 않는 경우를 다룹니다. 토큰은 앱마다 개별적으로 저장되므로 Adobe Pass 인증을 사용하는 앱 간 Single Sign-On이 비활성화됩니다.
 
 
-![](/help/authentication/assets/android-permissions-request.png)
+![](../../../assets/android-permissions-request.png)
 
 *그림: API 레벨 23에 작성된 앱에 대한 권한 요청 대화 상자*
 

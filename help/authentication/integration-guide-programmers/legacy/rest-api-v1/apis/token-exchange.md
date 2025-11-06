@@ -9,7 +9,7 @@ ht-degree: 0%
 
 ---
 
-# (기존) Adobe 토큰으로 Platform SSO 토큰 교환 {#exchange-a-platform-sso-token-for-an-adobe-token}
+# (기존) Platform SSO 토큰을 Adobe 토큰으로 교환 {#exchange-a-platform-sso-token-for-an-adobe-token}
 
 >[!NOTE]
 >
@@ -43,7 +43,7 @@ Platform SSO 프로필을 Adobe 토큰으로 &quot;교환&quot;할 수 있습니
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/tokens/authn | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자(필수)</br>    </br>2.  deviceId(필수)</br>    </br>3.  mvpd(필수)</br>    </br>4.  deviceType(필수)</br>    </br>5.  SAMLResponse(필수)</br>    </br>6.  deviceUser(사용되지 않음)</br>    </br>7.  appId(사용하지 않음) | POST | 성공적인 응답은 토큰이 성공적으로 만들어졌으며 인증 흐름에 사용할 준비가 되었음을 나타내는 204 컨텐츠 없음이 됩니다. | 204 - 콘텐츠 없음   </br>400 - 잘못된 요청 |
+| &lt;SP_FQDN>/api/v1/tokens/authn | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1. 요청자(필수)</br>    </br>2.  deviceId(필수)</br>    </br>3.  mvpd(필수)</br>    </br>4.  deviceType(필수)</br>    </br>5.  SAMLResponse(필수)</br>    </br>6.  deviceUser(사용되지 않음)</br>    </br>7.  appId(사용하지 않음) | POST | 성공적인 응답은 토큰이 성공적으로 만들어졌으며 인증 흐름에 사용할 준비가 되었음을 나타내는 204 컨텐츠 없음이 됩니다. | 204 - 콘텐츠 없음   </br>400 - 잘못된 요청 |
 
 
 | 입력 매개 변수 | 설명 |

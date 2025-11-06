@@ -21,9 +21,9 @@ ht-degree: 0%
 
 ## 소개
 
-Adobe은 AccessEnabler 라이브러리의 최신 JS v4.x로 마이그레이션하는 것이 좋습니다.
+Adobe에서는 AccessEnabler 라이브러리의 최신 JS v4.x로 마이그레이션하는 것이 좋습니다.
 
-Adobe Pass 인증 JavaScript 통합은 익숙한 JS 웹 애플리케이션 개발 환경에서 프로그래머에게 TV-Everywhere 솔루션을 제공합니다. 통합의 주요 구성 요소는 &quot;높은 수준의&quot; 애플리케이션(사용자 상호 작용, 비디오 프레젠테이션)과 자격 흐름에 대한 항목을 제공하고 Adobe Pass 인증 서버와의 통신을 처리하는 Adobe 제공 &quot;낮은 수준의&quot; AccessEnabler 라이브러리입니다.
+Adobe Pass 인증 JavaScript 통합은 익숙한 JS 웹 애플리케이션 개발 환경에서 프로그래머에게 TV-Everywhere 솔루션을 제공합니다. 통합의 주요 구성 요소는 &quot;높은 수준의&quot; 애플리케이션(사용자 상호 작용, 비디오 프레젠테이션)과 자격 흐름에 대한 항목을 제공하고 Adobe Pass 인증 서버와의 통신을 처리하는 Adobe에서 제공하는 &quot;낮은 수준의&quot; AccessEnabler 라이브러리입니다.
 
 다음 섹션에서는 JavaScript AccessEnabler 통합에 대한 설명과 샘플을 제공합니다.
 
@@ -41,7 +41,7 @@ Adobe Pass 인증 JavaScript 통합은 익숙한 JS 웹 애플리케이션 개�
 
 다음 코드 샘플은 현재 고객의 서비스 공급자를 검색하고 표시하는 방법을 보여 줍니다.
 
-**HTML** - 고객이 선택한 공급자가 이미 로그인한 경우 이 페이지는 해당 공급자를 표시하는 페이지에 섹션을 추가합니다.
+**HTML** - 이 페이지에서는 고객이 선택한 공급자가 이미 로그인한 경우 해당 공급자를 표시하는 페이지에 섹션을 추가합니다.
 
 ```HTML
     <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" 
@@ -55,7 +55,7 @@ Adobe Pass 인증 JavaScript 통합은 익숙한 JS 웹 애플리케이션 개�
     </head>
     <body>
         <div id="alternative">
-        <a href="http://www.adobe.com/go/getflashplayer_kr"> 
+        <a href="http://www.adobe.com/go/getflashplayer"> 
             <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" 
                  alt="Get Adobe Flash player"/> </a>
         </div> 

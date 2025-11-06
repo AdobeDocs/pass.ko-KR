@@ -43,7 +43,7 @@ ht-degree: 0%
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/mediatoken</br></br> 또는</br></br>&lt;SP_FQDN>/api/v1/tokens/media</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/tokens/media | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자(필수)</br>2.  deviceId(필수)</br>3.  리소스(필수)</br>4.  device_info/X-Device-Info(필수)</br>5.  _deviceType_</br> 6.  _deviceUser_(사용하지 않음)</br>7.  _appId_(더 이상 사용되지 않음) | GET | 실패한 경우 Base64로 인코딩된 미디어 토큰 또는 오류 세부 정보가 포함된 XML 또는 JSON입니다. | 200 - 성공 </br>403 - 성공 없음 |
+| &lt;SP_FQDN>/api/v1/mediatoken</br></br> 또는</br></br>&lt;SP_FQDN>/api/v1/tokens/media</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/tokens/media | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1. 요청자(필수)</br>2.  deviceId(필수)</br>3.  리소스(필수)</br>4.  device_info/X-Device-Info(필수)</br>5.  _deviceType_</br> 6.  _deviceUser_(사용하지 않음)</br>7.  _appId_(더 이상 사용되지 않음) | GET | 실패한 경우 Base64로 인코딩된 미디어 토큰 또는 오류 세부 정보가 포함된 XML 또는 JSON입니다. | 200 - 성공 </br>403 - 성공 없음 |
 
 {style="table-layout:auto"}
 
@@ -61,7 +61,7 @@ ht-degree: 0%
 | deviceId | 장치 ID 바이트입니다. |
 | 리소스 | resourceId(또는 MRSS 조각)가 포함된 문자열은 사용자가 요청한 콘텐츠를 식별하고 MVPD 인증 종단점에서 인식합니다. |
 | device_info/</br></br>X-Device-Info | 스트리밍 장치 정보입니다.</br></br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. </br></br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
-| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br>이 매개 변수가 올바르게 설정된 경우 Clientless를 사용할 때 ESM은 [장치 유형별로 분류된 지표]/(help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type)를 제공하므로 다른 유형의 분석을 수행할 수 있습니다. 예를 들어 Roku, AppleTV 및 Xbox가 있습니다.</br></br>Clientless devicetype 매개 변수 사용의 이점&#x200B;[&#128279;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**참고**&#x200B;을 참조하세요. device_info가 이 매개 변수를 대체합니다. |
+| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br>이 매개 변수가 올바르게 설정된 경우 Clientless를 사용할 때 ESM은 [장치 유형별로 분류된 지표]/(help/authentication/entitlement-service-monitoring-overview.md#clientless_device_type)를 제공하므로 다른 유형의 분석을 수행할 수 있습니다. 예를 들어 Roku, AppleTV 및 Xbox가 있습니다.</br></br>Clientless devicetype 매개 변수 사용의 이점[참고&#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**을 참조하세요. device_info가 이 매개 변수를 대체합니다.** |
 | _deviceUser_ | 장치 사용자 식별자.</br></br>**참고**: 사용하는 경우 deviceUser의 값은 [등록 코드 만들기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) 요청과 동일해야 합니다. |
 | _appId_ | 애플리케이션 ID/이름입니다. </br></br>**참고**: device_info가 이 매개 변수를 대체합니다. 사용하는 경우 `appId`은(는) [등록 코드 만들기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) 요청과 동일한 값을 가져야 합니다. |
 
@@ -102,4 +102,4 @@ ht-degree: 0%
 
 ### Media Verification Library 호환성
 
-&quot;짧은 미디어 토큰 가져오기&quot; 호출의 필드 `serializedToken`은(는) Adobe Medium 확인 라이브러리에 대해 확인할 수 있는 Base64로 인코딩된 토큰입니다.
+&quot;짧은 미디어 토큰 얻기&quot; 호출의 필드 `serializedToken`은(는) Adobe Media 확인 라이브러리에 대해 확인할 수 있는 Base64로 인코딩된 토큰입니다.

@@ -2,7 +2,7 @@
 title: 단일 로그아웃 - 흐름
 description: REST API V2 - 단일 로그아웃 - 흐름
 exl-id: d7092ca7-ea7b-4e92-b45f-e373a6d673d6
-source-git-commit: 92417dd4161be8ba97535404e262fd26d67383e4
+source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
 workflow-type: tm+mt
 source-wordcount: '587'
 ht-degree: 0%
@@ -46,7 +46,7 @@ ht-degree: 0%
 
 다음 다이어그램과 같이 특정 MVPD에 대한 단일 로그아웃 플로우를 구현하려면 주어진 단계를 수행하십시오.
 
-![특정 mvpd에 대한 단일 로그아웃 시작](/help/authentication/assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-initiate-single-logout-for-specific-mvpd-flow.png)
+![특정 mvpd에 대한 단일 로그아웃 시작](../../../../../assets/rest-api-v2/flows/single-sign-on-access-flows/rest-api-v2-initiate-single-logout-for-specific-mvpd-flow.png)
 
 *특정 mvpd에 대한 단일 로그아웃 시작*
 

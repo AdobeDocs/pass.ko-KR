@@ -2,7 +2,7 @@
 title: OAuth 2.0 프로토콜을 사용한 인증
 description: OAuth 2.0 프로토콜을 사용한 인증
 exl-id: 0c1f04fe-51dc-4b4d-88e7-66e8f4609e02
-source-git-commit: d0f08314d7033aae93e4a0d9bc94af8773c5ba13
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '1088'
 ht-degree: 0%
@@ -67,7 +67,7 @@ MVPD은 흐름을 지원함을 확인한 후 다음 정보를 제공해야 합�
 
 
 
-![구성에서 선택한 프로토콜의 Adobe과 통신하는 MVPD 인증의 인증 흐름을 표시하는 다이어그램입니다.](/help/authentication/assets/authn-flow.png)
+![구성에서 선택한 프로토콜의 Adobe과 통신하는 MVPD 인증의 인증 흐름을 표시하는 다이어그램입니다.](../assets/authn-flow.png)
 
 **그림 1: OAuth 2.0 인증 흐름**
 

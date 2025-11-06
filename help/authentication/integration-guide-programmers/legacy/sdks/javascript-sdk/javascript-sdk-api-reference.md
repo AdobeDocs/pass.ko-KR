@@ -2,7 +2,7 @@
 title: JavaScript SDK API 참조
 description: JavaScript SDK API 참조
 exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '2883'
 ht-degree: 0%
@@ -51,7 +51,7 @@ ht-degree: 0%
 
 - *옵션* - 응용 프로그램 ID 값, 방문자 ID 값 새로 고침 불가 설정(백그라운드 로그인 로그아웃) 및 MVPD 설정(iFrame)이 포함된 JSON 개체입니다. 모든 값은 선택 사항입니다.
    1. 지정하면 라이브러리에서 수행한 모든 네트워크 호출에 대해 Experience Cloud visitorID가 보고됩니다. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
-   2. 응용 프로그램의 고유 식별자가 지정된 경우 -`applicationId` - 이 값은 응용 프로그램에서 X-Device-Info HTTP 헤더의 일부로 이후에 호출하는 모든 호출에 추가됩니다. 이 값은 나중에 적절한 쿼리를 사용하여 [ESM](/help/premium-workflow/esm/entitlement-service-monitoring-overview.md) 보고서에서 가져올 수 있습니다.
+   2. 응용 프로그램의 고유 식별자가 지정된 경우 -`applicationId` - 이 값은 응용 프로그램에서 X-Device-Info HTTP 헤더의 일부로 이후에 호출하는 모든 호출에 추가됩니다. 이 값은 나중에 적절한 쿼리를 사용하여 [ESM](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md) 보고서에서 가져올 수 있습니다.
 
   **참고:** 모든 JSON 키는 대/소문자를 구분합니다.
 
@@ -309,7 +309,7 @@ For example:
 **설명:** 사용자가 공급자 선택 UI에서 공급자 선택을 Access Enabler에 보내기 위해 MVPD을 선택한 경우 이 함수를 호출하거나 사용자가 공급자를 선택하지 않고 공급자 선택 UI를 해제한 경우 null 매개 변수를 사용하여 이 함수를 호출합니다.
 
 **콜백
-트리거됨:**[&#x200B; setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
+트리거됨:**[ setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
 
 </br>
 
@@ -415,7 +415,7 @@ For example:
 
 **설명:** 사용자가 인증 로그인 페이지 UI를 표시할 iFrame이 필요한 MVPD을 선택한 경우 이 콜백을 구현합니다.
 
-**트리거 주체:**&#x200B;[&#x200B; setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
+**트리거 주체:**[ setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
 
 </br> [맨 위로 돌아가기](#top)
 

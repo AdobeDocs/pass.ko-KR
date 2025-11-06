@@ -2,7 +2,7 @@
 title: 동적 클라이언트 등록 개요
 description: 동적 클라이언트 등록 개요
 exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
-source-git-commit: 7ca9d8996756086a6b963c0b6d5b0bb64608ecbc
+source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
 workflow-type: tm+mt
 source-wordcount: '809'
 ht-degree: 0%
@@ -20,10 +20,10 @@ ht-degree: 0%
 Adobe Pass은 다음과 같은 보호된 API에 액세스할 수 있도록 하는 동적 클라이언트 등록 서비스를 제공합니다.
 
 * Adobe Pass 인증 관리 API:
-   * [임시 패스 API 재설정](/help/premium-workflow/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
-   * [저하 API](/help/premium-workflow/degraded-access/degradation-feature.md#degradation-api-access)
+   * [임시 패스 API 재설정](../../features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+   * [저하 API](../../features-premium/degraded-access/degradation-feature.md#degradation-api-access)
    * [프록시 MVPD API](../../../integration-guide-mvpds/proxy-mvpd-webserv.md)
-   * [권한 부여 서비스 모니터링 API](/help/premium-workflow/esm/entitlement-service-monitoring-api.md)
+   * [권한 부여 서비스 모니터링 API](../../features-premium/esm/entitlement-service-monitoring-api.md)
 * Adobe Pass 인증 REST API:
    * [REST API V2](../rest-api-v2/apis/rest-api-v2-apis-overview.md)
    * [(기존) REST API V1](../../legacy/rest-api-v1/rest-api-reference.md)
@@ -114,6 +114,6 @@ Software 문은 클라이언트 응용 프로그램 소프트웨어에 대한 �
 **흐름**
 
 * 클라이언트 응용 프로그램은 [클라이언트 자격 증명 검색](apis/dynamic-client-registration-apis-retrieve-client-credentials.md) API 설명서에 설명된 대로 클라이언트 자격 증명을 가져와야 합니다.
-* 클라이언트 응용 프로그램은 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 액세스 토큰을 가져와야 합니다.
+* 클라이언트 응용 프로그램은 [액세스 토큰 검색](apis/dynamic-client-registration-apis-retrieve-access-token.md) API 설명서에 설명된 대로 액세스 토큰을 가져와야 합니다.
 
 Adobe Pass으로 보호된 API에 액세스하는 방법을 더 잘 이해하려면 [동적 클라이언트 등록 흐름](flows/dynamic-client-registration-flow.md) 설명서를 참조하십시오. 또한 더 많은 컨텍스트를 제공하고 데모를 포함하는 이 [웨비나](https://my.adobeconnect.com/pzkp8ujrigg1/) 녹화를 볼 수도 있습니다.

@@ -2,7 +2,7 @@
 title: REST API Cookbook(서버 간)
 description: 서버에 대한 REST API Cookbook 서버입니다.
 exl-id: 36ad4a64-dde8-4a5f-b0fe-64b6c0ddcbee
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 5622cad15383560e19e8111f12a1460e9b118efe
 workflow-type: tm+mt
 source-wordcount: '1856'
 ht-degree: 0%
@@ -48,7 +48,7 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 ### DCR(Dynamic Client Registration)
 
 
-Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서버와 Adobe Pass 서비스 간의 클라이언트 통신을 보호합니다. DCR 플로우는 별도로 구성되며 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서에 설명되어 있습니다.
+Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서버와 Adobe Pass 서비스 간의 클라이언트 통신을 보호합니다. DCR 플로우는 별도로 구성되며 [동적 클라이언트 등록 개요](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서에 설명되어 있습니다.
 
 
 ### 인증(authN)
@@ -73,7 +73,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 다음 다이어그램은 인증 플로우를 보여 줍니다.
 
-![](/help//authentication/assets/authn-flow.png)
+![](../../../../assets/authn-flow.png)
 
 ### 인증(authZ)
 
@@ -86,7 +86,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 다음 다이어그램은 인증 플로우를 보여 줍니다.
 
-![](/help//authentication/assets/authz-flow.png)
+![](../../../../assets/authz-flow.png)
 
 ### 로그아웃
 
@@ -98,7 +98,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 다음 다이어그램은 로그아웃 플로우를 보여 줍니다.
 
-![](/help//authentication/assets/logout-flow.png)
+![](../../../../assets/logout-flow.png)
 
 ### \[선택 사항\] 사전 인증(사전 실행)입니다.
 
@@ -114,7 +114,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 다음 다이어그램은 사전 인증 플로우를 보여 줍니다.
 
-![](/help//authentication/assets/preauthz-flow.png)
+![](../../../../assets/preauthz-flow.png)
 
 
 ### \[선택 사항\] 메타데이터
@@ -130,7 +130,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 
 
-![](/help//authentication/assets/user-metadata-api-preauthz.png)
+![](../../../../assets/user-metadata-api-preauthz.png)
 
 
 

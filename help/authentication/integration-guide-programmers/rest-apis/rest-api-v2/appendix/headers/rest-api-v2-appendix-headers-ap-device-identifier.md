@@ -95,7 +95,7 @@ _(*) 브라우저 또는 장치 지문 인식 메커니즘을 제공하는 라�
 
 #### iOS 및 iPadOS {#ios-ipados}
 
-[iOS 또는 iPadOS](https://developer.apple.com/documentation/ios-ipados-release-notes)를 실행하는 장치의 `AP-Device-Identifier` 헤더를 작성하려면 다음 문서를 참조하십시오.
+`AP-Device-Identifier`iOS 또는 iPadOS[를 실행하는 장치의 ](https://developer.apple.com/documentation/ios-ipados-release-notes) 헤더를 작성하려면 다음 문서를 참조하십시오.
 
 * [identifierForVendor](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor)용 Apple 개발자 설명서입니다.
 
@@ -103,7 +103,7 @@ _(*) OS에서 제공한 값에 SHA-256 해시 함수를 적용하는 것이 좋�
 
 #### Android {#android}
 
-[Android](https://developer.android.com/about/versions)을(를) 실행하는 장치의 `AP-Device-Identifier` 헤더를 빌드하려면 다음 문서를 참조할 수 있습니다.
+`AP-Device-Identifier`Android[을(를) 실행하는 장치의 ](https://developer.android.com/about/versions) 헤더를 빌드하려면 다음 문서를 참조할 수 있습니다.
 
 * [ANDROID_ID](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID)용 Android 개발자 설명서입니다.
 
@@ -113,7 +113,7 @@ _(*) OS에서 제공한 값에 SHA-256 해시 함수를 적용하는 것이 좋�
 
 #### tvOS {#tvos}
 
-[tvOS](https://developer.apple.com/documentation/tvos-release-notes)를 실행하는 장치의 `AP-Device-Identifier` 헤더를 빌드하려면 다음 문서를 참조하십시오.
+`AP-Device-Identifier`tvOS[를 실행하는 장치의 ](https://developer.apple.com/documentation/tvos-release-notes) 헤더를 빌드하려면 다음 문서를 참조하십시오.
 
 * [identifierForVendor](https://developer.apple.com/documentation/uikit/uidevice/1620059-identifierforvendor)용 Apple 개발자 설명서입니다.
 
@@ -121,7 +121,7 @@ _(*) OS에서 제공한 값에 SHA-256 해시 함수를 적용하는 것이 좋�
 
 #### Fire OS {#fireos}
 
-[Fire OS](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html)를 실행하는 장치의 `AP-Device-Identifier` 헤더를 빌드하려면 다음 문서를 참조할 수 있습니다.
+`AP-Device-Identifier`Fire OS[를 실행하는 장치의 ](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html) 헤더를 빌드하려면 다음 문서를 참조할 수 있습니다.
 
 * [ANDROID_ID](https://developer.android.com/reference/android/provider/Settings.Secure#ANDROID_ID)용 Android 개발자 설명서입니다.
 
@@ -129,7 +129,7 @@ _(*) OS에서 제공한 값에 SHA-256 해시 함수를 적용하는 것이 좋�
 
 #### Roku 운영 체제 {#rokuos}
 
-[Roku OS](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md)를 실행하는 장치의 `AP-Device-Identifier` 헤더를 만들려면 다음 문서를 참조할 수 있습니다.
+`AP-Device-Identifier`Roku OS[를 실행하는 장치의 ](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md) 헤더를 만들려면 다음 문서를 참조할 수 있습니다.
 
 * [GetChannelClientId](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md#getchannelclientid-as-string)에 대한 Roku 개발자 설명서.
 

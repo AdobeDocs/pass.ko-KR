@@ -2,7 +2,7 @@
 title: Amazon FireOS SDK(동적 클라이언트 등록 포함)
 description: Amazon FireOS SDK(동적 클라이언트 등록 포함)
 exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '1169'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 FireOS AccessEnabler SDK for FireTV가 세션 쿠키를 사용하지 않고 인증을 사용하도록 수정되었습니다. 쿠키 접근을 제한하는 브라우저가 늘어나면서 인증을 허용하는 다른 방법이 필요했다.
 
-**FireOS SDK 3.0.4**&#x200B;이(가) 서명된 요청자 ID 및 세션 쿠키 인증을 기반으로 현재 앱 등록 메커니즘을 [Dynamic Client Registration Overview](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)(으)로 바꿉니다.
+**FireOS SDK 3.0.4**&#x200B;이(가) 서명된 요청자 ID 및 세션 쿠키 인증을 기반으로 현재 앱 등록 메커니즘을 [Dynamic Client Registration Overview](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)(으)로 바꿉니다.
 
 
 ## API 변경 사항 {#API}
@@ -152,7 +152,7 @@ FireOS AccessEnabler SDK for FireTV가 세션 쿠키를 사용하지 않고 인�
    - 로그인 취소됨 : MVPD 선택 재설정
    - 인증이 완료되면 캡처하기 위해 URL 체계가 &quot;adobepass://android.app&quot;로 설정됩니다.
 
-- e. get/checkAuthorization : SDK은 **access\_token &#x200B;** in 헤더를 Authorization: Bearer **access\_token**(으)로 포함합니다.
+- e. get/checkAuthorization : SDK은 **access\_token **in 헤더를 Authorization: Bearer **access\_token**(으)로 포함합니다.
 
 - 인증이 성공하면 미디어 토큰을 얻기 위한 호출이 수행됩니다
 

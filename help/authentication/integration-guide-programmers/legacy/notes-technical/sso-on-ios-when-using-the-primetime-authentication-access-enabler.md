@@ -27,7 +27,7 @@ Adobe Pass 인증 기반 앱 간의 SSO(Single Sign-On)는 기본 운영 체제�
 
 이 문서는 Adobe Pass 인증 **Access Enabler**&#x200B;을(를) 사용할 때 iOS의 **SSO**&#x200B;를 해결합니다.
 
-**Access Enabler** **1.10**&#x200B;은(는) Adobe Pass 인증 iOS 기본 SDK의 최신 버전입니다. Adobe은 이전 버전을 유지하지 않고 이 버전으로 이동할 것을 강력히 권장합니다. 이전 버전의 Access Enabler를 사용하는 경우 [여기](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)에서 최신 버전을 다운로드할 수 있습니다.
+**Access Enabler** **1.10**&#x200B;은(는) Adobe Pass 인증 iOS 기본 SDK의 최신 버전입니다. Adobe에서는 이전 버전을 유지하는 것보다 이 버전으로 이동할 것을 강력히 권장합니다. 이전 버전의 Access Enabler를 사용하는 경우 [여기](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)에서 최신 버전을 다운로드할 수 있습니다.
 
 iOS에서의 SSO는 다음 조건에 의해 결정됩니다.
 

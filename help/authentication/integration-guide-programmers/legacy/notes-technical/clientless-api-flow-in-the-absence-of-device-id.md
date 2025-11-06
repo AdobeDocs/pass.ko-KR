@@ -43,7 +43,7 @@ ht-degree: 0%
 
 ## 영구 솔루션
 
-Adobe은 향후 릴리스에서 reg 코드를 만들 때 `deviceId`을(를) 선택적 페이로드로 만들고 `deviceId`이(가) 없을 때 `deviceId` 대신 UUID를 토큰 키로 사용하여 이 값을 변경합니다.
+Adobe은 향후 릴리스에서 reg 코드를 만들 때 `deviceId`을(를) 선택적 페이로드로 만들고 `deviceId`이(가) 없는 경우 `deviceId` 대신 UUID를 토큰 키로 사용하여 이 값을 변경합니다.
 
 <!--
 ## Related Information

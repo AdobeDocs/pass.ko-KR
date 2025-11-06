@@ -4,7 +4,7 @@ description: 두 번째 화면 웹 앱별 인증 흐름 확인
 exl-id: 5807f372-a520-4069-b837-67ae41b7f79b
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '234'
+source-wordcount: '232'
 ht-degree: 0%
 
 ---
@@ -44,7 +44,7 @@ ht-degree: 0%
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| SP_FQDN/api/v1/checkauthn/{registration code} | 로그인 웹 앱 | 1. 등록 코드 </br>    (경로 구성 요소)</br>2.  요청자 </br>    (필수) | GET | 실패한 경우 오류 세부 정보가 포함된 XML 또는 JSON. | 200 - 성공   </br>403 - 금지됨 |
+| SP_FQDN/api/v1/checkauthn/{registration code} | 로그인 웹 앱 | &#x200B;1. 등록 코드 </br>    (경로 구성 요소)</br>2.  요청자 </br>    (필수) | GET | 실패한 경우 오류 세부 정보가 포함된 XML 또는 JSON. | 200 - 성공   </br>403 - 금지됨 |
 
 </br>
 

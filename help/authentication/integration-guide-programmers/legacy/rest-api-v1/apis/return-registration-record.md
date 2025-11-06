@@ -49,7 +49,7 @@ ht-degree: 2%
 
 | 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>For example:<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | 1. 요청자 </br>    (경로 구성 요소)</br>2.  등록 코드 </br>    (경로 구성 요소) | GET | 등록 코드 및 정보가 포함된 XML 또는 JSON입니다. 아래 스키마 및 샘플을 참조하십시오. | 200 |
+| `<REGGIE_FQDN>`;/reggie/v1/`{requestorId}`/regcode/`{registrationCode}`<p>For example:<p>`<REGGIE_FQDN>`/reggie/v1/sampleRequestorId/regcode/TJJCFK?format=xml | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1. 요청자 </br>    (경로 구성 요소)</br>2.  등록 코드 </br>    (경로 구성 요소) | GET | 등록 코드 및 정보가 포함된 XML 또는 JSON입니다. 아래 스키마 및 샘플을 참조하십시오. | 200 |
 
 {style="table-layout:auto"}
 

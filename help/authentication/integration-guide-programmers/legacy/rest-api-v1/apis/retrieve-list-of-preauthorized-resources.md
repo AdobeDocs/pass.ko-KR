@@ -2,7 +2,7 @@
 title: 사전 승인된 리소스 목록 검색
 description: 사전 승인된 리소스 목록 검색
 exl-id: 3821378c-bab5-4dc9-abd7-328df4b60cc3
-source-git-commit: 913b2127d2189bec1a7e6e197944f1512b764893
+source-git-commit: 1c357b918fa4f6d4b92a9055de018c55ee5861e0
 workflow-type: tm+mt
 source-wordcount: '390'
 ht-degree: 0%
@@ -55,7 +55,7 @@ API에는 스트리밍 앱 또는 프로그래머 서비스용 세트와 두 번
 | deviceId | 장치 ID 바이트입니다. |
 | 리소스 | 사용자가 액세스할 수 있고 MVPD 권한 부여 종단점에서 인식하는 콘텐츠를 식별하는, 쉼표로 구분된 resourceId 목록이 포함된 문자열입니다. |
 | device_info/</br></br>X-Device-Info | 스트리밍 장치 정보입니다.</br></br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. </br></br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
-| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br>이 매개 변수가 올바르게 설정된 경우 ESM은 Clientless를 사용할 때 [장치 유형별로 분류된](/help/premium-workflow/esm/entitlement-service-monitoring-overview.md#clientless_device_type) 지표를 제공하므로 Roku, AppleTV 및 Xbox와 같은 다양한 유형의 분석을 수행할 수 있습니다.</br></br>참고: [전달 지표에서 클라이언트 없는 장치 형식 매개 변수를 사용할 때의 이점&#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**참고**: `device_info`이(가) 이 매개 변수를 대체합니다. |
+| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br>이 매개 변수가 올바르게 설정된 경우 ESM은 Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) 지표를 제공하므로 Roku, AppleTV 및 Xbox와 같은 다양한 유형의 분석을 수행할 수 있습니다.</br></br>참고: [전달 지표에서 클라이언트 없는 장치 형식 매개 변수를 사용할 때의 이점&#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**참고**: `device_info`이(가) 이 매개 변수를 대체합니다. |
 | _deviceUser_ | 장치 사용자 식별자. |
 | _appId_ | 애플리케이션 ID/이름입니다. </br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
 

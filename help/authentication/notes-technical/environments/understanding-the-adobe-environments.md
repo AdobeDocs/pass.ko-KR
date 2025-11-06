@@ -15,11 +15,11 @@ ht-degree: 0%
 >
 >이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-Adobe 환경을 설명하는 공식 문서를 사용할 수 있습니다. [환경 설정 및 테스트 전](/help/authentication/notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md):
+Adobe 환경을 설명하는 공식 설명서를 사용할 수 있습니다. [환경 설정 및 이전 버전 테스트](/help/authentication/notes-technical/environments/setting-up-your-environment-and-testing-in-prequal.md):
 
 Adobe 환경은 다음과 같이 요약됩니다.
 
-Adobe에 두 개의 환경이 있습니다. **사전 자격** 및 **릴리스**.
+Adobe에는 **사전 자격** 및 **릴리스**&#x200B;의 두 가지 환경이 있습니다.
 
 * 사전 검증 환경에서는 릴리스할 새 빌드를 준비하고 있습니다.
 
