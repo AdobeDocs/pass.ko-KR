@@ -32,14 +32,14 @@ Adobe Pass 인증: adobe-pass-**3.1.0**
 
 #### REST API v2
 
-* REST API v2 `partner_logout`로그아웃 API`partner_interactive` 응답에서 일반 로그아웃과 파트너 SSO(Single Sign-On) 로그아웃을 구별하기 위한 새 [ 작업 이름 및 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) 작업 유형입니다.
-* REST API v2 `reason`세션 API[ 및 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)세션 SSO API[ 응답에서 작업 이름에 대한 자세한 정보를 제공하는 새 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) 필드.
+* REST API v2 `partner_logout`로그아웃 API`partner_interactive` 응답에서 일반 로그아웃과 파트너 SSO(Single Sign-On) 로그아웃을 구별하기 위한 새 [&#x200B; 작업 이름 및 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) 작업 유형입니다.
+* REST API v2 `reason`세션 API[&#x200B; 및 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)세션 SSO API[&#x200B; 응답에서 작업 이름에 대한 자세한 정보를 제공하는 새 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) 필드.
 
 #### 버그 수정
 
 * Spectrum 구독자가 REST API v2 [Authenticate API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md)를 통해 인증하지 못하는 문제를 해결했습니다.
 * REST API V2 [인증 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md)를 통해 생성된 이벤트가 ESM에서 제대로 집계되지 않는 문제를 해결했습니다.
-* REST API v2 `notBefore`프로필 API[ 응답에서 사용자 프로필에 대해 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) 타임스탬프를 잘못 계산하던 문제를 수정했습니다.
+* REST API v2 `notBefore`프로필 API[&#x200B; 응답에서 사용자 프로필에 대해 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) 타임스탬프를 잘못 계산하던 문제를 수정했습니다.
 
 #### JavaScript SDK
 

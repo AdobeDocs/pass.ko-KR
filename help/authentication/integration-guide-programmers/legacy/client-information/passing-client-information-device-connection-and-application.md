@@ -116,7 +116,7 @@ AccessEnabler iOS/tvOS SDK은 **setOptions**&#x200B;의 device_info 매개 변�
 
 `AccessEnabler` Android/FireOS SDK은 기본적으로 클라이언트 정보 JSON 개체를 빌드하며, 재정의되지 않는 한 Adobe Pass 인증 서비스로 전달됩니다.
 
-`AccessEnabler` Android/FireOS SDK은 **setOptions**&#x200B;의/[setOptions](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setOptions)의 [ 매개 변수를 통해 ](/help/authentication/integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md#fire_setOption)전체`device_info` 클라이언트 정보 JSON 개체를 재정의합니다.
+`AccessEnabler` Android/FireOS SDK은 **setOptions**&#x200B;의/[setOptions](/help/authentication/integration-guide-programmers/legacy/sdks/android-sdk/android-sdk-api-reference.md#setOptions)의 [&#x200B; 매개 변수를 통해 &#x200B;](/help/authentication/integration-guide-programmers/legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md#fire_setOption)전체`device_info` 클라이언트 정보 JSON 개체를 재정의합니다.
 
 >[!NOTE]
 >

@@ -201,11 +201,11 @@ AccessEnabler iOS/tvOS SDK 및 비디오 구독자 계정
 > **<u>Pro 팁:</u>** tvOS 구현을 보려면 아래 단계를 따르십시오.
 
 * 응용 프로그램은 AccessEnabler iOS/tvOS SDK에서 [로그아웃을 시작](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout)해야 합니다. 이렇게 하면 MVPD 측의 세션 정리가 용이하지 않습니다.
-* *`Settings -> Accounts -> TV Provider`* VSA203 [*상태 코드가 트리거된 경우*&#x200B;에만 tvOS에서 ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md)에서 명시적으로 로그아웃하도록 응용 프로그램에서 지시하거나 프롬프트를 표시해야 합니다.
+* *`Settings -> Accounts -> TV Provider`* VSA203 [*상태 코드가 트리거된 경우*&#x200B;에만 tvOS에서 &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md)에서 명시적으로 로그아웃하도록 응용 프로그램에서 지시하거나 프롬프트를 표시해야 합니다.
 
 >[!TIP]
 >
 > **<u>Pro 팁:</u>** iOS/iPadOS 구현의 경우 아래 단계를 따르십시오.
 
 * 응용 프로그램은 AccessEnabler iOS/tvOS SDK에서 [로그아웃을 시작](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md#logout)해야 합니다. 이렇게 하면 MVPD 측의 세션 정리가 용이해집니다.
-* *`Settings -> TV Provider`* VSA203 [*상태 코드가 트리거된 경우*&#x200B;에만 iOS/iPadOS에서 ](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md)에서 명시적으로 로그아웃하도록 응용 프로그램에서 지시하거나 프롬프트를 표시해야 합니다.
+* *`Settings -> TV Provider`* VSA203 [*상태 코드가 트리거된 경우*&#x200B;에만 iOS/iPadOS에서 &#x200B;](/help/authentication/integration-guide-programmers/legacy/error-reporting/error-reporting.md)에서 명시적으로 로그아웃하도록 응용 프로그램에서 지시하거나 프롬프트를 표시해야 합니다.

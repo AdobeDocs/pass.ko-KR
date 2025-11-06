@@ -32,7 +32,7 @@ Adobe Pass 인증: adobe-pass-**3.2.0**
 
 #### REST API v2
 
-* `missing_parameters_fallback`세션 API[ 응답에 매개 변수가 없는 경우에 대해 새 이유 ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)이(가) 추가되었습니다.
+* `missing_parameters_fallback`세션 API[&#x200B; 응답에 매개 변수가 없는 경우에 대해 새 이유 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)이(가) 추가되었습니다.
 * 새 필드 &quot;장치&quot;를 [세션 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) 응답에 추가했습니다.
 
 #### 새로운 기능

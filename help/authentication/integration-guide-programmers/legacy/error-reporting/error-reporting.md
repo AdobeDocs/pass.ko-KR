@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Adobe Pass 인증의 오류 보고는 현재 두 가지 방법으로 구현됩니다.
 
-* **고급 오류 보고** 구현자는 고급 오류 보고를 받기 위해 [AccessEnabler JavaScript SDK](#accessenabler-javascript-sdk)의 경우 오류 콜백을 등록하거나 `status`AccessEnabler iOS/tvOS SDK[ 및 ](#accessenabler-ios-tvos-sdk)AccessEnabler Android SDK[의 경우 인터페이스 메서드 &quot;](#accessenabler-android-sdk)&quot;을(를) 구현합니다. 오류는 **정보**, **경고** 및 **오류** 유형으로 분류됩니다. 이 보고 시스템은 **비동기**&#x200B;입니다. **여러 오류가 트리거되는 순서를 보장할 수 없습니다**.  고급 오류 보고 시스템에 대한 자세한 내용은 [고급 오류 보고](#advanced-error-reporting) 섹션을 참조하십시오.
+* **고급 오류 보고** 구현자는 고급 오류 보고를 받기 위해 [AccessEnabler JavaScript SDK](#accessenabler-javascript-sdk)의 경우 오류 콜백을 등록하거나 `status`AccessEnabler iOS/tvOS SDK[&#x200B; 및 &#x200B;](#accessenabler-ios-tvos-sdk)AccessEnabler Android SDK[의 경우 인터페이스 메서드 &quot;](#accessenabler-android-sdk)&quot;을(를) 구현합니다. 오류는 **정보**, **경고** 및 **오류** 유형으로 분류됩니다. 이 보고 시스템은 **비동기**&#x200B;입니다. **여러 오류가 트리거되는 순서를 보장할 수 없습니다**.  고급 오류 보고 시스템에 대한 자세한 내용은 [고급 오류 보고](#advanced-error-reporting) 섹션을 참조하십시오.
 
 * **원래 오류 보고 -** 특정 요청이 실패할 때 오류 메시지가 특정 콜백 함수에 전달되는 정적 보고 시스템입니다. 오류는 일반, 인증 및 권한 부여 유형으로 그룹화됩니다. 원래 시스템에서 보고된 오류 목록을 보려면 [원래 오류 보고](#original-error-reporting) 섹션을 참조하십시오.
 

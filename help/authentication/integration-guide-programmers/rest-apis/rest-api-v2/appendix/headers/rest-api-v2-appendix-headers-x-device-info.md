@@ -53,7 +53,7 @@ ht-degree: 2%
         <td></td>
         <td>기본 하드웨어 유형</td>
         <td>장치의 기본 하드웨어 유형입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -110,7 +110,7 @@ ht-degree: 2%
         <td><i>필수</i></td>
         <td>osName</td>
         <td>장치의 운영 체제(OS) 이름.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -132,7 +132,7 @@ ht-degree: 2%
         <td></td>
         <td>osFamily</td>
         <td>장치의 운영 체제(OS) 그룹 이름입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -155,7 +155,7 @@ ht-degree: 2%
         <td></td>
         <td>osVendor</td>
         <td>장치의 운영 체제(OS) 공급업체.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -185,7 +185,7 @@ ht-degree: 2%
         <td></td>
         <td>browserName</td>
         <td>브라우저의 이름입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -205,7 +205,7 @@ ht-degree: 2%
         <td></td>
         <td>browserVendor</td>
         <td>브라우저의 빌드 회사/조직입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -290,7 +290,7 @@ ht-degree: 2%
         <td></td>
         <td>connectionSecure</td>
         <td>네트워크 연결 보안 상태입니다.</td>
-        <td>&amp;check;</td>
+        <td>&check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -351,7 +351,7 @@ X-Device-Info: ewogICJwcmltYXJ5SGFyZHdhcmVUeXBlIiA6ICJNb2JpbGVQaG9uZSIsCiAgIm1vZ
 
 #### iOS 및 iPadOS {#ios-ipados}
 
-`X-Device-Info`iOS 또는 iPadOS[를 실행하는 장치의 ](https://developer.apple.com/documentation/ios-ipados-release-notes) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조하십시오.
+`X-Device-Info`iOS 또는 iPadOS[를 실행하는 장치의 &#x200B;](https://developer.apple.com/documentation/ios-ipados-release-notes) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조하십시오.
 
 * [UIDevice](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice)용 Apple 개발자 설명서입니다.
 * [연결 가능성](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html)에 대한 Apple 개발자 설명서입니다.
@@ -452,7 +452,7 @@ X-Device-Info: ewogICJwcmltYXJ5SGFyZHdhcmVUeXBlIiA6ICJNb2JpbGVQaG9uZSIsCiAgIm1vZ
 
 #### Android {#android}
 
-`X-Device-Info`Android[을(를) 실행하는 장치의 ](https://developer.android.com/about/versions) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조할 수 있습니다.
+`X-Device-Info`Android[을(를) 실행하는 장치의 &#x200B;](https://developer.android.com/about/versions) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조할 수 있습니다.
 
 * [Build](https://developer.android.com/reference/android/os/Build.html) 클래스에 대한 Android 개발자 설명서입니다.
 
@@ -559,7 +559,7 @@ private JSONObject computeClientInformation() {
 
 #### tvOS {#tvos}
 
-`X-Device-Info`tvOS[을(를) 실행하는 장치의 ](https://developer.apple.com/documentation/tvos-release-notes) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조하십시오.
+`X-Device-Info`tvOS[을(를) 실행하는 장치의 &#x200B;](https://developer.apple.com/documentation/tvos-release-notes) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조하십시오.
 
 * [UIDevice](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice)용 Apple 개발자 설명서입니다.
 * [연결 가능성](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html)에 대한 Apple 개발자 설명서입니다.
@@ -659,7 +659,7 @@ private JSONObject computeClientInformation() {
 
 #### Fire OS {#fireos}
 
-`X-Device-Info`Fire OS[를 실행하는 장치의 ](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html) 헤더를 빌드하려면 다음 문서를 참조할 수 있습니다.
+`X-Device-Info`Fire OS[를 실행하는 장치의 &#x200B;](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html) 헤더를 빌드하려면 다음 문서를 참조할 수 있습니다.
 
 * [Build](https://developer.android.com/reference/android/os/Build.html) 클래스에 대한 Android 개발자 설명서입니다.
 * [Fire TV 장치 식별](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html)을 위한 Amazon 개발자 설명서입니다.
@@ -692,7 +692,7 @@ private JSONObject computeClientInformation() {
 
 #### Roku 운영 체제 {#rokuos}
 
-`X-Device-Info`Roku OS[를 실행하는 장치의 ](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md) 헤더를 만들려면 다음 문서를 참조할 수 있습니다.
+`X-Device-Info`Roku OS[를 실행하는 장치의 &#x200B;](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md) 헤더를 만들려면 다음 문서를 참조할 수 있습니다.
 
 * [ifDeviceInfo](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)에 대한 Roku 개발자 설명서.
 

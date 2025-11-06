@@ -260,7 +260,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | ```public void setSelectedProvider(String mvpdId)``` |
 
 
-**가용성:**v 1.0+
+**가용성:**&#x200B;v 1.0+
 
 **매개 변수:** 없음
 
@@ -355,7 +355,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | --- |
 | ```public void checkPreauthorizedResources(ArrayList<String> resources)``` |
 
-**가용성:**v 1.0+
+**가용성:**&#x200B;v 1.0+
 
 **매개 변수:** `resources` 매개 변수는 사용자가 이미 볼 수 있는 리소스 배열입니다.
 
@@ -427,7 +427,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | --- |
 | ```public void setToken(String token, String resourceId)``` |
 
-**가용성:**v 1.0+
+**가용성:**&#x200B;v 1.0+
 
 **매개 변수:**
 
