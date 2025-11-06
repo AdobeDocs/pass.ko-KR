@@ -38,7 +38,7 @@ SSO(Single Sign-On) 사용자 경험을 활용하려면 한 프로그래머가 �
 
    * Xcode 버전 8 이상 및 iOS/tvOS 버전 10 이상을 사용합니다.
 
-* [ 속성을 ](https://experience.adobe.com/#/pass/authentication)&#x200B;(으)로 설정하여 `Enable Single Sign On`iOS TVE 대시보드`Yes`를 통해 원하는 각 통합 및 플랫폼(Adobe Pass/tvOS)에 대해 SSO(Single Sign-On)를 사용하도록 설정하십시오.
+* [&#x200B; 속성을 &#x200B;](https://experience.adobe.com/#/pass/authentication)&#x200B;(으)로 설정하여 `Enable Single Sign On`iOS TVE 대시보드`Yes`를 통해 원하는 각 통합 및 플랫폼(Adobe Pass/tvOS)에 대해 SSO(Single Sign-On)를 사용하도록 설정하십시오.
 
 | Adobe 단일 사인온 활성화 | Apple **온보딩된(지원됨)**&#x200B;개의 MVPD | Apple **선택기** MVPD | Apple **온보딩되지 않음(지원되지 않음)** MVPD |
 |-----------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------|
@@ -93,7 +93,7 @@ SSO(Single Sign-On) 사용자 경험을 활용하려면 하나의 MVPD에서 다
   사용자가 애플리케이션을 실행하면 Apple SSO 워크플로를 통해 사용자가 인증되지 않습니다. 따라서 애플리케이션은 일반 인증 플로우로 돌아가 자체 MVPD 선택기를 제공해야 합니다.
 
 
-* 사용자가 iOS/tvOS 플랫폼용 *`Settings -> TV Provider`* Adobe Pass TVE 대시보드&#x200B;*`Settings -> Accounts -> TV Provider`*&#x200B;를 통해 **아니요**&#x200B;에 **단일 사인온 사용**&#x200B;이 설정된 MVPD을 사용하여 iOS/iPadOS의 [ 또는 tvOS의 ](https://experience.adobe.com/#/pass/authentication) 섹션으로 이동하여 로그인하면 어떻게 됩니까?
+* 사용자가 iOS/tvOS 플랫폼용 *`Settings -> TV Provider`* Adobe Pass TVE 대시보드&#x200B;*`Settings -> Accounts -> TV Provider`*&#x200B;를 통해 **아니요**&#x200B;에 **단일 사인온 사용**&#x200B;이 설정된 MVPD을 사용하여 iOS/iPadOS의 [&#x200B; 또는 tvOS의 &#x200B;](https://experience.adobe.com/#/pass/authentication) 섹션으로 이동하여 로그인하면 어떻게 됩니까?
 
   사용자가 애플리케이션을 실행하면 Apple SSO 워크플로를 통해 사용자가 인증되지 않습니다. 따라서 애플리케이션은 일반 인증 플로우로 돌아가 자체 MVPD 선택기를 제공해야 합니다.
 

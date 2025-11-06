@@ -265,7 +265,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Pro 팁:</u>** 비디오 구독자 계정 프레임워크에서 가져온 공급자 식별자는 Adobe Pass 인증 구성 측면에서 *`platformMappingId`*&#x200B;을(를) 나타냅니다. 따라서 응용 프로그램은 MVPD 인증 *`platformMappingId`* MVPD 목록 제공[ API 서비스를 통해 ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) 값을 사용하여 Adobe Pass id 속성 값을 결정해야 합니다.
+> **<u>Pro 팁:</u>** 비디오 구독자 계정 프레임워크에서 가져온 공급자 식별자는 Adobe Pass 인증 구성 측면에서 *`platformMappingId`*&#x200B;을(를) 나타냅니다. 따라서 응용 프로그램은 MVPD 인증 *`platformMappingId`* MVPD 목록 제공[&#x200B; API 서비스를 통해 &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) 값을 사용하여 Adobe Pass id 속성 값을 결정해야 합니다.
 
 #### 단계: &quot;프로필을 가져오기 위해 Adobe 요청을 파트너 SSO로 전달&quot; {#step7}
 
@@ -358,7 +358,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>팁:</u>** 토큰을 성공적으로 만들었고 인증 흐름에 사용할 준비가 되었음을 나타내는 [이(가) 될 Adobe Pass 인증 ](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md)토큰 교환&#x200B;*`204 No Content`* 성공 응답을 통해 이 응답을 구현합니다.
+> **<u>팁:</u>** 토큰을 성공적으로 만들었고 인증 흐름에 사용할 준비가 되었음을 나타내는 [이(가) 될 Adobe Pass 인증 &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md)토큰 교환&#x200B;*`204 No Content`* 성공 응답을 통해 이 응답을 구현합니다.
 
 #### 단계: &quot;일반 인증 워크플로 시작&quot; {#step10}
 
