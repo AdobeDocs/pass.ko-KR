@@ -75,7 +75,7 @@ Adobe은 Adobe Pass 인증을 웹 사이트 또는 애플리케이션에 통합�
 
 ## 설명서 액세스 {#access-documentation}
 
-**Adobe은** Adobe Experience League[를 통해 &#x200B;](https://experienceleague.adobe.com/en/docs/pass/authentication/home) 공개 설명서에 대한 액세스 권한을 제공합니다.
+**Adobe은** Adobe Experience League[를 통해 &#x200B;](https://experienceleague.adobe.com/ko/docs/pass/authentication/home) 공개 설명서에 대한 액세스 권한을 제공합니다.
 
 Adobe Pass 인증 팀은 [프로그래머를 위한 통합 안내서](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md) 섹션에서 사용 가능한 기능 및 API에 대한 포괄적인 설명서를 제공합니다. 각 주제에 대한 자세한 정보에 대한 링크는 이 섹션의 목차를 참조하십시오.
 
