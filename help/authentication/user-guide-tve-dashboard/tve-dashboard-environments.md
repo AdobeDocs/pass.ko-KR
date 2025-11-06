@@ -2,7 +2,7 @@
 title: TVE 대시보드 환경
 description: TVE Dashboard에서 다양한 환경의 사용 및 작업을 이해합니다.
 exl-id: 591becb8-2f6c-46e0-b108-c64e6df69f89
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '346'
 ht-degree: 0%

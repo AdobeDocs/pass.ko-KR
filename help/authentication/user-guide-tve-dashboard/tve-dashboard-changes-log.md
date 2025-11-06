@@ -2,7 +2,7 @@
 title: 변경 로그
 description: 관리자가 TVE 대시보드에서 구성 변경 사항을 모니터링하는 방법을 알아봅니다.
 exl-id: 9b53a61b-679f-491e-90f3-5d827e21b32c
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '270'
 ht-degree: 0%

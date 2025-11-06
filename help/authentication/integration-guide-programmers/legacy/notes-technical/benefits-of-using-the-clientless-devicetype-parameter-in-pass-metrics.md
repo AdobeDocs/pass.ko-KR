@@ -2,7 +2,7 @@
 title: Adobe Pass 인증 지표에서 Clientless deviceType 매개 변수를 사용할 때의 이점
 description: Adobe Pass 인증 지표에서 Clientless deviceType 매개 변수를 사용할 때의 이점
 exl-id: a5004887-d5fa-468e-971b-10806519175b
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '372'
 ht-degree: 0%
@@ -49,7 +49,7 @@ Adobe Pass 인증 지표에 있는 `deviceType` 매개 변수와 해당 **이점
 
 ## 구현
 
-Adobe Pass 인증 지표를 최대한 활용하려면 현재 사용 중이고 올바른 [을(를) 설정해야 하는 두 가지 유형의 &#x200B;](#web_srvs_summary)클라이언트 없는 API`deviceType`가 있습니다.
+Adobe Pass 인증 지표를 최대한 활용하려면 현재 사용 중이고 올바른 [을(를) 설정해야 하는 두 가지 유형의 ](#web_srvs_summary)클라이언트 없는 API`deviceType`가 있습니다.
 
 1. `regcode`이(가) 필수 매개 변수로 사용되고 다음 API 호출과 함께 `deviceType`을(를) 만들 때 설정된 `regcode` 매개 변수를 사용하는 API:
    - [\&lt;REGGIE\_FQDN\>/reggie/v1/](#reg_serv)

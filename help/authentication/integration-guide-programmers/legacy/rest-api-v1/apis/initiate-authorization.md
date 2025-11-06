@@ -2,7 +2,7 @@
 title: 인증 시작
 description: 인증 시작
 exl-id: 2f8a5499-e94f-40dd-9fb0-aac8e080de66
-source-git-commit: c1f891fabd47954dc6cf76a575c3376ed0f5cd3d
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '446'
 ht-degree: 0%

@@ -2,7 +2,7 @@
 title: 대시보드
 description: TVE Dashboard의 홈 페이지에 대해 알아봅니다.
 exl-id: 3073cd86-89f8-4c65-996b-24edda24f25b
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '276'
 ht-degree: 0%
