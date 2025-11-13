@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 151c64276377be5ef21bca4c0d3eaa04ac3da495
 workflow-type: tm+mt
-source-wordcount: '1279'
+source-wordcount: '1285'
 ht-degree: 3%
 
 ---
@@ -161,6 +161,8 @@ ht-degree: 3%
          - [권한 부여 서비스 모니터링 개요](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md)
          - [권한 부여 서비스 모니터링 API](integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
          - [서버측 지표](integration-guide-programmers/features-premium/esm/understanding-serverside-metrics.md)
+      - SSO 서비스 {#sso-service}
+         - [Adobe Single Sign-On 서비스](integration-guide-programmers/features-premium/sso-service/sso-service.md)
       - 분석 {#analytics}
          - [Adobe Pass 인증 서버측 데이터를 Adobe Analytics에 통합](integration-guide-programmers/features-premium/analytics/integrate-authn-servr-data-analytics.md)
          - [Adobe Pass 인증에서 Experience Cloud ID 사용](integration-guide-programmers/features-premium/analytics/exp-cloud-id-authn.md)
