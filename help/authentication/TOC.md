@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 151c64276377be5ef21bca4c0d3eaa04ac3da495
+source-git-commit: 53ebbd82fc160f68fccdddb18cf98e249ad6ecce
 workflow-type: tm+mt
-source-wordcount: '1285'
+source-wordcount: '1287'
 ht-degree: 3%
 
 ---
@@ -292,6 +292,7 @@ ht-degree: 3%
    - [통합](/help/authentication/user-guide-tve-dashboard/tve-dashboard-integrations.md)
    - [보고서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-reports.md)
    - [변경 로그](/help/authentication/user-guide-tve-dashboard/tve-dashboard-changes-log.md)
+   - [ESM 대시보드](/help/authentication/user-guide-tve-dashboard/tve-dashboard-esm.md)
 - 기술 노트 {#tech-notes}
    - 환경 {#environments}
       - [Adobe 환경 이해](notes-technical/environments/understanding-the-adobe-environments.md)
