@@ -2,7 +2,7 @@
 title: 용어집
 description: 동시성 모니터링 용어 목록
 exl-id: 3b3b36fe-9f04-4de9-bd84-9f8d766bbc71
-source-git-commit: f30b6814b8a77424c13337d44d7b247105e0bfe2
+source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
 workflow-type: tm+mt
 source-wordcount: '762'
 ht-degree: 0%
@@ -28,7 +28,7 @@ ht-degree: 0%
 ## 애플리케이션 {#application-defn}
 
 * 비디오 콘텐츠 액세스를 위해 테넌트가 개발
-* 동시성 모니터링 서비스에서 제공한 정보를 기반으로 콘텐츠 액세스에 대한 결정을 내리고 적용합니다([정책 정보 지점](/help/concurrency-monitoring/policy-info-pt-versionone.md) 사례에서 유효).
+* 동시성 모니터링 서비스에서 제공한 정보를 기반으로 콘텐츠 액세스에 대한 결정을 내리고 적용합니다([정책 정보 지점](/help/concurrency-monitoring/technical/policy-info-pt-versionone.md) 사례에서 유효).
 * Adobe에서 제공한 고유한 **응용 프로그램 ID**&#x200B;이(가) 있습니다.
 
 ## 동시성 모니터링 서비스 {#cm-service-defn}
@@ -94,7 +94,7 @@ ht-degree: 0%
 
 ## 제목 {#subj-defn}
 
-* 인터넷을 통한 (비디오) 콘텐츠의 소비자. 동시성 모니터링에서는 일반적으로 MVPD 계정 ID(동일한 계약을 공유하는 여러 실제 사용자(예: 가정의 가족 구성원)를 다루므로 _&#x200B;**사용자**&#x200B;_&#x200B;라는 용어를 의도적으로 피하고 있습니다.
+* 인터넷을 통한 (비디오) 콘텐츠의 소비자. 동시성 모니터링에서는 일반적으로 MVPD 계정 ID(동일한 계약을 공유하는 여러 실제 사용자(예: 가정의 가족 구성원)를 다루므로 _**사용자**_&#x200B;라는 용어를 의도적으로 피하고 있습니다.
 
 * 각 스트림에 대해 서비스를 사용하는 실제 사용자, 네트워크 연결 장치 등과 관련된 속성으로 주체를 개선할 수 있습니다.
 
