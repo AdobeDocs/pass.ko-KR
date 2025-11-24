@@ -2,9 +2,9 @@
 title: 인증 iOS / tvOS 3.7.0 릴리스 노트
 description: 인증 iOS / tvOS 3.7.0 릴리스 노트
 exl-id: 19c1179e-16b1-4608-954f-25b0980d7ad9
-source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
+source-git-commit: ca2cda44b1dd8b907235053eff07f314b09249a2
 workflow-type: tm+mt
-source-wordcount: '122'
+source-wordcount: '123'
 ht-degree: 0%
 
 ---
@@ -32,3 +32,5 @@ Adobe Pass 인증: iOS / tvOS 3.7.0
 여기에서 iOS/tvOS SDK v3.7.0을 다운로드할 수 있습니다.
 
 이 버전으로 업그레이드하기 전에 이 기술 정보를 확인하십시오.
+
+데모
