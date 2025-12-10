@@ -2,9 +2,9 @@
 title: 채널
 description: TVE 대시보드 내의 채널과 다양한 구성에 대해 알아봅니다.
 exl-id: bbddeccb-6b6f-4a8f-87ab-d4af538eee1d
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: b4276ee12d57bc061d26afc0a192b799fe1681ae
 workflow-type: tm+mt
-source-wordcount: '1556'
+source-wordcount: '1637'
 ht-degree: 0%
 
 ---
@@ -268,7 +268,8 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 ### 사용자 지정 체계 {#custom-schemes}
 
-이 탭에는 사용자 지정 체계 목록이 표시됩니다. 사용자 지정 구성표 사용과 관련된 자세한 내용은 [iOS/tvOS 응용 프로그램 등록](/help/authentication/integration-guide-programmers/legacy/sdks/ios-tvos-sdk/iostvos-application-registration.md)을 참조하세요.
+이 탭에는 사용자 지정 체계 목록이 표시됩니다.
+사용자 지정 스키마는 Android 및 iOS 디바이스에 사용할 수 있습니다.
 
 사용자 지정 체계를 다음과 같이 변경할 수 있습니다.
 
@@ -286,7 +287,38 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. **사용자 지정 체계** 섹션에 나열된 새 사용자 지정 체계를 사용하려면 [변경 내용 검토 및 푸시](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) 흐름을 진행하십시오.
 
-#### 상속된 사용자 지정 체계 {#inherited-custom-schemes}
+#### Adobe의 TVE 대시보드에 액세스할 수 없는 경우:
+
+<tve-support@adobe.com>(으)로 티켓을 제출합니다. 채널 ID를 포함하십시오. 그러면 지원 팀에서 사용자를 위한 사용자 지정 체계를 만들 수 있습니다.
+
+#### ANDROID {#Android}
+
+1. 사용자 지정 체계 - TVE 대시보드에서 만든 사용자 지정 체계를 Android 장치 애플리케이션에 사용할 수 있습니다.
+
+1. 응용 프로그램의 리소스 파일 `strings.xml`에 다음 코드를 추가합니다.
+
+```XML
+       <string name="software_statement">softwarestatement value</string>
+       <string name="redirect_uri">adbe.TTIFAaWuR-CmxXv1Di8PlQ://</string>
+```
+
+#### iOS {#iOS}
+
+사용자 지정 구성표는 응용 프로그램의 `info.plist` 파일에서 사용할 수 있습니다. TVE 대시보드에서 생성된 URL을 추가해야 하는 아래 예를 찾으십시오.
+
+```plist
+    <key>CFBundleURLTypes</key>
+    <array>
+        <dict>
+            <key>CFBundleURLSchemes</key>
+            <array>
+                <string>adbe.u-XFXJeTSDuJiIQs0HVRAg</string> // replace this with your custom scheme
+            </array>
+        </dict>
+    </array>
+```
+
+### 상속된 사용자 지정 체계 {#inherited-custom-schemes}
 
 미디어 회사들은 이러한 맞춤 제도를 그들 자신의 수준에서 정의한다. 동일한 미디어 회사와 연결된 모든 채널은 이러한 사용자 지정 체계를 사용할 수 있습니다.
 
