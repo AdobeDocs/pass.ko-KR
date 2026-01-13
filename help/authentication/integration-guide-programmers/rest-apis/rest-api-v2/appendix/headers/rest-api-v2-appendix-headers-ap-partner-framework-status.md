@@ -2,9 +2,9 @@
 title: 헤더 - AP-Partner-Framework-Status
 description: REST API V2 - 헤더 - AP-Partner-Framework-Status
 exl-id: f589d948-e23e-43d4-81c2-8db0e7a40e93
-source-git-commit: 5c912bbbe97fff65d38dbade32cd4554ad8c2fac
+source-git-commit: 22529618db679f7dbfb493906e1aeb4a0443a40c
 workflow-type: tm+mt
-source-wordcount: '404'
+source-wordcount: '415'
 ht-degree: 0%
 
 ---
@@ -70,8 +70,8 @@ ht-degree: 0%
                   <ul>
                      <li><b>허가됨</b><br/>사용자가 응용 프로그램에서 구독 정보에 액세스하도록 허용했습니다.</li>
                      <li><b>거부됨</b><br/>사용자가 구독 정보에 액세스하기 위한 응용 프로그램을 거부했습니다.</li>
-                     <li><b>보류 중</b><br/>사용자가 응용 프로그램이 구독 정보에 액세스할 수 있도록 허용하지 않았습니다.</li>
-                     <li><b>notDetermined</b><br/>응용 프로그램에서 구독 정보에 액세스할 수 없습니다.</li>
+                     <li><b>제한됨</b><br/>응용 프로그램에서 구독 정보에 액세스할 수 없습니다.</li>
+                     <li><b>notDetermined</b><br/>사용자가 응용 프로그램에서 구독 정보에 액세스하도록 허용할지 여부를 선택하지 않았습니다.</li>
                   </ul>
                </td>
             </tr>
