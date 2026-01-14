@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook(REST API V2)
 description: Apple SSO Cookbook(REST API V2)
 exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 63ffde4a32f003d7232d2c79ed6878ca59748f74
 workflow-type: tm+mt
-source-wordcount: '3609'
+source-wordcount: '3857'
 ht-degree: 0%
 
 ---
@@ -57,8 +57,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [클라이언트 자격 증명 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-client-credentials.md#request) API 설명서를 참조하십시오.
    >
-   > * _과(와) 같은 모든_&#x200B;필수`software_statement` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Content-Type`required`X-Device-Info` 헤더
+   > * `software_statement`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Content-Type`, `X-Device-Info`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **클라이언트 자격 증명 반환:** 클라이언트 등록 끝점 응답에 수신한 매개 변수 및 헤더와 관련된 클라이언트 자격 증명에 대한 정보가 포함되어 있습니다.
@@ -87,8 +87,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md#request) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `client_id`과(와) 같은 모든 `client_secret`필수`grant_type` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Content-Type`required`X-Device-Info` 헤더
+   > * `client_id`, `client_secret` 및 `grant_type`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Content-Type`, `X-Device-Info`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **액세스 토큰 반환:** 클라이언트 토큰 끝점 응답에 수신된 매개 변수 및 헤더와 연결된 액세스 토큰에 대한 정보가 포함되어 있습니다.
@@ -124,13 +124,69 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 `VSAccountManager`에 대한 [위임](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
    > <br/>
    >
-   > 스트리밍 응용 프로그램은 `false` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `VSAccountMetadataRequest`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자를 중단할 수 없음을 나타냅니다.
+   > 스트리밍 응용 프로그램은 `VSAccountMetadataRequest` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `false`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자를 중단할 수 없음을 나타냅니다.
+
+   >[!TIP]
+   >
+   > **<u>Pro 팁:</u>** 코드 조각을 따라 댓글에 각별히 주의하십시오.
+
+   ```swift
+   ...
+   let videoSubscriberAccountManager: VSAccountManager = VSAccountManager();
+   
+   videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.prompt: true]) { (accessStatus, error) -> Void in
+            switch (accessStatus) {
+            // The user allows the application to access subscription information.
+            case VSAccountAccessStatus.granted:
+                    // Construct the request for subscriber account information.
+                    let vsaMetadataRequest: VSAccountMetadataRequest = VSAccountMetadataRequest();
+   
+                    // This is actually the SAML Issuer not the channel ID.
+                    vsaMetadataRequest.channelIdentifier = "https://saml.sp.auth.adobe.com";
+   
+                    // This is the subscription account information needed at this step.
+                    vsaMetadataRequest.includeAccountProviderIdentifier = true;
+   
+                    // This is the subscription account information needed at this step.
+                    vsaMetadataRequest.includeAuthenticationExpirationDate = true;
+   
+                    // This is going to make the Video Subscriber Account Framework to refrain from prompting the user with the providers picker at this step. 
+                    vsaMetadataRequest.isInterruptionAllowed = false;
+   
+                    // Submit the request for subscriber account information - accountProviderIdentifier.
+                    videoSubscriberAccountManager.enqueue(vsaMetadataRequest) { vsaMetadata, vsaError in        
+                        if (vsaMetadata != nil && vsaMetadata!.accountProviderIdentifier != nil) {
+                            // The vsaMetadata!.authenticationExpirationDate will contain the expiration date for current authentication session.
+                            // The vsaMetadata!.authenticationExpirationDate should be compared against current date.
+                            ...
+                            // The vsaMetadata!.accountProviderIdentifier will contain the provider identifier as it is known for the platform configuration.
+                            // The vsaMetadata!.accountProviderIdentifier represents the platformMappingId in terms of Adobe Pass Authentication configuration.
+                            ...
+                            // The application must determine the MVPD id property value based on the platformMappingId property value obtained above.
+                            // The application must use the MVPD id further in its communication with Adobe Pass Authentication services.
+                            ...
+                            // Continue with the "Retrieve profiles" step.
+                            ...
+                        } else {
+                            // The user is not authenticated at platform level, continue with the "Retrieve profiles" step.
+                            ...
+                        }
+                    }
+   
+            // The user has not yet made a choice or does not allow the application to access subscription information.
+            default:
+                // Continue with the "Retrieve profiles" step.
+                ...
+            }
+   }
+   ...
+   ```
 
 1. **파트너 프레임워크 상태 정보 반환:** 스트리밍 응용 프로그램에서 응답 데이터의 유효성을 검사하여 기본 조건이 충족되는지 확인합니다.
    * 사용자 권한 액세스 상태가 부여됩니다.
@@ -143,8 +199,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md#Request) API 설명서를 참조하십시오.
    >
-   > * _과(와) 같은 모든_&#x200B;필수`serviceProvider` 매개 변수
-   > * _,_ 및 `Authorization`과(와) 같은 모든 `AP-Device-Identifier`필수`AP-Partner-Framework-Status` 헤더
+   > * `serviceProvider`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -171,8 +227,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [특정 서비스 공급자에 대한 구성 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/configuration-apis/rest-api-v2-configuration-apis-retrieve-configuration-for-specific-service-provider.md#Request) API 설명서를 참조하십시오.
    >
-   > * _과(와) 같은 모든_&#x200B;필수`serviceProvider` 매개 변수
-   > * _,_ 및 `Authorization`과(와) 같은 모든 `AP-Device-Identifier`필수`X-Device-Info` 헤더
+   > * `serviceProvider`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier` 및 `X-Device-Info`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **반환 구성:** 구성 끝점 응답에 서비스 공급자와 활성 통합을 하는 MVPD에 대한 정보가 포함되어 있습니다.
@@ -208,13 +264,109 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 `VSAccountManager`에 대한 [위임](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
    > <br/>
    >
-   > 스트리밍 응용 프로그램에서 `true` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `VSAccountMetadataRequest`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자가 TV 공급자를 선택하기 위해 중단할 수 있음을 나타냅니다.
+   > 스트리밍 응용 프로그램에서 `VSAccountMetadataRequest` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `true`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자가 TV 공급자를 선택하기 위해 중단할 수 있음을 나타냅니다.
+
+   >[!TIP]
+   >
+   > **<u>Pro 팁:</u>** 코드 조각을 따라 댓글에 각별히 주의하십시오.
+
+   ```swift
+    ...
+    let videoSubscriberAccountManager: VSAccountManager = VSAccountManager();
+   
+    // This must be a class implementing the VSAccountManagerDelegate protocol.
+    let videoSubscriberAccountManagerDelegate: VideoSubscriberAccountManagerDelegate = VideoSubscriberAccountManagerDelegate();
+   
+    videoSubscriberAccountManager.delegate = videoSubscriberAccountManagerDelegate;
+   
+    videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.prompt: true]) { (accessStatus, error) -> Void in
+                switch (accessStatus) {
+                // The user allows the application to access subscription information.
+                case VSAccountAccessStatus.granted:
+                        // Construct the request for subscriber account information.
+                        let vsaMetadataRequest: VSAccountMetadataRequest = VSAccountMetadataRequest();
+   
+                        // This is actually the SAML Issuer not the channel ID.
+                        vsaMetadataRequest.channelIdentifier = "https://saml.sp.auth.adobe.com";
+   
+                        // This is the subscription account information needed at this step.
+                        vsaMetadataRequest.includeAccountProviderIdentifier = true;
+   
+                        // This is the subscription account information needed at this step.
+                        vsaMetadataRequest.includeAuthenticationExpirationDate = true;
+   
+                        // This is going to make the Video Subscriber Account Framework to prompt the user with the providers picker at this step. 
+                        vsaMetadataRequest.isInterruptionAllowed = true;
+   
+                        // This can be computed from the Configuration service response in order to filter the TV providers from the Apple picker.
+                        vsaMetadataRequest.supportedAccountProviderIdentifiers = supportedAccountProviderIdentifiers;
+   
+                        // This can be computed from the Configuration service response in order to sort the TV providers from the Apple picker.
+                        if #available(iOS 11.0, tvOS 11, *) {
+                            vsaMetadataRequest.featuredAccountProviderIdentifiers = featuredAccountProviderIdentifiers;
+                        }
+   
+                        // Submit the request for subscriber account information - accountProviderIdentifier.
+                        videoSubscriberAccountManager.enqueue(vsaMetadataRequest) { vsaMetadata, vsaError in                        
+                            if (vsaMetadata != nil && vsaMetadata!.accountProviderIdentifier != nil) {
+                                // The vsaMetadata!.authenticationExpirationDate will contain the expiration date for current authentication session.
+                                // The vsaMetadata!.authenticationExpirationDate should be compared against current date.
+                                ...
+                                // The vsaMetadata!.accountProviderIdentifier will contain the provider identifier as it is known for the platform configuration.
+                                // The vsaMetadata!.accountProviderIdentifier represents the platformMappingId in terms of Adobe Pass Authentication configuration.
+                                ...
+                                // The application must determine the MVPD id property value based on the platformMappingId property value obtained above.
+                                // The application must use the MVPD id further in its communication with Adobe Pass Authentication services.
+                                ...
+                                // Continue with the "Retrieve partner authentication request" step.
+                                ...
+                            } else {
+                                // The user is not authenticated at platform level.
+                                if (vsaError != nil) {
+                                    // The application can check to see if the user selected a provider which is present in Apple picker, but the provider is not onboarded in platform SSO.
+                                    if let error: NSError = (vsaError! as NSError), error.code == 1, let appleMsoId = error.userInfo["VSErrorInfoKeyUnsupportedProviderIdentifier"] as! String? {
+                                        var mvpd: Mvpd? = nil;
+   
+                                        // The requestor.mvpds must be computed during the "Return configuration" step. 
+                                        for provider in requestor.mvpds {
+                                            if provider.platformMappingId == appleMsoId {
+                                                mvpd = provider;
+                                                break;
+                                            }
+                                        }
+   
+                                        if mvpd != nil {
+                                            // Continue with the "Proceed with basic authentication flow" step, but you can skip prompting the user with your MVPD picker and use the mvpd selection, therefore creating a better UX.
+                                            ...
+                                        } else {
+                                            // Continue with the "Proceed with basic authentication flow" step.
+                                            ...
+                                        }
+                                    } else {
+                                        // Continue with the "Proceed with basic authentication flow" step.
+                                        ...
+                                    }
+                                } else {
+                                    // Continue with the "Proceed with basic authentication flow" step.
+                                    ...
+                                }
+                            }
+                        }
+   
+                // The user has not yet made a choice or does not allow the application to access subscription information.
+                default:
+                    // Continue with the "Proceed with basic authentication flow" step.
+                    ...
+                }
+    }
+    ...
+   ```
 
 1. **파트너 프레임워크 상태 정보 반환:** 스트리밍 응용 프로그램에서 응답 데이터의 유효성을 검사하여 기본 조건이 충족되는지 확인합니다.
    * 사용자 권한 액세스 상태가 부여됩니다.
@@ -227,8 +379,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [파트너 인증 요청 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md#Request) API 설명서를 참조하십시오.
    >
-   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`partner` 매개 변수
-   > * _,_, `Authorization`, `AP-Device-Identifier` 및 `Content-Type`과(와) 같은 모든 `X-Device-Info`필수`AP-Partner-Framework-Status` 헤더
+   > * `serviceProvider` 및 `partner`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 헤더 및 매개 변수
    >
    > <br/>
@@ -302,13 +454,79 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 `VSAccountManager`에 대한 [위임](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 하며 이전 단계에서 얻은 파트너 인증 요청(SAML 요청)을 포함해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
    > <br/>
    >
-   > 스트리밍 응용 프로그램에서 `true` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `VSAccountMetadataRequest`과(와) 같은 부울 값을 지정해야 이 단계에서 선택한 TV 공급자로 인증하기 위해 사용자를 중단할 수 있음을 나타냅니다.
+   > 스트리밍 응용 프로그램에서 `VSAccountMetadataRequest` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `true`과(와) 같은 부울 값을 지정해야 이 단계에서 선택한 TV 공급자로 인증하기 위해 사용자를 중단할 수 있음을 나타냅니다.
+
+   >[!TIP]
+   >
+   > **<u>Pro 팁:</u>** 코드 조각을 따라 댓글에 각별히 주의하십시오.
+
+   ```swift
+    ...
+    let videoSubscriberAccountManager: VSAccountManager = VSAccountManager();
+   
+    videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.prompt: true]) { (accessStatus, error) -> Void in
+                switch (accessStatus) {
+                // The user allows the application to access subscription information.
+                case VSAccountAccessStatus.granted:
+                        // Construct the request for subscriber account information.
+                        let vsaMetadataRequest: VSAccountMetadataRequest = VSAccountMetadataRequest();
+   
+                        // This is actually the SAML Issuer not the channel ID.
+                        vsaMetadataRequest.channelIdentifier = "https://saml.sp.auth.adobe.com";
+   
+                        // This is going to include subscription account information which should match the provider determined in a previous step.
+                        vsaMetadataRequest.includeAccountProviderIdentifier = true;
+   
+                        // This is going to include subscription account information which should match the provider determined in a previous step.
+                        vsaMetadataRequest.includeAuthenticationExpirationDate = true;
+   
+                        // This is going to make the Video Subscriber Account Framework to refrain from prompting the user with the providers picker at this step. 
+                        vsaMetadataRequest.isInterruptionAllowed = false;
+   
+                        // This are the user metadata fields expected to be available on a successful login and are determined from the Sessions SSO service. Look for the authenticationRequest > attributesNames associated with the provider determined in a previous step.
+                        vsaMetadataRequest.attributeNames = attributesNames;
+   
+                        // This is the authenticationRequest > request field from Sessions SSO service.
+                        vsaMetadataRequest.verificationToken = authenticationRequestPayload;
+   
+                        // Submit the request for subscriber account information.
+                        videoSubscriberAccountManager.enqueue(vsaMetadataRequest) { vsaMetadata, vsaError in
+                            if (vsaMetadata != nil && vsaMetadata!.samlAttributeQueryResponse != nil) {
+                                var samlResponse: String? = vsaMetadata!.samlAttributeQueryResponse!;
+   
+                                // Remove new lines, new tabs and spaces.
+                                samlResponse = samlResponse?.replacingOccurrences(of: "[ \\t]+", with: " ", options: String.CompareOptions.regularExpression);
+                                samlResponse = samlResponse?.components(separatedBy: CharacterSet.newlines).joined(separator: "");
+                                samlResponse = samlResponse?.trimmingCharacters(in: CharacterSet.whitespacesAndNewlines);
+   
+                                // Base64 encode.
+                                samlResponse = samlResponse?.data(using: .utf8)?.base64EncodedString(options: []);
+   
+                                // URL encode. Please be aware not to double URL encode it further.
+                                samlResponse = samlResponse?.addingPercentEncoding(withAllowedCharacters: CharacterSet.init(charactersIn: "!*'();:@&=+$,/?%#[]").inverted);
+   
+                                // Continue with the "Create and retrieve profile using partner authentication response" step.
+                                ...
+                            } else {
+                                // Continue with the "Proceed with basic authentication flow" step.
+                                ...
+                            }
+                        }
+   
+                // The user has not yet made a choice or does not allow the application to access subscription information.
+                default:
+                    // Continue with the "Proceed with basic authentication flow" step.
+                    ...
+                }
+    }
+    ...
+   ```
 
 1. **파트너 인증 응답 반환:** 스트리밍 응용 프로그램에서 응답 데이터의 유효성을 검사하여 기본 조건이 충족되는지 확인합니다.
    * 사용자 권한 액세스 상태가 부여됩니다.
@@ -322,8 +540,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `partner`필수`SAMLResponse` 매개 변수
-   > * _,_, `Authorization`, `AP-Device-Identifier` 및 `Content-Type`과(와) 같은 모든 `X-Device-Info`필수`AP-Partner-Framework-Status` 헤더
+   > * `serviceProvider`, `partner` 및 `SAMLResponse`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 헤더 및 매개 변수
    >
    > <br/>
@@ -381,13 +599,13 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 `VSAccountManager`에 대한 [위임](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
    > <br/>
    >
-   > 스트리밍 응용 프로그램은 `false` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `VSAccountMetadataRequest`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자를 중단할 수 없음을 나타냅니다.
+   > 스트리밍 응용 프로그램은 `VSAccountMetadataRequest` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `false`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자를 중단할 수 없음을 나타냅니다.
 
    >[!TIP]
    >
@@ -408,8 +626,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 사전 권한 부여 결정 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md#request) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -452,13 +670,13 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > <br/>
    >
    > * 스트리밍 애플리케이션은 사용자의 구독 정보에 액세스할 수 있는 [권한](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanager/1949763-checkaccessstatus)을 확인하고 사용자가 이를 허용한 경우에만 진행해야 합니다.
-   > * 스트리밍 응용 프로그램에서 [에 대한 &#x200B;](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)위임`VSAccountManager`을 제공해야 합니다.
+   > * 스트리밍 응용 프로그램에서 `VSAccountManager`에 대한 [위임](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmanagerdelegate)을 제공해야 합니다.
    > * 스트리밍 애플리케이션은 구독자 계정 정보에 대한 [요청](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest)을 제출해야 합니다.
    > * 스트리밍 응용 프로그램은 [메타데이터](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadata) 정보를 대기 및 처리해야 합니다.
    >
    > <br/>
    >
-   > 스트리밍 응용 프로그램은 `false` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `VSAccountMetadataRequest`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자를 중단할 수 없음을 나타냅니다.
+   > 스트리밍 응용 프로그램은 `VSAccountMetadataRequest` 개체의 [`isInterruptionAllowed`](https://developer.apple.com/documentation/videosubscriberaccount/vsaccountmetadatarequest/1771708-isinterruptionallowed) 속성에 대해 `false`과(와) 같은 부울 값을 지정해야 이 단계에서 사용자를 중단할 수 없음을 나타냅니다.
 
    >[!TIP]
    >
@@ -479,8 +697,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md#request) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -520,8 +738,8 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    >
    > 자세한 내용은 [특정 mvpd에 대한 로그아웃 시작](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md#request) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`redirectUrl` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `redirectUrl`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **다음 작업을 나타냅니다.** Adobe Pass Logout 끝점 응답에는 다음 작업에 대해 스트리밍 응용 프로그램을 안내하는 데 필요한 데이터가 포함되어 있습니다.
