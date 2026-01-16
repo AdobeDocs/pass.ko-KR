@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook(REST API V2)
 description: Apple SSO Cookbook(REST API V2)
 exl-id: 81476312-9ba4-47a0-a4f7-9a557608cfd6
-source-git-commit: 63ffde4a32f003d7232d2c79ed6878ca59748f74
+source-git-commit: 0be4216ba816ddace095e557f9f61a8a42e1a1ff
 workflow-type: tm+mt
-source-wordcount: '3857'
+source-wordcount: '3908'
 ht-degree: 0%
 
 ---
@@ -196,10 +196,22 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
 1. **프로필 검색:** 스트리밍 애플리케이션은 프로필 끝점에 요청을 보내 모든 프로필 정보를 검색하는 데 필요한 모든 데이터를 수집합니다.
 
    >[!IMPORTANT]
+   > 
+   > 이 단계에서 **반드시**&#x200B;하는 REST API v2 끝점은 다음 중 하나입니다.
    >
-   > 자세한 내용은 [프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md#Request) API 설명서를 참조하십시오.
+   > * [프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md#Request) API
+   > 
+   > 또는
+   > 
+   > * [특정 mvpd에 대한 프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md#Request) API
    >
-   > * `serviceProvider`과(와) 같은 모든 _필수_ 매개 변수
+   > 이 단계에서 **파트너 인증 응답을 사용하여 프로필 만들기 및 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API를 사용하지 마십시오**.[
+
+   >[!IMPORTANT]
+   >
+   > 자세한 내용은 [프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md#Request) API 또는 [특정 mvpd에 대한 프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md#Request) API 설명서를 참조하십시오.
+   >
+   > * `serviceProvider`(또는 `mvpd`)과 같은 모든 _required_ 매개 변수
    > * `Authorization`, `AP-Device-Identifier` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
