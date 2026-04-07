@@ -4,9 +4,9 @@ audience: end-user
 feature: Authentication
 user-guide-title: Adobe Pass 인증
 user-guide-description: Adobe Pass 인증은 TV Everywhere용 권한 부여 솔루션으로 리소스에 대한 액세스를 요청하는 사용자에게 자격이 있는지 여부를 결정하기 위한 모듈식 프레임워크를 제공합니다.
-source-git-commit: 6ff46a124f5f3c78173028ae3efed68d71ee6e41
+source-git-commit: a406afacfe95321f46a740ab9c84fdaf576c971a
 workflow-type: tm+mt
-source-wordcount: '1294'
+source-wordcount: '1330'
 ht-degree: 3%
 
 ---
@@ -17,6 +17,8 @@ ht-degree: 3%
 - [Adobe Pass 인증](home.md)
 - [제품 공지](product-announcements.md)
 - 제품 릴리스 {#product-releases}
+   - 2026 {#2026}
+      - [Adobe Pass Authentication 3.6.0 릴리스 노트](notes-releases/auth-rn-360.md)
    - 2025 {#2025}
       - [Adobe Pass Authentication Android 3.8.0 릴리스 노트](notes-releases/authn-rn-android-380.md)
       - [Adobe Pass Authentication 3.5.0 릴리스 노트](notes-releases/auth-rn-350.md)
