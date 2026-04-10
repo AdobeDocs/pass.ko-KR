@@ -4,17 +4,17 @@ feature: Concurrency Monitoring
 audience: end-user
 user-guide-title: Adobe Pass 동시 모니터링
 user-guide-description: 여러 애플리케이션에서의 동시 사용에 대한 제한을 정의하고 적용하는 방법에 대해 알아봅니다.
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '276'
-ht-degree: 5%
+source-wordcount: '252'
+ht-degree: 6%
 
 ---
 
 
 # Adobe Pass 동시성 모니터링 도움말 {#cm}
 
-- [CM 소개](cm-home.md) {#cm-intro}
+- [CM 소개](cm-home.md)
 - 시작 {#getting-started}
    - [동시성 모니터링 시작](getting-started/getting-started-overview.md)
    - [주요 개념](getting-started/key-concepts.md)
@@ -34,7 +34,7 @@ ht-degree: 5%
    - [구현 모델](technical/implementation-models.md)
    - [단일 테넌트 정책 여러 앱](technical/single-tenant-policy-mult-app.md)
    - [여러 앱의 동시 사용 제한](technical/restrict-concurr-usage-mult-apps.md)
-- [CM 사용 보고서](reports/cm-usage-reports.md) {#cm-usage-reports}
+- [CM 사용 보고서](reports/cm-usage-reports.md)
 - 기술 노트 {#tech-notes}
    - [표준 메타데이터 속성](technical/standard-metadata-attributes.md)
    - [사용자 지정 메타데이터](technical/custom-metadata.md)
@@ -72,4 +72,4 @@ ht-degree: 5%
    - [동시 모니터링 - 2.5.0 릴리스 노트](releases/rn-cm-250.md)
    - [동시 모니터링 - 2.3.2 릴리스 노트](releases/rn-cm-232.md)
    - [동시 모니터링 - 2.2.2 릴리스 노트](releases/rn-cm-222.md)
-- [지원 프로시저](support/cm-escalation-procedures.md) {#support-procedures}
+- [지원 절차](support/cm-escalation-procedures.md)

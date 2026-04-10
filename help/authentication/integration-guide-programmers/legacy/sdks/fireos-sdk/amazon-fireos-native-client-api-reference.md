@@ -2,9 +2,9 @@
 title: Amazon FireOS 기본 클라이언트 API 참조
 description: Amazon FireOS 기본 클라이언트 API 참조
 exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '3451'
+source-wordcount: '3498'
 ht-degree: 0%
 
 ---
@@ -68,8 +68,7 @@ ht-degree: 0%
 
 | API 호출: 생성자 |
 | --- |
-| ```public static AccessEnabler getInstance(Context appContext, String softwareStatement, String redirectUrl)<br>        throws AccessEnablerException```<br><br> |
-| ```public static AccessEnabler getInstance(Context appContext, String env_url, String softwareStatement, String redirectUrl) throws AccessEnablerException``` |
+| ```public static AccessEnabler getInstance(Context appContext, String softwareStatement, String redirectUrl)<br>        throws AccessEnablerException```<br><br>  <code> 공용 정적 AccessEnabler getInstance(Context appContext, String env_url, String softwareStatement, String redirectUrl)에서 AccessEnablerException 발생 </code> |
 
 **가용성:** v3.0+
 
@@ -159,7 +158,7 @@ ht-degree: 0%
 
 ### setOptions {#fire_setOption}
 
-**설명:**&#x200B;에서 전역 SDK 옵션을 구성합니다. **Map\&lt;String, String\>**&#x200B;을(를) 인수로 허용합니다. 맵의 값은 SDK에서 수행하는 모든 네트워크 호출과 함께 서버로 전달됩니다.
+**설명:**&#x200B;에서 전역 SDK 옵션을 구성합니다. **Map\&lt;String, String\>**&#x200B;을 인수로 허용합니다. 맵의 값은 SDK에서 수행하는 모든 네트워크 호출과 함께 서버로 전달됩니다.
 
 값은 현재 흐름(인증/권한 부여)과 관계없이 서버에 전달됩니다. 값을 변경하려면 언제든지 이 메서드를 호출할 수 있습니다.
 
@@ -260,7 +259,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | ```public void setSelectedProvider(String mvpdId)``` |
 
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:** 없음
 
@@ -341,7 +340,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 
 **가용성:** v1.0+
 
-**&lt;매개 변수:** `resources` 매개 변수는 권한 부여를 확인해야 하는 리소스 배열입니다. 목록의 각 요소는 리소스 ID를 나타내는 문자열이어야 합니다. 리소스 ID는 `getAuthorization()` 호출에서 리소스 ID와 동일한 제한을 받습니다. 즉, 프로그래머와 MVPD 또는 미디어 RSS 조각 간에 설정된 합의된 값이어야 합니다.
+**&lt;매개 변수:** `resources` 매개 변수는 인증을 확인해야 하는 리소스 배열입니다. 목록의 각 요소는 리소스 ID를 나타내는 문자열이어야 합니다. 리소스 ID는 `getAuthorization()` 호출에서 리소스 ID와 동일한 제한을 받습니다. 즉, 프로그래머와 MVPD 또는 미디어 RSS 조각 간에 설정된 합의된 값이어야 합니다.
 
 **트리거된 콜백:** `preauthorizedResources()`
 
@@ -355,7 +354,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | --- |
 | ```public void checkPreauthorizedResources(ArrayList<String> resources)``` |
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:** `resources` 매개 변수는 사용자가 이미 볼 수 있는 리소스 배열입니다.
 
@@ -427,7 +426,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | --- |
 | ```public void setToken(String token, String resourceId)``` |
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:**
 
@@ -561,7 +560,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 - *result*: 요청된 메타데이터가 포함된 복합 개체입니다. 개체에는 다음 필드가 있습니다.
    - *simpleResult*: 인증 TTL, 권한 부여 TTL 또는 장치 ID에 대해 요청을 했을 때 메타데이터 값을 나타내는 문자열입니다. 사용자 메타데이터에 대한 요청인 경우 이 값은 null입니다.
 
-   - *userMetadataResult*: JSON 사용자 메타데이터 페이로드의 Java 표현이 포함된 개체입니다. For example:
+   - *userMetadataResult*: JSON 사용자 메타데이터 페이로드의 Java 표현이 포함된 개체입니다. 예:
 
      ```json
      {

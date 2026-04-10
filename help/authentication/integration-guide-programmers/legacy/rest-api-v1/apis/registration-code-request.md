@@ -2,9 +2,9 @@
 title: 등록 페이지
 description: 등록 페이지
 exl-id: 581b8e2e-7420-4511-88b9-f2cd43a41e10
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '509'
+source-wordcount: '528'
 ht-degree: 0%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 0%
 
 | 엔드포인트 | 호출자: <br>명 | 입력   <br>매개 변수 | HTTP <br>메서드 | 응답 | HTTP <br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;REGGIE_FQDN>/reggie/v1/{requestor}/regcode<br>예:<br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | 스트리밍 앱<br>또는<br>프로그래머 서비스 | &#x200B;1. 요청자 <br>    (경로 구성 요소)<br>2.  deviceId(해시됨)   <br>    (필수)<br>3.  device_info/X-Device-Info(필수)<br>4.  mvpd(선택 사항)<br>5.  ttl(선택 사항)<br> | POST | 실패한 경우 등록 코드 및 정보 또는 오류 세부 정보가 포함된 XML 또는 JSON. 아래 샘플을 참조하십시오. | 201 |
+| &lt;REGGIE_FQDN>/reggie/v1/{requestor}/regcode<br>예:<br>REGGIE_FQDN/reggie/v1/sampleRequestorId/regcode | 스트리밍 앱<br>또는<br>프로그래머 서비스 | &#x200B;1.  요청자 <br>    (경로 구성 요소)<br>2.  deviceId(해시됨)   <br>    (필수)<br>3.  device_info/X-Device-Info(필수)<br>4.  mvpd(선택 사항)<br>5.  ttl(선택 사항)<br> | POST | 실패한 경우 등록 코드 및 정보 또는 오류 세부 정보가 포함된 XML 또는 JSON. 아래 샘플을 참조하십시오. | 201 |
 
 {style="table-layout:auto"}
 
@@ -53,9 +53,9 @@ ht-degree: 0%
 | Accept | 헤더 <br> 값: application/json | 클라이언트가 이해할 수 있는 콘텐츠 유형 표시 |
 | 요청자 | 쿼리 매개 변수 | 이 작업이 유효한 Programmer requestorId입니다. |
 | deviceId | 쿼리 매개 변수 | 장치 ID 바이트입니다. |
-| device_info/<br>X-Device-Info | device_info: 본문 <br> X-Device-Info: 헤더 | 스트리밍 장치 정보입니다.<br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. <br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
+| device_info/<br>X-Device-Info | device_info: 본문 <br> X-Device-Info: 헤더 | 스트리밍 장치 정보입니다.<br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info에 전달될 수 있지만 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달되어야 합니다. <br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
 | mvpd | 쿼리 매개 변수 | 이 작업이 유효한 MVPD ID입니다. |
-| ttl | 쿼리 매개 변수 | 이 regcode가 유지되어야 하는 시간(초)입니다.<br>**참고**: ttl에 허용되는 최대값은 36000초(10시간)입니다. 값이 높을수록 400 HTTP 응답(잘못된 요청)이 발생합니다. `ttl`을(를) 비워 두면 Adobe Pass 인증은 기본값으로 30분을 설정합니다. |
+| ttl | 쿼리 매개 변수 | 이 regcode가 유지되는 시간(초)입니다.<br>**참고**: ttl에 허용되는 최대값은 36000초(10시간)입니다. 값이 높을수록 400 HTTP 응답(잘못된 요청)이 발생합니다. `ttl`을(를) 비워 두면 Adobe Pass 인증은 기본값으로 30분을 설정합니다. |
 | _deviceType_ | 쿼리 매개 변수 | 사용 중단됨. 사용해서는 안 됩니다. |
 | _deviceUser_ | 쿼리 매개 변수 | 사용 중단됨. 사용해서는 안 됩니다. |
 | _appId_ | 쿼리 매개 변수 | 사용 중단됨. 사용해서는 안 됩니다. |
@@ -65,8 +65,7 @@ ht-degree: 0%
 >[!CAUTION]
 >
 >**스트리밍 장치 IP 주소**
-><br>
->클라이언트-서버 구현의 경우 스트리밍 장치 IP 주소는 이 호출과 함께 암시적으로 전송됩니다.  **regcode** 호출이 스트리밍 장치가 아닌 프로그래머 서비스인 서버 간 구현의 경우 스트리밍 장치 IP 주소를 전달하려면 다음 헤더가 필요합니다.
+><br>>클라이언트-서버 구현의 경우 스트리밍 장치 IP 주소는 이 호출과 함께 암시적으로 전송됩니다.  **regcode** 호출이 스트리밍 장치가 아닌 프로그래머 서비스인 서버 간 구현의 경우 스트리밍 장치 IP 주소를 전달하려면 다음 헤더가 필요합니다.
 >
 >
 >```
@@ -74,14 +73,13 @@ ht-degree: 0%
 >```
 >
 >여기서 `<streaming\_device\_ip>`은(는) 스트리밍 장치 공용 IP 주소입니다.
-><br><br>
->예: <br>
+><br><br>>예: <br>
 >
 >```
 >POST /reggie/v1/{req_id}/regcode HTTP/1.1<br>X-Forwarded-For:203.45.101.20
 >```
 >
-><br>
+<br>
 
 ### 응답 JSON
 

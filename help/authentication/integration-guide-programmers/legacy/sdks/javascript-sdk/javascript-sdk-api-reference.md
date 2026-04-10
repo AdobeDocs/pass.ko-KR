@@ -2,9 +2,9 @@
 title: JavaScript SDK API 참조
 description: JavaScript SDK API 참조
 exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '2883'
+source-wordcount: '2902'
 ht-degree: 0%
 
 ---
@@ -189,7 +189,7 @@ ht-degree: 0%
 - `inResourceID` - 사용자가 권한 부여를 요청하는 리소스의 ID입니다.
 
 
-**트리거된 콜백:**
+**콜백이 트리거됨:**
 [setToken()](#settokeninrequestedresourceid-intoken-settokeninrequestedresourceidintoken), [tokenRequestFailed()](#tokenrequestfailedinrequestedresourceid-inrequesterrorcode-inrequestdetailederrormessage-tokenrequestfailedinrequestedresourceidinrequesterrorcodeinrequestdetailederrormessage), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata), [setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode)
 
 </br>
@@ -274,7 +274,7 @@ ht-degree: 0%
   **참고**: 프로그래머가 사용할 수 있는 실제 사용자 메타데이터는 MVPD에서 사용할 수 있는 내용에 따라 다릅니다.  사용 가능한 사용자 메타데이터의 현재 목록을 보려면 [사용자 메타데이터](#UserMetadata)을(를) 참조하십시오.
 
 
-For example:
+예:
 
 ```JSON
     // Assume that a reference to the AccessEnabler has been previously 
@@ -309,7 +309,7 @@ For example:
 **설명:** 사용자가 공급자 선택 UI에서 공급자 선택을 Access Enabler에 보내기 위해 MVPD을 선택한 경우 이 함수를 호출하거나 사용자가 공급자를 선택하지 않고 공급자 선택 UI를 해제한 경우 null 매개 변수를 사용하여 이 함수를 호출합니다.
 
 **콜백
-트리거됨:**[&#x200B; setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
+트리거됨:**[ setAuthenticationStatus()](#setauthenticationstatusisauthenticated-errorcode), [sendTrackingData()](#sendtrackingdatatrackingeventtype-trackingdata-sendtrackingdatatrackingeventtypetrackingdata)
 
 </br>
 
@@ -415,7 +415,7 @@ For example:
 
 **설명:** 사용자가 인증 로그인 페이지 UI를 표시할 iFrame이 필요한 MVPD을 선택한 경우 이 콜백을 구현합니다.
 
-**트리거 주체:**&#x200B;[&#x200B; setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
+**트리거 주체:**[ setSelectedProvider()](#setselectedproviderproviderid-setselectedprovider)
 
 </br> [맨 위로 돌아가기](#top)
 
@@ -531,7 +531,7 @@ For example:
 
 - *inRequestedResourceID* - 권한 부여 요청에 사용된 리소스 ID를 제공하는 문자열입니다.
 - *inRequestErrorCode* - 실패 이유를 나타내는 Adobe Pass 인증 오류 코드를 표시하는 문자열. 가능한 값은 &quot;사용자가 인증되지 않음 오류&quot; 및 &quot;사용자가 인증되지 않음 오류&quot;입니다. 자세한 내용은 아래의 &quot;콜백 오류 코드&quot;를 참조하십시오.
-- *inRequestDetailedErrorMessage* - 표시에 적합한 추가 설명 문자열입니다. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증에서 빈 문자열 **(&quot;)**&#x200B;을(를) 보냅니다.  MVPD에서 이를 사용하여 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달할 수 있습니다. 예를 들어 구독자가 리소스에 대한 권한 부여를 거부하면 MVPD에서 다음과 같은 `*inRequestDetailedErrorMessage*`(으)로 회신할 수 있습니다. **&quot;현재 패키지의 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 \*여기\*를 클릭하십시오.&quot;** 이 콜백을 통해 Adobe Pass 인증에서 프로그래머 사이트로 메시지를 전달합니다. 그러면 프로그래머는 이를 표시하거나 무시할 수 있는 옵션이 있습니다. Adobe Pass 인증은 `*inRequestDetailedErrorMessage*`을(를) 사용하여 프로그래머에게 오류가 발생했을 수 있는 조건을 알릴 수도 있습니다. 예를들어, **&quot;공급자의 인증 서비스와 통신하는 동안 네트워크 오류가 발생했습니다.&quot;**
+- *inRequestDetailedErrorMessage* - 표시에 적합한 추가 설명 문자열입니다. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증에서 빈 문자열 **(&quot;)**&#x200B;을(를) 보냅니다.  MVPD에서 이를 사용하여 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달할 수 있습니다. 예를 들어 구독자가 리소스에 대한 권한 부여를 거부하면 MVPD에서 다음과 같은 `*inRequestDetailedErrorMessage*`(으)로 회신할 수 있습니다. **&quot;현재 패키지의 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 \*여기\*를 클릭하십시오.&quot;** 이 콜백을 통해 Adobe Pass Authentication에서 프로그래머 사이트로 메시지를 전달합니다. 그러면 프로그래머는 이를 표시하거나 무시할 수 있는 옵션이 있습니다. Adobe Pass 인증은 `*inRequestDetailedErrorMessage*`을(를) 사용하여 프로그래머에게 오류가 발생했을 수 있는 조건을 알릴 수도 있습니다. 예를들어, **&quot;공급자의 인증 서비스와 통신하는 동안 네트워크 오류가 발생했습니다.&quot;**
 
 
 
@@ -568,7 +568,7 @@ For example:
 
 - *key(문자열)*: 요청이 수행된 메타데이터의 키입니다.
 - *암호화된(부울)*: &quot;값&quot;의 암호화 여부를 나타내는 플래그입니다. &quot;true&quot;이면 &quot;value&quot;는 실제로 실제 값의 JSON 웹 암호화 표현입니다.
-- *데이터(JSON 개체)*: 메타데이터가 표시된 JSON 개체입니다. 단순 요청(&#39;`TTL_AUTHN`&#39;, &#39;`TTL_AUTHZ`&#39;, &#39;`DEVICEID`&#39;)의 경우 결과는 문자열(인증 TTL, 권한 부여 TTL 또는 장치 ID를 나타냄)입니다. 사용자 메타데이터 요청의 경우 결과는 메타데이터 페이로드를 나타내는 프리미티브 또는 JSON 개체일 수 있습니다. JSON 사용자 메타데이터 개체의 실제 구조는 다음과 유사합니다.
+- *데이터(JSON 개체)*: 메타데이터가 표시된 JSON 개체입니다.단순 요청(&#39;`TTL_AUTHN`&#39;, &#39;`TTL_AUTHZ`&#39;, &#39;`DEVICEID`&#39;)의 경우 결과는 문자열(인증 TTL, 권한 부여 TTL 또는 장치 ID를 나타냄)입니다. 사용자 메타데이터 요청의 경우 결과는 메타데이터 페이로드를 나타내는 프리미티브 또는 JSON 개체일 수 있습니다. JSON 사용자 메타데이터 개체의 실제 구조는 다음과 유사합니다.
 
 ```JSON
     {
@@ -588,7 +588,7 @@ For example:
 ```
 
 
-For example:
+예:
 
 ```JSON
     // Implement the setMetadataStatus() callback
@@ -603,7 +603,7 @@ For example:
 ```
 
 
-**트리거 대상:** [`getMetadata()`](#getmetadatakey-getmetadata)
+**트리거 기준:** [`getMetadata()`](#getmetadatakey-getmetadata)
 </br>
 [맨 위로 돌아가기](#top)
 
@@ -627,20 +627,20 @@ For example:
 ### 콜백 오류 코드 {#callback-error-codes}
 
 | 일반 오류 | |
-|:--- | :--- | 
+|:--- | :--- |
 | 내부 오류 | 요청을 처리하는 동안 시스템 오류가 발생했습니다. |
 | 공급자가 선택되지 않음 오류 | 고객이 공급자 선택 대화 상자에서 취소할 때 발생합니다. |
 | 공급자를 사용할 수 없음 오류 | 사용할 수 있는 공급자가 없을 때 발생합니다. |
 
 | 인증 오류 | |
-|:--- | :--- | 
+|:--- | :--- |
 | 일반 인증 오류 | 이유를 알 수 없거나 게시할 수 없을 때 반환됩니다. |
 | 내부 인증 오류 | 인증을 시도하는 동안 시스템 오류가 발생했습니다. |
 | 사용자가 인증되지 않음 오류 | 사용자가 인증되지 않았습니다. |
 | 다중 인증 요청 오류 | 추가 인증 요청은 첫 번째 요청이 완료되기 전에 수신되었습니다. |
 
 | 인증 오류 | |
-|:--- | :--- | 
+|:--- | :--- |
 | 일반 인증 오류 | 이유를 알 수 없거나 게시할 수 없을 때 반환됩니다. |
 | 내부 인증 오류 | 권한을 부여하는 동안 시스템 오류가 발생했습니다. |
 | 사용자가 승인되지 않음 오류 | 고객은 요청된 콘텐츠를 볼 수 있는 권한이 없습니다. |

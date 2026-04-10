@@ -2,9 +2,9 @@
 title: 향상된 오류 코드
 description: 향상된 오류 코드
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: 7ac04991289c95ebb803d1fd804e9b497f821cda
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '2696'
+source-wordcount: '2747'
 ht-degree: 3%
 
 ---
@@ -41,13 +41,13 @@ ht-degree: 3%
 
 ## 표시 {#enhanced-error-codes-representation}
 
-향상된 오류 코드는 통합 Adobe Pass 인증 API 및 사용된 &quot;Accept&quot; 헤더 값(예: `JSON` 또는 `XML`)에 따라 `application/json` 또는 `application/xml` 형식으로 나타낼 수 있습니다.
+향상된 오류 코드는 통합 Adobe Pass 인증 API 및 사용된 &quot;Accept&quot; 헤더 값(예: `application/json` 또는 `application/xml`)에 따라 `JSON` 또는 `XML` 형식으로 나타낼 수 있습니다.
 
 | Adobe Pass 인증 API | JSON | XML |
 |-------------------------------|---------|---------|
-| REST API v2 | &check; |         |
-| REST API v1 | &check; | &check; |
-| SDK 사전 인증 API | &check; |         |
+| REST API v2 | &amp;check; |         |
+| REST API v1 | &amp;check; | &amp;check; |
+| SDK 사전 인증 API | &amp;check; |         |
 
 >[!IMPORTANT]
 >
@@ -101,7 +101,7 @@ Content-Type: application/json
         "code": "authorization_denied_by_mvpd",
         "message": "The MVPD has returned a \"Deny\" decision when requesting authorization for the specified resource",
         "details": "Your subscription package does not include the \"Live\" channel",
-        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
         "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
       }
     }
@@ -120,7 +120,7 @@ Content-Type: application/json
   "status": 400,
   "code": "invalid_parameter_service_provider",
   "message": "The service provider parameter value is missing or invalid.",
-  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
   "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
 }
 ```
@@ -154,7 +154,7 @@ Content-Type: application/json
         "code": "authorization_denied_by_mvpd",
         "message": "The MVPD has returned a \"Deny\" decision when requesting authorization for the specified resource",
         "details": "Your subscription package does not include the \"Live\" channel",
-        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+        "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
         "trace": "12f6fef9-d2e0-422b-a9d7-60d799abe353"
       }
     }
@@ -173,7 +173,7 @@ Content-Type: application/json
   "status": 400,
   "code": "invalid_requestor",
   "message": "The requestor parameter is missing or invalid.",
-  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
+  "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
   "trace": "8bcb17f9-b172-47d2-86d9-3eb146eba85e"
 }
 ```
@@ -189,7 +189,7 @@ Content-Type: application/xml
   <status>400</status>
   <code>invalid_requestor</code>
   <message>The requestor parameter is missing or invalid.</message>
-  <helpUrl>https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko</helpUrl>
+  <helpUrl>https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html</helpUrl>
   <trace>8bcb17f9-b172-47d2-86d9-3eb146eba85e</trace>
 </error>
 ```
@@ -202,12 +202,12 @@ Content-Type: application/xml
 
 | 이름 | 유형 | 예 | 제한됨 | 설명 |
 |-----------|-----------|---------------------------------------------------------------------------------------------------------------------|:----------:|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *작업* | *문자열* | *없음* | &check; | 이 문서에 정의된 대로 상황을 수정할 수 있는 Adobe Pass 인증 권장 작업입니다. <br/><br/> 자세한 내용은 [작업](#enhanced-error-codes-action) 섹션을 참조하세요. |
-| *상태* | *정수* | *403* | &check; | [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6) 문서에 정의된 HTTP 응답 상태 코드입니다. <br/><br/> 자세한 내용은 [상태](#enhanced-error-codes-status) 섹션을 참조하세요. |
-| *코드* | *문자열* | *authorization_denied_by_mvpd* | &check; | 이 문서에 정의된 대로 오류와 연결된 Adobe Pass 인증 고유 식별자 코드. <br/><br/> 자세한 내용은 [코드](#enhanced-error-codes-code) 섹션을 참조하세요. |
+| *작업* | *문자열* | *없음* | &amp;check; | 이 문서에 정의된 대로 상황을 수정할 수 있는 Adobe Pass 인증 권장 작업입니다. <br/><br/> 자세한 내용은 [작업](#enhanced-error-codes-action) 섹션을 참조하세요. |
+| *상태* | *정수* | *403* | &amp;check; | [RFC 7231](https://tools.ietf.org/html/rfc7231#section-6) 문서에 정의된 HTTP 응답 상태 코드입니다. <br/><br/> 자세한 내용은 [상태](#enhanced-error-codes-status) 섹션을 참조하세요. |
+| *코드* | *문자열* | *authorization_denied_by_mvpd* | &amp;check; | 이 문서에 정의된 대로 오류와 연결된 Adobe Pass 인증 고유 식별자 코드. <br/><br/> 자세한 내용은 [코드](#enhanced-error-codes-code) 섹션을 참조하세요. |
 | *메시지* | *문자열* | *지정된 리소스에 대한 권한 부여를 요청할 때 MVPD에서 &quot;거부&quot; 결정을 반환했습니다.* |            | 사람이 인식할 수 있는 메시지로서, 경우에 따라 최종 사용자에게 표시될 수 있습니다. <br/><br/> 자세한 내용은 [응답 처리](#enhanced-error-codes-response-handling) 섹션을 참조하십시오. |
 | *세부 정보* | *문자열* | *구독 패키지에 &quot;Live&quot; 채널이 포함되어 있지 않습니다* |            | 서비스 파트너가 제공할 수 있는 자세한 메시지(경우에 따라 <br/><br/>) 서비스 파트너가 사용자 지정 메시지를 제공하지 않는 경우 이 필드가 없을 수 있습니다. |
-| *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko* |            | 이 오류가 발생한 이유 및 가능한 해결 방법에 대한 자세한 정보로 연결되는 Adobe Pass 인증 공개 설명서 URL. <br/><br/> 이 필드에는 절대 URL이 있으며 다른 URL을 제공할 수 있는 오류 컨텍스트에 따라 오류 코드에서 유추해서는 안 됩니다. |
+| *helpUrl* | *url* | *https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html* |            | 이 오류가 발생한 이유 및 가능한 해결 방법에 대한 자세한 정보로 연결되는 Adobe Pass 인증 공개 설명서 URL. <br/><br/> 이 필드는 절대 URL을 보유하며, 다른 URL이 제공될 수 있는 오류 컨텍스트에 따라 오류 코드에서 유추되어서는 안 됩니다. |
 | *추적* | *문자열* | *12f6fef9-d2e0-422b-a9d7-60d799abe353* |            | 특정 문제를 해결하기 위해 Adobe Pass 인증 지원에 문의할 때 사용할 수 있는 응답의 고유 식별자입니다. |
 
 >[!IMPORTANT]
@@ -224,7 +224,7 @@ Content-Type: application/xml
 
 &quot;작업&quot; 필드에 사용할 수 있는 값은 다음과 같습니다.
 
-| 액션 | 설명 | 범주 |
+| 액션 | 설명 | 카테고리 |
 |--------------------------|---------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------|
 | 없음 | 이 문제를 해결하기 위한 사전 정의된 작업이 없지만, 경우에 따라 API의 부적절한 호출을 나타낼 수 있습니다. | 요청 컨텍스트를 수정합니다. |
 | 구성 | 클라이언트 애플리케이션은 대부분의 경우 Adobe Pass TVE Dashboard를 통해 수행되는 구성 변경이 필요합니다. | 통합 구성 컨텍스트를 수정합니다. |
@@ -344,11 +344,11 @@ _(*) 일부 오류의 경우 여러 작업이 가능한 해결 방법일 수 있
 |                    | *authorization_denied_by_session_invalidated* | 403 | ID 공급자에 의해 인증 세션이 무효화되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
 |                    | *identity_not_recognized_by_mvpd* | 403 | MVPD에서 사용자 ID를 인식하지 못하여 인증 요청에 실패했습니다. |
 |                    | *authentication_session_invalidated* | 403 | ID 공급자에 의해 인증 세션이 무효화되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
-|                    | *authentication_session_missing* | 403,412 | 이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
-|                    | *authentication_session_expired* | 403,412 | 현재 인증 세션이 만료되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                    | *authentication_session_missing* | 403, 412 | 이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
+|                    | *authentication_session_expired* | 403, 412 | 현재 인증 세션이 만료되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
 |                    | *preauthorization_authentication_session_missing* | 412 | 이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
 |                    | *preauthorization_authentication_session_expired* | 412 | 현재 인증 세션이 만료되었습니다. 계속하려면 지원되는 MVPD으로 다시 인증해야 합니다. |
-| **인증** | *authorization_not_found* | 403,404 | 지정한 리소스에 대한 권한 부여를 찾을 수 없습니다. 계속하려면 사용자가 새 인증을 받아야 합니다. |
+| **인증** | *authorization_not_found* | 403, 404 | 지정한 리소스에 대한 권한 부여를 찾을 수 없습니다. 계속하려면 사용자가 새 인증을 받아야 합니다. |
 |                    | *authorization_expired* | 410 | 지정한 리소스에 대한 이전 권한 부여가 만료되었습니다. 계속하려면 사용자가 새 인증을 받아야 합니다. |
 | **다시 시도** | *network_received_error* | 403 | 연결된 파트너 서비스에서 응답을 검색하는 도중 읽기 오류가 발생했습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |
 |                    | *network_connection_timeout* | 403 | 연결된 파트너 서비스와의 연결 시간 제한이 초과되었습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다. |

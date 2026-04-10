@@ -2,10 +2,10 @@
 title: 오류 보고
 description: 오류 보고
 exl-id: a52bd2cf-c712-40a2-a25e-7d9560b46ba6
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '3011'
-ht-degree: 0%
+source-wordcount: '3034'
+ht-degree: 1%
 
 ---
 
@@ -23,7 +23,7 @@ ht-degree: 0%
 
 Adobe Pass 인증의 오류 보고는 현재 두 가지 방법으로 구현됩니다.
 
-* **고급 오류 보고** 구현자는 고급 오류 보고를 받기 위해 [AccessEnabler JavaScript SDK](#accessenabler-javascript-sdk)의 경우 오류 콜백을 등록하거나 `status`AccessEnabler iOS/tvOS SDK[&#x200B; 및 &#x200B;](#accessenabler-ios-tvos-sdk)AccessEnabler Android SDK[의 경우 인터페이스 메서드 &quot;](#accessenabler-android-sdk)&quot;을(를) 구현합니다. 오류는 **정보**, **경고** 및 **오류** 유형으로 분류됩니다. 이 보고 시스템은 **비동기**&#x200B;입니다. **여러 오류가 트리거되는 순서를 보장할 수 없습니다**.  고급 오류 보고 시스템에 대한 자세한 내용은 [고급 오류 보고](#advanced-error-reporting) 섹션을 참조하십시오.
+* **고급 오류 보고** 구현자는 고급 오류 보고를 받기 위해 [AccessEnabler JavaScript SDK](#accessenabler-javascript-sdk)의 경우 오류 콜백을 등록하거나 [AccessEnabler iOS/tvOS SDK](#accessenabler-ios-tvos-sdk) 및 [AccessEnabler Android SDK](#accessenabler-android-sdk)의 경우 인터페이스 메서드 &quot;`status`&quot;을(를) 구현합니다. 오류는 **정보**, **경고** 및 **오류** 유형으로 분류됩니다. 이 보고 시스템은 **비동기**&#x200B;입니다. **여러 오류가 트리거되는 순서를 보장할 수 없습니다**.  고급 오류 보고 시스템에 대한 자세한 내용은 [고급 오류 보고](#advanced-error-reporting) 섹션을 참조하십시오.
 
 * **원래 오류 보고 -** 특정 요청이 실패할 때 오류 메시지가 특정 콜백 함수에 전달되는 정적 보고 시스템입니다. 오류는 일반, 인증 및 권한 부여 유형으로 그룹화됩니다. 원래 시스템에서 보고된 오류 목록을 보려면 [원래 오류 보고](#original-error-reporting) 섹션을 참조하십시오.
 
@@ -160,7 +160,7 @@ accessEnabler.bind('errorEvent', 'errorLogger');
 
 #### 구현 {#access-enablr-androidsdk-imp}
 
-구현자는 `status` 인터페이스에서 새 `IAccessEnablerDelegate` 메서드를 처리해야 합니다. **`status`** 함수는 다음 모델이 있는 단일 **`AdvancedStatus`** 개체를 수신합니다.
+구현자는 `IAccessEnablerDelegate` 인터페이스에서 새 `status` 메서드를 처리해야 합니다. **`status`** 함수는 다음 모델이 있는 단일 **`AdvancedStatus`** 개체를 수신합니다.
 
 ```C++
     class AdvancedStatus {
@@ -199,7 +199,7 @@ accessEnabler.bind('errorEvent', 'errorLogger');
 
 #### 구현 {#access-enab-fireos-sdk-}
 
-구현자는 `status` 인터페이스에서 새 `IAccessEnablerDelegate`메서드를 처리해야 합니다. **`status`** 함수는 다음 모델이 있는 단일 **`AdvancedStatus`** 개체를 수신합니다.
+구현자는 `IAccessEnablerDelegate` 인터페이스에서 새 `status`메서드를 처리해야 합니다. **`status`** 함수는 다음 모델이 있는 단일 **`AdvancedStatus`** 개체를 수신합니다.
 
 ```C++
     class AdvancedStatus {
@@ -238,7 +238,7 @@ accessEnabler.bind('errorEvent', 'errorLogger');
 | ID | 레벨 | 설명 | 개발자 작업 | 사용자 작업 | JavaScript | iOS/tvOS | Android |
 |---|-------------|------------|----------------|---|---|---|---|
 | AAPL&amp; AAPL_ERROR | 오류 | 일반 Apple SSO 오류 | 오류에는 원래 VSA 오류가 있는 세부 정보 필드가 포함되어 있습니다. | 해당 사항 없음 | 해당 사항 없음 | 예 | 해당 사항 없음 |
-| VSA203 | 정보 | 사용자는 플랫폼 SSO를 통해 로그인하여 인증이 진행되는 동안 애플리케이션에서 로그아웃을 결정했습니다. | tvOS의 설정 -> 계정 -> TV 공급자에서 명시적으로 로그아웃하도록 사용자에게 지시하거나 확인합니다. <br><br> iOS/iPadOS에서 [설정] -> [TV 공급자]에서 명시적으로 로그아웃하도록 사용자에게 지시하거나 묻습니다. | tvOS의 설정 -> 계정 -> TV 공급자에서 명시적으로 로그아웃합니다. <br> <br> iOS/iPadOS의 [설정] -> [TV 공급자]에서 명시적으로 로그아웃 | 해당 사항 없음 | 예 | 해당 사항 없음 |
+| VSA203 | 정보 | 사용자는 플랫폼 SSO를 통해 로그인하여 인증이 진행되는 동안 애플리케이션에서 로그아웃을 결정했습니다. | tvOS의 설정 -> 계정 -> TV 공급자에서 명시적으로 로그아웃하도록 사용자에게 지시하거나 표시합니다. <br><br> iOS/iPadOS의 설정 -> TV 공급자에서 명시적으로 로그아웃하도록 사용자에게 지시하거나 확인합니다. | tvOS의 설정 -> 계정 -> TV 공급자에서 명시적으로 로그아웃합니다. <br> <br> iOS/iPadOS의 [설정] -> [TV 공급자]에서 명시적으로 로그아웃 | 해당 사항 없음 | 예 | 해당 사항 없음 |
 | VSA404 | 정보 | 응용 프로그램 비디오 구독자 계정 권한이 확인되지 않았습니다. | SSO(Single Sign-On) 사용자 경험의 이점을 설명하여 구독 정보에 대한 액세스 권한을 거부하는 사용자에게 인센티브를 제공합니다. | 사용자는 애플리케이션 설정(TV 공급자 액세스) 또는 설정 -> iOS/iPadOS의 TV 공급자 또는 설정 -> 계정 -> tvOS의 TV 공급자 섹션으로 이동하여 결정을 변경할 수 있습니다. | 해당 사항 없음 | 예 | 해당 사항 없음 |
 | VSA503 | 정보 | 응용 프로그램 비디오 구독자 계정 메타데이터 요청이 실패했습니다. | MVPD 끝점이 응답하지 않습니다. 응용 프로그램이 일반 인증 흐름으로 전환될 수 있습니다. | 해당 사항 없음 | 해당 사항 없음 | 예 | 해당 사항 없음 |
 | 500 | 오류 | 내부 오류 | AccessEnablerDebug를 사용하고 디버그 로그(console.log 출력)를 검사하여 무엇이 잘못되었는지 확인합니다. | 해당 사항 없음 | 예 | 예 | 해당 사항 없음 |
@@ -258,7 +258,7 @@ accessEnabler.bind('errorEvent', 'errorLogger');
 | N | 경고 | 선택한 MVPD에 대해 authenticate-all degradation 규칙이 적용되는 동안 사용자가 인증되었습니다. | 필요한 경우 MVPD 문제로 인해 &quot;무료&quot; 액세스를 제공받고 있음을 사용자에게 알립니다. | 해당 사항 없음 | 예 | 예 | 예 부터 3.2 |
 | N | 정보 | 사용자가 TempPass를 사용하여 인증되었습니다. | - 사용자에게 알립니다. <br> <br> - 필요한 경우 일반 MVPD 목록을 표시합니다. | 원할 경우 일반 MVPD으로 로그인합니다. | 예 | 예 | 예 부터 3.2 |
 | N | 경고 | 만료된 TempPass | - 사용자에게 알립니다. <br> <br> - 일반 MVPD 목록을 표시합니다. <br> <br> - TempPass 옵션을 숨깁니다. | 일반 MVPD으로 로그인합니다. | 예 | 예 | 예 부터 3.2 |
-| N | 오류 | **세션에서 인증 토큰을 찾을 수 없습니다.** 다음 중 하나 때문일 수 있습니다. <br> <br> 1. 브라우저에 (타사) 쿠키가 비활성화되었습니다. (AccessEnabler JavaScript SDK 버전 4.x에는 적용되지 않음) <br> <br> 2. 브라우저에 사이트 간 추적 방지 기능이 활성화되어 있습니다(Safari 11+). <br> <br> 3. 세션이 <br> 만료되었습니다. <br> 4. 프로그래머가 잘못된 연속 <br>에서 인증 API를 호출했습니다. <br> 참고: 이 오류 코드는 전체 페이지 리디렉션 인증 흐름에 사용할 수 없습니다. | &#x200B;1. (타사) 쿠키 <br>을(를) 사용하도록 설정하라는 메시지 표시 <br> 2. 사이트 간 추적 <br>을(를) 사용하지 않도록 설정하는 사용자 권한 <br> 3. 사용자에게 <br>을(를) 다시 인증하도록 메시지 표시 <br> 4. 올바른 순서로 API 호출 | &#x200B;1. (타사) 쿠키 <br> 사용 <br> 2. 사이트 간 추적 <br> 사용 안 함 <br> 3. <br> 다시 인증 <br> 4. 해당 사항 없음 | 예 | 예 | 예 부터 3.2 |
+| N | 오류 | **세션에서 인증 토큰을 찾을 수 없습니다.**  다음 중 하나 때문일 수 있습니다. <br> <br> 1. 브라우저에 (타사) 쿠키가 비활성화되었습니다. (AccessEnabler JavaScript SDK 버전 4.x에는 적용되지 않음) <br> <br> 2. 브라우저에 사이트 간 추적 방지 기능이 활성화되어 있습니다(Safari 11+). <br> <br> 3. 세션이 <br> 만료되었습니다. <br> 4. 프로그래머가 잘못된 연속 <br>에서 인증 API를 호출했습니다. <br> 참고: 이 오류 코드는 전체 페이지 리디렉션 인증 흐름에 사용할 수 없습니다. | &#x200B;1. (타사) 쿠키 <br>을(를) 사용하도록 설정하라는 메시지 표시 <br> 2. 사이트 간 추적 <br>을(를) 사용하지 않도록 설정하는 사용자 권한 <br> 3. 사용자에게 <br>을(를) 다시 인증하도록 메시지 표시 <br> 4. 올바른 순서로 API 호출 | &#x200B;1. (타사) 쿠키 <br> 사용 <br> 2. 사이트 간 추적 <br> 사용 안 함 <br> 3. <br> 다시 인증 <br> 4. 해당 사항 없음 | 예 | 예 | 예 부터 3.2 |
 | - | 오류 | 내부 오류입니다. <br> <br> 참고: 원래 오류 시스템의 &quot;일반 인증 오류&quot; 및 &quot;내부 인증 오류&quot;입니다. 이 오류는 결국 단계적으로 제거됩니다. | AccessEnablerDebug를 사용하고 디버그 로그(console.log 출력)를 검사하여 무엇이 잘못되었는지 확인합니다. | 해당 사항 없음 | 예 | 예 | 해당 사항 없음 |
 | R401 | 오류 | 액세스 토큰을 가져오는 도중 오류가 발생했습니다. <br> <br> 참고: 복구할 수 없는 오류입니다. 응용 프로그램을 사용할 수 없음을 사용자에게 알립니다. | - iOS: 애플리케이션에서 소프트웨어 명령문과 사용자 정의 체계를 확인합니다. <br> <br> - JavaScript: 웹 사이트 응용 프로그램에서 소프트웨어 문을 확인하십시오. <br> <br> Zendesk를 사용하여 티켓을 열고 시스템을 일시적으로 사용할 수 없음을 사용자에게 알립니다. | 해당 사항 없음 | 예, v4.0부터 | v3.0부터 예 | 예 부터 3.2 |
 | R400 | 오류 | 응용 프로그램이 등록되지 않았습니다. 소프트웨어 문이 잘못되었거나 취소되었습니다. <br> <br> 참고: 복구할 수 없는 오류입니다. 응용 프로그램을 사용할 수 없음을 사용자에게 알립니다. | - iOS: 애플리케이션에서 소프트웨어 명령문과 사용자 정의 체계를 확인합니다. <br> <br> - JavaScript: 웹 사이트 응용 프로그램에서 소프트웨어 문을 확인하십시오. <br> <br> Zendesk를 사용하여 티켓을 열고 시스템을 일시적으로 사용할 수 없음을 사용자에게 알립니다. | 해당 사항 없음 | 예, v4.0부터 | v3.0부터 예 | 예 부터 3.2 |
@@ -283,7 +283,7 @@ accessEnabler.bind('errorEvent', 'errorLogger');
 
 ## 원래 오류 보고 {#original-error-reporting}
 
-이 섹션에서는 원래 오류 코드와 함께 원래 오류 보고 시스템에 대해 설명합니다. 원래 오류 보고 시스템에서 AccessEnabler는 `setAuthenticationStatus()` 호출 후 `checkAuthentication()`, `tokenRequestFailed()` 또는 `checkAuthorization()` 호출 실패 후 `getAuthorization()` 두 콜백 함수에 오류를 전달합니다.
+이 섹션에서는 원래 오류 코드와 함께 원래 오류 보고 시스템에 대해 설명합니다. 원래 오류 보고 시스템에서 AccessEnabler는 `checkAuthentication()` 호출 후 `setAuthenticationStatus()`, `checkAuthorization()` 또는 `getAuthorization()` 호출 실패 후 `tokenRequestFailed()` 두 콜백 함수에 오류를 전달합니다.
 
 원래 오류 보고 및 상태 API는 이전과 동일하게 계속 작동합니다. 그러나 앞으로는 원래 오류 보고 API가 업데이트되지 않습니다. 이전 오류에 대한 새 오류 보고와 업데이트는 모두 새 [고급 오류 보고 시스템](#advanced-error-reporting)에서만 반영됩니다.
 

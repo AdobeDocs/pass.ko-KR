@@ -2,9 +2,9 @@
 title: MVPD 로그인 페이지를 iFrame에서 Popup으로 마이그레이션하는 방법
 description: MVPD 로그인 페이지를 iFrame에서 Popup으로 마이그레이션하는 방법
 exl-id: 389ea0ea-4e18-4c2e-a527-c84bffd808b4
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
 workflow-type: tm+mt
-source-wordcount: '708'
+source-wordcount: '712'
 ht-degree: 0%
 
 ---
@@ -22,10 +22,12 @@ ht-degree: 0%
 ## 팝업과 iFrame 비교 {#popup-vs-iframe}
 
 일부 사용자의 경우 MVPD 로그인 페이지의 iFrame 구현에서 서드파티 쿠키 문제가 발생했습니다.
-<!--These issues are described in the tech notes linked below:
+<!--
+These issues are described in the tech notes linked below:
 
 * [Adobe Pass Authentication and Safari login issues](https://tve.helpdocsonline.com/adobe-pass)
-* [MVPD iFrame login and 3rd party cookies](https://tve.helpdocsonline.com/mvpd)-->
+* [MVPD iFrame login and 3rd party cookies](https://tve.helpdocsonline.com/mvpd)
+-->
 
 Adobe Pass 인증 팀 **에서는 Firefox 및 Safari에서 iFrame 버전보다 팝업/새 창 로그인 페이지**&#x200B;를 구현하는 것이 좋습니다.  그러나 Internet Explorer용 로그인 페이지를 구현하는 경우 팝업 구현에 문제가 발생할 수 있습니다. IE 문제는 사용자가 팝업 창에서 MVPD을 인증하면 Adobe Pass 인증에서 상위 페이지 리디렉션을 강제 적용하므로 발생합니다(Internet Explorer에서는 팝업 차단으로 표시됨). Adobe Pass 인증 팀 **에서는 Internet Explorer에 대해 iFrame 로그인을 구현할 것을 권장합니다**.
 
