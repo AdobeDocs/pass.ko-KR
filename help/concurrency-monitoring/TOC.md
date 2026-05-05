@@ -4,7 +4,8 @@ feature: Concurrency Monitoring
 audience: end-user
 user-guide-title: Adobe Pass 동시 모니터링
 user-guide-description: 여러 애플리케이션에서의 동시 사용에 대한 제한을 정의하고 적용하는 방법에 대해 알아봅니다.
-source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
+nudge: true
+source-git-commit: e02007a3ec5bd581f84c887ac50249009a2121fd
 workflow-type: tm+mt
 source-wordcount: '252'
 ht-degree: 6%
