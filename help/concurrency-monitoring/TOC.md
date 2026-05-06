@@ -5,9 +5,9 @@ audience: end-user
 user-guide-title: Adobe Pass 동시 모니터링
 user-guide-description: 여러 애플리케이션에서의 동시 사용에 대한 제한을 정의하고 적용하는 방법에 대해 알아봅니다.
 nudge: true
-source-git-commit: e02007a3ec5bd581f84c887ac50249009a2121fd
+source-git-commit: 80ffef1e8e0cfb3752c01e155854f7d87dfa134c
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '257'
 ht-degree: 6%
 
 ---
@@ -45,6 +45,7 @@ ht-degree: 6%
    - [방법: 동시 모니터링에서 VOD 및 라이브 컨텐츠 구분](technical/vod-live-dist.md)
    - [데이터 보존 정책](technical/data-retention-policy.md)
 - 릴리스 {#cm-release-notes}
+   - [동시성 모니터링 - 4.0.1 릴리스 정보](releases/rn-cm-services-401.md)
    - [동시 모니터링 - 3.6.2 릴리스 노트](releases/rn-cm-services-362.md)
    - [동시 모니터링 - 3.6.1 릴리스 노트](releases/rn-cm-services-361.md)
    - [동시 모니터링 - 3.6.0 릴리스 노트](releases/rn-cm-services-360.md)
