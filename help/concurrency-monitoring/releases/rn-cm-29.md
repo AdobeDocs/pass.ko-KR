@@ -4,8 +4,8 @@ description: Adobe Concurrency Monitoring 2.9 릴리스 정보
 exl-id: fd793b1f-b704-492b-850c-dae6478b575a
 source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
 workflow-type: tm+mt
-source-wordcount: '158'
-ht-degree: 1%
+source-wordcount: '161'
+ht-degree: 3%
 
 ---
 
@@ -15,7 +15,7 @@ ht-degree: 1%
 
 ## 릴리스 날짜 {#release-date}
 
-2019년 3월 14일
+03/14/2019
 
 
 ## 릴리스 개요 {#release-overview}
