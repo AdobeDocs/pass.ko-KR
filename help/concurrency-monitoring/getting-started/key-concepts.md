@@ -1,13 +1,13 @@
 ---
 title: 주요 개념
 description: 세션, 정책, 메타데이터 등을 비롯한 동시 모니터링의 기본 개념에 대해 알아봅니다
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+exl-id: 9721055a-70e6-4ba1-a1e0-04406eec25e6
+source-git-commit: 39384d753e7808fa433f30d8dafabd531dbf3acf
 workflow-type: tm+mt
-source-wordcount: '697'
+source-wordcount: '702'
 ht-degree: 0%
 
 ---
-
 
 # 주요 개념 {#key-concepts}
 
@@ -74,7 +74,7 @@ ht-degree: 0%
 
 #### 메타데이터 카테고리
 
-| 범주 | 예 | 목적 |
+| 카테고리 | 예 | 목적 |
 |-----------------|------------------------------------------|---------------------------------|
 | **장치** | `deviceId`, `deviceType`, `osName` | 장치 식별 및 분류 |
 | **컨텐츠** | `channel`, `contentType`, `assetId` | 감시되고 있는 항목 설명 |
@@ -269,4 +269,3 @@ Tenant: "Streaming Company"
 | **FIFO** | 첫 번째 입력, 첫 번째 출력 충돌 해결 |
 | **테넌트** | 애플리케이션 소유 조직 |
 | **응용 프로그램** | CM을 이용한 소프트웨어 프로그램 |
-
