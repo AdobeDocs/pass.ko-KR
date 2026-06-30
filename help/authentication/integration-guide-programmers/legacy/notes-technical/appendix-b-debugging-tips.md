@@ -2,9 +2,9 @@
 title: 부록 B "디버깅 팁"
 description: 부록 B "디버깅 팁"
 exl-id: ea024797-315e-47c0-99ea-1ac49c8c9697
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+source-git-commit: c2a5591cd8fea44f66fc25beb1fb40532e18d8a6
 workflow-type: tm+mt
-source-wordcount: '184'
+source-wordcount: '192'
 ht-degree: 0%
 
 ---
@@ -36,7 +36,7 @@ Firefox에서는 브라우저를 신뢰할 수 있지만, &quot;도구&quot; -\>
 
 [Flash Player 도움말](http://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager07.html)에 액세스합니다.
 
-```entitlement.\*```을(를) 선택하고(테스트 내용에 따라) &quot;웹 사이트 삭제&quot;를 클릭합니다.
+`entitlement.\*`을(를) 선택하고(테스트 내용에 따라) &quot;웹 사이트 삭제&quot;를 클릭합니다.
 
 
 ## 디버깅 도구 {#tools}
