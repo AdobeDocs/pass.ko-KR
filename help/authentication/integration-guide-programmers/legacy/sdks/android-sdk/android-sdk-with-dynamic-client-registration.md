@@ -2,10 +2,10 @@
 title: Android SDK(동적 클라이언트 등록 포함)
 description: Android SDK(동적 클라이언트 등록 포함)
 exl-id: 8d0c1507-8e80-40a4-8698-fb795240f618
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: c2a5591cd8fea44f66fc25beb1fb40532e18d8a6
 workflow-type: tm+mt
-source-wordcount: '1301'
-ht-degree: 0%
+source-wordcount: '1321'
+ht-degree: 1%
 
 ---
 
@@ -53,7 +53,7 @@ Android SDK v3.0+는 [동적 클라이언트 등록 개요](../../../rest-apis/r
 
 | API 호출: 생성자 |
 | --- |
-| public static AccessEnabler getInstance(Context appContext, String softwareStatement, String redirectUrl)<br>        AccessEnablerException 발생 |
+| public static AccessEnabler getInstance(Context appContext, String softwareStatement, String redirectUrl)<br>에서 AccessEnablerException 발생 |
 
 
 **가용성:** v3.0+
@@ -64,8 +64,7 @@ Android SDK v3.0+는 [동적 클라이언트 등록 개요](../../../rest-apis/r
 - softwareStatement: &quot;software\_statement&quot;가 strings.xml에 설정된 경우 TVE 대시보드 또는 *null*&#x200B;에서 얻은 값
 - redirectUrl : 고유 url, TVE 대시보드에 명시적으로 추가된 도메인 중 하나 또는 &quot;redirect\_uri&quot;가 strings.xml에 설정된 경우 *null*
 
-참고 : 잘못된 softwareStatement 또는 redirectUrl로 인해 응용 프로그램에서 AccessEnabler를 초기화하거나 Adobe Pass 인증 및 권한 부여에 대한 응용 프로그램을 등록하지 못합니다
-</br>
+참고 : 잘못된 softwareStatement 또는 redirectUrl로 인해 응용 프로그램에서 AccessEnabler를 초기화하거나 Adobe Pass 인증 및 권한 부여에 대한 응용 프로그램을 등록하지 못합니다</br>
 참고 : strings.xml의 redirectUrl 매개 변수 또는 redirect\_uri는 애플리케이션의 TVE Dashboard에 추가된 도메인 값이어야 합니다(예: TVE Dashboard에 추가된 도메인 &#39;adobe.com&#39;의 경우 redirectUrl은 &#39;com.adobe&#39;이어야 함).
 
 
@@ -81,13 +80,13 @@ Android SDK v3.0+는 [동적 클라이언트 등록 개요](../../../rest-apis/r
 
 | API 호출: 요청자 구성 |
 | --- |
-| ```public void setRequestor(String requestorId)``` |
+| `public void setRequestor(String requestorId)` |
 
 **가용성:** v3.0+
 
 | API 호출: 요청자 구성 |
 | --- |
-| ```public void setRequestor(String requestorId, ArrayList<String> urls)``` |
+| `public void setRequestor(String requestorId, ArrayList<String> urls)` |
 
 **가용성:** v3.0+
 
@@ -114,8 +113,8 @@ Android SDK v3.0+는 [동적 클라이언트 등록 개요](../../../rest-apis/r
 
 **매개 변수:** 없음
 
-**트리거된 콜백:** `setAuthenticationStatus()`
-</br></br>
+**트리거된 콜백:** 
+
 
 ## 프로그래머 구현 흐름 {#Progr}
 
@@ -123,7 +122,7 @@ Android SDK v3.0+는 [동적 클라이언트 등록 개요](../../../rest-apis/r
 
 a. Adobe Pass( TVE Dashboard)에서 software\_statement 및 redirect\_uri 가져오기
 
-b. 이러한 값을 Adobe Pass SDK에 전달하는 방법에는 두 가지가 있습니다.
+b. 다음 두 가지 방법으로 이러한 값을 Adobe Pass SDK에 전달할 수 있습니다.
 
 strings.xml에 를 추가합니다.
 
