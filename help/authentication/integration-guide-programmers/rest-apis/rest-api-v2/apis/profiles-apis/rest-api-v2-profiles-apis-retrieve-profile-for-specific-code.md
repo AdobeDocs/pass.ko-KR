@@ -4,8 +4,8 @@ description: REST API V2 - 특정 코드에 대한 프로필 검색
 exl-id: d6ead7d5-de5f-4033-8115-980953a370c0
 source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '822'
-ht-degree: 1%
+source-wordcount: '851'
+ht-degree: 2%
 
 ---
 
@@ -69,12 +69,9 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">X-Forwarded-For</td>
       <td>
-         스트리밍 장치의 IP 주소입니다.
-         <br/><br/>
-         특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.
-         <br/><br/>
-         클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.
-      </td>
+         스트리밍 장치의 IP 주소입니다.<br/><br/>
+         특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.<br/><br/>
+         클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -91,10 +88,8 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">Accept</td>
       <td>
-         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
-         <br/><br/>
-         지정하면 application/json;charset=utf-8이어야 합니다.
-      </td>
+         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.<br/><br/>
+         지정하면 application/json;charset=utf-8이어야 합니다.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -123,36 +118,31 @@ ht-degree: 1%
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../rest-api-dcr/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
-      </td>
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../rest-api-dcr/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.</td>
    </tr>
    <tr>
       <td>403</td>
       <td>금지됨</td>
       <td>
-        임시 액세스 TTL(time-to-live)이 만료되었거나 최대 리소스 수를 초과했습니다. 클라이언트는 일반 MVPD을 사용하여 기본 인증 흐름을 시작하도록 사용자를 표시해야 합니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        임시 액세스 TTL(time-to-live)이 만료되었거나 최대 리소스 수를 초과했습니다. 클라이언트는 일반 MVPD을 사용하여 기본 인증 흐름을 시작하도록 사용자를 표시해야 합니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr> 
    <tr>
       <td>405</td>
       <td>메서드가 허용되지 않음</td>
       <td>
-        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.
-      </td>
+        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.</td>
    </tr>
    <tr>
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr>
 </table>
 
@@ -182,10 +172,8 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">프로필</td>
       <td>
-        키, 값 쌍의 맵이 포함된 JSON.
-        <br/><br/>
-        키 요소는 다음 값으로 정의됩니다.
-        <table style="table-layout:auto">
+        키, 값 쌍의 맵이 포함된 JSON.<br/><br/>
+        키 요소는 다음 값으로 정의됩니다.<table style="table-layout:auto">
             <tr>
                <th style="background-color: #EFF2F7;">값</th>
                <th style="background-color: #EFF2F7"></th>
@@ -217,10 +205,8 @@ ht-degree: 1%
             <tr>
                <td style="background-color: #DEEBFF;">발급자</td>
                <td>
-                  프로필을 소유하는 엔티티입니다.
-                  <br/><br/>
-                  가능한 값은 다음과 같습니다.
-                  <ul>
+                  프로필을 소유하는 엔티티입니다.<br/><br/>
+                  가능한 값은 다음과 같습니다.<ul>
                     <li><b>mvpd(예: Spectrum, Cablevision 등)</b><br/>기본 인증의 결과로 프로필이 만들어졌습니다.</li>
                     <li><b>Adobe</b><br/>액세스 성능 저하, 임시 액세스로 인해 프로필이 만들어졌습니다.</li>
                   </ul>
@@ -229,10 +215,8 @@ ht-degree: 1%
             <tr>
                <td style="background-color: #DEEBFF;">유형</td>
                <td>
-                  프로필의 유형입니다.
-                  <br/><br/>
-                  가능한 값은 다음과 같습니다.
-                  <ul>
+                  프로필의 유형입니다.<br/><br/>
+                  가능한 값은 다음과 같습니다.<ul>
                     <li><b>일반</b><br/>기본 인증의 결과로 프로필이 만들어졌습니다.</li>
                     <li><b>성능 저하</b><br/>액세스 성능 저하로 인해 프로필이 만들어졌습니다.</li>
                     <li><b>임시</b><br/>임시 액세스로 인해 프로필이 만들어졌습니다.</li>
@@ -242,10 +226,8 @@ ht-degree: 1%
             <tr>
                <td style="background-color: #DEEBFF;">속성</td>
                <td>
-                    키, 값 쌍의 맵이 포함된 JSON.
-                    <br/><br/>
-                    키 요소는 사용자 메타데이터 특성으로 정의되며 다음과 같은 작업을 수행할 수 있습니다.
-                    <ul>
+                    키, 값 쌍의 맵이 포함된 JSON.<br/><br/>
+                    키 요소는 사용자 메타데이터 특성으로 정의되며 다음과 같은 작업을 수행할 수 있습니다.<ul>
                         <li>필수, 예: 'userID'</li>
                         <li>'zip', 'householdID', 'maxRating' 등과 같이 필수가 아닙니다.</li>
                     </ul>
@@ -290,16 +272,13 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;"></td>
       <td>
-            응답 본문은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.
-            <br/><br/>
-            클라이언트 애플리케이션은 이 API에서 가장 일반적으로 반환되는 오류 코드를 제대로 처리할 수 있는 오류 처리 메커니즘을 구현해야 합니다.
-            <ul>
+            응답 본문은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.<br/><br/>
+            클라이언트 애플리케이션은 이 API에서 가장 일반적으로 반환되는 오류 코드를 제대로 처리할 수 있는 오류 처리 메커니즘을 구현해야 합니다.<ul>
                 <li>invalid_authentication_session</li>
                 <li>invalid_parameter_code</li>
                 <li>등</li>
             </ul>
-            위의 목록은 완전하지 않습니다. 클라이언트 응용 프로그램은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">공개 설명서</a>에 정의된 모든 향상된 오류 코드를 처리할 수 있어야 합니다.
-      </td>
+            위의 목록은 완전하지 않습니다. 클라이언트 응용 프로그램은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">공개 설명서</a>에 정의된 모든 향상된 오류 코드를 처리할 수 있어야 합니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>

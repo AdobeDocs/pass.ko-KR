@@ -4,8 +4,8 @@ description: REST API V2 - 헤더 - X-Device-Info
 exl-id: 0ef25e06-86de-427a-a938-7ba3817f0d5e
 source-git-commit: 42df16e34783807e1b5eb1a12ca9db92f4e4c161
 workflow-type: tm+mt
-source-wordcount: '1133'
-ht-degree: 2%
+source-wordcount: '1234'
+ht-degree: 3%
 
 ---
 
@@ -228,7 +228,7 @@ ht-degree: 2%
         <td>browserVersion</td>
         <td>장치의 브라우저 버전.</td>
         <td></td>
-        <td>예: 60.0.3112</td>
+        <td>e.g. 60.0.3112</td>
     </tr>
     <tr>
         <td></td>
@@ -256,28 +256,28 @@ ht-degree: 2%
         <td>displayPi</td>
         <td>장치의 실제 화면 픽셀 밀도입니다.</td>
         <td></td>
-        <td>예: 294</td>
+        <td>e.g. 294</td>
     </tr>
     <tr>
         <td></td>
         <td>대각 화면 크기</td>
         <td>디바이스의 물리적 화면 대각선 치수(인치)입니다.</td>
         <td></td>
-        <td>예: 5.5, 10.1</td>
+        <td>e.g. 5.5, 10.1</td>
     </tr>
     <tr>
         <td></td>
         <td>connectionIp</td>
         <td>HTTP 요청을 전송하는 데 사용되는 장치의 IP입니다.</td>
         <td></td>
-        <td>예: 8.8.4.4</td>
+        <td>e.g. 8.8.4.4</td>
     </tr>
     <tr>
         <td></td>
         <td>connectionPort</td>
         <td>HTTP 요청을 전송하는 데 사용되는 장치의 포트입니다.</td>
         <td></td>
-        <td>예: 53124</td>
+        <td>e.g. 53124</td>
     </tr>
     <tr>
         <td><i>필수</i></td>
@@ -343,7 +343,7 @@ X-Device-Info: ewogICJwcmltYXJ5SGFyZHdhcmVUeXBlIiA6ICJNb2JpbGVQaG9uZSIsCiAgIm1vZ
 
 ### 브라우저 {#browsers}
 
-브라우저에서 실행 중인 클라이언트 응용 프로그램의 경우 브라우저에서 `X-Device-Info` 헤더에 필요한 최소 정보 집합을 자동으로 보내므로 `User-Agent` 헤더를 생략할 수 있습니다.
+브라우저에서 실행 중인 클라이언트 응용 프로그램의 경우 브라우저에서 `User-Agent` 헤더에 필요한 최소 정보 집합을 자동으로 보내므로 `X-Device-Info` 헤더를 생략할 수 있습니다.
 
 클라이언트 응용 프로그램이 장치 식별 메커니즘을 제공하는 라이브러리 또는 서비스를 통합하는 경우 `X-Device-Info` 헤더를 사용하여 장치, 연결 및 응용 프로그램에 대한 추가 정보를 제공할 수 있습니다.
 
@@ -351,7 +351,7 @@ X-Device-Info: ewogICJwcmltYXJ5SGFyZHdhcmVUeXBlIiA6ICJNb2JpbGVQaG9uZSIsCiAgIm1vZ
 
 #### iOS 및 iPadOS {#ios-ipados}
 
-`X-Device-Info`iOS 또는 iPadOS[를 실행하는 장치의 &#x200B;](https://developer.apple.com/documentation/ios-ipados-release-notes) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조하십시오.
+[iOS 또는 iPadOS](https://developer.apple.com/documentation/ios-ipados-release-notes)를 실행하는 장치의 `X-Device-Info` 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조하십시오.
 
 * [UIDevice](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice)용 Apple 개발자 설명서입니다.
 * [연결 가능성](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html)에 대한 Apple 개발자 설명서입니다.
@@ -452,7 +452,7 @@ X-Device-Info: ewogICJwcmltYXJ5SGFyZHdhcmVUeXBlIiA6ICJNb2JpbGVQaG9uZSIsCiAgIm1vZ
 
 #### Android {#android}
 
-`X-Device-Info`Android[을(를) 실행하는 장치의 &#x200B;](https://developer.android.com/about/versions) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조할 수 있습니다.
+[Android](https://developer.android.com/about/versions)을(를) 실행하는 장치의 `X-Device-Info` 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조할 수 있습니다.
 
 * [Build](https://developer.android.com/reference/android/os/Build.html) 클래스에 대한 Android 개발자 설명서입니다.
 
@@ -535,9 +535,9 @@ private JSONObject computeClientInformation() {
 |---------------|-----------------------------|-----------------|
 | 모델 | Build.MODEL | GT-I9505 |
 | 공급업체 | Build.BRAND | 삼성 |
-| 제조업체 | Build.MANUFACTURER | 삼성 |
+| 제조업체 | Build.MANUFACTURING | 삼성 |
 | 버전 | Build.DEVICE | jflte |
-| displayWidth | DisplayMetrics.widthPixels | 600 |
+| displayWidth | DisplayMetrics.widthPixel | 600 |
 | displayHeight | DisplayMetrics.heightPixels | 800 |
 | osName | 하드코드 | Android |
 | osVersion | Build.VERSION.RELEASE | 5.0.1 |
@@ -559,7 +559,7 @@ private JSONObject computeClientInformation() {
 
 #### tvOS {#tvos}
 
-`X-Device-Info`tvOS[을(를) 실행하는 장치의 &#x200B;](https://developer.apple.com/documentation/tvos-release-notes) 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조하십시오.
+[tvOS](https://developer.apple.com/documentation/tvos-release-notes)을(를) 실행하는 장치의 `X-Device-Info` 헤더를 빌드하려면 다음 문서와 코드 조각 아래를 참조하십시오.
 
 * [UIDevice](https://developer.apple.com/documentation/uikit/uidevice#//apple_ref/occ/cl/UIDevice)용 Apple 개발자 설명서입니다.
 * [연결 가능성](https://developer.apple.com/library/archive/samplecode/Reachability/Introduction/Intro.html)에 대한 Apple 개발자 설명서입니다.
@@ -659,7 +659,7 @@ private JSONObject computeClientInformation() {
 
 #### Fire OS {#fireos}
 
-`X-Device-Info`Fire OS[를 실행하는 장치의 &#x200B;](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html) 헤더를 빌드하려면 다음 문서를 참조할 수 있습니다.
+[Fire OS](https://developer.amazon.com/docs/fire-tv/fire-os-overview.html)를 실행하는 장치의 `X-Device-Info` 헤더를 빌드하려면 다음 문서를 참조할 수 있습니다.
 
 * [Build](https://developer.android.com/reference/android/os/Build.html) 클래스에 대한 Android 개발자 설명서입니다.
 * [Fire TV 장치 식별](https://developer.amazon.com/docs/fire-tv/identify-amazon-fire-tv-devices.html)을 위한 Amazon 개발자 설명서입니다.
@@ -670,9 +670,9 @@ private JSONObject computeClientInformation() {
 |---------------|-----------------------------|-----------------|
 | 모델 | Build.MODEL | AFTM |
 | 공급업체 | Build.BRAND | Amazon |
-| 제조업체 | Build.MANUFACTURER | Amazon |
+| 제조업체 | Build.MANUFACTURING | Amazon |
 | 버전 | Build.DEVICE | 몬토야 |
-| displayWidth | DisplayMetrics.widthPixels |                 |
+| displayWidth | DisplayMetrics.widthPixel |                 |
 | displayHeight | DisplayMetrics.heightPixels |                 |
 | osName | 하드코드 | Android |
 | osVersion | Build.VERSION.RELEASE | 5.1.1 |
@@ -692,7 +692,7 @@ private JSONObject computeClientInformation() {
 
 #### Roku 운영 체제 {#rokuos}
 
-`X-Device-Info`Roku OS[를 실행하는 장치의 &#x200B;](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md) 헤더를 만들려면 다음 문서를 참조할 수 있습니다.
+[Roku OS](https://developer.roku.com/docs/developer-program/release-notes/roku-os-release-notes.md)를 실행하는 장치의 `X-Device-Info` 헤더를 만들려면 다음 문서를 참조할 수 있습니다.
 
 * [ifDeviceInfo](https://developer.roku.com/docs/references/brightscript/interfaces/ifdeviceinfo.md)에 대한 Roku 개발자 설명서.
 
