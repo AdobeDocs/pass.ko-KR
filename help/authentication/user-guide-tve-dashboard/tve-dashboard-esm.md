@@ -25,7 +25,7 @@ ESM 대시보드는 성과를 모니터링하고, 예외 항목을 식별하고,
 - MVPD 성능 비교
 - 애플리케이션별 고객 사용 이해
 
-ESM 데이터 및 이벤트에 대한 자세한 내용은 [자격 서비스 모니터링 개요](https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview)에서 확인할 수 있습니다.
+ESM 데이터 및 이벤트에 대한 자세한 내용은 [자격 서비스 모니터링 개요](https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview)에서 확인할 수 있습니다.
 
 ## 보고서 {#reports}
 
