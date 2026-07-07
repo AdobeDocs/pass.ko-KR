@@ -4,8 +4,8 @@ description: REST API V2 - 인증 세션 다시 시작
 exl-id: 66c33546-2be0-473f-9623-90499d1c13eb
 source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '956'
-ht-degree: 1%
+source-wordcount: '985'
+ht-degree: 2%
 
 ---
 
@@ -64,30 +64,23 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">mvpd</td>
       <td>
-        온보딩 프로세스 중 ID 공급자와 연결된 내부 고유 식별자입니다.
-        <br/><br/>
-        스트리밍 장치 플랫폼에서 값을 제공하는 데 제한이 있는 경우 애플리케이션은 인증 세션을 다시 시작하고 유효한 값을 제공해야 합니다.
-      </td>
+        온보딩 프로세스 중 ID 공급자와 연결된 내부 고유 식별자입니다.<br/><br/>
+        스트리밍 장치 플랫폼에서 값을 제공하는 데 제한이 있는 경우 애플리케이션은 인증 세션을 다시 시작하고 유효한 값을 제공해야 합니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">domainName</td>
       <td>
-        MVPD 로그인을 수행하는 애플리케이션의 원본 도메인입니다.
-        <br/><br/>
-        스트리밍 장치 플랫폼에서 값을 제공하는 데 제한이 있는 경우 애플리케이션은 인증 세션을 다시 시작하고 유효한 값을 제공해야 합니다.
-      </td>
+        MVPD 로그인을 수행하는 애플리케이션의 원본 도메인입니다.<br/><br/>
+        스트리밍 장치 플랫폼에서 값을 제공하는 데 제한이 있는 경우 애플리케이션은 인증 세션을 다시 시작하고 유효한 값을 제공해야 합니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">redirectUrl</td>
       <td>
-        MVPD에 대한 인증 흐름이 완료될 때 사용자 에이전트가 탐색하는 최종 리디렉션 URL입니다.
-        <br/><br/>
-        값은 URL로 인코딩되어야 합니다.
-        <br/><br/>
-        스트리밍 장치 플랫폼에서 값을 제공하는 데 제한이 있는 경우 애플리케이션은 인증 세션을 다시 시작하고 유효한 값을 제공해야 합니다.
-        </td>
+        MVPD에 대한 인증 흐름이 완료될 때 사용자 에이전트가 탐색하는 최종 리디렉션 URL입니다.<br/><br/>
+        값은 URL로 인코딩되어야 합니다.<br/><br/>
+        스트리밍 장치 플랫폼에서 값을 제공하는 데 제한이 있는 경우 애플리케이션은 인증 세션을 다시 시작하고 유효한 값을 제공해야 합니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -103,21 +96,16 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">Content-Type</td>
       <td>
-         전송 중인 리소스에 대해 허용되는 미디어 유형입니다.
-         <br/><br/>
-         application/x-www-form-urlencoded여야 합니다.
-      </td>
+         전송 중인 리소스에 대해 허용되는 미디어 유형입니다.<br/><br/>
+         application/x-www-form-urlencoded여야 합니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Forwarded-For</td>
       <td>
-         스트리밍 장치의 IP 주소입니다.
-         <br/><br/>
-         특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.
-         <br/><br/>
-         클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.
-      </td>
+         스트리밍 장치의 IP 주소입니다.<br/><br/>
+         특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.<br/><br/>
+         클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -129,10 +117,8 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;">Accept</td>
       <td>
-         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
-         <br/><br/>
-         지정하면 application/json;charset=utf-8이어야 합니다.
-      </td>
+         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.<br/><br/>
+         지정하면 application/json;charset=utf-8이어야 합니다.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -161,29 +147,25 @@ ht-degree: 1%
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../rest-api-dcr/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
-      </td>
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../rest-api-dcr/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.</td>
    </tr>
    <tr>
       <td>405</td>
       <td>메서드가 허용되지 않음</td>
       <td>
-        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.
-      </td>
+        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.</td>
    </tr>
    <tr>
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr>
 </table>
 
@@ -218,10 +200,8 @@ ht-degree: 1%
             <tr>
                <td style="background-color: #DEEBFF;">actionName</td>
                <td>
-                  인증 흐름을 완료하기 위해 스트리밍 장치가 수행해야 하는 작업입니다.
-                  <br/><br/>
-                  가능한 값은 다음과 같습니다.
-                  <ul>
+                  인증 흐름을 완료하기 위해 스트리밍 장치가 수행해야 하는 작업입니다.<br/><br/>
+                  가능한 값은 다음과 같습니다.<ul>
                     <li><b>인증</b><br/>스트리밍 장치나 다른 장치에서 사용자 에이전트에서 제공된 URL을 열어야 합니다.</li>
                     <li><b>다시 시도</b><br/>스트리밍 장치나 다른 장치에서 누락된 매개 변수를 제공하고 코드를 사용하여 인증 세션 다시 시작을 다시 시도해야 합니다.</li>
                     <li><b>승인</b><br/>스트리밍 장치가 결정 흐름을 직접 진행할 수 있습니다.</li>
@@ -231,10 +211,8 @@ ht-degree: 1%
             <tr>
                <td style="background-color: #DEEBFF;">actionType</td>
                <td>
-                  'actionName' 특성에 지정된 작업으로 흐름을 계속하려면 스트리밍 장치가 수행해야 하는 상호 작용 유형입니다.
-                  <br/><br/>
-                  가능한 값은 다음과 같습니다.
-                  <ul>
+                  'actionName' 특성에 지정된 작업으로 흐름을 계속하려면 스트리밍 장치가 수행해야 하는 상호 작용 유형입니다.<br/><br/>
+                  가능한 값은 다음과 같습니다.<ul>
                     <li><b>대화식</b><br/>흐름은 사용자 에이전트를 사용하여 제공된 URL로 탐색을 계속합니다.</li>
                     <li><b>직접</b><br/>클라이언트 구현에 사용할 수 있는 HTTP 클라이언트를 사용하여 제공된 URL을 직접 호출하면서 흐름이 계속됩니다.</li>
                   </ul>
@@ -243,10 +221,8 @@ ht-degree: 1%
             <tr>
                <td style="background-color: #DEEBFF;">reasonType</td>
                <td>
-                  'actionName'을 설명하는 이유 유형입니다.
-                  <br/><br/>
-                  가능한 값은 다음과 같습니다.
-                  <ul>
+                  'actionName'을 설명하는 이유 유형입니다.<br/><br/>
+                  가능한 값은 다음과 같습니다.<ul>
                     <li><b>없음</b><br/>인증을 계속하려면 클라이언트 응용 프로그램이 필요합니다.</li>
                     <li><b>인증됨</b><br/>기본 액세스 흐름을 통해 클라이언트 응용 프로그램이 이미 인증되었습니다.</li>
                     <li><b>임시</b><br/>임시 액세스 흐름을 통해 클라이언트 응용 프로그램이 이미 인증되었습니다.</li>
@@ -325,16 +301,13 @@ ht-degree: 1%
    <tr>
       <td style="background-color: #DEEBFF;"></td>
       <td>
-            응답 본문은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.
-            <br/><br/>
-            클라이언트 애플리케이션은 이 API에서 가장 일반적으로 반환되는 오류 코드를 제대로 처리할 수 있는 오류 처리 메커니즘을 구현해야 합니다.
-            <ul>
+            응답 본문은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.<br/><br/>
+            클라이언트 애플리케이션은 이 API에서 가장 일반적으로 반환되는 오류 코드를 제대로 처리할 수 있는 오류 처리 메커니즘을 구현해야 합니다.<ul>
                 <li>invalid_authentication_session</li>
                 <li>invalid_parameter_code</li>
                 <li>등</li>
             </ul>
-            위의 목록은 완전하지 않습니다. 클라이언트 응용 프로그램은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">공개 설명서</a>에 정의된 모든 향상된 오류 코드를 처리할 수 있어야 합니다.
-      </td>
+            위의 목록은 완전하지 않습니다. 클라이언트 응용 프로그램은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">공개 설명서</a>에 정의된 모든 향상된 오류 코드를 처리할 수 있어야 합니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>
@@ -383,7 +356,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### &#x200B;2. 매개 변수가 없는 인증 세션 다시 시작
+### &#x200B;2. 매개 변수가 누락된 인증 세션 다시 시작
 
 >[!BEGINTABS]
 
@@ -426,7 +399,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### &#x200B;3. 유효한 프로필이 있는 동안 인증 세션 다시 시작
+### &#x200B;3. 유효한 프로필이 이미 있는 동안 인증 세션 다시 시작
 
 >[!BEGINTABS]
 
@@ -465,7 +438,7 @@ Content-Type: application/json;charset=UTF-8
 
 >[!ENDTABS]
 
-### &#x200B;4. 기본 또는 프로모션 TempPass를 사용하여 인증 세션 다시 시작(필요 없음)
+### &#x200B;4. 기본 또는 프로모션 TempPass를 사용하여 인증 세션 다시 시작(필수 아님)
 
 >[!BEGINTABS]
 

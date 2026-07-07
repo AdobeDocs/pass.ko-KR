@@ -4,8 +4,8 @@ description: REST API V2 - 코드를 사용하여 인증 세션 검색
 exl-id: 5cc209eb-ee6b-4bb9-9c04-3444408844b7
 source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
 workflow-type: tm+mt
-source-wordcount: '532'
-ht-degree: 2%
+source-wordcount: '549'
+ht-degree: 3%
 
 ---
 
@@ -69,12 +69,9 @@ ht-degree: 2%
    <tr>
       <td style="background-color: #DEEBFF;">X-Forwarded-For</td>
       <td>
-         스트리밍 장치의 IP 주소입니다.
-         <br/><br/>
-         특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.
-         <br/><br/>
-         클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.
-      </td> 
+         스트리밍 장치의 IP 주소입니다.<br/><br/>
+         특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.<br/><br/>
+         클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.</td> 
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -86,10 +83,8 @@ ht-degree: 2%
    <tr>
       <td style="background-color: #DEEBFF;">Accept</td>
       <td>
-         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
-         <br/><br/>
-         지정하면 application/json;charset=utf-8이어야 합니다.
-      </td>
+         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.<br/><br/>
+         지정하면 application/json;charset=utf-8이어야 합니다.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -118,29 +113,25 @@ ht-degree: 2%
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../rest-api-dcr/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
-      </td>
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../rest-api-dcr/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.</td>
    </tr>
    <tr>
       <td>405</td>
       <td>메서드가 허용되지 않음</td>
       <td>
-        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.
-      </td>
+        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.</td>
    </tr>
    <tr>
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr>
 </table>
 
@@ -228,16 +219,13 @@ ht-degree: 2%
    <tr>
       <td style="background-color: #DEEBFF;"></td>
       <td>
-            응답 본문은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.
-            <br/><br/>
-            클라이언트 애플리케이션은 이 API에서 가장 일반적으로 반환되는 오류 코드를 제대로 처리할 수 있는 오류 처리 메커니즘을 구현해야 합니다.
-            <ul>
+            응답 본문은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.<br/><br/>
+            클라이언트 애플리케이션은 이 API에서 가장 일반적으로 반환되는 오류 코드를 제대로 처리할 수 있는 오류 처리 메커니즘을 구현해야 합니다.<ul>
                 <li>invalid_authentication_session</li>
                 <li>invalid_parameter_code</li>
                 <li>등</li>
             </ul>
-            위의 목록은 완전하지 않습니다. 클라이언트 응용 프로그램은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">공개 설명서</a>에 정의된 모든 향상된 오류 코드를 처리할 수 있어야 합니다.
-      </td>
+            위의 목록은 완전하지 않습니다. 클라이언트 응용 프로그램은 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">공개 설명서</a>에 정의된 모든 향상된 오류 코드를 처리할 수 있어야 합니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>

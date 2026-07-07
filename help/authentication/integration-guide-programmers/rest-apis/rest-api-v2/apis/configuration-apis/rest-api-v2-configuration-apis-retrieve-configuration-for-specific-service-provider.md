@@ -4,7 +4,7 @@ description: REST API V2 - 특정 서비스 공급자에 대한 구성 검색
 exl-id: ad7e4c6d-ed96-4ae7-82a9-3c24e5fc9302
 source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
-source-wordcount: '728'
+source-wordcount: '749'
 ht-degree: 2%
 
 ---
@@ -79,34 +79,25 @@ ht-degree: 2%
    <tr>
       <td style="background-color: #DEEBFF;">X-Device-Info</td>
       <td>
-         장치 정보 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md">X-Device-Info</a> 헤더 설명서에 설명되어 있습니다.
-         <br/><br/>
-         응용 프로그램의 장치 플랫폼에서 유효한 값의 명시적 제공을 허용하는 경우 항상 사용하는 것이 좋습니다.
-         <br/><br/>
-         제공되면 Adobe Pass 인증 백엔드는 명시적으로 설정된 값을 추출된 값과 묵시적으로(기본적으로) 병합합니다.
-         <br/><br/>
-         제공하지 않으면 Adobe Pass 인증 백엔드는 추출된 값을 묵시적으로(기본적으로) 사용합니다.
-      </td>
+         장치 정보 페이로드의 생성은 <a href="../../appendix/headers/rest-api-v2-appendix-headers-x-device-info.md">X-Device-Info</a> 헤더 설명서에 설명되어 있습니다.<br/><br/>
+         응용 프로그램의 장치 플랫폼에서 유효한 값의 명시적 제공을 허용하는 경우 항상 사용하는 것이 좋습니다.<br/><br/>
+         제공되면 Adobe Pass 인증 백엔드는 명시적으로 설정된 값을 추출된 값과 묵시적으로(기본적으로) 병합합니다.<br/><br/>
+         제공하지 않으면 Adobe Pass 인증 백엔드는 추출된 값을 묵시적으로(기본적으로) 사용합니다.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">X-Forwarded-For</td>
       <td>
-         스트리밍 장치의 IP 주소입니다.
-         <br/><br/>
-         특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.
-         <br/><br/>
-         클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.
-      </td>
+         스트리밍 장치의 IP 주소입니다.<br/><br/>
+         특히 스트리밍 장치가 아닌 프로그래머 서비스에서 호출하는 경우 항상 서버 대 서버 구현에 사용하는 것이 좋습니다.<br/><br/>
+         클라이언트 대 서버 구현의 경우, 스트리밍 장치의 IP 주소가 암묵적으로 전송됩니다.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">Accept</td>
       <td>
-         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.
-         <br/><br/>
-         지정하면 application/json;charset=utf-8이어야 합니다.
-      </td>
+         클라이언트 애플리케이션에서 허용하는 미디어 유형입니다.<br/><br/>
+         지정하면 application/json;charset=utf-8이어야 합니다.</td>
       <td>선택 사항</td>
    </tr>
    <tr>
@@ -135,29 +126,25 @@ ht-degree: 2%
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../rest-api-dcr/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
-      </td>
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="../../../rest-api-dcr/dynamic-client-registration-overview.md">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.</td>
    </tr>
    <tr>
       <td>405</td>
       <td>메서드가 허용되지 않음</td>
       <td>
-        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.
-      </td>
+        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.</td>
    </tr>
    <tr>
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
-      </td>
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.</td>
    </tr>
 </table>
 

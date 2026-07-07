@@ -4,7 +4,7 @@ description: REST API V2 검사 목록
 exl-id: 9095d1dd-a90c-4431-9c58-9a900bfba1cf
 source-git-commit: 63dc9636f74f8eee1af6205c4d31a01df4503050
 workflow-type: tm+mt
-source-wordcount: '2563'
+source-wordcount: '2578'
 ht-degree: 0%
 
 ---
@@ -60,7 +60,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>구성 검색</i></td>
-      <td>인증 단계 전에 사용자에게 MVPD(TV 공급자)를 선택하라는 메시지를 표시해야 하는 경우에만 구성 응답을 검색합니다.<br/><br/>다음 경우에 구성 응답을 검색할 필요가 없습니다.<ul><li>사용자가 이미 인증되었습니다.</li><li>사용자에게 임시 액세스 권한이 제공됩니다.</li><li>사용자 인증이 만료되었지만 아직 이전에 선택한 MVPD의 구독자인지 확인하는 메시지가 표시될 수 있습니다.</li></ul></td>
+      <td>인증 단계 전에 사용자에게 MVPD(TV 공급자)를 선택하라는 메시지를 표시해야 하는 경우에만 구성 응답을 검색합니다.<br/><br/>다음 경우에는 구성 응답을 검색할 필요가 없습니다.<ul><li>사용자가 이미 인증되었습니다.</li><li>사용자에게 임시 액세스 권한이 제공됩니다.</li><li>사용자 인증이 만료되었지만 아직 이전에 선택한 MVPD의 구독자인지 확인하는 메시지가 표시될 수 있습니다.</li></ul></td>
       <td>시스템 리소스를 과부하하고 지연 시간을 늘릴 위험이 있습니다.</td>
    </tr>
    <tr>
@@ -160,7 +160,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### &#x200B;7. 매개변수 및 헤더 {#mandatory-requirements-parameters-headers}
+### &#x200B;7. 매개 변수 및 헤더 {#mandatory-requirements-parameters-headers}
 
 <table style="table-layout:auto">
    <tr>
@@ -181,7 +181,7 @@ ht-degree: 0%
    <tr>
       <td style="background-color: #DEEBFF;"><i>X-Device-Info 헤더 보내기</i></td>
       <td>모든 REST API v2 요청에 대해 <a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/appendix/headers/rest-api-v2-appendix-headers-x-device-info.md">X-Device-Info</a> 헤더를 보냅니다.<br/><br/>요청을 장치 대신 서버에서 보내는 경우에도 X-Device-Info 헤더 값은 실제 스트리밍 장치 정보를 반영해야 합니다.</td>
-      <td>알 수 없는 플랫폼에서 시작된 것으로 분류되고 안전하지 않은 것으로 처리되어 더 짧은 인증 TTL과 같은 더 제한적인 규칙이 적용되는 위험이 있습니다.<br/><br/>또한 스트리밍 장치 connectionIp 및 connectionPort와 같은 일부 필드는 Spectrum의 Home Base Authentication과 같은 기능에 필수입니다.</td>
+      <td>알 수 없는 플랫폼에서 시작된 것으로 분류되고 안전하지 않은 것으로 취급되어 더 짧은 인증 TTL과 같은 보다 제한적인 규칙이 적용되는 위험이 있습니다.<br/><br/>또한 스트리밍 장치 connectionIp 및 connectionPort와 같은 일부 필드는 Spectrum의 Home Base Authentication과 같은 기능에 필수입니다.</td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>안정적인 장치 식별자</i></td>
@@ -225,7 +225,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>라이프사이클 테스트</i></td>
-      <td>공식 Adobe Pass 인증 비프로덕션 환경을 사용하여 애플리케이션을 개발하고 테스트합니다.<ul><li>프리퀄프로덕션</li><li>릴리스 스테이징</li></ul><br/>릴리스 프로덕션으로 시작하기 전에 이러한 환경에서 철저한 품질 보증(QA)을 수행합니다.<br/><br/>클라이언트 응용 프로그램은 비프로덕션 환경에서 전체 유효성 검사를 먼저 완료하지 않고 릴리스 프로덕션으로 진행할 수 없습니다.</td>
+      <td>공식 Adobe Pass 인증 비프로덕션 환경을 사용하여 애플리케이션을 개발하고 테스트합니다.<ul><li>프리퀄프로덕션</li><li>릴리스 스테이징</li></ul><br/>릴리스 프로덕션으로 실행하기 전에 이러한 환경에서 철저한 품질 보증(QA)을 수행하십시오.<br/><br/>비프로덕션 환경에서 먼저 전체 유효성 검사를 완료하지 않고 클라이언트 응용 프로그램을 릴리스 프로덕션으로 진행해서는 안 됩니다.</td>
       <td>중대한 결함과 함께 위험 발생<br/><br/>짧고 효율적인 디버깅 경로가 부족하면 Adobe 지원 및 엔지니어링이 빠르게 개입하는 데 방해가 될 수 있습니다.</td>
    </tr>
 </table>
@@ -272,7 +272,7 @@ ht-degree: 0%
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"><i>인증 코드 유효성 검사(두 번째 화면 인증)</i></td>
-      <td>다음 조건에서 /api/v2/authenticate API를 호출하기 전에 보조(두 번째) 응용 프로그램(화면)에서 사용자 입력을 통해 제출된 인증 코드의 유효성을 검사합니다.<br/><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md#perform-authentication-within-secondary-application-with-preselected-mvpd">미리 선택된 mvpd를 사용하여 보조(화면) 응용 프로그램 내에서 수행되는 인증</a></b><ul><li><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md">인증 세션 다시 시작</a> - POST /api/v2/{serviceProvider}/세션/{code}을 사용합니다.</li></ul><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md#perform-authentication-within-secondary-application-without-preselected-mvpd">미리 선택된 mvpd 없이 보조(화면) 응용 프로그램 내에서 인증 수행</a></b><ul><li><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md">인증 세션 검색</a> - GET /api/v2/{serviceProvider}/sessions/{code} 사용</li></ul><br/>제공된 인증 코드가 잘못 입력되었거나 인증 세션이 만료된 경우 클라이언트 응용 프로그램에 오류가 표시됩니다.</td>
+      <td>다음 조건에서 /api/v2/authenticate API를 호출하기 전에 보조(두 번째) 응용 프로그램(화면)에서 사용자 입력을 통해 제출된 인증 코드의 유효성을 검사합니다.<br/><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md#perform-authentication-within-secondary-application-with-preselected-mvpd">미리 선택된 mvpd를 사용하여 보조(화면) 응용 프로그램 내에서 수행되는 인증</a></b><ul><li><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-resume-authentication-session.md">인증 세션 다시 시작</a> - POST /api/v2/{serviceProvider}/sessions/{code} 사용</li></ul><br/><b><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md#perform-authentication-within-secondary-application-without-preselected-mvpd">미리 선택된 mvpd 없이 보조(화면) 응용 프로그램 내에서 인증 수행</a></b><ul><li><a href="/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md">인증 세션 검색</a> - GET /api/v2/{serviceProvider}/sessions/{code}을 사용합니다.</li></ul><br/>제공된 인증 코드가 잘못 입력되었거나 인증 세션이 만료된 경우 클라이언트 응용 프로그램에 오류가 표시됩니다.</td>
       <td>인증 중에 다양한 오류 응답 및 작업 흐름 문제가 발생할 수 있습니다.</td>
    </tr>
    <tr>
@@ -337,7 +337,7 @@ ht-degree: 0%
    </tr>
 </table>
 
-### &#x200B;7. 매개변수 및 헤더 {#recommended-practices-parameters-headers}
+### &#x200B;7. 매개 변수 및 헤더 {#recommended-practices-parameters-headers}
 
 <table style="table-layout:auto">
    <tr>
