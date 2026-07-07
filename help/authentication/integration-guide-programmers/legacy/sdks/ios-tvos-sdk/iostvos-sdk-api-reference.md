@@ -2,7 +2,7 @@
 title: iOS/tvOS API 참조
 description: iOS/tvOS API 참조
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: c2a5591cd8fea44f66fc25beb1fb40532e18d8a6
+source-git-commit: b6ba687240799d1889302019613f426259f147ad
 workflow-type: tm+mt
 source-wordcount: '7035'
 ht-degree: 0%
@@ -1566,3 +1566,4 @@ AccessEnabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거합
    * **3** - 운영 체제 유형
 
 </br>
+

@@ -2,7 +2,7 @@
 title: 사전 영업 시 환경 설정 및 테스트
 description: 사전 영업 시 환경 설정 및 테스트
 exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
-source-git-commit: c2a5591cd8fea44f66fc25beb1fb40532e18d8a6
+source-git-commit: b6ba687240799d1889302019613f426259f147ad
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
@@ -118,3 +118,4 @@ Addresses:  52.26.79.43
 * Adobe Pass 인증 테스트에 더 자세히 알아보려면 [API 테스트 사이트](http://entitlement-prequal.auth.adobe.com/apitest/api.html)를 사용하는 것이 좋습니다.
 
 API 테스트 사이트에 대한 자세한 내용은 [Adobe의 API 테스트 사이트를 사용하여 인증 및 권한 부여 흐름을 테스트하는 방법](/help/authentication/integration-guide-programmers/legacy/notes-technical/test-authn-authz-flows-using-adobes-api-test-site.md)을 참조하십시오.
+

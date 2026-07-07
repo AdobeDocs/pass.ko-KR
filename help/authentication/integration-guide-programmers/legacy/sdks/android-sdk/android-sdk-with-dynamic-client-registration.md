@@ -2,7 +2,7 @@
 title: Android SDK(동적 클라이언트 등록 포함)
 description: Android SDK(동적 클라이언트 등록 포함)
 exl-id: 8d0c1507-8e80-40a4-8698-fb795240f618
-source-git-commit: c2a5591cd8fea44f66fc25beb1fb40532e18d8a6
+source-git-commit: b6ba687240799d1889302019613f426259f147ad
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%
@@ -193,3 +193,4 @@ f. 로그아웃 :
 | invalid_request | 400 | 요청 형식이 잘못되었습니다. SDK에서 서버 호출 수행을 중지해야 합니다. |
 | invalid_client | 403 | 클라이언트 ID는 더 이상 요청을 수행할 수 없습니다. SDK는 클라이언트 등록을 다시 수행해야 합니다. |
 | access_denied | 401 | 액세스\_토큰이 잘못되었습니다. SDK는 새 access_token을 요청해야 합니다. |
+
