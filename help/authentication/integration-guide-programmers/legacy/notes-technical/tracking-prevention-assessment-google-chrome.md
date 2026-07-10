@@ -4,7 +4,7 @@ description: 추적 방지 평가 Google Chrome
 exl-id: f3d552da-2fd7-4ac8-9f82-876625af5d47
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '673'
+source-wordcount: '812'
 ht-degree: 0%
 
 ---
@@ -29,12 +29,12 @@ ht-degree: 0%
 
 Google의 개발자 웹 사이트와 공식 블로그를 통해 집계된 아래 리소스 목록을 확인하여 고객에게 문의해 주시기 바랍니다.
 
-* [Chrome에서 타사 쿠키를 단계적으로 제거하는 다음 단계](https://blog.google/products/chrome/privacy-sandbox-tracking-protection/)
-* [개인 정보 샌드박스에 대한 개발자 설명서](https://developers.google.com/privacy-sandbox)
-* [타사 쿠키 제한 준비](https://developers.google.com/privacy-sandbox/3pcd)
-* [타사 쿠키 페이스아웃 준비](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout)
-* [타사 쿠키의 종료를 준비하는 중](https://developers.google.com/privacy-sandbox/blog/cookie-countdown-2023oct)
-* [Chrome 사용자의 1%에 대해 기본적으로 타사 쿠키가 제한됨](https://developers.google.com/privacy-sandbox/blog/cookie-countdown-2024jan)
+* [Chrome에서 서드파티 쿠키를 단계적으로 제거하는 다음 단계](https://blog.google/products/chrome/privacy-sandbox-tracking-protection/)
+* [개인 정보 샌드박스용 개발자 설명서](https://developers.google.com/privacy-sandbox)
+* [서드파티 쿠키 제한 준비](https://developers.google.com/privacy-sandbox/3pcd)
+* [서드파티 쿠키 페이스아웃 준비](https://developers.google.com/privacy-sandbox/3pcd/prepare/prepare-for-phaseout)
+* [서드파티 쿠키의 종료 준비](https://developers.google.com/privacy-sandbox/blog/cookie-countdown-2023oct)
+* [Chrome 사용자의 1%에 대해 기본적으로 서드파티 쿠키가 제한됨](https://developers.google.com/privacy-sandbox/blog/cookie-countdown-2024jan)
 
 ## 타임라인
 
@@ -76,7 +76,7 @@ Chrome 118부터 [DevTools 문제](https://developer.chrome.com/docs/devtools/is
 
 ### 파손 검사
 
-`--test-third-party-cookie-phaseout` 명령줄 플래그를 사용하여 Chrome을 시작하거나 Chrome 118에서 `#test-third-party-cookie-phaseout`의 `chrome://flags/`을(를) 활성화하십시오.
+`--test-third-party-cookie-phaseout` 명령줄 플래그를 사용하여 Chrome을 시작하거나 Chrome 118에서 `chrome://flags/`의 `#test-third-party-cookie-phaseout`을(를) 활성화하십시오.
 
 이렇게 하면 Google Chrome이 타사 쿠키를 차단하도록 설정되며, 종료 후 상태를 가장 잘 시뮬레이션할 수 있도록 향후 기능이 활성화되어 있는지 확인합니다.
 

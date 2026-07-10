@@ -4,7 +4,7 @@ description: 동시성 모니터링의 API 끝점 사용
 exl-id: eb232926-9c68-4874-b76d-4c458d059f0d
 source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
 workflow-type: tm+mt
-source-wordcount: '2052'
+source-wordcount: '2083'
 ht-degree: 0%
 
 ---
@@ -59,7 +59,7 @@ curl -i -X POST -u ${user}:%{pass} http://streams-stage.adobeprimetime.com/v2/se
 
 다른 활성 스트림이 없으므로 첫 번째 호출에 종료 코드를 제공할 필요가 없습니다. 메타데이터 검색 호출에서 아무 것도 반환되지 않았으므로 메타데이터 속성이 없습니다.
 
-**subject** 및 **idp** 매개 변수는 필수 항목이며 URI 경로 변수로 지정됩니다. Adobe Pass 인증에서 **mvpd** 및 **upstreamUserID** 메타데이터 필드를 호출하여 **subject** 및 **idp** 매개 변수를 가져올 수 있습니다. 메타데이터 API의 [개요](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=ko#)도 참조하세요. 이 예제에서는 값 &quot;12345&quot;을 제목으로 제공하고 &quot;adobe&quot;를 idp로 제공합니다.
+**subject** 및 **idp** 매개 변수는 필수 항목이며 URI 경로 변수로 지정됩니다. Adobe Pass 인증에서 **mvpd** 및 **upstreamUserID** 메타데이터 필드를 호출하여 **subject** 및 **idp** 매개 변수를 가져올 수 있습니다. 메타데이터 API의 [개요](https://experienceleague.adobe.com/docs/primetime/authentication/auth-features/user-metadat/user-metadata-feature.html?lang=en#)도 참조하세요. 이 예제에서는 값 &quot;12345&quot;을 제목으로 제공하고 &quot;adobe&quot;를 idp로 제공합니다.
 
 ```
 # Response Code
@@ -188,10 +188,7 @@ curl -i -X GET -u ${user}:%{pass} http://streams-stage.adobeprimetime.com/v2/run
 
 각 세션에 대해 **terminationCode**&#x200B;을(를) 받고 전체 메타데이터를 가져옵니다.
 
-**Expires** 헤더를 참고하십시오. 하트비트를 보내지 않는 한 첫 번째 세션이 만료되는 시간입니다.
-메타데이터 필드는 세션이 시작될 때 전송된 모든 메타데이터로 채워집니다. 필터링하지 않으므로 보낸 모든 항목을 받게 됩니다.
-응답에는 앱이 동일한 정책을 공유하는 한 다른 테넌트의 앱에서 실행되는 모든 스트림이 포함됩니다.
-호출을 수행할 때 특정 사용자에 대해 실행 중인 세션이 없는 경우 다음 응답을 받게 됩니다.
+**Expires** 헤더를 참고하십시오. 하트비트를 보내지 않는 한 첫 번째 세션이 만료되는 시간입니다.메타데이터 필드는 세션이 시작될 때 전송된 모든 메타데이터로 채워집니다. 필터링하지 않으므로 보낸 모든 항목을 받게 됩니다.응답에는 앱이 동일한 정책을 공유하는 한 다른 테넌트의 앱에서 실행되는 모든 스트림이 포함됩니다.호출을 수행할 때 특정 사용자에 대해 실행 중인 세션이 없는 경우 다음 응답을 받게 됩니다.
 
 ```http
 # Response Code

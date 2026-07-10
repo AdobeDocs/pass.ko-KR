@@ -1,13 +1,13 @@
 ---
 title: API 참조 개요
 description: 끝점, 인증 및 응답 형식을 포함한 동시 모니터링 API에 대한 전체 참조
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+exl-id: 6a1c6507-03d5-4003-8b88-502eb4019346
+source-git-commit: 39384d753e7808fa433f30d8dafabd531dbf3acf
 workflow-type: tm+mt
-source-wordcount: '438'
+source-wordcount: '444'
 ht-degree: 2%
 
 ---
-
 
 # API 참조 개요 {#api-reference-overview}
 
@@ -137,7 +137,7 @@ curl -u "demo-app:" https://streams-stage.adobeprimetime.com/v2/sessions
 
 | 코드 | 설명 | 반환 시 |
 |------|----------------------|------------------------------------------------|
-| 200 | 확인 | 성공한 GET 요청 |
+| 200 | 확인 | 성공적인 GET 요청 |
 | 202 | 생성됨/수락됨 | 성공적인 세션 생성/하트비트 기록됨 |
 | 400 | 잘못된 요청 | 잘못된 매개변수 또는 누락된 필수 필드 |
 | 401 | 승인되지 않음 | 인증이 잘못되었거나 없습니다. |
@@ -192,7 +192,7 @@ X-Client-Version: 1.0.0
 409 충돌 응답을 받으면
 
 1. 정책 위반을 이해하려면 **평가 결과를 구문 분석**&#x200B;합니다.
-2. **에서**&#x200B;충돌 정보 추출`associatedAdvice`
+2. `associatedAdvice`에서 **충돌 정보 추출**
 3. LIFO/FIFO 전략에 따라 **사용자에게 옵션 제공**
 4. LIFO 동작을 구현하는 경우 **종료 코드 사용**
 
