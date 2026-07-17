@@ -4,7 +4,7 @@ description: iOS/tvOS Cookbook
 exl-id: 4743521e-d323-4d1d-ad24-773127cfbe42
 source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
-source-wordcount: '2424'
+source-wordcount: '2436'
 ht-degree: 0%
 
 ---
@@ -29,9 +29,9 @@ iOS/tvOS용 Adobe Pass 인증 권한 부여 솔루션은 궁극적으로 두 개
 
 * AccessEnabler 도메인 - 권한 부여 워크플로우는 다음과 같은 형태로 구현됩니다.
 
-   * Adobe의 백엔드 서버에 대한 네트워크 호출
-   * 인증 및 권한 부여 워크플로와 관련된 비즈니스 논리 규칙
-   * 다양한 리소스 관리 및 워크플로 상태 처리(예: 토큰 캐시)
+  * Adobe의 백엔드 서버에 대한 네트워크 호출
+  * 인증 및 권한 부여 워크플로와 관련된 비즈니스 논리 규칙
+  * 다양한 리소스 관리 및 워크플로 상태 처리(예: 토큰 캐시)
 
 AccessEnabler 도메인의 목적은 권한 부여 워크플로의 모든 복잡성을 숨기고 AccessEnabler 라이브러리를 통해 권한 부여 워크플로를 구현하는 간단한 권한 부여 기본 세트를 상위 레이어 애플리케이션에 제공하는 것입니다.
 
@@ -48,19 +48,19 @@ AccessEnabler의 네트워크 작업은 자체 스레드에서 수행되므로 U
 
 ## Experience Cloud ID 서비스 구성(방문자 ID) {#visitorIDSetup}
 
-[&#x200B; 관점에서 &#x200B;](https://experienceleague.adobe.com/docs/id-service/using/home.html?lang=ko)Experience Cloud ID[!DNL Analytics] 값을 구성하는 것이 중요합니다. `visitorID` 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 [!DNL Adobe Pass] 인증 서버는 이 정보를 수집합니다. Adobe Pass 인증 서비스의 분석을 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. visitorID 설정 방법에 대한 정보는 [여기](#setOptions)에서 찾을 수 있습니다.
+[!DNL Analytics] 관점에서 [Experience Cloud ID](https://experienceleague.adobe.com/docs/id-service/using/home.html) 값을 구성하는 것이 중요합니다. `visitorID` 값이 설정되면 SDK은 모든 네트워크 호출과 함께 이 정보를 전송하며 [!DNL Adobe Pass] 인증 서버는 이 정보를 수집합니다. Adobe Pass 인증 서비스의 분석을 다른 애플리케이션이나 웹 사이트에서 얻은 다른 분석 보고서와 상호 연관시킬 수 있습니다. visitorID 설정 방법에 대한 정보는 [여기](#setOptions)에서 찾을 수 있습니다.
 
 ## 권한 흐름 {#entitlement}
 
-A. [필수 구성 요소](#prereqs) </br>
-B. [시작 흐름](#startup_flow) </br>
-C. [Apple SSO 없는 인증 흐름](#authn_flow_wo_applesso) </br>
-D. [iOS에서 Apple SSO를 사용하는 인증 흐름](#authn_flow_with_applesso) </br>
-E. [tvOS에서 Apple SSO를 사용한 인증 흐름](#authn_flow_with_applesso_tvOS) </br>
-[인증 흐름](#authz_flow) </br>
-예: [미디어 흐름 보기](#media_flow) </br>
-시간: [Apple SSO가 없는 로그아웃 흐름](#logout_flow_wo_AppleSSO) </br>
-I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
+A.  [필수 구성 요소](#prereqs) </br>
+B.  [시작 흐름](#startup_flow) </br>
+C.  [Apple SSO 없이 인증 흐름](#authn_flow_wo_applesso)  </br>
+D.  [iOS에서 Apple SSO를 사용하는 인증 흐름](#authn_flow_with_applesso) </br>
+E.  [tvOS에서 Apple SSO를 사용한 인증 흐름](#authn_flow_with_applesso_tvOS) </br>
+F  [인증 흐름](#authz_flow) </br>
+G.  [미디어 흐름 보기](#media_flow) </br>
+H.  [Apple SSO를 사용하지 않고 로그아웃 흐름](#logout_flow_wo_AppleSSO) </br>
+난..  [Apple SSO로 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 
 
 ### A. 사전 요구 사항 {#prereqs}
@@ -71,54 +71,54 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
    * 성공 은 권한 부여 호출을 계속할 수 있음을 나타냅니다.
 
    * [`displayProviderDialog(mvpds)`](#$dispProvDialog) </br>
-      * 사용자가 공급자(MVPD)를 선택하지 않았고 아직 인증되지 않은 경우에만 [`getAuthentication()`](#$getAuthN)에 의해 트리거됩니다. </br>
-      * `mvpds` 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입니다.
+     * 사용자가 공급자(MVPD)를 선택하지 않았고 아직 인증되지 않은 경우에만 [`getAuthentication()`](#$getAuthN)에 의해 트리거됩니다. </br>
+     * `mvpds` 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입니다.
 
    * `setAuthenticationStatus(status, errorcode)` </br>
-      * `checkAuthentication()`에 의해 매번 트리거됩니다. </br>
-      * 사용자가 이미 인증되고 공급자를 선택한 경우에만 [`getAuthentication()`](#$getAuthN)에 의해 트리거됩니다. </br>
-      * 반환된 상태는 성공 또는 실패이며, errorcode는 실패 유형을 설명합니다.
+     * `checkAuthentication()`에 의해 매번 트리거됩니다. </br>
+     * 사용자가 이미 인증되고 공급자를 선택한 경우에만 [`getAuthentication()`](#$getAuthN)에 의해 트리거됩니다. </br>
+     * 반환된 상태는 성공 또는 실패이며, errorcode는 실패 유형을 설명합니다.
 
    * [`navigateToUrl(url)`](#$nav2url) </br>
-      * 사용자가 MVPD을 선택한 후 [`getAuthentication()`](#$getAuthN)에 의해 트리거됩니다. `url` 매개 변수는 MVPD 로그인 페이지의 위치를 제공합니다.
+     * 사용자가 MVPD을 선택한 후 [`getAuthentication()`](#$getAuthN)에 의해 트리거됩니다. `url` 매개 변수는 MVPD 로그인 페이지의 위치를 제공합니다.
 
    * `sendTrackingData(event, data)` </br>
-      * `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()`에 의해 트리거됩니다.
-      * `event` 매개 변수는 발생한 권한 부여 이벤트를 나타냅니다. `data` 매개 변수는 이벤트와 관련된 값 목록입니다.
+     * `checkAuthentication()`, [`getAuthentication()`](#$getAuthN), `checkAuthorization()`, [`getAuthorization()`](#$getAuthZ), `setSelectedProvider()`에 의해 트리거됩니다.
+     * `event` 매개 변수는 발생한 권한 부여 이벤트를 나타냅니다. `data` 매개 변수는 이벤트와 관련된 값 목록입니다.
 
    * `setToken(token, resource)`
 
-      * 리소스 보기에 대한 권한 부여가 성공한 후 [checkAuthorization()](#checkAuthZ) 및 [getAuthorization()](#$getAuthZ)에 의해 트리거됩니다.
-      * `token` 매개 변수는 수명이 짧은 미디어 토큰이고 `resource` 매개 변수는 사용자가 볼 수 있는 콘텐츠입니다.
+     * 리소스 보기에 대한 권한 부여가 성공한 후 [checkAuthorization()](#checkAuthZ) 및 [getAuthorization()](#$getAuthZ)에 의해 트리거됩니다.
+     * `token` 매개 변수는 수명이 짧은 미디어 토큰이고 `resource` 매개 변수는 사용자가 볼 수 있는 콘텐츠입니다.
 
    * `tokenRequestFailed(resource, code, description)` </br>
-      * 인증에 실패한 후 [checkAuthorization()](#checkAuthZ) 및 [getAuthorization()](#$getAuthZ)에 의해 트리거됩니다.
-      * `resource` 매개 변수는 사용자가 보려고 한 콘텐츠입니다. `code` 매개 변수는 오류가 발생한 유형을 나타내는 오류 코드입니다. `description` 매개 변수는 오류 코드와 관련된 오류를 설명합니다.
+     * 인증에 실패한 후 [checkAuthorization()](#checkAuthZ) 및 [getAuthorization()](#$getAuthZ)에 의해 트리거됩니다.
+     * `resource` 매개 변수는 사용자가 보려고 한 콘텐츠입니다. `code` 매개 변수는 오류가 발생한 유형을 나타내는 오류 코드입니다. `description` 매개 변수는 오류 코드와 관련된 오류를 설명합니다.
 
    * `selectedProvider(mvpd)` </br>
-      * [`getSelectedProvider()`](#getSelProv)에 의해 트리거됩니다.
-      * `mvpd` 매개 변수는 사용자가 선택한 공급자에 대한 정보를 제공합니다.
+     * [`getSelectedProvider()`](#getSelProv)에 의해 트리거됩니다.
+     * `mvpd` 매개 변수는 사용자가 선택한 공급자에 대한 정보를 제공합니다.
 
    * `setMetadataStatus(metadata, key, arguments)`
-      * `getMetadata().`에 의해 트리거됨
-      * `metadata` 매개 변수는 요청한 특정 데이터를 제공합니다. `key` 매개 변수는 [getMetadata()](#getMeta) 요청에 사용된 키이고 `arguments` 매개 변수는 [getMetadata()](#getMeta)에 전달된 동일한 사전입니다.
+     * `getMetadata().`에 의해 트리거됨
+     * `metadata` 매개 변수는 요청한 특정 데이터를 제공합니다. `key` 매개 변수는 [getMetadata()](#getMeta) 요청에 사용된 키이고 `arguments` 매개 변수는 [getMetadata()](#getMeta)에 전달된 동일한 사전입니다.
 
-   * [&#39;preauthorizedResources(authorizedResources)&#39;](#preauthResources)
+   * [`preauthorizedResources(authorizedResources)`](#preauthResources)
 
-      * [`checkPreauthorizedResources()`](#checkPreauth)에 의해 트리거됩니다.
+     * [`checkPreauthorizedResources()`](#checkPreauth)에 의해 트리거됩니다.
 
-      * `authorizedResources` 매개 변수는 사용자가 사용하는 리소스를 나타냅니다.
-은(는) 볼 수 있는 권한이 있습니다.
+     * `authorizedResources` 매개 변수는 사용자가 사용하는 리소스를 나타냅니다.
+       은(는) 볼 수 있는 권한이 있습니다.
 
    * [`presentTvProviderDialog(viewController)`](#presentTvDialog)
 
-      * 현재 요청자가 SSO를 지원하는 MVPD에서 적어도 를 지원하는 경우 [getAuthentication()](#getAuthN)에 의해 트리거됩니다.
-      * viewController 매개 변수는 Apple SSO 대화 상자이며 기본 보기 컨트롤러에 표시되어야 합니다.
+     * 현재 요청자가 SSO를 지원하는 MVPD에서 적어도 를 지원하는 경우 [getAuthentication()](#getAuthN)에 의해 트리거됩니다.
+     * viewController 매개 변수는 Apple SSO 대화 상자이며 기본 보기 컨트롤러에 표시되어야 합니다.
 
    * [`dismissTvProviderDialog(viewController)`](#dismissTvDialog)
 
-      * 사용자 작업에 의해 트리거됩니다(Apple SSO 대화 상자에서 &quot;취소&quot; 또는 &quot;기타 TV 공급자&quot;를 선택하여).
-      * viewController 매개 변수는 Apple SSO 대화 상자로 기본 보기 컨트롤러에서 해제해야 합니다.
+     * 사용자 작업에 의해 트리거됩니다(Apple SSO 대화 상자에서 &quot;취소&quot; 또는 &quot;기타 TV 공급자&quot;를 선택하여).
+     * viewController 매개 변수는 Apple SSO 대화 상자로 기본 보기 컨트롤러에서 해제해야 합니다.
 
 ![](../../../../assets/iOS-flows.png)
 
@@ -127,13 +127,13 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 1. 상위 수준 응용 프로그램을 시작합니다.</br>
 1. Adobe Pass 인증 </br> 시작
 
-   a. [`init`](#$init)을(를) 호출하여 Adobe Pass 인증 AccessEnabler의 단일 인스턴스를 만듭니다.
+   a.  [`init`](#$init)을(를) 호출하여 Adobe Pass 인증 AccessEnabler의 단일 인스턴스를 만듭니다.
    * **종속성:** Adobe Pass 인증 기본 iOS/tvOS 라이브러리(AccessEnabler)
 
-   b. `setRequestor()`을(를) 호출하여 프로그래머의 ID를 설정합니다. 프로그래머의 `requestorID`을(를) 전달하고 선택적으로 Adobe Pass 인증 끝점 배열을 전달합니다. tvOS의 경우 공개 키와 암호를 제공해야 합니다. 자세한 내용은 [클라이언트 없는 설명서](#create_dev)를 참조하세요.
+   b.  `setRequestor()`을(를) 호출하여 프로그래머의 ID를 설정합니다. 프로그래머의 `requestorID` 및 (선택적으로) Adobe Pass 인증 끝점 배열을 전달합니다. tvOS의 경우 공개 키와 암호를 제공해야 합니다. 자세한 내용은 [클라이언트 없는 설명서](#create_dev)를 참조하세요.
 
    * **종속성:** 올바른 Adobe Pass 인증 요청자 ID(Adobe Pass 인증 계정으로 작업)
-관리자(이 항목을 정렬합니다).
+     관리자(이 항목을 정렬합니다).
 
    * **트리거:**
      [setRequestorComplete()](#$setReqComplete) 콜백.
@@ -175,7 +175,7 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
 
 >[!NOTE]
 >
->이 시점에서 사용자는 인증 흐름을 취소할 수 있습니다. 이 경우 UI 계층은 [을(를) 매개 변수로 사용하여 &#x200B;](#setSelProv)setSelectedProvider()`null`을(를) 호출하여 이 이벤트에 대해 AccessEnabler에 알립니다. 이렇게 하면 AccessEnabler가 내부 상태를 정리하고 인증 흐름을 재설정할 수 있습니다.
+>이 시점에서 사용자는 인증 흐름을 취소할 수 있습니다. 이 경우 UI 계층은 `null`을(를) 매개 변수로 사용하여 [setSelectedProvider()](#setSelProv)을(를) 호출하여 이 이벤트에 대해 AccessEnabler에 알립니다. 이렇게 하면 AccessEnabler가 내부 상태를 정리하고 인증 흐름을 재설정할 수 있습니다.
 
 1. 사용자가 성공적으로 로그인하면 애플리케이션 레이어가 특정 사용자 지정 URL의 로드를 감지합니다. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 응용 프로그램에서 인증 흐름이 완료되었으며 `UIWebView/WKWebView` 또는 `SFSafariViewController` 컨트롤러를 닫아도 안전하다는 신호로만 해석해야 합니다. `SFSafariViewController`컨트롤러를 사용해야 하는 경우 특정 사용자 지정 URL이 **`application's custom scheme`**(예: `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`)에 의해 정의되며, 그렇지 않으면 이 특정 사용자 지정 URL이 **`ADOBEPASS_REDIRECT_URL`** 상수(즉, `adobepass://ios.app`)에 의해 정의됩니다.
 
@@ -236,9 +236,9 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
    * [getAuthorization()](#$getAuthZ) 호출이 성공하는 경우: 사용자에게 유효한 AuthN 및 AuthZ 토큰이 있습니다(사용자는 요청된 미디어를 시청하도록 인증 및 승인됨).
 
    * [getAuthorization()](#$getAuthZ)이(가) 실패하면: throw된 예외를 검사하여 해당 유형(AuthN, AuthZ 또는 기타 다른 것)을 확인하십시오.
-      * 인증(AuthN) 오류인 경우 인증 흐름을 다시 시작합니다.
-      * 인증(AuthZ) 오류인 경우 사용자에게 요청된 미디어를 볼 수 있는 권한이 없으며 사용자에게 일종의 오류 메시지가 표시되어야 합니다.
-      * 다른 유형의 오류(연결 오류, 네트워크 오류 등)가 있는 경우 사용자에게 적절한 오류 메시지를 표시합니다.
+     * 인증(AuthN) 오류인 경우 인증 흐름을 다시 시작합니다.
+     * 인증(AuthZ) 오류인 경우 사용자에게 요청된 미디어를 볼 수 있는 권한이 없으며 사용자에게 일종의 오류 메시지가 표시되어야 합니다.
+     * 다른 유형의 오류(연결 오류, 네트워크 오류 등)가 있는 경우 그런 다음 사용자에게 적절한 오류 메시지를 표시합니다.
 
 1. 짧은 미디어 토큰의 유효성을 검사합니다.\
    Adobe Pass 인증 미디어 토큰 검증기 라이브러리를 사용하여 위의 [getAuthorization()](#$getAuthZ) 호출에서 반환된 단기 미디어 토큰을 확인하십시오.
@@ -257,15 +257,15 @@ I. [Apple SSO를 통한 로그아웃 흐름](#logout_flow_with_AppleSSO) </br>
    * 선택한 미디어가 보호되어 있으면 응용 프로그램에서 위의 [인증 흐름](#authz_flow)을 시작합니다.
 
    * 선택한 미디어가 보호되지 않은 경우 다음 동안 미디어를 재생합니다.
-사용자.
+     사용자.
 
 ### H. Apple SSO가 없는 로그아웃 흐름 {#logout_flow_wo_AppleSSO}
 
 1. 사용자를 로그아웃하려면 [`logout()`](#$logout)을(를) 호출하십시오. AccessEnabler는 캐시된 모든 값과 토큰을 지웁니다. 캐시를 지운 후 AccessEnabler가 서버 호출을 수행하여 서버측 세션을 정리합니다. 서버 호출로 인해 IdP로 SAML 리디렉션이 발생할 수 있으므로(IdP측에서 세션 정리가 허용됨) 이 호출은 모든 리디렉션을 따라야 합니다. 이러한 이유로 이 호출은 UIWebView/WKWebView 또는 SFSafariViewController 컨트롤러 내에서 처리되어야 합니다.
 
-   a. 인증 워크플로와 동일한 패턴에 따라 AccessEnabler 도메인은 `navigateToUrl:` 또는 `navigateToUrl:useSVC:` 콜백을 통해 UI 응용 프로그램 계층에 요청하여 UIWebView/WKWebView 또는 SFSafariViewController 컨트롤러를 만들고 콜백의 `url` 매개 변수에 제공된 URL을 로드하도록 지시합니다. 백엔드 서버에 있는 로그아웃 끝점의 URL입니다.
+   a.  인증 워크플로와 동일한 패턴에 따라 AccessEnabler 도메인은 `navigateToUrl:` 또는 `navigateToUrl:useSVC:` 콜백을 통해 UI 응용 프로그램 계층에 요청하여 UIWebView/WKWebView 또는 SFSafariViewController 컨트롤러를 만들고 콜백의 `url` 매개 변수에 제공된 URL을 로드하도록 지시합니다. 백엔드 서버에 있는 로그아웃 끝점의 URL입니다.
 
-   b. 응용 프로그램에서 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러의 활동을 모니터링하고 여러 리디렉션을 거치는 동안 특정 사용자 지정 URL이 로드되는 순간을 감지해야 합니다. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 응용 프로그램에서 로그아웃 흐름이 완료되었으며 `UIWebView/WKWebView` 또는 `SFSafariViewController` 컨트롤러를 닫아도 안전하다는 신호로만 해석해야 합니다. 컨트롤러가 이 특정 사용자 지정 URL을 로드하면 응용 프로그램에서 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러를 닫고 AccessEnabler의 `handleExternalURL:url`API 메서드를 호출해야 합니다. `SFSafariViewController`컨트롤러를 사용해야 하는 경우 특정 사용자 지정 URL이 **`application's custom scheme`**(예: `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`)에 의해 정의되며, 그렇지 않으면 이 특정 사용자 지정 URL이 **`ADOBEPASS_REDIRECT_URL`** 상수(즉, `adobepass://ios.app`)에 의해 정의됩니다.
+   b.  응용 프로그램은 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러의 활동을 모니터링하여 특정 사용자 지정 URL이 몇 번의 리디렉션을 거치는 순간을 감지해야 합니다. 이 특정 사용자 지정 URL은 실제로 유효하지 않으며 제어자가 실제로 로드하기 위한 것이 아닙니다. 응용 프로그램에서 로그아웃 흐름이 완료되었으며 `UIWebView/WKWebView` 또는 `SFSafariViewController` 컨트롤러를 닫아도 안전하다는 신호로만 해석해야 합니다. 컨트롤러가 이 특정 사용자 지정 URL을 로드하면 응용 프로그램에서 `UIWebView/WKWebView or SFSafariViewController` 컨트롤러를 닫고 AccessEnabler의 `handleExternalURL:url`API 메서드를 호출해야 합니다. `SFSafariViewController`컨트롤러를 사용해야 하는 경우 특정 사용자 지정 URL이 **`application's custom scheme`**(예: `adbe.u-XFXJeTSDuJiIQs0HVRAg://adobe.com`)에 의해 정의되며, 그렇지 않으면 이 특정 사용자 지정 URL이 **`ADOBEPASS_REDIRECT_URL`** 상수(즉, `adobepass://ios.app`)에 의해 정의됩니다.
 
    >[!NOTE]
    >
