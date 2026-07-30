@@ -4,7 +4,7 @@ description: TempPass 기능
 exl-id: 1df14090-8e71-4e3e-82d8-f441d07c6f64
 source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
-source-wordcount: '2203'
+source-wordcount: '2245'
 ht-degree: 0%
 
 ---
@@ -62,7 +62,7 @@ TempPass 기능은 참여하는 프로그래머와의 통합으로 Adobe Pass �
 * **TempPass1**: 초기 무료 액세스 기간을 처리하기 위해 TTL(Time-To-Live)이 4시간으로 구성되었습니다.
 * **TempPass2**: 이후의 일별 무료 액세스 간격에 대해 TTL(Time-To-Live)이 10분으로 구성되었습니다.
 
-매일 액세스하는 데 적절한 기능을 유지하려면 매일 00:00시간에 모든 장치에 대해 TempPass2를 다시 설정해야 합니다.
+일일 액세스에 적절한 기능을 보장하려면 모든 장치에 대해 매일 00:00시간에 TempPass2를 재설정해야 합니다.
 
 ### 기능 세부 사항 {#basic-temp-pass-feature-details}
 

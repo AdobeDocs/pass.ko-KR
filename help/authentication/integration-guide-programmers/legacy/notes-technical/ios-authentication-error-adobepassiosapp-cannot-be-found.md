@@ -4,7 +4,7 @@ description: iOS 인증 오류 - adobepass.ios.app을 찾을 수 없음
 exl-id: cd97c6fb-f0fa-45c2-82c1-f28aa6b2fd12
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '387'
+source-wordcount: '389'
 ht-degree: 0%
 
 ---

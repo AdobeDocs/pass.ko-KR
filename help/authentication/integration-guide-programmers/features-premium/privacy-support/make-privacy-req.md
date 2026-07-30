@@ -4,7 +4,7 @@ description: 개인 정보 보호 요청을 하는 방법
 exl-id: abb21306-98d6-4899-914a-bdfa85cbd204
 source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
-source-wordcount: '558'
+source-wordcount: '603'
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 
 * **mvpdID** - MVPD의 고유 식별자입니다.
 * **userID** - 프로그래머 앱의 사용자를 고유하게 식별하지만 MVPD에서 비롯됩니다. 프로그래머 개요에서 사용자 ID 이해 를 참조하십시오.
-* **IMSOrgID** - Adobe Experience Cloud에서 고객을 고유하게 식별하는 Adobe Experience Cloud Identity Management 서비스 조직 ID입니다.
+* **IMSOrgID** - Adobe Experience Cloud에서 고객을 고유하게 식별하는 Adobe Experience Cloud Identity Management 서비스 조직 ID
 
 
 아래 샘플을 확인하십시오.
@@ -253,7 +253,7 @@ Adobe Experience Platform Privacy Service은 개인 데이터에 대한 액세�
 **필수 헤더:**
 
 * 모든 호출에는 헤더 `Authorization`, `x-gw-ims-org-id` 및 `x-api-key`이(가) 필요합니다. 이러한 값을 얻는 방법에 대한 자세한 내용은 **인증 자습서**&#x200B;를 참조하십시오.
-* 요청 본문(예: POST, PUT 및 PATCH 호출)에 페이로드가 있는 모든 요청에는 값이 `Content-Type`인 헤더 `application/json`이(가) 포함되어야 합니다.
+* 요청 본문에 페이로드가 있는 모든 요청(예: POST, PUT 및 PATCH 호출)에는 값이 `application/json`인 헤더 `Content-Type`이(가) 포함되어야 합니다.
 
 <!--
 
