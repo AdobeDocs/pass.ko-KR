@@ -2,10 +2,10 @@
 title: 등록 레코드 삭제
 description: 등록 리소스 삭제
 exl-id: 42707070-2e1f-4847-93fd-30025aef56c1
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 689e2f86550d9fa59337c15dd38767975a1d6d30
 workflow-type: tm+mt
-source-wordcount: '174'
-ht-degree: 1%
+source-wordcount: '180'
+ht-degree: 2%
 
 ---
 
@@ -42,9 +42,9 @@ ht-degree: 1%
 
 정규 코드 레코드를 삭제하고 재사용을 위해 정규 코드를 해제합니다.
 
-| 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
+| 엔드포인트 | 호출자: </br>명 | </br>매개 변수 입력 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;REGGIE_FQDN>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>예:</br></br>&lt;REGGIE_FQDN>/reggie/v1/regcode/ER45RTY | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1. 요청자 ID </br>    (경로 구성 요소)</br>2.  등록 코드 </br>    (경로 구성 요소) | DELETE | 없음 | 204 |
+| &lt;REGGIE_FQDN>/reggie/v1/{requestorId}/regcode/{registrationCode}</br></br>예:</br></br>&lt;REGGIE_FQDN>/reggie/v1/regcode/ER45RTY | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1.  요청자 ID </br>(경로 구성 요소)</br>2.  등록 코드 </br>(경로 구성 요소) | DELETE | 없음 | 204 |
 
 {style="table-layout:auto"}
 
@@ -59,4 +59,4 @@ ht-degree: 1%
 
 </br>
 
-### [REST API 참조로 돌아가기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
+**[REST API 참조로 돌아가기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)**
