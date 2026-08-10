@@ -4,7 +4,7 @@ description: Amazon SSO Cookbook (REST API V1)
 exl-id: 4c65eae7-81c1-4926-9202-a36fd13af6ec
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '613'
+source-wordcount: '629'
 ht-degree: 0%
 
 ---
@@ -89,13 +89,13 @@ Amazon SSO SDK은 SSO 토큰(플랫폼 ID) 페이로드를 얻기 위해 동기 
   ```
 
   SSO 토큰 성공 응답 번들에는 다음이 포함됩니다.
-   * 키가 &quot;SSOToken&quot;인 `string`(으)로 SSO 토큰입니다.
+  * 키가 &quot;SSOToken&quot;인 `string`(으)로 SSO 토큰입니다.
 
   <br/>
 
   SSO 토큰 실패 응답 번들에는 다음이 포함됩니다.
-   * 키가 &quot;ErrorCode&quot;인 `int`(으)로 오류 코드.
-   * 키가 &quot;ErrorDescription&quot;인 `string`(으)로 오류 설명.
+  * 키가 &quot;ErrorCode&quot;인 `int`(으)로 오류 코드.
+  * 키가 &quot;ErrorDescription&quot;인 `string`(으)로 오류 설명.
 
   <br/>
 
@@ -136,10 +136,10 @@ Amazon SSO SDK은 SSO 토큰(플랫폼 ID) 페이로드를 얻기 위해 동기 
 스트리밍 애플리케이션에서 다음을 처리하고 있는지 확인합니다.
 
 * Amazon 장치에서 실행되어야 하는 Amazon 컴패니언 애플리케이션이 없습니다.
-   * 스트리밍 응용 프로그램에서 런타임에 `ClassNotFoundException` 클래스의 `com.amazon.ottssotokenlib.SSOEnabler`이(가) 발생할 수 있습니다.
+  * 스트리밍 응용 프로그램에서 런타임에 `com.amazon.ottssotokenlib.SSOEnabler` 클래스의 `ClassNotFoundException`이(가) 발생할 수 있습니다.
 
 * 위 API에서 반환해야 하는 SSO 토큰(플랫폼 ID) 페이로드가 없습니다.
-   * 스트리밍 애플리케이션은 Amazon 및 Adobe 담당자에게 연락하여 조사할 수 있습니다.
+  * 스트리밍 애플리케이션은 Amazon 및 Adobe 담당자에게 연락하여 조사할 수 있습니다.
 
 ### 워크플로 {#workflow}
 
@@ -153,7 +153,7 @@ Amazon SSO 토큰(플랫폼 ID) 페이로드는 Adobe Pass 인증 종단점에 �
 
 >[!IMPORTANT]
 > 
-> `/authenticate` 호출에서 제공되었으므로 스트리밍 응용 프로그램이 `/regcode` 호출에서 Amazon SSO 토큰(플랫폼 ID) 페이로드의 전송을 건너뛸 수 있습니다.
+> `/regcode` 호출에서 제공되었으므로 스트리밍 응용 프로그램이 `/authenticate` 호출에서 Amazon SSO 토큰(플랫폼 ID) 페이로드의 전송을 건너뛸 수 있습니다.
 
 Adobe Pass 인증은 다음 방법을 지원하여 장치 범위 또는 플랫폼 범위 식별자인 SSO 토큰(플랫폼 ID) 페이로드를 받습니다.
 
