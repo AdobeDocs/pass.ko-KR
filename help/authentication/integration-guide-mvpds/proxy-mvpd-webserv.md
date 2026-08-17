@@ -2,9 +2,9 @@
 title: 프록시 MVPD 웹 서비스
 description: 프록시 MVPD 웹 서비스
 exl-id: f75cbc4d-4132-4ce8-a81c-1561a69d1d3a
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1027'
+source-wordcount: '1057'
 ht-degree: 0%
 
 ---
@@ -223,9 +223,9 @@ Adobe은 당사의 공개 웹 서비스에 프록시 MVPD를 게시/검색하기
 
     하나 이상의 문자가 있어야 하며 문자로 시작하고 모든 문자, 숫자, 대시 또는 밑줄을 사용하여 계속해야 합니다.
 
-&#x200B;- `iframeSize` (선택 사항) - iframeSize 요소는 선택 사항이며, MVPD 인증 페이지가 iFrame에 있어야 하는 경우 iFrame의 크기를 정의합니다. 그렇지 않으면 iframeSize 요소가 없으면 전체 브라우저 리디렉션 페이지에서 인증이 발생합니다.
+&#x200B;- `iframeSize`(선택 사항) - iframeSize 요소는 선택 사항이며, MVPD 인증 페이지가 iFrame에 있어야 하는 경우 iFrame의 크기를 정의합니다. 그렇지 않으면 iframeSize 요소가 없으면 전체 브라우저 리디렉션 페이지에서 인증이 발생합니다.
 &#x200B;- `requestorIds`(선택 사항) - Adobe에서 requestorIds 값을 제공합니다. 프록시화된 MVPD을 하나 이상의 requestorId와 통합해야 합니다. 프록시가 활성화된 MVPD 요소에 &quot;requestorIds&quot; 태그가 없으면 프록시가 활성화된 MVPD이 프록시 MVPD 아래에 통합된 사용 가능한 모든 요청자와 통합됩니다.
-&#x200B;- `ProviderID` (선택 사항) - ProviderID 특성이 id 요소에 있으면 SAML 인증 요청 시 ProviderID 값이 프록시 MVPD에 ID 값 대신 프록시화된 MVPD/SubMVPD ID로 전송됩니다. 이 경우 id 값은 프로그래머 페이지에 표시된 MVPD 선택기에서만 사용되며 내부적으로 Adobe Pass 인증에 의해 사용됩니다. ProviderID 특성의 길이는 1자에서 128자 사이여야 합니다.
+&#x200B;- `ProviderID`(선택 사항) - ProviderID 특성이 id 요소에 있으면 SAML 인증 요청 시 ProviderID 값이 프록시 MVPD에 ID 값 대신 프록시화된 MVPD/SubMVPD ID로 전송됩니다. 이 경우 id 값은 프로그래머 페이지에 표시된 MVPD 선택기에서만 사용되며 내부적으로 Adobe Pass 인증에 의해 사용됩니다. ProviderID 특성의 길이는 1자에서 128자 사이여야 합니다.
 
 ## 보안 {#security}
 

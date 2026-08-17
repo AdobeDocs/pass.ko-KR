@@ -2,10 +2,10 @@
 title: DCR(Dynamic Client Registration) FAQ
 description: DCR(Dynamic Client Registration) FAQ
 exl-id: 12268163-632e-4884-b35d-a29cc8ef45bf
-source-git-commit: 747c3d9b6de537be5e7e0a0244b2b301603d9b18
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1135'
-ht-degree: 0%
+source-wordcount: '1147'
+ht-degree: 1%
 
 ---
 
@@ -39,7 +39,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 
 자세한 내용은 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
-#### &#x200B;2. 등록 단계가 필수입니까? {#rest-api-v2-access-faq2}
+#### &#x200B;2. 등록 단계는 필수입니까? {#rest-api-v2-access-faq2}
 
 등록 단계는 필수이지만, 클라이언트 응용 프로그램은 여전히 유효한 클라이언트 자격 증명 및 액세스 토큰의 캐시된 쌍이 있는 경우 이 단계를 건너뛸 수 있습니다.
 
@@ -55,7 +55,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 
 자세한 내용은 [동적 클라이언트 등록 개요](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md) 설명서를 참조하십시오.
 
-#### &#x200B;4. 소프트웨어 명세서를 생성하고 다운로드하는 방법 {#rest-api-v2-access-faq4}
+#### &#x200B;4. 소프트웨어 명령문을 생성하고 다운로드하는 방법 {#rest-api-v2-access-faq4}
 
 이 작업은 조직 관리자 중 한 사람이나 사용자를 대신하여 활동하는 Adobe Pass 인증 담당자가 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 완료할 수 있습니다.
 
@@ -67,7 +67,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 
 * 해지된 소프트웨어 문을 사용하는 클라이언트 응용 프로그램에서는 더 이상 [권한](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#entitlement) 흐름을 진행할 수 없습니다. 즉, 사용자가 콘텐츠를 재생할 수 없게 됩니다.
 
-#### &#x200B;6. 클라이언트 자격 증명은 무엇이며 얼마나 오래 유효합니까? {#rest-api-v2-access-faq6}
+#### &#x200B;6. 클라이언트 자격 증명이란 무엇이며 얼마나 오래 유효합니까? {#rest-api-v2-access-faq6}
 
 클라이언트 자격 증명은 [용어집](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#client-credentials) 설명서에 정의된 용어입니다.
 
@@ -83,7 +83,7 @@ DCR(Dynamic Client Registration) 프로세스를 진행하려면 클라이언트
 
 Adobe Pass 인증과 클라이언트-서버 및 서버-서버 통합 모두를 수행하는 경우 각 사용자 애플리케이션 인스턴스에 대해 고유한 클라이언트 자격 증명 쌍을 관리하는 것이 좋습니다.
 
-#### &#x200B;8. 클라이언트 응용 프로그램이 영구 저장소에 클라이언트 자격 증명을 캐시해야 합니까? {#rest-api-v2-access-faq8}
+#### &#x200B;8. 클라이언트 애플리케이션이 영구 스토리지에 클라이언트 자격 증명을 캐시해야 합니까? {#rest-api-v2-access-faq8}
 
 클라이언트 애플리케이션은 클라이언트 자격 증명을 저장하고 액세스 토큰을 검색해야 할 때 무기한 사용해야 합니다.
 
@@ -109,11 +109,11 @@ Adobe Pass 인증과 클라이언트-서버 및 서버-서버 통합 모두를 �
 
 자세한 내용은 [액세스 토큰 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/apis/dynamic-client-registration-apis-retrieve-access-token.md) 설명서를 참조하십시오.
 
-#### &#x200B;11. 클라이언트 애플리케이션이 액세스 토큰을 영구 저장소에 캐시해야 합니까? {#rest-api-v2-access-faq11}
+#### &#x200B;11. 클라이언트 애플리케이션이 액세스 토큰을 영구 스토리지에 캐시해야 합니까? {#rest-api-v2-access-faq11}
 
 클라이언트 애플리케이션은 만료될 때까지 액세스 토큰을 저장 및 사용한 다음 삭제하고 새 액세스 토큰을 얻어야 합니다.
 
-#### &#x200B;12. 클라이언트 애플리케이션은 액세스 토큰을 새로 고침하는 방법 {#rest-api-v2-access-faq12}
+#### &#x200B;12. 클라이언트 애플리케이션이 액세스 토큰을 새로 고치는 방법은 무엇입니까? {#rest-api-v2-access-faq12}
 
 클라이언트 애플리케이션은 새 액세스 토큰을 검색하는 것과 동일한 방식으로 액세스 토큰을 새로 고쳐야 하지만 캐시된 클라이언트 자격 증명을 사용해야 합니다.
 
@@ -135,7 +135,7 @@ DCR(Dynamic Client Registration)을 사용하도록 기존 애플리케이션을
 
 +++REST API V2 마이그레이션 FAQ
 
-#### &#x200B;1. 클라이언트 애플리케이션이 기존의 등록된 애플리케이션(소프트웨어 명령문)을 다시 사용할 수 있습니까? {#rest-api-v2-migration-faq1}
+#### &#x200B;1. 클라이언트 애플리케이션이 기존의 등록된 애플리케이션(소프트웨어 명령문)을 재사용할 수 있습니까? {#rest-api-v2-migration-faq1}
 
 클라이언트 애플리케이션은 기존 등록 애플리케이션(소프트웨어 명령문)을 다시 사용할 수 없으므로 REST API V2 사용 전용의 새로운 등록 애플리케이션(소프트웨어 명령문)을 생성하고 다운로드해야 합니다.
 
@@ -147,7 +147,7 @@ DCR(Dynamic Client Registration)을 사용하도록 기존 애플리케이션을
 
 REST API V2를 사용하는 클라이언트 응용 프로그램에 사용되는 등록된 응용 프로그램(소프트웨어 문)을 구분하려면 등록된 응용 프로그램 이름에 &quot;RESV2&quot;와 같은 특정 접미사를 추가해야 합니다.
 
-#### &#x200B;2. 클라이언트 애플리케이션이 기존 사용자 정의 체계를 다시 사용할 수 있습니까? {#rest-api-v2-migration-faq2}
+#### &#x200B;2. 클라이언트 애플리케이션이 기존의 사용자 지정 체계를 다시 사용할 수 있습니까? {#rest-api-v2-migration-faq2}
 
 클라이언트 응용 프로그램은 Adobe Pass [TVE 대시보드](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)를 통해 생성된 기존 사용자 지정 구성표를 다시 사용할 수 있습니다.
 

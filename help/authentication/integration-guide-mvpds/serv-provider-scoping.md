@@ -2,7 +2,7 @@
 title: 서비스 공급자 범위 지정
 description: 서비스 공급자 범위 지정
 exl-id: 730c43e1-46c0-4eec-b562-b1ad93cce6d3
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+source-git-commit: 'null'
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
@@ -25,9 +25,9 @@ Adobe Pass 인증이 프로그래머를 위한 SP 역할을 맡게 되면 인증
 
 Adobe Pass 인증은 인증 요청의 SP 범위 지정을 활성화하는 다음 두 가지 방법을 지원합니다.
 
-* **SAML 발급자 접근 방식입니다.** 이 방법에서는 &quot;요청자 ID&quot;가 SAML 인증 요청의 SAML 발급자 문자열에 추가됩니다.
+* **SAML 발급자 접근 방식**  이 접근 방법에서는 &quot;요청자 ID&quot;가 SAML 인증 요청의 SAML Issuer 문자열에 추가됩니다.
 
-* **사용자 지정 범위 지정 속성 접근 방식입니다.** 이 방법에서는 &quot;요청자 ID&quot;가 SAML 인증 요청에 사용자 지정 &quot;범위 지정&quot; 속성으로 명시적으로 포함됩니다.
+* **사용자 지정 범위 지정 속성 접근 방식입니다.**  이 접근 방법에서는 &quot;요청자 ID&quot;가 SAML 인증 요청에 사용자 지정 &quot;범위 지정&quot; 속성으로 명시적으로 포함됩니다.
 
 >[!NOTE]
 >

@@ -2,9 +2,9 @@
 title: 프로그래머
 description: TVE 대시보드 내 프로그래머 및 해당 구성에 대해 알아봅니다.
 exl-id: b450d7cc-d5b5-4454-8f95-8047856bfb98
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1139'
+source-wordcount: '1144'
 ht-degree: 0%
 
 ---
@@ -118,7 +118,7 @@ TVE 대시보드의 **프로그래머** 섹션에서 계정 권한에 연결된 
 
 1. **인증서 삭제** 대화 상자에서 **삭제**&#x200B;을 선택합니다.
 
-새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. **변경 내용 검토 및 푸시**&#x200B;한 후에만 [사용 가능한 인증서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) 섹션에서 인증서가 삭제됩니다.
+새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. [변경 내용 검토 및 푸시](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)한 후에만 **사용 가능한 인증서** 섹션에서 인증서가 삭제됩니다.
 
 ### 등록된 응용 프로그램 {#registered-applications}
 

@@ -2,9 +2,9 @@
 title: MVPD 목록 제공
 description: MVPD 목록 제공
 exl-id: db2d8f19-d0b9-4195-bf0b-f9de0d96062b
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '254'
+source-wordcount: '262'
 ht-degree: 2%
 
 ---
@@ -41,9 +41,9 @@ ht-degree: 2%
 
 요청자에 대해 구성된 MVPD 목록을 반환합니다.
 
-| 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
+| 엔드포인트 | 호출자: </br>명 | </br>매개 변수 입력 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/config/{requestorId}</br></br>예:</br></br>&lt;SP_FQDN>/api/v1/config/sampleRequestorId | Adobe Pass 인증 | &#x200B;1. 요청자</br>    (경로 구성 요소)</br>_2.  deviceType(더 이상 사용되지 않음)_ | GET | MVPD 목록이 포함된 XML 또는 JSON. | 200 |
+| &lt;SP_FQDN>/api/v1/config/{requestorId}</br></br>예:</br></br>&lt;SP_FQDN>/api/v1/config/sampleRequestorId | Adobe Pass 인증 | &#x200B;1.  요청자</br>(경로 구성 요소)</br>_2.  deviceType(더 이상 사용되지 않음)_ | GET | MVPD 목록이 포함된 XML 또는 JSON. | 200 |
 
 {style="table-layout:auto"}
 

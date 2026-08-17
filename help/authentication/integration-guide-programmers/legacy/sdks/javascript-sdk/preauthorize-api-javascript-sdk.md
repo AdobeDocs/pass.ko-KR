@@ -2,9 +2,9 @@
 title: 사전 승인
 description: JavaScript 사전 권한 부여
 exl-id: b7493ca6-1862-4cea-a11e-a634c935c86e
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1488'
+source-wordcount: '1527'
 ht-degree: 0%
 
 ---
@@ -143,14 +143,14 @@ public func build() -> PreauthorizeRequest
 #### 공개 작업: 문자열; {#public-action-string}
 
 * 상황을 해결하기 위한 권장 조치입니다.
-   * **없음**: 이 문제를 해결하기 위한 사전 정의된 작업이 없습니다. 이는 공용 API의 부적절한 호출을 나타낼 수 있습니다.
-   * **구성**: TVE 대시보드를 통해 또는 지원 팀에 연락하여 구성을 변경해야 합니다.
-   * **application-registration**: 응용 프로그램을 다시 등록해야 합니다.
-   * **인증**: 사용자는 인증하거나 다시 인증해야 합니다.
-   * **인증**: 사용자는 특정 리소스에 대한 인증을 받아야 합니다.
-   * **저하**: 일부 형식의 저하를 적용해야 합니다.
-   * **다시 시도**: 요청을 다시 시도하면 문제가 해결될 수 있습니다.
-   * **다음 시간 후에 다시 시도**: 표시된 시간 후에 요청을 다시 시도하면 문제가 해결될 수 있습니다.
+  * **없음**: 이 문제를 해결하기 위한 사전 정의된 작업이 없습니다. 이는 공용 API의 부적절한 호출을 나타낼 수 있습니다.
+  * **구성**: TVE 대시보드를 통해 또는 지원 팀에 연락하여 구성을 변경해야 합니다.
+  * **application-registration**: 응용 프로그램을 다시 등록해야 합니다.
+  * **인증**: 사용자는 인증하거나 다시 인증해야 합니다.
+  * **인증**: 사용자는 특정 리소스에 대한 인증을 받아야 합니다.
+  * **저하**: 일부 형식의 저하를 적용해야 합니다.
+  * **다시 시도**: 요청을 다시 시도하면 문제가 해결될 수 있습니다.
+  * **다음 시간 후에 다시 시도**: 표시된 시간 후에 요청을 다시 시도하면 문제가 해결될 수 있습니다.
 * 빈 문자열 또는 `null` 값을 포함할 수 있습니다.
 
 ### 클래스 결정 {#class-decision}
@@ -344,11 +344,10 @@ accessEnablerApi.preauthorize(request, callback);
     &quot;authorized&quot;: false14&rbrace;&rbrace;
     &rbrack;
     &rbrace;
+    
     &quot;
-    
-    
 
-</td>
+    </td>
   </tr>
 
 <tr>

@@ -2,9 +2,9 @@
 title: 표준 메타데이터 속성
 description: 표준 메타데이터 속성
 exl-id: 99ffa98c-213f-47a5-a6e7-fbacb77875d0
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1053'
+source-wordcount: '1295'
 ht-degree: 0%
 
 ---
@@ -73,11 +73,11 @@ ht-degree: 0%
 
 * 특정 필드 값에만 적용되도록 정책을 구성할 수 있습니다(예: 전용 iOS 정책: 여기서 `osType`은(는) `iOS`임).
 * 특정 필드에 대해 고유한 값의 수를 제한할 수 있습니다. 몇 가지 예는 다음과 같습니다.
-   * 고유 장치가 X개 이하입니다. `HAVING DISTINCT COUNT(deviceId) <= 2`
-   * X개 이하의 고유한 우편번호: `HAVING DISTINCT COUNT(zipcode) <= 3`
+  * 고유 장치가 X개 이하입니다. `HAVING DISTINCT COUNT(deviceId) <= 2`
+  * X개 이하의 고유한 우편번호: `HAVING DISTINCT COUNT(zipcode) <= 3`
 * 필드 값당 활성 스트림 수를 제한할 수 있습니다. 몇 가지 예는 다음과 같습니다.
-   * 단일 장치 형식에 대해 활성 스트림이 X개 이하입니다. `GROUP BY deviceType HAVING COUNT(streamId) <= 3`
-   * `SELECT COUNT(streamId) AS streamCount WHERE contentType='live' HAVING streamCount <= 3` Live 콘텐츠 스트림에 대한 활성 스트림 수 제한
+  * 단일 장치 형식에 대해 활성 스트림이 X개 이하입니다. `GROUP BY deviceType HAVING COUNT(streamId) <= 3`
+  * `SELECT COUNT(streamId) AS streamCount WHERE contentType='live' HAVING streamCount <= 3` Live 콘텐츠 스트림에 대한 활성 스트림 수 제한
 
 [Zendesk에서 티켓을 만들기](mailto:tve-support@adobe.com)하여 동시성 모니터링 팀에 연락하여 구현할 정책을 지정하십시오.
 

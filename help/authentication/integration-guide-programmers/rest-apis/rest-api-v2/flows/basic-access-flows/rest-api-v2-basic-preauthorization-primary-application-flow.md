@@ -2,7 +2,7 @@
 title: 기본 사전 인증 - 기본 애플리케이션 - 플로우
 description: REST API V2 - 기본 사전 인증 - 기본 애플리케이션 - 흐름
 exl-id: f557f6c3-d5b2-4ec8-be51-91a90fbd31c0
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
@@ -28,9 +28,9 @@ Adobe Pass 인증 권한 내의 **사전 인증 흐름**&#x200B;을 사용하면
 특정 MVPD을 사용하여 사전 인증 결정을 검색하기 전에 다음 사전 요구 사항이 충족되는지 확인하십시오.
 
 * 스트리밍 애플리케이션에는 기본 인증 흐름 중 하나를 사용하여 MVPD에 대해 성공적으로 생성된 올바른 일반 프로필이 있어야 합니다.
-   * [기본 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-primary-application-flow.md)
-   * [사전 선택된 mvpd로 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
-   * [미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
+  * [기본 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-primary-application-flow.md)
+  * [사전 선택된 mvpd로 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
+  * [미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
 * 스트리밍 애플리케이션은 리소스 목록과 함께 관련 상태를 표시하기 위해 사전 인증 결정을 검색하려고 합니다.
 
 ### 워크플로 {#workflow-retrieve-preauthorization-decisions-using-specific-mvpd}
@@ -47,8 +47,8 @@ Adobe Pass 인증 권한 내의 **사전 인증 흐름**&#x200B;을 사용하면
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 사전 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-preauthorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.

@@ -2,9 +2,9 @@
 title: 클라이언트 자격 증명 검색
 description: Dynamic Client Registration API - 클라이언트 자격 증명 검색
 exl-id: 0b39768b-25b8-47b9-8080-59c56fb829fb
-source-git-commit: 110e8519d6c042cc38de3fbefcd34297b6edcfad
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '437'
+source-wordcount: '472'
 ht-degree: 1%
 
 ---
