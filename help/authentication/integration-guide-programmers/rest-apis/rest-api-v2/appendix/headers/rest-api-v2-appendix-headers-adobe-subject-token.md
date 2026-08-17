@@ -2,9 +2,9 @@
 title: 헤더 - Adobe-Subject-Token
 description: REST API V2 - 헤더 - Adobe-Subject-Token
 exl-id: 906d88f4-3b8f-491a-ab58-8e63d3b958d8
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '166'
+source-wordcount: '179'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 <b>unique_platform_identifier</b>
 
-고유한 플랫폼 식별자 정보를 포함하는 서명되거나 암호화된 JSON 웹 토큰(`JWS`)인 JSON 웹 서명(`JWE`) 또는 JSON 웹 암호화(`JWT`)입니다.
+고유한 플랫폼 식별자 정보를 포함하는 서명되거나 암호화된 JSON 웹 토큰(`JWT`)인 JSON 웹 서명(`JWS`) 또는 JSON 웹 암호화(`JWE`)입니다.
 
 이 기능은 다음 플랫폼에 사용할 수 있습니다.
 

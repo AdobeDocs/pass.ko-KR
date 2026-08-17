@@ -2,7 +2,7 @@
 title: 기본 프로필 - 기본 애플리케이션 - 흐름
 description: REST API V2 - 기본 프로필 - 기본 애플리케이션 - 흐름
 exl-id: 19ddf382-9a32-4b94-aa84-7611c0e1780e
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
 source-wordcount: '974'
 ht-degree: 0%
@@ -53,8 +53,8 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
    >
    > 자세한 내용은 [프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) API 설명서를 참조하십시오.
    >
-   > * _과(와) 같은 모든_&#x200B;필수`serviceProvider` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 수신된 매개 변수와 헤더를 기반으로 모든 유효한 프로필을 식별합니다.
@@ -101,8 +101,8 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
    >
    > 자세한 내용은 [특정 mvpd에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`mvpd` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider` 및 `mvpd`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.
@@ -150,8 +150,8 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 스
    >
    > 다음에 대한 자세한 내용은 [특정 코드에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API 설명서를 참조하십시오.
    >
-   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`code` 매개 변수
-   > * _과(와) 같은 모든_ required`Authorization` 헤더
+   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.

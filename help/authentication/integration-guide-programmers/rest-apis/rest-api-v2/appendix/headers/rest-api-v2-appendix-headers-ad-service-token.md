@@ -2,9 +2,9 @@
 title: 헤더 - AD-Service-Token
 description: REST API V2 - 헤더 - AD-Service-Token
 exl-id: 856f76fc-cde6-4b3f-81f7-deaa0df015dc
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '252'
+source-wordcount: '266'
 ht-degree: 1%
 
 ---
@@ -43,7 +43,7 @@ ht-degree: 1%
 
 <b>unique_user_identifier</b>
 
-고유 사용자 식별자 정보를 포함하는 서명된 JSON 웹 토큰(`JWS`)인 JSON 웹 서명(`JWT`)입니다.
+고유 사용자 식별자 정보를 포함하는 서명된 JSON 웹 토큰(`JWT`)인 JSON 웹 서명(`JWS`)입니다.
 
 `JWT`에 다음 특성이 있습니다.
 

@@ -2,7 +2,7 @@
 title: Android 사전 인증
 description: Android 사전 인증
 exl-id: b5337595-135f-4981-a578-2da432f125d6
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 'null'
 workflow-type: tm+mt
 source-wordcount: '218'
 ht-degree: 0%
@@ -26,7 +26,7 @@ ht-degree: 0%
 
 
 
-Adobe Pass 인증 서비스에서 사전 인증 API 요청을 처리할 때 예기치 않은 오류(예: 네트워크 문제, MVPD 인증 끝점을 사용할 수 없음 등)가 발생하는 경우, 영향을 받는 리소스에 대해 하나 이상의 분리된 오류 정보가 사전 인증 API 응답 결과의 일부로 포함됩니다.
+예기치 않은 오류(예: 네트워크 문제, MVPD 인증 끝점을 사용할 수 없음 등)가 발생하는 경우 Adobe Pass 인증 서비스에서 사전 승인 API 요청을 처리할 때 발생하는 하나 이상의 분리된 오류 정보는 사전 승인 API 응답 결과의 일부로 영향을 받는 리소스에 포함됩니다.
 
 
 ## `public void preauthorize(PreauthorizeRequest request, AccessEnablerCallback<PreauthorizeResponse> callback);`

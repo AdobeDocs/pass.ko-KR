@@ -2,9 +2,9 @@
 title: 임시 액세스 흐름
 description: REST API V2 - 임시 액세스 흐름
 exl-id: 387fcdb0-3a42-4893-ba83-e809426f92be
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '3223'
+source-wordcount: '3259'
 ht-degree: 0%
 
 ---
@@ -68,8 +68,8 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    > 
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **기본 TempPass 유효성 검사:** Adobe Pass 서버는 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 적용되는 기본 TempPass의 올바른 구성 설정이 있는지 확인합니다.
@@ -137,8 +137,8 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -215,8 +215,8 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
    >
    > 자세한 내용은 [특정 mvpd에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`mvpd` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider` 및 `mvpd`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -261,8 +261,8 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
    > 
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -309,8 +309,8 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -389,8 +389,8 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
    >
    > 자세한 내용은 [특정 mvpd를 사용하여 권한 부여 결정 검색](../../apis/decisions-apis/rest-api-v2-decisions-apis-retrieve-authorization-decisions-using-specific-mvpd.md) API 설명서를 참조하십시오.
    > 
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`resources` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `resources`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
    >
    > <br/>
@@ -472,8 +472,8 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
    >
    > 자세한 내용은 [특정 mvpd에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API 설명서를 참조하십시오.
    > 
-   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`mvpd` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider` 및 `mvpd`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **기본 TempPass 유효성 검사:** Adobe Pass 서버는 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 적용되는 기본 TempPass의 올바른 구성 설정이 있는지 확인합니다.
@@ -543,8 +543,8 @@ TempPass 기능에 대한 자세한 내용은 [TempPass](../../../../features-pr
    >
    > 자세한 내용은 [특정 mvpd에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) API 설명서를 참조하십시오.
    > 
-   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`mvpd` 매개 변수
-   > * _및_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider` 및 `mvpd`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization` 및 `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **프로모션 TempPass 유효성 검사:** Adobe Pass 서버는 제공된 `serviceProvider`과(와) `mvpd` 간의 통합에 적용되는 프로모션 TempPass의 올바른 구성 설정이 있는지 확인합니다.

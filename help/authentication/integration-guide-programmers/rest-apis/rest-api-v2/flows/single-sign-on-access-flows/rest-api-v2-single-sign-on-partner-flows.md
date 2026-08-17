@@ -2,9 +2,9 @@
 title: SSO(Single Sign-On) - 파트너 - 플로우
 description: REST API V2 - Single Sign-On - 파트너 - 흐름
 exl-id: 5735d67f-a311-4d03-ad48-93c0fcbcace5
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1468'
+source-wordcount: '1504'
 ht-degree: 0%
 
 ---
@@ -76,8 +76,8 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
    >
    > 자세한 내용은 [파트너 인증 요청 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-partner-authentication-request.md) API 설명서를 참조하십시오.
    >
-   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`partner` 매개 변수
-   > * _,_, `Authorization`, `AP-Device-Identifier` 및 `Content-Type`과(와) 같은 모든 `X-Device-Info`필수`AP-Partner-Framework-Status` 헤더
+   > * `serviceProvider` 및 `partner`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 헤더 및 매개 변수
    >
    > <br/>
@@ -190,8 +190,8 @@ Apple 플랫폼용 SSO(Single Sign-On)에 대한 자세한 내용은 [Apple SSO 
    >
    > 자세한 내용은 [파트너 인증 응답을 사용하여 프로필 만들기 및 검색](../../apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `partner`필수`SAMLResponse` 매개 변수
-   > * _,_, `Authorization`, `AP-Device-Identifier` 및 `Content-Type`과(와) 같은 모든 `X-Device-Info`필수`AP-Partner-Framework-Status` 헤더
+   > * `serviceProvider`, `partner` 및 `SAMLResponse`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`, `Content-Type`, `X-Device-Info` 및 `AP-Partner-Framework-Status`과(와) 같은 모든 _필수_ 헤더
    > * 모든 _선택적_ 헤더 및 매개 변수
    >
    > <br/>

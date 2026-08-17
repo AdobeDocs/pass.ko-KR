@@ -2,9 +2,9 @@
 title: Adobe Pass Authentication Access Enabler 사용 시 iOS에서 SSO
 description: Adobe Pass Authentication Access Enabler 사용 시 iOS에서 SSO
 exl-id: 882f0abb-2e6e-461d-a375-3ab410991935
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1144'
+source-wordcount: '1216'
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ iOS에서의 SSO는 다음 조건에 의해 결정됩니다.
 SSO 동작은 다음과 같습니다.
 
 - **iOS 6 이하**: SSO는 동일한 팀이나 다른 팀에서 개발한 앱 간에 자동으로 작동합니다. 장치 ID는 MAC 주소(모든 앱에서 동일한 값이 생성됨)를 기반으로 계산되며 저장 영역은 모든 앱에 공통됩니다(사용자 지정 대지는 iOS 6 이하의 앱에서 공유할 수 있음).
-   - **중요:** iOS SDK 1.9.4 릴리스에는 [최소 iOS 배포 대상을 iOS 7로 늘렸습니다.](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)
+  - **중요:** iOS SDK 1.9.4 릴리스에는 [최소 iOS 배포 대상을 iOS 7로 늘렸습니다.](https://tve.zendesk.com/hc/en-us/articles/204963209-iOS-Native-AccessEnabler-Library)
 - **iOS 7 이상**: SSO는 다음 조건에서 작동합니다.
 
 1. 앱은 동일한 Apple 배포 프로필 또는 동일한 팀에 속한 프로필을 사용하여 게시됩니다. 이는 앱이 iOS 7 이상에서 사용자 지정 게시판을 공유하는 유일한 방법입니다. 다른 모든 시나리오에서는 페이스트보드가 애플리케이션별로 샌드박스됩니다. [*https://developer.apple.com/library/IOs/releasenotes/General/RN-iOSSDK-7.0/index.html*](https://developer.apple.com/library/ios/releasenotes/General/RN-iOSSDK-7.0/index.html)부터: \+\[`UIPasteboard pasteboardWithName:create:\`] 및 +\[`UIPasteboard pasteboardWithUniqueName`\]에서 이제 같은 응용 프로그램 그룹에 있는 앱만 임시 보드에 액세스할 수 있도록 지정된 이름을 고유합니다. 개발자가 이미 존재하고 동일한 앱 세트에 속해 있지 않은 이름의 임시 보드를 만들려고 하면 고유한 개인 임시 보드를 받게 됩니다. 이 기능은 시스템에서 제공한 대지보드, 일반 사항 및 찾기에 영향을 주지 않습니다.

@@ -2,10 +2,10 @@
 title: 인증 토큰 검색
 description: 인증 토큰 검색
 exl-id: 0b010958-efa8-4dd9-b11b-5d10f51f5680
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '373'
-ht-degree: 0%
+source-wordcount: '375'
+ht-degree: 1%
 
 ---
 
@@ -42,9 +42,9 @@ ht-degree: 0%
 인증(AuthZ) 토큰을 검색합니다.
 
 
-| 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
+| 엔드포인트 | 호출자: </br>명 | </br>매개 변수 입력 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/tokens/authz</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/tokens/authz | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1. 요청자(필수)</br>2.  deviceId(필수)</br>3.  리소스(필수)</br>4.  device_info/X-Device-Info(필수)</br>5.  _deviceType_</br> 6.  _deviceUser_(사용하지 않음)</br>7.  _appId_(더 이상 사용되지 않음) | GET | &#x200B;1. 성공</br>2.  인증 토큰 </br>    찾을 수 없음 또는 만료됨:   </br>    XML 설명 이유 </br>    인증 토큰을 찾을 수 없음</br>3.  인증 토큰 </br>    찾을 수 없음: </br>    XML 설명</br>4.  인증 토큰 </br>    만료됨: </br>    XML 설명 | 200 - 성공 </br>412 - AuthN 없음</br></br>404 - AuthZ 없음</br></br>410 - AuthZ 만료됨 |
+| &lt;SP_FQDN>/api/v1/tokens/authz</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/tokens/authz | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1.  요청자(필수)</br>2.  deviceId(필수)</br>3.  리소스(필수)</br>4.  device_info/X-Device-Info(필수)</br>5.  _deviceType_</br> 6.  _deviceUser_(사용하지 않음)</br>7.  _appId_(더 이상 사용되지 않음) | GET | &#x200B;1.  성공</br>2.  인증 토큰 </br>을(를) 찾을 수 없거나 만료되었습니다. </br> 인증 토큰을 찾을 수 없는 이유 </br>을(를) 설명하는 XML입니다</br>3.  인증 토큰 </br>을(를) 찾을 수 없습니다. </br> XML 설명</br>4.  인증 토큰 </br>이(가) 만료됨: </br> XML 설명 | 200 - 성공 </br>412 - AuthN 없음</br></br>404 - AuthZ 없음</br></br>410 - AuthZ 만료됨 |
 
 {style="table-layout:auto"}
 
@@ -56,7 +56,7 @@ ht-degree: 0%
 | deviceId | 장치 ID 바이트입니다. |
 | 리소스 | resourceId(또는 MRSS 조각)가 포함된 문자열은 사용자가 요청한 콘텐츠를 식별하고 MVPD 인증 종단점에서 인식합니다. |
 | device_info/</br></br>X-Device-Info | 스트리밍 장치 정보입니다.</br></br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. </br></br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
-| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br>이 매개 변수가 올바르게 설정된 경우 ESM은 Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) 지표를 제공하므로 Roku, AppleTV 및 Xbox와 같은 다양한 유형의 분석을 수행할 수 있습니다.</br></br>참조, [전달 지표에서 클라이언트 없는 장치 유형 매개 변수를 사용할 때의 이점&#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
+| _deviceType_ | 장치 유형(예: Roku, PC).</br></br>이 매개 변수가 올바르게 설정되어 있으면 ESM은 Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) 지표를 제공하므로 Roku, AppleTV 및 Xbox와 같은 다양한 유형의 분석을 수행할 수 있습니다.</br></br>참조: [통과 지표에서 Clientless 장치 유형 매개 변수를 사용할 때의 이점&#x200B;](/help/authentication/integration-guide-programmers/legacy/notes-technical/benefits-of-using-the-clientless-devicetype-parameter-in-pass-metrics.md)</br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
 | _deviceUser_ | 장치 사용자 식별자. |
 | _appId_ | 애플리케이션 ID/이름입니다. </br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
 

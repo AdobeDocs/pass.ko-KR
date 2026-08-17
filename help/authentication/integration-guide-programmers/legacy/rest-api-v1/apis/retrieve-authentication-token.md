@@ -2,9 +2,9 @@
 title: 인증 토큰 검색
 description: 인증 토큰 검색
 exl-id: 7fb03854-edad-41e7-b218-1858fc071876
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '306'
 ht-degree: 0%
 
 ---
@@ -41,9 +41,9 @@ ht-degree: 0%
 
 인증(AuthN) 토큰을 검색합니다.
 
-| 엔드포인트 | 호출자: </br>명 | 입력   </br>매개 변수 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
+| 엔드포인트 | 호출자: </br>명 | </br>매개 변수 입력 | HTTP </br>메서드 | 응답 | HTTP </br>응답 |
 | --- | --- | --- | --- | --- | --- |
-| &lt;SP_FQDN>/api/v1/tokens/authn</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/tokens/authn | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1. 요청자(필수)</br>2.  deviceId(필수)</br>3.  device_info/X-Device-Info(필수)</br>4.  _deviceType_(사용하지 않음)</br>5.  _deviceUser_(사용하지 않음)</br>6.  _appId_(더 이상 사용되지 않음) | GET | 실패한 경우 인증 정보 또는 오류 세부 정보가 포함된 XML 또는 JSON. | 200 - 성공  </br>404 - 토큰을 찾을 수 없음 </br>410 - 토큰이 만료됨 |
+| &lt;SP_FQDN>/api/v1/tokens/authn</br></br>예: </br></br>&lt;SP_FQDN>/api/v1/tokens/authn | 스트리밍 앱</br></br>또는</br></br>프로그래머 서비스 | &#x200B;1.  요청자(필수)</br>2.  deviceId(필수)</br>3.  device_info/X-Device-Info(필수)</br>4.  _deviceType_(사용하지 않음)</br>5.  _deviceUser_(사용하지 않음)</br>6.  _appId_(더 이상 사용되지 않음) | GET | 실패한 경우 인증 정보 또는 오류 세부 정보가 포함된 XML 또는 JSON. | 200 - 성공  </br>404 - 토큰을 찾을 수 없음 </br>410 - 토큰이 만료됨 |
 
 {style="table-layout:auto"}
 
@@ -53,8 +53,8 @@ ht-degree: 0%
 | 요청자 | 이 작업이 유효한 Programmer requestorId입니다. |
 | deviceId | 장치 ID 바이트입니다. |
 | device_info/</br></br>X-Device-Info | 스트리밍 장치 정보입니다.</br></br>**참고**: 이 매개 변수는 URL 매개 변수로 device_info를 전달할 수 있지만, 이 매개 변수의 잠재적 크기와 GET URL 길이 제한으로 인해 http 헤더에 X-Device-Info로 전달해야 합니다. </br></br>자세한 내용은 [장치 및 연결 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)을 참조하세요. |
-| _deviceType_ | 디바이스 유형(예: Roku, PC).</br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
-| _deviceUser_ | 장치 사용자 식별자.</br></br>**참고**: 사용하는 경우 deviceUser의 값은 [등록 코드 만들기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) 요청과 동일해야 합니다. |
+| _deviceType_ | 장치 유형(예: Roku, PC).</br></br>**참고**: device_info가 이 매개 변수를 대체합니다. |
+| _deviceUser_ | 장치 사용자 식별자입니다.</br></br>**참고**: 사용하는 경우 deviceUser는 [등록 코드 만들기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) 요청과 동일한 값을 가져야 합니다. |
 | _appId_ | 애플리케이션 ID/이름입니다. </br></br>**참고**: device_info가 이 매개 변수를 대체합니다. 사용하는 경우 `appId`은(는) [등록 코드 만들기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) 요청과 동일한 값을 가져야 합니다. |
 
 {style="table-layout:auto"}

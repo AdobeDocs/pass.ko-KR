@@ -2,9 +2,9 @@
 title: Apple SSO Cookbook (REST API V1)
 description: Apple SSO Cookbook (REST API V1)
 exl-id: 072a011f-e1bb-4d3e-bcb5-697f2d1739cc
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '1496'
+source-wordcount: '1596'
 ht-degree: 0%
 
 ---
@@ -265,7 +265,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>Pro 팁:</u>** 비디오 구독자 계정 프레임워크에서 가져온 공급자 식별자는 Adobe Pass 인증 구성 측면에서 *`platformMappingId`*&#x200B;을(를) 나타냅니다. 따라서 응용 프로그램은 MVPD 인증 *`platformMappingId`* MVPD 목록 제공[&#x200B; API 서비스를 통해 &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) 값을 사용하여 Adobe Pass id 속성 값을 결정해야 합니다.
+> **<u>Pro 팁:</u>** 비디오 구독자 계정 프레임워크에서 가져온 공급자 식별자는 Adobe Pass 인증 구성 측면에서 *`platformMappingId`*&#x200B;을(를) 나타냅니다. 따라서 응용 프로그램은 MVPD 인증 [MVPD 목록 제공](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/provide-mvpd-list.md) API 서비스를 통해 *`platformMappingId`* 값을 사용하여 Adobe Pass id 속성 값을 결정해야 합니다.
 
 #### 단계: &quot;프로필을 가져오기 위해 Adobe 요청을 파트너 SSO로 전달&quot; {#step7}
 
@@ -358,7 +358,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 
 >[!TIP]
 >
-> **<u>팁:</u>** 토큰을 성공적으로 만들었고 인증 흐름에 사용할 준비가 되었음을 나타내는 [이(가) 될 Adobe Pass 인증 &#x200B;](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md)토큰 교환&#x200B;*`204 No Content`* 성공 응답을 통해 이 응답을 구현합니다.
+> **<u>팁:</u>** 토큰을 성공적으로 만들었고 인증 흐름에 사용할 준비가 되었음을 나타내는 *`204 No Content`*&#x200B;이(가) 될 Adobe Pass 인증 [토큰 교환](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/token-exchange.md) 성공 응답을 통해 이 응답을 구현합니다.
 
 #### 단계: &quot;일반 인증 워크플로 시작&quot; {#step10}
 
@@ -380,8 +380,8 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 > **<u>Pro 팁:</u>** iOS/iPadOS 구현의 경우 아래 단계를 따르십시오.
 
 * 응용 프로그램은 첫 번째 장치(화면)에서 최종 사용자에게 표시되지 않아야 하는 등록 코드를 [획득](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md)해야 합니다.
-* 응용 프로그램은 등록 코드와 [WKWebView](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) 또는 [SFSafaariViewController](https://developer.apple.com/documentation/webkit/wkwebview) 구성 요소를 사용하여 첫 번째 장치(화면)에서 [인증을 시작](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller)해야 합니다.
-* [WKWebView](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) 또는 [SFSafariViewController](https://developer.apple.com/documentation/webkit/wkwebview) 구성 요소가 닫히면 응용 프로그램에서 첫 번째 장치(화면)에서 인증 상태를 알기 위해 [폴링을 시작해야 합니다](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller).
+* 응용 프로그램은 등록 코드와 [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) 또는 [SFSafaariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) 구성 요소를 사용하여 첫 번째 장치(화면)에서 [인증을 시작](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md)해야 합니다.
+* [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) 또는 [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) 구성 요소가 닫히면 응용 프로그램에서 첫 번째 장치(화면)에서 인증 상태를 알기 위해 [폴링을 시작해야 합니다](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md).
 * 인증 토큰이 생성될 때 응용 프로그램이 첫 번째 장치(화면)에서 [폴링](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md)을 중지해야 합니다.
 
 #### 단계: &quot;인증 흐름 진행&quot; {#step11}
@@ -403,7 +403,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 > **<u>Pro 팁:</u>** tvOS 구현을 보려면 아래 단계를 따르십시오.
 
 * 응용 프로그램은 Adobe Pass Authentication 서비스에서 &quot;*tokenSource&quot;* [사용자 메타데이터](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)를 사용하여 파트너 SSO를 통해 로그인한 결과로 인증이 발생했는지 여부를 확인해야 합니다.
-* *`Settings -> Accounts -> TV Provider`*&quot;tokenSource&quot;**값이 &quot;** Apple&quot;과(와) 같은 경우 응용 프로그램에서 tvOS *only*&#x200B;에서 *에서 명시적으로 로그아웃하도록 사용자에게 지시하거나 프롬프트를 표시해야 합니다.*
+* *&quot;tokenSource&quot;* 값이 &quot;*Apple&quot;과(와) 같은 경우 응용 프로그램에서 tvOS **only**에서&#x200B;*`Settings -> Accounts -> TV Provider`*에서 명시적으로 로그아웃하도록 사용자에게 지시하거나 프롬프트를 표시해야 합니다.*
 * 응용 프로그램은 직접 HTTP 호출을 사용하여 Adobe Pass 인증 서비스에서 로그아웃을 [시작](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md)해야 합니다. 이렇게 하면 MVPD 측의 세션 정리가 용이하지 않습니다.
 
 >[!TIP]
@@ -411,5 +411,5 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 > **<u>Pro 팁:</u>** iOS/iPadOS 구현의 경우 아래 단계를 따르십시오.
 
 * 응용 프로그램은 Adobe Pass Authentication 서비스에서 &quot;*tokenSource&quot;* [사용자 메타데이터](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)를 사용하여 파트너 SSO를 통해 로그인한 결과로 인증이 발생했는지 여부를 확인해야 합니다.
-* *`Settings -> TV Provider`*&quot;tokenSource&quot;**값이**&quot;Apple&quot;*과(와) 같은 경우 응용 프로그램에서 사용자에게 iOS/iPadOS* only *의*&#x200B;에서 명시적으로 로그아웃하도록 지시하거나 프롬프트를 표시해야 합니다.
-* 응용 프로그램은 [WKWebView](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md) 또는 [SFSafariViewController](https://developer.apple.com/documentation/webkit/wkwebview) 구성 요소를 사용하여 Adobe Pass 인증 서비스에서 로그아웃을 [시작](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller)해야 합니다. 이렇게 하면 MVPD 측의 세션 정리가 용이해집니다.
+* *&quot;tokenSource&quot;* 값이 *&quot;Apple&quot;*&#x200B;과(와) 같은 경우 응용 프로그램에서 사용자에게 iOS/iPadOS **only**&#x200B;의 *`Settings -> TV Provider`*&#x200B;에서 명시적으로 로그아웃하도록 지시하거나 프롬프트를 표시해야 합니다.
+* 응용 프로그램은 [WKWebView](https://developer.apple.com/documentation/webkit/wkwebview) 또는 [SFSafariViewController](https://developer.apple.com/documentation/safariservices/sfsafariviewcontroller) 구성 요소를 사용하여 Adobe Pass 인증 서비스에서 로그아웃을 [시작](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md)해야 합니다. 이렇게 하면 MVPD 측의 세션 정리가 용이해집니다.

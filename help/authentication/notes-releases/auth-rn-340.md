@@ -2,9 +2,9 @@
 title: Adobe Pass Authentication 3.4.0 릴리스 노트
 description: Adobe Pass Authentication 3.4.0 릴리스 노트
 exl-id: ad572617-f607-419d-a085-70c025465080
-source-git-commit: c9958a17ad9dfb518bab1d24087c85fdcb6fd057
+source-git-commit: 'null'
 workflow-type: tm+mt
-source-wordcount: '185'
+source-wordcount: '190'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 0%
 ### 빌드 번호 {#build-number-340}
 
 Adobe Pass 인증: adobe-pass-**3.4.0**
-릴리스 날짜: **2025/16/09 - 2025/09/18**
+릴리스 날짜: **09/16/2025 - 09/18/2025**
 
 ### 릴리스 개요 {#release-overview-340}
 
