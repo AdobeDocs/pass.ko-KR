@@ -403,7 +403,7 @@ videoSubscriberAccountManager.checkAccessStatus(options: [VSCheckAccessOption.pr
 > **<u>Pro 팁:</u>** tvOS 구현을 보려면 아래 단계를 따르십시오.
 
 * 응용 프로그램은 Adobe Pass Authentication 서비스에서 &quot;*tokenSource&quot;* [사용자 메타데이터](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md)를 사용하여 파트너 SSO를 통해 로그인한 결과로 인증이 발생했는지 여부를 확인해야 합니다.
-* *&quot;tokenSource&quot;* 값이 &quot;*Apple&quot;과(와) 같은 경우 응용 프로그램에서 tvOS **only**에서&#x200B;*`Settings -> Accounts -> TV Provider`*에서 명시적으로 로그아웃하도록 사용자에게 지시하거나 프롬프트를 표시해야 합니다.*
+* *&quot;tokenSource&quot;* 값이 &quot;*Apple&quot;과(와) 같은 경우 응용 프로그램에서 tvOS **only**&#x200B;에서&#x200B;*`Settings -> Accounts -> TV Provider`*에서 명시적으로 로그아웃하도록 사용자에게 지시하거나 프롬프트를 표시해야 합니다.*
 * 응용 프로그램은 직접 HTTP 호출을 사용하여 Adobe Pass 인증 서비스에서 로그아웃을 [시작](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-logout.md)해야 합니다. 이렇게 하면 MVPD 측의 세션 정리가 용이하지 않습니다.
 
 >[!TIP]
