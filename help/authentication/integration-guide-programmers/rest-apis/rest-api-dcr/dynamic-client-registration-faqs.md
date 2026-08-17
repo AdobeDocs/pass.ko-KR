@@ -2,7 +2,7 @@
 title: DCR(Dynamic Client Registration) FAQ
 description: DCR(Dynamic Client Registration) FAQ
 exl-id: 12268163-632e-4884-b35d-a29cc8ef45bf
-source-git-commit: 'null'
+source-git-commit: 747c3d9b6de537be5e7e0a0244b2b301603d9b18
 workflow-type: tm+mt
 source-wordcount: '1147'
 ht-degree: 1%

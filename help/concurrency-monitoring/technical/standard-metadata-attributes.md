@@ -2,7 +2,7 @@
 title: 표준 메타데이터 속성
 description: 표준 메타데이터 속성
 exl-id: 99ffa98c-213f-47a5-a6e7-fbacb77875d0
-source-git-commit: 'null'
+source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 0%

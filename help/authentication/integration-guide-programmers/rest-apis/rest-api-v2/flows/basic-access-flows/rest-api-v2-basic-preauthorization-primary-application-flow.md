@@ -2,7 +2,7 @@
 title: 기본 사전 인증 - 기본 애플리케이션 - 플로우
 description: REST API V2 - 기본 사전 인증 - 기본 애플리케이션 - 흐름
 exl-id: f557f6c3-d5b2-4ec8-be51-91a90fbd31c0
-source-git-commit: 'null'
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '496'
 ht-degree: 0%
