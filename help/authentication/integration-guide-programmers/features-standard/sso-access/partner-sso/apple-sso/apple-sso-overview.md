@@ -2,7 +2,7 @@
 title: Apple SSO 개요
 description: Apple SSO 개요
 exl-id: 7cf47d01-a35a-4c85-b562-e5ebb6945693
-source-git-commit: 'null'
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '1311'
 ht-degree: 0%

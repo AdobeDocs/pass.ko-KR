@@ -2,7 +2,7 @@
 title: MVPD 인증
 description: MVPD 인증
 exl-id: 9ff4a46e-a37b-414c-a163-9e586252a9c3
-source-git-commit: 'null'
+source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
 workflow-type: tm+mt
 source-wordcount: '1908'
 ht-degree: 0%

@@ -2,7 +2,7 @@
 title: Apple SSO Cookbook (REST API V1)
 description: Apple SSO Cookbook (REST API V1)
 exl-id: 072a011f-e1bb-4d3e-bcb5-697f2d1739cc
-source-git-commit: 'null'
+source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
 workflow-type: tm+mt
 source-wordcount: '1596'
 ht-degree: 0%

@@ -2,7 +2,7 @@
 title: 사용자 메타데이터
 description: 사용자 메타데이터
 exl-id: 9fd68885-7b3a-4af0-a090-6f1f16efd2a1
-source-git-commit: 'null'
+source-git-commit: edfde4b463dd8b93dd770bc47353ee8ceb6f39d2
 workflow-type: tm+mt
 source-wordcount: '1936'
 ht-degree: 0%

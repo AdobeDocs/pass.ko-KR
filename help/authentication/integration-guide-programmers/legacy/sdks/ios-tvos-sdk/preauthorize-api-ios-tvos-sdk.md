@@ -2,7 +2,7 @@
 title: iOS/tvOS API 사전 인증
 description: iOS/tvOS API 사전 인증
 exl-id: 79c596a4-0e38-4b6c-bb85-f97c6af45ed8
-source-git-commit: 'null'
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '414'
 ht-degree: 0%

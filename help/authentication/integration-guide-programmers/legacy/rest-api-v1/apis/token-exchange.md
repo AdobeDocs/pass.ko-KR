@@ -2,7 +2,7 @@
 title: Platform SSO 토큰을 Adobe 토큰으로 교환
 description: Platform SSO 토큰을 Adobe 토큰으로 교환
 exl-id: 5ab60268-8f97-4755-8281-be45e812ed7f
-source-git-commit: 'null'
+source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
 source-wordcount: '258'
 ht-degree: 3%
