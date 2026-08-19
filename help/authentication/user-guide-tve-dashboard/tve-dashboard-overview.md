@@ -4,7 +4,7 @@ description: TVE 대시보드 및 리소스에 대해 알아보십시오.
 exl-id: 91baeb34-a32a-4dc3-94d8-f6cfca59dc4e
 source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
 workflow-type: tm+mt
-source-wordcount: '305'
+source-wordcount: '314'
 ht-degree: 0%
 
 ---
@@ -22,8 +22,8 @@ ht-degree: 0%
 * **속성 구성**: 각 통합에 대해 여러 속성을 구성하여 특정 플랫폼 요구 사항에 맞게 사용자 지정된 세분화된 비즈니스 규칙을 구현합니다.
 
 * **보고서 생성**: MVPD에서 구성 설정에 대한 자세한 보고서를 액세스하고 내보냅니다. 이러한 보고서에는 다음이 포함됩니다.
-   * *데스크톱, 모바일 및 TV 연결 장치*&#x200B;와 같은 플랫폼 범주
-   * *iOS, Android™, tvOS, Roku 및 FireTV와 같은 플랫폼*
+  * *데스크톱, 모바일 및 TV 연결 장치*&#x200B;와 같은 플랫폼 범주
+  * *iOS, Android™, tvOS, Roku 및 FireTV와 같은 플랫폼*
 
   보고서는 MVPD 및 플랫폼 수준에서 SSO(Single Sign-On) 지원 및 구독자 인증 또는 권한 부여 세션 기간에 대한 통찰력을 제공합니다.
 
