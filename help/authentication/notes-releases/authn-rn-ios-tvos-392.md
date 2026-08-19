@@ -4,7 +4,7 @@ description: Adobe Pass 인증 iOS / tvOS 3.9.2 릴리스 노트
 exl-id: 5c3f6138-f727-499b-bc73-816444849c1b
 source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
 workflow-type: tm+mt
-source-wordcount: '132'
+source-wordcount: '141'
 ht-degree: 0%
 
 ---
