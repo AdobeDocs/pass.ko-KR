@@ -1,8 +1,8 @@
 ---
 source-git-commit: e1fcfc03f1084e9159a73ad4e18b864d796bff3c
 workflow-type: tm+mt
-source-wordcount: '281'
-ht-degree: 3%
+source-wordcount: '300'
+ht-degree: 0%
 
 ---
 # 기여
@@ -13,13 +13,13 @@ ht-degree: 3%
 
 ## 행동 수칙
 
-이 프로젝트는 Adobe [수행 코드](code-of-conduct.md)를 준수합니다. 참여함으로써,
+이 프로젝트는 Adobe [행동 수칙](code-of-conduct.md)을 준수합니다. 참여함으로써,
 이 코드를 준수해야 합니다. 허용되지 않는 행동을 (으)로 보고하십시오.
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
 ## 기여자 안내서 설명서
 
-[기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=ko)를 참조하세요.
+[기여자 안내서](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html)를 참조하세요.
 
 ## 질문이 있습니까?
 
@@ -38,7 +38,7 @@ Adobe CLA는 한 번만 제출하면 됩니다. 따라서 이전에 제출한 �
 ## 코드 검토
 
 모든 제출 사항은 끌어오기 요청 양식으로 제출해야 하며 검토해야 합니다
-프로젝트 커미터별. [GitHub의 끌어오기 요청 설명서](https://help.github.com/articles/about-pull-requests/) 읽기
+프로젝트 커미터별. [GitHub의 끌어오기 요청 문서 읽기](https://help.github.com/articles/about-pull-requests/)
 끌어오기 요청 전송에 대한 자세한 내용.
 
 <!--
