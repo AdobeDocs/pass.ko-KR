@@ -2,9 +2,9 @@
 title: 사전 승인
 description: JavaScript 사전 권한 부여
 exl-id: b7493ca6-1862-4cea-a11e-a634c935c86e
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+source-git-commit: 7208b16831e1c6c4cbb37bf925a798d931ab8ea3
 workflow-type: tm+mt
-source-wordcount: '1527'
+source-wordcount: '1149'
 ht-degree: 0%
 
 ---
@@ -253,26 +253,25 @@ accessEnablerApi.preauthorize(request, callback);
     <td>비활성화됨</td>
     <td>
 
-    &quot;JavaScript
-    
-    &lbrace;
-    &quot;decisions&quot;: &lbrack;
-    &lbrace;
-    &quot;id&quot;: &quot;RES01&quot;,
-    &quot;authorized&quot;: true
-    &rbrace;,
-    &lbrace;
-    &quot;id&quot;: &quot;RES02&quot;,
-    &quot;authorized&quot;: false
-    &rbrace;,
-    &lbrace;
-    &quot;id&quot;: &quot;RES03&quot;,
-    &quot;authorized&quot;: true
-    &rbrace;
-    &rbrack;
-    &rbrace;
-    
-    &quot;
+```JavaScript
+        {
+    "decisions": [
+        {
+        "id": "RES01",
+        "authorized": true
+        },
+        {
+        "id": "RES02",
+        "authorized": false
+        },
+        {
+        "id": "RES03",
+        "authorized": true
+        }
+    ]
+    }
+       
+```
 
 </td>
   </tr>
@@ -281,32 +280,32 @@ accessEnablerApi.preauthorize(request, callback);
     <td>활성화됨</td>
     <td>
 
-    &quot;JavaScript
-    &lbrace;
-    &quot;decisions&quot;: &lbrack;
-    &lbrace;
-    &quot;id&quot;: &quot;RES01&quot;,
-    &quot;authorized&quot;: true
-    &rbrace;,
-    &lbrace;
-    &quot;id&quot;: &quot;RES02&quot;,
-    &quot;authorized&quot;: false,
-    &quot;error&quot;: &lbrace;
-    &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD에서 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
-    &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;none&quot;
-    &rbrace;
-    ,
-    &lbrace;
-    &quot;id&quot;: &quot;RES03&quot;,
-    &quot;authorized&quot;: true
-    &rbrace;,
-    &rbrack;
+```JavaScript
+    {
+      "decisions": [
+        {
+        "id": "RES01",
+        "authorized": true
+        },
+        {
+        "id": "RES02",
+        "authorized": false,
+        "error": {
+            "status": 403,
+            "code": "preauthorization_denied_by_mvpd",
+            "message": "The MVPD has returned a \"Deny\" decision when requesting pre-authorization for the specified resource.",
+            "helpUrl": "https://experienceleague.adobe.com/docs/primetime/authentication/home.html?lang=ko",
+            "action": "none"
+        }
+        },
+        {
+        "id": "RES03",
+        "authorized": true
+        },
+    ]
+    }
     
-    
-    &quot;
+```
 
 </td>
   </tr>
@@ -327,74 +326,73 @@ accessEnablerApi.preauthorize(request, callback);
     <td>비활성화됨</td>
     <td>
 
-    &quot;JavaScript
-    
-    &lbrace;
-    &quot;decisions&quot;: &lbrack;
-    &lbrace;
-    &quot;id&quot;: &quot;RES01&quot;,
-    &quot;authorized&quot;: false
-    &rbrace;,
-    &lbrace;
-    &quot;id&quot;: &quot;RES02&quot;,
-    &quot;authorized&quot;: false
-    &rbrace;,
-    &lbrace;
-    &quot;id&quot;: &quot;RES03&quot;,
-    &quot;authorized&quot;: false14&rbrace;&rbrace;
-    &rbrack;
-    &rbrace;
-    
-    &quot;
+```JavaScript
+        {
+    "decisions": [
+        {
+        "id": "RES01",
+        "authorized": false
+        },
+        {
+        "id": "RES02",
+        "authorized": false
+        },
+        {
+        "id": "RES03",
+        "authorized": false
+        }
+    ]
+    }
+       
+```
 
-    </td>
+</td>
   </tr>
 
 <tr>
     <td>활성화됨</td>
     <td>
 
-    &quot;JavaScript
+```JavaScript
+    {
+    "decisions": [
+        {
+        "id": "RES01",
+        "authorized": false,
+        "error": {
+            "status": 403,
+            "code": "preauthorization_denied_by_mvpd",
+            "message": "The MVPD has returned a \"Deny\" decision when requesting pre-authorization for the specified resource.",
+            "helpUrl": "https://experienceleague.adobe.com/docs/primetime/authentication/home.html?lang=ko",
+            "action": "none"
+            }
+        },
+        {
+            "id": "RES02",
+            "authorized": false,
+            "error": {
+                "status": 403,
+                "code": "preauthorization_denied_by_mvpd",
+                "message": "The MVPD has returned a \"Deny\" decision when requesting pre-authorization for the specified resource.",
+                "helpUrl": "https://experienceleague.adobe.com/docs/primetime/authentication/home.html?lang=ko",
+                "action": "none"
+            }
+        },
+        {
+        "id": "RES03",
+        "authorized": false,
+        "error": {
+            "status": 403,
+            "code": "maximum_execution_time_exceeded",
+            "message": "The request did not complete in the maximum allowed time. Retrying the request might solve the issue.",
+            "helpUrl": "https://experienceleague.adobe.com/docs/primetime/authentication/home.html?lang=ko",
+            "action": "retry"
+                }
+            }
+        ]
+    }
     
-    &lbrace;
-    &quot;decisions&quot;: &lbrack;
-    &lbrace;
-    &quot;id&quot;: &quot;RES01&quot;,
-    &quot;authorized&quot;: false,
-    &quot;error&quot;: &lbrace;
-    &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD에서 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
-    &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;none&quot;
-    &rbrace;
-    ,
-    &lbrace;
-    &quot;id&quot;: &quot;RES02&quot;,
-    &quot;authorized&quot;: false,
-    &quot;error&quot;: &lbrace;
-    &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;preauthorization_denied_by_mvpd&quot;,
-    &quot;message&quot;: &quot;MVPD에서 지정된 리소스에 대한 사전 인증을 요청할 때 \&quot;Deny\&quot; 결정을 반환했습니다.&quot;,
-    &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;none&quot;
-    
-    ,
-    &lbrace;
-    &quot;id&quot;: &quot;RES03&quot;,
-    &quot;authorized&quot;: false,
-    &quot;error&quot;: &lbrace;
-    &quot;status&quot;: 403,
-    &quot;code: &quot;maximum_execution_time_exceeded&quot;,
-    &quot;message&quot;: &quot;최대 허용 시간에 요청이 완료되지 않았습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다.&quot;,
-    &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;retry&quot;
-    &rbrace;
-    
-    &rbrack;
-    
-    
-    &quot;
+```
 
 </td>
   </tr>
@@ -415,19 +413,19 @@ accessEnablerApi.preauthorize(request, callback);
     <td>사용 안 함/사용</td>
     <td>
 
-    &quot;JavaScript
-    &lbrace;
-    &quot;status&quot;: &lbrace;
-    &quot;status&quot;: 400,
-    &quot;code&quot;: &quot;internal_error&quot;,
-    &quot;message&quot;: &quot;내부 오류로 인해 요청이 실패했습니다.&quot;,
-    &quot;details&quot;: &quot;필수 문자열[] 매개 변수 &#39;resource&#39;가 없습니다.&quot;,
-    &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;none&quot;
-    &rbrace;,
-    &quot;decisions&quot;: []
-    &rbrace;
-    &quot;
+```JavaScript
+    {
+    "status": {
+    "status": 400,
+    "code": "internal_error",
+    "message": "The request failed due to an internal error.",
+    "details": "Required String[] parameter 'resource' is not present",
+    "helpUrl": "https://experienceleague.adobe.com/docs/primetime/authentication/home.html?lang=ko",
+    "action": "none"
+    },
+    "decisions": []
+    }
+```
 
 </td>
   </tr>
@@ -448,18 +446,18 @@ accessEnablerApi.preauthorize(request, callback);
     <td>사용 안 함/사용</td>
     <td>
 
-    &quot;JavaScript
-    &lbrace;
-    &quot;status&quot;: &lbrace;
-    &quot;status&quot;: 412,
-    &quot;code&quot;: &quot;missing_resource&quot;,
-    &quot;message&quot;: &quot;리소스 매개 변수가 누락되었습니다&quot;,
-    &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;none&quot;
-    &rbrace;,
-    &quot;decisions&quot;: []
-    &rbrace;
-    &quot;
+```JavaScript
+    {
+    "status": {
+    "status": 412,
+    "code": "missing_resource",
+    "message": "The resource parameter is missing",
+    "helpUrl": "https://experienceleague.adobe.com/docs/primetime/authentication/home.html?lang=ko",
+    "action": "none"
+    },
+    "decisions": []
+    }
+```
 
 </td>
   </tr>
@@ -480,34 +478,34 @@ accessEnablerApi.preauthorize(request, callback);
     <td>활성화됨</td>
     <td>
 
-    &quot;JavaScript
-    &lbrace;
-    &quot;decisions&quot;: &lbrack;
-    &lbrace;
-    &quot;id&quot;: &quot;RES01&quot;,
-    &quot;authorized&quot;: false,
-    &quot;error&quot;: &lbrace;
-    &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;network_received_error&quot;,
-    &quot;message&quot;: &quot;연결된 파트너 서비스에서 응답을 검색하는 동안 읽기 오류가 발생했습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다.&quot;,
-    &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;retry&quot;
-    &rbrace;
-    &rbrace;,
-    &lbrace;
-    &quot;id&quot;: &quot;RES02&quot;,
-    &quot;authorized&quot;: false,
-    &quot;error&quot;: &lbrace;
-    &quot;status&quot;: 403,
-    &quot;code&quot;: &quot;network_received_error&quot;,
-    &quot;message&quot;: &quot;연결된 파트너 서비스에서 응답을 검색하는 동안 읽기 오류가 발생했습니다. 요청을 다시 시도하면 문제가 해결될 수 있습니다.&quot;,
-    &quot;helpUrl&quot;: &quot;https://experienceleague.adobe.com/docs/primetime/authentication/home.html&quot;,
-    &quot;action&quot;: &quot;retry&quot;
-    &rbrace;
-    
-    &rbrack;
-    
-    &quot;
+```JavaScript
+    {
+    "decisions": [
+        {
+        "id": "RES01",
+        "authorized": false,
+        "error": {
+            "status": 403,
+            "code": "network_received_error",
+            "message": "There was a read error while retrieving the response from the associated partner service. Retrying the request might solve the issue.",
+            "helpUrl": "https://experienceleague.adobe.com/docs/primetime/authentication/home.html?lang=ko",
+            "action": "retry"
+            }
+        },
+        {
+            "id": "RES02",
+            "authorized": false,
+            "error": {
+                "status": 403,
+                "code": "network_received_error",
+                "message": "There was a read error while retrieving the response from the associated partner service. Retrying the request might solve the issue.",
+                "helpUrl": "https://experienceleague.adobe.com/docs/primetime/authentication/home.html?lang=ko",
+                "action": "retry"
+                }   
+        }
+    ]
+    }
+```
 
 </td>
   </tr>
@@ -528,18 +526,17 @@ accessEnablerApi.preauthorize(request, callback);
     <td>사용 안 함/사용</td>
     <td>
 
-    &quot;JavaScript
-    &lbrace;
-    &quot;status&quot;: &lbrace;
-    &quot;status&quot;: 0,
-    &quot;code&quot;: &quot;authentication_session_missing&quot;,
-    &quot;message&quot;: &quot;이 요청과 연결된 인증 세션을 검색할 수 없습니다. 계속하려면 사용자가 지원되는 MVPD을 사용하여 다시 인증해야 합니다.&quot;,
-    &quot;action&quot;: &quot;authentication&quot;
-    &rbrace;,
-    &quot;decisions&quot;: []
-    &rbrace;
-    
-    &quot;
+```JavaScript
+    {
+    "status": {
+    "status": 0,
+    "code": "authentication_session_missing",
+    "message": "The authentication session associated with this request could not be retrieved. The user must re-authenticate with a supported MVPD in order to continue.",
+    "action": "authentication"
+    },
+    "decisions": []
+    }
+```
 
 </td>
   </tr>
@@ -562,17 +559,17 @@ accessEnablerApi.preauthorize(request, callback);
     <td>사용 안 함/사용</td>
     <td>
 
-    &quot;JavaScript
-    &lbrace;
-    &quot;status&quot;: &lbrace;
-    &quot;status&quot;: 0,
-    &quot;code&quot;: &quot;requestor_not_configured&quot;,
-    &quot;message&quot;: &quot;요청자가 아직 구성되지 않았으며, 이는 setRequestor API와 다른 API를 사용하기 위한 필수 조건입니다.&quot;,
-    &quot;action&quot;: &quot;retry&quot;
-    &rbrace;,
-    &quot;decisions&quot;: []
-    &rbrace;
-    &quot;
+```JavaScript
+    {
+    "status": {
+    "status": 0,
+    "code": "requestor_not_configured",
+    "message": "The requestor is not yet configured which is a prerequisite for using any API apart from the setRequestor API.",
+    "action": "retry"
+    },
+    "decisions": []
+    }
+```
 
 </td>
   </tr>
