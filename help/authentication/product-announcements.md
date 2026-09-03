@@ -2,10 +2,10 @@
 title: 제품 공지
 description: 제품 공지
 exl-id: 3c9c66e1-d31d-4af3-8ab2-eb32492f42ca
-source-git-commit: 5ca8f29764a07ddb68abb36accb12cfb3b68b72d
+source-git-commit: 53ef1edc63fe8b23b70cfe16edd94fd7a71b432e
 workflow-type: tm+mt
 source-wordcount: '1015'
-ht-degree: 20%
+ht-degree: 21%
 
 ---
 
@@ -33,10 +33,9 @@ ht-degree: 20%
 
 | 릴리스 정보 | 날짜 |
 |------------------------------------------------------------------------------------------------|-------------------------|
-<!-- | [Adobe Pass Authentication 3.9.0 release notes](notes-releases/auth-rn-390.md) | 09/08/2026 - 09/10/2026 | -->
-| [Adobe Pass 인증 3.8.0 릴리스 노트](notes-releases/auth-rn-380.md) | 2026/08/11 - 2026/08/13 |
-| [Adobe Pass 인증 3.7.0 릴리스 노트](notes-releases/auth-rn-370.md) | 2026/05/12 - 2026/05/14 |
-| [Adobe Pass 인증 3.6.0 릴리스 노트](notes-releases/auth-rn-360.md)                 | 04/07/2026 - 04/09/2026 |
+| [Adobe Pass 인증 3.8.0 릴리스 노트](notes-releases/auth-rn-380.md) | 08/11/2026 - 08/13/2026 |
+| [Adobe Pass 인증 3.7.0 릴리스 노트](notes-releases/auth-rn-370.md) | 05/12/2026 - 05/14/2026 |
+| [Adobe Pass 인증 3.6.0 릴리스 노트](notes-releases/auth-rn-360.md) | 04/07/2026 - 04/09/2026 |
 
 ### 2025 {#product-releases-2025}
 
