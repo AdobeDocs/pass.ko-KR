@@ -4,7 +4,7 @@ description: 쿠키 업데이트 - SameSite 및 보안 플래그
 exl-id: cc1f60fd-fa64-48cb-a185-dba562a54c33
 source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '973'
 ht-degree: 0%
 
 ---
@@ -58,13 +58,13 @@ Adobe Pass 인증 서비스는 현재 Adobe Pass 인증 SDK의 일부 플랫폼 
 1. *Secure* 특성이 있는 쿠키는 *HTTPS*&#x200B;을(를) 통해 전송되어야 합니다. 그렇지 않으면 쿠키가 Adobe Pass 인증 서비스에 도달하지 않습니다.
 
    - AccessEnabler JavaScript SDK:
-      - *sp.auth.adobe.com*&#x200B;과의 통신에서 *2.35* 및 *3.5.0* 버전에 대해 *HTTPS*&#x200B;을(를) 사용한 후에 Dynamic Client Registration을 도입해야 합니다.
+     - *sp.auth.adobe.com*&#x200B;과의 통신에서 *2.35* 및 *3.5.0* 버전에 대해 *HTTPS*&#x200B;을(를) 사용한 후에 Dynamic Client Registration을 도입해야 합니다.
    - AccessEnabler iOS/tvOS SDK:
-      - *sp.auth.adobe.com*&#x200B;과의 통신에 Dynamic Client Registration을 도입하기 전에 *3.0.0* 이전 버전의 경우 *HTTPS*&#x200B;을(를) 사용해야 합니다.
+     - *sp.auth.adobe.com*&#x200B;과의 통신에 Dynamic Client Registration을 도입하기 전에 *3.0.0* 이전 버전의 경우 *HTTPS*&#x200B;을(를) 사용해야 합니다.
    - AccessEnabler Android SDK:
-      - *sp.auth.adobe.com*&#x200B;과의 통신에 Dynamic Client Registration을 도입하기 전에 *3.0.0* 이전 버전의 경우 *HTTPS*&#x200B;을(를) 사용해야 합니다.
+     - *sp.auth.adobe.com*&#x200B;과의 통신에 Dynamic Client Registration을 도입하기 전에 *3.0.0* 이전 버전의 경우 *HTTPS*&#x200B;을(를) 사용해야 합니다.
    - AccessEnabler Fireos SDK:
-      - *sp.auth.adobe.com*&#x200B;과의 통신에서 버전 *2.0.4*&#x200B;에 대해 *HTTPS*&#x200B;을(를) 사용하는 것은 필수입니다.
+     - *sp.auth.adobe.com*&#x200B;과의 통신에서 버전 *2.0.4*&#x200B;에 대해 *HTTPS*&#x200B;을(를) 사용하는 것은 필수입니다.
 
 </br>
 
