@@ -1,14 +1,12 @@
 ---
 title: LIFO와 FIFO 전략
 description: LIFO 전략과 FIFO 전략의 차이점과 각 접근 방식을 사용할 시기를 이해합니다
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+exl-id: 2d7c4bc8-0491-429b-8471-3b5629aa76a6
+source-git-commit: 39384d753e7808fa433f30d8dafabd531dbf3acf
 workflow-type: tm+mt
-source-wordcount: '685'
+source-wordcount: '686'
 ht-degree: 0%
-
 ---
-
-
 # LIFO와 FIFO 전략 {#lifo-fifo-strategies}
 
 동시 모니터링 구현 시 사용 한도에 도달하면 충돌을 처리하기 위한 두 가지 기본 전략 중 하나를 선택해야 합니다. **LIFO(마지막 입력, 첫 번째 출력)** 또는 **FIFO(첫 번째 입력, 첫 번째 출력)**. 이러한 전략을 이해하는 것은 올바른 사용자 경험을 디자인하고 적절한 오류 처리를 구현하는 데 중요합니다.

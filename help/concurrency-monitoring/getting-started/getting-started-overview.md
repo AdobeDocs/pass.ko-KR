@@ -1,14 +1,12 @@
 ---
 title: 동시성 모니터링 시작
 description: 동시성 모니터링의 기본 사항과 통합을 시작하는 방법을 알아봅니다
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+exl-id: d2b8c7c4-b02d-4bea-9310-162064fd7216
+source-git-commit: 39384d753e7808fa433f30d8dafabd531dbf3acf
 workflow-type: tm+mt
-source-wordcount: '363'
+source-wordcount: '372'
 ht-degree: 0%
-
 ---
-
-
 # 동시성 모니터링 시작 {#getting-started-overview}
 
 동시 모니터링 시작! 이 안내서는 기본 사항을 이해하고 통합을 빠르게 시작하고 실행하는 데 도움이 됩니다.
