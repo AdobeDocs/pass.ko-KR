@@ -306,7 +306,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
    >
    >MVPD에서 명시적으로 지정하지 않는 한 모든 흐름에서 기본 끝점을 변경하지 마십시오.
 
-   ![끝점 ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-endpoints-panel-view.png) 선택
+   ![끝점 &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-endpoints-panel-view.png) 선택
 
    *끝점 선택*
 

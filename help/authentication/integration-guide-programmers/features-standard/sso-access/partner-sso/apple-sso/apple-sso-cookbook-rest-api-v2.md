@@ -206,7 +206,7 @@ Adobe Pass 인증 REST API V2는 iOS, iPadOS 또는 tvOS에서 실행되는 클�
    > 
    > * [특정 mvpd에 대한 프로필 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md#Request) API
    >
-   > 이 단계에서 **파트너 인증 응답을 사용하여 프로필 만들기 및 검색](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API를 사용하지 마십시오**.[
+   > 이 단계에서 **파트너 인증 응답을 사용하여 프로필 만들기 및 검색[&#128279;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/partner-single-sign-on-apis/rest-api-v2-partner-single-sign-on-apis-retrieve-profile-using-partner-authentication-response.md#Request) API를 사용하지 마십시오**.
 
    >[!IMPORTANT]
    >

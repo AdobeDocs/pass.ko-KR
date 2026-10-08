@@ -57,7 +57,7 @@ Adobe Pass 인증 REST API는 [조절 메커니즘](/help/authentication/integra
 아래 표에는 클라이언트 없는 접근 방식에 사용할 수 있는 웹 서비스가 나열되어 있습니다. 자세한 내용을 보려면 웹 서비스 끝점을 클릭합니다(샘플 요청 및 응답, 입력 매개 변수, HTTP 메서드 등).
 
 
-| Sr | 웹 서비스 끝점 | 설명 | <!--[Diag.  </br>Ref](http://tve.helpdocsonline.com/api-reference-v2-test#illustration)-->. | 호스팅 위치 | 호출자 |
+&#x200B;| Sr | 웹 서비스 끝점 | 설명 | <!--[Diag.  </br>Ref](http://tve.helpdocsonline.com/api-reference-v2-test#illustration)-->. | 호스팅 위치 | 호출자 |
 |-----|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------|-----------------------------------------------------------|-----------------------------|
 | 1. | [&lt;REGGIE_FQDN>/reggie/v1/ </br>  {requestorId}/regcode](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/registration-code-request.md) | 임의로 생성된 등록 코드 및 로그인 페이지 URI를 반환합니다. | 2 | Adobe </br>코드 서비스 | 스마트 장치 |
 | 2. | [&lt;REGGIE_FQDN>/reggie/v1/ </br>  {requestorId}/regcode/ </br>{registrationCode}](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/return-registration-record.md) | 등록 코드 UUID, 등록 코드 및 해시된 장치 ID가 포함된 등록 코드 레코드를 반환합니다. | 8 | Adobe </br>코드 서비스 | Adobe Pass 인증 |
