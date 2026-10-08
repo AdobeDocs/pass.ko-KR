@@ -2,13 +2,14 @@
 title: REST API V2 FAQ
 description: REST API V2 FAQ
 exl-id: 2dd74b47-126e-487b-b467-c16fa8cc14c1
-source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '11094'
 ht-degree: 1%
-
 ---
-
 # REST API V2 FAQ {#rest-api-v2-faqs}
 
 >[!IMPORTANT]
@@ -830,13 +831,13 @@ Apple SSO 문제를 해결할 때 다음과 같은 일반적인 방법을 사용
 &quot;appleSSO&quot; 유형 프로필이 있는 사용자에 대해 로그아웃을 시작할 때:
 
 * Adobe Pass 로그아웃 끝점 응답에는 다음이 포함됩니다.
-   * `actionName`이(가) &quot;partner_logout&quot;(으)로 설정됨
-   * `actionType`이(가) &quot;partner_interactive&quot;로 설정됨
-   * `url` 특성이 없습니다.
+  * `actionName`이(가) &quot;partner_logout&quot;(으)로 설정됨
+  * `actionType`이(가) &quot;partner_interactive&quot;로 설정됨
+  * `url` 특성이 없습니다.
 
 * 스트리밍 애플리케이션은 다음으로 이동하여 파트너(시스템) 수준에서 로그아웃 프로세스를 완료하라는 메시지를 표시해야 합니다.
-   * iOS/iPadOS의 `Settings -> TV Provider`
-   * tvOS의 `Settings -> Accounts -> TV Provider`
+  * iOS/iPadOS의 `Settings -> TV Provider`
+  * tvOS의 `Settings -> Accounts -> TV Provider`
 
 * 로그아웃 프로세스를 완료하려면 시스템 수준에서 사용자가 TV 공급자에서 수동으로 로그아웃해야 합니다.
 
@@ -995,7 +996,7 @@ REST API V1에서 REST API V2로 마이그레이션할 때 다음 표에 나타�
 | (MVPD) 인증 시작 | [GET <br/> /api/v1/authenticate](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/initiate-authentication.md) | [GET <br/> /api/v2/authenticate/{serviceProvider}/{code}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md) | 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[기본 응용 프로그램 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-primary-application-flow.md)</li><li>[보조 응용 프로그램 내에서 수행되는 기본 인증 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-authentication-secondary-application-flow.md)</li></ul> |
 | 사용자 인증 상태 확인 | [GET <br/> /api/v1/checkauthn(첫 번째 화면)](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-token.md) <br/> [GET <br/> /api/v1/checkauthn(두 번째 화면)](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/check-authentication-flow-by-second-screen-web-app.md) | 다음 중 하나를 사용하십시오. <br/><br/> [GET <br/> /api/v2/{serviceProvider}/profiles](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) <br/> [GET <br/> /api/v2/{serviceProvider}/profiles/{mvpd}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) <br/> [GET <br/> /api/v2/{serviceProvider}/profiles/code/{code}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) | 클라이언트 응용 프로그램은 이러한 API의 응답을 한 번에 여러 용도로 사용할 수 있습니다. <br/> <ul><li>사용자 인증 상태 확인</li><li>사용자 프로필 검색</li><li>사용자 메타데이터 정보 검색</li></ul> <br/> 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[기본 응용 프로그램 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)</li><li>[보조 응용 프로그램 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)</li></ul> |
 | 사용자 인증 토큰(프로필) 검색 | [GET <br/> /api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md) | 다음 중 하나를 사용하십시오. <br/><br/> [GET <br/> /api/v2/{serviceProvider}/profiles](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) <br/> [GET <br/> /api/v2/{serviceProvider}/profiles/{mvpd}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) <br/> [GET <br/> /api/v2/{serviceProvider}/profiles/code/{code}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) | 클라이언트 응용 프로그램은 이러한 API의 응답을 한 번에 여러 용도로 사용할 수 있습니다. <br/> <ul><li>사용자 인증 상태 확인</li><li>사용자 프로필 검색</li><li>사용자 메타데이터 정보 검색</li></ul> <br/> 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[기본 응용 프로그램 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)</li><li>[보조 응용 프로그램 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)</li></ul> |
-| 사용자 메타데이터 정보 검색 | [GET <br/> /api/v1/tokens/usermetadata](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md) | 다음 중 하나를 사용하십시오. <br/><br/> [GET <br/> /api/v2/{serviceProvider}/profiles](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) <br/> [GET <br/> /api/v2/{serviceProvider}/profiles/{mvpd}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) <br/> [GET <br/> /api/v2/{serviceProvider}/profiles/code/{code}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) | 클라이언트 응용 프로그램은 이러한 API의 응답을 한 번에 여러 용도로 사용할 수 있습니다. <br/> <ul><li>사용자 인증 상태 확인</li><li>사용자 프로필 검색</li><li>사용자 메타데이터 정보 검색</li></ul> <br/> 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[기본 응용 프로그램 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)</li><li>[보조 응용 프로그램 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)</li></ul> |
+| 사용자 메타데이터 정보 검색 | [<br/> /api/v1/tokens/usermetadata 가져오기](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/user-metadata.md) | 다음 중 하나를 사용하십시오. <br/><br/> [GET <br/> /api/v2/{serviceProvider}/profiles](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profiles.md) <br/> [GET <br/> /api/v2/{serviceProvider}/profiles/{mvpd}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-mvpd.md) <br/> [GET <br/> /api/v2/{serviceProvider}/profiles/code/{code}](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) | 클라이언트 응용 프로그램은 이러한 API의 응답을 한 번에 여러 용도로 사용할 수 있습니다. <br/> <ul><li>사용자 인증 상태 확인</li><li>사용자 프로필 검색</li><li>사용자 메타데이터 정보 검색</li></ul> <br/> 자세한 내용은 다음 문서를 참조하십시오. <br/> <ul><li>[기본 응용 프로그램 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-primary-application-flow.md)</li><li>[보조 응용 프로그램 내에서 수행되는 기본 프로필 흐름](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/flows/basic-access-flows/rest-api-v2-basic-profiles-secondary-application-flow.md)</li></ul> |
 
 +++
 

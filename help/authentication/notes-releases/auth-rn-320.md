@@ -2,13 +2,14 @@
 title: Adobe Pass Authentication 3.2.0 릴리스 노트
 description: Adobe Pass Authentication 3.2.0 릴리스 노트
 exl-id: 43aee317-dbac-4000-893e-839ee3e9f6ba
-source-git-commit: fcdf50b2caad20deef15fceeb3e23f4195c0078d
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '190'
+source-wordcount: '191'
 ht-degree: 0%
-
 ---
-
 # Adobe Pass Authentication 3.2.0 릴리스 노트 {#authn-320-rn}
 
 >[!IMPORTANT]
@@ -32,7 +33,7 @@ Adobe Pass 인증: adobe-pass-**3.2.0**
 
 #### REST API v2
 
-* `missing_parameters_fallback`세션 API[&#x200B; 응답에 매개 변수가 없는 경우에 대해 새 이유 &#x200B;](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md)이(가) 추가되었습니다.
+* [세션 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-create-authentication-session.md) 응답에 매개 변수가 없는 경우에 대해 새 이유 `missing_parameters_fallback`이(가) 추가되었습니다.
 * 새 필드 &quot;장치&quot;를 [세션 API](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/sessions-apis/rest-api-v2-sessions-apis-retrieve-authentication-session-information-using-code.md) 응답에 추가했습니다.
 
 #### 새로운 기능

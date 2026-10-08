@@ -2,13 +2,14 @@
 title: TVE 대시보드 개요
 description: TVE 대시보드 및 리소스에 대해 알아보십시오.
 exl-id: 91baeb34-a32a-4dc3-94d8-f6cfca59dc4e
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '314'
 ht-degree: 0%
-
 ---
-
 # TVE 대시보드 개요 {#tve-db-overview}
 
 >[!NOTE]

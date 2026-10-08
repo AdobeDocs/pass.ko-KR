@@ -2,13 +2,14 @@
 title: REST API 개요
 description: Rest API 개요
 exl-id: 5533d852-f644-417e-bf80-6f7aa1edd6b2
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '1635'
+source-wordcount: '1659'
 ht-degree: 0%
-
 ---
-
 # (기존) REST API 개요 {#rest-api-overview}
 
 >[!NOTE]
@@ -21,7 +22,7 @@ ht-degree: 0%
 
 ## 개요 {#over}
 
-Adobe Pass 인증 REST API는 TV Everywhere(TVE) 인증 및 권한 부여 서비스에 직접 액세스할 수 있도록 합니다. 이 API는 웹 검색 기능이 없는 서버 간 또는 연결된 장치(예: 게임 콘솔, 스마트 TV, 셋톱 박스 등) 응용 프로그램의 두 가지 기본 아키텍처를 지원합니다.
+Adobe Pass 인증 REST API는 TV Everywhere(TVE) 인증 및 권한 부여 서비스에 직접 액세스할 수 있도록 합니다. 이 API는 서버 간 또는 연결된 장치(예: 게임 콘솔, 스마트 TV, 셋톱 박스 등)의 두 가지 기본 아키텍처를 지원합니다. 웹 검색 기능이 없는 응용 프로그램입니다.
 
 ### 조절 메커니즘
 

@@ -2,13 +2,14 @@
 title: API 참조 개요
 description: 끝점, 인증 및 응답 형식을 포함한 동시 모니터링 API에 대한 전체 참조
 exl-id: 6a1c6507-03d5-4003-8b88-502eb4019346
-source-git-commit: 39384d753e7808fa433f30d8dafabd531dbf3acf
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '444'
 ht-degree: 2%
-
 ---
-
 # API 참조 개요 {#api-reference-overview}
 
 동시 모니터링 API는 스트리밍 세션을 관리하고 동시 사용 정책을 적용하기 위한 RESTful 인터페이스를 제공합니다. 이 참조는 모든 엔드포인트, 인증 방법, 요청/응답 형식 및 오류 처리에 대한 완전한 설명서를 제공합니다.

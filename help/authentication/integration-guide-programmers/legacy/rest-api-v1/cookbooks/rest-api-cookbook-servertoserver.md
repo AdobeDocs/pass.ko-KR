@@ -2,13 +2,14 @@
 title: REST API Cookbook(서버 간)
 description: 서버에 대한 REST API Cookbook 서버입니다.
 exl-id: 36ad4a64-dde8-4a5f-b0fe-64b6c0ddcbee
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1891'
 ht-degree: 1%
-
 ---
-
 # (기존) REST API Cookbook(서버 간) {#rest-api-cookbook-server-to-server}
 
 >[!NOTE]
@@ -119,7 +120,8 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 ### \[선택 사항\] 메타데이터
 
-메타데이터는 MVPD에서 공유한 사용자 정보를 검색하는 데 사용할 수 있습니다.이러한 예로는 사용자 ID, 우편번호 등이 있습니다.
+메타데이터는 MVPD에서 공유한 사용자 정보를 검색하는 데 사용할 수 있습니다.
+이러한 예로는 사용자 ID, 우편번호 등이 있습니다.
 
 1. 사용자가 인증되면 프로그래머 서비스는 Adobe Pass **usermetadata** API를 호출하여 인증된 사용자에 대한 정보를 요청할 수 있습니다.
 

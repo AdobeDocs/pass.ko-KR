@@ -2,13 +2,14 @@
 title: Android SDK(동적 클라이언트 등록 포함)
 description: Android SDK(동적 클라이언트 등록 포함)
 exl-id: 8d0c1507-8e80-40a4-8698-fb795240f618
-source-git-commit: b6ba687240799d1889302019613f426259f147ad
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1321'
 ht-degree: 1%
-
 ---
-
 # (기존) Android SDK(동적 클라이언트 등록 기능 포함) {#android-sdk-with-dynamic-client-registration}
 
 >[!NOTE]
@@ -64,7 +65,8 @@ Android SDK v3.0+는 [동적 클라이언트 등록 개요](../../../rest-apis/r
 - softwareStatement: &quot;software\_statement&quot;가 strings.xml에 설정된 경우 TVE 대시보드 또는 *null*&#x200B;에서 얻은 값
 - redirectUrl : 고유 url, TVE 대시보드에 명시적으로 추가된 도메인 중 하나 또는 &quot;redirect\_uri&quot;가 strings.xml에 설정된 경우 *null*
 
-참고 : 잘못된 softwareStatement 또는 redirectUrl로 인해 응용 프로그램에서 AccessEnabler를 초기화하거나 Adobe Pass 인증 및 권한 부여에 대한 응용 프로그램을 등록하지 못합니다</br>
+참고 : 잘못된 softwareStatement 또는 redirectUrl로 인해 응용 프로그램에서 AccessEnabler를 초기화하거나 Adobe Pass 인증 및 권한 부여에 대한 응용 프로그램을 등록하지 못합니다
+</br>
 참고 : strings.xml의 redirectUrl 매개 변수 또는 redirect\_uri는 애플리케이션의 TVE Dashboard에 추가된 도메인 값이어야 합니다(예: TVE Dashboard에 추가된 도메인 &#39;adobe.com&#39;의 경우 redirectUrl은 &#39;com.adobe&#39;이어야 함).
 
 
@@ -113,8 +115,8 @@ Android SDK v3.0+는 [동적 클라이언트 등록 개요](../../../rest-apis/r
 
 **매개 변수:** 없음
 
-**트리거된 콜백:** 
-
+**트리거된 콜백:** `setAuthenticationStatus()`
+</br></br>
 
 ## 프로그래머 구현 흐름 {#Progr}
 

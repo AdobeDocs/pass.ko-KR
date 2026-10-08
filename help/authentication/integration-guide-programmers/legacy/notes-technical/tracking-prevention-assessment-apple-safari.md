@@ -2,13 +2,14 @@
 title: 추적 방지 평가 Apple Safari
 description: 추적 방지 평가 Apple Safari
 exl-id: a3362020-92ff-4232-b923-e462868730d5
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '1849'
+source-wordcount: '1887'
 ht-degree: 0%
-
 ---
-
 # (기존) 추적 방지 평가 - Apple Safari {#tracking-prevention-assessment-apple-safari}
 
 >[!NOTE]
@@ -100,11 +101,11 @@ AccessEnabler JavaScript SDK v2(버전 2.x)의 경우 라이브러리가 위에�
 
 * SSO 및 SLO
 
-   * Safari 10부터 Safari에서 localStorage가 구현되는 방식으로 인해 JS SDK은 더 이상 공통 도메인 iFrame을 통해 로그인 상태를 공유할 수 없습니다. 즉, AccessEnabler JavaScript SDK을 사용하는 모든 사이트에 로그인해야 합니다. 또한 로그아웃해도 사이트 간에 인증 토큰이 삭제되지 않으므로 사용자는 Adobe Pass 인증이 활성화된 각 웹 사이트에서 로그아웃해야 합니다.
+  * Safari 10부터 Safari에서 localStorage가 구현되는 방식으로 인해 JS SDK은 더 이상 공통 도메인 iFrame을 통해 로그인 상태를 공유할 수 없습니다. 즉, AccessEnabler JavaScript SDK을 사용하는 모든 사이트에 로그인해야 합니다. 또한 로그아웃해도 사이트 간에 인증 토큰이 삭제되지 않으므로 사용자는 Adobe Pass 인증이 활성화된 각 웹 사이트에서 로그아웃해야 합니다.
 
 * 임시 통과
 
-   * 임시 패스의 경우 AccessEnabler JavaScript SDK은 개별화 메커니즘을 사용하여 인증 토큰을 특정 디바이스(브라우저 인스턴스)에 잠급니다. 추적을 방지하기 위해 설계된 Safari 12의 새로운 메커니즘으로 인해 개별화 메커니즘 **에서 계산 및 사용 중인 지문은 동일한 IP 주소를 가진 모든 사용자에 대해 동일합니다**. 우리는 개별화 목적을 위해 클라이언트 IP를 고려하지만, 그럼에도 불구하고 동일한 공개 IP 주소를 공유하는 사용자들에게 영향을 미칩니다. 이러한 사용자의 경우 동일한 개별화 ID를 계산하고 임시 패스가 여기에 연결됩니다. 즉, 이러한 사용자가 임시 패스를 사용하면 다른 사용자는 해당 패스에 액세스할 수 없습니다. \! 이는 특히 기업 사용자, 교육 기관 또는 인터넷에 액세스하기 위해 NAT 또는 공통 프록시를 사용하는 여러 사용자가 있는 기타 조직에 영향을 미칩니다.
+  * 임시 패스의 경우 AccessEnabler JavaScript SDK은 개별화 메커니즘을 사용하여 인증 토큰을 특정 디바이스(브라우저 인스턴스)에 잠급니다. 추적을 방지하기 위해 설계된 Safari 12의 새로운 메커니즘으로 인해 개별화 메커니즘 **에서 계산 및 사용 중인 지문은 동일한 IP 주소를 가진 모든 사용자에 대해 동일합니다**. 우리는 개별화 목적을 위해 클라이언트 IP를 고려하지만, 그럼에도 불구하고 동일한 공개 IP 주소를 공유하는 사용자들에게 영향을 미칩니다. 이러한 사용자의 경우 동일한 개별화 ID를 계산하고 임시 패스가 여기에 연결됩니다. 즉, 이러한 사용자가 임시 패스를 사용하면 다른 사용자는 해당 패스에 액세스할 수 없습니다. \! 이는 특히 기업 사용자, 교육 기관 또는 인터넷에 액세스하기 위해 NAT 또는 공통 프록시를 사용하는 여러 사용자가 있는 기타 조직에 영향을 미칩니다.
 
 >[!NOTE]
 >
@@ -112,7 +113,7 @@ AccessEnabler JavaScript SDK v2(버전 2.x)의 경우 라이브러리가 위에�
 
 * 자동 흐름
 
-   * JS SDK 4.0을 사용할 때 사용자 상호 작용 없이 자동화된 모드로 인증 흐름을 시도하면 Safari 12에서 성공하지 못합니다. 예정된 JS SDK 4.1에서는 자동화된 흐름의 모든 문제를 해결합니다.
+  * JS SDK 4.0을 사용할 때 사용자 상호 작용 없이 자동화된 모드로 인증 흐름을 시도하면 Safari 12에서 성공하지 못합니다. 예정된 JS SDK 4.1에서는 자동화된 흐름의 모든 문제를 해결합니다.
 
 이 문제의 영향을 받는 사용 사례:
 
@@ -166,6 +167,6 @@ AccessEnabler JavaScript SDK v2(버전 2.x)의 경우 라이브러리가 위에�
 
   ![](../../../assets/prvnt-cross-site-tr-safari13.png)
 
-* Mac OS X Sierra 및 이전 버전의 경우: 아래 이미지에 표시된 대로 기본 설정에서 브라우저의 개인 정보 탭에 있는 &quot;</span>쿠키 및 웹 사이트 데이터&#x200B;**&quot; 항목에 대한 &quot;**&#x200B;항상 허용&#x200B;**&quot; 옵션을 선택합니다.**
+* Mac OS X Sierra 및 이전 버전의 경우: 아래 이미지에 표시된 대로 기본 설정에서 브라우저의 개인 정보 탭에 있는 &quot;**쿠키 및 웹 사이트 데이터**&quot; 항목에 대한 &quot;</span>항상 허용&#x200B;**&quot; 옵션을 선택합니다.**
 
   ![](../../../assets/always-allow-safari13.png)

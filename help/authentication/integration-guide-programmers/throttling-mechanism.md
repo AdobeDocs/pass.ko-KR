@@ -2,13 +2,14 @@
 title: 조절 메커니즘
 description: Adobe Pass 인증에 사용되는 조절 메커니즘에 대해 알아봅니다. 이 페이지에서 이 메커니즘에 대한 개요를 살펴보십시오.
 exl-id: f00f6c8e-2281-45f3-b592-5bbc004897f7
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1162'
 ht-degree: 0%
-
 ---
-
 # 조절 메커니즘 {#throttling-mechanism}
 
 모든 패스 인증 고객은 지침 및 비즈니스 사례에 따라 각 사용자에 대한 패스 인증 API에 액세스할 수 있어야 합니다.

@@ -2,13 +2,14 @@
 title: JavaScript SDK API 참조
 description: JavaScript SDK API 참조
 exl-id: 48d48327-14e6-46f3-9e80-557f161acd8a
-source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '2902'
+source-wordcount: '2904'
 ht-degree: 0%
-
 ---
-
 # (기존) JavaScript SDK API 참조 {#javascript-sdk-api-reference}
 
 >[!NOTE]
@@ -44,14 +45,14 @@ ht-degree: 0%
 
 - *끝점* - 이 매개 변수는 선택 사항입니다. 다음 값 중 하나일 수 있습니다.
 
-   - Adobe에서 제공하는 인증 및 권한 부여 서비스의 끝점을 지정할 수 있는 배열입니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 여러 URL이 제공되는 경우 MVPD 목록은 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD은 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD을 지원하는 공급자와 연결됩니다. 기본적으로(값이 지정되지 않은 경우) Adobe 서비스 공급자가 사용됩니다(<http://sp.auth.adobe.com/>).
+  - Adobe에서 제공하는 인증 및 권한 부여 서비스의 끝점을 지정할 수 있는 배열입니다(디버깅 목적으로 다른 인스턴스를 사용할 수 있음). 여러 URL이 제공되는 경우 MVPD 목록은 모든 서비스 공급자의 끝점으로 구성됩니다. 각 MVPD은 가장 빠른 서비스 공급자, 즉 먼저 응답하고 해당 MVPD을 지원하는 공급자와 연결됩니다. 기본적으로(값이 지정되지 않은 경우) Adobe 서비스 공급자가 사용됩니다(<http://sp.auth.adobe.com/>).
 
   예:
-   - `setRequestor("IFC", ["http://sp.auth-dev.adobe.com/adobe-services"])`
+  - `setRequestor("IFC", ["http://sp.auth-dev.adobe.com/adobe-services"])`
 
 - *옵션* - 응용 프로그램 ID 값, 방문자 ID 값 새로 고침 불가 설정(백그라운드 로그인 로그아웃) 및 MVPD 설정(iFrame)이 포함된 JSON 개체입니다. 모든 값은 선택 사항입니다.
-   1. 지정하면 라이브러리에서 수행한 모든 네트워크 호출에 대해 Experience Cloud visitorID가 보고됩니다. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
-   2. 응용 프로그램의 고유 식별자가 지정된 경우 -`applicationId` - 이 값은 응용 프로그램에서 X-Device-Info HTTP 헤더의 일부로 이후에 호출하는 모든 호출에 추가됩니다. 이 값은 나중에 적절한 쿼리를 사용하여 [ESM](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md) 보고서에서 가져올 수 있습니다.
+  1. 지정하면 라이브러리에서 수행한 모든 네트워크 호출에 대해 Experience Cloud visitorID가 보고됩니다. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
+  2. 응용 프로그램의 고유 식별자가 지정된 경우 -`applicationId` - 이 값은 응용 프로그램에서 X-Device-Info HTTP 헤더의 일부로 이후에 호출하는 모든 호출에 추가됩니다. 이 값은 나중에 적절한 쿼리를 사용하여 [ESM](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md) 보고서에서 가져올 수 있습니다.
 
   **참고:** 모든 JSON 키는 대/소문자를 구분합니다.
 
@@ -237,39 +238,39 @@ ht-degree: 0%
 **매개 변수:**
 
 - *key*: 요청한 메타데이터를 지정하는 ID:
-   - 키가 `"TTL_AUTHN",`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
+  - 키가 `"TTL_AUTHN",`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
 
-   - 키가 `"TTL_AUTHZ"`이고 params가 리소스 ID를 문자열로 포함하는 배열인 경우 지정된 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
+  - 키가 `"TTL_AUTHZ"`이고 params가 리소스 ID를 문자열로 포함하는 배열인 경우 지정된 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
 
-   - 키가 `"DEVICEID"`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
+  - 키가 `"DEVICEID"`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
 
-   - 키가 다음 사용자 메타데이터 형식 목록에 있는 경우 해당 사용자 메타데이터가 포함된 JSON 개체가 [`setMetadataStatus()`](#setmetadatastatuskey-encrypted-data-setmetadatastatuskeyencrypteddata) 콜백 함수로 전송됩니다.
+  - 키가 다음 사용자 메타데이터 형식 목록에 있는 경우 해당 사용자 메타데이터가 포함된 JSON 개체가 [`setMetadataStatus()`](#setmetadatastatuskey-encrypted-data-setmetadatastatuskeyencrypteddata) 콜백 함수로 전송됩니다.
 
-   - `"zip"` - 우편 번호
+  - `"zip"` - 우편 번호
 
-   - `"encryptedZip"` - 암호화된 우편 번호
+  - `"encryptedZip"` - 암호화된 우편 번호
 
-   - `"householdID"` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우에는 userID와 동일합니다.
+  - `"householdID"` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우에는 userID와 동일합니다.
 
-   - `"maxRating"` - 사용자의 최대 자녀 보호 등급
+  - `"maxRating"` - 사용자의 최대 자녀 보호 등급
 
-   - `"userID"` - 사용자 식별자. MVPD에서 하위 계정을 지원하고 사용자가 기본 계정이 아닌 경우 userID는 householdID와 다릅니다.
+  - `"userID"` - 사용자 식별자. MVPD에서 하위 계정을 지원하고 사용자가 기본 계정이 아닌 경우 userID는 householdID와 다릅니다.
 
-   - `"channelID"` - 사용자가 볼 수 있는 채널 목록
+  - `"channelID"` - 사용자가 볼 수 있는 채널 목록
 
-   - `"is_hoh"` - 사용자가 세대주인지 여부를 식별하는 플래그
+  - `"is_hoh"` - 사용자가 세대주인지 여부를 식별하는 플래그
 
-   - `"encryptedZip"` - 암호화된 우편 번호
+  - `"encryptedZip"` - 암호화된 우편 번호
 
-   - `"typeID"` - 사용자 계정이 기본/보조 계정인지 여부를 식별하는 플래그입니다.
+  - `"typeID"` - 사용자 계정이 기본/보조 계정인지 여부를 식별하는 플래그입니다.
 
-   - `"primaryOID"` - 세대 식별자
+  - `"primaryOID"` - 세대 식별자
 
-   - `"postalCode"` - 우편 번호와 유사
+  - `"postalCode"` - 우편 번호와 유사
 
-   - `"acctID"` - 계정 ID
+  - `"acctID"` - 계정 ID
 
-   - `"acctParentID"` - 계정 상위 ID
+  - `"acctParentID"` - 계정 상위 ID
 
   **참고**: 프로그래머가 사용할 수 있는 실제 사용자 메타데이터는 MVPD에서 사용할 수 있는 내용에 따라 다릅니다.  사용 가능한 사용자 메타데이터의 현재 목록을 보려면 [사용자 메타데이터](#UserMetadata)을(를) 참조하십시오.
 
@@ -453,16 +454,16 @@ ht-degree: 0%
 **설명:** 특정 이벤트가 발생할 때 추적 데이터를 받으려면 이 콜백을 구현합니다. 예를 들어 동일한 자격 증명으로 로그인한 사용자가 몇 명인지 추적할 수 있습니다. 추적은 현재 구성할 수 없습니다. `sendTrackingData()`은(는) Adobe Pass 인증 1.6을 사용하여 장치, Access Enabler 클라이언트 및 운영 체제 유형에 대한 정보도 보고합니다. `sendTrackingData()` 콜백은 이전 버전과 호환되는 상태로 유지됩니다.
 
 - 장치 유형에 가능한 값:
-   - 컴퓨터
-   - 태블릿
-   - 모바일
-   - 가메콘솔
-   - 알 수 없음
+  - 컴퓨터
+  - 태블릿
+  - 모바일
+  - 가메콘솔
+  - 알 수 없음
 
 - Access Enabler 클라이언트 유형에 사용할 수 있는 값은 다음과 같습니다.
-   - html5
-   - ios
-   - android
+  - html5
+  - ios
+  - android
 
 
 이벤트 유형 및 관련 정보 배열을 전달합니다. 이벤트 유형은 다음과 같습니다.

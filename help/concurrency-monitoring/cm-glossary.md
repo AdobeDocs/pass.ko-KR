@@ -2,13 +2,14 @@
 title: 용어집
 description: 동시성 모니터링 용어 목록
 exl-id: 3b3b36fe-9f04-4de9-bd84-9f8d766bbc71
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '762'
+source-wordcount: '766'
 ht-degree: 0%
-
 ---
-
 # 용어집 {#glossary}
 
 ## 계정 ID {#accid-defn}
@@ -66,8 +67,8 @@ ht-degree: 0%
 ## 정책 정보 지점(PIP) {#policy-info-pt-defn}
 
 * 속성 값의 소스. 동시성 모니터링은 다음을 제공하여 정보 포인트 역할을 합니다.
-   * 통과 스트림 메타데이터.
-   * 동시 스트림에 대한 활동 지표입니다.
+  * 통과 스트림 메타데이터.
+  * 동시 스트림에 대한 활동 지표입니다.
 
 ## 프로그래머 {#programmer-defn}
 
@@ -104,7 +105,7 @@ ht-degree: 0%
 * 위에서 언급한 서비스를 사용하는 클라이언트 애플리케이션에서 Concurrency Monitoring Service에 의해 콘텐츠 보기를 중지할 수 있습니다.
 * 최상의 사례 시나리오에서는 동시성 모니터링 서비스의 존재를 절대 인식하지 못합니다
 
-## Target {#target-defn}
+## 대상 {#target-defn}
 
 * 규칙이 지정된 스트림에 적용되는지 여부를 반환하는 스트림 조건자입니다. CM의 암시적 대상은 해당 정책을 참조하는 응용 프로그램에서 만든 모든 스트림입니다. 또한 규칙을 적용하기 전에 활동 필터링을 미세 조정하기 위해 속성 값 조건을 추가할 수 있습니다.
 

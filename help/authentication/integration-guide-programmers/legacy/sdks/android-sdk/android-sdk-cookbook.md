@@ -2,13 +2,14 @@
 title: Android SDK Cookbook
 description: Android SDK Cookbook
 exl-id: 7f66ab92-f52c-4dae-8016-c93464dd5254
-source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1690'
 ht-degree: 0%
-
 ---
-
 # (기존) Android SDK Cookbook {#android-sdk-cookbook}
 
 >[!NOTE]
@@ -30,9 +31,9 @@ Android에 대한 Adobe Pass 인증 자격 솔루션은 궁극적으로 두 개�
 
 - UI 도메인 - UI를 구현하고 AccessEnabler 라이브러리에서 제공하는 서비스를 사용하여 제한된 콘텐츠에 액세스할 수 있는 상위 레벨 애플리케이션 계층입니다.
 - AccessEnabler 도메인 - 권한 부여 워크플로우는 다음과 같은 형태로 구현됩니다.
-   - Adobe의 백엔드 서버에 대한 네트워크 호출
-   - 인증 및 권한 부여 워크플로와 관련된 비즈니스 논리 규칙
-   - 다양한 리소스 관리 및 워크플로 상태 처리(예: 토큰 캐시)
+  - Adobe의 백엔드 서버에 대한 네트워크 호출
+  - 인증 및 권한 부여 워크플로와 관련된 비즈니스 논리 규칙
+  - 다양한 리소스 관리 및 워크플로 상태 처리(예: 토큰 캐시)
 
 AccessEnabler 도메인의 목적은 권한 부여 워크플로의 모든 복잡성을 숨기고 AccessEnabler 라이브러리를 통해 권한 부여 워크플로를 구현하는 간단한 권한 부여 기본 세트를 상위 레이어 애플리케이션에 제공하는 것입니다.
 
@@ -124,7 +125,7 @@ AccessEnabler의 네트워크 작업은 다른 스레드에서 수행되므로 U
    a.  [`getInstance`](#$getInstance)을(를) 호출하여 Adobe Pass 인증 AccessEnabler의 단일 인스턴스를 만듭니다.
 
    - **종속성:** Adobe Pass 인증 기본
-Android 라이브러리(AccessEnabler)
+     Android 라이브러리(AccessEnabler)
 
    b.  ` setRequestor()`을(를) 호출하여 프로그래머의 ID를 설정합니다. 프로그래머의 `requestorID` 및 (선택적으로) Adobe Pass 인증 끝점 배열을 전달합니다.
 
@@ -185,9 +186,9 @@ Android 라이브러리(AccessEnabler)
 
    - `getAuthorization()` 호출이 성공하면 사용자에게 유효한 AuthN 및 AuthZ 토큰이 있습니다(사용자는 요청된 미디어를 볼 수 있도록 인증되고 권한이 부여됨).
    - `getAuthorization()`이(가) 실패할 경우: throw된 예외를 검사하여 해당 유형(AuthN, AuthZ 또는 기타)을 확인합니다.
-      - 인증(AuthN) 오류인 경우 인증 흐름을 다시 시작합니다.
-      - 인증(AuthZ) 오류인 경우 사용자에게 요청된 미디어를 볼 수 있는 권한이 없으며 사용자에게 일종의 오류 메시지가 표시되어야 합니다.
-      - 다른 유형의 오류(연결 오류, 네트워크 오류 등)가 있는 경우 그런 다음 사용자에게 적절한 오류 메시지를 표시합니다.
+     - 인증(AuthN) 오류인 경우 인증 흐름을 다시 시작합니다.
+     - 인증(AuthZ) 오류인 경우 사용자에게 요청된 미디어를 볼 수 있는 권한이 없으며 사용자에게 일종의 오류 메시지가 표시되어야 합니다.
+     - 다른 유형의 오류(연결 오류, 네트워크 오류 등)가 있는 경우 그런 다음 사용자에게 적절한 오류 메시지를 표시합니다.
 
 1. 짧은 미디어 토큰의 유효성을 검사합니다.\
    Adobe Pass 인증 미디어 토큰 검증기 라이브러리를 사용하여 위의 `getAuthorization()` 호출에서 반환된 단기 미디어 토큰을 확인하십시오.

@@ -2,13 +2,14 @@
 title: Harman Primetime 개요
 description: Harman은 Primetime 광고 및 게시 제품을 유지 관리하는 반면, Adobe은 AccountIQ, 인증 및 동시 모니터링 관련 Adobe Pass 제품을 관리합니다.
 exl-id: e9215d1b-00bc-44ee-82d7-c0df20796818
-source-git-commit: 01e29ee2665942d0078173316cf7fba103ec98e6
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '112'
-ht-degree: 40%
-
+source-wordcount: '118'
+ht-degree: 38%
 ---
-
 
 # Harman Primetime 설명서
 

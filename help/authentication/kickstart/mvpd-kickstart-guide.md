@@ -2,20 +2,21 @@
 title: MVPD 킥스타트 안내서
 description: MVPD 킥스타트 안내서
 exl-id: 6423cc9a-a45a-4cde-b562-4cb72c98e505
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '934'
+source-wordcount: '965'
 ht-degree: 0%
-
 ---
-
 # MVPD 킥스타트 안내서 {#mvpd-kickstart-guide}
 
 >[!IMPORTANT]
 >
 > 이 페이지의 컨텐츠는 정보용으로만 제공됩니다. 이 API를 사용하려면 Adobe의 현재 라이선스가 필요합니다. 허가되지 않은 사용은 허용되지 않습니다.
 
-이 킥스타트 안내서는 Adobe® 패스 인증과 통합할 예정인 다채널 MVPD(비디오 프로그래밍 디스트리뷰터)를 위한 것입니다.
+이 킥스타트 안내서는 ® 패스 인증과 통합할 예정인 다채널 MVPD(비디오 프로그래밍 디스트리뷰터)를 위한 것입니다.
 
 이 문서에서는 통합 프로세스를 원활하고 효율적으로 시작하기 위한 주요 초기 단계를 간략하게 설명합니다. 이는 성공적인 통합을 위해 파트너와 협력할 방법에 대한 지침을 제공하고 기대치를 명확히 하는 것을 목표로 합니다.
 
@@ -33,9 +34,9 @@ Adobe은 Adobe Pass 인증과 통합하는 데 도움이 되는 다양한 리소
 
 설정 프로세스에는 다음 단계가 포함됩니다.
 
-![Adobe® 인증 통합 프로세스 통과](../assets/mvpd-int-lifecycle.png)
+![® 인증 통합 프로세스 통과](../assets/mvpd-int-lifecycle.png)
 
-*Adobe® 인증 통합 프로세스 통과*
+*® 인증 통합 프로세스 통과*
 
 ### 개시 {#kickoff}
 
@@ -129,16 +130,16 @@ Adobe은 Adobe Pass 인증과 통합하는 데 도움이 되는 다양한 리소
 
 ## 고객 지원 액세스 {#access-customer-support}
 
-**Adobe은** Zendesk[을(를) 통해 고객 지원 시스템에 &#x200B;](https://tve.zendesk.com/home) 액세스를 제공합니다. Zendesk에 액세스하려면 https://tve.zendesk.com/home에서 계정을 등록 및 생성해야 합니다.
+**Adobe은 [Zendesk](https://tve.zendesk.com/home)을(를) 통해 고객 지원 시스템에** 액세스를 제공합니다. Zendesk에 액세스하려면 https://tve.zendesk.com/home에서 계정을 등록 및 생성해야 합니다.
 
 Adobe Pass 인증 팀은 통합 프로세스 중에 발생할 수 있는 모든 질문이나 기술 문제를 처리할 수 있습니다. [tve-support@adobe.com](mailto:tve-support@adobe.com)(으)로 문의하십시오.
 
 ## 설명서 액세스 {#access-documentation}
 
-**Adobe은** Adobe Experience League[를 통해 &#x200B;](https://experienceleague.adobe.com/ko/docs/pass/authentication/home) 공개 설명서에 대한 액세스 권한을 제공합니다.
+**Adobe은 [Adobe Experience League](https://experienceleague.adobe.com/ko/docs/pass/authentication/home)를 통해** 공개 설명서에 대한 액세스 권한을 제공합니다.
 
 Adobe Pass 인증 팀은 [MVPD에 대한 통합 안내서](/help/authentication/integration-guide-mvpds/mvpd-integration-guide-overview.md) 섹션에서 사용 가능한 기능 및 워크플로에 대한 포괄적인 설명서를 제공합니다. 각 주제에 대한 자세한 정보에 대한 링크는 이 섹션의 목차를 참조하십시오.
 
 ## 테스트 도구에 액세스 {#access-testing-tool}
 
-**Adobe은** Adobe Developer[&#x200B; 웹 사이트를 통해 API 탐색 도구에 대한 &#x200B;](https://developer.adobe.com/adobe-pass/) 액세스를 제공합니다.
+**Adobe은 [Adobe Developer](https://developer.adobe.com/adobe-pass/) 웹 사이트를 통해 API 탐색 도구에 대한** 액세스를 제공합니다.

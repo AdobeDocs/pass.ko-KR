@@ -2,13 +2,14 @@
 title: Adobe Pass 인증 모니터링
 description: Adobe Pass 인증 모니터링
 exl-id: fb000e9d-b5aa-45b1-a914-9e419ec8a4d9
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '211'
+source-wordcount: '213'
 ht-degree: 0%
-
 ---
-
 # (기존) Adobe Pass 인증 모니터링 {#monitoring-adobe-primetime-authentication}
 
 >[!NOTE]
@@ -31,8 +32,8 @@ ht-degree: 0%
 
 * 다음 종단점은 Adobe Pass 인증 웹 SDK의 일부입니다.  누락된 경우 모든 프로그래머 및 모든 웹 속성에 대해 pay-TVpass가 다운되었음을 의미합니다.
 
-   * `https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js`
-   * `https://entitlement.auth.adobe.com/entitlement/js/AccessEnabler.js`
+  * `https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js`
+  * `https://entitlement.auth.adobe.com/entitlement/js/AccessEnabler.js`
 
 
 ### 모니터링해서는 안 되는 엔드포인트 {#endpoints-not-monitor}

@@ -2,13 +2,14 @@
 title: 짧은 미디어 토큰 가져오기
 description: 짧은 미디어 토큰 받기
 exl-id: 667eaaba-423e-4d54-9dbe-084b3c049e1f
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '401'
 ht-degree: 0%
-
 ---
-
 # (레거시) 짧은 미디어 토큰 받기 {#obtain-short-media-token}
 
 >[!NOTE]

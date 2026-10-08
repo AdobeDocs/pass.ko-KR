@@ -2,13 +2,14 @@
 title: iOS/tvOS SDK 개요
 description: iOS/tvOS SDK 개요
 exl-id: b02a6234-d763-46c0-bc69-9cfd65917a19
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '3801'
 ht-degree: 0%
-
 ---
-
 # (기존) iOS/tvOS SDK 개요 {#iostvos-sdk-overview}
 
 >[!NOTE]
@@ -187,7 +188,8 @@ tvOS에서는 대지를 사용할 수 없으므로 tvOS AccessEnabler 라이브�
 
 **iOS 7 임시 보드 변경 사항 -** 임시 보드가 iOS 7에서 작동하는 방식이 변경되어 iOS 7에서 실행 중인 응용 프로그램 간 교차 SSO가 제한됩니다. 동일한 `<Bundle Seed ID>`(`<Team ID>`)을(를) 가진 응용 프로그램은 토큰을 공유합니다. 즉, 동일한 프로그래머 X의 앱 A1 및 A2는 토큰을 공유하지만 앱 A1(프로그래머 X) 및 앱 A3(프로그래머 Y)은 토큰을 공유하지 않습니다.
 
-- 번들 시드 ID/팀 ID는 동일한 프로비저닝 프로필에서 생성된 경우 두 앱 간에 동일합니다. 자세한 내용은 다음 링크를 참조하십시오.  [http://developer.apple.com/library/ios/\#documentation/general/conceptual/DevPedia-CocoaCore/AppID.html](http://developer.apple.com/library/ios/#documentation/general/conceptual/DevPedia-CocoaCore/AppID.html)
+- 번들 시드 ID/팀 ID는 동일한 프로비저닝 프로필에서 생성된 경우 두 앱 간에 동일합니다. 자세한 내용은 다음 링크를 참조하십시오.
+  [http://developer.apple.com/library/ios/\#documentation/general/conceptual/DevPedia-CocoaCore/AppID.html](http://developer.apple.com/library/ios/#documentation/general/conceptual/DevPedia-CocoaCore/AppID.html)
 - 이 &quot;교차 SSO&quot; 제한은 사용된 Adobe Pass 인증 SDK에 관계없이 iOS 7에 제공됩니다.
 
 iOS 7 이상 버전에서 SSO를 구성하는 방법에 대한 자세한 내용은 이 기술 노트를 참조하십시오(기술 노트는 Access Enabler v1.8 이상 버전에 적용됨). <https://tve.zendesk.com/entries/58233434-Configuring-Pay-TV-pass-SSO-on-iOS>

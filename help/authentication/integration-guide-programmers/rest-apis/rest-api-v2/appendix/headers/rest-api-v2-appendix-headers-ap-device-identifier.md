@@ -2,13 +2,14 @@
 title: 헤더 - AP-Device-Identifier
 description: REST API V2 - 헤더 - AP-Device-Identifier
 exl-id: 90a5882b-2e6d-4e67-994a-050465cac6c6
-source-git-commit: 81d3c3835d2e97e28c2ddb9c72d1a048a25ad433
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '561'
 ht-degree: 0%
-
 ---
-
 # 헤더 - AP-Device-Identifier {#header-ap-device-identifier}
 
 >[!NOTE]
@@ -51,8 +52,10 @@ ht-degree: 0%
    <tr>
       <td>지문</td>
       <td>
-            장치 식별자는 각 장치에 대해 클라이언트 애플리케이션이 만들고 관리하는 안정적이고 고유한 식별자로 구성된다.<br/>
-            클라이언트 애플리케이션은 영구 스토리지에 디바이스 식별자를 캐시해야 합니다. 디바이스 식별자를 손실하거나 변경하면 인증이 무효화됩니다. 클라이언트 응용 프로그램은 응용 프로그램 제거, 재설치 또는 업그레이드와 같은 사용자 작업으로 인한 값 변경을 방지해야 합니다.</td>
+            장치 식별자는 각 장치에 대해 클라이언트 애플리케이션이 만들고 관리하는 안정적이고 고유한 식별자로 구성된다.
+            <br/>
+            클라이언트 애플리케이션은 영구 스토리지에 디바이스 식별자를 캐시해야 합니다. 디바이스 식별자를 손실하거나 변경하면 인증이 무효화됩니다. 클라이언트 응용 프로그램은 응용 프로그램 제거, 재설치 또는 업그레이드와 같은 사용자 작업으로 인한 값 변경을 방지해야 합니다.
+      </td>
    </tr>
 </table>
 

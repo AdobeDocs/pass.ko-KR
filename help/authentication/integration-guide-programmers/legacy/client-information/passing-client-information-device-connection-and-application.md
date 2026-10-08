@@ -2,13 +2,14 @@
 title: 클라이언트 정보 전달(장치, 연결 및 애플리케이션)
 description: 클라이언트 정보 전달(장치, 연결 및 애플리케이션)
 exl-id: 0b21ef0e-c169-48ff-ac01-25411cfece1e
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1725'
 ht-degree: 2%
-
 ---
-
 # (기존) 클라이언트 정보(장치, 연결 및 애플리케이션) 전달 {#pass-client-info}
 
 >[!NOTE]
@@ -97,7 +98,8 @@ AccessEnabler JavaScript SDK은 [setRequestor](/help/authentication/integration-
 
 >[!CAUTION]
 >
->`applicationId` 매개 변수 값은 일반 텍스트 문자열 값이어야 합니다.프로그래머 애플리케이션에서 applicationId를 전달하기로 결정한 경우 나머지 클라이언트 정보 키는 AccessEnabler JavaScript SDK에서 계속 계산됩니다.
+>`applicationId` 매개 변수 값은 일반 텍스트 문자열 값이어야 합니다.
+>프로그래머 애플리케이션에서 applicationId를 전달하기로 결정한 경우 나머지 클라이언트 정보 키는 AccessEnabler JavaScript SDK에서 계속 계산됩니다.
 
 #### iOS/tvOS SDK {#ios-tvos-sdk}
 

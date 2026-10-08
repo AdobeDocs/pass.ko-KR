@@ -2,13 +2,14 @@
 title: 기본 로그아웃 - 기본 애플리케이션 - 플로우
 description: REST API V2 - 기본 로그아웃 - 기본 애플리케이션 - 흐름
 exl-id: 21dbff4a-0d69-4f81-b04f-e99d743c35b3
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '948'
 ht-degree: 0%
-
 ---
-
 # 기본 애플리케이션 내에서 수행되는 기본 로그아웃 흐름 {#basic-logout-flow-performed-within-primary-application}
 
 >[!IMPORTANT]
@@ -36,9 +37,9 @@ Adobe Pass 인증 권한 내의 **로그아웃 흐름**&#x200B;을(를) 사용�
 로그아웃 끝점이 있는 특정 MVPD에 대한 로그아웃을 시작하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
 * 스트리밍 애플리케이션에는 기본 인증 흐름 중 하나를 사용하여 MVPD에 대해 성공적으로 생성된 올바른 일반 프로필이 있어야 합니다.
-   * [기본 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-primary-application-flow.md)
-   * [사전 선택된 mvpd로 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
-   * [미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
+  * [기본 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-primary-application-flow.md)
+  * [사전 선택된 mvpd로 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
+  * [미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
 * 스트리밍 애플리케이션은 MVPD에서 로그아웃해야 하는 경우 로그아웃 흐름을 시작해야 합니다.
 
 >[!IMPORTANT]
@@ -63,8 +64,8 @@ Adobe Pass 인증 권한 내의 **로그아웃 흐름**&#x200B;을(를) 사용�
    >
    > 자세한 내용은 [특정 mvpd에 대한 로그아웃 시작](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`redirectUrl` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `redirectUrl`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.
@@ -102,9 +103,9 @@ Adobe Pass 인증 권한 내의 **로그아웃 흐름**&#x200B;을(를) 사용�
 로그아웃 끝점이 없는 특정 MVPD에 대한 로그아웃을 시작하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
 * 스트리밍 애플리케이션에는 기본 인증 흐름 중 하나를 사용하여 MVPD에 대해 성공적으로 생성된 올바른 일반 프로필이 있어야 합니다.
-   * [기본 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-primary-application-flow.md)
-   * [사전 선택된 mvpd로 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
-   * [미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
+  * [기본 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-primary-application-flow.md)
+  * [사전 선택된 mvpd로 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
+  * [미리 선택된 mvpd 없이 보조 응용 프로그램 내에서 인증 수행](rest-api-v2-basic-authentication-secondary-application-flow.md)
 * 스트리밍 애플리케이션은 MVPD에서 로그아웃해야 하는 경우 로그아웃 흐름을 시작해야 합니다.
 
 >[!IMPORTANT]
@@ -129,8 +130,8 @@ Adobe Pass 인증 권한 내의 **로그아웃 흐름**&#x200B;을(를) 사용�
    >
    > 자세한 내용은 [특정 mvpd에 대한 로그아웃 시작](../../apis/logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `serviceProvider`과(와) 같은 모든 `mvpd`필수`redirectUrl` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Authorization`required`AP-Device-Identifier` 헤더
+   > * `serviceProvider`, `mvpd` 및 `redirectUrl`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`, `AP-Device-Identifier`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.

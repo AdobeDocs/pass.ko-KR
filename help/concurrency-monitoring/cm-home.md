@@ -2,13 +2,14 @@
 title: 동시성 모니터링 소개
 description: 동시성 모니터링 소개
 exl-id: 725cc64b-6b03-46e3-a038-41e9b1341c6b
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '225'
 ht-degree: 0%
-
 ---
-
 # 동시성 모니터링 소개 {#intro}
 
 동시성 모니터링은 콘텐츠 제공자와 ID 제공자(MVPD 및 프로그래머)가 여러 애플리케이션, 디바이스 및 플랫폼에서 동시에 비디오를 스트리밍하는 데 대한 제한을 정의하고 적용할 수 있도록 하는 서비스입니다. 구독자가 동시에 볼 수 있는 스트림 수를 제어하려는 프로그래머든, 콘텐츠 파트너 전반에 사용 정책을 적용하려는 MVPD이든 필요한 도구를 제공합니다.

@@ -2,13 +2,14 @@
 title: 인증 토큰 검색
 description: 인증 토큰 검색
 exl-id: 7fb03854-edad-41e7-b218-1858fc071876
-source-git-commit: ae2e61152695b738b0bb08d1dcd81417f3bbdfb5
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '306'
 ht-degree: 0%
-
 ---
-
 # (레거시) 인증 토큰 검색 {#retrieve-authentication-token}
 
 >[!NOTE]

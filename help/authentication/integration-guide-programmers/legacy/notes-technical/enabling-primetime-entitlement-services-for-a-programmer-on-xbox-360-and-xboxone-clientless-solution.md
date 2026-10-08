@@ -2,13 +2,14 @@
 title: Xbox 360 및 XboxOne Clientless에서 프로그래머를 위해 Adobe Pass 자격 부여 서비스 활성화
 description: Xbox 360 및 XboxOne Clientless에서 프로그래머를 위해 Adobe Pass 자격 부여 서비스 활성화
 exl-id: ff7254de-9ea4-4c27-a186-d1c2eea12222
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '476'
+source-wordcount: '484'
 ht-degree: 0%
-
 ---
-
 # (레거시) Xbox 360 및 XboxOne Clientless에서 프로그래머를 위해 Adobe Pass Entitlement Services 활성화 {#enabling-primetime-entitlement-services-for-a-programer-on-xbox-360-and-xboxone-clientless}
 
 >[!NOTE]
@@ -49,4 +50,4 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->XSTS 토큰의 길이가 크기 때문에 XBox 콘솔에는 기술적인 제한이 있습니다. 토큰을 HTTP GET 매개 변수로 Adobe Pass 유료 TV 인증 API에 보낼 수 없습니다. 이를 처리하기 위해 Adobe Pass pay-TV 인증을 사용하면 API를 호출할 때 HTTP 헤더 &quot;인증&quot;의 일부로 XSTS 토큰을 전송할 수 있습니다. XSTS 토큰은 Adobe Pass pay-TV 인증에서 프로그래머에게 발급된 X.509 인증서의 공개 키를 사용하여 암호화해야 합니다. Adobe Pass pay-TV 인증은 연결된 개인 키를 저장하고 이를 사용하여 XSTS 토큰을 해독하고 여기에서 deviceId를 추출합니다.
+>XSTS 토큰의 길이가 크기 때문에 XBox 콘솔에는 기술적인 제한이 있습니다. 토큰을 Adobe Pass 유료 TV 인증 API에 대한 HTTP GET 매개 변수로 전송할 수 없습니다. 이를 처리하기 위해 Adobe Pass pay-TV 인증을 사용하면 API를 호출할 때 HTTP 헤더 &quot;인증&quot;의 일부로 XSTS 토큰을 전송할 수 있습니다. XSTS 토큰은 Adobe Pass pay-TV 인증에서 프로그래머에게 발급된 X.509 인증서의 공개 키를 사용하여 암호화해야 합니다. Adobe Pass pay-TV 인증은 연결된 개인 키를 저장하고 이를 사용하여 XSTS 토큰을 해독하고 여기에서 deviceId를 추출합니다.

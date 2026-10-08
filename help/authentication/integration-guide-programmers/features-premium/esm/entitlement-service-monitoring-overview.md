@@ -2,13 +2,14 @@
 title: 권한 부여 서비스 모니터링 개요
 description: 권한 부여 서비스 모니터링 개요
 exl-id: ebd5d650-0a32-4583-9045-5156356494e2
-source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1349'
 ht-degree: 0%
-
 ---
-
 # 권한 부여 서비스 모니터링 개요 {#entitlement-service-monitoring-overview}
 
 >[!NOTE]

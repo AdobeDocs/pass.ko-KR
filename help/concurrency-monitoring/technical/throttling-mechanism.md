@@ -2,13 +2,14 @@
 title: 조절 메커니즘
 description: 조절 메커니즘
 exl-id: 15236570-1a75-42fb-9bba-0e2d7a59c9f6
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '614'
+source-wordcount: '616'
 ht-degree: 1%
-
 ---
-
 # 조절 메커니즘 {#throttling-mechanism}
 
 ## 소개 {#introduction}
@@ -20,7 +21,7 @@ Adobe은 데이터 프로세서로서 고객의 사용자가 리소스를 균등
 ## 메커니즘 개요 {#mechanism-overview}
 
 이 메커니즘은 특정 시간 간격 내에 각 동시 모니터링 엔드포인트에 대해 허용되는 최대 호출 수를 결정합니다.
-이 최대 호출 수에 도달하면 서비스가 &#39;429 너무 많은 요청&#39;으로 응답합니다. 429 응답 &quot;Expires&quot; 헤더에는 다음 호출이 유효한 것으로 간주되거나 제한이 만료되는 시점의 타임스탬프가 포함됩니다. 현재 전송률 조절은 1시 이후에 만료됩니다.   분 후 첫 429 응답에서 시작합니다.
+이 최대 호출 수에 도달하면 서비스가 &#39;429 너무 많은 요청&#39;으로 응답합니다. 429 응답 &quot;Expires&quot; 헤더에는 다음 호출이 유효한 것으로 간주되거나 제한이 만료되는 시점의 타임스탬프가 포함됩니다. 현재, 조절은 첫 번째 429 응답에서 1분 후에 만료됩니다.
 
 조절로 구성된 엔드포인트는 다음과 같습니다.
 1. 새 세션 만들기: POST /sessions/{idp}/{subject}
@@ -28,8 +29,8 @@ Adobe은 데이터 프로세서로서 고객의 사용자가 리소스를 균등
 3. 세션 종료: DELETE /sessions/{idp}/{subject}/{sessionId}
 
 조절은 다음 두 가지 수준에서 구성됩니다.
-1. 세션: {sessionId} 호출 및 `Heartbeat` 호출에서 전송된 동일한 고유 `Terminate a session` 매개 변수와 같습니다.
-2. 사용자: {subject} 호출 시 전송된 동일한 고유한 `Create a new session` 매개 변수입니다.
+1. 세션: `Heartbeat` 호출 및 `Terminate a session` 호출에서 전송된 동일한 고유 {sessionId} 매개 변수와 같습니다.
+2. 사용자: `Create a new session` 호출 시 전송된 동일한 고유한 {subject} 매개 변수입니다.
 
 세션 수준 조절에 대한 제한은 1분 이내에 200개의 요청으로 설정됩니다.\
 사용자 수준 조절에 대한 제한은 1분 이내에 200개의 요청으로 설정됩니다.\

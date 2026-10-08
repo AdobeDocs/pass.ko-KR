@@ -2,13 +2,14 @@
 title: 사용 사례
 description: 동시성 모니터링의 사용 사례.
 exl-id: 6cc30bb6-e985-4d9a-9f99-a7f04ae8deb7
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '443'
+source-wordcount: '446'
 ht-degree: 0%
-
 ---
-
 # 사용 사례 {#use-cases}
 
 스트림 계산 서비스의 주요 사용 사례는 사용자가 시청한 동시 비디오 스트림 수를 계산하고 동일한 계정 ID에 대한 동시 사용 결정을 제공하는 것입니다.

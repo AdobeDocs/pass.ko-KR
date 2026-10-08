@@ -2,13 +2,14 @@
 title: DCR(Dynamic Client Registration) 용어집
 description: DCR(Dynamic Client Registration) 용어집
 exl-id: 4ce67fa5-b0e5-4967-b83d-c682426d9329
-source-git-commit: ae02f53afc58b7d31f57bcc1e4dd1328f12abc3e
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '299'
+source-wordcount: '307'
 ht-degree: 0%
-
 ---
-
 # DCR(Dynamic Client Registration) 용어집 {#rest-api-dcr-glossary}
 
 >[!IMPORTANT]
@@ -37,7 +38,7 @@ ht-degree: 0%
 
 #### 사용자 지정 체계 {#custom-scheme}
 
-사용자 지정 구성표는 Adobe Pass [TVE Dashboard](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#programmer)에서 생성 및 다운로드할 수 있는 [프로그래머](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard) 응용 프로그램을 참조하는 고유한 값이며 iOS 장치에서 실행되는 응용 프로그램에서 최종 리디렉션으로 사용됩니다.
+사용자 지정 구성표는 Adobe Pass [TVE Dashboard](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#tve-dashboard)에서 생성 및 다운로드할 수 있는 [프로그래머](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#programmer) 응용 프로그램을 참조하는 고유한 값이며 iOS 장치에서 실행되는 응용 프로그램에서 최종 리디렉션으로 사용됩니다.
 
 ### D {#d}
 
@@ -53,7 +54,7 @@ DCR은 보호된 API에 대한 액세스를 추가로 활성화할 수 있는 Ad
 
 #### 등록된 응용 프로그램 {#registered-application}
 
-등록된 응용 프로그램은 [DCR(Dynamic Client Registration)](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#programmer) 프로세스를 진행해야 하는 [Programmer](#dcr) 응용 프로그램에 대한 정보를 저장하는 Adobe Pass 인증 개념입니다.
+등록된 응용 프로그램은 [DCR(Dynamic Client Registration)](#dcr) 프로세스를 진행해야 하는 [Programmer](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-glossary.md#programmer) 응용 프로그램에 대한 정보를 저장하는 Adobe Pass 인증 개념입니다.
 
 ### S {#s}
 

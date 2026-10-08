@@ -2,13 +2,14 @@
 title: 향상된 오류 코드
 description: 향상된 오류 코드
 exl-id: 2b0a9095-206b-4dc7-ab9e-e34abf4d359c
-source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '2747'
 ht-degree: 3%
-
 ---
-
 # 향상된 오류 코드 {#enhanced-error-codes}
 
 >[!IMPORTANT]
@@ -18,12 +19,12 @@ ht-degree: 3%
 향상된 오류 코드는 다음과 통합된 클라이언트 애플리케이션에 추가 오류 정보를 제공하는 Adobe Pass 인증 기능을 나타냅니다.
 
 * Adobe Pass 인증 REST API:
-   * [REST API v2](../../rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
-   * [(기존) REST API v1](../../legacy/rest-api-v1/rest-api-overview.md)
+  * [REST API v2](../../rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
+  * [(기존) REST API v1](../../legacy/rest-api-v1/rest-api-overview.md)
 * Adobe Pass 인증 SDK가 API 사전 권한을 부여합니다.
-   * [(기존) JavaScript SDK(API 사전 인증)](../../legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
-   * [(기존) iOS/tvOS SDK(API 사전 승인)](../../legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
-   * [(기존) Android SDK(API 사전 인증)](../../legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
+  * [(기존) JavaScript SDK(API 사전 인증)](../../legacy/sdks/javascript-sdk/preauthorize-api-javascript-sdk.md)
+  * [(기존) iOS/tvOS SDK(API 사전 승인)](../../legacy/sdks/ios-tvos-sdk/preauthorize-api-ios-tvos-sdk.md)
+  * [(기존) Android SDK(API 사전 인증)](../../legacy/sdks/android-sdk/preauthorize-api-android-sdk.md)
 
   _(*) 사전 인증 API는 향상된 오류 코드를 지원하는 유일한 Adobe Pass 인증 SDK API입니다._
 

@@ -2,13 +2,14 @@
 title: iOS/tvOS API 참조
 description: iOS/tvOS API 참조
 exl-id: 017a55a8-0855-4c52-aad0-d3d597996fcb
-source-git-commit: b6ba687240799d1889302019613f426259f147ad
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '7035'
 ht-degree: 0%
-
 ---
-
 # (기존) iOS/tvOS SDK API 참조 {#iostvos-sdk-api-reference}
 
 >[!NOTE]
@@ -164,11 +165,11 @@ ht-degree: 0%
 **매개 변수:**
 
 * *options*: 전역 SDK 옵션이 포함된 NSDictionary입니다. 현재 다음 옵션을 사용할 수 있습니다.
-   * **applicationProfile** - 이 값을 기반으로 서버 구성을 만드는 데 사용할 수 있습니다.
-   * **visitorID** - Experience Cloud ID 서비스. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
-   * **handleSVC** - 프로그래머가 SFSafariViewControllers를 처리할지 여부를 나타내는 부울. 자세한 내용은 iOS SDK 3.2 이상에서 [SFSafaariViewController 지원](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)을 참조하십시오.
-      * **false,**(으)로 설정하면 SDK에서 최종 사용자에게 SFSafariViewController가 자동으로 표시됩니다. SDK은 MVPD 로그인 페이지 URL로 이동합니다.
-      * **true,**(으)로 설정하면 SDK에서 최종 사용자에게 SFSafariViewController를 자동으로 **NOT**&#x200B;합니다. SDK이 **navigate(toUrl:{url}, useSVC:YES)**&#x200B;을(를) 추가로 트리거합니다.
+  * **applicationProfile** - 이 값을 기반으로 서버 구성을 만드는 데 사용할 수 있습니다.
+  * **visitorID** - Experience Cloud ID 서비스. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
+  * **handleSVC** - 프로그래머가 SFSafariViewControllers를 처리할지 여부를 나타내는 부울. 자세한 내용은 iOS SDK 3.2 이상에서 [SFSafaariViewController 지원](/help/authentication/integration-guide-programmers/legacy/notes-technical/sfsafariviewcontroller-support-on-ios-sdk-32.md)을 참조하십시오.
+    * **false,**(으)로 설정하면 SDK에서 최종 사용자에게 SFSafariViewController가 자동으로 표시됩니다. SDK은 MVPD 로그인 페이지 URL로 이동합니다.
+    * **true,**(으)로 설정하면 SDK에서 최종 사용자에게 SFSafariViewController를 자동으로 **NOT**&#x200B;합니다. SDK이 **navigate(toUrl:{url}, useSVC:YES)**&#x200B;을(를) 추가로 트리거합니다.
 * **device\_info** - [클라이언트 정보 전달](/help/authentication/integration-guide-programmers/legacy/client-information/passing-client-information-device-connection-and-application.md)에 설명된 클라이언트 정보입니다.
 
 [맨 위로...](#apis)
@@ -354,8 +355,8 @@ ht-degree: 0%
 **매개 변수**:
 
 * *상태*: 다음 값 중 하나를 사용할 수 있습니다.
-   * `ACCESS_ENABLER_STATUS_SUCCESS` - 구성 단계가 완료되었습니다.
-   * `ACCESS_ENABLER_STATUS_ERROR` - 구성 단계 실패
+  * `ACCESS_ENABLER_STATUS_SUCCESS` - 구성 단계가 완료되었습니다.
+  * `ACCESS_ENABLER_STATUS_ERROR` - 구성 단계 실패
 
 **트리거 기준:**
 
@@ -369,8 +370,10 @@ ht-degree: 0%
 
 **파일:** AccessEnabler/headers/AccessEnabler.h
 
-**설명:** 현재 사용자의 인증 상태를 확인합니다.이렇게 하려면 로컬에서 유효한 인증 토큰을 검색하십시오
-토큰 저장 공간. 이 메서드는 네트워크 호출을 수행하지 않으며 기본 스레드에서 호출하는 것이 좋습니다.애플리케이션에서 사용자의 인증 상태를 쿼리하고
+**설명:** 현재 사용자의 인증 상태를 확인합니다.
+이렇게 하려면 로컬에서 유효한 인증 토큰을 검색하십시오
+토큰 저장 공간. 이 메서드는 네트워크 호출을 수행하지 않으며 기본 스레드에서 호출하는 것이 좋습니다.
+애플리케이션에서 사용자의 인증 상태를 쿼리하고
 그에 따라 UI를 업데이트합니다(즉, 로그인/로그아웃 UI 업데이트). 다음
 인증 상태는 를 통해 애플리케이션에 전달됩니다.
 [`setAuthenticationStatus:errorCode:`](#setAuthNStatus) 콜백입니다.
@@ -396,8 +399,8 @@ ht-degree: 0%
 
 **매개 변수:** 없음
 
-**콜백이 트리거됨:
-
+**콜백이 트리거됨:**
+[`setAuthenticationStatus:errorCode:`](#setAuthNStatus)
 
 [맨 위로...](#apis)
 
@@ -528,8 +531,8 @@ MVPD 로그인 페이지에서 사용자의 자격 증명이 확인됨에 따라
 * *forceAuthn*: 사용자가 이미 인증되었는지 여부에 관계없이 인증 흐름을 시작해야 하는지 여부를 지정하는 플래그입니다.
 * *data*: Pay-TV Pass 서비스로 보낼 키-값 쌍으로 구성된 사전입니다. Adobe은 이 데이터를 사용하여 SDK을 변경하지 않고 향후 기능을 활성화할 수 있습니다.
 * 필터: MVPD SSO 대화 상자에 표시되어야 하는 두 개의 Apple ID 목록이 있는 사전입니다. SSO를 지원하지 않는 모든 MVPD은 무시되지만 순서는 준수됩니다. 사전에는 두 개의 키가 있어야 합니다.
-   * TV\_PROVIDERS: 선택기에 표시되어야 하는 모든 MVPD가 있는 목록
-   * FEATURED\_TV\_PROVIDERS: 선택기에 기능으로 표시되어야 하는 모든 MVPD가 포함된 목록입니다. TV\_PROVIDERS 목록에도 이 목록의 MVPD를 지정해야 합니다.
+  * TV\_PROVIDERS: 선택기에 표시되어야 하는 모든 MVPD가 있는 목록
+  * FEATURED\_TV\_PROVIDERS: 선택기에 기능으로 표시되어야 하는 모든 MVPD가 포함된 목록입니다. TV\_PROVIDERS 목록에도 이 목록의 MVPD를 지정해야 합니다.
 
 **가용성:** v2.0 - v2.3.1
 
@@ -730,7 +733,7 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 <tbody>
 <tr class="odd">
 <td><pre><code>@optional
-&#x200B;- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
+- (void) navigateToUrl:(NSString *)url useSVC:(BOOL)useSVC; </code></pre></td>
 </tr>
 </tbody>
 </table>
@@ -847,12 +850,12 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 **매개 변수**:
 
 * *상태*: 다음 값 중 하나를 사용할 수 있습니다.
-   * `ACCESS_ENABLER_STATUS_SUCCESS` - 인증 흐름이 완료되었습니다.
-   * `ACCESS_ENABLER_STATUS_ERROR` - 인증 흐름 실패
+  * `ACCESS_ENABLER_STATUS_SUCCESS` - 인증 흐름이 완료되었습니다.
+  * `ACCESS_ENABLER_STATUS_ERROR` - 인증 흐름 실패
 * *code*: 실패 이유입니다. *status*&#x200B;이(가) `ACCESS_ENABLER_STATUS_SUCCESS`이면 *code*&#x200B;은(는) 빈 문자열입니다(즉, `USER_AUTHENTICATED` 상수로 정의됨). 실패할 경우 이 매개 변수는 다음 값 중 하나를 사용할 수 있습니다.
-   * `USER_NOT_AUTHENTICATED_ERROR` - 사용자가 인증되지 않았습니다. 로컬 토큰 캐시에 올바른 인증 토큰이 없는 경우 [checkAuthentication:](#checkAuthN) 메서드 호출에 대한 응답입니다.
-   * `PROVIDER_NOT_SELECTED_ERROR` - 인증 흐름을 중단하기 위해 상위 계층 응용 프로그램이 *null*&#x200B;을(를) [`setSelectedProvider:`](#setSelProv)(으)로 전달한 후 AccessEnabler가 인증 상태 컴퓨터를 다시 설정했습니다.  사용자가 인증 흐름을 취소한 것 같습니다(즉, &quot;뒤로&quot; 단추 누름).
-   * `GENERIC_AUTHENTICATION_ERROR` - 네트워크를 사용할 수 없거나 사용자가 인증 흐름을 명시적으로 취소하는 등의 이유로 인증 흐름이 실패했습니다.
+  * `USER_NOT_AUTHENTICATED_ERROR` - 사용자가 인증되지 않았습니다. 로컬 토큰 캐시에 올바른 인증 토큰이 없는 경우 [checkAuthentication:](#checkAuthN) 메서드 호출에 대한 응답입니다.
+  * `PROVIDER_NOT_SELECTED_ERROR` - 인증 흐름을 중단하기 위해 상위 계층 응용 프로그램이 *null*&#x200B;을(를) [`setSelectedProvider:`](#setSelProv)(으)로 전달한 후 AccessEnabler가 인증 상태 컴퓨터를 다시 설정했습니다.  사용자가 인증 흐름을 취소한 것 같습니다(즉, &quot;뒤로&quot; 단추 누름).
+  * `GENERIC_AUTHENTICATION_ERROR` - 네트워크를 사용할 수 없거나 사용자가 인증 흐름을 명시적으로 취소하는 등의 이유로 인증 흐름이 실패했습니다.
 
 **트리거 대상:** `checkAuthentication`, `getAuthentication`, [`getAuthentication:withData:`](#getAuthN), `checkAuthorization:`, [`checkAuthorization:withData:`](#checkAuthZ)
 
@@ -1157,8 +1160,8 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 * *resource*: 인증을 받은 리소스입니다.
 * *code*: 오류 시나리오와 연결된 오류 코드입니다. 가능한 값:
-   * `USER_NOT_AUTHORIZED_ERROR` - 사용자가 권한을 부여할 수 없습니다.
-(특정 리소스에 대해)
+  * `USER_NOT_AUTHORIZED_ERROR` - 사용자가 권한을 부여할 수 없습니다.
+    (특정 리소스에 대해)
 * *설명*: 오류 시나리오에 대한 추가 세부 정보입니다. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증에서 빈 문자열 **(&quot;)**&#x200B;을(를) 보냅니다.\
   이 문자열은 MVPD에서 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달하는 데 사용할 수 있습니다. 예를 들어 구독자가 리소스에 대한 인증을 거부하면 MVPD에서 다음과 같은 메시지를 보낼 수 있습니다. &quot;현재 패키지에서 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 **여기**&#x200B;를 클릭하세요.&quot; 이 콜백을 통해 Adobe Pass Authentication에서 메시지를 표시하거나 무시할 수 있는 옵션이 있는 프로그래머에게 전달합니다. Adobe Pass 인증은 이 매개 변수를 사용하여 오류가 발생했을 수 있는 조건에 대한 알림을 제공할 수도 있습니다. 예를 들어 &quot;공급자의 인증 서비스와 통신하는 동안 네트워크 오류가 발생했습니다.&quot;와 같습니다.
 
@@ -1312,16 +1315,16 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 
 * *keyDictionary*: 사전 데이터 구조이며, 다음과 같습니다.
 형식:
-   * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_AUTHENTICATION`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
-   * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_AUTHORIZATION` **및**&#x200B;인 경우\
-     키가 `METADATA_RESOURCE_ID_KEY`이고 값이 특정 리소스 ID인 경우 지정된 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
-   * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_DEVICE_ID`인 경우 현재 장치 ID를 얻기 위해 쿼리가 수행됩니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
-   * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_USER_META` **이고** 키가 `METADATA_USER_META_KEY`이고 값이 메타데이터 이름인 경우 사용자 메타데이터에 대한 쿼리가 수행됩니다. 사용 가능한 사용자 메타데이터 유형 목록:
-      * `zip` - 우편 번호 목록
-      * `householdID` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다.
-      * `maxRating` - 사용자의 최대 자녀 보호 등급 컬렉션
-      * `userID` - 사용자 식별자. MVPD에서 하위 계정을 지원하고 사용자가 주 계정이 아닌 경우 `userID`은(는) `householdID.`과(와) 달라집니다
-      * `channelID` - 사용자가 볼 수 있는 채널 목록입니다.
+  * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_AUTHENTICATION`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
+  * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_AUTHORIZATION` **및**&#x200B;인 경우\
+    키가 `METADATA_RESOURCE_ID_KEY`이고 값이 특정 리소스 ID인 경우 지정된 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
+  * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_DEVICE_ID`인 경우 현재 장치 ID를 얻기 위해 쿼리가 수행됩니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
+  * 키가 `METADATA_OPCODE_KEY`이고 값이 `METADATA_USER_META` **이고** 키가 `METADATA_USER_META_KEY`이고 값이 메타데이터 이름인 경우 사용자 메타데이터에 대한 쿼리가 수행됩니다. 사용 가능한 사용자 메타데이터 유형 목록:
+    * `zip` - 우편 번호 목록
+    * `householdID` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다.
+    * `maxRating` - 사용자의 최대 자녀 보호 등급 컬렉션
+    * `userID` - 사용자 식별자. MVPD에서 하위 계정을 지원하고 사용자가 주 계정이 아닌 경우 `userID`은(는) `householdID.`과(와) 달라집니다
+    * `channelID` - 사용자가 볼 수 있는 채널 목록입니다.
 
   >[!NOTE]
   >
@@ -1485,9 +1488,9 @@ UIWebView/WKWebView` `컨트롤러가 여러 리디렉션을 거치면서 응용
 * (NSString) logoURL - MVPD 로고 주소.
 * (BOOL) enablePlatformServices - true인 경우 MVPD에서 [Apple SSO](#presentTvDialog)와 같은 SSO 서비스를 지원합니다.
 * (NSString) boardingStatus - 3개의 값을 가질 수 있습니다.
-   * nil - MVPD은 Apple SSO를 지원하지 않습니다.
-   * 선택기 - MVPD은 Apple 선택기에 나타날 수 있지만 인증 흐름은 Adobe에 의해 수행됩니다.
-   * 지원됨 - MVPD은 Apple에서 완전히 지원되며 Apple의 SSO 토큰을 사용합니다.
+  * nil - MVPD은 Apple SSO를 지원하지 않습니다.
+  * 선택기 - MVPD은 Apple 선택기에 나타날 수 있지만 인증 흐름은 Adobe에 의해 수행됩니다.
+  * 지원됨 - MVPD은 Apple에서 완전히 지원되며 Apple의 SSO 토큰을 사용합니다.
 
 [맨 위로...](#apis)
 
@@ -1515,25 +1518,25 @@ AccessEnabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거합
 **참고:** 장치 형식 및 운영 체제는 공용 Java 라이브러리(<http://java.net/projects/user-agent-utils>) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, Adobe은 잘못된 결과에 대한 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
 
 * 장치 유형에 가능한 값:
-   * `computer`
-   * `tablet`
-   * `mobile`
-   * `gameconsole`
-   * `unknown`
+  * `computer`
+  * `tablet`
+  * `mobile`
+  * `gameconsole`
+  * `unknown`
 
 * AccessEnabler 클라이언트 유형에 사용할 수 있는 값은 다음과 같습니다.
-   * `flash`
-   * `html5`
-   * `ios`
-   * `android`
+  * `flash`
+  * `html5`
+  * `ios`
+  * `android`
 
 
 **매개 변수**:
 
 * *event*: 추적 중인 이벤트의 코드입니다. 가능한 추적 이벤트 유형에는 세 가지가 있습니다.
-   * 인증 토큰 요청이 반환될 때마다 **authorizationDetection:**(이벤트는 `TRACKING_AUTHORIZATION`)
-   * **authenticationDetection:** 인증 확인이 발생할 때마다(이벤트는 `TRACKING_AUTHENTICATION`)
-   * 사용자가 MVPD 선택 양식에서 MVPD을 선택할 때 **mvpdSelection:**(이벤트는 `TRACKING_GET_SELECTED_PROVIDER`)
+  * 인증 토큰 요청이 반환될 때마다 **authorizationDetection:**(이벤트는 `TRACKING_AUTHORIZATION`)
+  * **authenticationDetection:** 인증 확인이 발생할 때마다(이벤트는 `TRACKING_AUTHENTICATION`)
+  * 사용자가 MVPD 선택 양식에서 MVPD을 선택할 때 **mvpdSelection:**(이벤트는 `TRACKING_GET_SELECTED_PROVIDER`)
 * *data*: 보고된 이벤트와 연결된 추가 데이터입니다. 이 데이터는 값 목록 형태로 표시됩니다.
 
 **트리거 기준:** `checkAuthentication`, `getAuthentication`, [`getAuthentication:withData:`](#getAuthN), `checkAuthorization:`, [`checkAuthorization:withData:`](#checkAuthZ), `getAuthorization:`, [`getAuthorization:withData:`](#getAuthZ), `setSelectedProvider:`
@@ -1541,29 +1544,29 @@ AccessEnabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거합
 *data* 배열의 값을 해석하기 위한 지침:
 
 * TrackingEventType `TRACKING_AUTHENTICATION:`의 경우
-   * **0** - 토큰 요청의 성공 여부(true/false) 및 성공 여부:
-   * **1** - MVPD ID 문자열
-   * **2** - GUID(md5 해시됨)
-   * **3** - 토큰이 캐시에 이미 있습니다(true/false).
-   * **4** - 장치 유형
-   * **5** - AccessEnabler 클라이언트 유형
-   * **6** - 운영 체제 유형
+  * **0** - 토큰 요청의 성공 여부(true/false) 및 성공 여부:
+  * **1** - MVPD ID 문자열
+  * **2** - GUID(md5 해시됨)
+  * **3** - 토큰이 캐시에 이미 있습니다(true/false).
+  * **4** - 장치 유형
+  * **5** - AccessEnabler 클라이언트 유형
+  * **6** - 운영 체제 유형
 
 * TrackingEventType `TRACKING_AUTHORIZATION:`의 경우
-   * **0** - 토큰 요청의 성공 여부(true/false) 및 성공 여부:
-   * **1** - MVPD ID
-   * **2** - GUID(md5 해시됨)
-   * **3** - 토큰이 캐시에 이미 있습니다(true/false).
-   * **4** - 오류
-   * **5** - 세부 정보
-   * **6** - 장치 유형
-   * **7** - AccessEnabler 클라이언트 유형
-   * **8** - 운영 체제 유형
+  * **0** - 토큰 요청의 성공 여부(true/false) 및 성공 여부:
+  * **1** - MVPD ID
+  * **2** - GUID(md5 해시됨)
+  * **3** - 토큰이 캐시에 이미 있습니다(true/false).
+  * **4** - 오류
+  * **5** - 세부 정보
+  * **6** - 장치 유형
+  * **7** - AccessEnabler 클라이언트 유형
+  * **8** - 운영 체제 유형
 * TrackingEventType `TRACKING_GET_SELECTED_PROVIDER:`의 경우
-   * **0** - 현재 선택한 MVPD의 ID
-   * **1** - 장치 유형
-   * **2** - AccessEnabler 클라이언트 유형
-   * **3** - 운영 체제 유형
+  * **0** - 현재 선택한 MVPD의 ID
+  * **1** - 장치 유형
+  * **2** - AccessEnabler 클라이언트 유형
+  * **3** - 운영 체제 유형
 
 </br>
 

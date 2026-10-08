@@ -2,13 +2,14 @@
 title: 동적 클라이언트 등록 흐름
 description: 동적 클라이언트 등록 흐름
 exl-id: d881cf0a-de09-4b1d-a094-d5490f944796
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '564'
+source-wordcount: '567'
 ht-degree: 0%
-
 ---
-
 # 동적 클라이언트 등록 흐름 {#dynamic-client-registration-flow}
 
 >[!IMPORTANT]
@@ -48,8 +49,8 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
    >
    > 자세한 내용은 [클라이언트 자격 증명 검색](../apis/dynamic-client-registration-apis-retrieve-client-credentials.md#request) API 설명서를 참조하십시오.
    >
-   > * _과(와) 같은 모든_&#x200B;필수`software_statement` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Content-Type`required`X-Device-Info` 헤더
+   > * `software_statement`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Content-Type`, `X-Device-Info`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **클라이언트 자격 증명 반환:** 클라이언트 등록 끝점 응답에 수신한 매개 변수 및 헤더와 관련된 클라이언트 자격 증명에 대한 정보가 포함되어 있습니다.
@@ -78,8 +79,8 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
    >
    > 자세한 내용은 [액세스 토큰 검색](../apis/dynamic-client-registration-apis-retrieve-access-token.md#request) API 설명서를 참조하십시오.
    >
-   > * _,_ 및 `client_id`과(와) 같은 모든 `client_secret`필수`grant_type` 매개 변수
-   > * _,_&#x200B;과(와) 같은 모든 `Content-Type`required`X-Device-Info` 헤더
+   > * `client_id`, `client_secret` 및 `grant_type`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Content-Type`, `X-Device-Info`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **액세스 토큰 반환:** 클라이언트 토큰 끝점 응답에 수신된 매개 변수 및 헤더와 연결된 액세스 토큰에 대한 정보가 포함되어 있습니다.
@@ -102,15 +103,15 @@ Adobe Pass으로 보호된 API에 액세스하려면 다음 전제 조건이 충
    >
    > 액세스 토큰은 지정된 기간(예: 24시간 TTL(Time-to-Live)) 내에서만 캐시되고 사용되어야 합니다. 만료되면 클라이언트 애플리케이션이 새 액세스 토큰을 요청해야 합니다.
 
-1. **보호된 API 액세스 계속:** 클라이언트 응용 프로그램은 액세스 토큰을 사용하여 다른 Adobe Pass의 보호된 API에 액세스합니다. 클라이언트 응용 프로그램은 `Authorization` 인증 체계(예: `Bearer`)를 사용하여 `Authorization: Bearer <access_token>` 요청 헤더에 액세스 토큰을 포함해야 합니다.
+1. **보호된 API 액세스 계속:** 클라이언트 응용 프로그램은 액세스 토큰을 사용하여 다른 Adobe Pass의 보호된 API에 액세스합니다. 클라이언트 응용 프로그램은 `Bearer` 인증 체계(예: `Authorization: Bearer <access_token>`)를 사용하여 `Authorization` 요청 헤더에 액세스 토큰을 포함해야 합니다.
 
    >[!IMPORTANT]
    >
    > Adobe Pass 보호 API는 액세스 토큰의 유효성을 검사하여 기본 조건이 충족되는지 확인합니다.
    >
-   > * _access_token_&#x200B;은(는) 유효해야 합니다.
-   > * _access_token_&#x200B;은(는) 올바른 _client_id_ 및 _client_secret_&#x200B;과(와) 연결되어 있어야 합니다.
-   > * _access_token_&#x200B;은(는) 올바른 _software_statement_&#x200B;와 연결되어 있어야 합니다.
+   > * _access_ token_은(는) 유효해야 합니다.
+   > * _access_ token _은(는) 올바른_ client _id_ 및 _client_secret_과(와) 연결되어 있어야 합니다.
+   > * _access_ token _은(는) 올바른_ software_statement_와 연결되어 있어야 합니다.
    >
    > <br/>
    >

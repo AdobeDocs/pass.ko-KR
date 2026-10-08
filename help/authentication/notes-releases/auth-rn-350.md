@@ -2,13 +2,14 @@
 title: Adobe Pass Authentication 3.5.0 릴리스 노트
 description: 이 릴리스의 새로운 기능, 변경 사항 및 알려진 문제에 대해 알아봅니다.
 exl-id: b196f636-26a5-4974-903e-40b5f8b93a24
-source-git-commit: 1cbddf081fc7d57a187c9701e4ade8593baf8759
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '273'
 ht-degree: 0%
-
 ---
-
 # Adobe Pass Authentication 3.5.0 릴리스 노트
 
 마지막 업데이트: 2025년 12월 9일 화:00:00 GMT+0000(협정 세계시)

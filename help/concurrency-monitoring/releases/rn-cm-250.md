@@ -2,13 +2,14 @@
 title: Adobe Pass Concurrency Monitoring 2.5.0 릴리스 노트
 description: Adobe Pass Concurrency Monitoring 2.5.0 릴리스 노트
 exl-id: da392b18-a2aa-4f51-a75f-2c5b65b2b073
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '286'
+source-wordcount: '288'
 ht-degree: 0%
-
 ---
-
 # Adobe Pass Concurrency Monitoring 2.5.0 릴리스 노트 {#cm-250}
 
 이 페이지에서는 이 릴리스의 새로운 기능, 변경 사항 및 알려진 문제에 대해 설명합니다.
@@ -35,9 +36,9 @@ V2 버전은 하트비트 및 쿼리 호출을 통합하고 이러한 API를 동
 
 * 의미가 있을 때마다 응답은 다음을 포함합니다.
 
-   * 연관된 권고 사항 - 사용자에게 프롬프트가 표시되는 실패에 대한 자세한 설명입니다.
+  * 연관된 권고 사항 - 사용자에게 프롬프트가 표시되는 실패에 대한 자세한 설명입니다.
 
-   * 의무 — 애플리케이션이 수행해야 하는 필수 작업(예: 메타데이터 새로 고침, Adobe Pass에서 로그아웃).
+  * 의무 — 애플리케이션이 수행해야 하는 필수 작업(예: 메타데이터 새로 고침, Adobe Pass에서 로그아웃).
 
 ### 메타데이터 {#metadata}
 

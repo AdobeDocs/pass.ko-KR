@@ -2,13 +2,14 @@
 title: Adobe Pass 인증 지표에서 Clientless deviceType 매개 변수를 사용할 때의 이점
 description: Adobe Pass 인증 지표에서 Clientless deviceType 매개 변수를 사용할 때의 이점
 exl-id: a5004887-d5fa-468e-971b-10806519175b
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '372'
+source-wordcount: '377'
 ht-degree: 0%
-
 ---
-
 # (기존) Adobe Pass 인증 지표에서 Clientless deviceType 매개 변수 사용의 이점 {#benefits-of-using-the-clientless-devicetype-parameter-in-primetime-authentication-metrics}
 
 >[!NOTE]
@@ -38,7 +39,7 @@ Adobe Pass 인증 지표에 있는 `deviceType` 매개 변수와 해당 **이점
 >매개 변수 `deviceType`이(가) 올바르게 설정된 경우 권한 부여 서비스 모니터링에 다음 **혜택**&#x200B;이(가) 있습니다. Clientless를 사용할 때 [장치 유형별로 분류된](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#clientless_device_type) 지표를 제공하므로 Roku, AppleTV, Xbox 등과 같은 다양한 유형의 분석을 수행할 수 있습니다.
 
 
-권한 부여 서비스 모니터링 API에 대한 자세한 내용은 ESM 2.0에서 사용할 수 있는 [차원](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md#drill-down_tree)(리소스)을 보여 주는 [드릴다운 트리,](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#esm_dimensions)를 참조하십시오.
+권한 부여 서비스 모니터링 API에 대한 자세한 내용은 ESM 2.0에서 사용할 수 있는 [차원](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-overview.md#esm_dimensions)(리소스)을 보여 주는 [드릴다운 트리,](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md#drill-down_tree)를 참조하십시오.
 
 >[!NOTE]
 >
@@ -49,14 +50,14 @@ Adobe Pass 인증 지표에 있는 `deviceType` 매개 변수와 해당 **이점
 
 ## 구현
 
-Adobe Pass 인증 지표를 최대한 활용하려면 현재 사용 중이고 올바른 [을(를) 설정해야 하는 두 가지 유형의 &#x200B;](#web_srvs_summary)클라이언트 없는 API`deviceType`가 있습니다.
+Adobe Pass 인증 지표를 최대한 활용하려면 현재 사용 중이고 올바른 `deviceType`을(를) 설정해야 하는 두 가지 유형의 [클라이언트 없는 API](#web_srvs_summary)가 있습니다.
 
-1. `regcode`이(가) 필수 매개 변수로 사용되고 다음 API 호출과 함께 `deviceType`을(를) 만들 때 설정된 `regcode` 매개 변수를 사용하는 API:
-   - [\&lt;REGGIE\_FQDN\>/reggie/v1/](#reg_serv)
+1. `regcode`이(가) 필수 매개 변수로 사용되고 다음 API 호출과 함께 `regcode`을(를) 만들 때 설정된 `deviceType` 매개 변수를 사용하는 API:
+   - [\&lt;REGGIE\_FQDN\>/reggie/v1/{requestorId}/regcode](#reg_serv)
 
 1. `deviceType`을(를) 선택적 매개 변수로 사용하는 API:
    - [\&lt;SP\_FQDN\>/api/v1/checkauthn](#check_authn_token)
-   - [&lt;span class=&quot;s1&quot;>](#retrieve_authn_token)
+   - [<span class="s1">\&lt;SP\_FQDN\>/api/v1/tokens/authn</span>](#retrieve_authn_token)
    - [\&lt;SP\_FQDN\>/api/v1/권한 부여](#init_authz)
    - [\&lt;SP\_FQDN\>/api/v1/토큰/인증](#retrieve_authz_token)
    - [\&lt;SP\_FQDN\>/api/v1/토큰/미디어](#short_media)

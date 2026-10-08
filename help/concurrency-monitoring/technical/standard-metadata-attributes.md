@@ -2,13 +2,14 @@
 title: 표준 메타데이터 속성
 description: 표준 메타데이터 속성
 exl-id: 99ffa98c-213f-47a5-a6e7-fbacb77875d0
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1295'
 ht-degree: 0%
-
 ---
-
 # 표준 메타데이터 속성 {#std-metadata-attributes}
 
 이 페이지에서는 동시 모니터링 서비스가 처리할 수 있고 구현할 수 있는 정책의 기반으로 사용할 수 있는 메타데이터 속성의 전체 목록을 제공하는 것을 목적으로 합니다. 표준 메타데이터 속성은 다음과 같이 분류할 수 있습니다.

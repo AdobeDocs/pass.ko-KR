@@ -2,13 +2,14 @@
 title: 콘솔 앱 로그를 사용하여 AccessEnabler iOS/tvOS SDK 디버깅
 description: 콘솔 앱 로그를 사용하여 AccessEnabler iOS/tvOS SDK 디버깅
 exl-id: 0dad325e-db15-4ea0-a87a-75409eaf8d46
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '576'
+source-wordcount: '577'
 ht-degree: 0%
-
 ---
-
 # (레거시) 콘솔 앱 로그를 사용하여 AccessEnabler iOS/tvOS SDK 디버깅 {#debugging-the-accessenabler-iostvos-sdk-using-console-app-logs}
 
 >[!NOTE]
@@ -71,7 +72,7 @@ AccessEnabler iOS/tvOS SDK의 기능을 디버깅하고 AccessEnabler 프레임�
 다른 구성 요소의 기능을 보다 잘 디버깅하고 AccessEnabler 프레임워크 로그를 **제외**&#x200B;하려면 다음을 수행할 수 있습니다.
 
 * com.adobe.pass.AccessEnabler 값과 같지 않은 **하위 시스템** 옵션을 사용하여 콘솔 앱에서 검색합니다.
-* **AccessEnabler** 값을 포함하지 않는 [Any] 옵션을 사용하여 콘솔 앱에서 검색합니다.
+* [AccessEnabler] 값을 포함하지 않는 **Any** 옵션을 사용하여 콘솔 앱에서 검색합니다.
 
 ## 문제 보고
 

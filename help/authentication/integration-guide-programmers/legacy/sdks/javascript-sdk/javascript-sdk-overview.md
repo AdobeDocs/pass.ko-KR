@@ -2,13 +2,14 @@
 title: JavaScript SDK 개요
 description: JavaScript SDK 개요
 exl-id: 8756c804-a4c1-4ee3-b2b9-be45f38bdf94
-source-git-commit: 9dc25b66d12b05a8afe16d1a866707880b5d6a51
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '510'
+source-wordcount: '515'
 ht-degree: 0%
-
 ---
-
 # (기존) JavaScript SDK 개요 {#javascript-sdk-overview}
 
 >[!NOTE]
@@ -55,7 +56,7 @@ Adobe Pass 인증 JavaScript 통합은 익숙한 JS 웹 애플리케이션 개�
     </head>
     <body>
         <div id="alternative">
-        <a href="http://www.adobe.com/go/getflashplayer_kr"> 
+        <a href="http://www.adobe.com/go/getflashplayer"> 
             <img src="http://www.adobe.com/images/shared/download_buttons/get_flash_player.gif" 
                  alt="Get Adobe Flash player"/> </a>
         </div> 
@@ -207,7 +208,7 @@ Adobe Pass 인증 JavaScript 통합은 익숙한 JS 웹 애플리케이션 개�
 
 
 
-- **Adobe Pass 인증과 통합되지 않은 사이트에서 로그아웃이 시작되면** 이 경우 MVPD은 브라우저 리디렉션을 통해 Adobe Pass 인증 단일 로그아웃 서비스를 호출할 수 있습니다. (백채널 호출을 통한 SLO 호출은 현재 지원되지 않습니다.)
+- **Adobe Pass 인증과 통합되지 않은 사이트에서 로그아웃이 시작된 경우** 이 경우 MVPD은 브라우저 리디렉션을 통해 Adobe Pass 인증 단일 로그아웃 서비스를 호출할 수 있습니다. (백채널 호출을 통한 SLO 호출은 현재 지원되지 않습니다.)
 
 >[!NOTE]
 >

@@ -2,13 +2,14 @@
 title: 단일 로그아웃 - 흐름
 description: REST API V2 - 단일 로그아웃 - 흐름
 exl-id: d7092ca7-ea7b-4e92-b45f-e373a6d673d6
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '599'
 ht-degree: 0%
-
 ---
-
 # 단일 로그아웃 흐름 {#single-logout-flow}
 
 >[!IMPORTANT]
@@ -30,8 +31,8 @@ ht-degree: 0%
 특정 MVPD에 대한 단일 로그아웃을 시작하기 전에 다음 전제 조건이 충족되는지 확인하십시오.
 
 * 두 번째 스트리밍 애플리케이션에는 Single Sign-On 인증 흐름 중 하나를 사용하여 MVPD에 대해 성공적으로 생성된 유효한 Single Sign-On 프로필이 있어야 합니다.
-   * [플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 수행](rest-api-v2-single-sign-on-platform-identity-flows.md)
-   * [서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행](rest-api-v2-single-sign-on-service-token-flows.md)
+  * [플랫폼 ID를 사용하여 SSO(Single Sign-On)를 통한 인증 수행](rest-api-v2-single-sign-on-platform-identity-flows.md)
+  * [서비스 토큰을 사용하여 SSO(Single Sign-On)를 통한 인증 수행](rest-api-v2-single-sign-on-service-token-flows.md)
 * 두 번째 스트리밍 애플리케이션은 MVPD에서 로그아웃해야 하는 경우 단일 로그아웃 흐름을 시작해야 합니다.
 
 >[!IMPORTANT]

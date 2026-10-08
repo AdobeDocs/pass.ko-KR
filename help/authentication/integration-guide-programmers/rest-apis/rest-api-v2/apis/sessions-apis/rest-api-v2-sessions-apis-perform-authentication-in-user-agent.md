@@ -2,13 +2,14 @@
 title: 사용자 에이전트에서 인증 수행
 description: REST API V2 - 사용자 에이전트에서 인증 수행
 exl-id: d615dde0-71a8-4b6c-a12e-1e3b5e20728c
-source-git-commit: 6b803eb0037e347d6ce147c565983c5a26de9978
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '242'
 ht-degree: 5%
-
 ---
-
 # 사용자 에이전트에서 인증 수행 {#perform-authentication-in-user-agent}
 
 >[!IMPORTANT]
@@ -94,7 +95,8 @@ ht-degree: 5%
       <td>405</td>
       <td>메서드가 허용되지 않음</td>
       <td>
-        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.</td>
+        HTTP 메서드가 잘못되었습니다. 클라이언트가 요청한 리소스에 대해 허용되는 HTTP 메서드를 사용하고 다시 시도하십시오. 자세한 내용은 <a href="#request">요청</a> 섹션을 참조하세요.
+      </td>
    </tr>
    <tr>
       <td>500</td>

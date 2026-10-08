@@ -2,13 +2,14 @@
 title: JavaScript SDK Cookbook
 description: JavaScript SDK Cookbook
 exl-id: d57f7a4a-ac77-4f3c-8008-0cccf8839f7c
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '957'
+source-wordcount: '972'
 ht-degree: 0%
-
 ---
-
 # (기존) JavaScript SDK Cookbook {#javascript-sdk-cookbook}
 
 >[!NOTE]
@@ -56,13 +57,13 @@ JavaScript 코드 샘플 세트에 대한 링크입니다.
 - `displayProviderDialog(mvpds)`
 
   **트리거:** `getAuthentication(),` 사용자가 공급자(MVPD)를 선택하지 않았고 아직 인증되지 않은 경우에만
-mvpds 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입니다.
+  mvpds 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입니다.
 
 - `setAuthenticationStatus(status, errorcode)`
 
   **트리거:**
-   - 매번 `checkAuthentication()`입니다.
-   - `getAuthentication()`은(는) 사용자가 이미 인증되고 공급자를 선택한 경우에만 가능합니다.
+  - 매번 `checkAuthentication()`입니다.
+  - `getAuthentication()`은(는) 사용자가 이미 인증되고 공급자를 선택한 경우에만 가능합니다.
 
   반환된 상태는 성공 또는 실패입니다. errorcode는 실패 유형을 설명합니다.
 
@@ -87,7 +88,7 @@ mvpds 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입�
 - `selectedProvider(mvpd)`
 
   **트리거:** [`getSelectedProvider()`]&#x200B;(#$getSelProv `mvpd` 매개 변수는 다음에서 선택한 공급자에 대한 정보를 제공합니다.
-사용자.
+  사용자.
 
 - `setMetadataStatus(metadata, key, arguments)`
 
@@ -97,7 +98,7 @@ mvpds 매개 변수는 사용자가 사용할 수 있는 공급자의 배열입�
 
 ## &#x200B;2. 시작 흐름
 
-**I. AccessEnabler JavaScript 로드:**
+**I.  AccessEnabler JavaScript 로드:**
 
 **스테이징 프로필용**
 
@@ -121,14 +122,14 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 인증이 `entitlementLoaded()` 콜백 함수를 호출합니다. AccessEnabler와 애플리케이션 통신을 위한 진입점입니다.
 
 
-**II.** `setRequestor()`(으)로 전화를 걸어
-프로그래머 ID; 프로그래머 `requestorID` 및
+**II.** 다음을 설정하려면 `setRequestor()`에 문의하십시오.
+프로그래머의 ID, 프로그래머의 `requestorID` 및
 (선택 사항) Adobe Pass 인증 엔드포인트 배열.
 
 **트리거:**&#x200B;이(가) 없지만 필요한 경우 `displayProviderDialog()`을(를) 호출할 수 있습니다.
 
 
-**III.** 전체 `checkAuthentication()`인증 흐름[을 시작하지 않고 기존 인증을 확인하려면 ]을(를) 호출하십시오.  이 호출이 성공하면 `authorization flow`(으)로 바로 진행할 수 있습니다.  그렇지 않으면 `authentication flow`(으)로 진행합니다.
+**III.** 전체 [인증 흐름]을 시작하지 않고 기존 인증을 확인하려면 `checkAuthentication()`을(를) 호출하십시오.  이 호출이 성공하면 `authorization flow`(으)로 바로 진행할 수 있습니다.  그렇지 않으면 `authentication flow`(으)로 진행합니다.
 
 **종속성:** `setRequestor()`에 대한 호출이 성공했습니다(이 종속성은 모든 후속 호출에도 적용됨).
 
@@ -149,7 +150,7 @@ src="https://entitlement.auth.adobe.com/entitlement/v4/AccessEnabler.js">
 - `displayProviderDialog()`사용자가 아직 인증되지 않은 경우
 - 인증이 이미 발생한 경우 `setAuthenticationStatus()`
 
-AccessEnabler가 `setAuthenticationStatus()`을(를) 사용하여 `isAuthenticated == 1`을(를) 호출하면 인증 흐름이 완료됩니다.
+AccessEnabler가 `isAuthenticated == 1`을(를) 사용하여 `setAuthenticationStatus()`을(를) 호출하면 인증 흐름이 완료됩니다.
 
 ## &#x200B;4. 인증 흐름 {#authz}
 
@@ -164,7 +165,7 @@ AccessEnabler가 `setAuthenticationStatus()`을(를) 사용하여 `isAuthenticat
 - 호출이 실패한 경우: throw된 예외를 검사하여 해당 유형(AuthN, AuthZ 또는 그 외 다른 것)을 확인합니다.
 - 호출이 AuthN 오류인 경우 AuthN 흐름을 다시 시작합니다.
 - 호출이 AuthZ 오류인 경우 사용자에게 요청된 미디어를 볼 수 있는 권한이 없으며 사용자에게 일종의 오류 메시지가 표시되어야 합니다.
-- 다른 오류(연결 오류, 네트워크 오류 등)가 있는 경우 사용자에게 적절한 오류 메시지를 표시합니다.
+- 다른 오류(연결 오류, 네트워크 오류 등)가 발생한 경우 그런 다음 사용자에게 적절한 오류 메시지를 표시합니다.
 
 미디어 토큰 검증기를 사용하여 `getAuthorization()` 호출에서 반환된 shortMediaToken의 유효성을 검사하십시오.
 
@@ -178,11 +179,11 @@ AccessEnabler 라이브러리)
 ## &#x200B;5. 미디어 흐름 보기 {#logout}
 
 - 사용자가 보려는 미디어를 선택합니다.
-   - 미디어가 보호됩니까?
-      - 앱이 미디어가 보호되는지 확인합니다.
-         - 미디어가 보호되면 앱에서 위의 인증(AuthZ) 흐름이 시작됩니다.
-         - 미디어가 보호되지 않은 경우 미디어 보기 플로우를 계속 진행합니다.
-         - 미디어 재생
+  - 미디어가 보호됩니까?
+    - 앱이 미디어가 보호되는지 확인합니다.
+      - 미디어가 보호되면 앱에서 위의 인증(AuthZ) 흐름이 시작됩니다.
+      - 미디어가 보호되지 않은 경우 미디어 보기 플로우를 계속 진행합니다.
+      - 미디어 재생
 
 ## 방문자 ID 구성 {#visitorID}
 

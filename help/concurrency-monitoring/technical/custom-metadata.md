@@ -2,13 +2,14 @@
 title: 사용자 지정 메타데이터
 description: 사용자 지정 메타데이터
 exl-id: 0cfd1158-8c6c-47c2-b838-5490ff4bf0ce
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '367'
+source-wordcount: '370'
 ht-degree: 0%
-
 ---
-
 # 사용자 지정 메타데이터 {#cm}
 
 >[!NOTE]

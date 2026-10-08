@@ -2,13 +2,14 @@
 title: MVPD 사용자 메타데이터 교환
 description: MVPD 사용자 메타데이터 교환
 exl-id: 8bce6acc-cd33-476c-af5e-27eb2239cad1
-source-git-commit: d982beb16ea0db29f41d0257d8332fd4a07a84d8
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '940'
+source-wordcount: '947'
 ht-degree: 0%
-
 ---
-
 # MVPD 사용자 메타데이터 교환
 
 >[!NOTE]
@@ -105,13 +106,13 @@ Adobe Pass 인증은 다음과 같은 가정을 합니다.
 
 ### 메모 {#notes-mvpd-progr-metadata-exch-flow}
 
-**리소스 정규화 및 유효성 검사입니다.**&#x200B;개의 리소스 ID를 일반 문자열 또는 MRSS 문자열로 전달할 수 있습니다. 프로그래머는 일반 문자열 형식 또는 MRSS를 사용하기로 결정할 수 있지만 MVPD이 해당 리소스를 처리하는 방법을 알 수 있도록 MVPD과의 사전 계약이 필요합니다.
+**리소스 정규화 및 유효성 검사.** 리소스 ID는 일반 문자열 또는 MRSS 문자열로 전달할 수 있습니다. 프로그래머는 일반 문자열 형식 또는 MRSS를 사용하기로 결정할 수 있지만 MVPD이 해당 리소스를 처리하는 방법을 알 수 있도록 MVPD과의 사전 계약이 필요합니다.
 
-**리소스 ID 및 메타데이터 사양.** Adobe Pass 인증은 미디어 RSS 확장과 함께 RSS 표준을 사용하여 리소스와 해당 메타데이터를 지정합니다. Adobe Pass 인증은 Media RSS 확장과 함께 자녀 보호(`<media:rating>`을 통해) 또는 지리적 위치(`<media:location>`)와 같은 다양한 메타데이터를 지원합니다.
+**리소스 ID 및 메타데이터 사양** Adobe Pass 인증은 미디어 RSS 확장과 함께 RSS 표준을 사용하여 리소스와 해당 메타데이터를 지정합니다. Adobe Pass 인증은 Media RSS 확장과 함께 자녀 보호(`<media:rating>`을 통해) 또는 지리적 위치(`<media:location>`)와 같은 다양한 메타데이터를 지원합니다.
 
 Adobe Pass 인증은 또한 레거시 채널 문자열에서 RSS가 필요한 MVPD에 대한 해당 RSS 리소스로의 투명한 전환을 지원할 수 있습니다. 다른 방향으로, Adobe Pass 인증은 채널 전용 MVPD에 대해 RSS+MRSS에서 일반 채널 제목으로의 전환을 지원합니다.
 
-**Adobe Pass 인증은 기존 통합과 완벽하게 이전 버전과의 호환성을 보장합니다.** 즉, 채널 수준 인증을 사용하는 프로그래머의 경우 Adobe Pass 인증은 채널 ID를 해당 형식을 이해하는 MVPD으로 보내기 전에 필요한 형식으로 패키지하는 데 주의합니다. 또한 반대도 적용됩니다. 프로그래머가 모든 리소스를 새 형식으로 지정하는 경우 Adobe Pass 인증은 채널 수준 인증만 수행하는 MVPD에 대해 인증하면 새 형식을 간단한 채널 문자열로 변환합니다.
+**Adobe Pass 인증은 기존 통합과의 이전 버전과의 완전한 호환성을 보장합니다.** 즉, 채널 수준 인증을 사용하는 프로그래머의 경우 Adobe Pass 인증은 해당 형식을 이해하는 MVPD으로 채널 ID를 전송하기 전에 필요한 형식으로 채널 ID를 패키징하는 것을 고려합니다. 또한 반대도 적용됩니다. 프로그래머가 모든 리소스를 새 형식으로 지정하는 경우 Adobe Pass 인증은 채널 수준 인증만 수행하는 MVPD에 대해 인증하면 새 형식을 간단한 채널 문자열로 변환합니다.
 
 ## 사용자 메타데이터 사용 사례 {#user-metadata-use-cases}
 

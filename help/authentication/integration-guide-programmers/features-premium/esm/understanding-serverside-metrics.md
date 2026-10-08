@@ -2,13 +2,14 @@
 title: 서버측 지표 이해
 description: 서버측 지표 이해
 exl-id: 516884e9-6b0b-451a-b84a-6514f571aa44
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '2232'
+source-wordcount: '2262'
 ht-degree: 0%
-
 ---
-
 # 서버측 지표 이해 {#understanding-server-side-metrics}
 
 >[!NOTE]
@@ -26,18 +27,18 @@ Adobe Pass 인증 서버측 관점에서 다음 이벤트가 생성됩니다.
 
 * **인증 흐름에서 생성된 이벤트**(MVPD을 사용한 실제 로그인)
 
-   * AuthN 시도 알림 - 이 알림은 사용자가 MVPD 로그인 사이트로 전송될 때 생성됩니다.
-   * AuthN 보류 중 알림 - 사용자가 MVPD으로 로그인하면 사용자가 다음과 같을 때 생성됩니다.        Adobe Pass 인증으로 다시 리디렉션되었습니다.
-   * AuthN Granted 알림 - 사용자가 프로그래머 사이트로 돌아가 Adobe Pass 인증에서 인증 토큰을 성공적으로 검색했을 때 생성됩니다.
+  * AuthN 시도 알림 - 이 알림은 사용자가 MVPD 로그인 사이트로 전송될 때 생성됩니다.
+  * AuthN 보류 중 알림 - 사용자가 MVPD으로 로그인하는 데 성공하면 사용자가 Adobe Pass 인증으로 다시 리디렉션될 때 생성됩니다.
+  * AuthN Granted 알림 - 사용자가 프로그래머 사이트로 돌아가 Adobe Pass 인증에서 인증 토큰을 성공적으로 검색했을 때 생성됩니다.
 * **권한 부여 흐름**(다음을 사용하여 권한 부여를 확인하세요.
 MVPD)\
   *필수 구성 요소:* 올바른 AuthN 토큰
-   * AuthZ 시도 알림
-   * AuthZ 알림 부여됨
+  * AuthZ 시도 알림
+  * AuthZ 알림 부여됨
 * **재생 요청 성공**\
   *필수 구성 요소:* 올바른 AuthN 및 AuthZ 토큰
-   * Adobe Pass 인증을 사용한 검사 알림
-   * 재생 요청에는 부여된 인증과 부여된 인증이 모두 필요합니다
+  * Adobe Pass 인증을 사용한 검사 알림
+  * 재생 요청에는 부여된 인증과 부여된 인증이 모두 필요합니다
 
 
 고유 사용자 수는 아래의 [고유 사용자](#unique-users) 섹션에 자세히 설명되어 있습니다. 개요로서 부여된 인증 및 권한 부여 응답은 일반적으로 캐시되므로 일반적으로 다음 공식이 적용됩니다.
@@ -238,10 +239,10 @@ requestorID당 AuthN 기능을 계속 유지하면 숨겨진 iFrame에서 수동
 
 * AuthN 시도(아직 고유 사용자 없음)
 * AuthN 부여
-   * 이 시점에서 MVPD이 반환하는 것을 기반으로 사용자를 고유하게 식별하므로 일별 고유 사용자 수가 1씩 증가합니다
-   * authN 토큰이 30일 동안 캐시됨
+  * 이 시점에서 MVPD이 반환하는 것을 기반으로 사용자를 고유하게 식별하므로 일별 고유 사용자 수가 1씩 증가합니다
+  * authN 토큰이 30일 동안 캐시됨
 * AuthZ 시도/부여 이벤트
-   * 1일 동안 캐시된 AuthZ 토큰
+  * 1일 동안 캐시된 AuthZ 토큰
 * 재생 요청 이벤트 성공
 
 #### 1일(나중에) {#day1-later-on}
@@ -260,7 +261,7 @@ requestorID당 AuthN 기능을 계속 유지하면 숨겨진 iFrame에서 수동
 실행된 이벤트:
 
 * AuthZ 시도/부여 이벤트
-   * 1일의 1일 캐싱이 만료되었으므로
+  * 1일의 1일 캐싱이 만료되었으므로
 * 재생 요청 이벤트 성공(나머지는 캐시됨)
 * 일별 고유 사용자 수 1 증가 - 월별 고유 수 여전히 1
 
