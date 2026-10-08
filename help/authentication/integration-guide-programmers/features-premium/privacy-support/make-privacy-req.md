@@ -227,7 +227,7 @@ Delete 요청의 경우:
 
 ### Privacy Service UI 사용 {#privacy-service-ui}
 
-Privacy Service 사용자 인터페이스에 액세스하고 사용하는 방법에 대한 [전체 자습서](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)를 Adobe I/O 서비스를 통해 온라인으로 사용할 수 있습니다. 또한 고객은 이 링크를 사용하여 개인 정보 보호 규정에 대한 비디오 및 문서 라이브러리에 액세스할 수 있습니다. Adobe Experience Cloud 및 GDPR 메뉴를 클릭합니다. 이렇게 하면 많은 비디오가 열립니다. 이 비디오의 사용 방법은 &quot;GDPR UI 방법&quot;을 설명합니다.
+Privacy Service 사용자 인터페이스에 액세스하고 사용하는 방법에 대한 [전체 자습서](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ko#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)를 Adobe I/O 서비스를 통해 온라인으로 사용할 수 있습니다. 또한 고객은 이 링크를 사용하여 개인 정보 보호 규정에 대한 비디오 및 문서 라이브러리에 액세스할 수 있습니다. Adobe Experience Cloud 및 GDPR 메뉴를 클릭합니다. 이렇게 하면 많은 비디오가 열립니다. 이 비디오의 사용 방법은 &quot;GDPR UI 방법&quot;을 설명합니다.
 
 UI에서 고객은 각 제품에 대한 GDPR 요청 세부 사항이 포함된 JSON 및 자체 IMSOrgID를 로드해야 합니다.
 
@@ -260,7 +260,7 @@ Adobe Experience Platform Privacy Service은 개인 데이터에 대한 액세�
 
 >[!RELATEDINFORMATION]
 >
->* [Privacy Services Overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)
+>* [Privacy Services Overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ko#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)
 >* Privacy Service API documentation
 
 -->

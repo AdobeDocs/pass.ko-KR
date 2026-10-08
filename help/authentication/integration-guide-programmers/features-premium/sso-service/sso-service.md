@@ -121,7 +121,7 @@ POST /serviceToken 끝점에서 X-SSO-ID의 공통 식별자를 사용하면 다
 
 ### 3단계 - TVE MVPD과 함께 Adobe Pass REST API V2를 사용하여 인증 {#step-3}
 
-Adobe Pass을 사용한 인증은 서비스 토큰을 사용하여 구현해야 합니다. [REST API V2 - Single Sign-On 서비스 토큰 흐름](https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-flows/rest-api-v2-single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows)
+Adobe Pass을 사용한 인증은 서비스 토큰을 사용하여 구현해야 합니다. [REST API V2 - Single Sign-On 서비스 토큰 흐름](https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-flows/rest-api-v2-single-sign-on-access-flows/rest-api-v2-single-sign-on-service-token-flows)
 
 ### 4단계 - 다른 장치 연결 {#step-4}
 
@@ -211,13 +211,13 @@ Adobe Pass 인증 서비스 오류로 인해 서비스 토큰 API 요청을 처�
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
-      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
+      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-Device-Identifier</td>
       <td>
-         장치 식별자 페이로드 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.
+         장치 식별자 페이로드 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.
          <br/><br/>
          이 식별자는 X-SSO-ID가 제공되지 않을 때 기본 SSO 식별자로 사용됩니다.
       </td>
@@ -226,7 +226,7 @@ Adobe Pass 인증 서비스 오류로 인해 서비스 토큰 API 요청을 처�
    <tr>
       <td style="background-color: #DEEBFF;">X-Device-Info</td>
       <td>
-         <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-x-device-info">X-Device-Info</a> 헤더 설명서에 지정된 장치 정보입니다.
+         <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-x-device-info">X-Device-Info</a> 헤더 설명서에 지정된 장치 정보입니다.
          <br/><br/>
          응용 프로그램의 장치 플랫폼에서 명시적으로 유효한 값을 제공할 수 있는 경우 <b>사용할 것을 권장</b>합니다.
          <br/><br/>
@@ -287,21 +287,21 @@ Adobe Pass 인증 서비스 오류로 인해 서비스 토큰 API 요청을 처�
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
       </td>
    </tr>
    <tr>
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
 </table>
@@ -376,7 +376,7 @@ Adobe Pass 인증 서비스 오류로 인해 서비스 토큰 API 요청을 처�
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>응답 본문은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
+      <td>응답 본문은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>
@@ -487,7 +487,7 @@ Content-Type: application/json
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
-      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
+      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -534,21 +534,21 @@ Content-Type: application/json
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰 또는 서비스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰 또는 서비스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
+        액세스 토큰 또는 서비스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰 또는 서비스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
       </td>
    </tr>
    <tr>
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
 </table>
@@ -623,7 +623,7 @@ Content-Type: application/json
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>응답 본문은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
+      <td>응답 본문은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>
@@ -711,12 +711,12 @@ Adobe Pass 인증 서비스 오류로 인해 링크 API 요청을 처리할 수 
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
-      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
+      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-Device-Identifier</td>
-      <td>장치 식별자 페이로드 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.</td>
+      <td>장치 식별자 페이로드 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -763,21 +763,21 @@ Adobe Pass 인증 서비스 오류로 인해 링크 API 요청을 처리할 수 
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
       </td>
    </tr>
    <tr>
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
 </table>
@@ -852,7 +852,7 @@ Adobe Pass 인증 서비스 오류로 인해 링크 API 요청을 처리할 수 
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>응답 본문은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
+      <td>응답 본문은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>
@@ -955,7 +955,7 @@ Adobe Pass 인증 서비스 오류로 인해 연결 해제 API 요청을 처리�
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
-      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
+      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -969,7 +969,7 @@ Adobe Pass 인증 서비스 오류로 인해 연결 해제 API 요청을 처리�
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-Device-Identifier</td>
-      <td>장치 식별자 페이로드 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.</td>
+      <td>장치 식별자 페이로드 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -1016,14 +1016,14 @@ Adobe Pass 인증 서비스 오류로 인해 연결 해제 API 요청을 처리�
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
       </td>
    </tr>
    <tr>
@@ -1037,7 +1037,7 @@ Adobe Pass 인증 서비스 오류로 인해 연결 해제 API 요청을 처리�
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
 </table>
@@ -1106,7 +1106,7 @@ Adobe Pass 인증 서비스 오류로 인해 연결 해제 API 요청을 처리�
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>응답 본문은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
+      <td>응답 본문은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>
@@ -1251,12 +1251,12 @@ Adobe Pass 인증 서비스 오류로 인해 목록 API 요청을 처리할 수 
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">인증</td>
-      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
+      <td>전달자 토큰 페이로드의 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-authorization">인증</a> 헤더 설명서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;">AP-Device-Identifier</td>
-      <td>장치 식별자 페이로드 생성은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.</td>
+      <td>장치 식별자 페이로드 생성은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 문서에 설명되어 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
    <tr>
@@ -1303,14 +1303,14 @@ Adobe Pass 인증 서비스 오류로 인해 목록 API 요청을 처리할 수 
       <td>400</td>
       <td>잘못된 요청</td>
       <td>
-        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        요청이 잘못되었습니다. 클라이언트가 요청을 수정하고 다시 시도하십시오. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
    <tr>
       <td>401</td>
       <td>승인되지 않음</td>
       <td>
-        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
+        액세스 토큰이 잘못되었습니다. 클라이언트가 새 액세스 토큰을 얻은 후 다시 시도하십시오. 자세한 내용은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview">동적 클라이언트 등록 개요</a> 설명서를 참조하십시오.
       </td>
    </tr>
    <tr>
@@ -1324,7 +1324,7 @@ Adobe Pass 인증 서비스 오류로 인해 목록 API 요청을 처리할 수 
       <td>500</td>
       <td>내부 서버 오류</td>
       <td>
-        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
+        서버 측에서 문제가 발생했습니다. 응답 본문에는 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 오류 정보가 포함될 수 있습니다.
       </td>
    </tr>
 </table>
@@ -1357,7 +1357,7 @@ Adobe Pass 인증 서비스 오류로 인해 목록 API 요청을 처리할 수 
       <td>
          키, 값 쌍의 맵이 포함된 JSON.
          <br/><br/>
-         <b>키:</b> deviceId - <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 설명서에 설명된 장치 식별자 페이로드
+         <b>키:</b> deviceId - <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-appendix/rest-api-v2-appendix-headers/rest-api-v2-appendix-headers-ap-device-identifier">AP-Device-Identifier</a> 헤더 설명서에 설명된 장치 식별자 페이로드
          <br/><br/>
          <b>값:</b> 특성 - 다음을 포함한 장치 메타데이터 특성 맵이 포함된 JSON:
          <ul>
@@ -1397,7 +1397,7 @@ Adobe Pass 인증 서비스 오류로 인해 목록 API 요청을 처리할 수 
    </tr>
    <tr>
       <td style="background-color: #DEEBFF;"></td>
-      <td>응답 본문은 <a href="https://experienceleague.adobe.com/en/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
+      <td>응답 본문은 <a href="https://experienceleague.adobe.com/ko/docs/pass/authentication/integration-guide-programmers/standard-features/error-reporting/enhanced-error-codes">향상된 오류 코드</a> 설명서를 준수하는 추가 오류 정보를 제공할 수 있습니다.</td>
       <td><i>필수</i></td>
    </tr>
 </table>
@@ -1514,7 +1514,7 @@ Content-Type: application/json
     "code": "header_missing",
     "message": "Required header is missing",
     "action": "check_headers",
-    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html",
+    "helpUrl": "https://experienceleague.adobe.com/docs/pass/authentication/auth-features/error-reportn/enhanced-error-codes.html?lang=ko",
     "trace": "a1b2c3d4-e5f6-7890-abcd-ef1234567890"
   }
 }
