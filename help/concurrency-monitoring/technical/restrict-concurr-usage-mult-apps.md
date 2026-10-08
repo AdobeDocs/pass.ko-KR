@@ -2,13 +2,14 @@
 title: 다른 소유자에 속한 여러 애플리케이션으로 동시 사용 제한
 description: 다른 소유자에 속한 여러 응용 프로그램의 동시 사용 제한
 exl-id: c358befc-36d6-4f55-92cc-4d02064c65fb
-source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '286'
 ht-degree: 1%
-
 ---
-
 # 다른 소유자에 속한 여러 응용 프로그램의 동시 사용 제한 {#restr-concurr-usage}
 
 

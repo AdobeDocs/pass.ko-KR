@@ -2,13 +2,14 @@
 title: REST API Cookbook(클라이언트-서버)
 description: 서버에 대한 REST API Cookbook 클라이언트입니다.
 exl-id: f54a1eda-47d5-4f02-b343-8cdbc99a73c0
-source-git-commit: b51ac004765a8617347ac2ddadbfe60adff8ea3a
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '906'
 ht-degree: 0%
-
 ---
-
 # (기존) REST API Cookbook(클라이언트-서버) {#rest-api-cookbook-client-to-server}
 
 >[!NOTE]
@@ -84,7 +85,7 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 1. 사용자가 두 번째 화면 앱에서 돌아가서 장치의 &quot;계속&quot; 단추를 누릅니다. 또는 폴링 메커니즘을 구현하여 인증 상태를 확인할 수 있지만, Adobe Pass 인증에서는 폴링보다 계속 단추 방법을 권장합니다. <!--(For information on employing a "Continue" button versus polling the Adobe Pass Authentication backend server, see the Clientless Technical Overview: Managing 2nd-Screen Workflow Transition.)--> 예: [\&lt;SP\_FQDN\>/api/v1/tokens/authn](/help/authentication/integration-guide-programmers/legacy/rest-api-v1/apis/retrieve-authentication-token.md)
 
-2. 인증을 시작하려면 GET 요청을 Adobe Pass 인증 권한 부여 서비스로 보냅니다. 예: `<SP_FQDN>/api/v1/authorize [device ID, Requestor ID, Resource ID]`
+2. GET 요청을 Adobe Pass 인증 인증 권한 부여 서비스로 보내 권한 부여를 시작합니다. 예: `<SP_FQDN>/api/v1/authorize [device ID, Requestor ID, Resource ID]`
 
 <!-- end list -->
 
@@ -92,11 +93,11 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
 
 * 응답이 실패를 나타내는 경우: throw된 예외를 검사하여 해당 유형(AuthN, AuthZ 또는 그 외 다른 것)을 확인합니다.
 
-   * AuthN 오류인 경우 등록 플로우를 다시 시작합니다.
+  * AuthN 오류인 경우 등록 플로우를 다시 시작합니다.
 
-   * AuthZ 오류인 경우 사용자에게 요청된 미디어를 볼 수 있는 권한이 없으며 사용자에게 일종의 오류 메시지가 표시되어야 합니다.
+  * AuthZ 오류인 경우 사용자에게 요청된 미디어를 볼 수 있는 권한이 없으며 사용자에게 일종의 오류 메시지가 표시되어야 합니다.
 
-   * 다른 오류(연결 오류, 네트워크 오류 등)가 발생한 경우 그런 다음 사용자에게 적절한 오류 메시지를 표시합니다.
+  * 다른 오류(연결 오류, 네트워크 오류 등)가 발생한 경우 그런 다음 사용자에게 적절한 오류 메시지를 표시합니다.
 
 
 
@@ -109,10 +110,10 @@ Adobe Pass은 DCR을 사용하여 프로그래머 애플리케이션 또는 서�
    a.  앱이 미디어가 보호되어 있는지 확인합니다.
 
    b.  미디어가 보호되면 앱에서 권한 부여를 시작합니다
-(AuthZ) 위 흐름.
+   (AuthZ) 위 흐름.
 
    c.  미디어가 보호되지 않은 경우
-사용자.
+   사용자.
 
 3. 미디어를 재생합니다.
 

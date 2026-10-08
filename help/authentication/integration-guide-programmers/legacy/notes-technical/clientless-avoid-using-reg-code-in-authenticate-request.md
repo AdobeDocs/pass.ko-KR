@@ -2,13 +2,14 @@
 title: /authenticate 요청에 '&'reg_code를 사용하지 마십시오.
 description: /authenticate 요청에 '&'reg_code를 사용하지 마십시오.
 exl-id: c0ecb6f9-2167-498c-8a2d-a692425b31c5
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '246'
+source-wordcount: '252'
 ht-degree: 0%
-
 ---
-
 # (기존) /authenticate 요청에서 &#39;&amp;&#39;reg_code를 사용하지 마십시오 {#clientless-avoid-using-reg_code-in-authenticate-request}
 
 >[!NOTE]
@@ -61,6 +62,6 @@ IE 9 브라우저는 &#39;\&amp;reg&#39;를 특수 명령으로 해석하고 이
 
    이 방법으로 `&reg` 매개 변수가 잘못 해석되지 않습니다.
 
-1. `&reg_code`을(를) 사용하여 `&amp;reg_code`을(를) 정규화합니다.
+1. `&amp;reg_code`을(를) 사용하여 `&reg_code`을(를) 정규화합니다.
 
 1. Adobe은 AuthN 토큰 생성이 실패한 경우 인증 호출에 응답하여 오류 코드를 두 번째 화면으로 다시 전송하는 새 기능을 도입할 수 있습니다.

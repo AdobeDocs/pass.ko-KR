@@ -2,13 +2,14 @@
 title: Adobe Pass Concurrency Monitoring 2.2.2 릴리스 노트
 description: Adobe Pass Concurrency Monitoring 2.2.2 릴리스 노트
 exl-id: 32a333bf-557e-48d0-bfcd-770f3879fe34
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '77'
+source-wordcount: '76'
 ht-degree: 2%
-
 ---
-
 # Adobe Pass Concurrency Monitoring 2.2.2 릴리스 노트 {#cm-222}
 
 이 페이지에서는 이 릴리스의 새로운 기능, 변경 사항 및 알려진 문제에 대해 설명합니다.

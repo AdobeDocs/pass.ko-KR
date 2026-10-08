@@ -2,13 +2,14 @@
 title: TVE 대시보드 통합
 description: 채널과 MVPD 간의 통합 및 통합 관리 방법에 대해 알아봅니다.
 exl-id: 0add340b-120c-4e82-8e3c-6c190d77cf7e
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '2105'
 ht-degree: 0%
-
 ---
-
 # 통합
 
 >[!NOTE]
@@ -305,7 +306,7 @@ MVPD 선택기를 빌드하지 않고 대신 제공된 구성을 사용하는 �
    >
    >MVPD에서 명시적으로 지정하지 않는 한 모든 흐름에서 기본 끝점을 변경하지 마십시오.
 
-   ![끝점 &#x200B;](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-endpoints-panel-view.png) 선택
+   ![끝점 ](../assets/tve-dashboard/new-tve-dashboard/integrations/integration-new-integration-select-endpoints-panel-view.png) 선택
 
    *끝점 선택*
 

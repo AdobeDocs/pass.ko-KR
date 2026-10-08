@@ -2,13 +2,14 @@
 title: Amazon FireOS 기본 클라이언트 API 참조
 description: Amazon FireOS 기본 클라이언트 API 참조
 exl-id: 8ac9f976-fd6b-4b19-a80d-49bfe57134b5
-source-git-commit: b6ba687240799d1889302019613f426259f147ad
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '3519'
 ht-degree: 0%
-
 ---
-
 # (기존) Amazon FireOS Native Client API 참조 {#amazon-fireos-native-client-api-reference}
 
 >[!NOTE]
@@ -146,10 +147,10 @@ ht-degree: 0%
 **매개 변수:**
 
 - *상태*: 다음 값 중 하나를 사용할 수 있습니다.
-   - `AccessEnabler.ACCESS_ENABLER_STATUS_SUCCESS` - 구성
-단계가 완료되었습니다.
-   - `AccessEnabler.ACCESS_ENABLER_STATUS_ERROR` - 구성
-단계 실패
+  - `AccessEnabler.ACCESS_ENABLER_STATUS_SUCCESS` - 구성
+    단계가 완료되었습니다.
+  - `AccessEnabler.ACCESS_ENABLER_STATUS_ERROR` - 구성
+    단계 실패
 
 **트리거 대상:** `setRequestor()`
 
@@ -173,9 +174,9 @@ ht-degree: 0%
 **매개 변수:**
 
 - *options*: 글로벌 SDK 옵션이 포함된 맵\&lt;문자열, 문자열\> 현재 다음 옵션을 사용할 수 있습니다.
-   - **applicationProfile** - 이 값을 기반으로 서버 구성을 만드는 데 사용할 수 있습니다.
-   - **ap\_vi** - Experience Cloud ID 서비스. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
-   - **device\_info** - **장치 정보 Cookbook 전달**&#x200B;에 설명된 장치 정보
+  - **applicationProfile** - 이 값을 기반으로 서버 구성을 만드는 데 사용할 수 있습니다.
+  - **ap\_vi** - Experience Cloud ID 서비스. 이 값은 나중에 고급 분석 보고서에 사용할 수 있습니다.
+  - **device\_info** - **장치 정보 Cookbook 전달**&#x200B;에 설명된 장치 정보
 
 </br>
 
@@ -259,12 +260,12 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | `public void setSelectedProvider(String mvpdId)` |
 
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:** 없음
 
-**트리거된 콜백:** 
-
+**트리거된 콜백:** `setAuthenticationStatus(), sendTrackingData()`
+</br>
 
 ### navigateToUrl {#navigagteToUrl}
 
@@ -317,14 +318,14 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 **매개 변수:**
 
 - *상태*: 다음 값 중 하나를 사용할 수 있습니다.
-   - `AccessEnabler.ACCESS_ENABLER_STATUS_SUCCESS` - 인증 흐름이 완료되었습니다.
-   - `AccessEnabler.ACCESS_ENABLER_STATUS_ERROR` - 인증 흐름 실패
-   - `AccessEnabler.ACCESS_ENABLER_STATUS_LOGOUT` - 로그아웃
+  - `AccessEnabler.ACCESS_ENABLER_STATUS_SUCCESS` - 인증 흐름이 완료되었습니다.
+  - `AccessEnabler.ACCESS_ENABLER_STATUS_ERROR` - 인증 흐름 실패
+  - `AccessEnabler.ACCESS_ENABLER_STATUS_LOGOUT` - 로그아웃
 - *code*: 표시된 상태에 대한 이유입니다. *status*&#x200B;이(가) `AccessEnabler.ACCESS_ENABLER_STATUS_SUCCESS`이면 *code*&#x200B;은(는) 빈 문자열입니다(즉, `AccessEnabler.USER_AUTHENTICATED` 상수로 정의됨). 인증되지 않은 경우 이 매개 변수는 다음 값 중 하나를 사용할 수 있습니다.
-   - `AccessEnabler.USER_NOT_AUTHENTICATED_ERROR` - 사용자가 인증되지 않았습니다. 로컬 토큰 캐시에 올바른 인증 토큰이 없는 경우 *checkAuthentication()* 메서드 호출에 대한 응답입니다.
-   - `AccessEnabler.PROVIDER_NOT_SELECTED_ERROR` - 인증 흐름을 중단하기 위해 상위 계층 응용 프로그램이 *null*&#x200B;을(를) `setSelectedProvider()`(으)로 전달한 후 AccessEnabler가 인증 상태 컴퓨터를 다시 설정했습니다.  사용자가 인증 흐름을 취소한 것 같습니다(즉, &quot;뒤로&quot; 단추 누름).
-   - `AccessEnabler.GENERIC_AUTHENTICATION_ERROR` - 네트워크를 사용할 수 없거나 사용자가 인증 흐름을 명시적으로 취소하는 등의 이유로 인증 흐름이 실패했습니다.
-   - `AccessEnabler.LOGOUT` - 로그아웃 작업으로 인해 사용자가 인증되지 않았습니다.
+  - `AccessEnabler.USER_NOT_AUTHENTICATED_ERROR` - 사용자가 인증되지 않았습니다. 로컬 토큰 캐시에 올바른 인증 토큰이 없는 경우 *checkAuthentication()* 메서드 호출에 대한 응답입니다.
+  - `AccessEnabler.PROVIDER_NOT_SELECTED_ERROR` - 인증 흐름을 중단하기 위해 상위 계층 응용 프로그램이 *null*&#x200B;을(를) `setSelectedProvider()`(으)로 전달한 후 AccessEnabler가 인증 상태 컴퓨터를 다시 설정했습니다.  사용자가 인증 흐름을 취소한 것 같습니다(즉, &quot;뒤로&quot; 단추 누름).
+  - `AccessEnabler.GENERIC_AUTHENTICATION_ERROR` - 네트워크를 사용할 수 없거나 사용자가 인증 흐름을 명시적으로 취소하는 등의 이유로 인증 흐름이 실패했습니다.
+  - `AccessEnabler.LOGOUT` - 로그아웃 작업으로 인해 사용자가 인증되지 않았습니다.
 
 **트리거 대상:** `checkAuthentication(), getAuthentication(), checkAuthorization()`
 
@@ -354,7 +355,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | --- |
 | `public void checkPreauthorizedResources(ArrayList<String> resources)` |
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:** `resources` 매개 변수는 사용자가 이미 볼 수 있는 리소스 배열입니다.
 
@@ -426,7 +427,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 | --- |
 | `public void setToken(String token, String resourceId)` |
 
-**가용성:**&#x200B;v 1.0+
+**가용성:**v 1.0+
 
 **매개 변수:**
 
@@ -451,7 +452,7 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 
 - *resourceId*: 인증을 받은 리소스입니다.
 - *errorCode*: 오류 시나리오와 연결된 오류 코드입니다. 가능한 값:
-   - `AccessEnabler.USER_NOT_AUTHORIZED_ERROR` - 사용자가 지정된 리소스에 대해 권한을 부여할 수 없습니다.
+  - `AccessEnabler.USER_NOT_AUTHORIZED_ERROR` - 사용자가 지정된 리소스에 대해 권한을 부여할 수 없습니다.
 - *errorDescription*: 실패 시나리오에 대한 추가 세부 정보입니다. 어떤 이유로든 이 설명 문자열을 사용할 수 없는 경우 Adobe Pass 인증에서 빈 문자열 >**(&quot;)**&#x200B;을(를) 보냅니다.  이 문자열은 MVPD에서 사용자 지정 오류 메시지 또는 판매 관련 메시지를 전달하는 데 사용할 수 있습니다. 예를 들어 구독자가 리소스에 대한 인증을 거부하면 MVPD에서 다음과 같은 메시지를 보낼 수 있습니다. &quot;현재 패키지에서 이 채널에 대한 액세스 권한이 없습니다. 패키지를 업그레이드하려면 여기를 클릭하십시오.&quot; 이 콜백을 통해 Adobe Pass Authentication에서 메시지를 표시하거나 무시할 수 있는 옵션이 있는 프로그래머에게 전달합니다. Adobe Pass 인증은 이 매개 변수를 사용하여 오류가 발생했을 수 있는 조건에 대한 알림을 제공할 수도 있습니다. 예를 들어 &quot;공급자의 인증 서비스와 통신할 때 네트워크 오류가 발생했습니다.&quot;와 같은 경우입니다.
 
 **트리거 대상:** `checkAuthorization(), getAuthorization()`
@@ -526,15 +527,15 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 **매개 변수:**
 
 - *metadataKey*: 키 및 args 변수를 캡슐화하는 데이터 구조입니다. 다음 의미가 있습니다.
-   - 키가 `METADATA_KEY_TTL_AUTHN`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
-   - 키가 `METADATA_KEY_TTL_AUTHZ`이고 인수에 이름 = `METADATA_ARG_RESOURCE_ID`, 값 = `[resource_id]`인 SerializableNameValuePair 개체가 포함된 경우 지정한 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
-   - 키가 `METADATA_KEY_DEVICE_ID`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
-   - 키가 `METADATA_KEY_USER_META`이고 args에 이름 = `METADATA_KEY_USER_META`, 값 = `[metadata_name]`인 SerializableNameValuePair 개체가 있으면 사용자 메타데이터에 대해 쿼리가 수행됩니다. 사용 가능한 사용자 메타데이터 유형의 현재 목록:
-      - `zip` - 우편 번호
-      - `householdID` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다.
-      - `maxRating` - 사용자의 최대 자녀 보호 등급
-      - `userID` - 사용자 식별자. MVPD이 하위 계정을 지원하고 사용자가 기본 계정이 아닌 경우
-      - `channelID` - 사용자가 볼 수 있는 채널 목록
+  - 키가 `METADATA_KEY_TTL_AUTHN`인 경우 인증 토큰 만료 시간을 얻기 위해 쿼리가 수행됩니다.
+  - 키가 `METADATA_KEY_TTL_AUTHZ`이고 인수에 이름 = `METADATA_ARG_RESOURCE_ID`, 값 = `[resource_id]`인 SerializableNameValuePair 개체가 포함된 경우 지정한 리소스와 연결된 인증 토큰의 만료 시간을 얻기 위해 쿼리가 수행됩니다.
+  - 키가 `METADATA_KEY_DEVICE_ID`이면 현재 장치 ID를 얻기 위해 쿼리를 실행합니다. 이 기능은 기본적으로 비활성화되어 있으며, 프로그래머는 사용 권한 및 요금에 대한 자세한 내용을 Adobe에 문의해야 합니다.
+  - 키가 `METADATA_KEY_USER_META`이고 args에 이름 = `METADATA_KEY_USER_META`, 값 = `[metadata_name]`인 SerializableNameValuePair 개체가 있으면 사용자 메타데이터에 대해 쿼리가 수행됩니다. 사용 가능한 사용자 메타데이터 유형의 현재 목록:
+    - `zip` - 우편 번호
+    - `householdID` - 세대 식별자. MVPD에서 하위 계정을 지원하지 않는 경우 `userID`과(와) 동일합니다.
+    - `maxRating` - 사용자의 최대 자녀 보호 등급
+    - `userID` - 사용자 식별자. MVPD이 하위 계정을 지원하고 사용자가 기본 계정이 아닌 경우
+    - `channelID` - 사용자가 볼 수 있는 채널 목록
 
 프로그래머가 사용할 수 있는 실제 사용자 메타데이터는 MVPD이 사용할 수 있도록 하는 항목에 따라 다릅니다.  이 목록은 새 메타데이터를 사용할 수 있고 Adobe Pass 인증 시스템에 추가됨에 따라 추가로 확장됩니다.
 
@@ -558,42 +559,42 @@ MVPD이 &quot;요청자별 인증&quot; 기능을 지원하는 경우 여러 인
 
 - *key*: 메타데이터 값이 요청된 키 및 관련 매개 변수가 포함된 MetadataKey 개체입니다(참조 구현은 데모 응용 프로그램 참조).
 - *result*: 요청된 메타데이터가 포함된 복합 개체입니다. 개체에는 다음 필드가 있습니다.
-   - *simpleResult*: 인증 TTL, 권한 부여 TTL 또는 장치 ID에 대해 요청을 했을 때 메타데이터 값을 나타내는 문자열입니다. 사용자 메타데이터에 대한 요청인 경우 이 값은 null입니다.
+  - *simpleResult*: 인증 TTL, 권한 부여 TTL 또는 장치 ID에 대해 요청을 했을 때 메타데이터 값을 나타내는 문자열입니다. 사용자 메타데이터에 대한 요청인 경우 이 값은 null입니다.
 
-   - *userMetadataResult*: JSON 사용자 메타데이터 페이로드의 Java 표현이 포함된 개체입니다. 예:
+  - *userMetadataResult*: JSON 사용자 메타데이터 페이로드의 Java 표현이 포함된 개체입니다. 예:
 
-     ```json
-     {
-     "street": "Main Avenue",
-     "buildings": ["150", "320"]
-     }
-     ```
+    ```json
+    {
+    "street": "Main Avenue",
+    "buildings": ["150", "320"]
+    }
+    ```
 
-     는 다음과 같이 Java로 변환됩니다.
+    는 다음과 같이 Java로 변환됩니다.
 
-     ```java
-     Map("street" -> "Main Avenue", "buildings" -> List("150", "320")))
-     ```
+    ```java
+    Map("street" -> "Main Avenue", "buildings" -> List("150", "320")))
+    ```
 
-     **사용자 메타데이터 개체의 실제 구조는 다음과 유사합니다.**
+    **사용자 메타데이터 개체의 실제 구조는 다음과 유사합니다.**
 
-     ```json
-     {
-         updated: 1334243471,
-         encrypted: ["encryptedProp"],
-         data: {
-             zip: ["12345", "34567"],
-             maxRating: { 
-                 "MPAA": "PG-13",
-                 "VCHIP": "TV-Y", 
-                 "URL": "http://exam.pl/e/manage/ratings"
-             },
-             householdID: "3456",
-             userID: "BgSdasfsdk23/dsaf3+saASesadgfsShggssd=",
-             channelID: ["channel-1", "channel-2"]
-         }
-     }
-     ```
+    ```json
+    {
+        updated: 1334243471,
+        encrypted: ["encryptedProp"],
+        data: {
+            zip: ["12345", "34567"],
+            maxRating: { 
+                "MPAA": "PG-13",
+                "VCHIP": "TV-Y", 
+                "URL": "http://exam.pl/e/manage/ratings"
+            },
+            householdID: "3456",
+            userID: "BgSdasfsdk23/dsaf3+saASesadgfsShggssd=",
+            channelID: ["channel-1", "channel-2"]
+        }
+    }
+    ```
 
 
 단순 메타데이터(인증 TTL, 권한 부여 TTL 또는 장치 ID)에 대해 요청되면 이 값은 null입니다.
@@ -627,19 +628,19 @@ Access Enabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거�
 > 장치 유형 및 운영 체제는 공개 Java 라이브러리(http://java.net/projects/user-agent-utils) 및 사용자 에이전트 문자열을 사용하여 파생됩니다. 이 정보는 운영 지표를 장치 범주로 분류하는 거친 방법으로만 제공되지만, Adobe은 잘못된 결과에 대한 책임을 지지 않을 수 있습니다. 그에 따라 새로운 기능을 사용하십시오.
 
 - 장치 유형에 가능한 값:
-   - `computer`
-   - `tablet`
-   - `mobile`
-   - `gameconsole`
-   - `unknown`
+  - `computer`
+  - `tablet`
+  - `mobile`
+  - `gameconsole`
+  - `unknown`
 
 - Access Enabler 클라이언트 유형에 사용할 수 있는 값은 다음과 같습니다.
-   - `flash`
-   - `html5`
-   - `ios`
-   - `tvos`
-   - `android`
-   - `firetv`
+  - `flash`
+  - `html5`
+  - `ios`
+  - `tvos`
+  - `android`
+  - `firetv`
 
 | 콜백: 이벤트 추적 |
 | --- |
@@ -650,38 +651,38 @@ Access Enabler는 자격 흐름과 관련이 없는 추가 콜백을 트리거�
 **매개 변수:**
 
 - *event*: 추적 중인 이벤트입니다. 가능한 추적 이벤트 유형에는 세 가지가 있습니다.
-   - 인증 토큰 요청이 반환될 때마다 **authorizationDetection:**(이벤트 유형: `EVENT_AUTHZ_DETECTION`)
-   - **authenticationDetection:** 인증 확인이 발생할 때마다(이벤트 유형은 `EVENT_AUTHN_DETECTION`)
-   - 사용자가 MVPD 선택 양식에서 MVPD을 선택할 때 **mvpdSelection:**(이벤트 유형: `EVENT_MVPD_SELECTION`)
+  - 인증 토큰 요청이 반환될 때마다 **authorizationDetection:**(이벤트 유형: `EVENT_AUTHZ_DETECTION`)
+  - **authenticationDetection:** 인증 확인이 발생할 때마다(이벤트 유형은 `EVENT_AUTHN_DETECTION`)
+  - 사용자가 MVPD 선택 양식에서 MVPD을 선택할 때 **mvpdSelection:**(이벤트 유형: `EVENT_MVPD_SELECTION`)
 - *data*: 보고된 이벤트와 연결된 추가 데이터입니다. 이 데이터는 값 목록 형태로 표시됩니다.
 
 다음은 *data* 배열의 값을 해석하는 지침입니다.
 
 - 이벤트 유형 *`EVENT_AUTHN_DETECTION`:*&#x200B;의 경우
-   - **0** - 토큰 요청의 성공 여부(true/false) 및 위의 내용이 true인 경우:
-   - **1** - MVPD ID 문자열
-   - **2** - GUID(md5 해시됨)
-   - **3** - 토큰이 캐시에 이미 있습니다(true/false).
-   - **4** - 장치 유형
-   - **5** - Access Enabler 클라이언트 유형
-   - **6** - 운영 체제 유형
+  - **0** - 토큰 요청의 성공 여부(true/false) 및 위의 내용이 true인 경우:
+  - **1** - MVPD ID 문자열
+  - **2** - GUID(md5 해시됨)
+  - **3** - 토큰이 캐시에 이미 있습니다(true/false).
+  - **4** - 장치 유형
+  - **5** - Access Enabler 클라이언트 유형
+  - **6** - 운영 체제 유형
 
 - 이벤트 유형 `EVENT_AUTHZ_DETECTION`에 대한
-   - **0** - 토큰 요청의 성공 여부(true/false) 및 성공 여부:
-   - **1** - MVPD ID
-   - **2** - GUID(md5 해시됨)
-   - **3** - 토큰이 캐시에 이미 있습니다(true/false).
-   - **4** - 오류
-   - **5** - 세부 정보
-   - **6** - 장치 유형
-   - **7** - Access Enabler 클라이언트 유형
-   - **8** - 운영 체제 유형
+  - **0** - 토큰 요청의 성공 여부(true/false) 및 성공 여부:
+  - **1** - MVPD ID
+  - **2** - GUID(md5 해시됨)
+  - **3** - 토큰이 캐시에 이미 있습니다(true/false).
+  - **4** - 오류
+  - **5** - 세부 정보
+  - **6** - 장치 유형
+  - **7** - Access Enabler 클라이언트 유형
+  - **8** - 운영 체제 유형
 
 - 이벤트 유형 `EVENT_MVPD_SELECTION`에 대한
-   - **0** - 현재 선택한 MVPD의 ID
-   - **1** - 장치 유형
-   - **2** - Access Enabler 클라이언트 유형
-   - **3** - 운영 체제 유형
+  - **0** - 현재 선택한 MVPD의 ID
+  - **1** - 장치 유형
+  - **2** - Access Enabler 클라이언트 유형
+  - **3** - 운영 체제 유형
 
 **트리거 대상:** `checkAuthentication(), getAuthentication(), checkAuthorization(), getAuthorization(), setSelectedProvider()`
 

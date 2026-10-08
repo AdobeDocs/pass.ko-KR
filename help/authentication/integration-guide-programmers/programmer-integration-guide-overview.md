@@ -2,13 +2,14 @@
 title: 프로그래머 통합 안내서
 description: 프로그래머 통합 안내서
 exl-id: 51461caf-08ef-459e-b284-8f317f45e7b1
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '2152'
 ht-degree: 0%
-
 ---
-
 # 프로그래머 통합 안내서 {#programmer-integration-guide}
 
 >[!IMPORTANT]
@@ -43,15 +44,15 @@ Adobe Pass 인증은 프록시 역할을 하며 양측에 안전하고 일관된
 프로그래머의 경우 Adobe Pass 인증은 **Standard** 또는 **Premium** 계층의 일부로 API를 제공합니다.
 
 * 표준 Adobe Pass 인증 API:
-   * [REST API DCR](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
-   * [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
+  * [REST API DCR](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+  * [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
 
 * Premium Adobe Pass 인증 API:
-   * [임시 패스 API 재설정](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
-      * [TempPass 기능](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
-   * [저하 API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
-      * [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
-   * [권한 부여 서비스 모니터링 API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
+  * [임시 패스 API 재설정](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+    * [TempPass 기능](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
+  * [저하 API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
+    * [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
+  * [권한 부여 서비스 모니터링 API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
 
 ### 사용 사례 {#use-cases}
 

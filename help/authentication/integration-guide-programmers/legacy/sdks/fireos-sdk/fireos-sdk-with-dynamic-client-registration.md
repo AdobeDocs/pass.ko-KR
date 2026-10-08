@@ -2,13 +2,14 @@
 title: Amazon FireOS SDK(동적 클라이언트 등록 포함)
 description: Amazon FireOS SDK(동적 클라이언트 등록 포함)
 exl-id: 27acf3f5-8b7e-4299-b0f0-33dd6782aeda
-source-git-commit: b6ba687240799d1889302019613f426259f147ad
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1185'
 ht-degree: 1%
-
 ---
-
 
 # (기존) Amazon FireOS SDK(동적 클라이언트 등록 포함) {#amazon-fireos-sdk-with-dynamic-client-registration}
 
@@ -123,8 +124,8 @@ FireOS AccessEnabler SDK for FireTV가 세션 쿠키를 사용하지 않고 인�
 
   SDK에서 다음 작업을 수행합니다.
 
-   - 응용 프로그램 등록: **software\_statement**&#x200B;을(를) 사용하면 SDK에서 **client\_id, client\_secret, client\_id\_issued\_at, redirect\_uris, grant\_types**&#x200B;을(를) 가져옵니다. 이 정보는 애플리케이션의 내부 저장소에 저장됩니다.
-   - client\_id, client\_secret 및 grant\_type=&quot;client\_credentials&quot; 를 사용하여 **access\_token**&#x200B;을 가져옵니다. 이 액세스\_token은 SDK에서 Adobe Pass 서버로 호출하는 각 호출에서 사용됩니다.
+  - 응용 프로그램 등록: **software\_statement**&#x200B;을(를) 사용하면 SDK에서 **client\_id, client\_secret, client\_id\_issued\_at, redirect\_uris, grant\_types**&#x200B;을(를) 가져옵니다. 이 정보는 애플리케이션의 내부 저장소에 저장됩니다.
+  - client\_id, client\_secret 및 grant\_type=&quot;client\_credentials&quot; 를 사용하여 **access\_token**&#x200B;을 가져옵니다. 이 액세스\_token은 SDK에서 Adobe Pass 서버로 호출하는 각 호출에서 사용됩니다.
 
 | 토큰 오류 응답: |  |  |
 |--- | --- | --- |
@@ -136,21 +137,21 @@ FireOS AccessEnabler SDK for FireTV가 세션 쿠키를 사용하지 않고 인�
 
 - b. checkAuthentication()
 
-   - *true* : 인증으로 이동
-   - *false* : MVPD 선택으로 이동
+  - *true* : 인증으로 이동
+  - *false* : MVPD 선택으로 이동
 
 - c. getAuthentication : SDK은 호출 매개 변수에 **access_token**&#x200B;을 포함합니다.
 
-   - mvpd 기억됨 : setSelectedProvider(mvpd\_id)로 이동
-   - mvpd 선택 안 됨 : displayProviderDialog
-   - mvpd 선택됨 : setSelectedProvider(mvpd\_id)로 이동
+  - mvpd 기억됨 : setSelectedProvider(mvpd\_id)로 이동
+  - mvpd 선택 안 됨 : displayProviderDialog
+  - mvpd 선택됨 : setSelectedProvider(mvpd\_id)로 이동
 
 - d. setSelectedProvider
 
-   - mvpd\_id 인증 url이 ChromeCustomTab에 로드되었습니다.
-   - 로그인 성공 : delegate.setAuthenticationStatus ( SUCCESS )
-   - 로그인 취소됨 : MVPD 선택 재설정
-   - 인증이 완료되면 캡처하기 위해 URL 체계가 &quot;adobepass://android.app&quot;로 설정됩니다.
+  - mvpd\_id 인증 url이 ChromeCustomTab에 로드되었습니다.
+  - 로그인 성공 : delegate.setAuthenticationStatus ( SUCCESS )
+  - 로그인 취소됨 : MVPD 선택 재설정
+  - 인증이 완료되면 캡처하기 위해 URL 체계가 &quot;adobepass://android.app&quot;로 설정됩니다.
 
 - e. get/checkAuthorization : SDK에 **access\_token** in 헤더가 Authorization: Bearer **access\_token**(으)로 포함됩니다.
 
@@ -158,10 +159,10 @@ FireOS AccessEnabler SDK for FireTV가 세션 쿠키를 사용하지 않고 인�
 
 - f. 로그아웃 :
 
-   - SDK은 현재 요청자에 대한 유효한 토큰을 삭제합니다(SSO를 통하지 않고 다른 애플리케이션에서 획득한 인증은 유효한 상태로 유지됨).
-   - SDK은 Chrome 사용자 지정 탭을 열어 mvpd\_id 로그아웃 끝점에 도달합니다. 완료되면 Chrome 사용자 정의 탭이 닫힙니다.
-   - 로그아웃이 완료되는 순간을 캡처하기 위해 URL 체계가 &quot;adobepass://logout&quot;로 설정됩니다.
-   - 로그아웃하면 sendTrackingData(new Event(EVENT\_LOGOUT,USER\_NOT\_AUTHENTICATED\_ERROR) 및 callback : setAuthenticationStatus(0,&quot;Logout&quot;)가 트리거됩니다.
+  - SDK은 현재 요청자에 대한 유효한 토큰을 삭제합니다(SSO를 통하지 않고 다른 애플리케이션에서 획득한 인증은 유효한 상태로 유지됨).
+  - SDK은 Chrome 사용자 지정 탭을 열어 mvpd\_id 로그아웃 끝점에 도달합니다. 완료되면 Chrome 사용자 정의 탭이 닫힙니다.
+  - 로그아웃이 완료되는 순간을 캡처하기 위해 URL 체계가 &quot;adobepass://logout&quot;로 설정됩니다.
+  - 로그아웃하면 sendTrackingData(new Event(EVENT\_LOGOUT,USER\_NOT\_AUTHENTICATED\_ERROR) 및 callback : setAuthenticationStatus(0,&quot;Logout&quot;)가 트리거됩니다.
 
 
 

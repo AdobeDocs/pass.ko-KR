@@ -2,13 +2,14 @@
 title: Adobe Pass Authentication 2.70 릴리스 노트
 description: Adobe Pass Authentication 2.70 릴리스 노트
 exl-id: 81713f8e-bc51-4057-9b00-6a2d6c83cd02
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '136'
+source-wordcount: '141'
 ht-degree: 0%
-
 ---
-
 # Adobe Pass Authentication 2.70 릴리스 노트 {#authn-270-rn}
 
 >[!IMPORTANT]
@@ -34,11 +35,11 @@ Adobe Pass 인증: adobe-pass-**2.70**
 
 * 보안 취약점이 패치되었습니다.
 * API 서비스 저하가 개선되었습니다.
-   * DCR을 성능 저하 API에 대한 보안 메커니즘으로 사용합니다.
-   * 자세한 내용은 [성능 저하 기능](../integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)을 참조하세요.
+  * DCR을 성능 저하 API에 대한 보안 메커니즘으로 사용합니다.
+  * 자세한 내용은 [성능 저하 기능](../integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)을 참조하세요.
 
 #### REST API
 
 * 새로운 REST API에 대한 지속적인 개발.
-   * 예정된 전용 릴리스에는 별도의 알림에서 발표될 새 엔드포인트와 흐름이 도입됩니다.
-   * 이러한 새 API 사용에 대한 설명서 업데이트가 진행 중입니다.
+  * 예정된 전용 릴리스에는 별도의 알림에서 발표될 새 엔드포인트와 흐름이 도입됩니다.
+  * 이러한 새 API 사용에 대한 설명서 업데이트가 진행 중입니다.

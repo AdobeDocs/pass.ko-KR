@@ -2,13 +2,14 @@
 title: 대시보드
 description: TVE Dashboard의 홈 페이지에 대해 알아봅니다.
 exl-id: 3073cd86-89f8-4c65-996b-24edda24f25b
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '276'
+source-wordcount: '278'
 ht-degree: 0%
-
 ---
-
 # 대시보드 {#dashboard}
 
 >[!NOTE]
@@ -26,9 +27,9 @@ ht-degree: 0%
 
 이 섹션에서는 시작 메시지에서 직접 공개 설명서에 액세스하고 현재 구성의 스냅샷을 볼 수 있습니다.
 
-* **활성 통합**: 현재 환경의 활성 통합 수입니다. **통합** 섹션의 자세한 정보에 액세스하려면 [통합 섹션에서 자세히 보기](tve-dashboard-integrations.md)를 선택하십시오.
-* **활성 채널**: 현재 환경의 활성 채널 수입니다. **채널** 섹션의 자세한 정보에 액세스하려면 [채널 섹션에서 자세히 보기](tve-dashboard-channels.md)를 선택하십시오.
-* **데이터베이스 업데이트**: 현재 환경에 대한 구성 변경 횟수입니다. **변경 로그** 섹션의 자세한 정보에 액세스하려면 [변경 로그 섹션에서 자세히 보기](tve-dashboard-changes-log.md)를 선택하십시오.
+* **활성 통합**: 현재 환경의 활성 통합 수입니다. [통합](tve-dashboard-integrations.md) 섹션의 자세한 정보에 액세스하려면 **통합 섹션에서 자세히 보기**&#x200B;를 선택하십시오.
+* **활성 채널**: 현재 환경의 활성 채널 수입니다. [채널](tve-dashboard-channels.md) 섹션의 자세한 정보에 액세스하려면 **채널 섹션에서 자세히 보기**&#x200B;를 선택하십시오.
+* **데이터베이스 업데이트**: 현재 환경에 대한 구성 변경 횟수입니다. [변경 로그](tve-dashboard-changes-log.md) 섹션의 자세한 정보에 액세스하려면 **변경 로그 섹션에서 자세히 보기**&#x200B;를 선택하십시오.
 * **ESM 대시보드**: 현재 환경에서의 속성 사용에 대한 심층적인 지표를 제공하는 다가오는 ESM 대시보드를 주시하십시오. 이 기능은 향후 업데이트에서 액세스할 수 있습니다.
 
 ![시작 화면](../assets/tve-dashboard/new-tve-dashboard/dashboard/dashboard-welcome-panel-view.png)

@@ -2,13 +2,14 @@
 title: Clientless API 구현 - 가능한 이유/원인이 있는 오류 코드/메시지
 description: Clientless API 구현 - 가능한 이유/원인이 있는 오류 코드/메시지
 exl-id: 616e35fc-9b72-422b-9a05-e6248bd52490
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '227'
 ht-degree: 0%
-
 ---
-
 # (기존) 클라이언트 없는 API 구현 - 가능한 이유/원인이 있는 오류 코드/메시지 {#clientless-api-implementation--error-codes-messages-with-probable-reason-cause}
 
 >[!NOTE]

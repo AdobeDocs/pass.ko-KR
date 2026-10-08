@@ -2,13 +2,14 @@
 title: 주요 개념
 description: 세션, 정책, 메타데이터 등을 비롯한 동시 모니터링의 기본 개념에 대해 알아봅니다
 exl-id: 9721055a-70e6-4ba1-a1e0-04406eec25e6
-source-git-commit: 39384d753e7808fa433f30d8dafabd531dbf3acf
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '702'
-ht-degree: 0%
-
+source-wordcount: '714'
+ht-degree: 2%
 ---
-
 # 주요 개념 {#key-concepts}
 
 성공적인 구현을 위해서는 동시성 모니터링의 핵심 개념을 이해하는 것이 중요합니다. 이 안내서에서는 기본 구성 요소와 이러한 구성 요소가 함께 작동하는 방식을 설명합니다.
@@ -189,7 +190,7 @@ ht-degree: 0%
 
 #### FIFO(선입선출)
 
-- **새 세션이 기존 세션을 종료합니다.1&rbrace;**
+- **새 세션이 기존 세션을 종료합니다.1}**
 - **사용자가 중지할 세션을 선택합니다**
 - **더 복잡한 UI 필요**
 - **콘텐츠 전환 개선**

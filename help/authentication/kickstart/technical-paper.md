@@ -2,13 +2,14 @@
 title: Adobe Pass 인증 기본 정보
 description: Adobe Pass 인증 기본 정보
 exl-id: 5edeaccb-f9fa-4395-83b4-706c518d5a03
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1863'
 ht-degree: 0%
-
 ---
-
 # ® 인증 전달 정보 {#about-adobe-pass-authentication}
 
 >[!IMPORTANT]
@@ -165,15 +166,15 @@ Adobe Pass 인증은 프록시 역할을 하며 양측에 안전하고 일관된
 프로그래머의 경우 Adobe Pass 인증은 **Standard** 또는 **Premium** 계층의 일부로 API를 제공합니다.
 
 * 표준 Adobe Pass 인증 API:
-   * [REST API DCR](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
-   * [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
+  * [REST API DCR](/help/authentication/integration-guide-programmers/rest-apis/rest-api-dcr/dynamic-client-registration-overview.md)
+  * [REST API V2](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
 
 * Premium Adobe Pass 인증 API:
-   * [임시 패스 API 재설정](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
-      * [TempPass 기능](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
-   * [저하 API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
-      * [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
-   * [권한 부여 서비스 모니터링 API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
+  * [임시 패스 API 재설정](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+    * [TempPass 기능](/help/authentication/integration-guide-programmers/features-premium/temporary-access/temp-pass-feature.md)
+  * [저하 API](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md#degradation-api-access)
+    * [성능 저하 기능](/help/authentication/integration-guide-programmers/features-premium/degraded-access/degradation-feature.md)
+  * [권한 부여 서비스 모니터링 API](/help/authentication/integration-guide-programmers/features-premium/esm/entitlement-service-monitoring-api.md)
 
 권한 흐름에 대한 자세한 내용은 [프로그래머 통합 안내서](/help/authentication/integration-guide-programmers/programmer-integration-guide-overview.md#entitlement-flow) 설명서를 참조하십시오.
 
@@ -208,18 +209,18 @@ Adobe Pass 인증 솔루션은 인증 및 권한 부여 워크플로의 성공�
 프로그래머는 최소한 다음과 같은 작업을 수행해야 합니다.
 
 * **공급자 선택 인터페이스 구현**
-   * 신규 사용자가 자신의 유료 TV 공급자를 식별하고 처음 로그인할 수 있도록 허용합니다.
-   * 일부 유료 TV 공급업체는 사용자를 외부 로그인 페이지로 리디렉션하는 반면 다른 공급업체는 iframe 내에서 로그인해야 합니다. 프로그래머는 필요한 경우 iframe을 생성하기 위해 콜백 함수를 구현해야 합니다.
+  * 신규 사용자가 자신의 유료 TV 공급자를 식별하고 처음 로그인할 수 있도록 허용합니다.
+  * 일부 유료 TV 공급업체는 사용자를 외부 로그인 페이지로 리디렉션하는 반면 다른 공급업체는 iframe 내에서 로그인해야 합니다. 프로그래머는 필요한 경우 iframe을 생성하기 위해 콜백 함수를 구현해야 합니다.
 
 * **지원되는 유료 TV 공급자 목록 관리**
-   * 사용자가 승인된 공급자를 통해서만 콘텐츠에 액세스할 수 있도록 합니다.
+  * 사용자가 승인된 공급자를 통해서만 콘텐츠에 액세스할 수 있도록 합니다.
 
 * **인증 상태 표시**
-   * 사용자가 앱 또는 웹 사이트 내에서 인증되면 표시됩니다.
+  * 사용자가 앱 또는 웹 사이트 내에서 인증되면 표시됩니다.
 
 * **보호된 리소스 식별**
-   * 보기 전에 승인이 필요한 콘텐츠를 명확히 표시합니다.
-   * 액세스 권한이 부여되면 성공적인 인증을 반영하도록 UI를 업데이트합니다.
+  * 보기 전에 승인이 필요한 콘텐츠를 명확히 표시합니다.
+  * 액세스 권한이 부여되면 성공적인 인증을 반영하도록 UI를 업데이트합니다.
 
 ## FAQ {#faqs}
 

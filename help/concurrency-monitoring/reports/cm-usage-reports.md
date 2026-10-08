@@ -2,13 +2,14 @@
 title: 동시성 모니터링 사용량 보고서
 description: 동시성 모니터링 사용량 보고서
 exl-id: 20220436-e748-4b22-8e7c-e074e0bfe242
-source-git-commit: ed340643e807d786638d59f9bf07d73b7f909a72
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '812'
 ht-degree: 0%
-
 ---
-
 # 동시성 모니터링 사용량 보고서 {#cm-usage-reports}
 
 >[!NOTE]
@@ -59,7 +60,7 @@ ht-degree: 0%
 | 개월 | 월 (1-12) |
 | 일 | 날짜(1-31) |
 | 시간 | 시간 |
-| 분 | 시간(분) [^1] |
+| 분 | 시간(분)[^1] |
 | 애플리케이션 | 세션 관리에 사용되는 동시 모니터링에 등록된 응용 프로그램 이름 |
 | application-id | 세션 관리에 사용되는 동시 모니터링에 등록된 애플리케이션 ID |
 | channel | 세션 초기화 중에 전송된 채널 메타데이터(전송된 메타데이터가 없는 경우 알 수 없음으로 표시됨) |

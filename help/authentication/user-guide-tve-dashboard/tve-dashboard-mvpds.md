@@ -2,13 +2,14 @@
 title: TVE 대시보드 MVPD
 description: TVE 대시보드 내에서 MVPD 및 그 구성에 대해 알아봅니다.
 exl-id: 802c1570-9a5b-4bec-8fb2-6c7738b28bc9
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '133'
 ht-degree: 0%
-
 ---
-
 # MVPD
 
 >[!NOTE]

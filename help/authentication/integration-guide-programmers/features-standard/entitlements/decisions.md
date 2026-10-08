@@ -2,13 +2,14 @@
 title: 결정
 description: 결정
 exl-id: 1efd70af-8c1d-43c4-87fc-14488d42b23d
-source-git-commit: a19f4fd40c9cd851a00f05f82adbabb85edd8422
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1014'
 ht-degree: 0%
-
 ---
-
 # 결정 {#decisions}
 
 >[!IMPORTANT]
@@ -88,10 +89,10 @@ TTL(Authorization Time-to-Live)은 재승인을 필요로 하기 전까지 리�
 보호된 리소스는 계층 트리 구조를 따르며 각 수준은 콘텐츠 인증에 더 많은 세부기간을 제공합니다.
 
 * 네트워크
-   * 채널
-      * 표시
-         * 에피소드
-            * 자산
+  * 채널
+    * 표시
+      * 에피소드
+        * 자산
 
 >[!IMPORTANT]
 >
@@ -148,4 +149,5 @@ TTL(Authorization Time-to-Live)은 재승인을 필요로 하기 전까지 리�
 
 >[!MORELIKETHIS]
 >
-> [사전 인증 단계 FAQ인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)
+> [사전 인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#preauthorization-phase-faqs-general)
+> [인증 단계 FAQ](/help/authentication/integration-guide-programmers/rest-apis/rest-api-v2/rest-api-v2-faqs.md#authorization-phase-faqs-general)

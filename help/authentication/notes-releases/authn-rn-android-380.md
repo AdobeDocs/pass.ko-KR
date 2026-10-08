@@ -2,13 +2,14 @@
 title: Adobe Pass Authentication Android 3.8.0 릴리스 노트
 description: Adobe Pass Authentication Android 3.8.0 릴리스 노트
 exl-id: ad020b9a-61ad-492f-9522-d0e7a668196a
-source-git-commit: c9958a17ad9dfb518bab1d24087c85fdcb6fd057
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '140'
+source-wordcount: '148'
 ht-degree: 0%
-
 ---
-
 # Adobe Pass Authentication Android 3.8.0 릴리스 노트 {#android-sdk-380-rn}
 
 >[!IMPORTANT]
@@ -27,7 +28,7 @@ Adobe Pass 인증: Android 3.8.0
 
 * SDK의 저장소 브로드캐스트 수신기의 취약점을 수정합니다. 악의적인 애플리케이션은 Adobe 토큰에 대한 공유 스토리지의 정보를 얻기 위해 허위 링크를 표시할 수 있습니다.
 그러나 중요한 정보가 저장되지 않으며 어떤 사용자든 이 취약성의 영향을 받을 가능성은 매우 낮습니다.
-   * 참고: 변경으로 인해 사용자가 로그아웃됩니다.
+  * 참고: 변경으로 인해 사용자가 로그아웃됩니다.
 
 ## 릴리스 패키지 {#release-package-380}
 

@@ -2,13 +2,14 @@
 title: 기본 프로필 - 보조 애플리케이션 - 흐름
 description: REST API V2 - 기본 프로필 - 보조 애플리케이션 - 흐름
 exl-id: 1fcefcfa-7534-4b85-b3b5-df513685d66b
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '418'
 ht-degree: 0%
-
 ---
-
 # 보조 애플리케이션 내에서 수행되는 기본 프로필 흐름 {#basic-profiles-flow-secondary-application}
 
 >[!IMPORTANT]
@@ -51,8 +52,8 @@ Adobe Pass 인증 권한 내의 **프로필 흐름**&#x200B;을 사용하면 보
    >
    > 다음에 대한 자세한 내용은 [특정 코드에 대한 프로필 검색](../../apis/profiles-apis/rest-api-v2-profiles-apis-retrieve-profile-for-specific-code.md) API 설명서를 참조하십시오.
    >
-   > * _및_&#x200B;과(와) 같은 모든 `serviceProvider`필수`code` 매개 변수
-   > * _과(와) 같은 모든_ required`Authorization` 헤더
+   > * `serviceProvider` 및 `code`과(와) 같은 모든 _필수_ 매개 변수
+   > * `Authorization`과(와) 같은 모든 _required_ 헤더
    > * 모든 _선택적_ 매개 변수 및 헤더
 
 1. **일반 프로필 찾기:** Adobe Pass 서버는 받은 매개 변수와 헤더를 기반으로 올바른 프로필을 식별합니다.

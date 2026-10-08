@@ -2,13 +2,14 @@
 title: iOS/tvOS 애플리케이션 등록
 description: iOS/tvOS 애플리케이션 등록
 exl-id: 89ee6b5a-29fa-4396-bfc8-7651aa3d6826
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '632'
+source-wordcount: '634'
 ht-degree: 0%
-
 ---
-
 
 # (기존) iOS/tvOS 애플리케이션 등록 {#iostvos-application-registration}
 
@@ -40,9 +41,9 @@ iOS/tvOS AccessEnabler SDK 버전 3.0부터 Adobe 서버의 인증 메커니즘�
 - `Channels` 섹션으로 이동하여 채널을 선택하십시오.
 - `Registered Applications` 탭으로 이동합니다.
 - `Add new application`을(를) 클릭합니다.
-- 응용 프로그램의 이름과 버전을 입력하고   플랫폼을 사용할 수 있습니다. 이 예제에서는 iOS/tvOS입니다.
+- 응용 프로그램의 이름과 버전을 입력하고 사용할 수 있는 플랫폼을 선택합니다. 이 예제에서는 iOS/tvOS입니다.
 - 변경 사항을 서버에 푸시한 다음 채널의 등록된 애플리케이션 탭으로 다시 이동합니다.
-- 등록된 모든 지원서가 있는 목록이 표시됩니다. 다음을 클릭합니다.   방금 만든 응용 프로그램의 `Download` 단추입니다. 소프트웨어 명령문을 다운로드할 준비가 되기 전에 몇 분 정도 기다려야 할 수 있습니다.
+- 등록된 모든 지원서가 있는 목록이 표시됩니다. 방금 만든 응용 프로그램에서 `Download` 단추를 클릭합니다. 소프트웨어 명령문을 다운로드할 준비가 되기 전에 몇 분 정도 기다려야 할 수 있습니다.
 - 텍스트 파일이 다운로드됩니다. 내용을 소프트웨어 선언으로 사용하십시오.
 
 자세한 내용은 [Dynamic Client Registration Management](../../../rest-apis/rest-api-dcr/dynamic-client-registration-overview.md#dynamic-client-registration-management)를 참조하십시오.

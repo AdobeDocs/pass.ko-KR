@@ -2,13 +2,14 @@
 title: 채널
 description: TVE 대시보드 내의 채널과 다양한 구성에 대해 알아봅니다.
 exl-id: bbddeccb-6b6f-4a8f-87ab-d4af538eee1d
-source-git-commit: b4276ee12d57bc061d26afc0a192b799fe1681ae
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '1637'
+source-wordcount: '1641'
 ht-degree: 0%
-
 ---
-
 # 채널 {#channels}
 
 >[!NOTE]
@@ -152,7 +153,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **활성 인증서 삭제** 대화 상자에서 **삭제**&#x200B;을(를) 선택합니다.
 
-새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. **변경 내용 검토 및 푸시**&#x200B;한 후에만 [사용 가능한 인증서](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) 섹션에서 인증서가 삭제됩니다.
+새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. [변경 내용 검토 및 푸시](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)한 후에만 **사용 가능한 인증서** 섹션에서 인증서가 삭제됩니다.
 
 #### 상속된 사용 가능한 인증서 {#inherited-avail-certificates}
 
@@ -205,7 +206,7 @@ TVE 대시보드의 **채널** 섹션에서 특정 프로그래머와 연결된 
 
 1. **도메인 삭제** 대화 상자에서 **삭제**&#x200B;을(를) 선택합니다.
 
-새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. **변경 내용 검토 및 푸시**&#x200B;한 후에만 [사용 가능한 도메인](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md) 섹션에서 도메인이 삭제됩니다.
+새 구성 변경이 생성되었으며 서버를 업데이트할 준비가 되었습니다. [변경 내용 검토 및 푸시](/help/authentication/user-guide-tve-dashboard/tve-dashboard-review-push-changes.md)한 후에만 **사용 가능한 도메인** 섹션에서 도메인이 삭제됩니다.
 
 선택한 도메인은 더 이상 사용할 수 없습니다. 따라서 이 도메인과 연결된 애플리케이션은 Adobe Pass 인증 서비스에 액세스할 수 없게 됩니다.
 

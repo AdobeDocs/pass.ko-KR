@@ -2,13 +2,14 @@
 title: 사전 영업 시 환경 설정 및 테스트
 description: 사전 영업 시 환경 설정 및 테스트
 exl-id: f822c0a1-045a-401f-a44f-742ed25bfcdc
-source-git-commit: b6ba687240799d1889302019613f426259f147ad
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '492'
 ht-degree: 0%
-
 ---
-
 # 사전 영업 시 환경 설정 및 테스트{#setting-up-your-environment-and-testing-in-prequal}
 
 >[!NOTE]
@@ -89,8 +90,8 @@ Addresses:  52.26.79.43
 * *c:\\windows\\System32\\drivers\\etc\\hosts* 파일(Windows의 경우) 또는 */etc/hosts* 파일(Macintosh/Linux/Android의 경우)을 편집하고 다음을 추가하십시오.
 
 * 스푸핑 프로덕션 프로필
-   * 52.13.71.11 sp.auth.adobe.com api.auth.adobe.com
-   * 54.190.212.171 entitlement.auth.adobe.com
+  * 52.13.71.11 sp.auth.adobe.com api.auth.adobe.com
+  * 54.190.212.171 entitlement.auth.adobe.com
 
 **Android에서 스푸핑:** Android에서 스푸핑하려면 Android 에뮬레이터를 사용해야 합니다.
 

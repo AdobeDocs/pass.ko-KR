@@ -2,13 +2,14 @@
 title: 헤더 - X-Device-Info
 description: REST API V2 - 헤더 - X-Device-Info
 exl-id: 0ef25e06-86de-427a-a938-7ba3817f0d5e
-source-git-commit: 42df16e34783807e1b5eb1a12ca9db92f4e4c161
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1234'
 ht-degree: 3%
-
 ---
-
 # 헤더 - X-Device-Info {#header-x-device-info}
 
 >[!NOTE]
@@ -53,7 +54,7 @@ ht-degree: 3%
         <td></td>
         <td>기본 하드웨어 유형</td>
         <td>장치의 기본 하드웨어 유형입니다.</td>
-        <td>&check;</td>
+        <td>&amp;check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -110,7 +111,7 @@ ht-degree: 3%
         <td><i>필수</i></td>
         <td>osName</td>
         <td>장치의 운영 체제(OS) 이름.</td>
-        <td>&check;</td>
+        <td>&amp;check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -132,7 +133,7 @@ ht-degree: 3%
         <td></td>
         <td>osFamily</td>
         <td>장치의 운영 체제(OS) 그룹 이름입니다.</td>
-        <td>&check;</td>
+        <td>&amp;check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -155,7 +156,7 @@ ht-degree: 3%
         <td></td>
         <td>osVendor</td>
         <td>장치의 운영 체제(OS) 공급업체.</td>
-        <td>&check;</td>
+        <td>&amp;check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -185,7 +186,7 @@ ht-degree: 3%
         <td></td>
         <td>browserName</td>
         <td>브라우저의 이름입니다.</td>
-        <td>&check;</td>
+        <td>&amp;check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -205,7 +206,7 @@ ht-degree: 3%
         <td></td>
         <td>browserVendor</td>
         <td>브라우저의 빌드 회사/조직입니다.</td>
-        <td>&check;</td>
+        <td>&amp;check;</td>
         <td>
             값이 제한됩니다.
             <ul>
@@ -290,7 +291,7 @@ ht-degree: 3%
         <td></td>
         <td>connectionSecure</td>
         <td>네트워크 연결 보안 상태입니다.</td>
-        <td>&check;</td>
+        <td>&amp;check;</td>
         <td>
             값이 제한됩니다.
             <ul>

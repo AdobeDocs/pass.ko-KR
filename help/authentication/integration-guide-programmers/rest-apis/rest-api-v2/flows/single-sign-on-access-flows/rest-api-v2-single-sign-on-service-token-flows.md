@@ -2,13 +2,14 @@
 title: SSO(Single Sign-On) - 서비스 토큰 - 흐름
 description: REST API V2 - Single Sign-On - 서비스 토큰 - 흐름
 exl-id: b0082d2a-e491-4cb5-bb40-35ba10db6b1a
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1899'
 ht-degree: 0%
-
 ---
-
 # 서비스 토큰 흐름을 사용한 SSO(Single Sign-On){#single-sign-on-service-token-full-flows}
 
 >[!IMPORTANT]

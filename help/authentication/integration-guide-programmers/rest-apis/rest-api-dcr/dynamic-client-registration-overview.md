@@ -2,13 +2,14 @@
 title: 동적 클라이언트 등록 개요
 description: 동적 클라이언트 등록 개요
 exl-id: 9f98dfcd-4375-48c3-beff-259dfb1d3a26
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '809'
+source-wordcount: '835'
 ht-degree: 0%
-
 ---
-
 # 동적 클라이언트 등록 개요 {#dynamic-client-registration-overview}
 
 >[!IMPORTANT]
@@ -20,18 +21,18 @@ ht-degree: 0%
 Adobe Pass은 다음과 같은 보호된 API에 액세스할 수 있도록 하는 동적 클라이언트 등록 서비스를 제공합니다.
 
 * Adobe Pass 인증 관리 API:
-   * [임시 패스 API 재설정](../../features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
-   * [저하 API](../../features-premium/degraded-access/degradation-feature.md#degradation-api-access)
-   * [프록시 MVPD API](../../../integration-guide-mvpds/proxy-mvpd-webserv.md)
-   * [권한 부여 서비스 모니터링 API](../../features-premium/esm/entitlement-service-monitoring-api.md)
+  * [임시 패스 API 재설정](../../features-premium/temporary-access/temp-pass-feature.md#reset-tempass-api-access)
+  * [저하 API](../../features-premium/degraded-access/degradation-feature.md#degradation-api-access)
+  * [프록시 MVPD API](../../../integration-guide-mvpds/proxy-mvpd-webserv.md)
+  * [권한 부여 서비스 모니터링 API](../../features-premium/esm/entitlement-service-monitoring-api.md)
 * Adobe Pass 인증 REST API:
-   * [REST API V2](../rest-api-v2/apis/rest-api-v2-apis-overview.md)
-   * [(기존) REST API V1](../../legacy/rest-api-v1/rest-api-reference.md)
+  * [REST API V2](../rest-api-v2/apis/rest-api-v2-apis-overview.md)
+  * [(기존) REST API V1](../../legacy/rest-api-v1/rest-api-reference.md)
 * Adobe Pass 인증 SDK:
-   * [(기존) JavaScript SDK](../../legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md)
-   * [(기존) iOS/tvOS SDK](../../legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
-   * [(기존) Android SDK](../../legacy/sdks/android-sdk/android-sdk-api-reference.md)
-   * [(레거시) FireOS SDK](../../legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md)
+  * [(기존) JavaScript SDK](../../legacy/sdks/javascript-sdk/javascript-sdk-api-reference.md)
+  * [(기존) iOS/tvOS SDK](../../legacy/sdks/ios-tvos-sdk/iostvos-sdk-api-reference.md)
+  * [(기존) Android SDK](../../legacy/sdks/android-sdk/android-sdk-api-reference.md)
+  * [(레거시) FireOS SDK](../../legacy/sdks/fireos-sdk/amazon-fireos-native-client-api-reference.md)
 
 >[!IMPORTANT]
 >

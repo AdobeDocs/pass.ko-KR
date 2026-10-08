@@ -2,13 +2,14 @@
 title: Adobe Pass Authentication 3.0 릴리스 노트
 description: Adobe Pass Authentication 3.0 릴리스 노트
 exl-id: 9284151a-8458-44a3-937b-35f379ca0e4e
-source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '195'
+source-wordcount: '204'
 ht-degree: 0%
-
 ---
-
 # Adobe Pass Authentication 3.0 릴리스 노트 {#authn-300-rn}
 
 >[!IMPORTANT]
@@ -39,11 +40,11 @@ Adobe Pass 인증: adobe-pass-**3.0**
 ##### 설명서
 
 * 새 REST API v2로 시작하려면 다음 문서를 참조하십시오.
-   * [REST API v2 - API - 개요](../integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
-   * [REST API v2 - 흐름 - 개요](../integration-guide-programmers/rest-apis/rest-api-v2/flows/rest-api-v2-flows-overview.md)
+  * [REST API v2 - API - 개요](../integration-guide-programmers/rest-apis/rest-api-v2/apis/rest-api-v2-apis-overview.md)
+  * [REST API v2 - 흐름 - 개요](../integration-guide-programmers/rest-apis/rest-api-v2/flows/rest-api-v2-flows-overview.md)
 * REST API v1의 공개 문서에 대한 URL이 변경되었습니다. 다음 문서를 참조하십시오.
-   * [REST API v1 - API - 개요](../integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)
-   * [REST API v1 - API - 참조](../integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
+  * [REST API v1 - API - 개요](../integration-guide-programmers/legacy/rest-api-v1/rest-api-overview.md)
+  * [REST API v1 - API - 참조](../integration-guide-programmers/legacy/rest-api-v1/rest-api-reference.md)
 
 ##### 도구
 

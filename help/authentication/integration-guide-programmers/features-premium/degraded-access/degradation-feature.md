@@ -2,13 +2,14 @@
 title: 성능 저하 기능
 description: 성능 저하 기능
 exl-id: c7d6685b-a235-42eb-9c9c-0ffa1747f614
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '477'
+source-wordcount: '493'
 ht-degree: 0%
-
 ---
-
 # 성능 저하 기능 {#degradation-feature}
 
 >[!IMPORTANT]
@@ -43,7 +44,7 @@ Adobe Pass 인증은 특정 MVPD 인증 및 권한 부여 끝점을 일시적으
 
 Degradation API는 프로그래머가 특정 MVPD에 대한 저하 규칙을 관리할 수 있는 RESTful API입니다. API는 활성화, 제거 및 활성 상태의 저하 규칙 상태를 검색할 수 있는 수단을 제공합니다.
 
-Degradation API에 대한 자세한 내용은 다음 Zendesk 문서 [Adobe Pass 인증을 참조하십시오 | API v3](https://tve.zendesk.com/hc/en-us/articles/33912526308372-Adobe-Pass-Authentication-Degradation-API-v3)을(를) 저하하고 다운로드할 PDF 파일을 찾습니다.
+Degradation API에 대한 자세한 내용은 다음 Zendesk 문서 [Adobe Pass 인증을 참조하십시오 | Degradation API v3](https://tve.zendesk.com/hc/en-us/articles/33912526308372-Adobe-Pass-Authentication-Degradation-API-v3)을(를) 다운로드하고 PDF 파일을 찾습니다.
 
 ## REST API V2 {#rest-api-v2}
 

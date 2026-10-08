@@ -2,13 +2,14 @@
 title: 개인 정보 보호 요청을 하는 방법
 description: 개인 정보 보호 요청을 하는 방법
 exl-id: abb21306-98d6-4899-914a-bdfa85cbd204
-source-git-commit: 9e085ed0b2918eee30dc5c332b6b63b0e6bcc156
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '603'
 ht-degree: 0%
-
 ---
-
 # 개인 정보 보호 요청을 하는 방법 {#howto-make-privacy-request}
 
 >[!NOTE]
@@ -226,7 +227,7 @@ Delete 요청의 경우:
 
 ### Privacy Service UI 사용 {#privacy-service-ui}
 
-Privacy Service 사용자 인터페이스에 액세스하고 사용하는 방법에 대한 [전체 자습서](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ko#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)를 Adobe I/O 서비스를 통해 온라인으로 사용할 수 있습니다. 또한 고객은 이 링크를 사용하여 개인 정보 보호 규정에 대한 비디오 및 문서 라이브러리에 액세스할 수 있습니다. Adobe Experience Cloud 및 GDPR 메뉴를 클릭합니다. 이렇게 하면 많은 비디오가 열립니다. 이 비디오의 사용 방법은 &quot;GDPR UI 방법&quot;을 설명합니다.
+Privacy Service 사용자 인터페이스에 액세스하고 사용하는 방법에 대한 [전체 자습서](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)를 Adobe I/O 서비스를 통해 온라인으로 사용할 수 있습니다. 또한 고객은 이 링크를 사용하여 개인 정보 보호 규정에 대한 비디오 및 문서 라이브러리에 액세스할 수 있습니다. Adobe Experience Cloud 및 GDPR 메뉴를 클릭합니다. 이렇게 하면 많은 비디오가 열립니다. 이 비디오의 사용 방법은 &quot;GDPR UI 방법&quot;을 설명합니다.
 
 UI에서 고객은 각 제품에 대한 GDPR 요청 세부 사항이 포함된 JSON 및 자체 IMSOrgID를 로드해야 합니다.
 
@@ -239,7 +240,7 @@ Adobe Experience Platform Privacy Service은 개인 데이터에 대한 액세�
 **Postman(무료 타사 소프트웨어)를 사용하여 API 호출 시각화:**
 
 * [GitHub의 Privacy Service API Postman 컬렉션](https://github.com/adobe/experience-platform-postman-samples/blob/master/apis/experience-platform/Privacy%20Service%20API.postman_collection.json)
-* [Postman 환경 만들기에 대한 비디오 안내서](https://video.tv.adobe.com/v/31705?captions=kor)
+* [Postman 환경 만들기에 대한 비디오 안내서](https://video.tv.adobe.com/v/28832)
 * [Postman에서 환경 및 컬렉션을 가져오는 단계](https://learning.postman.com/docs/running-collections/intro-to-collection-runs/)
 
 
@@ -259,7 +260,7 @@ Adobe Experience Platform Privacy Service은 개인 데이터에 대한 액세�
 
 >[!RELATEDINFORMATION]
 >
->* [Privacy Services Overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=ko#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)
+>* [Privacy Services Overview](https://experienceleague.adobe.com/docs/experience-platform/privacy/home.html?lang=en#!api-specification/markdown/narrative/tutorials/privacy_service_tutorial/privacy_service_ui_tutorial.md)
 >* Privacy Service API documentation
 
 -->

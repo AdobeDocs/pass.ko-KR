@@ -2,13 +2,14 @@
 title: Adobe Pass Authentication Access Enabler 사용 시 iOS에서 SSO
 description: Adobe Pass Authentication Access Enabler 사용 시 iOS에서 SSO
 exl-id: 882f0abb-2e6e-461d-a375-3ab410991935
-source-git-commit: 3818dce9847ae1a0da19dd7decc6b7a6a74a46cc
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
 source-wordcount: '1216'
 ht-degree: 0%
-
 ---
-
 # (레거시) Adobe Pass 인증 액세스 Enabler 사용 시 iOS에서 SSO {#sso-on-ios-when-using-the-primetime-authentication-access-enabler}
 
 >[!NOTE]

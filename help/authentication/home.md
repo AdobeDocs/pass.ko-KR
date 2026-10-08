@@ -1,15 +1,16 @@
 ---
-title: Adobe&reg; 인증 전달 시작
-description: Adobe&reg; 인증 전달 시작
+title: Adobe&-160;Workfront AI Collaboratorsreg; 인증 전달 시작
+description: Adobe&-160;Workfront AI Collaboratorsreg; 인증 전달 시작
 exl-id: a8b01469-3d5f-4a44-9ae8-06a68c29d56d
-source-git-commit: fab5964aeb832d419702b41a6d3bc5676cb3354f
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '414'
+source-wordcount: '433'
 ht-degree: 0%
-
 ---
-
-# Adobe® 인증 전달 시작 {#welcome}
+# ® 인증 전달 시작 {#welcome}
 
 >[!IMPORTANT]
 >

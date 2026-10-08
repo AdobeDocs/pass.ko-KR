@@ -2,13 +2,14 @@
 title: Adobe Pass Authentication Android 3.7.3 릴리스 노트
 description: Adobe Pass Authentication Android 3.7.3 릴리스 노트
 exl-id: f335357e-c209-428d-af2a-2181551447d4
-source-git-commit: ecafc3a92f691203d8113a741f0b6cd00a134e80
+product_v2:
+  - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
+    internal-label: Pass
+source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
 workflow-type: tm+mt
-source-wordcount: '142'
+source-wordcount: '160'
 ht-degree: 0%
-
 ---
-
 # Adobe Pass Authentication Android 3.7.3 릴리스 노트 {#android-sdk-373-rn}
 
 >[!IMPORTANT]
@@ -26,9 +27,9 @@ Adobe Pass 인증: Android 3.7.3
 ## 릴리스 개요 {#release-overview-373}
 
 * Android 14 및 애플리케이션 타깃팅 API 레벨 34 지원 변경
-   * [Android 14 런타임 등록 브로드캐스트 수신기](https://developer.android.com/about/versions/14/behavior-changes-14#runtime-receivers-exported)에 필요한 플래그를 추가합니다.
+  * [Android 14 런타임 등록 브로드캐스트 수신기](https://developer.android.com/about/versions/14/behavior-changes-14#runtime-receivers-exported)에 필요한 플래그를 추가합니다.
 * 에뮬레이터 API 32+에서 MVPD 로그인을 위해 ChromeCustomTab이 열리지 않는 문제 해결
-   * 참고: SDK &lt;3.7.3에서 이 문제에 대한 해결 방법은 에뮬레이터에서 Chrome 앱을 열고 MVPD 로그인을 시도하기 전에 설정을 완료하는 것입니다
+  * 참고: SDK &lt;3.7.3에서 이 문제에 대한 해결 방법은 에뮬레이터에서 Chrome 앱을 열고 MVPD 로그인을 시도하기 전에 설정을 완료하는 것입니다
 
 ## 릴리스 패키지 {#release-package-373}
 
