@@ -5,9 +5,9 @@ exl-id: e8889395-4434-4bec-a212-a8341bb9c310
 product_v2:
   - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
     internal-label: Pass
-source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
+source-git-commit: af03be1d866ad60b601f0fbe8799bd1b87e5c9b6
 workflow-type: tm+mt
-source-wordcount: '1137'
+source-wordcount: '1170'
 ht-degree: 1%
 ---
 # 특정 mvpd를 사용하여 권한 부여 결정 검색 {#retrieve-authorization-decisions-using-specific-mvpd}
@@ -300,6 +300,13 @@ ht-degree: 1%
                <td>선택 사항</td>
             </tr>
             <tr>
+               <td style="background-color: #DEEBFF;">사용자 메타데이터</td>
+               <td>
+                  MVPD에서 공유하는 선택적 userMetadata. 사용 가능한 키는 MVPD 구성에 따라 다릅니다. 각 메타데이터 키가 <b>값</b> 및 <b>상태</b>을(를) 포함하는 개체로 반환됩니다. 예를 들어 Spectrum은 <code>packageType</code>을(를) 반환할 수 있습니다.
+               </td>
+               <td>선택 사항</td>
+            </tr>
+            <tr>
                <td style="background-color: #DEEBFF;">오류</td>
                <td>오류는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 '거부' 결정에 대한 추가 정보를 제공합니다.</td>
                <td>선택 사항</td>
@@ -397,7 +404,13 @@ Content-Type: application/json;charset=UTF-8
                 "serializedToken": "PHNpZ25hdHVyZUluZm8..."
             },
             "notBefore": 1697094207324,
-            "notAfter": 1697098802367
+            "notAfter": 1697098802367,
+            "userMetadata": {
+                "packageType": {
+                    "value": "INCLUSION",
+                    "state": "plain"
+                }
+            }
         }
     ]
 }

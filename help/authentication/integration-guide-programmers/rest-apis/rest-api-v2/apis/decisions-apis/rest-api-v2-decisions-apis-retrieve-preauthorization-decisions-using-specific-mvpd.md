@@ -5,9 +5,9 @@ exl-id: 8647e4fb-00b6-45cd-b81b-d00618b2e08b
 product_v2:
   - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
     internal-label: Pass
-source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
+source-git-commit: af03be1d866ad60b601f0fbe8799bd1b87e5c9b6
 workflow-type: tm+mt
-source-wordcount: '991'
+source-wordcount: '1037'
 ht-degree: 1%
 ---
 # 특정 mvpd를 사용하여 사전 인증 결정 검색 {#retrieve-preauthorization-decisions-using-specific-mvpd}
@@ -272,6 +272,13 @@ ht-degree: 1%
                <td><i>필수</i></td>
             </tr>
             <tr>
+               <td style="background-color: #DEEBFF;">사용자 메타데이터</td>
+               <td>
+                  MVPD에서 공유하는 선택적 userMetadata. 사용 가능한 키는 MVPD 구성에 따라 다릅니다. 각 메타데이터 키가 <b>값</b> 및 <b>상태</b>을(를) 포함하는 개체로 반환됩니다. 예를 들어 Spectrum은 <code>packageType</code>을(를) 반환할 수 있습니다. 메타데이터는 MVPD이 사전 인증 응답에서 제공하는 경우에만 반환됩니다.
+               </td>
+               <td>선택 사항</td>
+            </tr>
+            <tr>
                <td style="background-color: #DEEBFF;">오류</td>
                <td>오류는 <a href="../../../../features-standard/error-reporting/enhanced-error-codes.md">향상된 오류 코드</a> 설명서를 준수하는 '거부' 결정에 대한 추가 정보를 제공합니다.</td>
                <td>선택 사항</td>
@@ -363,14 +370,26 @@ Content-Type: application/json;charset=UTF-8
          "serviceProvider": "REF30",
          "mvpd": "Cablevision",
          "source": "mvpd",
-         "authorized": true
+         "authorized": true,
+         "userMetadata": {
+            "packageType": {
+               "value": "INCLUSION",
+               "state": "plain"
+            }
+         }
       },
       {
          "resource": "resource2",
          "serviceProvider": "REF30",
          "mvpd": "Cablevision",
          "source": "mvpd",
-         "authorized": true
+         "authorized": true,
+         "userMetadata": {
+            "packageType": {
+               "value": "INCLUSION",
+               "state": "plain"
+            }
+         }
       },
       {
          "resource": "resource3",
