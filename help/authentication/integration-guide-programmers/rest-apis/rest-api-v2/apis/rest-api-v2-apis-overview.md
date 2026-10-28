@@ -5,9 +5,9 @@ exl-id: 62b48bf0-d200-4949-b268-8f8ea2daabfa
 product_v2:
   - id: f002a92a-b99f-47a4-90c8-65e0e415bc7a
     internal-label: Pass
-source-git-commit: 9cd75fbc66d5395a899c272d94774cbaf7ea3d07
+source-git-commit: 35c6ed6491cd47e6f85ee8974d72236c19fb8a6d
 workflow-type: tm+mt
-source-wordcount: '152'
+source-wordcount: '268'
 ht-degree: 0%
 ---
 # REST API V2 API 개요 {#rest-api-v2-apis-overview}
@@ -17,6 +17,27 @@ ht-degree: 0%
 > [제품 알림](/help/authentication/product-announcements.md) 페이지에서 집계한 최신 Adobe Pass 인증 제품 알림 및 서비스 중단 타임라인에 대한 정보를 계속 받아 보십시오.
 
 시작하려면 아래 목록에 있는 API의 공개 설명서를 참조하십시오.
+
+## 기본 URL {#rest-api-v2-apis-base-urls}
+
+REST API V2 요청에 대해 아래 환경별 기본 URL을 사용하십시오. 추가
+이 기본 URL에 대해 각 API에 대해 문서화된 상대 `path`입니다.
+
+일부 API 응답은 스트리밍 장치가 열어야 하는 대화형 URL을 반환합니다
+브라우저 또는 사용자 에이전트. 예를들어 다음에서 반환된 `url` 특성이 있습니다.
+[특정 mvpd에 대한 로그아웃 시작](logout-apis/rest-api-v2-logout-apis-initiate-logout-for-specific-mvpd.md)
+및 `Location` 리디렉션이
+[사용자 에이전트에서 인증을 수행합니다](sessions-apis/rest-api-v2-sessions-apis-perform-authentication-in-user-agent.md).
+
+이러한 대화형 URL은 동일한 Adobe Pass SP(서비스 공급자) 호스트를 사용합니다.
+반환된 그대로 절대 대화형 URL을 엽니다. Adobe Pass이
+`/adobe-services/`(으)로 시작하는 상대 대화형 URL을 다음에서 해결하십시오.
+대상 환경에 대한 SP 호스트:
+
+| 환경 | REST API V2 및 대화형 URL 기본 URL |
+| --- | --- |
+| 프로덕션 | `https://sp.auth.adobe.com` |
+| 스테이징 | `https://sp.auth-staging.adobe.com` |
 
 ## 구성 {#rest-api-v2-apis-configuration}
 
